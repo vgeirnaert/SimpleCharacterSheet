@@ -1,8 +1,8 @@
-package net.mindsoup.simplecharactersheet.pf.races;
+package net.mindsoup.pathfindercharactersheet.pf.races;
 
-import net.mindsoup.simplecharactersheet.pf.PfEffectTypes;
-import net.mindsoup.simplecharactersheet.pf.PfRaces;
-import net.mindsoup.simplecharactersheet.pf.PfSizes;
+import net.mindsoup.pathfindercharactersheet.pf.PfEffectTypes;
+import net.mindsoup.pathfindercharactersheet.pf.PfRaces;
+import net.mindsoup.pathfindercharactersheet.pf.PfSizes;
 
 public class PfDwarf implements PfRace {
 

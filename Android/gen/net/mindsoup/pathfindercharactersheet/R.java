@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package net.mindsoup.simplecharactersheet;
+package net.mindsoup.pathfindercharactersheet;
 
 public final class R {
     public static final class attr {

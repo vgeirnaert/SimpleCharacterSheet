@@ -1,6 +1,9 @@
-package net.mindsoup.simplecharactersheet.pf;
+package net.mindsoup.pathfindercharactersheet.pf.items;
 
-public class Weapon {
+import net.mindsoup.pathfindercharactersheet.pf.PfHandedness;
+import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
+
+public class Weapon extends Item {
 	private Dice damage;
 	private int criticalMultiplier;
 	private int criticalRange;
@@ -34,5 +37,21 @@ public class Weapon {
 	
 	public PfHandedness getHandedness() {
 		return handedness;
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ItemType getType() {
+		return ItemType.WEAPON;
+	}
+
+	@Override
+	public boolean isStackable() {
+		return false;
 	}
 }

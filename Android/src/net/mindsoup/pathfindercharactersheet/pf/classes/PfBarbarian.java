@@ -1,6 +1,6 @@
-package net.mindsoup.simplecharactersheet.pf.classes;
+package net.mindsoup.pathfindercharactersheet.pf.classes;
 
-import net.mindsoup.simplecharactersheet.pf.PfClasses;
+import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 
 public class PfBarbarian implements PfClass {
 

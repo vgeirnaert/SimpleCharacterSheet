@@ -1,4 +1,4 @@
-package net.mindsoup.simplecharactersheet.pf;
+package net.mindsoup.pathfindercharactersheet.pf.util;
 
 public class Dice {
 	int numSides;

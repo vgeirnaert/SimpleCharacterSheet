@@ -1,4 +1,4 @@
-package net.mindsoup.simplecharactersheet.pf;
+package net.mindsoup.pathfindercharactersheet.pf;
 
 public enum PfEffectTypes {
 	FEAR, ILLUSION, CHARM

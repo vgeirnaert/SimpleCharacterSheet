@@ -1,13 +1,13 @@
-package net.mindsoup.simplecharactersheet;
+package net.mindsoup.pathfindercharactersheet;
 
-import net.mindsoup.simplecharactersheet.R;
-import net.mindsoup.simplecharactersheet.pf.Dice;
-import net.mindsoup.simplecharactersheet.pf.PfCharacter;
-import net.mindsoup.simplecharactersheet.pf.PfHandedness;
-import net.mindsoup.simplecharactersheet.pf.PfPace;
-import net.mindsoup.simplecharactersheet.pf.Weapon;
-import net.mindsoup.simplecharactersheet.pf.classes.PfBarbarian;
-import net.mindsoup.simplecharactersheet.pf.races.PfDwarf;
+import net.mindsoup.pathfindercharactersheet.R;
+import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
+import net.mindsoup.pathfindercharactersheet.pf.PfHandedness;
+import net.mindsoup.pathfindercharactersheet.pf.PfPace;
+import net.mindsoup.pathfindercharactersheet.pf.classes.PfBarbarian;
+import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
+import net.mindsoup.pathfindercharactersheet.pf.races.PfDwarf;
+import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;

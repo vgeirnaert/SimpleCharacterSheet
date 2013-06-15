@@ -1,7 +1,8 @@
-package net.mindsoup.simplecharactersheet.pf;
+package net.mindsoup.pathfindercharactersheet.pf;
 
-import net.mindsoup.simplecharactersheet.pf.classes.PfClass;
-import net.mindsoup.simplecharactersheet.pf.races.PfRace;
+import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
+import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
+import net.mindsoup.pathfindercharactersheet.pf.races.PfRace;
 
 public class PfCharacter {
 	private PfRace myRace;
