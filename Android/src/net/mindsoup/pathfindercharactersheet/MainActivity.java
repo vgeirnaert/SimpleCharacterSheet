@@ -1,6 +1,5 @@
 package net.mindsoup.pathfindercharactersheet;
 
-import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import net.mindsoup.pathfindercharactersheet.pf.PfHandedness;
 import net.mindsoup.pathfindercharactersheet.pf.PfPace;
@@ -11,16 +10,26 @@ import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 
 public class MainActivity extends Activity {
 	
 	private PfCharacter dagrim = new PfCharacter(new PfDwarf(), new PfBarbarian(), true);
+	private String[] drawerItems;
+	private ListView drawerList;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		drawerItems = getResources().getStringArray(R.array.drawer_items_array);
+		drawerList = (ListView)findViewById(R.id.left_drawer);
+		
+		drawerList.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_list_item, drawerItems));
+		drawerList.setOnItemClickListener(new DrawerItemClickListener());
 	}
 
 	@Override
