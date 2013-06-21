@@ -10,6 +10,7 @@ package net.mindsoup.pathfindercharactersheet;
 public final class R {
     public static final class array {
         public static final int drawer_items_array=0x7f060000;
+        public static final int skill_names=0x7f060001;
     }
     public static final class attr {
     }

@@ -1,8 +1,12 @@
 package net.mindsoup.pathfindercharactersheet.pf.classes;
 
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
+import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 
 public class PfBarbarian implements PfClass {
+	
+	// class skills
+	private final PfSkills[] classSkills = {PfSkills.ACROBATICS, PfSkills.CLIMB, PfSkills.CRAFT, PfSkills.HANDLE_ANIMAL, PfSkills.INTIMIDATE, PfSkills.KNOWLEDGE_NATURE, PfSkills.PERCEPTION, PfSkills.RIDE, PfSkills.SURVIVAL, PfSkills.SWIM};
 
 	@Override
 	public PfClasses getPfClass() {
@@ -41,6 +45,10 @@ public class PfBarbarian implements PfClass {
 	public int getExtraAttackPerNumLevels() {
 		// see core rulebook page 32
 		return 5;
+	}
+	
+	public PfSkills[] getClassSkills() {
+		return classSkills;
 	}
 
 }

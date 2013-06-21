@@ -12,5 +12,42 @@
         <item >Equipment</item>
         <item >Backpack</item>
     </string-array>
+    <string-array name="skill_names">
+        <item >Acrobatics</item>
+        <item >Appraise</item>
+        <item >Bluff</item>
+        <item >Climb</item>
+        <item >Craft</item>
+        <item >Diplomacy</item>
+        <item >Disable Device</item>
+        <item >Disguise</item>
+        <item >Escape Artist</item>
+        <item >Fly</item>
+        <item >Handle Animal</item>
+        <item >Heal</item>
+        <item >Intimidate</item>
+        <item >Knowledge (Arcana)</item>
+        <item >Knowledge (Dungeoneering)</item>
+        <item >Knowledge (Engineering)</item>
+        <item >Knowledge (Geography)</item>
+        <item >Knowledge (History)</item>
+        <item >Knowledge (Local)</item>
+        <item >Knowledge (Nature)</item>
+        <item >Knowledge (Nobility)</item>
+        <item >Knowledge (Planes)</item>
+        <item >Knowledge (Religion)</item>
+        <item >Linguistics</item>
+        <item >Perception</item>
+        <item >Perform</item>
+        <item >Profession</item>
+        <item >Ride</item>
+        <item >Sense Motive</item>
+        <item >Sleight of Hand</item>
+        <item >Spellcraft</item>
+        <item >Stealth</item>
+        <item >Survival</item>
+        <item >Swim</item>
+        <item >Use Magic Device</item>
+    </string-array>
 
 </resources>

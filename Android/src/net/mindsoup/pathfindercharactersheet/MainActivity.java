@@ -6,6 +6,8 @@ import net.mindsoup.pathfindercharactersheet.pf.PfPace;
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfBarbarian;
 import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfDwarf;
+import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
+import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
 import android.app.Activity;
 import android.os.Bundle;
@@ -54,22 +56,40 @@ public class MainActivity extends Activity {
 		dagrim.setPace(PfPace.FAST);
 		dagrim.setXp(382);
 		
+		dagrim.trainSkill(PfSkills.ACROBATICS, 1);
+		dagrim.trainSkill(PfSkills.SURVIVAL, 1);
+		dagrim.trainSkill(PfSkills.KNOWLEDGE_NATURE, 1);
+		dagrim.trainSkill(PfSkills.PERCEPTION, 1);
+		
 		EditText editText = (EditText)findViewById(R.id.textField);
 		String stats = "";
 		
-		stats += "Str: " + dagrim.getStrength() + " - +" + dagrim.getAttributeBonus(dagrim.getStrength()) + "\n";
-		stats += "Con: " + dagrim.getConstitution() + " - +" + dagrim.getAttributeBonus(dagrim.getConstitution()) + "\n";
-		stats += "Dex: " + dagrim.getDexterity() + " - +" + dagrim.getAttributeBonus(dagrim.getDexterity()) + "\n";
-		stats += "Wis: " + dagrim.getWisdom() + " - +" + dagrim.getAttributeBonus(dagrim.getWisdom()) + "\n";
-		stats += "Int: " + dagrim.getIntelligence() + " - +" + dagrim.getAttributeBonus(dagrim.getIntelligence()) + "\n";
-		stats += "Cha: " + dagrim.getCharisma() + " - +" + dagrim.getAttributeBonus(dagrim.getCharisma()) + "\n";
+		stats += "Str: " + dagrim.getStrength() + " [" + dagrim.getAttributeBonus(dagrim.getStrength()) + "]\n";
+		stats += "Con: " + dagrim.getConstitution() + " [" + dagrim.getAttributeBonus(dagrim.getConstitution()) + "]\n";
+		stats += "Dex: " + dagrim.getDexterity() + " [" + dagrim.getAttributeBonus(dagrim.getDexterity()) + "]\n";
+		stats += "Wis: " + dagrim.getWisdom() + " [" + dagrim.getAttributeBonus(dagrim.getWisdom()) + "]\n";
+		stats += "Int: " + dagrim.getIntelligence() + " [" + dagrim.getAttributeBonus(dagrim.getIntelligence()) + "]\n";
+		stats += "Cha: " + dagrim.getCharisma() + " [" + dagrim.getAttributeBonus(dagrim.getCharisma()) + "]\n";
 		
 		stats += "\n";
 		
 		stats += "HP: " + dagrim.getMaxHitpoints() + "\n";
 		stats += "AC: " + dagrim.getAC() + "\n";
-		stats += "Attack bonus: " + dagrim.getAttackBonus(0) + "(" + dagrim.getAttackBonus(1) + ", " + dagrim.getAttackBonus(2) + ")\n";
+		stats += "Attack bonus: " + dagrim.getAttackBonus(0) + ")\n";
 		stats += "Damage modifier: " + dagrim.getDamageModifier() + "\n";
+		
+		stats += "\n";
+		
+		for(PfSkills s : PfSkills.values()) {
+			stats += PfSkill.getName(this, s) + " ";
+			if(dagrim.canUseSkill(s)) {
+				stats += dagrim.getSkillBonus(s);
+			} else {
+				stats += "(untrained)";
+			}
+			
+			stats += "\n";
+		}
 		
 		editText.setText(stats);
 	}

@@ -1,8 +1,16 @@
 package net.mindsoup.pathfindercharactersheet.pf;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
 import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfRace;
+import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
+import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
+import net.mindsoup.pathfindercharactersheet.pf.skills.SkillFactory;
+import net.mindsoup.pathfindercharactersheet.pf.util.Calculation;
 
 public class PfCharacter {
 	private PfRace myRace;
@@ -23,6 +31,8 @@ public class PfCharacter {
 	private PfPace pace = PfPace.MEDIUM;
 	
 	private boolean getHpPerLevel;
+	
+	private Map<PfSkills, PfSkill> trainedSkills = new HashMap<PfSkills, PfSkill>();
 	
 	public PfCharacter(PfRace argRace, PfClass argClass, boolean argHpPerLevel) {
 		if(argRace == null) {
@@ -46,48 +56,91 @@ public class PfCharacter {
 		this.constitution = argCon;
 	}
 	
-	public int getConstitution() {
-		return this.constitution + myRace.getConModifier();
+	public Calculation getConstitution() {
+		Calculation c = new Calculation();
+		c.add("Constitution",  this.constitution);
+		c.add("Racial modifier", myRace.getConModifier());
+		
+		return c;
 	}
 	
 	public void setStrength(int argStr) {
 		this.strength = argStr;
 	}
 	
-	public int getStrength() {
-		return this.strength + myRace.getStrModifier();
+	public Calculation getStrength() {
+		Calculation c = new Calculation();
+		c.add("Strength",  this.strength);
+		c.add("Racial modifier", myRace.getStrModifier());
+		
+		return c;
 	}
 	
 	public void setDexterity(int argDex) {
 		this.dexterity = argDex;
 	}
 	
-	public int getDexterity() {
-		return this.dexterity + myRace.getDexModifier();
+	public Calculation getDexterity() {
+		Calculation c = new Calculation();
+		c.add("Dexterity",  this.dexterity);
+		c.add("Racial modifier", myRace.getDexModifier());
+		
+		return c;
 	}
 	
 	public void setIntelligence(int argInt) {
 		this.intelligence = argInt;
 	}
 	
-	public int getIntelligence() {
-		return this.intelligence + myRace.getIntModifier();
+	public Calculation getIntelligence() {
+		Calculation c = new Calculation();
+		c.add("Intelligence",  this.intelligence);
+		c.add("Racial modifier", myRace.getIntModifier());
+		
+		return c;
 	}
 	
 	public void setWisdom(int argWis) {
 		this.wisdom = argWis;
 	}
 	
-	public int getWisdom() {
-		return this.wisdom + myRace.getWisModifier();
+	public Calculation getWisdom() {
+		Calculation c = new Calculation();
+		c.add("Wisdom",  this.wisdom);
+		c.add("Racial modifier", myRace.getWisModifier());
+		
+		return c;
 	}
 	
 	public void setCharisma(int argCha) {
 		this.charisma = argCha;
 	}
 	
-	public int getCharisma() {
-		return this.charisma + myRace.getChaModifier();
+	public Calculation getCharisma() {
+		Calculation c = new Calculation();
+		c.add("Charisma",  this.charisma);
+		c.add("Racial modifier", myRace.getChaModifier());
+		
+		return c;
+	}
+	
+	public Calculation getAttributeValue(PfAttributes attribute) {
+		switch(attribute) {
+		case CHARISMA:
+			return getCharisma();
+		case CONSTITUTION:
+			return getConstitution();
+		case DEXTERITY:
+			return getDexterity();
+		case INTELLIGENCE:
+			return getIntelligence();
+		case STRENGTH:
+			return getStrength();
+		case WISDOM:
+			return getWisdom();
+		default:
+			throw new RuntimeException("Invalid attribute. This should never happen!");
+		}
 	}
 	
 	public int getLevel() {
@@ -140,6 +193,10 @@ public class PfCharacter {
 	public int getAttributeBonus(int attribute) {
 		// see core rulebook page 17
 		return (int)Math.floor( (attribute / 2.0) - 5);
+	}
+	
+	public int getAttributeBonus(Calculation attribute) {
+		return getAttributeBonus(attribute.sum());
 	}
 	
 	/**
@@ -207,24 +264,35 @@ public class PfCharacter {
 		this.xp = amount;
 	}
 	
-	public int getMaxHitpoints() {
-		int hp = this.myClass.getHitDie() + this.getAttributeBonus(this.getConstitution());
+	public Calculation getMaxHitpoints() {
+		Calculation hp = new Calculation();
+		
+		hp.add("Hit dice", this.myClass.getHitDie());
+		hp.add("Constitution bonus", this.getAttributeBonus(this.getConstitution()));
 				
 		if(getHpPerLevel)
-			hp += this.getLevel();
+			hp.add("Hitpoints per level", this.getLevel());
 				
 		return hp;
 	}
 	
-	public int getAC() {
+	public Calculation getAC() {
+		Calculation ac = new Calculation();
 		// core rulebook page 179
 		// TODO: add armor/shield
-		return 10 + this.getAttributeBonus(this.getDexterity());
+		ac.add("Base", 10);
+		ac.add("Dexterity bonus", this.getAttributeBonus(this.getDexterity()));
+		return ac;
 	}
 	
-	public int getAttackBonus(int attack) {
+	public Calculation getAttackBonus(int attack) {
 		// core rulebook page 178
-		return this.getBaseAttackBonus(attack) + this.getAttributeBonus(this.getStrength()) + this.getSizeModifier(); 
+		Calculation ab = new Calculation();
+		ab.add("Base attack bonus", this.getBaseAttackBonus(attack));
+		ab.add("Strength modifier", this.getAttributeBonus(this.getStrength()));
+		ab.add("Size modifier", this.getSizeModifier());
+		
+		return ab; 
 	}
 	
 	public int getSizeModifier() {
@@ -249,4 +317,62 @@ public class PfCharacter {
 		return (int)Math.floor(this.getAttributeBonus(this.getStrength()) * multiplier);
 	}
 	
+	/**
+	 * @param type the skill type to train
+	 * @param ranks how many ranks to put in the skill
+	 * @return the number of skill ranks actually applied to the skill
+	 */
+	public int trainSkill(PfSkills type, int ranks) {
+		PfSkill skill = trainedSkills.get(type);
+		
+		// if we did not train this skill already
+		if(skill == null) {
+			// get the skill and add it to our trained skills
+			skill = SkillFactory.getSkill(type);
+			trainedSkills.put(type, skill);
+		}
+		
+		int oldRank = skill.getRank();
+		// apply the skill ranks, making sure not to exceed our character level
+		skill.setRank( Math.min(this.getLevel(), skill.getRank() + ranks));
+		
+		// return the amount of skill ranks actually applied to the skill
+		return Math.min(this.getLevel() - oldRank, ranks);
+	}
+	
+	public boolean canUseSkill(PfSkills type) {
+		return SkillFactory.getSkill(type).canUseUntrained() || trainedSkills.containsKey(type);
+	}
+	
+	public Calculation getSkillBonus(PfSkills type) {
+		PfSkill skill = trainedSkills.get(type);
+		
+		Calculation trainedBonus = new Calculation();
+					
+		// if we have not trained the skill get an untrained skill 
+		// note that here we don't check if this skill can be used untrained
+		// use canUseSkill() to determine that
+		if(skill == null) {
+			skill = SkillFactory.getSkill(type);
+		} else {
+			// we've trained the skill, so get the skill ranks
+			trainedBonus.add("Skill rank", skill.getRank());
+			
+			// is this a class skill? if so we get a bonus!
+			if(skill.isClassSkill(this.myClass))
+				trainedBonus.add("Class skill", 3);
+		}
+		
+		// our ability modifier for this skill
+		int abilityModifier = this.getAttributeBonus(this.getAttributeValue(skill.getAttribute()));
+		trainedBonus.add("Ability modifier", abilityModifier);
+		
+		// TODO: add armor check penalty for skills where skill.hasArmorCheckPenalty() is true
+		
+		return trainedBonus;
+	}
+	
+	public Collection<PfSkill> getTrainedSkills() {
+		return trainedSkills.values();
+	}
 }
