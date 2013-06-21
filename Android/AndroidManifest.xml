@@ -31,6 +31,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="net.mindsoup.pathfindercharactersheet.MainActivity" />
         </activity>
+        <activity
+            android:name="net.mindsoup.pathfindercharactersheet.CharacterActivity"
+            android:label="@string/title_activity_character"
+            android:parentActivityName="net.mindsoup.pathfindercharactersheet.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.mindsoup.pathfindercharactersheet.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

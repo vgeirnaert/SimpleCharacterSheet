@@ -962,21 +962,22 @@ containing a value of this type.
         public static final int abs__textButton=0x7f040013;
         public static final int abs__title=0x7f04001b;
         public static final int abs__up=0x7f04000b;
-        public static final int action_settings=0x7f040037;
-        public static final int content_frame=0x7f040033;
-        public static final int dice_button=0x7f040036;
         public static final int disableHome=0x7f040009;
         public static final int drawer_layout=0x7f040032;
         public static final int edit_query=0x7f040026;
+        public static final int fragment_group=0x7f040033;
         public static final int homeAsUp=0x7f040006;
+        public static final int home_button=0x7f040037;
         public static final int left_drawer=0x7f040035;
         public static final int listMode=0x7f040002;
+        public static final int new_button=0x7f040038;
         public static final int normal=0x7f040001;
+        public static final int overview=0x7f040034;
+        public static final int overview_text=0x7f040036;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
         public static final int tabMode=0x7f040003;
-        public static final int textField=0x7f040034;
         public static final int useLogo=0x7f040004;
         public static final int wrap_content=0x7f040000;
     }
@@ -1005,15 +1006,19 @@ containing a value of this type.
         public static final int abs__search_dropdown_item_icons_2line=0x7f030012;
         public static final int abs__search_view=0x7f030013;
         public static final int abs__simple_dropdown_hint=0x7f030014;
-        public static final int activity_main=0x7f030015;
-        public static final int activity_ogl=0x7f030016;
-        public static final int drawer_list_item=0x7f030017;
-        public static final int sherlock_spinner_dropdown_item=0x7f030018;
-        public static final int sherlock_spinner_item=0x7f030019;
+        public static final int activity_character=0x7f030015;
+        public static final int activity_main=0x7f030016;
+        public static final int activity_ogl=0x7f030017;
+        public static final int drawer_list_item=0x7f030018;
+        public static final int fragment_attributes=0x7f030019;
+        public static final int fragment_overview=0x7f03001a;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001b;
+        public static final int sherlock_spinner_item=0x7f03001c;
     }
     public static final class menu {
         public static final int character=0x7f0c0000;
-        public static final int ogl=0x7f0c0001;
+        public static final int main=0x7f0c0001;
+        public static final int ogl=0x7f0c0002;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1055,14 +1060,16 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f090007;
-        public static final int action_settings=0x7f090013;
+        public static final int action_settings=0x7f090014;
         public static final int app_name=0x7f09000d;
-        public static final int drawer_close=0x7f090011;
-        public static final int drawer_open=0x7f090010;
-        public static final int hello_world=0x7f090014;
+        public static final int drawer_close=0x7f090012;
+        public static final int drawer_open=0x7f090011;
+        public static final int hello_world=0x7f090015;
         public static final int home_title=0x7f09000f;
+        public static final int new_title=0x7f090010;
         public static final int title=0x7f09000e;
-        public static final int title_activity_ogl=0x7f090012;
+        public static final int title_activity_character=0x7f090016;
+        public static final int title_activity_ogl=0x7f090013;
     }
     public static final class style {
         /** 

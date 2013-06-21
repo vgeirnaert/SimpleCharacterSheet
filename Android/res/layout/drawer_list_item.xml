@@ -8,5 +8,5 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:textColor="#fff"
-    android:textSize="32dp" />
+    android:textSize="32sp" />
 
