@@ -5,6 +5,8 @@ import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 
 public class PfBarbarian implements PfClass {
 	
+	// TODO: make all methods static?
+	
 	// class skills
 	private final PfSkills[] classSkills = {PfSkills.ACROBATICS, PfSkills.CLIMB, PfSkills.CRAFT, PfSkills.HANDLE_ANIMAL, PfSkills.INTIMIDATE, PfSkills.KNOWLEDGE_NATURE, PfSkills.PERCEPTION, PfSkills.RIDE, PfSkills.SURVIVAL, PfSkills.SWIM};
 

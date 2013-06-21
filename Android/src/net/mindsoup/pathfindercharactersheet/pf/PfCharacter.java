@@ -29,6 +29,7 @@ public class PfCharacter {
 	
 	private int xp = 0;
 	private PfPace pace = PfPace.MEDIUM;
+	private int availableSkillRanks = 0;
 	
 	private boolean getHpPerLevel;
 	
@@ -50,6 +51,23 @@ public class PfCharacter {
 	
 	public void setPace(PfPace argPace) {
 		this.pace = argPace;
+	}
+	
+	public int getAvailableSkillRanks() {
+		return availableSkillRanks;
+	}
+	
+	/**
+	 * This function should not be called to add skill ranks when
+	 * leveling up - only to initialise skill ranks at a certain 
+	 * amount. 
+	 * 
+	 * For leveling up, add XP (either addXp() or setXp())  and if 
+	 * a new level is reached levelUp() is automatically called, 
+	 * which adds the correct amount of skill ranks.
+	 */
+	public void setAvailableSkillRanks(int ranks) {
+		this.availableSkillRanks = ranks;
 	}
 	
 	public void setConstitution(int argCon) {
@@ -256,12 +274,26 @@ public class PfCharacter {
 		return this.ActiveOffhandWeapon;
 	}
 	
+
+	
+	public void levelUp() {
+		this.availableSkillRanks = myClass.getBaseSkillRanksPerLevel() + this.getAttributeBonus(this.getIntelligence());
+	}
+	
 	public int getXp() {
 		return xp;
 	}
 	
 	public void setXp(int amount) {
+		int oldLevel = this.getLevel();
 		this.xp = amount;
+		
+		if(oldLevel < this.getLevel()) 
+			levelUp();
+	}
+	
+	public void addXp(int amount) {
+		this.setXp(this.getXp() + amount);
 	}
 	
 	public Calculation getMaxHitpoints() {
@@ -318,6 +350,10 @@ public class PfCharacter {
 	}
 	
 	/**
+	 * Makes best effort to train a skill. Game rules may prohibit adding
+	 * more ranks to a skill, however. Use the return value to check how
+	 * many skill ranks were actually applied.
+	 * 
 	 * @param type the skill type to train
 	 * @param ranks how many ranks to put in the skill
 	 * @return the number of skill ranks actually applied to the skill
@@ -332,12 +368,16 @@ public class PfCharacter {
 			trainedSkills.put(type, skill);
 		}
 		
-		int oldRank = skill.getRank();
-		// apply the skill ranks, making sure not to exceed our character level
-		skill.setRank( Math.min(this.getLevel(), skill.getRank() + ranks));
+		// calculate the maximum amount of skill ranks that can be applied:
+		// total skill rank must remain smaller than or equal to character level
+		// skill ranks must be available
+		int maxRanks = Math.min(Math.min(this.getLevel() - skill.getRank(), ranks), this.getAvailableSkillRanks());
 		
-		// return the amount of skill ranks actually applied to the skill
-		return Math.min(this.getLevel() - oldRank, ranks);
+		// apply the skill ranks, making sure not to exceed our character level
+		skill.setRank( skill.getRank() + maxRanks);
+		
+		// return 
+		return maxRanks;
 	}
 	
 	public boolean canUseSkill(PfSkills type) {

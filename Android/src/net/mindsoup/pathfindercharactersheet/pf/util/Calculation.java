@@ -44,7 +44,7 @@ public class Calculation {
 			String operand = "+";
 			
 			if(values.get(s) < 0)
-				operand = "-";
+				operand = "";
 			
 			if(firstRun) {
 				operand = "";
