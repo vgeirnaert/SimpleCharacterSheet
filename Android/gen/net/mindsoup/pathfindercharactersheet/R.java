@@ -972,6 +972,7 @@ containing a value of this type.
         public static final int listMode=0x7f040002;
         public static final int new_button=0x7f040038;
         public static final int normal=0x7f040001;
+        public static final int ogl_button=0x7f040039;
         public static final int overview=0x7f040034;
         public static final int overview_text=0x7f040036;
         public static final int showCustom=0x7f040008;
@@ -1060,16 +1061,17 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f090007;
-        public static final int action_settings=0x7f090014;
+        public static final int action_settings=0x7f090015;
         public static final int app_name=0x7f09000d;
-        public static final int drawer_close=0x7f090012;
-        public static final int drawer_open=0x7f090011;
-        public static final int hello_world=0x7f090015;
+        public static final int drawer_close=0x7f090013;
+        public static final int drawer_open=0x7f090012;
+        public static final int hello_world=0x7f090016;
         public static final int home_title=0x7f09000f;
         public static final int new_title=0x7f090010;
+        public static final int ogl_title=0x7f090011;
         public static final int title=0x7f09000e;
-        public static final int title_activity_character=0x7f090016;
-        public static final int title_activity_ogl=0x7f090013;
+        public static final int title_activity_character=0x7f090017;
+        public static final int title_activity_ogl=0x7f090014;
     }
     public static final class style {
         /** 

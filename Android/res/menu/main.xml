@@ -5,7 +5,14 @@
         android:orderInCategory="100"
         android:title="@string/new_title"
         android:icon="@drawable/ic_action_user"
-        android:showAsAction="always|withText"
+        android:showAsAction="always"
+        />
+    <item
+        android:id="@+id/ogl_button"
+        android:orderInCategory="100"
+        android:title="@string/ogl_title"
+        android:icon="@drawable/ic_action_edit"
+        android:showAsAction="never|withText"
         />
 
 </menu>

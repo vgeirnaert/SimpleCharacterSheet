@@ -37,9 +37,7 @@ public class MainActivity extends SherlockActivity {
 		}
 	}
 	
-	public void startFragmentActivity(View view) {
-		Toast.makeText(this, "start fragments", Toast.LENGTH_SHORT).show();
-		
+	public void startFragmentActivity(View view) {		
 		Intent intent = new Intent(this, CharacterActivity.class);
     	startActivity(intent);
 	}

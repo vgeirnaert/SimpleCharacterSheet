@@ -6,6 +6,7 @@
     
     <string name="home_title">Home</string>
     <string name="new_title">New</string>
+    <string name="ogl_title">Open Game Licence</string>
     
     <string name="drawer_open">Open navigation</string>
     <string name="drawer_close">Close navigation</string>

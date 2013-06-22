@@ -343,8 +343,10 @@ public class PfCharacter {
 	public int getDamageModifier() {
 		double multiplier = 1.0;
 		
-		if(this.ActiveMainhandWeapon.getHandedness() == PfHandedness.TWOHAND)
-			multiplier = 1.5;
+		if(this.ActiveMainhandWeapon != null) {
+			if(this.ActiveMainhandWeapon.getHandedness() == PfHandedness.TWOHAND)
+				multiplier = 1.5;
+		}
 			
 		return (int)Math.floor(this.getAttributeBonus(this.getStrength()) * multiplier);
 	}
