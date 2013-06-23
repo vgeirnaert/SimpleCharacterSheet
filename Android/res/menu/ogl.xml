@@ -4,7 +4,7 @@
         android:id="@+id/home_button"
         android:orderInCategory="100"
         android:title="@string/home_title"
-        android:icon="@drawable/ic_action_star"
+        android:icon="@drawable/social_group"
         android:showAsAction="always"
         />
 

@@ -4,11 +4,11 @@ import net.mindsoup.pathfindercharactersheet.pf.PfEffectTypes;
 import net.mindsoup.pathfindercharactersheet.pf.PfRaces;
 import net.mindsoup.pathfindercharactersheet.pf.PfSizes;
 
-public class PfDwarf implements PfRace {
+public class PfElf implements PfRace {
 
 	@Override
 	public PfRaces getRace() {
-		return PfRaces.DWARF;
+		return PfRaces.ELF;
 	}
 
 	@Override
@@ -18,7 +18,7 @@ public class PfDwarf implements PfRace {
 
 	@Override
 	public int getConModifier() {
-		return +2;
+		return -2;
 	}
 
 	@Override
@@ -28,67 +28,62 @@ public class PfDwarf implements PfRace {
 
 	@Override
 	public int getDexModifier() {
-		return 0;
+		return 2;
 	}
 
 	@Override
 	public int getIntModifier() {
-		return 0;
+		return 2;
 	}
 
 	@Override
 	public int getWisModifier() {
-		return +2;
+		return 0;
 	}
 
 	@Override
 	public int getChaModifier() {
-		return -2;
+		return 0;
 	}
 
 	@Override
 	public int getCMBModifier() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int getCMDModifier() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int getACModifier() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int getSavingThrowModifier(PfEffectTypes effect) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int getBaseSpeed() {
-		return 20;
+		return 30;
 	}
 
 	@Override
 	public int getDarkvisionRange() {
-		return 60;
+		return 0;
 	}
 
 	@Override
 	public int getLowlightvisionRange() {
-		return 60;
-	}
-
-	@Override
-	public String toString() {
-		return "Dwarf";
+		return 30;
 	}
 	
+	@Override
+	public String toString() {
+		return "Elf";
+	}
 
 }

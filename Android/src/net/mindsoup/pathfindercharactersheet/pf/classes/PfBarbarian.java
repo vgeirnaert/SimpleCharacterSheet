@@ -58,4 +58,6 @@ public class PfBarbarian implements PfClass {
 		return "Barbarian";
 	}
 
+	
+
 }

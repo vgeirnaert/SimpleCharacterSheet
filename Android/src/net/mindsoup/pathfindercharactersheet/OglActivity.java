@@ -2,7 +2,6 @@ package net.mindsoup.pathfindercharactersheet;
 
 import net.mindsoup.pathfindercharactersheet.util.TextFileReader;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.text.Html;
 import android.widget.TextView;
 
@@ -33,14 +32,7 @@ public class OglActivity extends SherlockActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.home_button:
-			// This ID represents the Home or Up button. In the case of this
-			// activity, the Up button is shown. Use NavUtils to allow users
-			// to navigate up one level in the application structure. For
-			// more details, see the Navigation pattern on Android Design:
-			//
-			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
-			//
-			NavUtils.navigateUpFromSameTask(this);
+			super.onBackPressed();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

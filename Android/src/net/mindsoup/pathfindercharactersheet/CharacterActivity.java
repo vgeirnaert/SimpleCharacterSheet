@@ -18,7 +18,6 @@ import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v4.widget.DrawerLayout;
@@ -96,8 +95,6 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		});
 		
 		drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
-		
-		//icons.recycle();
 	}
 	
 	private void initialiseActionBar() {
@@ -183,15 +180,15 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	        	toggleDrawer();
 	            return true;
 	        case R.id.home_button:
-	        	heroButtonClicked();
+	        	homeButtonClicked();
 	        	return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
 		}
 	}
 	
-	private void heroButtonClicked() {
-		NavUtils.navigateUpFromSameTask(this);
+	private void homeButtonClicked() {
+		super.onBackPressed();
 	}
 	
 	private void toggleDrawer() {

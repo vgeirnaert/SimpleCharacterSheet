@@ -7,10 +7,8 @@
     <string name="home_title">Home</string>
     <string name="new_title">New</string>
     <string name="ogl_title">Open Game Licence</string>
-    
-    <string name="drawer_open">Open navigation</string>
-    <string name="drawer_close">Close navigation</string>
-
+    <string name="search_title">Search</string>
+   
     <string-array name="drawer_items_strings">
         <item>Overview</item>
         <item>Attributes</item>
@@ -65,5 +63,6 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_character">CharacterActivity</string>
+    <string name="portraitContent">portrait</string>
 
 </resources>

@@ -4,15 +4,20 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import net.mindsoup.pathfindercharactersheet.R;
+import net.mindsoup.pathfindercharactersheet.pf.classes.PfBarbarian;
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
 import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
+import net.mindsoup.pathfindercharactersheet.pf.races.PfDwarf;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfRace;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 import net.mindsoup.pathfindercharactersheet.pf.skills.SkillFactory;
 import net.mindsoup.pathfindercharactersheet.pf.util.Calculation;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class PfCharacter {
+public class PfCharacter implements Parcelable {
 	private PfRace myRace;
 	private PfClass myClass;
 	private String name;
@@ -35,6 +40,22 @@ public class PfCharacter {
 	private boolean getHpPerLevel;
 	
 	private Map<PfSkills, PfSkill> trainedSkills = new HashMap<PfSkills, PfSkill>();
+	
+	@SuppressWarnings("rawtypes")
+	public static final Parcelable.Creator CREATOR =
+	    new Parcelable.Creator() {
+	        public PfCharacter createFromParcel(Parcel in) {
+	            return new PfCharacter(in);
+	        }
+
+	        public PfCharacter[] newArray(int size) {
+	            return new PfCharacter[size];
+	        }
+	    };
+	    
+	public PfCharacter(Parcel in) {
+		readFromParcel(in);
+	}
 	
 	public PfCharacter(PfRace argRace, PfClass argClass, boolean argHpPerLevel, String name) {
 		if(argRace == null) {
@@ -431,4 +452,82 @@ public class PfCharacter {
 	public Collection<PfSkill> getTrainedSkills() {
 		return trainedSkills.values();
 	}
+	
+	public int getPortraitRes() {
+		return R.drawable.ic_action_user;
+	}
+
+	@Override
+	public int describeContents() {
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel out, int flags) {
+		out.writeInt(myClass.getPfClass().ordinal());
+		out.writeInt(myRace.getRace().ordinal());
+		out.writeString(name);
+		out.writeInt(xp);
+	}
+	
+	public void readFromParcel(Parcel in) {
+		// TODO: complete parcelization
+		myClass = getClass(in.readInt());
+		myRace = getRace(in.readInt());
+		name = in.readString();
+		xp = in.readInt();
+	}
+	
+	public PfClass getClass(int classType) {
+		switch(classType) {
+			case 0: // barbarian
+				return new PfBarbarian();
+			case 1: //bard
+				return new PfBarbarian();
+			case 2:
+				return new PfBarbarian();
+			case 3:
+				return new PfBarbarian();
+			case 4:
+				return new PfBarbarian();
+			case 5:
+				return new PfBarbarian();
+			case 6:
+				return new PfBarbarian();
+			case 7:
+				return new PfBarbarian();
+			case 8:
+				return new PfBarbarian();
+			case 9:
+				return new PfBarbarian();
+			case 10:
+				return new PfBarbarian();
+			default:
+				throw new RuntimeException("Unable to create class of type " + classType + ". This should never happen!");
+		}
+	}
+	
+	public PfRace getRace(int raceType) {
+		switch(raceType) {
+		case 0: // dwarf
+			return new PfDwarf();
+		case 1: // elf
+			return new PfDwarf();
+		case 2: //gnome
+			return new PfDwarf();
+		case 3: //halfelf
+			return new PfDwarf();
+		case 4: //halfling
+			return new PfDwarf();
+		case 5: //halforc
+			return new PfDwarf();
+		case 6: //human
+			return new PfDwarf();
+		default:
+			throw new RuntimeException("Unable to create race of type " + raceType + ". This should never happen!");
+
+		}
+	}
+	
+	
 }
