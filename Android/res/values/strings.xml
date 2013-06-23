@@ -14,10 +14,8 @@
     <string-array name="drawer_items_array">
         <item>Overview</item>
         <item>Attributes</item>
-        <item>Feats</item>
         <item>Skills</item>
-        <item>Equipment</item>
-        <item>Backpack</item>
+        <item>Character Info</item>
     </string-array>
     <string-array name="skill_names">
         <item>Acrobatics</item>

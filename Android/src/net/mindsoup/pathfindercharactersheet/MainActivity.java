@@ -32,9 +32,13 @@ public class MainActivity extends SherlockActivity {
 	        case R.id.new_button:
 	        	Toast.makeText(this, "New hero time!", Toast.LENGTH_LONG).show();
 	        	return true;
-	        default:
-	            return super.onOptionsItemSelected(item);
+	        case R.id.ogl_button:
+	        	Intent intent = new Intent(this, OglActivity.class);
+	        	startActivity(intent);
+	        	return true;
 		}
+		
+		return super.onOptionsItemSelected(item);
 	}
 	
 	public void startFragmentActivity(View view) {		

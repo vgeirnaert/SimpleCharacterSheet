@@ -1,19 +1,17 @@
 package net.mindsoup.pathfindercharactersheet.fragments;
 
+import net.mindsoup.pathfindercharactersheet.CharacterActivity;
 import net.mindsoup.pathfindercharactersheet.R;
+import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
+import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
+import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragment;
-
-import net.mindsoup.pathfindercharactersheet.CharacterActivity;
-import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
-import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
-import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 
 public class OverviewFragment extends SherlockFragment {
 	
@@ -40,8 +38,6 @@ public class OverviewFragment extends SherlockFragment {
 	@Override
 	public void onResume() {
 		super.onResume();
-		
-		Toast.makeText(getActivity(), "resuming!", Toast.LENGTH_SHORT).show();
 		
 		CharacterActivity ca = (CharacterActivity)this.getActivity();
 		character = ca.getCharacter();

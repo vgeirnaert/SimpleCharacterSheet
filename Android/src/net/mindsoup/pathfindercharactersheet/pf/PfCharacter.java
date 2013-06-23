@@ -15,6 +15,7 @@ import net.mindsoup.pathfindercharactersheet.pf.util.Calculation;
 public class PfCharacter {
 	private PfRace myRace;
 	private PfClass myClass;
+	private String name;
 	
 	private Weapon ActiveMainhandWeapon = null;
 	private Weapon ActiveOffhandWeapon= null;
@@ -35,7 +36,7 @@ public class PfCharacter {
 	
 	private Map<PfSkills, PfSkill> trainedSkills = new HashMap<PfSkills, PfSkill>();
 	
-	public PfCharacter(PfRace argRace, PfClass argClass, boolean argHpPerLevel) {
+	public PfCharacter(PfRace argRace, PfClass argClass, boolean argHpPerLevel, String name) {
 		if(argRace == null) {
 			throw new IllegalArgumentException("Character constructor does not accept null values for race.");
 		}
@@ -47,6 +48,11 @@ public class PfCharacter {
 		this.myRace = argRace;
 		this.myClass = argClass;
 		this.getHpPerLevel = argHpPerLevel;
+		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
 	}
 	
 	public void setPace(PfPace argPace) {

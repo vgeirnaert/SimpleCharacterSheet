@@ -967,19 +967,19 @@ containing a value of this type.
         public static final int edit_query=0x7f040026;
         public static final int fragment_group=0x7f040033;
         public static final int homeAsUp=0x7f040006;
-        public static final int home_button=0x7f040037;
-        public static final int left_drawer=0x7f040035;
+        public static final int home_button=0x7f040036;
+        public static final int left_drawer=0x7f040034;
         public static final int listMode=0x7f040002;
-        public static final int new_button=0x7f040038;
+        public static final int new_button=0x7f040037;
         public static final int normal=0x7f040001;
-        public static final int ogl_button=0x7f040039;
-        public static final int overview=0x7f040034;
-        public static final int overview_text=0x7f040036;
+        public static final int ogl_button=0x7f040038;
+        public static final int overview_text=0x7f040035;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
         public static final int tabMode=0x7f040003;
         public static final int useLogo=0x7f040004;
+        public static final int viewpager=0x01010000;
         public static final int wrap_content=0x7f040000;
     }
     public static final class integer {
@@ -1012,9 +1012,11 @@ containing a value of this type.
         public static final int activity_ogl=0x7f030017;
         public static final int drawer_list_item=0x7f030018;
         public static final int fragment_attributes=0x7f030019;
-        public static final int fragment_overview=0x7f03001a;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001b;
-        public static final int sherlock_spinner_item=0x7f03001c;
+        public static final int fragment_character_info=0x7f03001a;
+        public static final int fragment_overview=0x7f03001b;
+        public static final int fragment_skills=0x7f03001c;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001d;
+        public static final int sherlock_spinner_item=0x7f03001e;
     }
     public static final class menu {
         public static final int character=0x7f0c0000;
