@@ -52,5 +52,10 @@ public class PfBarbarian implements PfClass {
 	public PfSkills[] getClassSkills() {
 		return classSkills;
 	}
+	
+	@Override
+	public String toString() {
+		return "Barbarian";
+	}
 
 }

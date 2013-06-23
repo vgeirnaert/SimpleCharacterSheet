@@ -1,7 +1,10 @@
 package net.mindsoup.pathfindercharactersheet;
 
+import net.mindsoup.pathfindercharactersheet.util.TextFileReader;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.text.Html;
+import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
@@ -41,6 +44,14 @@ public class OglActivity extends SherlockActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	@Override
+	public void onStart() {
+		super.onStart();
+		
+		TextView editText = (TextView)findViewById(R.id.ogl_text);
+		editText.setText(Html.fromHtml(TextFileReader.readText(this, "ogl")));
 	}
 
 }

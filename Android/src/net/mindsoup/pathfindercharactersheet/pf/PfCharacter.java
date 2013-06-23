@@ -51,6 +51,14 @@ public class PfCharacter {
 		this.name = name;
 	}
 	
+	public PfRace getRace() {
+		return myRace;
+	}
+	
+	public PfClass getPfClass() {
+		return myClass;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -237,7 +245,7 @@ public class PfCharacter {
 	}
 	
 	public int getNumAttacksPerRound() {
-		return (int)Math.ceil(this.getLevel() / this.myClass.getExtraAttackPerNumLevels());
+		return (int)Math.ceil((double)this.getLevel() / this.myClass.getExtraAttackPerNumLevels());
 	}
 	
 	/**

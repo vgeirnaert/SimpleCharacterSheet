@@ -85,4 +85,11 @@ public class PfDwarf implements PfRace {
 		return 60;
 	}
 
+	@Override
+	public String toString() {
+		return "Dwarf";
+	}
+	
+	
+
 }

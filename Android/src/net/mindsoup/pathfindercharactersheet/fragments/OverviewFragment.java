@@ -3,9 +3,8 @@ package net.mindsoup.pathfindercharactersheet.fragments;
 import net.mindsoup.pathfindercharactersheet.CharacterActivity;
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
-import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
-import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,34 +44,23 @@ public class OverviewFragment extends SherlockFragment {
 		TextView editText = (TextView)getActivity().findViewById(R.id.overview_text);
 		String stats = "";
 		
-		stats += "Str: " + character.getStrength() + " [" + character.getAttributeBonus(character.getStrength()) + "]\n";
-		stats += "Con: " + character.getConstitution() + " [" + character.getAttributeBonus(character.getConstitution()) + "]\n";
-		stats += "Dex: " + character.getDexterity() + " [" + character.getAttributeBonus(character.getDexterity()) + "]\n";
-		stats += "Wis: " + character.getWisdom() + " [" + character.getAttributeBonus(character.getWisdom()) + "]\n";
-		stats += "Int: " + character.getIntelligence() + " [" + character.getAttributeBonus(character.getIntelligence()) + "]\n";
-		stats += "Cha: " + character.getCharisma() + " [" + character.getAttributeBonus(character.getCharisma()) + "]\n";
+		stats += "<b><u>Attribute bonuses</u></b><br>";
+		stats += "Str: <b>" + character.getAttributeBonus(character.getStrength()) + "</b><br>";
+		stats += "Con: <b>" + character.getAttributeBonus(character.getConstitution()) + "</b><br>";
+		stats += "Dex: <b>" + character.getAttributeBonus(character.getDexterity()) + "</b><br>";
+		stats += "Wis: <b>" + character.getAttributeBonus(character.getWisdom()) + "</b><br>";
+		stats += "Int: <b>" + character.getAttributeBonus(character.getIntelligence()) + "</b><br>";
+		stats += "Cha: <b>" + character.getAttributeBonus(character.getCharisma()) + "</b><br>";
 		
-		stats += "\n";
+		stats += "<br>";
 		
-		stats += "HP: " + character.getMaxHitpoints() + "\n";
-		stats += "AC: " + character.getAC() + "\n";
-		stats += "Attack bonus: " + character.getAttackBonus(0) + ")\n";
-		stats += "Damage modifier: " + character.getDamageModifier() + "\n";
+		stats += "<b><u>Combat stats</u></b><br>";
+		stats += "AC: <b>" + character.getAC() + "</b><br>";
+		stats += "Attack bonus: <b>" + character.getAttackBonus(0) + "</b><br>";
+		stats += "Damage modifier: <b>" + character.getDamageModifier() + "</b><br>";
+		stats += "Attacks per round: <b>" + character.getNumAttacksPerRound() + "</b><br>";		
 		
-		stats += "\n";
-		
-		for(PfSkills s : PfSkills.values()) {
-			stats += PfSkill.getName(getActivity(), s) + " ";
-			if(character.canUseSkill(s)) {
-				stats += character.getSkillBonus(s);
-			} else {
-				stats += "(untrained)";
-			}
-			
-			stats += "\n";
-		}
-		
-		editText.setText(stats);
+		editText.setText(Html.fromHtml(stats));
 	}
 	
 	
