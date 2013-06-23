@@ -11,12 +11,18 @@
     <string name="drawer_open">Open navigation</string>
     <string name="drawer_close">Close navigation</string>
 
-    <string-array name="drawer_items_array">
+    <string-array name="drawer_items_strings">
         <item>Overview</item>
         <item>Attributes</item>
         <item>Skills</item>
         <item>Character Info</item>
     </string-array>
+    <array name="drawer_items_icons">
+        <item>@drawable/ic_action_done</item>
+        <item>@drawable/ic_action_edit</item>
+        <item>@drawable/ic_action_star</item>
+        <item>@drawable/ic_action_user</item>
+    </array>
     <string-array name="skill_names">
         <item>Acrobatics</item>
         <item>Appraise</item>

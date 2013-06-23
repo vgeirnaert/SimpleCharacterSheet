@@ -15,6 +15,7 @@ import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfDwarf;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.NavUtils;
@@ -24,7 +25,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -43,36 +43,12 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	private DrawerLayout drawerLayout;
 	private CharacterPagerAdapter pagerAdapter;
 	private ViewPager pager;
+	private TypedArray icons;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_character);
-		
-		// create navigation drawer
-		initialiseNavDrawer();
-		
-		// set up fragment paging
-		initialisePaging();
-		
-		// set up action bar
-		initialiseActionBar();
-		
-		dagrim.setCharisma(8);
-		dagrim.setConstitution(16);
-		dagrim.setStrength(17);
-		dagrim.setDexterity(15);
-		dagrim.setIntelligence(11);
-		dagrim.setWisdom(14);
-		
-		dagrim.setMainhandWeapon(new Weapon(new Dice(12, 1), 3, 1, PfHandedness.TWOHAND));
-		dagrim.setPace(PfPace.FAST);
-		dagrim.setXp(382);
-		
-		dagrim.trainSkill(PfSkills.ACROBATICS, 1);
-		dagrim.trainSkill(PfSkills.SURVIVAL, 1);
-		dagrim.trainSkill(PfSkills.KNOWLEDGE_NATURE, 1);
-		dagrim.trainSkill(PfSkills.PERCEPTION, 1);
 	}
 	
 	private void initialisePaging() {
@@ -106,10 +82,11 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	
 	private void initialiseNavDrawer() {
 		// create navigation drawer
-		String[] drawerItems = getResources().getStringArray(R.array.drawer_items_array);
-		drawerList = (ListView)findViewById(R.id.left_drawer);
+		String[] drawerItems = getResources().getStringArray(R.array.drawer_items_strings);
+		icons = getResources().obtainTypedArray(R.array.drawer_items_icons);
 		
-		drawerList.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_list_item, drawerItems));		
+		drawerList = (ListView)findViewById(R.id.left_drawer);
+		drawerList.setAdapter(new NavDrawerAdapter(this, R.layout.drawer_list_item, drawerItems, icons));		
 		drawerList.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -119,6 +96,8 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		});
 		
 		drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+		
+		//icons.recycle();
 	}
 	
 	private void initialiseActionBar() {
@@ -145,7 +124,7 @@ public class CharacterActivity extends SherlockFragmentActivity {
 			public void onTabReselected(Tab tab, FragmentTransaction ft) {}
 		};
 		
-		String[] drawerItems = getResources().getStringArray(R.array.drawer_items_array);
+		String[] drawerItems = getResources().getStringArray(R.array.drawer_items_strings);
 		for(String s : drawerItems) {
 			Tab tab = getSupportActionBar().newTab();
 			tab.setText(s);
@@ -162,6 +141,31 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	@Override
 	public void onStart() {
 		super.onStart();
+		
+		// create navigation drawer
+		initialiseNavDrawer();
+		
+		// set up fragment paging
+		initialisePaging();
+		
+		// set up action bar
+		initialiseActionBar();
+		
+		dagrim.setCharisma(8);
+		dagrim.setConstitution(16);
+		dagrim.setStrength(17);
+		dagrim.setDexterity(15);
+		dagrim.setIntelligence(11);
+		dagrim.setWisdom(14);
+		
+		dagrim.setMainhandWeapon(new Weapon(new Dice(12, 1), 3, 1, PfHandedness.TWOHAND));
+		dagrim.setPace(PfPace.FAST);
+		dagrim.setXp(382);
+		
+		dagrim.trainSkill(PfSkills.ACROBATICS, 1);
+		dagrim.trainSkill(PfSkills.SURVIVAL, 1);
+		dagrim.trainSkill(PfSkills.KNOWLEDGE_NATURE, 1);
+		dagrim.trainSkill(PfSkills.PERCEPTION, 1);
 	}
 
 	@Override
@@ -216,5 +220,10 @@ public class CharacterActivity extends SherlockFragmentActivity {
         	pager.setCurrentItem(pager.getCurrentItem() - 1);
         }
     }
-
+	
+	@Override
+	public void onStop() {
+		super.onStop();
+		icons.recycle();
+	}
 }

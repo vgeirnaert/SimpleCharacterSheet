@@ -9,8 +9,9 @@ package net.mindsoup.pathfindercharactersheet;
 
 public final class R {
     public static final class array {
-        public static final int drawer_items_array=0x7f0b0000;
-        public static final int skill_names=0x7f0b0001;
+        public static final int drawer_items_icons=0x7f0b0001;
+        public static final int drawer_items_strings=0x7f0b0000;
+        public static final int skill_names=0x7f0b0002;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
@@ -967,13 +968,14 @@ containing a value of this type.
         public static final int edit_query=0x7f040026;
         public static final int fragment_group=0x7f040033;
         public static final int homeAsUp=0x7f040006;
-        public static final int home_button=0x7f040036;
+        public static final int home_button=0x7f040037;
         public static final int left_drawer=0x7f040034;
         public static final int listMode=0x7f040002;
-        public static final int new_button=0x7f040037;
+        public static final int nav_text=0x7f040035;
+        public static final int new_button=0x7f040038;
         public static final int normal=0x7f040001;
-        public static final int ogl_button=0x7f040038;
-        public static final int overview_text=0x7f040035;
+        public static final int ogl_button=0x7f040039;
+        public static final int overview_text=0x7f040036;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
