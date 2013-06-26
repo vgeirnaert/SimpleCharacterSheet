@@ -1,16 +1,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <!-- <item
-        android:id="@+id/search_button"
-        android:orderInCategory="100"
-        android:title="@string/search_title"
-        android:icon="@drawable/action_search"
-        android:showAsAction="always"
-        />-->
     <item android:id="@+id/menu_search"
           android:title="@string/search_title"
           android:icon="@drawable/action_search"
-          android:showAsAction="ifRoom|collapseActionView"
+          android:showAsAction="always|collapseActionView"
           android:actionViewClass="com.actionbarsherlock.widget.SearchView" />
     <item
         android:id="@+id/new_button"

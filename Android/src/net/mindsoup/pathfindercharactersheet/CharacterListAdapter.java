@@ -58,5 +58,16 @@ public class CharacterListAdapter extends ArrayAdapter<PfCharacter> {
         
         return convertView;
     }
+	
+	public void addAll(ArrayList<PfCharacter> chars) {
+		System.out.println("adding " + chars.size());
+		
+		ArrayList<PfCharacter> newCharacters = new ArrayList<PfCharacter>();
+		
+		for(PfCharacter c : chars)
+			newCharacters.add(c);
+		
+		this.characters = newCharacters;
+	}
 
 }

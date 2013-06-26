@@ -38,7 +38,11 @@ public class Calculation {
 	
 	@Override
 	public String toString() {
-		String explanation = this.sum() + " = [";
+		return this.sum() + " = [" + this.explain() + "]";
+	}
+	
+	public String explain() {
+		String explanation = "";
 		boolean firstRun = true;
 		for(String s : values.keySet()) {
 			String operand = "+";
@@ -55,13 +59,7 @@ public class Calculation {
 			explanation += operand + values.get(s) + " (" + s + ") "; 
 		}
 		
-		
-		
-		return explanation + "]";
-	}
-	
-	public String explain() {
-		return this.toString();
+		return explanation;
 	}
 	
 }

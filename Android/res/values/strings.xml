@@ -8,6 +8,8 @@
     <string name="new_title">New</string>
     <string name="ogl_title">Open Game Licence</string>
     <string name="search_title">Search</string>
+    <string name="open_title">Open</string>
+    <string name="delete_title">Delete</string>
    
     <string-array name="drawer_items_strings">
         <item>Overview</item>
@@ -64,5 +66,37 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_character">CharacterActivity</string>
     <string name="portraitContent">portrait</string>
-
+    
+    <string name="character_dialog">Create character</string>
+    <string name="character_name">Character name</string>
+    <string-array name="races">
+        <item >Dwarf</item>
+        <item >Elf</item>
+        <item >Gnome</item>
+        <item >Half Elf</item>
+        <item >Halfling</item>
+        <item >Half Orc</item>
+        <item >Human</item>
+    </string-array>
+   	<string-array name="classes">
+        <item >Barbarian</item>
+        <item >Bard</item>
+        <item >Cleric</item>
+        <item >Druid</item>
+        <item >Fighter</item>
+        <item >Monk</item>
+        <item >Paladin</item>
+        <item >Ranger</item>
+        <item >Rogue</item>
+        <item >Sorcerer</item>
+        <item >Wizard</item>
+    </string-array>
+    <string-array name="per_level">
+        <item >One extra hitpoint</item>
+        <item >One extra skill rank</item>
+    </string-array>
+    <string name="per_level_text">Every level get:</string>
+    
+    <string name="create">Create</string>
+    <string name="cancel">Cancel</string>
 </resources>

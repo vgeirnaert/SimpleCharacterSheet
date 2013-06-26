@@ -64,8 +64,8 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		OnPageChangeListener listener = new OnPageChangeListener() {
 			
 			@Override
-			public void onPageSelected(int arg0) {
-				getSupportActionBar().setSelectedNavigationItem(arg0);
+			public void onPageSelected(int position) {
+				getSupportActionBar().setSelectedNavigationItem(position);
 				
 			}
 			
@@ -103,9 +103,6 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		getSupportActionBar().setIcon(R.drawable.ic_drawer);
 		getSupportActionBar().setTitle(dagrim.getName());
 		
-		// set up tabs
-		getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-		
 		ActionBar.TabListener tabListener = new ActionBar.TabListener() {
 			
 			@Override
@@ -128,6 +125,9 @@ public class CharacterActivity extends SherlockFragmentActivity {
 			tab.setTabListener(tabListener);
 			getSupportActionBar().addTab(tab);
 		}
+		
+		// set up tabs
+		getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		
 	}
 	

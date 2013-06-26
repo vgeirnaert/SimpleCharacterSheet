@@ -9,8 +9,11 @@ package net.mindsoup.pathfindercharactersheet;
 
 public final class R {
     public static final class array {
+        public static final int classes=0x7f0b0004;
         public static final int drawer_items_icons=0x7f0b0001;
         public static final int drawer_items_strings=0x7f0b0000;
+        public static final int per_level=0x7f0b0005;
+        public static final int races=0x7f0b0003;
         public static final int skill_names=0x7f0b0002;
     }
     public static final class attr {
@@ -919,15 +922,16 @@ containing a value of this type.
         public static final int action_help=0x7f020071;
         public static final int action_search=0x7f020072;
         public static final int action_settings=0x7f020073;
-        public static final int ic_action_done=0x7f020074;
-        public static final int ic_action_edit=0x7f020075;
-        public static final int ic_action_overflow=0x7f020076;
-        public static final int ic_action_star=0x7f020077;
-        public static final int ic_action_user=0x7f020078;
-        public static final int ic_action_user_add=0x7f020079;
-        public static final int ic_drawer=0x7f02007a;
-        public static final int ic_launcher=0x7f02007b;
-        public static final int social_group=0x7f02007c;
+        public static final int ic_action_delete=0x7f020074;
+        public static final int ic_action_done=0x7f020075;
+        public static final int ic_action_edit=0x7f020076;
+        public static final int ic_action_overflow=0x7f020077;
+        public static final int ic_action_star=0x7f020078;
+        public static final int ic_action_user=0x7f020079;
+        public static final int ic_action_user_add=0x7f02007a;
+        public static final int ic_drawer=0x7f02007b;
+        public static final int ic_launcher=0x7f02007c;
+        public static final int social_group=0x7f02007d;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f040020;
@@ -969,33 +973,42 @@ containing a value of this type.
         public static final int abs__textButton=0x7f040013;
         public static final int abs__title=0x7f04001b;
         public static final int abs__up=0x7f04000b;
-        public static final int attributes_text=0x7f04003c;
+        public static final int attributes_text=0x7f040043;
         public static final int char_details=0x7f04003a;
         public static final int char_img=0x7f040038;
-        public static final int char_info_text=0x7f04003d;
+        public static final int char_info_text=0x7f040044;
         public static final int char_layout=0x7f040037;
         public static final int char_name=0x7f040039;
         public static final int character_list=0x7f040035;
+        public static final int create_char_cancel=0x7f040041;
+        public static final int create_char_class=0x7f04003d;
+        public static final int create_char_create=0x7f040040;
+        public static final int create_char_name=0x7f04003b;
+        public static final int create_char_perlevel=0x7f04003f;
+        public static final int create_char_race=0x7f04003c;
+        public static final int delete_button=0x7f040049;
         public static final int disableHome=0x7f040009;
         public static final int drawer_layout=0x7f040032;
         public static final int edit_query=0x7f040026;
         public static final int fragment_group=0x7f040033;
         public static final int homeAsUp=0x7f040006;
-        public static final int home_button=0x7f040040;
+        public static final int home_button=0x7f040047;
         public static final int left_drawer=0x7f040034;
         public static final int listMode=0x7f040002;
-        public static final int nav_text=0x7f04003b;
-        public static final int new_button=0x7f040042;
+        public static final int menu_search=0x7f04004a;
+        public static final int nav_text=0x7f040042;
+        public static final int new_button=0x7f04004b;
         public static final int normal=0x7f040001;
-        public static final int ogl_button=0x7f040043;
+        public static final int ogl_button=0x7f04004c;
         public static final int ogl_text=0x7f040036;
-        public static final int overview_text=0x7f04003e;
-        public static final int search_button=0x7f040041;
+        public static final int open_button=0x7f040048;
+        public static final int overview_text=0x7f040045;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
-        public static final int skills_text=0x7f04003f;
+        public static final int skills_text=0x7f040046;
         public static final int tabMode=0x7f040003;
+        public static final int textView1=0x7f04003e;
         public static final int useLogo=0x7f040004;
         public static final int viewpager=0x01010000;
         public static final int wrap_content=0x7f040000;
@@ -1029,18 +1042,20 @@ containing a value of this type.
         public static final int activity_main=0x7f030016;
         public static final int activity_ogl=0x7f030017;
         public static final int character_list_item=0x7f030018;
-        public static final int drawer_list_item=0x7f030019;
-        public static final int fragment_attributes=0x7f03001a;
-        public static final int fragment_character_info=0x7f03001b;
-        public static final int fragment_overview=0x7f03001c;
-        public static final int fragment_skills=0x7f03001d;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001e;
-        public static final int sherlock_spinner_item=0x7f03001f;
+        public static final int create_character=0x7f030019;
+        public static final int drawer_list_item=0x7f03001a;
+        public static final int fragment_attributes=0x7f03001b;
+        public static final int fragment_character_info=0x7f03001c;
+        public static final int fragment_overview=0x7f03001d;
+        public static final int fragment_skills=0x7f03001e;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001f;
+        public static final int sherlock_spinner_item=0x7f030020;
     }
     public static final class menu {
         public static final int character=0x7f0c0000;
-        public static final int main=0x7f0c0001;
-        public static final int ogl=0x7f0c0002;
+        public static final int context=0x7f0c0001;
+        public static final int main=0x7f0c0002;
+        public static final int ogl=0x7f0c0003;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1082,17 +1097,24 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f090007;
-        public static final int action_settings=0x7f090014;
+        public static final int action_settings=0x7f090016;
         public static final int app_name=0x7f09000d;
-        public static final int hello_world=0x7f090015;
+        public static final int cancel=0x7f09001e;
+        public static final int character_dialog=0x7f09001a;
+        public static final int character_name=0x7f09001b;
+        public static final int create=0x7f09001d;
+        public static final int delete_title=0x7f090014;
+        public static final int hello_world=0x7f090017;
         public static final int home_title=0x7f09000f;
         public static final int new_title=0x7f090010;
         public static final int ogl_title=0x7f090011;
-        public static final int portraitContent=0x7f090017;
+        public static final int open_title=0x7f090013;
+        public static final int per_level_text=0x7f09001c;
+        public static final int portraitContent=0x7f090019;
         public static final int search_title=0x7f090012;
         public static final int title=0x7f09000e;
-        public static final int title_activity_character=0x7f090016;
-        public static final int title_activity_ogl=0x7f090013;
+        public static final int title_activity_character=0x7f090018;
+        public static final int title_activity_ogl=0x7f090015;
     }
     public static final class style {
         /** 

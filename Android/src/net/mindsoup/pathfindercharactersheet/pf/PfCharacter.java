@@ -21,6 +21,7 @@ public class PfCharacter implements Parcelable {
 	private PfRace myRace;
 	private PfClass myClass;
 	private String name;
+	private long id;
 	
 	private Weapon ActiveMainhandWeapon = null;
 	private Weapon ActiveOffhandWeapon= null;
@@ -72,6 +73,18 @@ public class PfCharacter implements Parcelable {
 		this.name = name;
 	}
 	
+	public void setId(long id) {
+		this.id = id;
+	}
+	
+	public long getId() {
+		return this.id;
+	}
+	
+	public boolean getsHpPerLevel() {
+		return getHpPerLevel;
+	}
+	
 	public PfRace getRace() {
 		return myRace;
 	}
@@ -86,6 +99,10 @@ public class PfCharacter implements Parcelable {
 	
 	public void setPace(PfPace argPace) {
 		this.pace = argPace;
+	}
+	
+	public PfPace getPace() {
+		return this.pace;
 	}
 	
 	public int getAvailableSkillRanks() {
