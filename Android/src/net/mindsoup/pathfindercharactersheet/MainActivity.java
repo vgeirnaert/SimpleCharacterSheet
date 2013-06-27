@@ -36,9 +36,11 @@ public class MainActivity extends SherlockFragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
 		setContentView(R.layout.activity_main);
 		
-		addCharactersFromDb();
+		if(savedInstanceState == null)
+			addCharactersFromDb();
 
 		createListAndAdapter();
 		
@@ -122,18 +124,14 @@ public class MainActivity extends SherlockFragmentActivity {
 	}
 	
 	private void openCharacter(PfCharacter character) {
-		System.out.println("opening " + character.getName());
-		startFragmentActivity();
-	}
-	
-	public void startFragmentActivity() {		
+		System.out.println("opening " + character.getName());		
 		Intent intent = new Intent(this, CharacterActivity.class);
+		intent.putExtra("CHAR", character);
     	startActivity(intent);
 	}
 	
 	public void newCharacterButtonClicked() {
 		showCreateCharacterDialog();
-		
 	}
 	
 	private void showCreateCharacterDialog() {
@@ -149,7 +147,7 @@ public class MainActivity extends SherlockFragmentActivity {
 		allCharacters.add(c);
 		searchCharacters.add(c);
 		adapter.notifyDataSetChanged();	// TODO: async task
-		 
+		openCharacter(c);		 
 	}
 	
 	@Override 
@@ -163,7 +161,7 @@ public class MainActivity extends SherlockFragmentActivity {
     @Override
     public void onRestoreInstanceState(Bundle state) {
     	super.onRestoreInstanceState(state);
-    	
+       	
     	allCharacters = state.getParcelableArrayList("characters");
     	searchCharacters.clear();
     	searchCharacters.addAll(allCharacters);

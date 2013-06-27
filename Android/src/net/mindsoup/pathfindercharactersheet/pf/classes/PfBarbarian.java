@@ -2,10 +2,11 @@ package net.mindsoup.pathfindercharactersheet.pf.classes;
 
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
+import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
 
 public class PfBarbarian implements PfClass {
 	
-	// TODO: make all methods static?
+	private Dice hitDice = new Dice(12, 1);
 	
 	// class skills
 	private final PfSkills[] classSkills = {PfSkills.ACROBATICS, PfSkills.CLIMB, PfSkills.CRAFT, PfSkills.HANDLE_ANIMAL, PfSkills.INTIMIDATE, PfSkills.KNOWLEDGE_NATURE, PfSkills.PERCEPTION, PfSkills.RIDE, PfSkills.SURVIVAL, PfSkills.SWIM};
@@ -21,8 +22,8 @@ public class PfBarbarian implements PfClass {
 	}
 
 	@Override
-	public int getHitDie() {
-		return 12;
+	public Dice getHitDie() {
+		return hitDice;
 	}
 
 	@Override

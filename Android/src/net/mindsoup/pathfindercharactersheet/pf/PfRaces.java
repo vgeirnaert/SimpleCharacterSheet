@@ -2,6 +2,7 @@ package net.mindsoup.pathfindercharactersheet.pf;
 
 import net.mindsoup.pathfindercharactersheet.pf.races.PfDwarf;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfElf;
+import net.mindsoup.pathfindercharactersheet.pf.races.PfGnome;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfRace;
 
 public enum PfRaces {
@@ -23,7 +24,7 @@ public enum PfRaces {
 		switch(race) {
 			case DWARF: return new PfDwarf();
 			case ELF: return new PfElf();
-			case GNOME: return new PfElf();
+			case GNOME: return new PfGnome();
 			case HALFELF: return new PfElf();
 			case HALFLING: return new PfElf();
 			case HALFORC: return new PfElf();

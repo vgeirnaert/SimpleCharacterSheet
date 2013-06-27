@@ -8,13 +8,7 @@ import net.mindsoup.pathfindercharactersheet.fragments.CharacterInfoFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.OverviewFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.SkillsFragment;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
-import net.mindsoup.pathfindercharactersheet.pf.PfHandedness;
-import net.mindsoup.pathfindercharactersheet.pf.PfPace;
-import net.mindsoup.pathfindercharactersheet.pf.classes.PfBarbarian;
-import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
-import net.mindsoup.pathfindercharactersheet.pf.races.PfDwarf;
-import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
-import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
@@ -36,7 +30,7 @@ import com.actionbarsherlock.view.MenuItem;
 
 public class CharacterActivity extends SherlockFragmentActivity {
 	
-	private PfCharacter dagrim = new PfCharacter(new PfDwarf(), new PfBarbarian(), true, "Dagrim Toragson");
+	private PfCharacter character;
 	
 	private ListView drawerList;
 	private DrawerLayout drawerLayout;
@@ -47,6 +41,10 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		Intent intent = getIntent();
+		character = (PfCharacter)intent.getParcelableExtra("CHAR");
+		
 		setContentView(R.layout.activity_character);
 	}
 	
@@ -101,7 +99,7 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		// set up action bar
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setIcon(R.drawable.ic_drawer);
-		getSupportActionBar().setTitle(dagrim.getName());
+		getSupportActionBar().setTitle(character.getName());
 		
 		ActionBar.TabListener tabListener = new ActionBar.TabListener() {
 			
@@ -147,22 +145,6 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		
 		// set up action bar
 		initialiseActionBar();
-		
-		dagrim.setCharisma(8);
-		dagrim.setConstitution(16);
-		dagrim.setStrength(17);
-		dagrim.setDexterity(15);
-		dagrim.setIntelligence(11);
-		dagrim.setWisdom(14);
-		
-		dagrim.setMainhandWeapon(new Weapon(new Dice(12, 1), 3, 1, PfHandedness.TWOHAND));
-		dagrim.setPace(PfPace.FAST);
-		dagrim.setXp(382);
-		
-		dagrim.trainSkill(PfSkills.ACROBATICS, 1);
-		dagrim.trainSkill(PfSkills.SURVIVAL, 1);
-		dagrim.trainSkill(PfSkills.KNOWLEDGE_NATURE, 1);
-		dagrim.trainSkill(PfSkills.PERCEPTION, 1);
 	}
 
 	@Override
@@ -203,7 +185,7 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	}
 	
 	public PfCharacter getCharacter() {
-		return dagrim;
+		return character;
 	}
 	
 	@Override

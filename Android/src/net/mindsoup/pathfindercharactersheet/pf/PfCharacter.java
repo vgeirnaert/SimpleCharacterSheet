@@ -5,15 +5,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 import net.mindsoup.pathfindercharactersheet.R;
-import net.mindsoup.pathfindercharactersheet.pf.classes.PfBarbarian;
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
 import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
-import net.mindsoup.pathfindercharactersheet.pf.races.PfDwarf;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfRace;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 import net.mindsoup.pathfindercharactersheet.pf.skills.SkillFactory;
 import net.mindsoup.pathfindercharactersheet.pf.util.Calculation;
+import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -35,6 +34,7 @@ public class PfCharacter implements Parcelable {
 	private int charisma = 0;
 	
 	private int xp = 0;
+	private int coin = 0;
 	private PfPace pace = PfPace.MEDIUM;
 	private int availableSkillRanks = 0;
 	
@@ -107,6 +107,14 @@ public class PfCharacter implements Parcelable {
 	
 	public int getAvailableSkillRanks() {
 		return availableSkillRanks;
+	}
+	
+	public int getMoney() {
+		return coin;
+	}
+	
+	public void setMoney(int copperPieces) {
+		coin = copperPieces;
 	}
 	
 	/**
@@ -351,7 +359,7 @@ public class PfCharacter implements Parcelable {
 	public Calculation getMaxHitpoints() {
 		Calculation hp = new Calculation();
 		
-		hp.add("Hit dice", this.myClass.getHitDie());
+		hp.add("Hit dice", this.myClass.getHitDie().getMax());
 		hp.add("Constitution bonus", this.getAttributeBonus(this.getConstitution()));
 				
 		if(getHpPerLevel)
@@ -485,66 +493,49 @@ public class PfCharacter implements Parcelable {
 		out.writeInt(myRace.getRace().ordinal());
 		out.writeString(name);
 		out.writeInt(xp);
+		out.writeInt(coin);
+		out.writeLong(id);
+		out.writeInt(pace.ordinal());
+		out.writeInt(availableSkillRanks);
+		out.writeByte((byte) (getHpPerLevel ? 1 : 0));
+		
+		Bundle b = new Bundle();
+		for(PfSkills s : trainedSkills.keySet())
+			b.putParcelable(s.toString(), trainedSkills.get(s));
+			
+		out.writeBundle(b);
+		
+		out.writeInt(charisma);
+		out.writeInt(constitution);
+		out.writeInt(dexterity);
+		out.writeInt(intelligence);
+		out.writeInt(strength);
+		out.writeInt(wisdom);
 	}
 	
 	public void readFromParcel(Parcel in) {
 		// TODO: complete parcelization
-		myClass = getClass(in.readInt());
-		myRace = getRace(in.readInt());
+		myClass = PfClasses.getPfClass(PfClasses.getPfClass(in.readInt()));
+		myRace = PfRaces.getRace(PfRaces.getRace(in.readInt()));
 		name = in.readString();
 		xp = in.readInt();
-	}
-	
-	public PfClass getClass(int classType) {
-		switch(classType) {
-			case 0: // barbarian
-				return new PfBarbarian();
-			case 1: //bard
-				return new PfBarbarian();
-			case 2:
-				return new PfBarbarian();
-			case 3:
-				return new PfBarbarian();
-			case 4:
-				return new PfBarbarian();
-			case 5:
-				return new PfBarbarian();
-			case 6:
-				return new PfBarbarian();
-			case 7:
-				return new PfBarbarian();
-			case 8:
-				return new PfBarbarian();
-			case 9:
-				return new PfBarbarian();
-			case 10:
-				return new PfBarbarian();
-			default:
-				throw new RuntimeException("Unable to create class of type " + classType + ". This should never happen!");
+		coin = in.readInt();
+		id = in.readLong();
+		pace = PfPace.getPace(in.readInt());
+		availableSkillRanks = in.readInt();
+		getHpPerLevel = in.readByte() == 1;
+		
+		Bundle b = in.readBundle();
+		for(String s : b.keySet()) {
+			PfSkill skill = (PfSkill)b.get(s);
+			trainedSkills.put(skill.getType(), skill);
 		}
-	}
-	
-	public PfRace getRace(int raceType) {
-		switch(raceType) {
-		case 0: // dwarf
-			return new PfDwarf();
-		case 1: // elf
-			return new PfDwarf();
-		case 2: //gnome
-			return new PfDwarf();
-		case 3: //halfelf
-			return new PfDwarf();
-		case 4: //halfling
-			return new PfDwarf();
-		case 5: //halforc
-			return new PfDwarf();
-		case 6: //human
-			return new PfDwarf();
-		default:
-			throw new RuntimeException("Unable to create race of type " + raceType + ". This should never happen!");
-
-		}
-	}
-	
-	
+		
+		charisma = in.readInt();
+		constitution = in.readInt();
+		dexterity = in.readInt();
+		intelligence = in.readInt();
+		strength = in.readInt();
+		wisdom = in.readInt();
+	}	
 }

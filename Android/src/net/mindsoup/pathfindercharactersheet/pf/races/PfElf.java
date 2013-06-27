@@ -3,6 +3,7 @@ package net.mindsoup.pathfindercharactersheet.pf.races;
 import net.mindsoup.pathfindercharactersheet.pf.PfEffectTypes;
 import net.mindsoup.pathfindercharactersheet.pf.PfRaces;
 import net.mindsoup.pathfindercharactersheet.pf.PfSizes;
+import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 
 public class PfElf implements PfRace {
 
@@ -84,6 +85,15 @@ public class PfElf implements PfRace {
 	@Override
 	public String toString() {
 		return "Elf";
+	}
+
+	@Override
+	public int getSkillBonus(PfSkills skill) {
+		switch(skill) {
+			case PERCEPTION: return 2;
+			case SPELLCRAFT: return 2;
+			default: return 0;
+		}
 	}
 
 }

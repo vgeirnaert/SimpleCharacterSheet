@@ -2,6 +2,7 @@ package net.mindsoup.pathfindercharactersheet.pf;
 
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfBarbarian;
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
+import net.mindsoup.pathfindercharactersheet.pf.classes.PfSorcerer;
 
 public enum PfClasses {
 	BARBARIAN, BARD, CLERIC, DRUID, FIGHTER, MONK, PALADIN, RANGER, ROGUE, SORCERER, WIZARD;
@@ -33,7 +34,7 @@ public enum PfClasses {
 			case PALADIN: return new PfBarbarian(); 
 			case RANGER: return new PfBarbarian(); 
 			case ROGUE: return new PfBarbarian(); 
-			case SORCERER: return new PfBarbarian(); 
+			case SORCERER: return new PfSorcerer(); 
 			default: return new PfBarbarian(); // wizard
 		}
 	}

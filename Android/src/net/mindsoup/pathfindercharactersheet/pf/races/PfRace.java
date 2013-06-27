@@ -3,6 +3,7 @@ package net.mindsoup.pathfindercharactersheet.pf.races;
 import net.mindsoup.pathfindercharactersheet.pf.PfEffectTypes;
 import net.mindsoup.pathfindercharactersheet.pf.PfRaces;
 import net.mindsoup.pathfindercharactersheet.pf.PfSizes;
+import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 
 public interface PfRace {
 	public PfRaces getRace();
@@ -19,6 +20,7 @@ public interface PfRace {
 	public int getCMDModifier();
 	public int getACModifier();
 	public int getSavingThrowModifier(PfEffectTypes effect);
+	public int getSkillBonus(PfSkills skill);
 	
 	public int getBaseSpeed();
 	public int getDarkvisionRange();

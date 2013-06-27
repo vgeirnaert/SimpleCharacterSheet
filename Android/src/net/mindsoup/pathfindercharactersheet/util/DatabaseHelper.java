@@ -113,7 +113,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		List<PfCharacter> characters = new ArrayList<PfCharacter>();
 		
 		String[] columns = {Db._ID, Db.CHAR_NAME, Db.CHAR_CLASS, Db.CHAR_RACE, Db.CHAR_XP, Db.CHAR_PACE};
-		String orderBy = Db.CHAR_NAME + " ASC";
+		String orderBy = Db._ID + " ASC";
 		
 		Cursor c = db.query(Db.CHARACTER_TABLE, columns, null, null, null, null, orderBy);
 		
