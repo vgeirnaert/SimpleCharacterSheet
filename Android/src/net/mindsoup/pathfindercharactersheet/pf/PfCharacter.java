@@ -468,6 +468,7 @@ public class PfCharacter implements Parcelable {
 		// our ability modifier for this skill
 		int abilityModifier = this.getAttributeBonus(this.getAttributeValue(skill.getAttribute()));
 		trainedBonus.add("Ability modifier", abilityModifier);
+		trainedBonus.add("Racial bonus", myRace.getSkillBonus(type));
 		
 		// TODO: add armor check penalty for skills where skill.hasArmorCheckPenalty() is true
 		

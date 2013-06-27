@@ -145,6 +145,10 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		
 		// set up action bar
 		initialiseActionBar();
+		
+		// if we can see that our character's stats aren't set yet...
+		if(character.getConstitution().sum() < 1 || character.getCharisma().sum() < 1 || character.getIntelligence().sum() < 1)
+			changeFragment(1);
 	}
 
 	@Override

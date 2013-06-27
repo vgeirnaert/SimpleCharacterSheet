@@ -31,7 +31,7 @@ public class MainActivity extends SherlockFragmentActivity {
 	private ArrayList<PfCharacter> allCharacters = new ArrayList<PfCharacter>();
 	private ArrayList<PfCharacter> searchCharacters = new ArrayList<PfCharacter>();
 	private ListView characterList;
-	private DatabaseHelper dbHelper;
+	private DatabaseHelper dbHelper = new DatabaseHelper(this);
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -88,7 +88,6 @@ public class MainActivity extends SherlockFragmentActivity {
 	}
 	
 	private void addCharactersFromDb() {
-		dbHelper = new DatabaseHelper(this);
 		allCharacters.addAll(dbHelper.getCharacters());
 		searchCharacters.addAll(allCharacters);
 	}

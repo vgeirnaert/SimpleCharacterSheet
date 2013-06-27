@@ -64,7 +64,10 @@ public class PfElf implements PfRace {
 
 	@Override
 	public int getSavingThrowModifier(PfEffectTypes effect) {
-		return 0;
+		switch(effect) {
+			case ECHANTMENT: return 2;
+			default: return 0;
+		}
 	}
 
 	@Override

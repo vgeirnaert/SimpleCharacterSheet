@@ -118,8 +118,7 @@ public class PfGnome implements PfRace {
 	 */
 	@Override
 	public int getBaseSpeed() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 20;
 	}
 
 	/* (non-Javadoc)
