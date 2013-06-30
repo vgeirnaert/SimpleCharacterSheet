@@ -1,16 +1,16 @@
 package net.mindsoup.pathfindercharactersheet.pf;
 
 public enum PfAttributes {
-	CHARISMA, CONSTITUTION, DEXTERITY, INTELLIGENCE, STRENGTH, WISDOM;
+	CHA, CON, DEX, INT, STR, WIS;
 	
 	public static PfAttributes getAttribute(int i) {
 		switch(i) {
-			case 0: return PfAttributes.CHARISMA;
-			case 1: return PfAttributes.CONSTITUTION;
-			case 2: return PfAttributes.DEXTERITY;
-			case 3: return PfAttributes.INTELLIGENCE;
-			case 4: return PfAttributes.STRENGTH;
-			default: return PfAttributes.WISDOM;
+			case 0: return PfAttributes.CHA;
+			case 1: return PfAttributes.CON;
+			case 2: return PfAttributes.DEX;
+			case 3: return PfAttributes.INT;
+			case 4: return PfAttributes.STR;
+			default: return PfAttributes.WIS;
 		}
 	}
 }

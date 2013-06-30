@@ -130,7 +130,7 @@ public class PfCharacter implements Parcelable {
 		this.availableSkillRanks = ranks;
 	}
 	
-	public void setConstitution(int argCon) {
+	public void setBaseConstitution(int argCon) {
 		this.constitution = argCon;
 	}
 	
@@ -142,7 +142,7 @@ public class PfCharacter implements Parcelable {
 		return c;
 	}
 	
-	public void setStrength(int argStr) {
+	public void setBaseStrength(int argStr) {
 		this.strength = argStr;
 	}
 	
@@ -154,7 +154,7 @@ public class PfCharacter implements Parcelable {
 		return c;
 	}
 	
-	public void setDexterity(int argDex) {
+	public void setBaseDexterity(int argDex) {
 		this.dexterity = argDex;
 	}
 	
@@ -166,7 +166,7 @@ public class PfCharacter implements Parcelable {
 		return c;
 	}
 	
-	public void setIntelligence(int argInt) {
+	public void setBaseIntelligence(int argInt) {
 		this.intelligence = argInt;
 	}
 	
@@ -178,7 +178,7 @@ public class PfCharacter implements Parcelable {
 		return c;
 	}
 	
-	public void setWisdom(int argWis) {
+	public void setBaseWisdom(int argWis) {
 		this.wisdom = argWis;
 	}
 	
@@ -190,7 +190,7 @@ public class PfCharacter implements Parcelable {
 		return c;
 	}
 	
-	public void setCharisma(int argCha) {
+	public void setBaseCharisma(int argCha) {
 		this.charisma = argCha;
 	}
 	
@@ -204,17 +204,17 @@ public class PfCharacter implements Parcelable {
 	
 	public Calculation getAttributeValue(PfAttributes attribute) {
 		switch(attribute) {
-		case CHARISMA:
+		case CHA:
 			return getCharisma();
-		case CONSTITUTION:
+		case CON:
 			return getConstitution();
-		case DEXTERITY:
+		case DEX:
 			return getDexterity();
-		case INTELLIGENCE:
+		case INT:
 			return getIntelligence();
-		case STRENGTH:
+		case STR:
 			return getStrength();
-		case WISDOM:
+		case WIS:
 			return getWisdom();
 		default:
 			throw new RuntimeException("Invalid attribute. This should never happen!");
