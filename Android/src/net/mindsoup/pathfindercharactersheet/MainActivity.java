@@ -3,6 +3,7 @@ package net.mindsoup.pathfindercharactersheet;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import net.mindsoup.pathfindercharactersheet.fragments.CreateCharacterFragment;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.PfRaces;
@@ -122,8 +123,7 @@ public class MainActivity extends SherlockFragmentActivity {
 		super.onStart();
 	}
 	
-	private void openCharacter(PfCharacter character) {
-		System.out.println("opening " + character.getName());		
+	private void openCharacter(PfCharacter character) {	
 		Intent intent = new Intent(this, CharacterActivity.class);
 		intent.putExtra("CHAR", character);
     	startActivity(intent);

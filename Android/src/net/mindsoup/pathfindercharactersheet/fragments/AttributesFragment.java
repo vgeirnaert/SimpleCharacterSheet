@@ -50,7 +50,7 @@ public class AttributesFragment extends SherlockFragment {
 		attributes.add(new CharacterAttributeAdapter(PfAttributes.WIS, character));
 		
 		ListView list = (ListView)this.getActivity().findViewById(R.id.attribute_list);
-		AttributeListAdapter adapter = new AttributeListAdapter(this.getActivity(), R.layout.attribute_list_item, attributes);
+		AttributeListAdapter adapter = new AttributeListAdapter(this.getActivity(), R.layout.attribute_list_item, attributes, this.getSherlockActivity());
 		list.setAdapter(adapter);
 	}
 }

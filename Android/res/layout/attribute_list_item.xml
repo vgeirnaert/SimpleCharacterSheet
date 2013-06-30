@@ -23,8 +23,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_weight=".2"
   		android:layout_width="0dip"
-  		android:background="#eee"
-  		android:textColor="#000" />
+  		android:drawableRight="@drawable/corner" />
     
     <TextView
         android:id="@+id/attribute_bonus"
@@ -43,8 +42,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_weight=".2"
   		android:layout_width="0dip"
-  		android:background="#eee"
-  		android:textColor="#000" />
+  		android:drawableRight="@drawable/corner" />
     
     <TextView
         android:id="@+id/attribute_temp_bonus"

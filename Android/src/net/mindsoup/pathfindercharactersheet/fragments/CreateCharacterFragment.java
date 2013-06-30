@@ -1,8 +1,10 @@
 /**
  * 
  */
-package net.mindsoup.pathfindercharactersheet;
+package net.mindsoup.pathfindercharactersheet.fragments;
 
+import net.mindsoup.pathfindercharactersheet.MainActivity;
+import net.mindsoup.pathfindercharactersheet.R;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

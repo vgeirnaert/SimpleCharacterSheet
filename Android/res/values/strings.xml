@@ -10,6 +10,9 @@
     <string name="search_title">Search</string>
     <string name="open_title">Open</string>
     <string name="delete_title">Delete</string>
+    
+    <string name="plus">+</string>
+    <string name="minus">-</string>
    
     <string-array name="drawer_items_strings">
         <item>Overview</item>
