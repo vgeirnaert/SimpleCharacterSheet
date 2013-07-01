@@ -5,12 +5,9 @@ package net.mindsoup.pathfindercharactersheet;
 
 import java.util.ArrayList;
 
-import net.mindsoup.pathfindercharactersheet.fragments.ChangeAttributeFragment;
 import android.content.Context;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
@@ -49,17 +46,7 @@ public class AttributeListAdapter extends ArrayAdapter<CharacterAttributeAdapter
         tv.setText(Integer.toString(attributes.get(position).getTempBonus()));
         
         tv = (TextView)convertView.findViewById(R.id.edit_attribute);
-        tv.setText(Integer.toString(attributes.get(position).getValue()));
-        tv.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View view) {
-				FragmentManager fm = activity.getSupportFragmentManager();
-				ChangeAttributeFragment createChar = new ChangeAttributeFragment();
-		        createChar.show(fm, "fragment_create_char");
-			}
-        	
-        });
+        tv.setText(Integer.toString(attributes.get(position).getValue()));;
         
         tv = (TextView)convertView.findViewById(R.id.edit_temp_attribute);
         tv.setText(Integer.toString(attributes.get(position).getTempValue()));

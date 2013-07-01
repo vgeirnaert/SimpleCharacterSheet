@@ -4,13 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.mindsoup.pathfindercharactersheet.fragments.AttributesFragment;
+import net.mindsoup.pathfindercharactersheet.fragments.CharacterFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.CharacterInfoFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.OverviewFragment;
+import net.mindsoup.pathfindercharactersheet.fragments.SetAttributesFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.SkillsFragment;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
+import net.mindsoup.pathfindercharactersheet.util.DatabaseHelper;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -37,6 +41,7 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	private CharacterPagerAdapter pagerAdapter;
 	private ViewPager pager;
 	private TypedArray icons;
+	List<SherlockFragment> fragments;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +54,7 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	}
 	
 	private void initialisePaging() {
-		List<SherlockFragment> fragments = new ArrayList<SherlockFragment>();
+		fragments = new ArrayList<SherlockFragment>();
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, OverviewFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, AttributesFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, SkillsFragment.class.getName()));
@@ -147,8 +152,14 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		initialiseActionBar();
 		
 		// if we can see that our character's stats aren't set yet...
-		if(character.getConstitution().sum() < 1 || character.getCharisma().sum() < 1 || character.getIntelligence().sum() < 1)
+		if(character.getConstitution().sum() < 1 || character.getCharisma().sum() < 1 || character.getIntelligence().sum() < 1) {
 			changeFragment(1);
+			
+			// TODO: avoid doing this more than once
+			FragmentManager fm = this.getSupportFragmentManager();
+			SetAttributesFragment createChar = new SetAttributesFragment();
+	        createChar.show(fm, "fragment_create_char");
+		}
 	}
 
 	@Override
@@ -208,5 +219,14 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	public void onStop() {
 		super.onStop();
 		icons.recycle();
+	}
+	
+	public void updateCharacter() {
+		DatabaseHelper db = new DatabaseHelper(this);
+		db.updateCharacterAttributes(character);
+		
+		for(SherlockFragment f : fragments) {
+			((CharacterFragment)f).refresh();
+		}
 	}
 }

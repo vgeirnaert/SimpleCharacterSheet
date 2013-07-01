@@ -10,9 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockFragment;
-
-public class OverviewFragment extends SherlockFragment {
+public class OverviewFragment extends CharacterFragment {
 	
 	private PfCharacter character;
 	
@@ -25,19 +23,19 @@ public class OverviewFragment extends SherlockFragment {
     }
 	
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-	}
-	
-	@Override
-	public void onActivityCreated(Bundle savedInstance) {
-		super.onActivityCreated(savedInstance);
-	}
-	
-	@Override
 	public void onResume() {
 		super.onResume();
 		
+		setStats();
+	}
+
+	@Override
+	public void refresh() {
+		setStats();
+		
+	}
+	
+	private void setStats() {
 		CharacterActivity ca = (CharacterActivity)this.getActivity();
 		character = ca.getCharacter();
 		

@@ -13,6 +13,13 @@
     
     <string name="plus">+</string>
     <string name="minus">-</string>
+    
+    <string name="stat_cha">CHA</string>
+    <string name="stat_con">CON</string>
+    <string name="stat_dex">DEX</string>
+    <string name="stat_int">INT</string>
+    <string name="stat_str">STR</string>
+    <string name="stat_wis">WIS</string>
    
     <string-array name="drawer_items_strings">
         <item>Overview</item>
@@ -109,4 +116,5 @@
     <string name="header_3">Mod</string>
     <string name="header_4">Temp Score</string>
     <string name="header_5">Temp Mod</string>
+    <string name="header_6">Racial Mod</string>
 </resources>

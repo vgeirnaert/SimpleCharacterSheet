@@ -134,6 +134,10 @@ public class PfCharacter implements Parcelable {
 		this.constitution = argCon;
 	}
 	
+	public int getBaseConsistution() {
+		return this.constitution;
+	}
+	
 	public Calculation getConstitution() {
 		Calculation c = new Calculation();
 		c.add("Constitution",  this.constitution);
@@ -144,6 +148,10 @@ public class PfCharacter implements Parcelable {
 	
 	public void setBaseStrength(int argStr) {
 		this.strength = argStr;
+	}
+	
+	public int getBaseStrength() {
+		return this.strength;
 	}
 	
 	public Calculation getStrength() {
@@ -158,12 +166,20 @@ public class PfCharacter implements Parcelable {
 		this.dexterity = argDex;
 	}
 	
+	public int getBaseDexterity() {
+		return this.dexterity;
+	}
+	
 	public Calculation getDexterity() {
 		Calculation c = new Calculation();
 		c.add("Dexterity",  this.dexterity);
 		c.add("Racial modifier", myRace.getDexModifier());
 		
 		return c;
+	}
+	
+	public int getBaseIntelligence() {
+		return this.intelligence;
 	}
 	
 	public void setBaseIntelligence(int argInt) {
@@ -182,6 +198,10 @@ public class PfCharacter implements Parcelable {
 		this.wisdom = argWis;
 	}
 	
+	public int getBaseWisdom() {
+		return this.wisdom;
+	}
+	
 	public Calculation getWisdom() {
 		Calculation c = new Calculation();
 		c.add("Wisdom",  this.wisdom);
@@ -192,6 +212,10 @@ public class PfCharacter implements Parcelable {
 	
 	public void setBaseCharisma(int argCha) {
 		this.charisma = argCha;
+	}
+	
+	public int getBaseCharisma() {
+		return this.charisma;
 	}
 	
 	public Calculation getCharisma() {

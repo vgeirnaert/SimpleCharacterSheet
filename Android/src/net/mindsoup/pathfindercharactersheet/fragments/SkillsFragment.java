@@ -15,13 +15,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockFragment;
-
 /**
  * @author Valentijn
  *
  */
-public class SkillsFragment extends SherlockFragment {
+public class SkillsFragment extends CharacterFragment {
 	
 	private PfCharacter character;
 	
@@ -35,6 +33,16 @@ public class SkillsFragment extends SherlockFragment {
 	public void onResume() {
 		super.onResume();
 		
+		setStats();
+	}
+
+	@Override
+	public void refresh() {
+		setStats();
+		
+	}
+	
+	private void setStats() {
 		CharacterActivity ca = (CharacterActivity)this.getActivity();
 		character = ca.getCharacter();
 		

@@ -112,7 +112,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 		List<PfCharacter> characters = new ArrayList<PfCharacter>();
 		
-		String[] columns = {Db._ID, Db.CHAR_NAME, Db.CHAR_CLASS, Db.CHAR_RACE, Db.CHAR_XP, Db.CHAR_PACE};
+		String[] columns = {Db._ID, Db.CHAR_NAME, Db.CHAR_CLASS, Db.CHAR_RACE, Db.CHAR_XP, Db.CHAR_PACE, Db.CHAR_CHA, Db.CHAR_CON, Db.CHAR_DEX, Db.CHAR_INT, Db.CHAR_STR, Db.CHAR_WIS};
 		String orderBy = Db._ID + " ASC";
 		
 		Cursor c = db.query(Db.CHARACTER_TABLE, columns, null, null, null, null, orderBy);
@@ -136,10 +136,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		PfPace pace = PfPace.getPace(c.getInt(c.getColumnIndex(Db.CHAR_PACE)));
 		long id = c.getLong(c.getColumnIndex(Db._ID));
 		
+		int cha = c.getInt(c.getColumnIndex(Db.CHAR_CHA));
+		int con = c.getInt(c.getColumnIndex(Db.CHAR_CON));
+		int dex = c.getInt(c.getColumnIndex(Db.CHAR_DEX));
+		int in = c.getInt(c.getColumnIndex(Db.CHAR_INT));
+		int str = c.getInt(c.getColumnIndex(Db.CHAR_STR));
+		int wis = c.getInt(c.getColumnIndex(Db.CHAR_WIS));
+		
 		PfCharacter newChar = new PfCharacter(PfRaces.getRace(charRace), PfClasses.getPfClass(charClass), true, name);
 		newChar.setPace(pace);
 		newChar.setXp(xp);
 		newChar.setId(id);
+		newChar.setBaseCharisma(cha);
+		newChar.setBaseConstitution(con);
+		newChar.setBaseDexterity(dex);
+		newChar.setBaseIntelligence(in);
+		newChar.setBaseStrength(str);
+		newChar.setBaseWisdom(wis);
 		
 		return newChar;
 	}
@@ -169,6 +182,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		String[] whereArgs = {Long.toString(character.getId())};
 		
 		db.delete(Db.CHARACTER_TABLE, whereClause, whereArgs);
+		db.close();
+	}
+	
+	public void updateCharacterAttributes(PfCharacter character) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put(Db.CHAR_CHA, character.getBaseCharisma());
+		values.put(Db.CHAR_CON, character.getBaseConsistution());
+		values.put(Db.CHAR_DEX, character.getBaseDexterity());
+		values.put(Db.CHAR_INT, character.getBaseIntelligence());
+		values.put(Db.CHAR_STR, character.getBaseStrength());
+		values.put(Db.CHAR_WIS, character.getBaseWisdom());
+		String whereClause = Db._ID + " = ?";
+		String[] whereArgs = {Long.toString(character.getId())};
+		
+		db.update(Db.CHARACTER_TABLE, values, whereClause, whereArgs);
 		db.close();
 	}
 

@@ -17,15 +17,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.actionbarsherlock.app.SherlockFragment;
-
 /**
  * @author Valentijn
  *
  */
-public class AttributesFragment extends SherlockFragment {
+public class AttributesFragment extends CharacterFragment {
 	
 	private PfCharacter character;
+	private AttributeListAdapter adapter;
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -50,7 +49,12 @@ public class AttributesFragment extends SherlockFragment {
 		attributes.add(new CharacterAttributeAdapter(PfAttributes.WIS, character));
 		
 		ListView list = (ListView)this.getActivity().findViewById(R.id.attribute_list);
-		AttributeListAdapter adapter = new AttributeListAdapter(this.getActivity(), R.layout.attribute_list_item, attributes, this.getSherlockActivity());
+		adapter = new AttributeListAdapter(this.getActivity(), R.layout.attribute_list_item, attributes, this.getSherlockActivity());
 		list.setAdapter(adapter);
+	}
+	
+	@Override
+	public void refresh() {
+		adapter.notifyDataSetChanged();
 	}
 }

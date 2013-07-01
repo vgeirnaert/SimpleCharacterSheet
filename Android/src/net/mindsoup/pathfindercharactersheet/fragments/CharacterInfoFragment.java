@@ -13,13 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockFragment;
-
 /**
  * @author Valentijn
  *
  */
-public class CharacterInfoFragment extends SherlockFragment {
+public class CharacterInfoFragment extends CharacterFragment {
 	
 	private PfCharacter character;
 	
@@ -33,6 +31,16 @@ public class CharacterInfoFragment extends SherlockFragment {
 	public void onResume() {
 		super.onResume();
 		
+		setStats();
+	}
+
+	@Override
+	public void refresh() {
+		setStats();
+		
+	}
+	
+	private void setStats() {
 		CharacterActivity ca = (CharacterActivity)this.getActivity();
 		character = ca.getCharacter();
 		
