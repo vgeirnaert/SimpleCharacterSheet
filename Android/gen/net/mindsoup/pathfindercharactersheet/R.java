@@ -984,6 +984,7 @@ containing a value of this type.
         public static final int attribute_list=0x7f040063;
         public static final int attribute_name=0x7f040038;
         public static final int attribute_temp_bonus=0x7f04003c;
+        public static final int available_skill_ranks=0x7f040066;
         public static final int button1=0x7f040052;
         public static final int cha_bonus=0x7f040042;
         public static final int char_details=0x7f040056;
@@ -999,7 +1000,7 @@ containing a value of this type.
         public static final int create_char_name=0x7f040057;
         public static final int create_char_perlevel=0x7f04005a;
         public static final int create_char_race=0x7f040058;
-        public static final int delete_button=0x7f040069;
+        public static final int delete_button=0x7f040070;
         public static final int dex_bonus=0x7f040048;
         public static final int disableHome=0x7f040009;
         public static final int drawer_layout=0x7f040032;
@@ -1014,22 +1015,28 @@ containing a value of this type.
         public static final int edit_wis=0x7f040050;
         public static final int fragment_group=0x7f040033;
         public static final int homeAsUp=0x7f040006;
-        public static final int home_button=0x7f040067;
+        public static final int home_button=0x7f04006e;
         public static final int int_bonus=0x7f04004b;
         public static final int left_drawer=0x7f040034;
         public static final int listMode=0x7f040002;
-        public static final int menu_search=0x7f04006a;
+        public static final int menu_search=0x7f040071;
         public static final int nav_text=0x7f04005d;
-        public static final int new_button=0x7f04006b;
+        public static final int new_button=0x7f040072;
         public static final int normal=0x7f040001;
-        public static final int ogl_button=0x7f04006c;
+        public static final int ogl_button=0x7f040073;
         public static final int ogl_text=0x7f040036;
-        public static final int open_button=0x7f040068;
+        public static final int open_button=0x7f04006f;
         public static final int overview_text=0x7f040065;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
-        public static final int skills_text=0x7f040066;
+        public static final int skill_layout=0x7f040068;
+        public static final int skill_name=0x7f040069;
+        public static final int skill_rank=0x7f04006b;
+        public static final int skill_ranks=0x7f04006d;
+        public static final int skill_score=0x7f04006c;
+        public static final int skill_texts=0x7f04006a;
+        public static final int skills_list=0x7f040067;
         public static final int str_bonus=0x7f04004e;
         public static final int tabMode=0x7f040003;
         public static final int textVie15=0x7f04004c;
@@ -1085,6 +1092,7 @@ containing a value of this type.
         public static final int fragment_skills=0x7f030020;
         public static final int sherlock_spinner_dropdown_item=0x7f030021;
         public static final int sherlock_spinner_item=0x7f030022;
+        public static final int skill_list_item=0x7f030023;
     }
     public static final class menu {
         public static final int character=0x7f0c0000;
@@ -1134,6 +1142,9 @@ containing a value of this type.
         public static final int abs__shareactionprovider_share_with_application=0x7f090007;
         public static final int action_settings=0x7f09001e;
         public static final int app_name=0x7f09000d;
+        /**  fragment_skills 
+         */
+        public static final int available_skill_ranks=0x7f09002d;
         public static final int cancel=0x7f090026;
         public static final int character_dialog=0x7f090022;
         public static final int character_name=0x7f090023;

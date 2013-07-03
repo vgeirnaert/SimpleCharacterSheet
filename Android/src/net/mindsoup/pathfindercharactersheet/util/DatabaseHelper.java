@@ -112,7 +112,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 		List<PfCharacter> characters = new ArrayList<PfCharacter>();
 		
-		String[] columns = {Db._ID, Db.CHAR_NAME, Db.CHAR_CLASS, Db.CHAR_RACE, Db.CHAR_XP, Db.CHAR_PACE, Db.CHAR_CHA, Db.CHAR_CON, Db.CHAR_DEX, Db.CHAR_INT, Db.CHAR_STR, Db.CHAR_WIS};
+		String[] columns = {Db._ID, Db.CHAR_NAME, Db.CHAR_CLASS, Db.CHAR_RACE, Db.CHAR_XP, Db.CHAR_PACE, Db.CHAR_CHA, Db.CHAR_CON, Db.CHAR_DEX, Db.CHAR_INT, Db.CHAR_STR, Db.CHAR_WIS, Db.CHAR_HPPL, Db.CHAR_ASRANKS};
 		String orderBy = Db._ID + " ASC";
 		
 		Cursor c = db.query(Db.CHARACTER_TABLE, columns, null, null, null, null, orderBy);
@@ -142,17 +142,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		int in = c.getInt(c.getColumnIndex(Db.CHAR_INT));
 		int str = c.getInt(c.getColumnIndex(Db.CHAR_STR));
 		int wis = c.getInt(c.getColumnIndex(Db.CHAR_WIS));
+		boolean hppl = c.getInt(c.getColumnIndex(Db.CHAR_HPPL)) > 0;
+		int available_skill_ranks = c.getInt(c.getColumnIndex(Db.CHAR_ASRANKS));
 		
-		PfCharacter newChar = new PfCharacter(PfRaces.getRace(charRace), PfClasses.getPfClass(charClass), true, name);
+		PfCharacter newChar = new PfCharacter(PfRaces.getRace(charRace), PfClasses.getPfClass(charClass), hppl, name);
 		newChar.setPace(pace);
 		newChar.setXp(xp);
 		newChar.setId(id);
-		newChar.setBaseCharisma(cha);
-		newChar.setBaseConstitution(con);
-		newChar.setBaseDexterity(dex);
-		newChar.setBaseIntelligence(in);
-		newChar.setBaseStrength(str);
-		newChar.setBaseWisdom(wis);
+		newChar.setBaseStats(cha, con, dex, in, str, wis);
+		newChar.setAvailableSkillRanks(available_skill_ranks);
+		
+		// TODO: load skills
 		
 		return newChar;
 	}
@@ -194,10 +194,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		values.put(Db.CHAR_INT, character.getBaseIntelligence());
 		values.put(Db.CHAR_STR, character.getBaseStrength());
 		values.put(Db.CHAR_WIS, character.getBaseWisdom());
+		values.put(Db.CHAR_ASRANKS, character.getAvailableSkillRanks());
 		String whereClause = Db._ID + " = ?";
 		String[] whereArgs = {Long.toString(character.getId())};
 		
 		db.update(Db.CHARACTER_TABLE, values, whereClause, whereArgs);
+		
+		// TODO: store skills
 		db.close();
 	}
 

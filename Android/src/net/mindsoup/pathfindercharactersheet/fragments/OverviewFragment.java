@@ -36,29 +36,31 @@ public class OverviewFragment extends CharacterFragment {
 	}
 	
 	private void setStats() {
-		CharacterActivity ca = (CharacterActivity)this.getActivity();
-		character = ca.getCharacter();
-		
-		TextView editText = (TextView)getActivity().findViewById(R.id.overview_text);
-		String stats = "";
-		
-		stats += "<b><u>Attribute bonuses</u></b><br>";
-		stats += "Str: <b>" + character.getAttributeBonus(character.getStrength()) + "</b><br>";
-		stats += "Con: <b>" + character.getAttributeBonus(character.getConstitution()) + "</b><br>";
-		stats += "Dex: <b>" + character.getAttributeBonus(character.getDexterity()) + "</b><br>";
-		stats += "Wis: <b>" + character.getAttributeBonus(character.getWisdom()) + "</b><br>";
-		stats += "Int: <b>" + character.getAttributeBonus(character.getIntelligence()) + "</b><br>";
-		stats += "Cha: <b>" + character.getAttributeBonus(character.getCharisma()) + "</b><br>";
-		
-		stats += "<br>";
-		
-		stats += "<b><u>Combat stats</u></b><br>";
-		stats += "AC: <b>" + character.getAC() + "</b><br>";
-		stats += "Attack bonus: <b>" + character.getAttackBonus(0) + "</b><br>";
-		stats += "Damage modifier: <b>" + character.getDamageModifier() + "</b><br>";
-		stats += "Attacks per round: <b>" + character.getNumAttacksPerRound() + "</b><br>";		
-		
-		editText.setText(Html.fromHtml(stats));
+		if(isAdded()) {
+			CharacterActivity ca = (CharacterActivity)this.getActivity();
+			character = ca.getCharacter();
+			
+			TextView editText = (TextView)getActivity().findViewById(R.id.overview_text);
+			String stats = "";
+			
+			stats += "<b><u>Attribute bonuses</u></b><br>";
+			stats += "Str: <b>" + character.getAttributeBonus(character.getStrength()) + "</b><br>";
+			stats += "Con: <b>" + character.getAttributeBonus(character.getConstitution()) + "</b><br>";
+			stats += "Dex: <b>" + character.getAttributeBonus(character.getDexterity()) + "</b><br>";
+			stats += "Wis: <b>" + character.getAttributeBonus(character.getWisdom()) + "</b><br>";
+			stats += "Int: <b>" + character.getAttributeBonus(character.getIntelligence()) + "</b><br>";
+			stats += "Cha: <b>" + character.getAttributeBonus(character.getCharisma()) + "</b><br>";
+			
+			stats += "<br>";
+			
+			stats += "<b><u>Combat stats</u></b><br>";
+			stats += "AC: <b>" + character.getAC() + "</b><br>";
+			stats += "Attack bonus: <b>" + character.getAttackBonus(0) + "</b><br>";
+			stats += "Damage modifier: <b>" + character.getDamageModifier() + "</b><br>";
+			stats += "Attacks per round: <b>" + character.getNumAttacksPerRound() + "</b><br>";		
+			
+			editText.setText(Html.fromHtml(stats));
+		}
 	}
 	
 	

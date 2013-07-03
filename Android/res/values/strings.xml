@@ -117,4 +117,7 @@
     <string name="header_4">Temp Score</string>
     <string name="header_5">Temp Mod</string>
     <string name="header_6">Racial Mod</string>
+    
+    <!-- fragment_skills -->
+    <string name="available_skill_ranks">Available skill ranks</string>
 </resources>

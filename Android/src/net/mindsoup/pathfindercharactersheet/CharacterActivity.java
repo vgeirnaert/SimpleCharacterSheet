@@ -222,6 +222,7 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	}
 	
 	public void updateCharacter() {
+		// TODO: change code structure to allow for an OnChange listener on character?
 		DatabaseHelper db = new DatabaseHelper(this);
 		db.updateCharacterAttributes(character);
 		
@@ -229,4 +230,11 @@ public class CharacterActivity extends SherlockFragmentActivity {
 			((CharacterFragment)f).refresh();
 		}
 	}
+	
+	/*@Override
+	public void onSaveInstanceState (Bundle outState) {
+		 super.onSaveInstanceState(outState);
+		 
+		 getSupportFragmentManager().putFragment(outState, SkillsFragment.class.getName(), arg2);
+	}*/
 }

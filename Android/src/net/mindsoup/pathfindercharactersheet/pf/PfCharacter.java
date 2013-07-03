@@ -1,6 +1,5 @@
 package net.mindsoup.pathfindercharactersheet.pf;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -218,6 +217,15 @@ public class PfCharacter implements Parcelable {
 		return this.charisma;
 	}
 	
+	public void setBaseStats(int cha, int con, int dex, int intel, int str, int wis) {
+		this.charisma = cha;
+		this.constitution = con;
+		this.dexterity = dex;
+		this.intelligence = intel;
+		this.strength = str;
+		this.wisdom = wis;
+	}
+	
 	public Calculation getCharisma() {
 		Calculation c = new Calculation();
 		c.add("Charisma",  this.charisma);
@@ -243,6 +251,18 @@ public class PfCharacter implements Parcelable {
 		default:
 			throw new RuntimeException("Invalid attribute. This should never happen!");
 		}
+	}
+	
+	/**
+	 * This should only be called once, after character creation.
+	 */
+	public void initialiseSecondaryStatsForNewCharacter() {
+		initialiseAvailableSkillranks();
+	}
+	
+	
+	private void initialiseAvailableSkillranks() {
+		levelUp();
 	}
 	
 	public int getLevel() {
@@ -361,7 +381,11 @@ public class PfCharacter implements Parcelable {
 
 	
 	public void levelUp() {
+		// add skill ranks
 		this.availableSkillRanks = myClass.getBaseSkillRanksPerLevel() + this.getAttributeBonus(this.getIntelligence());
+		
+		if(getHpPerLevel == false)
+			this.availableSkillRanks++;
 	}
 	
 	public int getXp() {
@@ -445,29 +469,58 @@ public class PfCharacter implements Parcelable {
 	 * @return the number of skill ranks actually applied to the skill
 	 */
 	public int trainSkill(PfSkills type, int ranks) {
-		PfSkill skill = trainedSkills.get(type);
+		int maxRanks = 0;
 		
-		// if we did not train this skill already
-		if(skill == null) {
-			// get the skill and add it to our trained skills
-			skill = SkillFactory.getSkill(type);
-			trainedSkills.put(type, skill);
+		if(this.getAvailableSkillRanks() > 0) {
+			PfSkill skill = trainedSkills.get(type);
+			
+			// if we did not train this skill already
+			if(skill == null) {
+				// get the skill and add it to our trained skills
+				skill = SkillFactory.getSkill(type);
+				trainedSkills.put(type, skill);
+			}
+			
+			// calculate the maximum amount of skill ranks that can be applied:
+			// total skill rank must remain smaller than or equal to character level
+			// skill ranks must be available
+			maxRanks = Math.min(Math.min(this.getLevel() - skill.getRank(), ranks), this.getAvailableSkillRanks());
+			
+			// apply the skill ranks, making sure not to exceed our character level
+			skill.setRank( skill.getRank() + maxRanks);
 		}
-		
-		// calculate the maximum amount of skill ranks that can be applied:
-		// total skill rank must remain smaller than or equal to character level
-		// skill ranks must be available
-		int maxRanks = Math.min(Math.min(this.getLevel() - skill.getRank(), ranks), this.getAvailableSkillRanks());
-		
-		// apply the skill ranks, making sure not to exceed our character level
-		skill.setRank( skill.getRank() + maxRanks);
-		
 		// return 
 		return maxRanks;
 	}
 	
+	/**
+	 * Makes best effort to train a skill. Game rules may prohibit adding
+	 * more ranks to a skill, however. Use the return value to check how
+	 * many skill ranks were actually applied. This method automatically
+	 * subtracts the used skill ranks from the pool of available skill ranks
+	 * 
+	 * @param type the skill type to train
+	 * @param ranks how many ranks to put in the skill
+	 * @return the number of skill ranks actually applied to the skill
+	 */
+	public int spendSkillRankOnSkill(PfSkills type, int ranks) {
+		int usedRanks = trainSkill(type, ranks);
+		
+		this.setAvailableSkillRanks(this.getAvailableSkillRanks() - usedRanks);
+		
+		return usedRanks;
+	}
+	
 	public boolean canUseSkill(PfSkills type) {
 		return SkillFactory.getSkill(type).canUseUntrained() || trainedSkills.containsKey(type);
+	}
+	
+	public int getSkillRank(PfSkills type) {
+		if(trainedSkills.containsKey(type)) {
+			return trainedSkills.get(type).getRank();
+		}
+		
+		return 0;
 	}
 	
 	public Calculation getSkillBonus(PfSkills type) {
@@ -499,8 +552,8 @@ public class PfCharacter implements Parcelable {
 		return trainedBonus;
 	}
 	
-	public Collection<PfSkill> getTrainedSkills() {
-		return trainedSkills.values();
+	public Map<PfSkills,PfSkill> getTrainedSkills() {
+		return trainedSkills;
 	}
 	
 	public int getPortraitRes() {
@@ -536,6 +589,7 @@ public class PfCharacter implements Parcelable {
 		out.writeInt(intelligence);
 		out.writeInt(strength);
 		out.writeInt(wisdom);
+
 	}
 	
 	public void readFromParcel(Parcel in) {
@@ -562,5 +616,6 @@ public class PfCharacter implements Parcelable {
 		intelligence = in.readInt();
 		strength = in.readInt();
 		wisdom = in.readInt();
+
 	}	
 }

@@ -9,7 +9,7 @@ import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class PfSkill implements Parcelable{
+public class PfSkill implements Parcelable {
 	
 	private int level = 0;
 	private final PfSkills type;
@@ -96,5 +96,26 @@ public class PfSkill implements Parcelable{
 		dest.writeInt(attribute.ordinal());
 		dest.writeByte((byte) (armorCheckPenalty ? 1 : 0));
 		dest.writeByte((byte) (canUseUntrained ? 1 : 0));	
+	}
+
+	@Override
+	public boolean equals(Object another) {
+		if(another instanceof PfSkill) {
+			if( ((PfSkill)another).getType() == this.getType() )
+				return true;
+			else
+				return false;
+		}
+		
+		return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		int hash = 31;
+		
+		hash += this.getType().hashCode();
+		
+		return hash;
 	}
 }
