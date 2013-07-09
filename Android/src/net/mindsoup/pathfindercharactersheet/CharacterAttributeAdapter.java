@@ -19,7 +19,6 @@ public class CharacterAttributeAdapter {
 	public CharacterAttributeAdapter(PfAttributes attribute, PfCharacter character) {
 		this.attribute = attribute;
 		this.character = character;
-		tempValue = this.getValue();
 	}
 	
 	public PfAttributes getAttribute() {
@@ -62,13 +61,15 @@ public class CharacterAttributeAdapter {
 	}
 	
 	public int getTempValue() {
-		return tempValue;
+		return tempValue + this.getValue();
 	}
 	
 	public int getTempBonus() {
-		return character.getAttributeBonus(tempValue);
+		return character.getAttributeBonus(this.getTempValue());
 	}
 	
-	
+	public void sync() {
+		this.setTempValue(this.getValue());
+	}
 
 }

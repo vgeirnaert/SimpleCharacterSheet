@@ -42,6 +42,9 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	private ViewPager pager;
 	private TypedArray icons;
 	List<SherlockFragment> fragments;
+	SetAttributesFragment createChar = null;
+	
+	private final String CREATE_CHAR_TAG = "fragment_create_char";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -155,10 +158,11 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		if(character.getConstitution().sum() < 1 || character.getCharisma().sum() < 1 || character.getIntelligence().sum() < 1) {
 			changeFragment(1);
 			
-			// TODO: avoid doing this more than once
-			FragmentManager fm = this.getSupportFragmentManager();
-			SetAttributesFragment createChar = new SetAttributesFragment();
-	        createChar.show(fm, "fragment_create_char");
+			if(this.getSupportFragmentManager().findFragmentByTag(CREATE_CHAR_TAG) == null) {
+				FragmentManager fm = this.getSupportFragmentManager();
+				createChar = new SetAttributesFragment();
+		        createChar.show(fm, CREATE_CHAR_TAG);
+			}
 		}
 	}
 
@@ -227,14 +231,11 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		db.updateCharacterAttributes(character);
 		
 		for(SherlockFragment f : fragments) {
-			((CharacterFragment)f).refresh();
+			
+			if(f.isAdded())
+				((CharacterFragment)f).refresh();
+			else
+				System.out.println("FRAGMENT NOT ADDED");
 		}
 	}
-	
-	/*@Override
-	public void onSaveInstanceState (Bundle outState) {
-		 super.onSaveInstanceState(outState);
-		 
-		 getSupportFragmentManager().putFragment(outState, SkillsFragment.class.getName(), arg2);
-	}*/
 }

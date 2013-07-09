@@ -55,6 +55,7 @@ public class AttributesFragment extends CharacterFragment {
 	
 	@Override
 	public void refresh() {
-		adapter.notifyDataSetChanged();
+		if(adapter != null)
+			adapter.notifyDataSetChanged();
 	}
 }

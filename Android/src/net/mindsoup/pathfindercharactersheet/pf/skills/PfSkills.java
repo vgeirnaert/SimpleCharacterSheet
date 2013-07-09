@@ -40,7 +40,7 @@ public enum PfSkills {
 		case 29: return PfSkills.SLEIGHT_OF_HAND;
 		case 30: return PfSkills.SPELLCRAFT;
 		case 31: return PfSkills.STEALTH;
-		case 32: return PfSkills.STEALTH;
+		case 32: return PfSkills.SURVIVAL;
 		case 33: return PfSkills.SWIM;
 		default: return PfSkills.USE_MAGIC_DEVICE;
 		}

@@ -126,7 +126,7 @@ public class SetAttributesFragment extends SherlockDialogFragment {
 		character.setBaseWisdom(i);
 		
 		character.initialiseSecondaryStatsForNewCharacter();
-		
+
 		((CharacterActivity)this.getActivity()).updateCharacter();
 		
 		this.dismiss();

@@ -460,6 +460,27 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	/**
+	 * NOTE THAT THIS SHOULD ONLY BE USED DURING CHARACTER LOADING
+	 * 
+	 * For normal character skill training use spendSkillRankOnSkill
+	 * 
+	 * @param type
+	 * @param ranks
+	 */
+	public void putSkillRanksInSkill(PfSkills type, int ranks) {
+		PfSkill skill = trainedSkills.get(type);
+		
+		// if we did not train this skill already
+		if(skill == null) {
+			// get the skill and add it to our trained skills
+			skill = SkillFactory.getSkill(type);
+			trainedSkills.put(type, skill);
+		}
+		
+		skill.setRank(ranks);
+	}
+	
+	/**
 	 * Makes best effort to train a skill. Game rules may prohibit adding
 	 * more ranks to a skill, however. Use the return value to check how
 	 * many skill ranks were actually applied.
@@ -593,7 +614,6 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public void readFromParcel(Parcel in) {
-		// TODO: complete parcelization
 		myClass = PfClasses.getPfClass(PfClasses.getPfClass(in.readInt()));
 		myRace = PfRaces.getRace(PfRaces.getRace(in.readInt()));
 		name = in.readString();
@@ -605,8 +625,10 @@ public class PfCharacter implements Parcelable {
 		getHpPerLevel = in.readByte() == 1;
 		
 		Bundle b = in.readBundle();
+		b.setClassLoader(PfSkill.class.getClassLoader());
 		for(String s : b.keySet()) {
-			PfSkill skill = (PfSkill)b.get(s);
+			Parcelable p = b.getParcelable(s);
+			PfSkill skill = (PfSkill)p;
 			trainedSkills.put(skill.getType(), skill);
 		}
 		

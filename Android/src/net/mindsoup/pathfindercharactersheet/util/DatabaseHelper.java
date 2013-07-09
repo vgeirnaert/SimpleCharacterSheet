@@ -5,11 +5,14 @@ package net.mindsoup.pathfindercharactersheet.util;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.PfPace;
 import net.mindsoup.pathfindercharactersheet.pf.PfRaces;
+import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
+import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -24,7 +27,7 @@ import android.provider.BaseColumns;
 public class DatabaseHelper extends SQLiteOpenHelper {
 	// db
 	private static final String DATABASE = "SimplePathfinderCharacterSheet.db";
-	private static final int DATABASE_VERSION = 5;
+	private static final int DATABASE_VERSION = 8;
 	
 	public static abstract class Db implements BaseColumns {
 
@@ -70,10 +73,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		private static final String SKILL_CHAR_ID = "character_id";		
 		
 		public static final String CREATE_SKILLS_TABLE = "CREATE TABLE IF NOT EXISTS " + Db.SKILLS_TABLE + " (" +
-				  Db._ID + " INTEGER PRIMARY KEY AUTOINCREMENT CONSTRAINT character_id_fk REFERENCES " + Db.CHARACTER_TABLE + "(" + Db._ID + ") ON DELETE CASCADE ON UPDATE CASCADE," +
+				  Db._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
 				  Db.SKILL_ID + " SMALLINT NOT NULL ON CONFLICT FAIL," + 
 				  Db.SKILL_RANKS + " INT NOT NULL ON CONFLICT FAIL DEFAULT 1," + 
-				  Db.SKILL_CHAR_ID + " INT NOT NULL ON CONFLICT FAIL);";
+				  Db.SKILL_CHAR_ID + " INT NOT NULL ON CONFLICT FAIL CONSTRAINT character_id_fk REFERENCES " + Db.CHARACTER_TABLE + "(" + Db._ID + ") ON DELETE CASCADE ON UPDATE CASCADE," +
+				  "CONSTRAINT skill_and_char_ids UNIQUE (" + Db.SKILL_ID + ", " + Db.SKILL_CHAR_ID + "));";
 
 		public static final String CREATE_SKILLS_INDEX = "CREATE INDEX character_id_index ON " + Db.SKILLS_TABLE + " (" + Db.SKILL_CHAR_ID + ")";
 		
@@ -107,7 +111,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	}
 	
 	public List<PfCharacter> getCharacters() {
-		// TODO: this should only be done once
 		SQLiteDatabase db = this.getReadableDatabase();
 		
 		List<PfCharacter> characters = new ArrayList<PfCharacter>();
@@ -119,7 +122,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 		if(c.moveToFirst()) {
 			do {
-				characters.add(getNewCharacter(c));
+				characters.add(getNewCharacter(c, db));
 			} while(c.moveToNext());
 		}
 		
@@ -128,7 +131,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		return characters;
 	}
 	
-	private PfCharacter getNewCharacter(Cursor c) {
+	private PfCharacter getNewCharacter(Cursor c, SQLiteDatabase db) {
 		String name = c.getString(c.getColumnIndex(Db.CHAR_NAME));
 		PfClasses charClass = PfClasses.getPfClass(c.getInt(c.getColumnIndex(Db.CHAR_CLASS)));
 		PfRaces charRace = PfRaces.getRace(c.getInt(c.getColumnIndex(Db.CHAR_RACE)));
@@ -152,7 +155,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		newChar.setBaseStats(cha, con, dex, in, str, wis);
 		newChar.setAvailableSkillRanks(available_skill_ranks);
 		
-		// TODO: load skills
+		// load skills
+		String[] columns = {Db._ID, Db.SKILL_ID, Db.SKILL_RANKS};
+		String orderBy = Db.SKILL_ID + " ASC";
+		String selection = Db.SKILL_CHAR_ID + " = ?";
+		String[] selectionArgs = {Long.toString(id)};
+		
+		// select skills that this character has
+		Cursor skills_cursor = db.query(Db.SKILLS_TABLE, columns, selection, selectionArgs, null, null, orderBy);
+		
+		// for each skill, add it to the character
+		if(skills_cursor.moveToFirst()) {
+			do {
+				
+				int skill_id = skills_cursor.getInt(skills_cursor.getColumnIndex(Db.SKILL_ID));
+				int skill_ranks = skills_cursor.getInt(skills_cursor.getColumnIndex(Db.SKILL_RANKS));
+				newChar.putSkillRanksInSkill(PfSkills.getSkill(skill_id), skill_ranks);
+			} while(skills_cursor.moveToNext());
+		}
 		
 		return newChar;
 	}
@@ -200,7 +220,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 		db.update(Db.CHARACTER_TABLE, values, whereClause, whereArgs);
 		
-		// TODO: store skills
+		
+		Map<PfSkills, PfSkill> skills = character.getTrainedSkills();
+		
+		// for each skill this character knows
+		for(PfSkill skill : skills.values()) {
+			values.clear();
+			values.put(Db.SKILL_CHAR_ID, character.getId());
+			values.put(Db.SKILL_ID, skill.getType().ordinal());
+			values.put(Db.SKILL_RANKS, skill.getRank());
+			
+			db.replace(Db.SKILLS_TABLE, null, values);
+			
+		}
+		
 		db.close();
 	}
 

@@ -43,19 +43,21 @@ public class SkillsFragment extends CharacterFragment {
 	public void onResume() {
 		super.onResume();
 		
-		if(isAdded() && skills.size() == 0) {
+		if(isAdded()) {
 			
 			character = ((CharacterActivity)this.getActivity()).getCharacter();
 			ca = (CharacterActivity)this.getActivity();
 			
-			for(PfSkills s : PfSkills.values()) {
-				PfSkill skill = SkillFactory.getSkill(s);
-				
-				if(character.getTrainedSkills().containsKey(skill.getType())) {
-					skill.setRank(character.getTrainedSkills().get(skill.getType()).getRank());
+			if(skills.size() == 0) {
+				for(PfSkills s : PfSkills.values()) {
+					PfSkill skill = SkillFactory.getSkill(s);
+					
+					if(character.getTrainedSkills().containsKey(skill.getType())) {
+						skill.setRank(character.getTrainedSkills().get(skill.getType()).getRank());
+					}
+					
+					skills.add(skill);
 				}
-				
-				skills.add(skill);
 			}
 			
 			ListView list = (ListView)this.getActivity().findViewById(R.id.skills_list);
@@ -65,12 +67,10 @@ public class SkillsFragment extends CharacterFragment {
 	
 				@Override
 				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-					skills.get(position).getType();
-					int oldSP = character.getAvailableSkillRanks();
 					int newSP = character.spendSkillRankOnSkill(skills.get(position).getType(), 1);
 					
 					// save to DB if there was a change
-					if(oldSP > newSP)
+					if(newSP > 0)
 						ca.updateCharacter();
 					
 					refresh();			
