@@ -232,9 +232,15 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	}
 	
 	public void updateCharacter() {
+		this.updateCharacter(true);
+	}
+	
+	public void updateCharacter(boolean triggerDbUpdate) {
 		// TODO: change code structure to allow for an OnChange listener on character?
-		DatabaseHelper db = new DatabaseHelper(this);
-		db.updateCharacterAttributes(character);
+		if(triggerDbUpdate) {
+			DatabaseHelper db = new DatabaseHelper(this);
+			db.updateCharacterAttributes(character);
+		}
 		
 		for(SherlockFragment f : pagerAdapter.getItems()) 
 			((CharacterFragment)f).refresh();

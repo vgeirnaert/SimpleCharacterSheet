@@ -13,6 +13,9 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.internal.widget.IcsAdapterView;
+import com.actionbarsherlock.internal.widget.IcsAdapterView.OnItemSelectedListener;
+import com.actionbarsherlock.internal.widget.IcsSpinner;
 
 /**
  * @author Valentijn
@@ -20,9 +23,11 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
  */
 public class AttributeListAdapter extends ArrayAdapter<CharacterAttributeAdapter> {
 	
-	ArrayList<CharacterAttributeAdapter> attributes;
-	int viewResourceId;
-	SherlockFragmentActivity activity;
+	private final String[] attributeValues = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28"};
+	
+	private ArrayList<CharacterAttributeAdapter> attributes;
+	private int viewResourceId;
+	private SherlockFragmentActivity activity;
 
 	public AttributeListAdapter(Context context, int textViewResourceId, ArrayList<CharacterAttributeAdapter> objects, SherlockFragmentActivity activity) {
 		super(context, textViewResourceId, objects);
@@ -32,26 +37,64 @@ public class AttributeListAdapter extends ArrayAdapter<CharacterAttributeAdapter
 	}
 	
 	@Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView(final int attributePosition, View convertView, ViewGroup parent) {
 		LayoutInflater inflater = (LayoutInflater)this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(viewResourceId, null);
         
         TextView tv = (TextView)convertView.findViewById(R.id.attribute_name);
-        tv.setText(attributes.get(position).getAttribute().toString());
+        tv.setText(attributes.get(attributePosition).getAttribute().toString());
         
         tv = (TextView)convertView.findViewById(R.id.attribute_bonus);
-        tv.setText(Integer.toString(attributes.get(position).getBonus()));
+        tv.setText(Integer.toString(attributes.get(attributePosition).getBonus()));
         
         tv = (TextView)convertView.findViewById(R.id.attribute_temp_bonus);
-        tv.setText(Integer.toString(attributes.get(position).getTempBonus()));
+        tv.setText(Integer.toString(attributes.get(attributePosition).getTempBonus()));
+               
+        IcsSpinner spinner = (IcsSpinner)convertView.findViewById(R.id.edit_attribute);
+        spinner.setAdapter(new ArrayAdapter<String>(this.getContext(),R.layout.attribute_spinner, attributeValues));
+        spinner.setSelection(attributes.get(attributePosition).getValue());
+        spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(IcsAdapterView<?> parent, View view, int position, long id) {
+				CharacterAttributeAdapter caa = attributes.get(attributePosition);
+				
+				// if we have changed the value of our attribute
+				if(caa.getValue() != position) {
+					caa.setAttribute(position);
+					((CharacterActivity)getActivity()).updateCharacter();
+				}
+			}
+
+			@Override
+			public void onNothingSelected(IcsAdapterView<?> parent) {}
+		});
         
-        tv = (TextView)convertView.findViewById(R.id.edit_attribute);
-        tv.setText(Integer.toString(attributes.get(position).getValue()));;
         
-        tv = (TextView)convertView.findViewById(R.id.edit_temp_attribute);
-        tv.setText(Integer.toString(attributes.get(position).getTempValue()));
-        
+        spinner = (IcsSpinner)convertView.findViewById(R.id.edit_temp_attribute);
+        spinner.setAdapter(new ArrayAdapter<String>(this.getContext(),R.layout.attribute_spinner_blue, attributeValues));
+        spinner.setSelection(attributes.get(attributePosition).getTempValue());
+        spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(IcsAdapterView<?> parent, View view, int position, long id) {
+				CharacterAttributeAdapter caa = attributes.get(attributePosition);
+				
+				// if we have changed the value of our attribute
+				if(caa.getTempValue() != position) {
+					caa.setTempValue(position - caa.getValue());
+					((CharacterActivity)getActivity()).updateCharacter(false);
+				}
+			}
+
+			@Override
+			public void onNothingSelected(IcsAdapterView<?> parent) {}
+		});
         return convertView;
+	}
+	
+	public SherlockFragmentActivity getActivity() {
+		return this.activity;
 	}
 
 }

@@ -28,22 +28,22 @@ public class CharacterAttributeAdapter {
 	public void setAttribute(int value) {
 		switch(this.attribute) {
 		case CHA: 
-			character.setBaseCharisma(value);
+			character.setBaseCharisma(value - character.getRace().getChaModifier());
 			break;
 		case CON: 
-			character.setBaseConstitution(value);
+			character.setBaseConstitution(value - character.getRace().getConModifier());
 			break;
 		case DEX:
-			character.setBaseDexterity(value);
+			character.setBaseDexterity(value - character.getRace().getDexModifier());
 			break;
 		case INT:
-			character.setBaseIntelligence(value);
+			character.setBaseIntelligence(value - character.getRace().getIntModifier());
 			break;
 		case STR:
-			character.setBaseStrength(value);
+			character.setBaseStrength(value - character.getRace().getStrModifier());
 			break;
 		case WIS:
-			character.setBaseWisdom(value);
+			character.setBaseWisdom(value - character.getRace().getWisModifier());
 			break;		
 		}
 	}
