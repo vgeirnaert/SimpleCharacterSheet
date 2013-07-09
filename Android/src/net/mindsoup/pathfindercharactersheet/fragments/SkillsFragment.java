@@ -43,7 +43,7 @@ public class SkillsFragment extends CharacterFragment {
 	public void onResume() {
 		super.onResume();
 		
-		if(isAdded()) {
+		if(isAdded() && skills.size() == 0) {
 			
 			character = ((CharacterActivity)this.getActivity()).getCharacter();
 			ca = (CharacterActivity)this.getActivity();
