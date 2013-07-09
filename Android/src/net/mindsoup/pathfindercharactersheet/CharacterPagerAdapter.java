@@ -40,5 +40,9 @@ public class CharacterPagerAdapter extends FragmentStatePagerAdapter {
 	public int getCount() {
 		return this.fragments.size();
 	}
+	
+	public List<SherlockFragment> getItems() {
+		return fragments;
+	}
 
 }

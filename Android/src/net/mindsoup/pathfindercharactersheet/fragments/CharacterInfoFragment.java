@@ -41,17 +41,19 @@ public class CharacterInfoFragment extends CharacterFragment {
 	}
 	
 	private void setStats() {
-		CharacterActivity ca = (CharacterActivity)this.getActivity();
-		character = ca.getCharacter();
-		
-		TextView editText = (TextView)getActivity().findViewById(R.id.char_info_text);
-		String stats = "";
-		
-		stats += "Name: </b>" + character.getName() + "</b> (level " + character.getLevel() + " " + character.getRace().toString() + " " + character.getPfClass().toString() + ")<br>";
-		stats += "Xp: " + character.getXp() + "<br>";
-		stats += "Max HP: " + character.getMaxHitpoints() + "<br>";
-		
-		editText.setText(Html.fromHtml(stats));
+		if(isAdded()) {
+			CharacterActivity ca = (CharacterActivity)this.getActivity();
+			character = ca.getCharacter();
+			
+			TextView editText = (TextView)getActivity().findViewById(R.id.char_info_text);
+			String stats = "";
+			
+			stats += "Name: </b>" + character.getName() + "</b> (level " + character.getLevel() + " " + character.getRace().toString() + " " + character.getPfClass().toString() + ")<br>";
+			stats += "Xp: " + character.getXp() + "<br>";
+			stats += "Max HP: " + character.getMaxHitpoints() + "<br>";
+			
+			editText.setText(Html.fromHtml(stats));
+		}
 	}
 
 }

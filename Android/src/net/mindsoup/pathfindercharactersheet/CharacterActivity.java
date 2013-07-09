@@ -48,6 +48,9 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		System.out.println("****************************");
+		System.out.println("creating activity");
+		System.out.println("****************************");
 		super.onCreate(savedInstanceState);
 		
 		Intent intent = getIntent();
@@ -57,6 +60,9 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	}
 	
 	private void initialisePaging() {
+		System.out.println("****************************");
+		System.out.println("creating paging");
+		System.out.println("****************************");
 		fragments = new ArrayList<SherlockFragment>();
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, OverviewFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, AttributesFragment.class.getName()));
@@ -230,11 +236,7 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		DatabaseHelper db = new DatabaseHelper(this);
 		db.updateCharacterAttributes(character);
 		
-		for(SherlockFragment f : fragments) {
-			if(f.isAdded())
-				((CharacterFragment)f).refresh();
-			else
-				System.out.println("FRAGMENT NOT ADDED");
-		}
+		for(SherlockFragment f : pagerAdapter.getItems()) 
+			((CharacterFragment)f).refresh();
 	}
 }

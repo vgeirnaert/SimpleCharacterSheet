@@ -83,17 +83,20 @@ public class SkillsFragment extends CharacterFragment {
 
 	@Override
 	public void refresh() {
-		PfCharacter ca = ((CharacterActivity)this.getActivity()).getCharacter();
-		TextView tv = (TextView)this.getActivity().findViewById(R.id.available_skill_ranks);
-		int ranks = ca.getAvailableSkillRanks();
+		if(isAdded()) {
+			PfCharacter ca = ((CharacterActivity)this.getActivity()).getCharacter();
+			TextView tv = (TextView)this.getActivity().findViewById(R.id.available_skill_ranks);
+			int ranks = ca.getAvailableSkillRanks();
+			
+			if(ranks > 0)
+				tv.setVisibility(View.VISIBLE);
+			else
+				tv.setVisibility(View.GONE);
+			
+			tv.setText("Available skill ranks: " + ranks);
 		
-		if(ranks > 0)
-			tv.setVisibility(View.VISIBLE);
-		else
-			tv.setVisibility(View.GONE);
-		
-		tv.setText("Available skill ranks: " + ranks);
-		adapter.notifyDataSetChanged();
+			adapter.notifyDataSetChanged();
+		}
 	}
 	
 }
