@@ -231,7 +231,6 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		db.updateCharacterAttributes(character);
 		
 		for(SherlockFragment f : fragments) {
-			
 			if(f.isAdded())
 				((CharacterFragment)f).refresh();
 			else
