@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -67,18 +68,41 @@ public class SkillsFragment extends CharacterFragment {
 	
 				@Override
 				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-					int newSP = character.spendSkillRankOnSkill(skills.get(position).getType(), 1);
+					trainSkill(position);	
+				}
+			});
+			
+			list.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+				@Override
+				public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+					untrainSkill(position);
 					
-					// save to DB if there was a change
-					if(newSP > 0)
-						ca.updateCharacter();
-					
-					refresh();			
+					return true;
 				}
 			});
 			
 			refresh();
 		}
+	}
+	
+	private void trainSkill(int skill) {
+		int newSP = character.spendSkillRankOnSkill(skills.get(skill).getType(), 1);
+		
+		// save to DB if there was a change
+		if(newSP > 0)
+			ca.updateCharacter();
+		
+		refresh();	
+	}
+	
+	private void untrainSkill(int skill) {
+		int untrainedRanks = character.untrainSkill(skills.get(skill).getType(), 1);
+		
+		if(untrainedRanks > 0)
+			ca.updateCharacter();
+		
+		refresh();
 	}
 
 	@Override

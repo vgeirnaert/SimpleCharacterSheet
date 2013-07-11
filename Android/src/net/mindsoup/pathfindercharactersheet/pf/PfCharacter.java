@@ -532,6 +532,36 @@ public class PfCharacter implements Parcelable {
 		return usedRanks;
 	}
 	
+	/**
+	 * Removes a certain amount of ranks from a skill
+	 * 
+	 * @param type the skill to untrain
+	 * @param ranks the amount of ranks to untrain
+	 * @return the actual amount of ranks that were untrained
+	 */
+	public int untrainSkill(PfSkills type, int ranks) {
+		
+		int untrainedRanks = 0;
+		PfSkill skill = trainedSkills.get(type);
+		
+		if(skill != null) {
+			int currentRank = skill.getRank();
+			untrainedRanks = Math.min(currentRank, ranks);
+			
+			// we are completely unlearning the skill
+			if(untrainedRanks == currentRank) {
+				skill.setRank(0);
+				trainedSkills.remove(type);
+			} else { // we aren't completely unlearning the skill
+				skill.setRank(currentRank - untrainedRanks);
+			}
+			
+			this.setAvailableSkillRanks(this.getAvailableSkillRanks() + untrainedRanks);
+		}
+		
+		return untrainedRanks;
+	}
+	
 	public boolean canUseSkill(PfSkills type) {
 		return SkillFactory.getSkill(type).canUseUntrained() || trainedSkills.containsKey(type);
 	}
