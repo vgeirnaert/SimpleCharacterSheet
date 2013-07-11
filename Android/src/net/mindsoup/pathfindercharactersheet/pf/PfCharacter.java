@@ -558,7 +558,7 @@ public class PfCharacter implements Parcelable {
 			// we are completely unlearning the skill
 			if(untrainedRanks == currentRank) {
 				skill.setRank(0);
-				trainedSkills.remove(type);
+				//trainedSkills.remove(type);
 			} else { // we aren't completely unlearning the skill
 				skill.setRank(currentRank - untrainedRanks);
 			}
@@ -570,7 +570,19 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public boolean canUseSkill(PfSkills type) {
-		return SkillFactory.getSkill(type).canUseUntrained() || trainedSkills.containsKey(type);
+		if(SkillFactory.getSkill(type).canUseUntrained())
+			return true;
+		
+		PfSkill skill = trainedSkills.get(type);
+		
+		// potentially some of the skills in our trained skill collection
+		// are actually rank 0, and therefore not usable
+		if(skill != null) {
+			if(skill.getRank() > 0)
+				return true;
+		}
+		
+		return false;
 	}
 	
 	public int getSkillRank(PfSkills type) {
@@ -589,22 +601,22 @@ public class PfCharacter implements Parcelable {
 		// if we have not trained the skill get an untrained skill 
 		// note that here we don't check if this skill can be used untrained
 		// use canUseSkill() to determine that
-		if(skill == null) {
+		if(skill == null) 
 			skill = SkillFactory.getSkill(type);
-		} else {
-			// we've trained the skill, so get the skill ranks
-			trainedBonus.add("Skill rank", skill.getRank());
-			
-			// is this a class skill? if so we get a bonus!
-			if(skill.isClassSkill(this.myClass))
-				trainedBonus.add("Class skill", 3);
-		}
+		
+		// we've trained the skill, so get the skill ranks
+		trainedBonus.add("Skill rank", skill.getRank());
+		
+		// is this a class skill? if so we get a bonus!
+		if(skill.isClassSkill(this.myClass))
+			trainedBonus.add("Class skill", 3);
+		
 		
 		// our ability modifier for this skill
 		int abilityModifier = this.getAttributeBonus(this.getAttributeValue(skill.getAttribute()));
 		trainedBonus.add("Ability modifier", abilityModifier);
 		trainedBonus.add("Racial bonus", myRace.getSkillBonus(type));
-		
+
 		// TODO: add armor check penalty for skills where skill.hasArmorCheckPenalty() is true
 		
 		return trainedBonus;

@@ -99,8 +99,9 @@ public class SkillsFragment extends CharacterFragment {
 	private void untrainSkill(int skill) {
 		int untrainedRanks = character.untrainSkill(skills.get(skill).getType(), 1);
 		
-		if(untrainedRanks > 0)
+		if(untrainedRanks > 0) {			
 			ca.updateCharacter();
+		}
 		
 		refresh();
 	}
