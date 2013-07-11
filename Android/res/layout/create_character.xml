@@ -11,7 +11,8 @@
 	    android:paddingLeft="@dimen/activity_horizontal_margin"
 	    android:paddingRight="@dimen/activity_horizontal_margin"
 	    android:paddingTop="@dimen/activity_vertical_margin"
-	    android:minWidth="1000dp" >
+	    android:minWidth="1000dp"
+	    android:id="@+id/create_layout" >
 	
 	    <EditText
 	        android:id="@+id/create_char_name"
@@ -28,6 +29,13 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="60dp"
 	        android:entries="@array/races" />
+	    
+	    <Spinner
+	        android:id="@+id/create_char_stat"
+	        android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        android:entries="@array/stats"
+	        android:visibility="gone" />
 	
 	    <Spinner
 	        android:id="@+id/create_char_class"

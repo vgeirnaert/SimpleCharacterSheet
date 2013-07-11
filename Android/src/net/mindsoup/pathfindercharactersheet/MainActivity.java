@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 import net.mindsoup.pathfindercharactersheet.fragments.CreateCharacterFragment;
+import net.mindsoup.pathfindercharactersheet.pf.PfAttributes;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.PfRaces;
+import net.mindsoup.pathfindercharactersheet.pf.races.PfChooseBonusAttributeRace;
 import net.mindsoup.pathfindercharactersheet.util.DatabaseHelper;
 import android.content.Intent;
 import android.os.Bundle;
@@ -139,8 +141,12 @@ public class MainActivity extends SherlockFragmentActivity {
         createChar.show(fm, "fragment_create_char");
     }
 	
-	public void addNewCharacter(String name, int char_race, int char_class, boolean hpPerLevel) {
+	public void addNewCharacter(String name, int char_race, int char_class, boolean hpPerLevel, int bonus_stat) {
 		PfCharacter c = new PfCharacter(PfRaces.getRace(PfRaces.getRace(char_race)), PfClasses.getPfClass(PfClasses.getPfClass(char_class)), hpPerLevel, name);
+		
+		if(c.getRace().getRace() == PfRaces.HALFELF || c.getRace().getRace() == PfRaces.HALFORC || c.getRace().getRace() == PfRaces.HUMAN) 
+			((PfChooseBonusAttributeRace)c.getRace()).setBonusAttribute(PfAttributes.getAttribute(bonus_stat));
+		
 		long id = dbHelper.addCharacter(c);
 		c.setId(id);
 		allCharacters.add(c);

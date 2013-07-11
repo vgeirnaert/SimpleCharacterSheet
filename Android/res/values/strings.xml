@@ -20,6 +20,15 @@
     <string name="stat_int">INT</string>
     <string name="stat_str">STR</string>
     <string name="stat_wis">WIS</string>
+    
+    <string-array name="stats">
+        <item>CHA</item>
+        <item>CON</item>
+        <item>DEX</item>
+        <item>INT</item>
+        <item>STR</item>
+        <item>WIS</item>
+    </string-array>
    
     <string-array name="drawer_items_strings">
         <item>Overview</item>

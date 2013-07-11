@@ -6,6 +6,7 @@ import java.util.Map;
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
 import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
+import net.mindsoup.pathfindercharactersheet.pf.races.PfChooseBonusAttributeRace;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfRace;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
@@ -490,6 +491,8 @@ public class PfCharacter implements Parcelable {
 	 * @return the number of skill ranks actually applied to the skill
 	 */
 	public int trainSkill(PfSkills type, int ranks) {
+		// TODO: write unit test for this
+		
 		int maxRanks = 0;
 		
 		if(this.getAvailableSkillRanks() > 0) {
@@ -525,6 +528,8 @@ public class PfCharacter implements Parcelable {
 	 * @return the number of skill ranks actually applied to the skill
 	 */
 	public int spendSkillRankOnSkill(PfSkills type, int ranks) {
+		// TODO: write unit test for this
+		
 		int usedRanks = trainSkill(type, ranks);
 		
 		this.setAvailableSkillRanks(this.getAvailableSkillRanks() - usedRanks);
@@ -540,6 +545,8 @@ public class PfCharacter implements Parcelable {
 	 * @return the actual amount of ranks that were untrained
 	 */
 	public int untrainSkill(PfSkills type, int ranks) {
+		
+		// TODO: write unit test for this
 		
 		int untrainedRanks = 0;
 		PfSkill skill = trainedSkills.get(type);
@@ -615,6 +622,14 @@ public class PfCharacter implements Parcelable {
 	public int describeContents() {
 		return 0;
 	}
+	
+	public boolean canChooseBonusStat() {
+		if(this.getRace().getRace() == PfRaces.HALFELF || this.getRace().getRace() == PfRaces.HALFORC || this.getRace().getRace() == PfRaces.HUMAN) 
+			return true;
+		
+		
+		return false;
+	}
 
 	@Override
 	public void writeToParcel(Parcel out, int flags) {
@@ -640,6 +655,9 @@ public class PfCharacter implements Parcelable {
 		out.writeInt(intelligence);
 		out.writeInt(strength);
 		out.writeInt(wisdom);
+		
+		if(this.canChooseBonusStat())
+			out.writeInt( ((PfChooseBonusAttributeRace)this.getRace()).getBonusAttribute().ordinal() );
 
 	}
 	
@@ -668,6 +686,9 @@ public class PfCharacter implements Parcelable {
 		intelligence = in.readInt();
 		strength = in.readInt();
 		wisdom = in.readInt();
+		
+		if(this.canChooseBonusStat()) 
+			((PfChooseBonusAttributeRace)this.getRace()).setBonusAttribute(PfAttributes.getAttribute(in.readInt()));
 
 	}	
 }
