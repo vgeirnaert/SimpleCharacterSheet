@@ -15,6 +15,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockDialogFragment;
 
@@ -71,17 +72,22 @@ public class CreateCharacterFragment extends SherlockDialogFragment {
 	public void acceptCharacter(View view) {
 		MainActivity activity = (MainActivity)this.getActivity();
 		String name = ((EditText)this.getView().findViewById(R.id.create_char_name)).getText().toString();
-		int char_race = ((Spinner)this.getView().findViewById(R.id.create_char_race)).getSelectedItemPosition();
-		int char_class = ((Spinner)this.getView().findViewById(R.id.create_char_class)).getSelectedItemPosition();
-		int char_stat = ((Spinner)this.getView().findViewById(R.id.create_char_stat)).getSelectedItemPosition();
 		
-		boolean hpPerLevel = true;
-		
-		if(((Spinner)this.getView().findViewById(R.id.create_char_perlevel)).getSelectedItemPosition() == 1)
-			hpPerLevel = false;
-		
-		activity.addNewCharacter(name, char_race, char_class, hpPerLevel, char_stat);
-		this.dismiss();
+		if(name.trim().length() > 0) {
+			int char_race = ((Spinner)this.getView().findViewById(R.id.create_char_race)).getSelectedItemPosition();
+			int char_class = ((Spinner)this.getView().findViewById(R.id.create_char_class)).getSelectedItemPosition();
+			int char_stat = ((Spinner)this.getView().findViewById(R.id.create_char_stat)).getSelectedItemPosition();
+			
+			boolean hpPerLevel = true;
+			
+			if(((Spinner)this.getView().findViewById(R.id.create_char_perlevel)).getSelectedItemPosition() == 1)
+				hpPerLevel = false;
+			
+			activity.addNewCharacter(name, char_race, char_class, hpPerLevel, char_stat);
+			this.dismiss();
+		} else {
+			Toast.makeText(this.getActivity(), "Name cannot be empty", Toast.LENGTH_SHORT).show();
+		}
 	}
 	
 	public void cancelCharacter(View view) {

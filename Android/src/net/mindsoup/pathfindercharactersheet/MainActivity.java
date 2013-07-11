@@ -209,7 +209,6 @@ public class MainActivity extends SherlockFragmentActivity {
     }
     
     private void deleteCharacter(PfCharacter character) {
-    	System.out.println("Removing " + character.getName());
     	dbHelper.deleteCharacter(character);
     	allCharacters.remove(character);
     	searchCharacters.remove(character);

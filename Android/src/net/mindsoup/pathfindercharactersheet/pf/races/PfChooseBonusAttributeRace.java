@@ -22,7 +22,6 @@ public abstract class PfChooseBonusAttributeRace implements PfRace {
 	}
 	
 	private int getBonusForAttribute(PfAttributes attribute) {
-		System.out.println("getting bonus attribute");
 		if(bonusAttribute != null) {
 			if(bonusAttribute == attribute)
 				return 2;
