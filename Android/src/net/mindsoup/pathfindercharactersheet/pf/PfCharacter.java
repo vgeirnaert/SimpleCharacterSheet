@@ -608,7 +608,7 @@ public class PfCharacter implements Parcelable {
 		trainedBonus.add("Skill rank", skill.getRank());
 		
 		// is this a class skill? if so we get a bonus!
-		if(skill.isClassSkill(this.myClass))
+		if(skill.isClassSkill(this.myClass) && skill.getRank() > 0)
 			trainedBonus.add("Class skill", 3);
 		
 		
