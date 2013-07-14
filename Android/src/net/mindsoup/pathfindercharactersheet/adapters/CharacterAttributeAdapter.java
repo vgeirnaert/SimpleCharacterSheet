@@ -1,7 +1,7 @@
 /**
  * 
  */
-package net.mindsoup.pathfindercharactersheet;
+package net.mindsoup.pathfindercharactersheet.adapters;
 
 import net.mindsoup.pathfindercharactersheet.pf.PfAttributes;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;

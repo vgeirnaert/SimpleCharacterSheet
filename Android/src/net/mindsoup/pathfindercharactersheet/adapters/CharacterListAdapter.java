@@ -1,10 +1,11 @@
 /**
  * 
  */
-package net.mindsoup.pathfindercharactersheet;
+package net.mindsoup.pathfindercharactersheet.adapters;
 
 import java.util.ArrayList;
 
+import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import android.content.Context;
 import android.view.LayoutInflater;

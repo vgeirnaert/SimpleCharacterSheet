@@ -3,6 +3,7 @@ package net.mindsoup.pathfindercharactersheet;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import net.mindsoup.pathfindercharactersheet.adapters.CharacterListAdapter;
 import net.mindsoup.pathfindercharactersheet.fragments.CreateCharacterFragment;
 import net.mindsoup.pathfindercharactersheet.pf.PfAttributes;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;

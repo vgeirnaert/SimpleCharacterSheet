@@ -183,6 +183,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			} while(skills_cursor.moveToNext());
 		}
 		
+		// feats
+		newChar.setAvailableFeats(4);
+		
 		return newChar;
 	}
 	

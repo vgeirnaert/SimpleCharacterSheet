@@ -3,9 +3,12 @@ package net.mindsoup.pathfindercharactersheet;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.mindsoup.pathfindercharactersheet.adapters.CharacterPagerAdapter;
+import net.mindsoup.pathfindercharactersheet.adapters.NavDrawerAdapter;
 import net.mindsoup.pathfindercharactersheet.fragments.AttributesFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.CharacterFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.CharacterInfoFragment;
+import net.mindsoup.pathfindercharactersheet.fragments.FeatsFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.OverviewFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.SetAttributesFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.SkillsFragment;
@@ -48,9 +51,6 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		System.out.println("****************************");
-		System.out.println("creating activity");
-		System.out.println("****************************");
 		super.onCreate(savedInstanceState);
 		
 		Intent intent = getIntent();
@@ -60,13 +60,11 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	}
 	
 	private void initialisePaging() {
-		System.out.println("****************************");
-		System.out.println("creating paging");
-		System.out.println("****************************");
 		fragments = new ArrayList<SherlockFragment>();
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, OverviewFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, AttributesFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, SkillsFragment.class.getName()));
+		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, FeatsFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, CharacterInfoFragment.class.getName()));
 		this.pagerAdapter = new CharacterPagerAdapter(getSupportFragmentManager(), fragments);
 		

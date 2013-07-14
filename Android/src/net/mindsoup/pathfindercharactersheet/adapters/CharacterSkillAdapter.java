@@ -1,10 +1,12 @@
 /**
  * 
  */
-package net.mindsoup.pathfindercharactersheet;
+package net.mindsoup.pathfindercharactersheet.adapters;
 
 import java.util.List;
 
+import net.mindsoup.pathfindercharactersheet.CharacterActivity;
+import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
 import android.content.Context;
 import android.util.TypedValue;

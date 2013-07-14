@@ -5,10 +5,10 @@ package net.mindsoup.pathfindercharactersheet.fragments;
 
 import java.util.ArrayList;
 
-import net.mindsoup.pathfindercharactersheet.AttributeListAdapter;
 import net.mindsoup.pathfindercharactersheet.CharacterActivity;
-import net.mindsoup.pathfindercharactersheet.CharacterAttributeAdapter;
 import net.mindsoup.pathfindercharactersheet.R;
+import net.mindsoup.pathfindercharactersheet.adapters.AttributeListAdapter;
+import net.mindsoup.pathfindercharactersheet.adapters.CharacterAttributeAdapter;
 import net.mindsoup.pathfindercharactersheet.pf.PfAttributes;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import android.os.Bundle;

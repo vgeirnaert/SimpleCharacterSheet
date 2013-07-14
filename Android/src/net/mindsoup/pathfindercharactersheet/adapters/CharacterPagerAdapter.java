@@ -1,7 +1,7 @@
 /**
  * 
  */
-package net.mindsoup.pathfindercharactersheet;
+package net.mindsoup.pathfindercharactersheet.adapters;
 
 import java.util.List;
 

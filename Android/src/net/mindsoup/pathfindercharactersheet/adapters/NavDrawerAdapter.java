@@ -1,8 +1,9 @@
 /**
  * 
  */
-package net.mindsoup.pathfindercharactersheet;
+package net.mindsoup.pathfindercharactersheet.adapters;
 
+import net.mindsoup.pathfindercharactersheet.R;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.view.LayoutInflater;

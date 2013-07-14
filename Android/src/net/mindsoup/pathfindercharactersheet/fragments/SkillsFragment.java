@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.mindsoup.pathfindercharactersheet.CharacterActivity;
-import net.mindsoup.pathfindercharactersheet.CharacterSkillAdapter;
 import net.mindsoup.pathfindercharactersheet.R;
+import net.mindsoup.pathfindercharactersheet.adapters.CharacterSkillAdapter;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
@@ -109,9 +109,9 @@ public class SkillsFragment extends CharacterFragment {
 	@Override
 	public void refresh() {
 		if(isAdded()) {
-			PfCharacter ca = ((CharacterActivity)this.getActivity()).getCharacter();
+			character = ((CharacterActivity)this.getActivity()).getCharacter();
 			TextView tv = (TextView)this.getActivity().findViewById(R.id.available_skill_ranks);
-			int ranks = ca.getAvailableSkillRanks();
+			int ranks = character.getAvailableSkillRanks();
 			
 			if(ranks > 0)
 				tv.setVisibility(View.VISIBLE);
