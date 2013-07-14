@@ -12,6 +12,7 @@ import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.PfPace;
 import net.mindsoup.pathfindercharactersheet.pf.PfRaces;
+import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfChooseBonusAttributeRace;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
@@ -185,6 +186,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 		// feats
 		newChar.setAvailableFeats(4);
+		newChar.gainFeat(PfFeats.POWER_ATTACK);
+		newChar.gainFeat(PfFeats.CLEAVE);
+		newChar.gainFeat(PfFeats.GREAT_CLEAVE);
+		newChar.gainFeat(PfFeats.ARMOR_PROFICIENCY_MEDIUM);
 		
 		return newChar;
 	}

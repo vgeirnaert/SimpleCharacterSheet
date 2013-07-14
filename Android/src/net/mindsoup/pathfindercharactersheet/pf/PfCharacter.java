@@ -1,11 +1,12 @@
 package net.mindsoup.pathfindercharactersheet.pf;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
-import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeat;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfChooseBonusAttributeRace;
@@ -44,7 +45,7 @@ public class PfCharacter implements Parcelable {
 	private boolean getHpPerLevel;
 	
 	private Map<PfSkills, PfSkill> trainedSkills = new HashMap<PfSkills, PfSkill>();
-	private Map<PfFeats, PfFeat> feats = new HashMap<PfFeats, PfFeat>();
+	private Set<PfFeats> feats = new HashSet<PfFeats>();
 	
 	@SuppressWarnings("rawtypes")
 	public static final Parcelable.Creator CREATOR =
@@ -478,10 +479,10 @@ public class PfCharacter implements Parcelable {
 	 * @param feat the feat to add
 	 * @return true if added successfully, false if not
 	 */
-	public boolean gainFeat(PfFeat feat) {
+	public boolean gainFeat(PfFeats feat) {
 		// if we have available feats AND we don't already have this feat
-		if(this.getAvailableFeats() > 0 && !feats.containsKey(feat.getType())) {
-			feats.put(feat.getType(), feat);
+		if(this.getAvailableFeats() > 0 && !feats.contains(feat)) {
+			feats.add(feat);
 			this.setAvailableFeats(this.getAvailableFeats() - 1);
 			return true;
 		}
@@ -490,11 +491,17 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public boolean hasFeat(PfFeats feat) {
-		return feats.containsKey(feat);
+		return feats.contains(feat);
 	}
 	
-	public Map<PfFeats, PfFeat> getFeats() {
+	public Set<PfFeats> getFeats() {
 		return feats;
+	}
+	
+	public void removeFeat(PfFeats feat) {
+		if(feats.remove(feat))
+			this.setAvailableFeats(this.getAvailableFeats() + 1);
+		
 	}
 	
 	/**
@@ -708,13 +715,16 @@ public class PfCharacter implements Parcelable {
 		if(this.canChooseBonusStat())
 			out.writeInt( ((PfChooseBonusAttributeRace)this.getRace()).getBonusAttribute().ordinal() );
 		
-		Bundle fb = new Bundle();
-		for(PfFeats f : feats.keySet())
-			fb.putParcelable(f.toString(), feats.get(f));
-		
-		out.writeBundle(fb);
-		
 		out.writeInt(availableFeats);
+		
+		int[] feat_ints = new int[feats.size()];
+		int i = 0;
+		for(PfFeats f : feats) {
+			feat_ints[i] = f.ordinal();
+			i++;
+		}
+		
+		out.writeIntArray(feat_ints);
 
 	}
 	
@@ -747,15 +757,12 @@ public class PfCharacter implements Parcelable {
 		if(this.canChooseBonusStat()) 
 			((PfChooseBonusAttributeRace)this.getRace()).setBonusAttribute(PfAttributes.getAttribute(in.readInt()));
 		
-		Bundle fb = in.readBundle();
-		fb.setClassLoader(PfFeat.class.getClassLoader());
-		for(String s : fb.keySet()) {
-			Parcelable p = fb.getParcelable(s);
-			PfFeat feat = (PfFeat)p;
-			feats.put(feat.getType(), feat);
-		}
-		
 		availableFeats = in.readInt();
+		
+		int[] feat_ints = in.createIntArray();
+		for(int i : feat_ints)
+			this.feats.add(PfFeats.getFeat(i));
+		
 
 	}	
 }
