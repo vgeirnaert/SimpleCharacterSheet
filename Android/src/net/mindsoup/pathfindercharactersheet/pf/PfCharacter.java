@@ -7,6 +7,7 @@ import java.util.Set;
 
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
+import net.mindsoup.pathfindercharactersheet.pf.feats.FeatFactory;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfChooseBonusAttributeRace;
@@ -482,9 +483,12 @@ public class PfCharacter implements Parcelable {
 	public boolean gainFeat(PfFeats feat) {
 		// if we have available feats AND we don't already have this feat
 		if(this.getAvailableFeats() > 0 && !feats.contains(feat)) {
-			feats.add(feat);
-			this.setAvailableFeats(this.getAvailableFeats() - 1);
-			return true;
+			if(FeatFactory.getPrerequisite(feat).satisfiesPrerequisite(this)) {
+				feats.add(feat);
+				this.setAvailableFeats(this.getAvailableFeats() - 1);
+				return true;
+			}
+			
 		}
 		
 		return false;

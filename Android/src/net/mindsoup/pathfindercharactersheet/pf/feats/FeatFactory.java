@@ -4,6 +4,7 @@
 package net.mindsoup.pathfindercharactersheet.pf.feats;
 
 import net.mindsoup.pathfindercharactersheet.R;
+import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import android.content.Context;
 
 /**
@@ -26,7 +27,13 @@ public class FeatFactory {
 	}
 	
 	public static FeatPrerequisite getPrerequisite(PfFeats feat) {
-		return null;
+		return new FeatPrerequisite() {
+			
+			@Override
+			public boolean satisfiesPrerequisite(PfCharacter character) {
+				return true;
+			}
+		};
 	}
 
 }

@@ -134,6 +134,7 @@
     <string name="available_skill_ranks">Available skill ranks</string>
     
     <!--  fragment_feats -->
+    <string name="add_feat">Add feat</string>
     <string-array name="feat_names">
         <item>Acrobatic</item>
 		<item>Acrobatic Steps</item>

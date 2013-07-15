@@ -12,12 +12,14 @@ import net.mindsoup.pathfindercharactersheet.adapters.CharacterFeatAdapter;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -29,6 +31,7 @@ public class FeatsFragment extends CharacterFragment {
 	
 	private CharacterFeatAdapter adapter;
 	private List<PfFeats> feats = new ArrayList<PfFeats>();
+	private final String PICK_FEAT = "pick_feat";
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,21 +43,24 @@ public class FeatsFragment extends CharacterFragment {
 	public void refresh() {
 		if(isAdded()) {
 			PfCharacter ca = ((CharacterActivity)this.getActivity()).getCharacter();
-			TextView tv = (TextView)this.getActivity().findViewById(R.id.available_feats);
+			ViewGroup vg = (ViewGroup)this.getActivity().findViewById(R.id.available_feats_group);
 			int ranks = ca.getAvailableFeats();
 			
 			if(ranks > 0)
-				tv.setVisibility(View.VISIBLE);
+				vg.setVisibility(View.VISIBLE);
 			else
-				tv.setVisibility(View.GONE);
+				vg.setVisibility(View.GONE);
 			
+			TextView tv = (TextView)this.getActivity().findViewById(R.id.available_feats_text);
 			tv.setText("Available feats: " + ranks);
 			
 			feats.clear();
 			feats.addAll( ((CharacterActivity)this.getActivity()).getCharacter().getFeats() );
 		
-			adapter.notifyDataSetChanged();
+			
 		}
+		
+		adapter.notifyDataSetChanged();
 		
 	}
 	
@@ -77,20 +83,24 @@ public class FeatsFragment extends CharacterFragment {
 				}
 			});
 			
-			list.setOnItemClickListener(new OnItemClickListener() {
-
+			Button addFeat = (Button)this.getActivity().findViewById(R.id.add_feats_button);
+			addFeat.setOnClickListener(new OnClickListener() {
+				
 				@Override
-				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-					ViewGroup description = (ViewGroup)view.findViewById(R.id.feat_description_group);
-					
-					if(description.getVisibility() == View.GONE)
-						description.setVisibility(View.VISIBLE);
-					else
-						description.setVisibility(View.GONE);
+				public void onClick(View v) {
+					showFeatsPicker();
 				}
 			});
 			
 			refresh();
+		}
+	}
+	
+	private void showFeatsPicker() {
+		FragmentManager fm = this.getActivity().getSupportFragmentManager();
+		if(fm.findFragmentByTag(PICK_FEAT) == null) {
+			PickFeatFragment pickFeat = new PickFeatFragment();
+			pickFeat.show(fm, PICK_FEAT);
 		}
 	}
 
