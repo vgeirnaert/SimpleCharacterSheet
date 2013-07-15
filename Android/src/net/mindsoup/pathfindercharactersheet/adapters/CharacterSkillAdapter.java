@@ -3,11 +3,15 @@
  */
 package net.mindsoup.pathfindercharactersheet.adapters;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import net.mindsoup.pathfindercharactersheet.CharacterActivity;
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
+import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 import android.content.Context;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -29,6 +33,7 @@ public class CharacterSkillAdapter extends ArrayAdapter<PfSkill> {
 	private List<PfSkill> skills;
 	private int viewResourceId;
 	private CharacterActivity activity;
+	private Set<PfSkills> classSkills = null;
 
 	public CharacterSkillAdapter(Context context, int textViewResourceId, List<PfSkill> objects, SherlockFragmentActivity activity) {
 		super(context, textViewResourceId, objects);
@@ -44,9 +49,16 @@ public class CharacterSkillAdapter extends ArrayAdapter<PfSkill> {
         
         PfSkill skill = skills.get(position);
         int skillRank = activity.getCharacter().getSkillRank(skill.getType());
-        
+        if(classSkills == null)
+        	classSkills = new HashSet<PfSkills>(Arrays.asList(activity.getCharacter().getPfClass().getClassSkills()));
+
         TextView tv = (TextView)convertView.findViewById(R.id.skill_name);     
         tv.setText(skill.getName(activity));
+        
+        // this is a class skill
+        if(classSkills.contains(skill.getType()))
+        	tv.setTextColor(0xff00cc99);
+        
                
         tv = (TextView)convertView.findViewById(R.id.skill_rank);
         tv.setText("Rank: " + Integer.toString(skillRank));
