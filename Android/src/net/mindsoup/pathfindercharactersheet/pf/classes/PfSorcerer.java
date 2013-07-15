@@ -4,6 +4,7 @@
 package net.mindsoup.pathfindercharactersheet.pf.classes;
 
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
+import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
 
@@ -17,6 +18,7 @@ public class PfSorcerer implements PfClass {
 	
 	// class skills
 	private final PfSkills[] classSkills = {PfSkills.APPRAISE, PfSkills.BLUFF, PfSkills.CRAFT, PfSkills.FLY, PfSkills.INTIMIDATE, PfSkills.KNOWLEDGE_ARCANA, PfSkills.PROFESSION, PfSkills.SPELLCRAFT, PfSkills.USE_MAGIC_DEVICE};
+	private final PfFeats[] classFeats = {PfFeats.SIMPLE_WEAPON_PROFICIENCY};
 
 	/* (non-Javadoc)
 	 * @see net.mindsoup.pathfindercharactersheet.pf.classes.PfClass#getPfClass()
@@ -88,6 +90,11 @@ public class PfSorcerer implements PfClass {
 	@Override
 	public String toString() {
 		return "Sorcerer";
+	}
+
+	@Override
+	public PfFeats[] getClassFeats() {
+		return classFeats;
 	}
 
 }

@@ -1,5 +1,6 @@
 package net.mindsoup.pathfindercharactersheet.pf;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -498,7 +499,11 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public Set<PfFeats> getFeats() {
-		return feats;
+		Set<PfFeats> returnSet = new HashSet<PfFeats>(feats);
+		
+		returnSet.addAll(Arrays.asList(this.getPfClass().getClassFeats()));
+		
+		return returnSet;
 	}
 	
 	public void removeFeat(PfFeats feat) {

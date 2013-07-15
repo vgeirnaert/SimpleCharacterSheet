@@ -1,6 +1,7 @@
 package net.mindsoup.pathfindercharactersheet.pf.classes;
 
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
+import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
 import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
 
@@ -15,4 +16,5 @@ public interface PfClass {
 	public int getReflexSaveModifier(int level);
 	public int getExtraAttackPerNumLevels();
 	public PfSkills[] getClassSkills();
+	public PfFeats[] getClassFeats();
 }
