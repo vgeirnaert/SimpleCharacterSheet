@@ -55,8 +55,7 @@ public class PickFeatFragment extends SherlockDialogFragment {
 	}
 
 	protected void selectFeat(PfFeats feat) {
-		((CharacterActivity)this.getActivity()).getCharacter().gainFeat(feat);
-		((CharacterActivity)this.getActivity()).updateCharacter();
+		((CharacterActivity)this.getActivity()).addFeat(feat);
 		this.dismiss();
 	}
 

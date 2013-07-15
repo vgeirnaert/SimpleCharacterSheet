@@ -57,10 +57,10 @@ public class FeatsFragment extends CharacterFragment {
 			feats.clear();
 			feats.addAll( ((CharacterActivity)this.getActivity()).getCharacter().getFeats() );
 		
-			
+			adapter.notifyDataSetChanged();
 		}
 		
-		adapter.notifyDataSetChanged();
+		
 		
 	}
 	
@@ -77,8 +77,7 @@ public class FeatsFragment extends CharacterFragment {
 				@Override
 				public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 					PfFeats feat = feats.get(position);
-					((CharacterActivity)getActivity()).getCharacter().removeFeat(feat);
-					refresh();
+					((CharacterActivity)getActivity()).removeFeat(feat);
 					return true;
 				}
 			});

@@ -488,7 +488,6 @@ public class PfCharacter implements Parcelable {
 				this.setAvailableFeats(this.getAvailableFeats() - 1);
 				return true;
 			}
-			
 		}
 		
 		return false;
