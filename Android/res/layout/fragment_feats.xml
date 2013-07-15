@@ -10,10 +10,12 @@
         android:id="@+id/available_feats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="22sp"
         android:textColor="#ff9900"
         android:paddingLeft="@dimen/activity_horizontal_margin"
     	android:paddingRight="@dimen/activity_horizontal_margin"
+    	android:paddingTop="@dimen/list_vertical_margin"
+    	android:paddingBottom="@dimen/list_vertical_margin"
     	android:drawableLeft="@drawable/ic_action_done" />
     
     <View

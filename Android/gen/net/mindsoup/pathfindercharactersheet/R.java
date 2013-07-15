@@ -811,6 +811,7 @@ containing a value of this type.
          */
         public static final int activity_horizontal_margin=0x7f07000f;
         public static final int activity_vertical_margin=0x7f070010;
+        public static final int list_vertical_margin=0x7f070011;
     }
     public static final class drawable {
         public static final int abs__ab_bottom_solid_dark_holo=0x7f020000;

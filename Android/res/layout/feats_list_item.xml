@@ -11,8 +11,10 @@
         android:layout_height="wrap_content"
         android:textSize="22sp"
         android:textColor="#eee"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-    	android:paddingRight="@dimen/activity_horizontal_margin" />
+    	android:paddingLeft="@dimen/activity_horizontal_margin"
+    	android:paddingRight="@dimen/activity_horizontal_margin"
+    	android:paddingTop="@dimen/list_vertical_margin"
+    	android:paddingBottom="@dimen/list_vertical_margin" />
     
     
     <LinearLayout
