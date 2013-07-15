@@ -16,8 +16,8 @@ public class Weapon extends Item {
 		this.handedness = hand;
 	}
 	
-	public String getDamage() {
-		return damage.toString();
+	public Dice getDamage() {
+		return damage;
 	}
 	
 	public String getCriticalRange() {
@@ -27,8 +27,8 @@ public class Weapon extends Item {
 		return "20";
 	}
 	
-	public String getCriticalMultiplier() {
-		return Integer.toString(criticalMultiplier);
+	public int getCriticalMultiplier() {
+		return criticalMultiplier;
 	}
 	
 	public int getMaxDamage() {
