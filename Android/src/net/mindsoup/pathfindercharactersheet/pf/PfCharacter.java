@@ -38,6 +38,13 @@ public class PfCharacter implements Parcelable {
 	private int wisdom = 0;
 	private int charisma = 0;
 	
+	private int tempCon = 0;
+	private int tempStr = 0;
+	private int tempDex = 0;
+	private int tempInt = 0;
+	private int tempWis = 0;
+	private int tempCha = 0;
+	
 	private int xp = 0;
 	private int coin = 0;
 	private PfPace pace = PfPace.MEDIUM;
@@ -149,6 +156,7 @@ public class PfCharacter implements Parcelable {
 		Calculation c = new Calculation();
 		c.add("Constitution",  this.constitution);
 		c.add("Racial modifier", myRace.getConModifier());
+		c.add("Temporary bonus", getTempConBoost());
 		
 		return c;
 	}
@@ -165,6 +173,7 @@ public class PfCharacter implements Parcelable {
 		Calculation c = new Calculation();
 		c.add("Strength",  this.strength);
 		c.add("Racial modifier", myRace.getStrModifier());
+		c.add("Temporary bonus", getTempStrBoost());
 		
 		return c;
 	}
@@ -181,6 +190,7 @@ public class PfCharacter implements Parcelable {
 		Calculation c = new Calculation();
 		c.add("Dexterity",  this.dexterity);
 		c.add("Racial modifier", myRace.getDexModifier());
+		c.add("Temporary bonus", getTempDexBoost());
 		
 		return c;
 	}
@@ -197,6 +207,7 @@ public class PfCharacter implements Parcelable {
 		Calculation c = new Calculation();
 		c.add("Intelligence",  this.intelligence);
 		c.add("Racial modifier", myRace.getIntModifier());
+		c.add("Temporary bonus", getTempIntBoost());
 		
 		return c;
 	}
@@ -213,6 +224,7 @@ public class PfCharacter implements Parcelable {
 		Calculation c = new Calculation();
 		c.add("Wisdom",  this.wisdom);
 		c.add("Racial modifier", myRace.getWisModifier());
+		c.add("Temporary bonus", getTempWisBoost());
 		
 		return c;
 	}
@@ -238,8 +250,76 @@ public class PfCharacter implements Parcelable {
 		Calculation c = new Calculation();
 		c.add("Charisma",  this.charisma);
 		c.add("Racial modifier", myRace.getChaModifier());
+		c.add("Temporary bonus", getTempChaBoost());
 		
 		return c;
+	}
+	
+	public void setTempConBoost(int boost) {
+		this.tempCon = boost;
+	}
+	
+	public int getTempConBoost() {
+		return this.tempCon;
+	}
+	
+	public void setTempChaBoost(int boost) {
+		this.tempCha = boost;
+	}
+	
+	public int getTempChaBoost() {
+		return this.tempCha;
+	}
+	
+	public void setTempDexBoost(int boost) {
+		this.tempDex = boost;
+	}
+	
+	public int getTempDexBoost() {
+		return this.tempDex;
+	}
+	
+	public void setTempIntBoost(int boost) {
+		this.tempInt = boost;
+	}
+	
+	public int getTempIntBoost() {
+		return this.tempInt;
+	}
+	
+	public void setTempStrBoost(int boost) {
+		this.tempStr = boost;
+	}
+	
+	public int getTempStrBoost() {
+		return this.tempStr;
+	}
+	
+	public void setTempWisBoost(int boost) {
+		this.tempWis = boost;
+	}
+	
+	public int getTempWisBoost() {
+		return this.tempWis;
+	}
+	
+	public int getTempBoostFor(PfAttributes attribute) {
+		switch(attribute) {
+		case CHA:
+			return this.tempCha;
+		case CON:
+			return this.tempCon;
+		case DEX:
+			return this.tempDex;
+		case INT:
+			return this.tempInt;
+		case STR:
+			return this.tempStr;
+		case WIS:
+			return this.tempWis;
+		default:
+			throw new RuntimeException("Invalid attribute. This should never happen!");
+		}
 	}
 	
 	public Calculation getAttributeValue(PfAttributes attribute) {

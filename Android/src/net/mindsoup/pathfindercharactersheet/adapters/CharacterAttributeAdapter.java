@@ -14,7 +14,6 @@ public class CharacterAttributeAdapter {
 	
 	private final PfAttributes attribute;
 	private final PfCharacter character;
-	private int tempValue = 0;
 	
 	public CharacterAttributeAdapter(PfAttributes attribute, PfCharacter character) {
 		this.attribute = attribute;
@@ -49,27 +48,42 @@ public class CharacterAttributeAdapter {
 	}
 	
 	public int getValue() {
-		return character.getAttributeValue(this.attribute).sum();
+		return character.getAttributeValue(this.attribute).sum() - character.getTempBoostFor(attribute);
 	}
 	
 	public int getBonus() {
-		return character.getAttributeBonus(character.getAttributeValue(this.attribute));
+		return character.getAttributeBonus(character.getAttributeValue(this.attribute).sum() - character.getTempBoostFor(attribute));
 	}
 	
 	public void setTempValue(int value) {
-		tempValue = value;
+		switch(this.attribute) {
+		case CHA:
+			character.setTempChaBoost(value); 
+			break;
+		case CON:
+			character.setTempConBoost(value); 
+			break;
+		case DEX:
+			character.setTempDexBoost(value); 
+			break;
+		case INT:
+			character.setTempIntBoost(value); 
+			break;
+		case STR:
+			character.setTempStrBoost(value); 
+			break;
+		case WIS:
+			character.setTempWisBoost(value); 
+			break;		
+		}
 	}
 	
 	public int getTempValue() {
-		return tempValue + this.getValue();
+		return character.getAttributeValue(attribute).sum();
 	}
 	
 	public int getTempBonus() {
 		return character.getAttributeBonus(this.getTempValue());
-	}
-	
-	public void sync() {
-		this.setTempValue(this.getValue());
 	}
 
 }
