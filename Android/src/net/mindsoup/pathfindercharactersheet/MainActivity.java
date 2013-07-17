@@ -42,13 +42,6 @@ public class MainActivity extends SherlockFragmentActivity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_main);
-		
-		if(savedInstanceState == null)
-			addCharactersFromDb();
-
-		createListAndAdapter();
-		
-		createContextMenu();
 	}
 	
 	@Override
@@ -92,6 +85,8 @@ public class MainActivity extends SherlockFragmentActivity {
 	}
 	
 	private void addCharactersFromDb() {
+		allCharacters.clear();
+		searchCharacters.clear();
 		allCharacters.addAll(dbHelper.getCharacters());
 		searchCharacters.addAll(allCharacters);
 	}
@@ -124,6 +119,12 @@ public class MainActivity extends SherlockFragmentActivity {
 	@Override
 	public void onStart() {
 		super.onStart();
+		
+		addCharactersFromDb();
+
+		createListAndAdapter();
+		
+		createContextMenu();
 	}
 	
 	private void openCharacter(PfCharacter character) {	
