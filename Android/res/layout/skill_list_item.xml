@@ -34,13 +34,21 @@
 	        android:textSize="16sp"
 	        android:paddingLeft="@dimen/activity_horizontal_margin" />
 	    
-	    <TextView 
+	    <net.mindsoup.pathfindercharactersheet.CalculationView
 	        android:id="@+id/skill_score"
 	        android:layout_width="0dip"
 	        android:layout_weight="0.5"
 	        android:layout_height="wrap_content"
 	        android:textSize="16sp"
 	        android:paddingRight="@dimen/activity_horizontal_margin" />
+	    
+	    <!-- <TextView 
+	        android:id="@+id/skill_score"
+	        android:layout_width="0dip"
+	        android:layout_weight="0.5"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:paddingRight="@dimen/activity_horizontal_margin" /> -->
     
     </LinearLayout>
     

@@ -11,6 +11,13 @@
     <string name="open_title">Open</string>
     <string name="delete_title">Delete</string>
     
+    <!-- overview fragment -->
+    <string name="ov_level">Level</string>
+    <string name="ov_xp">Experience</string>
+    <string name="ov_hp">Hit points</string>
+    <string name="ov_ac">Armor class</string>
+    <string name="ov_ab">Attack bonus</string>
+    
     <string name="plus">+</string>
     <string name="minus">-</string>
     

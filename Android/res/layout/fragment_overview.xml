@@ -2,18 +2,149 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" 
-    android:background="#000">
     
-    <TextView
-        android:id="@+id/overview_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
-    
-
-</LinearLayout>
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" 
+	    android:background="#000"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+    	android:paddingRight="@dimen/activity_horizontal_margin" >
+    	
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:weightSum="1.0" >
+		    
+	         <TextView
+		        android:layout_height="30dp"
+				android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".5"
+		        android:text="@string/ov_level"
+		  		android:layout_width="0dip" />
+	         
+	         <TextView
+				android:id="@+id/calc_level" 
+	            android:layout_height="30dp"
+				android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".5"
+		  		android:layout_width="0dip"
+	           	/>
+		</LinearLayout>
+    	
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:weightSum="1.0" >
+		    
+	         <TextView
+		        android:layout_height="30dp"
+				android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".5"
+		        android:text="@string/ov_xp"
+		  		android:layout_width="0dip" />
+	         
+	         <TextView
+				android:id="@+id/calc_xp" 
+	            android:layout_height="30dp"
+				android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".5"
+		  		android:layout_width="0dip"
+	           	/>
+		</LinearLayout>
+	    
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:weightSum="1.0" >
+		    
+	         <TextView
+		        android:layout_height="30dp"
+				android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".5"
+		        android:text="@string/ov_hp"
+		  		android:layout_width="0dip" />
+	         
+	         <net.mindsoup.pathfindercharactersheet.CalculationView
+				android:id="@+id/calc_hitpoints" 
+	            android:layout_height="30dp"
+				android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".5"
+		  		android:layout_width="0dip"
+	           	/>
+		</LinearLayout>
+		
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:weightSum="1.0" >
+		    
+	         <TextView
+		        android:layout_height="30dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".5"
+		        android:text="@string/ov_ac"
+		  		android:layout_width="0dip" />
+	         
+	         <net.mindsoup.pathfindercharactersheet.CalculationView
+				android:id="@+id/calc_ac" 
+	            android:layout_height="30dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".5"
+		  		android:layout_width="0dip"
+	           	/>
+		</LinearLayout>
+		
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:weightSum="1.0" >
+		    
+	         <TextView
+		        android:layout_height="30dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".5"
+		        android:text="@string/ov_ab"
+		  		android:layout_width="0dip" />
+	         
+	         <net.mindsoup.pathfindercharactersheet.CalculationView
+				android:id="@+id/calc_ab" 
+	            android:layout_height="30dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".5"
+		  		android:layout_width="0dip"
+	           	/>
+		</LinearLayout>
+	    
+	    <TextView
+	        android:id="@+id/overview_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="" />
+	</LinearLayout>
 </ScrollView>

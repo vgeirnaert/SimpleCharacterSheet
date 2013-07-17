@@ -496,7 +496,7 @@ public class PfCharacter implements Parcelable {
 	public Calculation getMaxHitpoints() {
 		Calculation hp = new Calculation();
 		
-		hp.add("Hit dice", this.myClass.getHitDie().getMax());
+		hp.add(this.myClass.getHitDie().toString() + " Hit dice", this.myClass.getHitDie().getMax());
 		hp.add("Constitution bonus", this.getAttributeBonus(this.getConstitution()));
 				
 		if(getHpPerLevel)

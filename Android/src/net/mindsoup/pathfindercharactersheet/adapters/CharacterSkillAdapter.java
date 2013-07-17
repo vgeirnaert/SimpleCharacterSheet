@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import net.mindsoup.pathfindercharactersheet.CalculationView;
 import net.mindsoup.pathfindercharactersheet.CharacterActivity;
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
@@ -63,21 +64,17 @@ public class CharacterSkillAdapter extends ArrayAdapter<PfSkill> {
         tv = (TextView)convertView.findViewById(R.id.skill_rank);
         tv.setText("Rank: " + Integer.toString(skillRank));
         
-        tv = (TextView)convertView.findViewById(R.id.skill_score);
+        CalculationView cv = (CalculationView)convertView.findViewById(R.id.skill_score);
         
-        int bonus = activity.getCharacter().getSkillBonus(skill.getType()).sum();
-        String name = "Bonus: ";
+        String content = "Bonus: ";
         if(activity.getCharacter().canUseSkill(skill.getType())) {
-        	// add plus sign for positive numbers
-        	if(bonus > 0)
-        		name = name + "+";
-        	
-        	name = name + Integer.toString(bonus);
+        	cv.setCalculation(activity.getCharacter().getSkillBonus(skill.getType()));
         } else {
-        	name = "Not trained";
+        	content = "Not trained";
+        	cv.setCalculation(null);
         }
         
-        tv.setText(name);
+        cv.setText(content);
         
         int height_pixels = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 3, activity.getResources().getDisplayMetrics());
         int margin_pixels = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 2, activity.getResources().getDisplayMetrics());

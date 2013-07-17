@@ -1,5 +1,6 @@
 package net.mindsoup.pathfindercharactersheet.fragments;
 
+import net.mindsoup.pathfindercharactersheet.CalculationView;
 import net.mindsoup.pathfindercharactersheet.CharacterActivity;
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
@@ -43,23 +44,27 @@ public class OverviewFragment extends CharacterFragment {
 			CharacterActivity ca = (CharacterActivity)this.getActivity();
 			character = ca.getCharacter();
 			
-			TextView editText = (TextView)getActivity().findViewById(R.id.overview_text);
+			TextView editText = (TextView)getActivity().findViewById(R.id.calc_level);
+			editText.setText(Integer.toString(character.getLevel()));
+			
+			editText = (TextView)getActivity().findViewById(R.id.calc_xp);
+			editText.setText(Integer.toString(character.getXp()));
+			
+			CalculationView calcView = (CalculationView)getActivity().findViewById(R.id.calc_hitpoints);
+			calcView.setCalculation(character.getMaxHitpoints());
+			calcView.setText("");
+			
+			calcView = (CalculationView)getActivity().findViewById(R.id.calc_ac);
+			calcView.setCalculation(character.getAC());
+			calcView.setText("");
+			
+			calcView = (CalculationView)getActivity().findViewById(R.id.calc_ab);
+			calcView.setCalculation(character.getAttackBonus(0));
+			calcView.setText("");
+			
+			editText = (TextView)getActivity().findViewById(R.id.overview_text);
 			String stats = "";
 			
-			stats += "<b><u>Attribute bonuses</u></b><br>";
-			stats += "Str: <b>" + character.getAttributeBonus(character.getStrength()) + "</b><br>";
-			stats += "Con: <b>" + character.getAttributeBonus(character.getConstitution()) + "</b><br>";
-			stats += "Dex: <b>" + character.getAttributeBonus(character.getDexterity()) + "</b><br>";
-			stats += "Wis: <b>" + character.getAttributeBonus(character.getWisdom()) + "</b><br>";
-			stats += "Int: <b>" + character.getAttributeBonus(character.getIntelligence()) + "</b><br>";
-			stats += "Cha: <b>" + character.getAttributeBonus(character.getCharisma()) + "</b><br>";
-			
-			stats += "<br>";
-			
-			stats += "<b><u>Combat stats</u></b><br>";
-			stats += "AC: <b>" + character.getAC() + "</b><br>";
-			stats += "Attack bonus: <b>" + character.getAttackBonus(0) + "</b><br>";
-			stats += "Attacks per round: <b>" + character.getNumAttacksPerRound() + "</b><br>";
 			// hack - everyone gets a greataxe!
 			character.setMainhandWeapon(new Weapon(new Dice(12, 1), 3, 1, PfHandedness.TWOHAND));
 			stats += "<br><u>Greataxe</u><br>";
