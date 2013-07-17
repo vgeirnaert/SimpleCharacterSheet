@@ -345,7 +345,7 @@ public class PfCharacter implements Parcelable {
 	 * This should only be called once, after character creation.
 	 */
 	public void initialiseSecondaryStatsForNewCharacter() {
-		levelUp();
+		levelUp(0);
 	}
 	
 	public int getLevel() {
@@ -463,17 +463,22 @@ public class PfCharacter implements Parcelable {
 	
 
 	
-	public void levelUp() {
-		// add skill ranks
-		this.availableSkillRanks = myClass.getBaseSkillRanksPerLevel() + this.getAttributeBonus(this.getIntelligence());
+	public void levelUp(int oldLevel) {
 		
-		if(getHpPerLevel == false)
-			this.availableSkillRanks++;
+		int newLevels = this.getLevel() - oldLevel;
 		
-		// if this is an uneven level
-		// gain a feat
-		if(this.getLevel() % 2 == 1)
-			this.availableFeats++;
+		for(int i = 0; i < newLevels; i++) {
+			// add skill ranks
+			this.availableSkillRanks += myClass.getBaseSkillRanksPerLevel() + this.getAttributeBonus(this.getIntelligence());
+			
+			if(getHpPerLevel == false)
+				this.availableSkillRanks++;
+			
+			// if this is an uneven level
+			// gain a feat
+			if( (oldLevel + i + 1) % 2 == 1)
+				this.availableFeats++;
+		}
 			
 	}
 	
@@ -484,9 +489,7 @@ public class PfCharacter implements Parcelable {
 	public void setXp(int amount) {
 		int oldLevel = this.getLevel();
 		this.xp = amount;
-		
-		if(oldLevel < this.getLevel()) 
-			levelUp();
+		levelUp(oldLevel);
 	}
 	
 	public void addXp(int amount) {
