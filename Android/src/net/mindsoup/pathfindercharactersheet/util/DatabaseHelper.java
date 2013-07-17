@@ -30,7 +30,7 @@ import android.provider.BaseColumns;
 public class DatabaseHelper extends SQLiteOpenHelper {
 	// db
 	private static final String DATABASE = "SimplePathfinderCharacterSheet.db";
-	private static final int DATABASE_VERSION = 11;
+	private static final int DATABASE_VERSION = 12;
 	
 	public static abstract class Db implements BaseColumns {
 
@@ -41,6 +41,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		private static final String CHAR_RACE = "race";
 		private static final String CHAR_BONUS_STAT = "bonusStat";
 		private static final String CHAR_XP = "xp";
+		private static final String CHAR_MONEY = "money";
 		private static final String CHAR_HPPL = "getHpPerLevel";
 		private static final String CHAR_PACE = "pace";
 		private static final String CHAR_ASRANKS = "availableSkillRanks";
@@ -60,6 +61,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				Db.CHAR_RACE + " SMALLINT NOT NULL ON CONFLICT FAIL," + 
 				Db.CHAR_BONUS_STAT + " SMALLINT NOT NULL ON CONFLICT FAIL DEFAULT 0," +
 				Db.CHAR_XP + " INT NOT NULL ON CONFLICT FAIL DEFAULT 0," + 
+				Db.CHAR_MONEY + " INT NOT NULL ON CONFLICT FAIL DEFAULT 0," +
 				Db.CHAR_HPPL + " BOOL NOT NULL ON CONFLICT FAIL DEFAULT 0," + 
 				Db.CHAR_PACE + " SMALLINT NOT NULL ON CONFLICT FAIL DEFAULT 1," + 
 				Db.CHAR_ASRANKS + " INT NOT NULL ON CONFLICT FAIL DEFAULT 0," + 
@@ -137,7 +139,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 		List<PfCharacter> characters = new ArrayList<PfCharacter>();
 		
-		String[] columns = {Db._ID, Db.CHAR_NAME, Db.CHAR_CLASS, Db.CHAR_RACE, Db.CHAR_XP, Db.CHAR_PACE, Db.CHAR_CHA, Db.CHAR_CON, Db.CHAR_DEX, Db.CHAR_INT, Db.CHAR_STR, Db.CHAR_WIS, Db.CHAR_HPPL, Db.CHAR_ASRANKS, Db.CHAR_BONUS_STAT, Db.CHAR_AVAILABLE_FEATS};
+		String[] columns = {Db._ID, Db.CHAR_NAME, Db.CHAR_CLASS, Db.CHAR_RACE, Db.CHAR_XP, Db.CHAR_MONEY, Db.CHAR_PACE, Db.CHAR_CHA, Db.CHAR_CON, Db.CHAR_DEX, Db.CHAR_INT, Db.CHAR_STR, Db.CHAR_WIS, Db.CHAR_HPPL, Db.CHAR_ASRANKS, Db.CHAR_BONUS_STAT, Db.CHAR_AVAILABLE_FEATS};
 		String orderBy = Db._ID + " ASC";
 		
 		Cursor c = db.query(Db.CHARACTER_TABLE, columns, null, null, null, null, orderBy);
@@ -170,6 +172,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		boolean hppl = c.getInt(c.getColumnIndex(Db.CHAR_HPPL)) > 0;
 		int available_skill_ranks = c.getInt(c.getColumnIndex(Db.CHAR_ASRANKS));
 		int available_feats = c.getInt(c.getColumnIndex(Db.CHAR_AVAILABLE_FEATS));
+		int money = c.getInt(c.getColumnIndex(Db.CHAR_MONEY));
 		
 		PfCharacter newChar = new PfCharacter(PfRaces.getRace(charRace), PfClasses.getPfClass(charClass), hppl, name);
 		newChar.setPace(pace);
@@ -178,6 +181,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		newChar.setBaseStats(cha, con, dex, in, str, wis);
 		newChar.setAvailableSkillRanks(available_skill_ranks);
 		newChar.setAvailableFeats(available_feats);
+		newChar.setMoney(money);
 		
 		if(newChar.canChooseBonusStat()) {
 			int bonus_stat = c.getInt(c.getColumnIndex(Db.CHAR_BONUS_STAT));
@@ -265,6 +269,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		values.put(Db.CHAR_WIS, character.getBaseWisdom());
 		values.put(Db.CHAR_ASRANKS, character.getAvailableSkillRanks());
 		values.put(Db.CHAR_AVAILABLE_FEATS, character.getAvailableFeats());
+		values.put(Db.CHAR_XP, character.getXp());
+		values.put(Db.CHAR_MONEY, character.getMoney());
 		String whereClause = Db._ID + " = ?";
 		String[] whereArgs = {Long.toString(character.getId())};
 		

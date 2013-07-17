@@ -10,7 +10,10 @@ import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 /**
@@ -48,12 +51,50 @@ public class CharacterInfoFragment extends CharacterFragment {
 			TextView editText = (TextView)getActivity().findViewById(R.id.char_info_text);
 			String stats = "";
 			
+			EditText edit = (EditText)getActivity().findViewById(R.id.edit_xp);
+			edit.setText(Integer.toString(character.getXp()));
+			
+			Button button = (Button)getActivity().findViewById(R.id.xp_button);
+			button.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					setXp();					
+				}
+			});
+			
+			edit = (EditText)getActivity().findViewById(R.id.edit_money);
+			edit.setText(Integer.toString(character.getMoney()));
+			button = (Button)getActivity().findViewById(R.id.money_button);
+			button.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					setMoney();					
+				}
+			});
+			
 			stats += "Name: </b>" + character.getName() + "</b> (level " + character.getLevel() + " " + character.getRace().toString() + " " + character.getPfClass().toString() + ")<br>";
-			stats += "Xp: " + character.getXp() + "<br>";
-			stats += "Max HP: " + character.getMaxHitpoints() + "<br>";
 			
 			editText.setText(Html.fromHtml(stats));
 		}
+	}
+	
+	protected void updateCharacter() {
+		CharacterActivity ca = (CharacterActivity)this.getActivity();
+		ca.updateCharacter(true);
+	}
+	
+	protected void setXp() {
+		EditText edit = (EditText)getActivity().findViewById(R.id.edit_xp);
+		character.setXp(Integer.parseInt( edit.getText().toString() ));
+		updateCharacter();
+	}
+	
+	protected void setMoney() {
+		EditText edit = (EditText)getActivity().findViewById(R.id.edit_money);
+		character.setMoney(Integer.parseInt( edit.getText().toString() ));
+		updateCharacter();
 	}
 
 }

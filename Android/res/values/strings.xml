@@ -18,6 +18,11 @@
     <string name="ov_ac">Armor class</string>
     <string name="ov_ab">Attack bonus</string>
     
+    <!-- info fragment -->
+    <string name="info_money">Copper pieces</string>
+    <string name="info_xp">Experience</string>
+    <string name="info_button">Change</string>
+    
     <string name="plus">+</string>
     <string name="minus">-</string>
     
