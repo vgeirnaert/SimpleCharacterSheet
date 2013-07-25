@@ -34,5 +34,11 @@ public class ItemStack<T extends StackableItem> extends Item {
 	public boolean isStackable() {
 		return false;
 	}
+
+	@Override
+	public int getValue() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }

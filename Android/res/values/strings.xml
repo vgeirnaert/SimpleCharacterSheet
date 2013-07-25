@@ -17,6 +17,8 @@
     <string name="ov_hp">Hit points</string>
     <string name="ov_ac">Armor class</string>
     <string name="ov_ab">Attack bonus</string>
+    <string name="ov_cmb">CMB</string>
+    <string name="ov_cmd">CMD</string>
     
     <!-- info fragment -->
     <string name="info_money">Copper pieces</string>
@@ -48,6 +50,8 @@
         <item>Attributes</item>
         <item>Skills</item>
         <item>Feats</item>
+        <item>Equipment</item>
+        <item>Inventory</item>
         <item>Character Info</item>
     </string-array>
     <array name="drawer_items_icons">
@@ -55,6 +59,8 @@
         <item>@drawable/ic_action_edit</item>
         <item>@drawable/ic_action_star</item>
         <item>@drawable/action_settings</item>
+        <item>@drawable/ic_action_user</item>
+        <item>@drawable/ic_action_user</item>
         <item>@drawable/ic_action_user</item>
     </array>
     <string-array name="skill_names">

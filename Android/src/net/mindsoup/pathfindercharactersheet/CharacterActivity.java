@@ -8,7 +8,9 @@ import net.mindsoup.pathfindercharactersheet.adapters.NavDrawerAdapter;
 import net.mindsoup.pathfindercharactersheet.fragments.AttributesFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.CharacterFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.CharacterInfoFragment;
+import net.mindsoup.pathfindercharactersheet.fragments.EquipmentFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.FeatsFragment;
+import net.mindsoup.pathfindercharactersheet.fragments.InventoryFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.OverviewFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.SetAttributesFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.SkillsFragment;
@@ -66,6 +68,8 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, AttributesFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, SkillsFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, FeatsFragment.class.getName()));
+		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, EquipmentFragment.class.getName()));
+		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, InventoryFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, CharacterInfoFragment.class.getName()));
 		this.pagerAdapter = new CharacterPagerAdapter(getSupportFragmentManager(), fragments);
 		

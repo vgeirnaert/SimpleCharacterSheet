@@ -62,6 +62,14 @@ public class OverviewFragment extends CharacterFragment {
 			calcView.setCalculation(character.getAttackBonus(0));
 			calcView.setText("");
 			
+			calcView = (CalculationView)getActivity().findViewById(R.id.calc_cmb);
+			calcView.setCalculation(character.getCombatManeuverBonus(0));
+			calcView.setText("");
+			
+			calcView = (CalculationView)getActivity().findViewById(R.id.calc_cmd);
+			calcView.setCalculation(character.getCombatManeuverDefense(0));
+			calcView.setText("");
+			
 			editText = (TextView)getActivity().findViewById(R.id.overview_text);
 			String stats = "";
 			

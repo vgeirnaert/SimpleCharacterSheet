@@ -522,12 +522,12 @@ public class PfCharacter implements Parcelable {
 		Calculation ab = new Calculation();
 		ab.add("Base attack bonus", this.getBaseAttackBonus(attack));
 		ab.add("Strength modifier", this.getAttributeBonus(this.getStrength()));
-		ab.add("Size modifier", this.getSizeModifier());
+		ab.add("Size modifier", this.getSizeAttackBonusModifier());
 		
 		return ab; 
 	}
 	
-	public int getSizeModifier() {
+	private int getSizeAttackBonusModifier() {
 		switch(this.myRace.getSize()) {
 			case SMALL:
 				return 1;
@@ -537,6 +537,29 @@ public class PfCharacter implements Parcelable {
 				return -1;
 			default:
 				return 0;
+		}
+	}
+	
+	private int getSizeCMBModifier() {
+		switch(this.myRace.getSize()) {
+			case DIMINUTIVE:
+				return -4;
+			case TINY:
+				return -2;
+			case SMALL:
+				return -1;
+			case MEDIUM:
+				return 0;
+			case LARGE:
+				return 1;
+			case HUGE:
+				return 2;
+			case GARGANTUAN:
+				return 4;
+			case COLOSSAL:
+				return 8;
+			default:
+				throw new RuntimeException("Invalid character size!");
 		}
 	}
 	
@@ -754,6 +777,23 @@ public class PfCharacter implements Parcelable {
 
 		// TODO: add armor check penalty for skills where skill.hasArmorCheckPenalty() is true
 		
+		// feats
+		// Acrobatic feat
+		if(feats.contains(PfFeats.ACROBATIC) && (type == PfSkills.ACROBATICS || type == PfSkills.FLY))
+			trainedBonus.add("Acrobatic feat", 2);
+		
+		// Alertness feat
+		if(feats.contains(PfFeats.ALERTNESS) && (type == PfSkills.PERCEPTION || type == PfSkills.SENSE_MOTIVE))
+			trainedBonus.add("Alertness feat", 2);
+		
+		// Animal Affinity feat
+		if(feats.contains(PfFeats.ANIMAL_AFFINITY) && (type == PfSkills.HANDLE_ANIMAL || type == PfSkills.RIDE))
+			trainedBonus.add("Animal Affinity feat", 2);
+		
+		// Athletic feat
+		if(feats.contains(PfFeats.ATHLETIC) && (type == PfSkills.CLIMB || type == PfSkills.SWIM))
+			trainedBonus.add("Athletic feat", 2);
+				
 		return trainedBonus;
 	}
 	
@@ -776,6 +816,32 @@ public class PfCharacter implements Parcelable {
 		
 		
 		return false;
+	}
+	
+	public Calculation getCombatManeuverBonus(int attack) {
+		Calculation c = new Calculation();
+		
+		c.add("Base attack bonus", this.getBaseAttackBonus(attack));
+		
+		if(myRace.getSize() == PfSizes.DIMINUTIVE || myRace.getSize() == PfSizes.TINY || feats.contains(PfFeats.AGILE_MANEUVERS))
+			c.add("Dexterity modifier", this.getAttributeBonus(this.getAttributeValue(PfAttributes.DEX)));
+		else
+			c.add("Strength modifier", this.getAttributeBonus(this.getAttributeValue(PfAttributes.STR)));
+		
+		c.add("Size modifier", this.getSizeCMBModifier());
+		return c;
+	}
+	
+	public Calculation getCombatManeuverDefense(int attack) {
+		Calculation c = new Calculation();
+		
+		c.add("Base", 10);
+		c.add("Base attack bonus", this.getBaseAttackBonus(attack));
+		c.add("Strength modifier", this.getAttributeBonus(this.getAttributeValue(PfAttributes.STR)));
+		c.add("Dexterity modifier", this.getAttributeBonus(this.getAttributeValue(PfAttributes.DEX)));
+		c.add("Size modifier", this.getSizeCMBModifier());
+		
+		return c;
 	}
 
 	@Override
