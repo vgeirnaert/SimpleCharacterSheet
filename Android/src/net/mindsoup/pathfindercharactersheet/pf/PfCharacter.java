@@ -10,6 +10,7 @@ import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
 import net.mindsoup.pathfindercharactersheet.pf.feats.FeatFactory;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
+import net.mindsoup.pathfindercharactersheet.pf.items.Armor;
 import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfChooseBonusAttributeRace;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfRace;
@@ -29,6 +30,7 @@ public class PfCharacter implements Parcelable {
 	
 	private Weapon ActiveMainhandWeapon = null;
 	private Weapon ActiveOffhandWeapon= null;
+	private Armor armor = null;
 	
 	// stats
 	private int constitution = 0;
@@ -461,6 +463,16 @@ public class PfCharacter implements Parcelable {
 		return this.ActiveOffhandWeapon;
 	}
 	
+	public boolean setArmor(Armor armor) {
+		this.armor = armor;
+		
+		return true;
+	}
+	
+	public Armor getArmor() {
+		return this.armor;
+	}
+	
 
 	
 	public void levelUp(int oldLevel) {
@@ -513,7 +525,14 @@ public class PfCharacter implements Parcelable {
 		// core rulebook page 179
 		// TODO: add armor/shield
 		ac.add("Base", 10);
-		ac.add("Dexterity bonus", this.getAttributeBonus(this.getDexterity()));
+		
+		if(this.armor != null) {
+			ac.add(this.armor.getName(), this.armor.getArmorClass());
+			ac.add("Dexterity bonus", Math.min(this.getAttributeBonus(this.getDexterity()), this.armor.getMaxDexBonus()) );
+		} else {
+			ac.add("Dexterity bonus", this.getAttributeBonus(this.getDexterity()));
+		}
+		
 		return ac;
 	}
 	
@@ -523,6 +542,10 @@ public class PfCharacter implements Parcelable {
 		ab.add("Base attack bonus", this.getBaseAttackBonus(attack));
 		ab.add("Strength modifier", this.getAttributeBonus(this.getStrength()));
 		ab.add("Size modifier", this.getSizeAttackBonusModifier());
+		
+		if(this.armor != null) {
+			// TODO: add code to deal with non-proficient armor
+		}
 		
 		return ab; 
 	}
@@ -777,6 +800,13 @@ public class PfCharacter implements Parcelable {
 
 		// TODO: add armor check penalty for skills where skill.hasArmorCheckPenalty() is true
 		
+		// if we are wearing armor AND the skill is a dex or str skill
+		if(this.armor != null && (skill.getAttribute() == PfAttributes.DEX || skill.getAttribute() == PfAttributes.STR)) {
+			// if the armor has an armor check penalty
+			if(this.armor.getArmorPenalty() < 0) 
+				trainedBonus.add(this.armor.getName(), this.armor.getArmorPenalty());
+		}
+		
 		// feats
 		// Acrobatic feat
 		if(feats.contains(PfFeats.ACROBATIC) && (type == PfSkills.ACROBATICS || type == PfSkills.FLY))
@@ -882,6 +912,8 @@ public class PfCharacter implements Parcelable {
 		}
 		
 		out.writeIntArray(feat_ints);
+		
+		out.writeParcelable(getArmor(), 0);
 
 	}
 	
@@ -919,6 +951,8 @@ public class PfCharacter implements Parcelable {
 		int[] feat_ints = in.createIntArray();
 		for(int i : feat_ints)
 			this.feats.add(PfFeats.getFeat(i));
+		
+		this.armor = in.readParcelable(Armor.class.getClassLoader());
 		
 
 	}	

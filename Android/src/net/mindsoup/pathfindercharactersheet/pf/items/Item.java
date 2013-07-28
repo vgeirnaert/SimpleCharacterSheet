@@ -1,5 +1,6 @@
 package net.mindsoup.pathfindercharactersheet.pf.items;
 
+
 public abstract class Item {
 	
 	abstract public String getName();

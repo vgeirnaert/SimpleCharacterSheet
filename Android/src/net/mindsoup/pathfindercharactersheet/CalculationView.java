@@ -1,0 +1,58 @@
+/**
+ * 
+ */
+package net.mindsoup.pathfindercharactersheet;
+
+import net.mindsoup.pathfindercharactersheet.pf.util.Calculation;
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+/**
+ * @author Valentijn
+ *
+ */
+public class CalculationView extends TextView {
+	
+	private Calculation calculation;
+
+	public CalculationView(Context context) {
+		super(context);
+		
+		createOnClickListener(context);
+	}
+	
+	public CalculationView(Context context, AttributeSet attributeSet) {
+		super(context, attributeSet);
+		
+		createOnClickListener(context);
+	}
+	
+	public void setCalculation(Calculation c) {
+		calculation = c;
+	}
+	
+	@Override
+	public void setText(CharSequence text, TextView.BufferType type) {
+		if(calculation != null)
+			super.setText(text + Integer.toString(calculation.sum()), type);
+		else
+			super.setText(text, type);
+	}
+	
+	private void createOnClickListener(Context context) {
+		this.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(getContext(), calculation.toString(), Toast.LENGTH_LONG).show();
+			}
+		});
+	}
+	
+	
+	
+
+}

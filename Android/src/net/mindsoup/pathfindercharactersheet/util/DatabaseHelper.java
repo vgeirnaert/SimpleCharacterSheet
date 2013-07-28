@@ -13,6 +13,7 @@ import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.PfPace;
 import net.mindsoup.pathfindercharactersheet.pf.PfRaces;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
+import net.mindsoup.pathfindercharactersheet.pf.items.Armor;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfChooseBonusAttributeRace;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
@@ -223,6 +224,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				newChar.gainFeat(feat);
 			} while(feats_cursor.moveToNext());
 		}
+		
+		// hack to add scale mail
+		newChar.setArmor(new Armor("Scale mail", 5, 3, -4));
+					
 		return newChar;
 	}
 	

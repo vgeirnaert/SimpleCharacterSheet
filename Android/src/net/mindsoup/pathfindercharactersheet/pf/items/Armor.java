@@ -1,10 +1,47 @@
 package net.mindsoup.pathfindercharactersheet.pf.items;
 
-public class Armor extends Item {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Armor extends Item implements Parcelable {
+	
+	@SuppressWarnings("rawtypes")
+	public static final Parcelable.Creator CREATOR =
+	    new Parcelable.Creator() {
+	        public Armor createFromParcel(Parcel in) {
+	            return new Armor(in);
+	        }
+
+	        public Armor[] newArray(int size) {
+	            return new Armor[size];
+	        }
+	    };
+	
+	private final String name;
+	private final int armorBonus;
+	private final int maxDexBonus;
+	private final int armorPenalty;
+	
+	public Armor(String name, int armorBonus, int maxDexBonus, int armorPenalty) {
+		this.name = name;
+		this.armorBonus = armorBonus;
+		this.maxDexBonus = maxDexBonus;
+		this.armorPenalty = armorPenalty;
+	}
+
+	public Armor(Parcel in) {
+		this.name = in.readString();
+		this.armorBonus = in.readInt();
+		this.maxDexBonus = in.readInt();
+		this.armorPenalty = in.readInt();
+	
+		// value
+		in.readInt();
+	}
 
 	@Override
 	public String getName() {
-		return null;
+		return this.name;
 	}
 
 	@Override
@@ -18,21 +55,35 @@ public class Armor extends Item {
 	}
 	
 	public int getArmorClass() {
-		return 0;
+		return armorBonus;
 	}
 	
 	public int getMaxDexBonus() {
-		return 0;
+		return maxDexBonus;
 	}
 	
 	public int getArmorPenalty() {
-		return 0;
+		return armorPenalty;
 	}
 
 	@Override
 	public int getValue() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public int describeContents() {
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		dest.writeString(getName());
+		dest.writeInt(getArmorClass());
+		dest.writeInt(getMaxDexBonus());
+		dest.writeInt(getArmorPenalty());
+		dest.writeInt(getValue());
 	}
 	
 
