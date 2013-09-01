@@ -32,7 +32,7 @@ import android.provider.BaseColumns;
 public class DatabaseHelper extends SQLiteOpenHelper {
 	// db
 	private static final String DATABASE = "SimplePathfinderCharacterSheet.db";
-	private static final int DATABASE_VERSION = 14;
+	private static final int DATABASE_VERSION = 15;
 	
 	public static abstract class Db implements BaseColumns {
 
@@ -128,7 +128,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 		public static final String DROP_ITEMS = "DROP TABLE IF EXISTS " + Db.ITEM_TABLE;
 		
-		public static final String CREATE_ITEM_TRIGGER = "CREATE TRIGGER IF NOT EXISTS delete_item_when_zero UPDATE OF " + Db.ITEM_AMOUNT + " ON " + Db.ITEM_TABLE + " WHEN NEW." + Db.ITEM_VALUE + " < 1 " + 
+		public static final String CREATE_ITEM_TRIGGER = "CREATE TRIGGER IF NOT EXISTS delete_item_when_zero UPDATE OF " + Db.ITEM_AMOUNT + " ON " + Db.ITEM_TABLE + " WHEN NEW." + Db.ITEM_AMOUNT + " < 1 " + 
 				"BEGIN DELETE FROM " + Db.ITEM_TABLE + " WHERE " + Db._ID + " = NEW." + Db._ID + "; END;";
 	}	
 

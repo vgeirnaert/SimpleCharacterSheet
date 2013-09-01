@@ -266,16 +266,19 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	}
 	
 	public void addItem(Item item) {
-		this.character.addItem(item);
+		int stackSize = this.character.addItem(item);
 		DatabaseHelper db = new DatabaseHelper(this);
+		item.setStackSize(stackSize);
 		db.addItem(this.character, item);
 		updateCharacter();
 	}
 	
 	public void removeItem(Item item, int amount) {
+		int oldStackSize = item.getStackSize();
+		
 		if(this.character.removeItem(item, amount)) {
 			DatabaseHelper db = new DatabaseHelper(this);
-			db.removeItem(this.character, item, amount);
+			db.removeItem(this.character, item, oldStackSize - amount);
 			updateCharacter();
 		}
 	}

@@ -883,15 +883,18 @@ public class PfCharacter implements Parcelable {
 	// Inventory code
 	//**********************************
 	
-	public void addItem(Item item) {
+	public int addItem(Item item) {
+		int stackSize = item.getStackSize();
 		// if we already have one of these, just add it to the stack
 		if(inventory.contains(item)) {
 			Item i = inventory.get(inventory.indexOf(item));
-			
-			i.setStackSize(i.getStackSize() + item.getStackSize());
+			stackSize = i.getStackSize() + item.getStackSize();
+			i.setStackSize(stackSize);
 		} else {
 			inventory.add(item);
 		}
+		
+		return stackSize;
 			
 	}
 	
@@ -924,7 +927,11 @@ public class PfCharacter implements Parcelable {
 		
 		return weight;
 	}
-
+	
+	public List<Item> getInventoryItems() {
+		return inventory;
+	}
+	
 	@Override
 	public void writeToParcel(Parcel out, int flags) {
 		out.writeInt(myClass.getPfClass().ordinal());
@@ -1011,7 +1018,7 @@ public class PfCharacter implements Parcelable {
 		this.armor = in.readParcelable(Wearable.class.getClassLoader());
 		
 		Bundle items = in.readBundle();
-		b.setClassLoader(Item.class.getClassLoader());
+		items.setClassLoader(Item.class.getClassLoader());
 		
 		for(String s : items.keySet()) {
 			Parcelable p = items.getParcelable(s);

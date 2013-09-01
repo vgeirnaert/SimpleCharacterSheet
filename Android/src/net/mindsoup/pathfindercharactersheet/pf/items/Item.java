@@ -102,4 +102,13 @@ public class Item implements Parcelable {
 	public int describeContents() {
 		return 0;
 	}
+	
+	@Override
+    public boolean equals(Object object) {
+        if(object != null && object instanceof Item) {
+        	return ((Item)object).getName().equalsIgnoreCase(this.getName());
+        }
+        
+        return false;
+    }
 }
