@@ -16,6 +16,7 @@ import net.mindsoup.pathfindercharactersheet.fragments.SetAttributesFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.SkillsFragment;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
+import net.mindsoup.pathfindercharactersheet.pf.items.Item;
 import net.mindsoup.pathfindercharactersheet.util.DatabaseHelper;
 import android.content.Intent;
 import android.content.res.TypedArray;
@@ -260,6 +261,21 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		if(this.character.gainFeat(feat)) {
 			DatabaseHelper db = new DatabaseHelper(this);
 			db.addFeat(this.character, feat);
+			updateCharacter();
+		}
+	}
+	
+	public void addItem(Item item) {
+		this.character.addItem(item);
+		DatabaseHelper db = new DatabaseHelper(this);
+		db.addItem(this.character, item);
+		updateCharacter();
+	}
+	
+	public void removeItem(Item item, int amount) {
+		if(this.character.removeItem(item, amount)) {
+			DatabaseHelper db = new DatabaseHelper(this);
+			db.removeItem(this.character, item, amount);
 			updateCharacter();
 		}
 	}

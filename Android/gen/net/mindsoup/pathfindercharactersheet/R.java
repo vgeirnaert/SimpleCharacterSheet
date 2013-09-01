@@ -981,7 +981,8 @@ containing a value of this type.
         public static final int abs__title=0x7f04001b;
         public static final int abs__up=0x7f04000b;
         public static final int add_feats_button=0x7f040072;
-        public static final int all_feats_list=0x7f040080;
+        public static final int add_item_button=0x7f040075;
+        public static final int all_feats_list=0x7f040081;
         public static final int attr_header_ability=0x7f040065;
         public static final int attr_header_bonus=0x7f040067;
         public static final int attr_header_score=0x7f040066;
@@ -994,15 +995,15 @@ containing a value of this type.
         public static final int attribute_temp_bonus=0x7f04003c;
         public static final int available_feats_group=0x7f040071;
         public static final int available_feats_text=0x7f040073;
-        public static final int available_skill_ranks=0x7f04007e;
+        public static final int available_skill_ranks=0x7f04007f;
         public static final int button1=0x7f040053;
-        public static final int calc_ab=0x7f04007a;
-        public static final int calc_ac=0x7f040079;
-        public static final int calc_cmb=0x7f04007b;
-        public static final int calc_cmd=0x7f04007c;
-        public static final int calc_hitpoints=0x7f040078;
-        public static final int calc_level=0x7f040076;
-        public static final int calc_xp=0x7f040077;
+        public static final int calc_ab=0x7f04007b;
+        public static final int calc_ac=0x7f04007a;
+        public static final int calc_cmb=0x7f04007c;
+        public static final int calc_cmd=0x7f04007d;
+        public static final int calc_hitpoints=0x7f040079;
+        public static final int calc_level=0x7f040077;
+        public static final int calc_xp=0x7f040078;
         public static final int cha_bonus=0x7f040043;
         public static final int char_details=0x7f040057;
         public static final int char_img=0x7f040055;
@@ -1019,7 +1020,7 @@ containing a value of this type.
         public static final int create_char_race=0x7f04005a;
         public static final int create_char_stat=0x7f04005b;
         public static final int create_layout=0x7f040058;
-        public static final int delete_button=0x7f040089;
+        public static final int delete_button=0x7f04008a;
         public static final int dex_bonus=0x7f040049;
         public static final int disableHome=0x7f040009;
         public static final int drawer_layout=0x7f040032;
@@ -1042,30 +1043,30 @@ containing a value of this type.
         public static final int feats_list=0x7f040074;
         public static final int fragment_group=0x7f040033;
         public static final int homeAsUp=0x7f040006;
-        public static final int home_button=0x7f040087;
+        public static final int home_button=0x7f040088;
         public static final int int_bonus=0x7f04004c;
-        public static final int inventory_list=0x7f040075;
+        public static final int inventory_list=0x7f040076;
         public static final int left_drawer=0x7f040034;
         public static final int listMode=0x7f040002;
-        public static final int menu_search=0x7f04008a;
+        public static final int menu_search=0x7f04008b;
         public static final int money_button=0x7f04006e;
         public static final int nav_text=0x7f040060;
-        public static final int new_button=0x7f04008b;
+        public static final int new_button=0x7f04008c;
         public static final int normal=0x7f040001;
-        public static final int ogl_button=0x7f04008c;
+        public static final int ogl_button=0x7f04008d;
         public static final int ogl_text=0x7f040036;
-        public static final int open_button=0x7f040088;
-        public static final int overview_text=0x7f04007d;
+        public static final int open_button=0x7f040089;
+        public static final int overview_text=0x7f04007e;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
-        public static final int skill_layout=0x7f040081;
-        public static final int skill_name=0x7f040082;
-        public static final int skill_rank=0x7f040084;
-        public static final int skill_ranks=0x7f040086;
-        public static final int skill_score=0x7f040085;
-        public static final int skill_texts=0x7f040083;
-        public static final int skills_list=0x7f04007f;
+        public static final int skill_layout=0x7f040082;
+        public static final int skill_name=0x7f040083;
+        public static final int skill_rank=0x7f040085;
+        public static final int skill_ranks=0x7f040087;
+        public static final int skill_score=0x7f040086;
+        public static final int skill_texts=0x7f040084;
+        public static final int skills_list=0x7f040080;
         public static final int spinner_attribute_text=0x7f04003d;
         public static final int str_bonus=0x7f04004f;
         public static final int tabMode=0x7f040003;
@@ -1182,6 +1183,9 @@ containing a value of this type.
         /**   fragment_feats 
          */
         public static final int add_feat=0x7f090038;
+        /**  ITEMS 
+         */
+        public static final int add_item=0x7f090039;
         public static final int app_name=0x7f09000d;
         /**  fragment_skills 
          */

@@ -4,6 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
+     <Button
+        android:id="@+id/add_item_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_item" />
+    
 	<ListView
         android:id="@+id/inventory_list"
         android:layout_width="fill_parent"

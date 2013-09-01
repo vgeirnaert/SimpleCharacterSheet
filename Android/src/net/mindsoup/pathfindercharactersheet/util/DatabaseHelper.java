@@ -13,7 +13,8 @@ import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.PfPace;
 import net.mindsoup.pathfindercharactersheet.pf.PfRaces;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
-import net.mindsoup.pathfindercharactersheet.pf.items.Armor;
+import net.mindsoup.pathfindercharactersheet.pf.items.Item;
+import net.mindsoup.pathfindercharactersheet.pf.items.Wearable;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfChooseBonusAttributeRace;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
@@ -31,7 +32,7 @@ import android.provider.BaseColumns;
 public class DatabaseHelper extends SQLiteOpenHelper {
 	// db
 	private static final String DATABASE = "SimplePathfinderCharacterSheet.db";
-	private static final int DATABASE_VERSION = 12;
+	private static final int DATABASE_VERSION = 14;
 	
 	public static abstract class Db implements BaseColumns {
 
@@ -89,7 +90,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				  Db.SKILL_CHAR_ID + " INT NOT NULL ON CONFLICT FAIL CONSTRAINT character_id_fk REFERENCES " + Db.CHARACTER_TABLE + "(" + Db._ID + ") ON DELETE CASCADE ON UPDATE CASCADE," +
 				  "CONSTRAINT skill_and_char_ids UNIQUE (" + Db.SKILL_ID + ", " + Db.SKILL_CHAR_ID + "));";
 
-		public static final String CREATE_SKILLS_INDEX = "CREATE INDEX character_id_index ON " + Db.SKILLS_TABLE + " (" + Db.SKILL_CHAR_ID + ")";
+		public static final String CREATE_SKILLS_INDEX = "CREATE INDEX IF NOT EXISTS character_id_index ON " + Db.SKILLS_TABLE + " (" + Db.SKILL_CHAR_ID + ")";
 		
 		private static final String DROP_SKILLS = "DROP TABLE IF EXISTS " + Db.SKILLS_TABLE;
 		
@@ -105,7 +106,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				  "CONSTRAINT feat_and_char_ids UNIQUE (" + Db.FEAT_ID + ", " + Db.FEAT_CHAR_ID + "));";
 		
 		private static final String DROP_FEATS = "DROP TABLE IF EXISTS " + Db.FEATS_TABLE;
-	}
+		
+		// table items
+		private static final String ITEM_TABLE = "items";
+		private static final String ITEM_NAME = "name";
+		private static final String ITEM_DESCRIPTION = "description";
+		private static final String ITEM_WEIGHT = "weight";
+		private static final String ITEM_AMOUNT = "amount";
+		private static final String ITEM_VALUE = "value";
+		private static final String ITEM_CHAR_ID = "character_id";
+		
+		public static final String CREATE_ITEMS_TABLE = "CREATE TABLE IF NOT EXISTS " + Db.ITEM_TABLE + " (" + 
+				Db._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+				Db.ITEM_CHAR_ID + " INT NOT NULL ON CONFLICT FAIL CONSTRAINT character_id_fk REFERENCES " + Db.CHARACTER_TABLE + "(" + Db._ID + ") ON DELETE CASCADE ON UPDATE CASCADE," +
+				Db.ITEM_NAME + " TEXT NOT NULL, " + 
+				Db.ITEM_DESCRIPTION + " TEXT NOT NULL DEFAULT '', " + 
+				Db.ITEM_WEIGHT + " REAL NOT NULL DEFAULT 1, " +
+				Db.ITEM_AMOUNT + " SMALLINT NOT NULL DEFAULT 1, " +
+				Db.ITEM_VALUE + " INT NOT NULL DEFAULT 0, " +  // value in copperpieces
+				"CONSTRAINT item_and_char_ids UNIQUE (" + Db.ITEM_NAME + ", " + Db.ITEM_CHAR_ID + "));";		
+		
+		public static final String DROP_ITEMS = "DROP TABLE IF EXISTS " + Db.ITEM_TABLE;
+		
+		public static final String CREATE_ITEM_TRIGGER = "CREATE TRIGGER IF NOT EXISTS delete_item_when_zero UPDATE OF " + Db.ITEM_AMOUNT + " ON " + Db.ITEM_TABLE + " WHEN NEW." + Db.ITEM_VALUE + " < 1 " + 
+				"BEGIN DELETE FROM " + Db.ITEM_TABLE + " WHERE " + Db._ID + " = NEW." + Db._ID + "; END;";
+	}	
 
 	public DatabaseHelper(Context context) {
 		super(context, DATABASE, null, DATABASE_VERSION);
@@ -120,6 +145,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		db.execSQL(Db.CREATE_SKILLS_TABLE);
 		db.execSQL(Db.CREATE_SKILLS_INDEX);
 		db.execSQL(Db.CREATE_FEATS_TABLE);
+		db.execSQL(Db.CREATE_ITEMS_TABLE);
+		db.execSQL(Db.CREATE_ITEM_TRIGGER);
 	}
 
 	/* (non-Javadoc)
@@ -127,9 +154,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	 */
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		db.execSQL(Db.DROP_CHARACTERS);
-		db.execSQL(Db.DROP_SKILLS);
-		db.execSQL(Db.DROP_FEATS);
+		if(oldVersion != 12) {
+			db.execSQL(Db.DROP_ITEMS);
+			db.execSQL(Db.DROP_CHARACTERS);
+			db.execSQL(Db.DROP_SKILLS);
+			db.execSQL(Db.DROP_FEATS);
+		}
 		
 		onCreate(db);
 
@@ -213,7 +243,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		orderBy = Db.FEAT_ID + " ASC";
 		selection = Db.FEAT_CHAR_ID + " = ?";
 		String[] feat_SelectionArgs = {Long.toString(id)};
-		// select skills that this character has
+		// select feats that this character has
 		Cursor feats_cursor = db.query(Db.FEATS_TABLE, feat_columns, selection, feat_SelectionArgs, null, null, orderBy);
 		
 		// for each feat, add it to the character
@@ -226,7 +256,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		}
 		
 		// hack to add scale mail
-		newChar.setArmor(new Armor("Scale mail", 5, 3, -4));
+		newChar.setArmor(new Wearable("Scale mail", 5, 3, -4));
+		
+		// inventory
+		String[] item_columns = {Db._ID, Db.ITEM_NAME, Db.ITEM_DESCRIPTION, Db.ITEM_AMOUNT, Db.ITEM_VALUE, Db.ITEM_WEIGHT};
+		orderBy = Db.ITEM_NAME + " ASC";
+		selection = Db.ITEM_CHAR_ID + " = ?";
+		String[] item_SelectionArgs = {Long.toString(id)};
+		// select items that this character has
+		Cursor items_cursor = db.query(Db.ITEM_TABLE, item_columns, selection, item_SelectionArgs, null, null, orderBy);
+		
+		if(items_cursor.moveToFirst()) {
+			do {
+				Item item = new Item(items_cursor.getString(items_cursor.getColumnIndex(Db.ITEM_NAME)));
+				item.setDescription(items_cursor.getString(items_cursor.getColumnIndex(Db.ITEM_DESCRIPTION)));
+				item.setStackSize(items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEM_AMOUNT)));
+				item.setValue(items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEM_VALUE)));
+				item.setWeight(items_cursor.getFloat(items_cursor.getColumnIndex(Db.ITEM_WEIGHT)));
+				newChar.addItem(item);
+			} while(items_cursor.moveToNext());
+		}
 					
 		return newChar;
 	}
@@ -314,5 +363,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		values.put(Db.FEAT_ID, feat.ordinal());
 		db.insert(Db.FEATS_TABLE, null, values);
 		db.close();
+	}
+
+	public void addItem(PfCharacter character, Item item) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put(Db.ITEM_AMOUNT, item.getStackSize());
+		values.put(Db.ITEM_NAME, item.getName());
+		values.put(Db.ITEM_DESCRIPTION, item.getDescription());
+		values.put(Db.ITEM_VALUE, item.getValue());
+		values.put(Db.ITEM_WEIGHT, item.getWeight());
+		values.put(Db.ITEM_CHAR_ID, character.getId());
+		
+		db.replace(Db.ITEM_TABLE, null, values);
+		db.close();
+	}
+
+	public void removeItem(PfCharacter character, Item item, int amount) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		
+		values.put(Db.ITEM_AMOUNT, amount);
+
+		String whereClause = Db.ITEM_CHAR_ID + " = ? AND " + Db.ITEM_NAME + " = ?";
+		String[] whereArgs = {Long.toString(character.getId()), item.getName()};
+		db.update(Db.ITEM_TABLE, values, whereClause, whereArgs);
+		
+		db.close();
+		
 	}
 }

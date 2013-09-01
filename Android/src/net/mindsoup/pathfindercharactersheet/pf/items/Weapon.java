@@ -9,7 +9,9 @@ public class Weapon extends Item {
 	private int criticalRange;
 	private PfHandedness handedness;
 	
-	public Weapon(Dice argDamage, int argCriticalMultiplier, int argCriticalRange, PfHandedness hand) {
+	public Weapon(String name, Dice argDamage, int argCriticalMultiplier, int argCriticalRange, PfHandedness hand) {
+		super(name);
+		
 		this.damage = argDamage;
 		this.criticalMultiplier = argCriticalMultiplier;
 		this.criticalRange = argCriticalRange;
@@ -40,24 +42,8 @@ public class Weapon extends Item {
 	}
 
 	@Override
-	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public ItemType getType() {
 		return ItemType.WEAPON;
 	}
 
-	@Override
-	public boolean isStackable() {
-		return false;
-	}
-
-	@Override
-	public int getValue() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 }

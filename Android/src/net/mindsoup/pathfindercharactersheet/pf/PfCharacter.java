@@ -3,6 +3,8 @@ package net.mindsoup.pathfindercharactersheet.pf;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -10,8 +12,9 @@ import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
 import net.mindsoup.pathfindercharactersheet.pf.feats.FeatFactory;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
-import net.mindsoup.pathfindercharactersheet.pf.items.Armor;
+import net.mindsoup.pathfindercharactersheet.pf.items.Item;
 import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
+import net.mindsoup.pathfindercharactersheet.pf.items.Wearable;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfChooseBonusAttributeRace;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfRace;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
@@ -30,7 +33,7 @@ public class PfCharacter implements Parcelable {
 	
 	private Weapon ActiveMainhandWeapon = null;
 	private Weapon ActiveOffhandWeapon= null;
-	private Armor armor = null;
+	private Wearable armor = null;
 	
 	// stats
 	private int constitution = 0;
@@ -57,6 +60,7 @@ public class PfCharacter implements Parcelable {
 	
 	private Map<PfSkills, PfSkill> trainedSkills = new HashMap<PfSkills, PfSkill>();
 	private Set<PfFeats> feats = new HashSet<PfFeats>();
+	private List<Item> inventory = new LinkedList<Item>();
 	
 	@SuppressWarnings("rawtypes")
 	public static final Parcelable.Creator CREATOR =
@@ -463,13 +467,13 @@ public class PfCharacter implements Parcelable {
 		return this.ActiveOffhandWeapon;
 	}
 	
-	public boolean setArmor(Armor armor) {
+	public boolean setArmor(Wearable armor) {
 		this.armor = armor;
 		
 		return true;
 	}
 	
-	public Armor getArmor() {
+	public Wearable getArmor() {
 		return this.armor;
 	}
 	
@@ -636,8 +640,9 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public void removeFeat(PfFeats feat) {
-		if(feats.remove(feat))
+		if(feats.remove(feat)) {
 			this.setAvailableFeats(this.getAvailableFeats() + 1);
+		}
 		
 	}
 	
@@ -873,6 +878,52 @@ public class PfCharacter implements Parcelable {
 		
 		return c;
 	}
+	
+	//**********************************
+	// Inventory code
+	//**********************************
+	
+	public void addItem(Item item) {
+		// if we already have one of these, just add it to the stack
+		if(inventory.contains(item)) {
+			Item i = inventory.get(inventory.indexOf(item));
+			
+			i.setStackSize(i.getStackSize() + item.getStackSize());
+		} else {
+			inventory.add(item);
+		}
+			
+	}
+	
+	public boolean removeItem(Item item, int amount) {
+		if(inventory.contains(item)) {
+			Item i = inventory.get(inventory.indexOf(item));
+			
+			if(amount > i.getStackSize())
+				return false;
+			
+			if(amount < i.getStackSize()) {
+				i.setStackSize(i.getStackSize() - amount);
+				return true;
+			}
+			
+			// we're removing all of this item
+			inventory.remove(item);
+			return true;
+		}
+		
+		return false;
+			
+	}
+	
+	public float getTotalCarryingWeight() {
+		float weight = 0;
+		
+		for(Item i : inventory)
+			weight += i.getStackWeight();
+		
+		return weight;
+	}
 
 	@Override
 	public void writeToParcel(Parcel out, int flags) {
@@ -914,7 +965,12 @@ public class PfCharacter implements Parcelable {
 		out.writeIntArray(feat_ints);
 		
 		out.writeParcelable(getArmor(), 0);
-
+		
+		Bundle items = new Bundle();
+		for(Item item : inventory)
+			items.putParcelable(item.getName(), item);
+		
+		out.writeBundle(items);
 	}
 	
 	public void readFromParcel(Parcel in) {
@@ -952,8 +1008,15 @@ public class PfCharacter implements Parcelable {
 		for(int i : feat_ints)
 			this.feats.add(PfFeats.getFeat(i));
 		
-		this.armor = in.readParcelable(Armor.class.getClassLoader());
+		this.armor = in.readParcelable(Wearable.class.getClassLoader());
 		
-
+		Bundle items = in.readBundle();
+		b.setClassLoader(Item.class.getClassLoader());
+		
+		for(String s : items.keySet()) {
+			Parcelable p = items.getParcelable(s);
+			Item newItem = (Item)p;
+			this.addItem(newItem);
+		}
 	}	
 }
