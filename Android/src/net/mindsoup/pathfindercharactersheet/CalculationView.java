@@ -16,7 +16,7 @@ import android.widget.Toast;
  */
 public class CalculationView extends TextView {
 	
-	private Calculation calculation;
+	private Calculation calculation = null;
 
 	public CalculationView(Context context) {
 		super(context);
@@ -47,7 +47,8 @@ public class CalculationView extends TextView {
 			
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(getContext(), calculation.toString(), Toast.LENGTH_LONG).show();
+				if(calculation != null)
+					Toast.makeText(getContext(), calculation.toString(), Toast.LENGTH_LONG).show();
 			}
 		});
 	}

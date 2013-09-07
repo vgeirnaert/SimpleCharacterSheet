@@ -19,6 +19,9 @@
     <string name="ov_ab">Attack bonus</string>
     <string name="ov_cmb">CMB</string>
     <string name="ov_cmd">CMD</string>
+    <string name="ov_fort_save">Fortitude save</string>
+    <string name="ov_ref_save">Reflex save</string>
+    <string name="ov_will_save">Will save</string>
     
     <!-- info fragment -->
     <string name="info_money">Copper pieces</string>
