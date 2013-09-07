@@ -95,7 +95,6 @@ public class PfDwarf implements PfRace {
 	public int getSkillBonus(PfSkills skill) {
 		switch(skill) {
 			case APPRAISE: return 2;
-			case PERCEPTION: return 2;
 			default: return 0;
 		}
 	}

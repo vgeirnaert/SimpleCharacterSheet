@@ -73,22 +73,22 @@ public class OverviewFragment extends CharacterFragment {
 			
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_fort_save);
 			Calculation fort = new Calculation();
-			fort.add("Constitution", character.getConstitution().sum());
+			fort.add("CON bonus", character.getAttributeBonus(character.getConstitution()));
 			fort.add("Fortitude bonus", character.getPfClass().getFortSaveModifier(character.getLevel()));
 			calcView.setCalculation(fort);
 			calcView.setText("");
 			
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_ref_save);
 			Calculation ref = new Calculation();
-			ref.add("Dexterity", character.getDexterity().sum());
-			ref.add("Fortitude bonus", character.getPfClass().getReflexSaveModifier(character.getLevel()));
+			ref.add("DEX bonus",  character.getAttributeBonus(character.getDexterity()));
+			ref.add("Reflex bonus", character.getPfClass().getReflexSaveModifier(character.getLevel()));
 			calcView.setCalculation(ref);
 			calcView.setText("");
 			
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_will_save);
 			Calculation will = new Calculation();
-			will.add("Wisdom", character.getWisdom().sum());
-			will.add("Fortitude bonus", character.getPfClass().getWillSaveModifier(character.getLevel()));
+			will.add("WIS bonus",  character.getAttributeBonus(character.getWisdom()));
+			will.add("Will bonus", character.getPfClass().getWillSaveModifier(character.getLevel()));
 			calcView.setCalculation(will);
 			calcView.setText("");
 			

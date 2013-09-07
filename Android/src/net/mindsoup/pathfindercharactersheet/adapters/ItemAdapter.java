@@ -39,7 +39,11 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         Item item = items.get(position);
         
         TextView tv = (TextView)view.findViewById(R.id.item_name);
-        tv.setText(item.getName());
+        String name = item.getName();
+        if(item.getStackSize() > 1)
+        	name += " (" + Integer.toString(item.getStackSize()) + ")";
+        
+        tv.setText(name);
         
         tv.setOnClickListener(new OnClickListener() {
 			
@@ -56,10 +60,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         
         tv = (TextView)view.findViewById(R.id.item_description);
         tv.setText(item.getDescription());
-        
-        tv = (TextView)view.findViewById(R.id.item_amount);
-        tv.setText("Stack: " + Integer.toString(item.getStackSize()));
-        
+                
         tv = (TextView)view.findViewById(R.id.item_value);
         tv.setText(Float.toString((float)item.getStackValue() / 100.0f) + " Gold");
         
