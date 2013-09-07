@@ -61,10 +61,23 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		character = (PfCharacter)intent.getParcelableExtra("CHAR");
 		
 		setContentView(R.layout.activity_character);
+		
+		
+		// create navigation drawer
+		initialiseNavDrawer();
+			
+		// set up fragment paging
+		initialisePaging();
+			
+		// set up action bar
+		initialiseActionBar();
+		
+				
 	}
 	
 	private void initialisePaging() {
 		fragments = new ArrayList<SherlockFragment>();
+		
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, OverviewFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, AttributesFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, SkillsFragment.class.getName()));
@@ -155,15 +168,6 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	public void onStart() {
 		super.onStart();
 		
-		// create navigation drawer
-		initialiseNavDrawer();
-		
-		// set up fragment paging
-		initialisePaging();
-		
-		// set up action bar
-		initialiseActionBar();
-		
 		// if we can see that our character's stats aren't set yet...
 		if(character.getConstitution().sum() < 1 || character.getCharisma().sum() < 1 || character.getIntelligence().sum() < 1) {
 			changeFragment(1);
@@ -246,8 +250,9 @@ public class CharacterActivity extends SherlockFragmentActivity {
 			db.updateCharacterAttributes(character);
 		}
 		
-		for(SherlockFragment f : pagerAdapter.getItems()) 
+		for(SherlockFragment f : pagerAdapter.getItems()) {
 			((CharacterFragment)f).refresh();
+		}
 	}
 	
 	public void removeFeat(PfFeats feat) {

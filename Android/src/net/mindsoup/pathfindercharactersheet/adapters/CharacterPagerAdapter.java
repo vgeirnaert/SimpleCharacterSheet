@@ -29,7 +29,7 @@ public class CharacterPagerAdapter extends FragmentStatePagerAdapter {
 	 * @see android.support.v4.app.FragmentPagerAdapter#getItem(int)
 	 */
 	@Override
-	public Fragment getItem(int position) {
+	public Fragment getItem(int position) {		
 		return this.fragments.get(position);
 	}
 

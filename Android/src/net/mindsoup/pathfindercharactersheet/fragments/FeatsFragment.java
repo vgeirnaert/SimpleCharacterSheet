@@ -76,7 +76,6 @@ public class FeatsFragment extends CharacterFragment {
 
 				@Override
 				public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-					System.out.println("REMOVING FEAT! 3");
 					PfFeats feat = feats.get(position);
 					((CharacterActivity)getActivity()).removeFeat(feat);
 					return true;

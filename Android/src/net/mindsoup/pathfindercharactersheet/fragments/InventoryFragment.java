@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class InventoryFragment extends CharacterFragment {
 	
@@ -79,6 +80,12 @@ public class InventoryFragment extends CharacterFragment {
 	public void refresh() {
 		if(isAdded()) {
 			adapter.notifyDataSetChanged();
+			
+			TextView tv = (TextView)this.getActivity().findViewById(R.id.character_wealth);
+			tv.setText("Gold: " + Float.toString((float)ca.getCharacter().getMoney() / 100.0f));
+			
+			tv = (TextView)this.getActivity().findViewById(R.id.total_weight);
+			tv.setText(Float.toString(ca.getCharacter().getTotalCarryingWeight()) + " Lbs");
 		}
 	}
 

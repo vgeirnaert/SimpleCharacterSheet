@@ -800,6 +800,11 @@ public class PfCharacter implements Parcelable {
 		
 		// our ability modifier for this skill
 		int abilityModifier = this.getAttributeBonus(this.getAttributeValue(skill.getAttribute()));
+		
+		// FEAT: change ability modifier for the Intimidating Prowess feat - use STR instead of CHA
+		if(skill.getType() == PfSkills.INTIMIDATE && this.hasFeat(PfFeats.INTIMIDATING_PROWESS))
+			abilityModifier = this.getAttributeBonus(this.getAttributeValue(PfAttributes.STR));
+		
 		trainedBonus.add("Ability modifier", abilityModifier);
 		trainedBonus.add("Racial bonus", myRace.getSkillBonus(type));
 
