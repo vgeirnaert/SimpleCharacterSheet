@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 
-public class Item implements Parcelable {
+public class Item implements Comparable<Item>, Parcelable {
 	
 	@SuppressWarnings("rawtypes")
 	public static final Parcelable.Creator CREATOR =
@@ -111,4 +111,9 @@ public class Item implements Parcelable {
         
         return false;
     }
+
+	@Override
+	public int compareTo(Item another) {
+		return this.name.compareTo( another.getName() );
+	}
 }

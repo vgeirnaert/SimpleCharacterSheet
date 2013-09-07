@@ -1,6 +1,7 @@
 package net.mindsoup.pathfindercharactersheet.pf;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -898,6 +899,8 @@ public class PfCharacter implements Parcelable {
 		} else {
 			inventory.add(item);
 		}
+		
+		Collections.sort(inventory);
 		
 		return stackSize;
 			
