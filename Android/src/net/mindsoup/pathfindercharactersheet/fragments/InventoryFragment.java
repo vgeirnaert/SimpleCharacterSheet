@@ -5,6 +5,7 @@ import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.adapters.ItemAdapter;
 import net.mindsoup.pathfindercharactersheet.pf.items.Item;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -67,13 +68,9 @@ public class InventoryFragment extends CharacterFragment {
 	}
 	
 	private void addItem() {
-		Item i = new Item("TEST ITEM");
-		i.setDescription("This is the description");
-		i.setStackSize(3);
-		i.setValue(50);
-		i.setWeight(0.5f);
-		
-		ca.addItem(i);
+		 FragmentManager fm = this.getActivity().getSupportFragmentManager();
+	     CreateItemFragment createChar = new CreateItemFragment();
+	     createChar.show(fm, "fragment_create_item");
 	}
 
 	@Override

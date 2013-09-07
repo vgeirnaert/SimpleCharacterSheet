@@ -514,4 +514,10 @@
     
     <!-- ITEMS -->
     <string name="add_item">Add</string>
+    <string name="hint_item_name">Name</string>
+    <string name="hint_item_description">Description</string>
+    <string name="item_dialog_title">Add new item</string>
+    <string name="hint_item_weight">Weight</string>
+    <string name="hint_item_value">Value</string>
+    <string name="hint_item_amount">Amount</string>
 </resources>
