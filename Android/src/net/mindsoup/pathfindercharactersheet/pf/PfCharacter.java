@@ -652,10 +652,6 @@ public class PfCharacter implements Parcelable {
 		
 	}
 	
-	private void calculateFreeSkillPoints() {
-		int level = this.getLevel();
-	}
-	
 	/**
 	 * NOTE THAT THIS SHOULD ONLY BE USED DURING CHARACTER LOADING
 	 * 
