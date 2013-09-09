@@ -53,7 +53,7 @@ public class PfCharacter implements Parcelable {
 	
 	private int xp = 0;
 	private int coin = 0;
-	private PfPace pace = PfPace.MEDIUM;
+	private PfPace pace = PfPace.FAST;
 	private int availableSkillRanks = 0;
 	private int availableFeats = 0;
 	
@@ -650,6 +650,10 @@ public class PfCharacter implements Parcelable {
 			this.setAvailableFeats(this.getAvailableFeats() + 1);
 		}
 		
+	}
+	
+	private void calculateFreeSkillPoints() {
+		int level = this.getLevel();
 	}
 	
 	/**

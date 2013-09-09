@@ -32,7 +32,7 @@ import android.provider.BaseColumns;
 public class DatabaseHelper extends SQLiteOpenHelper {
 	// db
 	private static final String DATABASE = "SimplePathfinderCharacterSheet.db";
-	private static final int DATABASE_VERSION = 15;
+	private static final int DATABASE_VERSION = 16;
 	
 	public static abstract class Db implements BaseColumns {
 
@@ -155,10 +155,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		if(oldVersion != 12) {
+			// if we're not version 12, remove all tables
 			db.execSQL(Db.DROP_ITEMS);
 			db.execSQL(Db.DROP_CHARACTERS);
 			db.execSQL(Db.DROP_SKILLS);
 			db.execSQL(Db.DROP_FEATS);
+		}
+		
+		if(oldVersion < 15) {
+			// update all characters to be fast paced
+			db.execSQL("UPDATE " + Db.CHARACTER_TABLE + " SET " + Db.CHAR_PACE + "=" + PfPace.FAST.ordinal());
 		}
 		
 		onCreate(db);
@@ -201,7 +207,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		int str = c.getInt(c.getColumnIndex(Db.CHAR_STR));
 		int wis = c.getInt(c.getColumnIndex(Db.CHAR_WIS));
 		boolean hppl = c.getInt(c.getColumnIndex(Db.CHAR_HPPL)) > 0;
-		int available_skill_ranks = c.getInt(c.getColumnIndex(Db.CHAR_ASRANKS));
+		//int available_skill_ranks = c.getInt(c.getColumnIndex(Db.CHAR_ASRANKS));
 		int available_feats = c.getInt(c.getColumnIndex(Db.CHAR_AVAILABLE_FEATS));
 		int money = c.getInt(c.getColumnIndex(Db.CHAR_MONEY));
 		
@@ -210,7 +216,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		newChar.setXp(xp);
 		newChar.setId(id);
 		newChar.setBaseStats(cha, con, dex, in, str, wis);
-		newChar.setAvailableSkillRanks(available_skill_ranks);
+		//newChar.setAvailableSkillRanks(available_skill_ranks);
 		newChar.setAvailableFeats(available_feats);
 		newChar.setMoney(money);
 		
