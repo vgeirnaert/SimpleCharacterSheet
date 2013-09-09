@@ -520,4 +520,6 @@
     <string name="hint_item_weight">Weight</string>
     <string name="hint_item_value">Value</string>
     <string name="hint_item_amount">Amount</string>
+    <string name="equip_item">Equip</string>
+    <string name="delete_item">Discard</string>
 </resources>

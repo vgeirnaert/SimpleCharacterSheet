@@ -27,6 +27,39 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         android:orientation="vertical" >
+        
+	    <LinearLayout
+	        android:id="@+id/item_stats_group"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:weightSum="1.0" >
+	        
+	        <TextView
+		        android:id="@+id/item_weight"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="@dimen/activity_horizontal_margin"
+		    	android:paddingRight="@dimen/activity_horizontal_margin"
+		    	android:textSize="14sp"
+		    	android:textColor="#ccc"
+		    	android:layout_weight=".5" />
+	        
+	        <TextView
+		        android:id="@+id/item_value"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="@dimen/activity_horizontal_margin"
+		    	android:paddingRight="@dimen/activity_horizontal_margin"
+		    	android:textSize="14sp"
+		    	android:textColor="#ccc"
+		    	android:layout_weight=".5" />
+		</LinearLayout>
+		
+	    <View
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="#666" />
       	
 	    <TextView
 	        android:id="@+id/item_description"
@@ -38,40 +71,44 @@
 	    	android:textSize="18sp"
 	    	android:textColor="#ccc" />
 	    
-	     <View
+	    <View
 		    android:layout_width="fill_parent"
 		    android:layout_height="1dp"
 		    android:background="#666" />
-	     
-    </LinearLayout>
-    
-    
-    <LinearLayout
-        android:id="@+id/item_stats_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="1.0" >
-        
-        <TextView
-	        android:id="@+id/item_weight"
+	    
+	    <LinearLayout
+	        android:id="@+id/item_actions_group"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
-	        android:paddingLeft="@dimen/activity_horizontal_margin"
-	    	android:paddingRight="@dimen/activity_horizontal_margin"
-	    	android:textSize="14sp"
-	    	android:textColor="#ccc"
-	    	android:layout_weight=".5" />
-        
-        <TextView
-	        android:id="@+id/item_value"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:paddingLeft="@dimen/activity_horizontal_margin"
-	    	android:paddingRight="@dimen/activity_horizontal_margin"
-	    	android:textSize="14sp"
-	    	android:textColor="#ccc"
-	    	android:layout_weight=".5" />
-    </LinearLayout>
+	        android:orientation="horizontal"
+	        android:weightSum="1.0" >
 
+	    	<TextView
+		        android:id="@+id/item_equip"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="@dimen/activity_horizontal_margin"
+		    	android:paddingRight="@dimen/activity_horizontal_margin"
+		    	android:textSize="16sp"
+		    	android:textColor="#eee"
+		    	android:layout_weight=".5"
+		    	android:text="@string/equip_item" />
+	    	
+	    	<View
+			    android:layout_width="1dp"
+			    android:layout_height="fill_parent"
+			    android:background="#666" />
+	        
+	        <TextView
+		        android:id="@+id/item_delete"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="@dimen/activity_horizontal_margin"
+		    	android:paddingRight="@dimen/activity_horizontal_margin"
+		    	android:textSize="16sp"
+		    	android:textColor="#eee"
+		    	android:layout_weight=".5"
+		    	android:text="@string/delete_item" />
+		</LinearLayout>
+    </LinearLayout>
 </LinearLayout>
