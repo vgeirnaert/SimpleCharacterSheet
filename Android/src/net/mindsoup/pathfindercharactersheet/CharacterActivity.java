@@ -62,7 +62,6 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		
 		setContentView(R.layout.activity_character);
 		
-		
 		// create navigation drawer
 		initialiseNavDrawer();
 			
@@ -72,7 +71,18 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		// set up action bar
 		initialiseActionBar();
 		
-				
+		if(savedInstanceState != null) {
+			pager.setCurrentItem(savedInstanceState.getInt("currentItem"));
+		}
+		
+		/*System.out.println("++++++++++++++++++++++++++++++");
+		System.out.println("MADE ALL FRAGMENTS IN " + this.toString());
+		System.out.println("pagerAdapter " + pagerAdapter.toString());
+		System.out.println("viewPager " + pager.toString() + " childcount " + pager.getChildCount());
+		System.out.println("items in fragments " + fragments.toString());
+		System.out.println("pagerAdapter items " + pagerAdapter.getItems().toString());
+		System.out.println("++++++++++++++++++++++++++++++");
+		*/
 	}
 	
 	private void initialisePaging() {
@@ -244,13 +254,19 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	}
 	
 	public void updateCharacter(boolean triggerDbUpdate) {
-		// TODO: change code structure to allow for an OnChange listener on character?
 		if(triggerDbUpdate) {
 			DatabaseHelper db = new DatabaseHelper(this);
 			db.updateCharacterAttributes(character);
 		}
 		
-		for(SherlockFragment f : pagerAdapter.getItems()) {
+		/*System.out.println("******************************");
+		System.out.println("UPDATING ALL FRAGMENTS IN " + this.toString());
+		System.out.println("pagerAdapter " + pagerAdapter.toString());
+		System.out.println("viewPager " + pager.toString());
+		System.out.println("fragments " + fragments.toString());
+		System.out.println("pager items " + pagerAdapter.getItems().toString());
+		System.out.println("******************************");*/
+		for(SherlockFragment f : pagerAdapter.getItems()) {			
 			((CharacterFragment)f).refresh();
 		}
 	}
@@ -286,5 +302,10 @@ public class CharacterActivity extends SherlockFragmentActivity {
 			db.removeItem(this.character, item, oldStackSize - amount);
 			updateCharacter();
 		}
+	}
+	
+	@Override
+	protected void onSaveInstanceState(final Bundle outState) {
+		outState.putInt("currentItem", pager.getCurrentItem());
 	}
 }
