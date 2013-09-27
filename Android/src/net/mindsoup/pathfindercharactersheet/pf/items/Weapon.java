@@ -100,7 +100,7 @@ public class Weapon extends Item {
 		dest.writeInt(this.getCriticalMultiplier());
 		dest.writeInt(this.criticalRange);
 		dest.writeString(this.getDamage().toString());
-		dest.writeSerializable(this.getDamageType());
+		dest.writeString(this.getDamageType());
 		dest.writeInt(this.getHandedness().ordinal());
 		dest.writeInt(this.getRange());
 	}

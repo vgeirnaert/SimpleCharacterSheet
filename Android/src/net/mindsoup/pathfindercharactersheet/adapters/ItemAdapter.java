@@ -7,7 +7,11 @@ import java.util.List;
 
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.items.Item;
+import net.mindsoup.pathfindercharactersheet.pf.items.ItemEffects;
+import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
+import net.mindsoup.pathfindercharactersheet.pf.items.Wearable;
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -58,8 +62,31 @@ public class ItemAdapter extends ArrayAdapter<Item> {
 			}
 		});
         
+        String description = "";
+        
+        switch(item.getType()) {
+	        case WEAPON:
+	        	description += "Damage: <b>" + ((Weapon)item).getDamage().toString() + "</b><br>";
+	        	description += "Damage type: <b>" + ((Weapon)item).getDamageType() + "</b><br>";
+	        	description += "Crit range: <b>" + ((Weapon)item).getCriticalRange() + " x" + ((Weapon)item).getCriticalMultiplier() + "</b><br>";
+	        	description += ((Weapon)item).getHandedness().toString() + "<br>";
+	        	break;
+	        case ARMOR:
+	        	description += "AC bonus: <b>" + ((Wearable)item).getArmorClass() + "</b><br>";
+	        	description += "Max dex bonus: <b>" + ((Wearable)item).getMaxDexBonus() + "</b><br>";
+	        	description += "AC penalty: <b>" + ((Wearable)item).getArmorPenalty() + "</b><br>";
+	        	break;
+        	default:
+        		break;
+        }
+        
+        for(ItemEffects e : item.getEffects().keySet()) {
+        	description += e.toString() + " +" +  item.getEffects().get(e) + "<br>";
+        }
+        
+        description += "<br><b>" + item.getName() + "</b><br>"+ item.getDescription();
         tv = (TextView)view.findViewById(R.id.item_description);
-        tv.setText(item.getDescription());
+        tv.setText(Html.fromHtml(description));
                 
         tv = (TextView)view.findViewById(R.id.item_value);
         tv.setText(Float.toString((float)item.getStackValue() / 100.0f) + " Gold");

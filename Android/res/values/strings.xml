@@ -522,4 +522,19 @@
     <string name="hint_item_amount">Amount</string>
     <string name="equip_item">Equip</string>
     <string name="delete_item">Discard</string>
+    <string name="damage">Damage</string>
+    <string name="criticalrange">Crit range</string>
+    <string name="criticalmulti">Multi</string>
+    <string name="handedness">Handedness</string>
+    <string name="damagetype">Damage type</string>
+    <string-array name="ar_critrange">
+        <item>20</item>
+        <item>19&#8211;20</item>
+        <item>18&#8211;20</item>
+        <item>17&#8211;20</item>
+    </string-array>
+    <string name="armorclass">AC</string>
+    <string name="maxdex">MaxDex</string>
+    <string name="acpenalty">penalty</string>
+
 </resources>

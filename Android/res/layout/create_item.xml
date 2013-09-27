@@ -67,6 +67,122 @@
 		        android:hint="@string/hint_item_amount"  />
 	        
 	    </LinearLayout>
+	    
+	    <Spinner
+	        android:id="@+id/create_item_slot"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" />
+	    
+	    <LinearLayout
+	        android:id="@+id/create_item_weapon"
+	        android:orientation="vertical" 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:visibility="gone" >
+	       	
+			<LinearLayout
+		        android:orientation="horizontal" 
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:weightSum="0.9" >
+	        
+				<EditText
+					android:id="@+id/create_weapon_damage"
+					android:layout_width="0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="0.3"
+					android:ems="10"
+					android:hint="@string/damage" />
+				
+				<Spinner
+					android:id="@+id/create_weapon_critrange"
+					android:layout_width="0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="0.3"
+					android:entries="@array/ar_critrange" />
+					
+				<EditText
+					android:id="@+id/create_weapon_critmulti"
+					android:layout_width="0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="0.3"
+					android:ems="10"
+					android:inputType="number"
+					android:hint="@string/criticalmulti" />
+	        </LinearLayout>
+	        
+			<Spinner
+		        android:id="@+id/create_weapon_handedness"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" />
+			
+			<EditText
+				android:id="@+id/create_weapon_damagetype"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:ems="10"
+				android:hint="@string/damagetype" />
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:id="@+id/create_item_armor"
+	        android:orientation="horizontal" 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:visibility="gone"
+	        android:weightSum="0.9" >
+	       	
+			<EditText
+				android:id="@+id/create_armor_ac"
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.3"
+				android:ems="10"
+				android:inputType="number"
+				android:hint="@string/armorclass" />
+			
+			<EditText
+				android:id="@+id/create_armor_maxdex"
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.3"
+				android:ems="10"
+				android:inputType="number"
+				android:hint="@string/maxdex" />
+				
+			<EditText
+				android:id="@+id/create_armor_penalty"
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.3"
+				android:ems="10"
+				android:inputType="numberSigned"
+				android:hint="@string/acpenalty" />
+
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:orientation="horizontal" 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:weightSum="1.0" >
+	       	
+	        <Spinner
+		        android:id="@+id/create_item_effecttype"
+		        android:layout_width="0dip"
+	        	android:layout_weight="0.7"
+		        android:layout_height="wrap_content" />
+	        
+	        <EditText
+		        android:id="@+id/create_item_effectvalue"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="0.3"
+		        android:ems="10"
+		        android:inputType="number" />
+	       	
+	    </LinearLayout>
 	
 	    <LinearLayout
 	        android:orientation="horizontal" 

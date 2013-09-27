@@ -35,20 +35,12 @@ public class Item implements Comparable<Item>, Parcelable {
 	}
 	
 	public void addEffect(ItemEffects effect, int value) {
-		effects.put(effect, value);
+		if(effect != ItemEffects.NONE)
+			effects.put(effect, value);
 	}
 	
-	public boolean hasEffect(ItemEffects effect) {
-		return effects.containsKey(effect);
-	}
-	
-	public int getBonusForEffect(ItemEffects effect) {
-		Integer result = effects.get(effect);
-		
-		if(result == null)
-			result = 0;
-		
-		return result;
+	public Map<ItemEffects, Integer> getEffects() {
+		return effects;
 	}
 	
 	public ItemSlots getSlot() {

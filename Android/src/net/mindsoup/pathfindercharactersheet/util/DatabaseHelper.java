@@ -37,7 +37,7 @@ import android.provider.BaseColumns;
 public class DatabaseHelper extends SQLiteOpenHelper {
 	// db
 	private static final String DATABASE = "SimplePathfinderCharacterSheet.db";
-	private static final int DATABASE_VERSION = 18;
+	private static final int DATABASE_VERSION = 19;
 	
 	public static abstract class Db implements BaseColumns {
 
@@ -118,7 +118,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		private static final String ITEM_DESCRIPTION = "description";
 		private static final String ITEM_WEIGHT = "weight";
 		private static final String ITEM_AMOUNT = "amount";
-		private static final String ITEM_VALUE = "value";
+		private static final String ITEM_VALUE = "itemvalue";
 		private static final String ITEM_CHAR_ID = "character_id";
 		private static final String ITEM_SLOT = "slot";
 		
@@ -141,7 +141,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		// table effects
 		private static final String ITEMEFFECT_TABLE = "item_effects";
 		private static final String ITEMEFFECT_TYPE = "type";
-		private static final String ITEMEFFECT_VALUE = "value";
+		private static final String ITEMEFFECT_VALUE = "effectvalue";
 		private static final String ITEMEFFECT_ITEM_ID = "item_id";
 		
 		public static final String CREATE_ITEMEFFECTS_TABLE = "CREATE TABLE IF NOT EXISTS " + Db.ITEMEFFECT_TABLE + " (" +
@@ -335,7 +335,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 		String queryString = "SELECT i." + Db._ID + " AS " + ITEMID + ", * FROM " + Db.ITEM_TABLE + " AS i" +
 				" LEFT JOIN " + Db.WEAPONS_TABLE + " AS w ON i." + Db._ID + " = w." + Db.WEAPON_ITEM_ID + 
-				" LEFT JOIN " + Db.ARMOR_TABLE + " AS a ON i." + Db._ID + " = w." + Db.ARMOR_ITEM_ID +
+				" LEFT JOIN " + Db.ARMOR_TABLE + " AS a ON i." + Db._ID + " = a." + Db.ARMOR_ITEM_ID +
 				" LEFT JOIN " + Db.ITEMEFFECT_TABLE + " AS e ON i." + Db._ID + " = e." + Db.ITEMEFFECT_ITEM_ID +
 				" WHERE i." + Db.ITEM_CHAR_ID + " = ? ORDER BY " + Db.ITEM_NAME + " ASC";
 		
@@ -363,7 +363,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					
 					// determine the name of this item
 					String itemName = items_cursor.getString(items_cursor.getColumnIndex(Db.ITEM_NAME));
-					
 					// make a new item and set its properties, depending on its type
 					switch(slot) {
 						case NOT_EQUIPABLE:
@@ -379,9 +378,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 							((Weapon)item).setRange(items_cursor.getInt(items_cursor.getColumnIndex(Db.WEAPON_RANGE)));
 							break;
 						default: // equipable items like armor, rings, etc
+							
 							int ac = items_cursor.getInt(items_cursor.getColumnIndex(Db.ARMOR_AC_BONUS));
 							int maxDex = items_cursor.getInt(items_cursor.getColumnIndex(Db.ARMOR_MAX_DEX));
 							int armorPenalty = items_cursor.getInt(items_cursor.getColumnIndex(Db.ARMOR_CHECK));
+							System.out.println("ACK " + ac);
 							item = new Wearable(itemName, ac, maxDex, armorPenalty);
 							// TODO: add spellcheck/speed penalties
 							break;
@@ -393,17 +394,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					item.setValue(items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEM_VALUE)));
 					item.setWeight(items_cursor.getFloat(items_cursor.getColumnIndex(Db.ITEM_WEIGHT)));
 					item.setSlot(slot);
-				} else {
-					// we only get here when we are processing multiple item effects for an item
-					
-					// add magic effects to item
-					ItemEffects e = ItemEffects.getEffect(items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEMEFFECT_TYPE)));
-					int effectValue = items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEMEFFECT_VALUE));
-					
-					if(item != null) {
-						item.addEffect(e, effectValue);
-					}
+				} 
+				// we only get here when we are processing multiple item effects for an item
+				// add magic effects to item
+				ItemEffects e = ItemEffects.getEffect(items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEMEFFECT_TYPE)));
+				int effectValue = items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEMEFFECT_VALUE));
+				
+				if(item != null) {
+					item.addEffect(e, effectValue);
 				}
+				
 				
 				
 			} while(items_cursor.moveToNext());
@@ -527,6 +527,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					values.put(Db.WEAPON_RANGE, w.getRange());
 					
 					db.replace(Db.WEAPONS_TABLE, null, values);
+					
 					break;
 				case ARMOR:
 					Wearable a = (Wearable)item;
@@ -541,6 +542,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					break;
 				default:
 					break;
+			}
+			Map<ItemEffects, Integer> effects = item.getEffects();
+			
+			if(effects.size() > 0) {
+				values = new ContentValues();
+				for(ItemEffects e : effects.keySet()) {
+					values.put(Db.ITEMEFFECT_TYPE, e.ordinal());
+					values.put(Db.ITEMEFFECT_VALUE, effects.get(e));
+					values.put(Db.ITEMEFFECT_ITEM_ID, row);
+					db.replace(Db.ITEMEFFECT_TABLE, null, values);
+				}
 			}
 		}
 		db.close();

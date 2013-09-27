@@ -12,7 +12,7 @@ public class Dice {
 		String[] bits = dice.split("d");
 		
 		if(bits.length == 2) {
-			init(Integer.parseInt(bits[1]), Integer.parseInt(bits[0]));
+			init(Integer.parseInt(bits[1].trim()), Integer.parseInt(bits[0].trim()));
 		} else {
 			throw new RuntimeException("Invalid dice string: " + dice);
 		}
