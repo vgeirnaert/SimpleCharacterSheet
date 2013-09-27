@@ -1,5 +1,9 @@
 package net.mindsoup.pathfindercharactersheet.pf.items;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -24,6 +28,28 @@ public class Item implements Comparable<Item>, Parcelable {
 	private float weight = 1;
 	private int amount = 1;
 	private ItemSlots slot = ItemSlots.NOT_EQUIPABLE;
+	private Map<ItemEffects, Integer> effects = new HashMap<ItemEffects, Integer>();
+	
+	public Item(String name) {
+		this.name = name;
+	}
+	
+	public void addEffect(ItemEffects effect, int value) {
+		effects.put(effect, value);
+	}
+	
+	public boolean hasEffect(ItemEffects effect) {
+		return effects.containsKey(effect);
+	}
+	
+	public int getBonusForEffect(ItemEffects effect) {
+		Integer result = effects.get(effect);
+		
+		if(result == null)
+			result = 0;
+		
+		return result;
+	}
 	
 	public ItemSlots getSlot() {
 		return slot;
@@ -31,19 +57,6 @@ public class Item implements Comparable<Item>, Parcelable {
 
 	public void setSlot(ItemSlots slot) {
 		this.slot = slot;
-	}
-
-	public Item(String name) {
-		this.name = name;
-	}
-	
-	public Item(Parcel in) {
-		this.name = in.readString();
-		this.description = in.readString();
-		this.value = in.readInt();
-		this.amount = in.readInt();
-		this.weight = in.readFloat();
-		this.slot = ItemSlots.getItemSlot(in.readInt());
 	}
 	
 	public String getName() {
@@ -98,6 +111,21 @@ public class Item implements Comparable<Item>, Parcelable {
 		this.value = value;
 	}
 	
+	public Item(Parcel in) {
+		this.name = in.readString();
+		this.description = in.readString();
+		this.value = in.readInt();
+		this.amount = in.readInt();
+		this.weight = in.readFloat();
+		this.slot = ItemSlots.getItemSlot(in.readInt());
+		
+		Bundle bun = in.readBundle();
+		
+		for(String s : bun.keySet()) {
+			this.addEffect(ItemEffects.valueOf(s), bun.getInt(s));
+		}
+	}
+	
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeString(name);
@@ -106,6 +134,12 @@ public class Item implements Comparable<Item>, Parcelable {
 		dest.writeInt(amount);
 		dest.writeFloat(weight);
 		dest.writeInt(slot.ordinal());
+		
+		Bundle bun = new Bundle();
+		for(ItemEffects e : effects.keySet())
+			bun.putInt(e.toString(), effects.get(e));
+		
+		dest.writeBundle(bun);
 	}
 
 	@Override

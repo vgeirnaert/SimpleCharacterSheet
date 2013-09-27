@@ -13,6 +13,7 @@ public enum ItemSlots {
 	RING,	// rings (max 2)
 	SHIELD,	// shields
 	SHOULDERS,	// capes, cloaks
+	WEAPON, // weapons of all kinds
 	WRIST;	// bracers, bracelets
 	
 	public static ItemSlots getItemSlot(int i) {

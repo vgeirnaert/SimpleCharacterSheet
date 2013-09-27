@@ -61,6 +61,10 @@ public class Weapon extends Item {
 		return "20";
 	}
 	
+	public int getCriticalRangeNumeric() {
+		return this.criticalRange;
+	}
+	
 	public int getCriticalMultiplier() {
 		return criticalMultiplier;
 	}

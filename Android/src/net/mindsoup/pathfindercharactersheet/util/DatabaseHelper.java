@@ -10,15 +10,19 @@ import java.util.Map;
 import net.mindsoup.pathfindercharactersheet.pf.PfAttributes;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
+import net.mindsoup.pathfindercharactersheet.pf.PfHandedness;
 import net.mindsoup.pathfindercharactersheet.pf.PfPace;
 import net.mindsoup.pathfindercharactersheet.pf.PfRaces;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.items.Item;
+import net.mindsoup.pathfindercharactersheet.pf.items.ItemEffects;
+import net.mindsoup.pathfindercharactersheet.pf.items.ItemSlots;
 import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
 import net.mindsoup.pathfindercharactersheet.pf.items.Wearable;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfChooseBonusAttributeRace;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
+import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -33,7 +37,7 @@ import android.provider.BaseColumns;
 public class DatabaseHelper extends SQLiteOpenHelper {
 	// db
 	private static final String DATABASE = "SimplePathfinderCharacterSheet.db";
-	private static final int DATABASE_VERSION = 17;
+	private static final int DATABASE_VERSION = 18;
 	
 	public static abstract class Db implements BaseColumns {
 
@@ -143,7 +147,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		public static final String CREATE_ITEMEFFECTS_TABLE = "CREATE TABLE IF NOT EXISTS " + Db.ITEMEFFECT_TABLE + " (" +
 				Db._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
 				Db.ITEMEFFECT_TYPE + " SMALLINT NOT NULL," +
-				Db.ITEMEFFECT_VALUE + " SMALLINT NOT NULL" + 
+				Db.ITEMEFFECT_VALUE + " SMALLINT NOT NULL," + 
 				Db.ITEMEFFECT_ITEM_ID + " INT NOT NULL ON CONFLICT FAIL CONSTRAINT items_id_fk REFERENCES " + Db.ITEM_TABLE + "(" + Db._ID + ") ON DELETE CASCADE ON UPDATE CASCADE);";
 		
 		public static final String DROP_ITEMEFFECTS = "DROP TABLE IF EXISTS " + Db.ITEMEFFECT_TABLE;
@@ -161,11 +165,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		public static final String CREATE_WEAPONS_TABLE = "CREATE TABLE IF NOT EXISTS " + Db.WEAPONS_TABLE + " (" +
 				Db._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
 				Db.WEAPON_DAMAGE + " TEXT NOT NULL," +
-				Db.WEAPON_CRIT_MULTIPLIER + " SMALLINT NOT NULL DEFAULT 2" + 
-				Db.WEAPON_CRIT_RANGE + " TEXT NOT NULL DEFAULT 1" +
-				Db.WEAPON_RANGE + " SMALLINT NOT NULL DEFAULT 1" +
-				Db.WEAPON_DAMAGE_TYPE + " TEXT NOT NULL DEFAULT 'S'" +
-				Db.WEAPON_HANDEDNESS + " SMALLINT NOT NULL DEFAULT 1" +
+				Db.WEAPON_CRIT_MULTIPLIER + " SMALLINT NOT NULL DEFAULT 2," + 
+				Db.WEAPON_CRIT_RANGE + " SMALLINT NOT NULL DEFAULT 1," +
+				Db.WEAPON_RANGE + " SMALLINT NOT NULL DEFAULT 1," +
+				Db.WEAPON_DAMAGE_TYPE + " TEXT NOT NULL DEFAULT 'S'," +
+				Db.WEAPON_HANDEDNESS + " SMALLINT NOT NULL DEFAULT 1," +
 				Db.WEAPON_ITEM_ID + " INT NOT NULL ON CONFLICT FAIL CONSTRAINT items_id_fk REFERENCES " + Db.ITEM_TABLE + "(" + Db._ID + ") ON DELETE CASCADE ON UPDATE CASCADE," +
 				"CONSTRAINT item_ids UNIQUE (" + Db.WEAPON_ITEM_ID  + "));";
 
@@ -184,10 +188,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		public static final String CREATE_ARMOR_TABLE = "CREATE TABLE IF NOT EXISTS " + Db.ARMOR_TABLE + " (" +
 				Db._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
 				Db.ARMOR_AC_BONUS + " SMALLINT NOT NULL DEFAULT 1," +
-				Db.ARMOR_MAX_DEX + " SMALLINT NOT NULL DEFAULT 99" + 
-				Db.ARMOR_CHECK + " SMALLINT NOT NULL DEFAULT 0" +
-				Db.ARMOR_SPELLFAIL + " SMALLINT NOT NULL DEFAULT 5" +
-				Db.ARMOR_SPEED + " SMALLINT NOT NULL DEFAULT 0" +
+				Db.ARMOR_MAX_DEX + " SMALLINT NOT NULL DEFAULT 99," + 
+				Db.ARMOR_CHECK + " SMALLINT NOT NULL DEFAULT 0," +
+				Db.ARMOR_SPELLFAIL + " SMALLINT NOT NULL DEFAULT 5," +
+				Db.ARMOR_SPEED + " SMALLINT NOT NULL DEFAULT 0," +
 				Db.ARMOR_ITEM_ID + " INT NOT NULL ON CONFLICT FAIL CONSTRAINT items_id_fk REFERENCES " + Db.ITEM_TABLE + "(" + Db._ID + ") ON DELETE CASCADE ON UPDATE CASCADE," +
 				"CONSTRAINT item_ids UNIQUE (" + Db.ARMOR_ITEM_ID  + "));";
 		
@@ -325,22 +329,87 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		newChar.setArmor(new Wearable("Scale mail", 5, 3, -4));
 		
 		// inventory
-		String[] item_columns = {Db._ID, Db.ITEM_NAME, Db.ITEM_DESCRIPTION, Db.ITEM_AMOUNT, Db.ITEM_VALUE, Db.ITEM_WEIGHT};
-		orderBy = Db.ITEM_NAME + " ASC";
-		selection = Db.ITEM_CHAR_ID + " = ?";
 		String[] item_SelectionArgs = {Long.toString(id)};
 		// select items that this character has
-		Cursor items_cursor = db.query(Db.ITEM_TABLE, item_columns, selection, item_SelectionArgs, null, null, orderBy);
+		final String ITEMID = "theItemId";
+		
+		String queryString = "SELECT i." + Db._ID + " AS " + ITEMID + ", * FROM " + Db.ITEM_TABLE + " AS i" +
+				" LEFT JOIN " + Db.WEAPONS_TABLE + " AS w ON i." + Db._ID + " = w." + Db.WEAPON_ITEM_ID + 
+				" LEFT JOIN " + Db.ARMOR_TABLE + " AS a ON i." + Db._ID + " = w." + Db.ARMOR_ITEM_ID +
+				" LEFT JOIN " + Db.ITEMEFFECT_TABLE + " AS e ON i." + Db._ID + " = e." + Db.ITEMEFFECT_ITEM_ID +
+				" WHERE i." + Db.ITEM_CHAR_ID + " = ? ORDER BY " + Db.ITEM_NAME + " ASC";
+		
+		//System.out.println(queryString);
+		Cursor items_cursor = db.rawQuery(queryString , item_SelectionArgs);
 		
 		if(items_cursor.moveToFirst()) {
+			long itemId = -1;
+			Item item = null;
 			do {
-				Item item = new Item(items_cursor.getString(items_cursor.getColumnIndex(Db.ITEM_NAME)));
-				item.setDescription(items_cursor.getString(items_cursor.getColumnIndex(Db.ITEM_DESCRIPTION)));
-				item.setStackSize(items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEM_AMOUNT)));
-				item.setValue(items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEM_VALUE)));
-				item.setWeight(items_cursor.getFloat(items_cursor.getColumnIndex(Db.ITEM_WEIGHT)));
-				newChar.addItem(item);
+				long thisRowId = items_cursor.getLong(items_cursor.getColumnIndex(ITEMID));
+				
+				// if we encounter a new item
+				if(thisRowId != itemId) {
+					// first remember that we're now working on a new row
+					itemId = thisRowId; 
+					
+					// second, add the previous item to the character
+					// as we have finished processing rows from that one
+					if(item != null)
+						newChar.addItem(item);
+					
+					// determine the item slot of this item
+					ItemSlots slot = ItemSlots.getItemSlot(items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEM_SLOT)));
+					
+					// determine the name of this item
+					String itemName = items_cursor.getString(items_cursor.getColumnIndex(Db.ITEM_NAME));
+					
+					// make a new item and set its properties, depending on its type
+					switch(slot) {
+						case NOT_EQUIPABLE:
+							item = new Item(itemName);
+							break;
+						case WEAPON:
+							Dice damage = new Dice(items_cursor.getString(items_cursor.getColumnIndex(Db.WEAPON_DAMAGE)));
+							int multiplier = items_cursor.getInt(items_cursor.getColumnIndex(Db.WEAPON_CRIT_MULTIPLIER));
+							int critrange = items_cursor.getInt(items_cursor.getColumnIndex(Db.WEAPON_CRIT_RANGE));
+							PfHandedness handedness = PfHandedness.getHandedness(items_cursor.getInt(items_cursor.getColumnIndex(Db.WEAPON_HANDEDNESS)));
+							item = new Weapon(itemName,damage, multiplier, critrange, handedness);
+							((Weapon)item).setDamageType( items_cursor.getString(items_cursor.getColumnIndex(Db.WEAPON_DAMAGE_TYPE)));
+							((Weapon)item).setRange(items_cursor.getInt(items_cursor.getColumnIndex(Db.WEAPON_RANGE)));
+							break;
+						default: // equipable items like armor, rings, etc
+							int ac = items_cursor.getInt(items_cursor.getColumnIndex(Db.ARMOR_AC_BONUS));
+							int maxDex = items_cursor.getInt(items_cursor.getColumnIndex(Db.ARMOR_MAX_DEX));
+							int armorPenalty = items_cursor.getInt(items_cursor.getColumnIndex(Db.ARMOR_CHECK));
+							item = new Wearable(itemName, ac, maxDex, armorPenalty);
+							// TODO: add spellcheck/speed penalties
+							break;
+					}
+					
+					// set generic item properties
+					item.setDescription(items_cursor.getString(items_cursor.getColumnIndex(Db.ITEM_DESCRIPTION)));
+					item.setStackSize(items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEM_AMOUNT)));
+					item.setValue(items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEM_VALUE)));
+					item.setWeight(items_cursor.getFloat(items_cursor.getColumnIndex(Db.ITEM_WEIGHT)));
+					item.setSlot(slot);
+				} else {
+					// we only get here when we are processing multiple item effects for an item
+					
+					// add magic effects to item
+					ItemEffects e = ItemEffects.getEffect(items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEMEFFECT_TYPE)));
+					int effectValue = items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEMEFFECT_VALUE));
+					
+					if(item != null) {
+						item.addEffect(e, effectValue);
+					}
+				}
+				
+				
 			} while(items_cursor.moveToNext());
+			
+			// add the last item to the character
+			newChar.addItem(item);
 		}
 					
 		return newChar;
@@ -451,7 +520,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					Weapon w = (Weapon)item;
 					values.put(Db.WEAPON_DAMAGE, w.getDamage().toString());
 					values.put(Db.WEAPON_CRIT_MULTIPLIER, w.getCriticalMultiplier());
-					values.put(Db.WEAPON_CRIT_RANGE, w.getCriticalRange());
+					values.put(Db.WEAPON_CRIT_RANGE, w.getCriticalRangeNumeric());
 					values.put(Db.WEAPON_DAMAGE_TYPE, w.getDamageType());
 					values.put(Db.WEAPON_HANDEDNESS, w.getHandedness().ordinal());
 					values.put(Db.WEAPON_ITEM_ID, row);

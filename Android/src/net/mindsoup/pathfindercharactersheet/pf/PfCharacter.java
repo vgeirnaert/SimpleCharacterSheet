@@ -533,8 +533,7 @@ public class PfCharacter implements Parcelable {
 		
 		// bonus or penalty for tiny/large/etc characters
 		int sizeBonus = this.getSizeCMBModifier() * -1;
-		if(sizeBonus != 0) 
-			ac.add("Size", sizeBonus);
+		ac.add("Size", sizeBonus);
 		
 		if(this.armor != null) {
 			ac.add(this.armor.getName(), this.armor.getArmorClass());
