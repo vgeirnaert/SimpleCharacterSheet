@@ -14,6 +14,7 @@ import net.mindsoup.pathfindercharactersheet.pf.PfPace;
 import net.mindsoup.pathfindercharactersheet.pf.PfRaces;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.items.Item;
+import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
 import net.mindsoup.pathfindercharactersheet.pf.items.Wearable;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfChooseBonusAttributeRace;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkill;
@@ -32,7 +33,7 @@ import android.provider.BaseColumns;
 public class DatabaseHelper extends SQLiteOpenHelper {
 	// db
 	private static final String DATABASE = "SimplePathfinderCharacterSheet.db";
-	private static final int DATABASE_VERSION = 16;
+	private static final int DATABASE_VERSION = 17;
 	
 	public static abstract class Db implements BaseColumns {
 
@@ -115,6 +116,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		private static final String ITEM_AMOUNT = "amount";
 		private static final String ITEM_VALUE = "value";
 		private static final String ITEM_CHAR_ID = "character_id";
+		private static final String ITEM_SLOT = "slot";
 		
 		public static final String CREATE_ITEMS_TABLE = "CREATE TABLE IF NOT EXISTS " + Db.ITEM_TABLE + " (" + 
 				Db._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -124,12 +126,72 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				Db.ITEM_WEIGHT + " REAL NOT NULL DEFAULT 1, " +
 				Db.ITEM_AMOUNT + " SMALLINT NOT NULL DEFAULT 1, " +
 				Db.ITEM_VALUE + " INT NOT NULL DEFAULT 0, " +  // value in copperpieces
+				Db.ITEM_SLOT + " INT NOT NULL DEFAULT 0, " +
 				"CONSTRAINT item_and_char_ids UNIQUE (" + Db.ITEM_NAME + ", " + Db.ITEM_CHAR_ID + "));";		
 		
 		public static final String DROP_ITEMS = "DROP TABLE IF EXISTS " + Db.ITEM_TABLE;
 		
 		public static final String CREATE_ITEM_TRIGGER = "CREATE TRIGGER IF NOT EXISTS delete_item_when_zero UPDATE OF " + Db.ITEM_AMOUNT + " ON " + Db.ITEM_TABLE + " WHEN NEW." + Db.ITEM_AMOUNT + " < 1 " + 
 				"BEGIN DELETE FROM " + Db.ITEM_TABLE + " WHERE " + Db._ID + " = NEW." + Db._ID + "; END;";
+		
+		// table effects
+		private static final String ITEMEFFECT_TABLE = "item_effects";
+		private static final String ITEMEFFECT_TYPE = "type";
+		private static final String ITEMEFFECT_VALUE = "value";
+		private static final String ITEMEFFECT_ITEM_ID = "item_id";
+		
+		public static final String CREATE_ITEMEFFECTS_TABLE = "CREATE TABLE IF NOT EXISTS " + Db.ITEMEFFECT_TABLE + " (" +
+				Db._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+				Db.ITEMEFFECT_TYPE + " SMALLINT NOT NULL," +
+				Db.ITEMEFFECT_VALUE + " SMALLINT NOT NULL" + 
+				Db.ITEMEFFECT_ITEM_ID + " INT NOT NULL ON CONFLICT FAIL CONSTRAINT items_id_fk REFERENCES " + Db.ITEM_TABLE + "(" + Db._ID + ") ON DELETE CASCADE ON UPDATE CASCADE);";
+		
+		public static final String DROP_ITEMEFFECTS = "DROP TABLE IF EXISTS " + Db.ITEMEFFECT_TABLE;
+		
+		// table weapons
+		private static final String WEAPONS_TABLE = "weapons";
+		private static final String WEAPON_DAMAGE = "damage";
+		private static final String WEAPON_CRIT_MULTIPLIER = "multiplier";
+		private static final String WEAPON_CRIT_RANGE = "critrange";
+		private static final String WEAPON_RANGE = "range";
+		private static final String WEAPON_DAMAGE_TYPE = "damagetype";
+		private static final String WEAPON_HANDEDNESS = "handedness";
+		private static final String WEAPON_ITEM_ID = "itemid";
+		
+		public static final String CREATE_WEAPONS_TABLE = "CREATE TABLE IF NOT EXISTS " + Db.WEAPONS_TABLE + " (" +
+				Db._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+				Db.WEAPON_DAMAGE + " TEXT NOT NULL," +
+				Db.WEAPON_CRIT_MULTIPLIER + " SMALLINT NOT NULL DEFAULT 2" + 
+				Db.WEAPON_CRIT_RANGE + " TEXT NOT NULL DEFAULT 1" +
+				Db.WEAPON_RANGE + " SMALLINT NOT NULL DEFAULT 1" +
+				Db.WEAPON_DAMAGE_TYPE + " TEXT NOT NULL DEFAULT 'S'" +
+				Db.WEAPON_HANDEDNESS + " SMALLINT NOT NULL DEFAULT 1" +
+				Db.WEAPON_ITEM_ID + " INT NOT NULL ON CONFLICT FAIL CONSTRAINT items_id_fk REFERENCES " + Db.ITEM_TABLE + "(" + Db._ID + ") ON DELETE CASCADE ON UPDATE CASCADE," +
+				"CONSTRAINT item_ids UNIQUE (" + Db.WEAPON_ITEM_ID  + "));";
+
+		
+		public static final String DROP_WEAPONS = "DROP TABLE IF EXISTS " + Db.WEAPONS_TABLE;
+		
+		//table armor
+		private static final String ARMOR_TABLE = "armor";
+		private static final String ARMOR_AC_BONUS = "acbonus";
+		private static final String ARMOR_MAX_DEX = "maxdex";
+		private static final String ARMOR_CHECK = "armorcheck";
+		private static final String ARMOR_SPELLFAIL = "spellfail";
+		private static final String ARMOR_SPEED = "speedpenalty";
+		private static final String ARMOR_ITEM_ID = "itemid";
+		
+		public static final String CREATE_ARMOR_TABLE = "CREATE TABLE IF NOT EXISTS " + Db.ARMOR_TABLE + " (" +
+				Db._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+				Db.ARMOR_AC_BONUS + " SMALLINT NOT NULL DEFAULT 1," +
+				Db.ARMOR_MAX_DEX + " SMALLINT NOT NULL DEFAULT 99" + 
+				Db.ARMOR_CHECK + " SMALLINT NOT NULL DEFAULT 0" +
+				Db.ARMOR_SPELLFAIL + " SMALLINT NOT NULL DEFAULT 5" +
+				Db.ARMOR_SPEED + " SMALLINT NOT NULL DEFAULT 0" +
+				Db.ARMOR_ITEM_ID + " INT NOT NULL ON CONFLICT FAIL CONSTRAINT items_id_fk REFERENCES " + Db.ITEM_TABLE + "(" + Db._ID + ") ON DELETE CASCADE ON UPDATE CASCADE," +
+				"CONSTRAINT item_ids UNIQUE (" + Db.ARMOR_ITEM_ID  + "));";
+		
+		public static final String DROP_ARMOR = "DROP TABLE IF EXISTS " + Db.ARMOR_TABLE;
 	}	
 
 	public DatabaseHelper(Context context) {
@@ -147,6 +209,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		db.execSQL(Db.CREATE_FEATS_TABLE);
 		db.execSQL(Db.CREATE_ITEMS_TABLE);
 		db.execSQL(Db.CREATE_ITEM_TRIGGER);
+		db.execSQL(Db.CREATE_ITEMEFFECTS_TABLE);
+		db.execSQL(Db.CREATE_WEAPONS_TABLE);
+		db.execSQL(Db.CREATE_ARMOR_TABLE);
 	}
 
 	/* (non-Javadoc)
@@ -154,19 +219,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	 */
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		if(oldVersion != 12 && oldVersion < 16) {
-			// if we're not version 12, remove all tables
-			db.execSQL(Db.DROP_ITEMS);
-			db.execSQL(Db.DROP_CHARACTERS);
-			db.execSQL(Db.DROP_SKILLS);
-			db.execSQL(Db.DROP_FEATS);
-		}
-		
-		if(oldVersion < 15) {
-			// update all characters to be fast paced
-			db.execSQL("UPDATE " + Db.CHARACTER_TABLE + " SET " + Db.CHAR_PACE + "=" + PfPace.FAST.ordinal() + ", " + Db.CHAR_ASRANKS + "=0;");
-		}
-		
+		db.execSQL(Db.DROP_ITEMS);
+		db.execSQL(Db.DROP_CHARACTERS);
+		db.execSQL(Db.DROP_SKILLS);
+		db.execSQL(Db.DROP_FEATS);
+		db.execSQL(Db.DROP_ITEMEFFECTS);
+		db.execSQL(Db.DROP_WEAPONS);
+		db.execSQL(Db.DROP_ARMOR);
+
 		onCreate(db);
 
 	}
@@ -380,8 +440,40 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		values.put(Db.ITEM_VALUE, item.getValue());
 		values.put(Db.ITEM_WEIGHT, item.getWeight());
 		values.put(Db.ITEM_CHAR_ID, character.getId());
+		values.put(Db.ITEM_SLOT, item.getSlot().ordinal());
 		
-		db.replace(Db.ITEM_TABLE, null, values);
+		long row = db.replace(Db.ITEM_TABLE, null, values);
+		
+		if(row > -1) { // if a new row was added
+			values = new ContentValues();
+			switch(item.getType()) {
+				case WEAPON:
+					Weapon w = (Weapon)item;
+					values.put(Db.WEAPON_DAMAGE, w.getDamage().toString());
+					values.put(Db.WEAPON_CRIT_MULTIPLIER, w.getCriticalMultiplier());
+					values.put(Db.WEAPON_CRIT_RANGE, w.getCriticalRange());
+					values.put(Db.WEAPON_DAMAGE_TYPE, w.getDamageType());
+					values.put(Db.WEAPON_HANDEDNESS, w.getHandedness().ordinal());
+					values.put(Db.WEAPON_ITEM_ID, row);
+					values.put(Db.WEAPON_RANGE, w.getRange());
+					
+					db.replace(Db.WEAPONS_TABLE, null, values);
+					break;
+				case ARMOR:
+					Wearable a = (Wearable)item;
+					values.put(Db.ARMOR_AC_BONUS, a.getArmorClass());
+					values.put(Db.ARMOR_CHECK, a.getArmorPenalty());
+					values.put(Db.ARMOR_ITEM_ID, row);
+					values.put(Db.ARMOR_MAX_DEX, a.getMaxDexBonus());
+					values.put(Db.ARMOR_SPEED, a.getSpeedPenalty()); 
+					values.put(Db.ARMOR_SPELLFAIL, a.getSpellFailureChance()); 
+					
+					db.replace(Db.ARMOR_TABLE, null, values);
+					break;
+				default:
+					break;
+			}
+		}
 		db.close();
 	}
 

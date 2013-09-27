@@ -27,6 +27,7 @@ public class Wearable extends Item implements Parcelable {
 		this.armorBonus = armorBonus;
 		this.maxDexBonus = maxDexBonus;
 		this.armorPenalty = armorPenalty;
+		
 	}
 
 	public Wearable(Parcel in) {
@@ -66,6 +67,14 @@ public class Wearable extends Item implements Parcelable {
 		dest.writeInt(getArmorClass());
 		dest.writeInt(getMaxDexBonus());
 		dest.writeInt(getArmorPenalty());
+	}
+
+	public int getSpeedPenalty() {
+		return 0;// TODO: this should actually be -10 or -5 for medium/heavy armor
+	}
+
+	public int getSpellFailureChance() {
+		return 0;// TODO: this should be the spell failure chance
 	}
 	
 

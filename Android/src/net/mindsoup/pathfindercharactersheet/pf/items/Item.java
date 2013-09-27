@@ -23,7 +23,16 @@ public class Item implements Comparable<Item>, Parcelable {
 	private int value = 0;
 	private float weight = 1;
 	private int amount = 1;
+	private ItemSlots slot = ItemSlots.NOT_EQUIPABLE;
 	
+	public ItemSlots getSlot() {
+		return slot;
+	}
+
+	public void setSlot(ItemSlots slot) {
+		this.slot = slot;
+	}
+
 	public Item(String name) {
 		this.name = name;
 	}
@@ -34,7 +43,7 @@ public class Item implements Comparable<Item>, Parcelable {
 		this.value = in.readInt();
 		this.amount = in.readInt();
 		this.weight = in.readFloat();
-		
+		this.slot = ItemSlots.getItemSlot(in.readInt());
 	}
 	
 	public String getName() {
@@ -96,6 +105,7 @@ public class Item implements Comparable<Item>, Parcelable {
 		dest.writeInt(value);
 		dest.writeInt(amount);
 		dest.writeFloat(weight);
+		dest.writeInt(slot.ordinal());
 	}
 
 	@Override
