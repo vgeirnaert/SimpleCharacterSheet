@@ -7,7 +7,12 @@ public class Calculation {
 	private Map<String, Integer> values = new HashMap<String, Integer>();
 	
 	public void add(String name, int value) {
-		values.put(name, value);
+		add(name, value, false);
+	}
+	
+	public void add(String name, int value, boolean addZeroToo) {
+		if(value != 0 || addZeroToo)
+			values.put(name, value);
 	}
 	
 	public int sum() {
