@@ -29,6 +29,7 @@ public class Item implements Comparable<Item>, Parcelable {
 	private int amount = 1;
 	private ItemSlots slot = ItemSlots.NOT_EQUIPABLE;
 	private Map<ItemEffects, Integer> effects = new HashMap<ItemEffects, Integer>();
+	private boolean isEquiped = false;
 	
 	public Item(String name) {
 		this.name = name;
@@ -103,6 +104,19 @@ public class Item implements Comparable<Item>, Parcelable {
 		this.value = value;
 	}
 	
+	public void equip() {
+		if(this.getSlot() != ItemSlots.NOT_EQUIPABLE)
+			isEquiped = true;
+	}
+	
+	public void unequip() {
+		isEquiped = false;
+	}
+	
+	public boolean isEquiped() {
+		return isEquiped;
+	}
+	
 	public Item(Parcel in) {
 		this.name = in.readString();
 		this.description = in.readString();
@@ -116,6 +130,8 @@ public class Item implements Comparable<Item>, Parcelable {
 		for(String s : bun.keySet()) {
 			this.addEffect(ItemEffects.valueOf(s), bun.getInt(s));
 		}
+		
+		this.isEquiped = (in.readByte() == 1);
 	}
 	
 	@Override
@@ -132,6 +148,7 @@ public class Item implements Comparable<Item>, Parcelable {
 			bun.putInt(e.toString(), effects.get(e));
 		
 		dest.writeBundle(bun);
+		dest.writeByte((byte)(isEquiped ? 1 : 0));
 	}
 
 	@Override

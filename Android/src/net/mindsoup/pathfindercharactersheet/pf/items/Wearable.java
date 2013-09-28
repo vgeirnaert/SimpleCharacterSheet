@@ -21,6 +21,7 @@ public class Wearable extends Item implements Parcelable {
 	private final int maxDexBonus;
 	private final int armorPenalty;
 	
+	
 	public Wearable(String name, int armorBonus, int maxDexBonus, int armorPenalty) {
 		super(name);
 		
@@ -36,6 +37,7 @@ public class Wearable extends Item implements Parcelable {
 		this.armorBonus = in.readInt();
 		this.maxDexBonus = in.readInt();
 		this.armorPenalty = in.readInt();
+		
 	}
 
 	@Override
@@ -59,6 +61,8 @@ public class Wearable extends Item implements Parcelable {
 	public int describeContents() {
 		return 0;
 	}
+	
+	
 
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
@@ -67,6 +71,7 @@ public class Wearable extends Item implements Parcelable {
 		dest.writeInt(getArmorClass());
 		dest.writeInt(getMaxDexBonus());
 		dest.writeInt(getArmorPenalty());
+		
 	}
 
 	public int getSpeedPenalty() {

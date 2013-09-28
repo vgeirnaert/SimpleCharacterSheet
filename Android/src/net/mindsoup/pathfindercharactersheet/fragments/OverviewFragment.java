@@ -4,10 +4,8 @@ import net.mindsoup.pathfindercharactersheet.CalculationView;
 import net.mindsoup.pathfindercharactersheet.CharacterActivity;
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
-import net.mindsoup.pathfindercharactersheet.pf.PfHandedness;
-import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
+import net.mindsoup.pathfindercharactersheet.pf.items.Item;
 import net.mindsoup.pathfindercharactersheet.pf.util.Calculation;
-import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -93,8 +91,13 @@ public class OverviewFragment extends CharacterFragment {
 			calcView.setText("");
 			
 			editText = (TextView)getActivity().findViewById(R.id.overview_text);
-			String stats = "";
-			
+			String stats = "<b>Equiped items</b><br>";
+			for(Item i : character.getInventoryItems()) {
+				if(i.isEquiped()) {
+					stats += i.getName() + "<br>";
+				}
+			}
+			/*
 			// hack - everyone gets a greataxe!
 			character.setMainhandWeapon(new Weapon("Greataxe", new Dice(12, 1), 3, 1, PfHandedness.TWOHAND));
 			stats += "<br><u>Greataxe</u><br>";
@@ -119,7 +122,7 @@ public class OverviewFragment extends CharacterFragment {
 			stats += "Damage type: Bludgeoning<br>";
 			stats += "Critical range: <b>" + character.getMainhandWeapon().getCriticalRange() + " (x" + character.getMainhandWeapon().getCriticalMultiplier() + ")</b><br>";
 			stats += "Damage: <b>" + character.getMainhandWeapon().getDamage() + " + " + character.getDamageModifier() + "</b><br>";		
-			
+			*/
 			editText.setText(Html.fromHtml(stats));
 		}
 	}

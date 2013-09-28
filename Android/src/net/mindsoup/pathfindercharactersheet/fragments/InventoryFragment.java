@@ -35,7 +35,7 @@ public class InventoryFragment extends CharacterFragment {
 			ca = (CharacterActivity)this.getActivity();			
 			
 			ListView list = (ListView)this.getActivity().findViewById(R.id.inventory_list);
-			adapter = new ItemAdapter(this.getActivity(), R.layout.items_list_item, ca.getCharacter().getInventoryItems());
+			adapter = new ItemAdapter(this.getActivity(), R.layout.items_list_item, ca.getCharacter().getInventoryItems(), this.getSherlockActivity());
 			list.setAdapter(adapter);
 			
 			list.setOnItemLongClickListener(new OnItemLongClickListener() {

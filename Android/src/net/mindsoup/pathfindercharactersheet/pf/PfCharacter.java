@@ -14,6 +14,9 @@ import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
 import net.mindsoup.pathfindercharactersheet.pf.feats.FeatFactory;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.items.Item;
+import net.mindsoup.pathfindercharactersheet.pf.items.ItemEffects;
+import net.mindsoup.pathfindercharactersheet.pf.items.ItemSlots;
+import net.mindsoup.pathfindercharactersheet.pf.items.ItemType;
 import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
 import net.mindsoup.pathfindercharactersheet.pf.items.Wearable;
 import net.mindsoup.pathfindercharactersheet.pf.races.PfChooseBonusAttributeRace;
@@ -534,15 +537,33 @@ public class PfCharacter implements Parcelable {
 		// bonus or penalty for tiny/large/etc characters
 		int sizeBonus = this.getSizeCMBModifier() * -1;
 		ac.add("Size", sizeBonus);
+		ac.add("Dexterity bonus", Math.min(this.getAttributeBonus(this.getDexterity()), getMaxDexBonus()) );
 		
-		if(this.armor != null) {
-			ac.add(this.armor.getName(), this.armor.getArmorClass());
-			ac.add("Dexterity bonus", Math.min(this.getAttributeBonus(this.getDexterity()), this.armor.getMaxDexBonus()) );
-		} else {
-			ac.add("Dexterity bonus", this.getAttributeBonus(this.getDexterity()));
+		for(Item i : inventory) {
+			int acbonus = 0;
+			if(i.isEquiped()) {
+				if(i.getEffects().get(ItemEffects.AC_BONUS) != null)
+					acbonus += i.getEffects().get(ItemEffects.AC_BONUS);
+				if(i.getType() == ItemType.ARMOR)
+					acbonus += ((Wearable)i).getArmorClass();
+				
+				ac.add(i.getName(), acbonus);
+			}
 		}
 		
+		
 		return ac;
+	}
+	
+	public int getMaxDexBonus() {
+		int result = 99;
+	
+		for(Item i : inventory) {
+			if(i.getType() == ItemType.ARMOR)
+				result = Math.min(result, ((Wearable)i).getMaxDexBonus());
+		}
+		
+		return result;
 	}
 	
 	public Calculation getAttackBonus(int attack) {
@@ -552,8 +573,14 @@ public class PfCharacter implements Parcelable {
 		ab.add("Strength modifier", this.getAttributeBonus(this.getStrength()));
 		ab.add("Size modifier", this.getSizeAttackBonusModifier());
 		
-		if(this.armor != null) {
-			// TODO: add code to deal with non-proficient armor
+		
+		// TODO: add code to deal with non-proficient armor
+		for(Item i : inventory) {
+			if(i.getEffects().size() > 0 && i.isEquiped()) {
+				if(i.getEffects().get(ItemEffects.ATTACK_BONUS) != null)
+					ab.add(i.getName(), i.getEffects().get(ItemEffects.ATTACK_BONUS));
+			}
+				
 		}
 		
 		return ab; 
@@ -1037,5 +1064,22 @@ public class PfCharacter implements Parcelable {
 			Item newItem = (Item)p;
 			this.addItem(newItem);
 		}
-	}	
+	}
+
+	public void equipItem(Item item) {
+		unequipItem(item.getSlot());
+		
+		if(item.isEquiped())
+			item.unequip();
+		else
+			item.equip();
+		
+	}
+	
+	public void unequipItem(ItemSlots slot) {
+		for(Item i : inventory) {
+			if(i.isEquiped() && i.getSlot() == slot)
+				i.unequip();
+		}
+	}
 }

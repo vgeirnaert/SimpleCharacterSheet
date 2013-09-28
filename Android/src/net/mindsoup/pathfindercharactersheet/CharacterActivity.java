@@ -308,4 +308,11 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	protected void onSaveInstanceState(final Bundle outState) {
 		outState.putInt("currentItem", pager.getCurrentItem());
 	}
+
+	public void equipItem(Item item) {
+		character.equipItem(item);
+		
+		this.updateCharacter(false);
+		
+	}
 }

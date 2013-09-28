@@ -148,9 +148,13 @@ public class CreateItemFragment extends SherlockDialogFragment {
 			i = new Item(name);
 			break;
 		default:
-			int ac = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_ac)).getText().toString() );
-			int maxdex = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_maxdex)).getText().toString() );
-			int penalty = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_penalty)).getText().toString() );
+			int ac = 0, maxdex = 99, penalty = 0;
+			try {
+				ac = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_ac)).getText().toString() );
+				maxdex = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_maxdex)).getText().toString() );
+				penalty = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_penalty)).getText().toString() );
+			} catch (NumberFormatException e) {}
+			
 			i = new Wearable(name, ac, maxdex, penalty);
 			break;
 		}

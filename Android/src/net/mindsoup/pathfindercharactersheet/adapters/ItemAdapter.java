@@ -5,6 +5,9 @@ package net.mindsoup.pathfindercharactersheet.adapters;
 
 import java.util.List;
 
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+
+import net.mindsoup.pathfindercharactersheet.CharacterActivity;
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.items.Item;
 import net.mindsoup.pathfindercharactersheet.pf.items.ItemEffects;
@@ -27,12 +30,14 @@ public class ItemAdapter extends ArrayAdapter<Item> {
 	
 	private List<Item> items;
 	private int textView;
+	private CharacterActivity activity;
 	
-	public ItemAdapter(Context context, int textViewResourceId, List<Item> objects) {
+	public ItemAdapter(Context context, int textViewResourceId, List<Item> objects, SherlockFragmentActivity activity) {
 		super(context, textViewResourceId, objects);
 		
 		this.items = objects;
 		this.textView = textViewResourceId;
+		this.activity = (CharacterActivity)activity;
 	}
 	
 	@Override
@@ -40,7 +45,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
 		LayoutInflater inflater = (LayoutInflater)this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final View view = inflater.inflate(textView, null);
         
-        Item item = items.get(position);
+        final Item item = items.get(position);
         
         TextView tv = (TextView)view.findViewById(R.id.item_name);
         String name = item.getName();
@@ -48,6 +53,10 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         	name += " (" + Integer.toString(item.getStackSize()) + ")";
         
         tv.setText(name);
+        
+        if(item.isEquiped()) {
+        	tv.setTextColor(0xff00cc99);
+        }
         
         tv.setOnClickListener(new OnClickListener() {
 			
@@ -93,6 +102,15 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         
         tv = (TextView)view.findViewById(R.id.item_weight);
         tv.setText(Float.toString(item.getStackWeight()) + " Lbs");
+        
+        tv = (TextView)view.findViewById(R.id.item_equip);
+        tv.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {		
+				activity.equipItem(item);
+			}
+		});
         
         return view;
 	}
