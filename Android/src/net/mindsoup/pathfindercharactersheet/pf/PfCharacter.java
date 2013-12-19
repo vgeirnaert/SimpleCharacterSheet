@@ -61,6 +61,7 @@ public class PfCharacter implements Parcelable {
 	private int availableFeats = 0;
 	
 	private int newLevels = 0;
+	private int hitpoints = 0;
 	
 	private Map<PfSkills, PfSkill> trainedSkills = new HashMap<PfSkills, PfSkill>();
 	private Set<PfFeats> feats = new HashSet<PfFeats>();
@@ -351,7 +352,23 @@ public class PfCharacter implements Parcelable {
 	 * This should only be called once, after character creation.
 	 */
 	public void initialiseSecondaryStatsForNewCharacter() {
-		levelUp(0);
+		// hitpoint con bonus
+		this.setHitpoints(this.getMaxHitpoints().sum() + this.getAttributeBonus(this.getConstitution()));
+		
+		// skill ranks (+1 skill rank for human)
+		int skillRanks = myClass.getBaseSkillRanksPerLevel() + this.getAttributeBonus(this.getIntelligence());
+		int feats = 1;
+		
+		if(this.getRace().getRace() == PfRaces.HUMAN) {
+			skillRanks++;
+			feats++;
+		}
+			
+		this.setAvailableSkillRanks(skillRanks);
+			
+		// feat (2 feats for humans)
+		this.setAvailableFeats(feats);
+		
 	}
 	
 	public int getLevel() {
@@ -513,11 +530,13 @@ public class PfCharacter implements Parcelable {
 	public Calculation getMaxHitpoints() {
 		Calculation hp = new Calculation();
 		
-		hp.add(this.myClass.getHitDie().toString() + " Hit dice", this.myClass.getHitDie().getMax());
-		hp.add("Constitution bonus", this.getAttributeBonus(this.getConstitution()));
-			
+		hp.add("Hitpoints", this.hitpoints);			
 				
 		return hp;
+	}
+	
+	public void setHitpoints(int hitpoints) {
+		this.hitpoints = hitpoints;
 	}
 	
 	public Calculation getAC() {
@@ -974,6 +993,7 @@ public class PfCharacter implements Parcelable {
 		out.writeInt(pace.ordinal());
 		out.writeInt(availableSkillRanks);
 		out.writeInt(newLevels);
+		out.writeInt(hitpoints);
 		
 		Bundle sb = new Bundle();
 		for(PfSkills s : trainedSkills.keySet())
@@ -1021,6 +1041,7 @@ public class PfCharacter implements Parcelable {
 		pace = PfPace.getPace(in.readInt());
 		availableSkillRanks = in.readInt();
 		newLevels = in.readInt();
+		hitpoints = in.readInt();
 		
 		Bundle b = in.readBundle();
 		b.setClassLoader(PfSkill.class.getClassLoader());

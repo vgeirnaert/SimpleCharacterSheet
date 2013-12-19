@@ -37,7 +37,7 @@ import android.provider.BaseColumns;
 public class DatabaseHelper extends SQLiteOpenHelper {
 	// db
 	private static final String DATABASE = "SimplePathfinderCharacterSheet.db";
-	private static final int DATABASE_VERSION = 20;
+	private static final int DATABASE_VERSION = 22;
 	
 	public static abstract class Db implements BaseColumns {
 
@@ -49,8 +49,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		private static final String CHAR_BONUS_STAT = "bonusStat";
 		private static final String CHAR_XP = "xp";
 		private static final String CHAR_MONEY = "money";
-		//private static final String CHAR_HPPL = "getHpPerLevel";
 		private static final String CHAR_NEWLEVELS = "newLevels";
+		private static final String CHAR_HITPOINTS = "hitpoints";
 		private static final String CHAR_PACE = "pace";
 		private static final String CHAR_ASRANKS = "availableSkillRanks";
 		private static final String CHAR_AVAILABLE_FEATS = "availableFeats";
@@ -70,6 +70,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				Db.CHAR_BONUS_STAT + " SMALLINT NOT NULL ON CONFLICT FAIL DEFAULT 0," +
 				Db.CHAR_XP + " INT NOT NULL ON CONFLICT FAIL DEFAULT 0," + 
 				Db.CHAR_MONEY + " INT NOT NULL ON CONFLICT FAIL DEFAULT 0," +
+				Db.CHAR_HITPOINTS + " INT NOT NULL DEFAULT 0," +
 				Db.CHAR_NEWLEVELS + " INT NOT NULL DEFAULT 0," + 
 				Db.CHAR_PACE + " SMALLINT NOT NULL ON CONFLICT FAIL DEFAULT 1," + 
 				Db.CHAR_ASRANKS + " INT NOT NULL ON CONFLICT FAIL DEFAULT 0," + 
@@ -226,7 +227,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	 */
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		if(oldVersion < 20) {
 			db.execSQL(Db.DROP_ITEMS);
 			db.execSQL(Db.DROP_CHARACTERS);
 			db.execSQL(Db.DROP_SKILLS);
@@ -236,13 +236,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			db.execSQL(Db.DROP_ARMOR);
 	
 			onCreate(db);
-		} else {
-			String sql = "ALTER TABLE " + Db.CHARACTER_TABLE + " ADD " + Db.CHAR_NEWLEVELS + " INT NOT NULL DEFAULT 0;";
-			db.execSQL(sql);
-			sql = "ALTER TABLE " + Db.CHARACTER_TABLE + " DROP COLUMN getHpPerLevel;";
-			db.execSQL(sql);
-		}
-
 	}
 	
 	public List<PfCharacter> getCharacters() {
@@ -250,7 +243,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 		List<PfCharacter> characters = new ArrayList<PfCharacter>();
 		
-		String[] columns = {Db._ID, Db.CHAR_NAME, Db.CHAR_CLASS, Db.CHAR_RACE, Db.CHAR_XP, Db.CHAR_MONEY, Db.CHAR_PACE, Db.CHAR_CHA, Db.CHAR_CON, Db.CHAR_DEX, Db.CHAR_INT, Db.CHAR_STR, Db.CHAR_WIS, Db.CHAR_NEWLEVELS, Db.CHAR_ASRANKS, Db.CHAR_BONUS_STAT, Db.CHAR_AVAILABLE_FEATS};
+		String[] columns = {Db._ID, Db.CHAR_NAME, Db.CHAR_CLASS, Db.CHAR_RACE, Db.CHAR_XP, Db.CHAR_MONEY, Db.CHAR_PACE, Db.CHAR_CHA, Db.CHAR_CON, Db.CHAR_DEX, Db.CHAR_INT, Db.CHAR_STR, Db.CHAR_WIS, Db.CHAR_NEWLEVELS, Db.CHAR_ASRANKS, Db.CHAR_BONUS_STAT, Db.CHAR_AVAILABLE_FEATS, Db.CHAR_HITPOINTS};
 		String orderBy = Db._ID + " ASC";
 		
 		Cursor c = db.query(Db.CHARACTER_TABLE, columns, null, null, null, null, orderBy);
@@ -284,6 +277,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		int available_skill_ranks = c.getInt(c.getColumnIndex(Db.CHAR_ASRANKS));
 		int available_feats = c.getInt(c.getColumnIndex(Db.CHAR_AVAILABLE_FEATS));
 		int money = c.getInt(c.getColumnIndex(Db.CHAR_MONEY));
+		int hitpoints = c.getInt(c.getColumnIndex(Db.CHAR_HITPOINTS));
 		
 		PfCharacter newChar = new PfCharacter(PfRaces.getRace(charRace), PfClasses.getPfClass(charClass), name, newLevels);
 		newChar.setPace(pace);
@@ -293,6 +287,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		newChar.setAvailableSkillRanks(available_skill_ranks);
 		newChar.setAvailableFeats(available_feats);
 		newChar.setMoney(money);
+		newChar.setHitpoints(hitpoints);
 		
 		if(newChar.canChooseBonusStat()) {
 			int bonus_stat = c.getInt(c.getColumnIndex(Db.CHAR_BONUS_STAT));
@@ -438,6 +433,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		values.put(Db.CHAR_RACE, character.getRace().getRace().ordinal());
 		values.put(Db.CHAR_XP, character.getXp());
 		values.put(Db.CHAR_PACE, character.getPace().ordinal());
+		values.put(Db.CHAR_HITPOINTS, character.getMaxHitpoints().sum());
 		
 		if(character.canChooseBonusStat()) {
 			values.put(Db.CHAR_BONUS_STAT, ((PfChooseBonusAttributeRace)character.getRace()).getBonusAttribute().ordinal());
@@ -473,6 +469,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		values.put(Db.CHAR_AVAILABLE_FEATS, character.getAvailableFeats());
 		values.put(Db.CHAR_XP, character.getXp());
 		values.put(Db.CHAR_MONEY, character.getMoney());
+		values.put(Db.CHAR_HITPOINTS, character.getMaxHitpoints().sum());
 		String whereClause = Db._ID + " = ?";
 		String[] whereArgs = {Long.toString(character.getId())};
 		
