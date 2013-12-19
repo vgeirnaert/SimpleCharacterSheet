@@ -6,6 +6,8 @@ package net.mindsoup.pathfindercharactersheet.fragments;
 import net.mindsoup.pathfindercharactersheet.CharacterActivity;
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -87,8 +89,31 @@ public class CharacterInfoFragment extends CharacterFragment {
 	
 	protected void setXp() {
 		EditText edit = (EditText)getActivity().findViewById(R.id.edit_xp);
-		character.setXp(Integer.parseInt( edit.getText().toString() ));
-		updateCharacter();
+		
+		final int newXp = Integer.parseInt( edit.getText().toString() );
+		final int currentLevel = character.getLevel();
+		final int newLevel = character.getLevel(newXp);
+		
+		if(newLevel > currentLevel) {
+			new AlertDialog.Builder(this.getActivity())
+	        .setIcon(android.R.drawable.ic_dialog_alert)
+	        .setTitle("Level up!")
+	        .setMessage("You will gain " + (newLevel - currentLevel) + " level(s). Continue?")
+	        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+	        	@Override
+	        	public void onClick(DialogInterface dialog, int which) {
+	        		character.setNewLevels(character.getNewLevels() + (newLevel - currentLevel));
+	        		character.setXp(newXp);
+	        		updateCharacter();
+	        	}
+
+	        })
+	        .setNegativeButton("No", null)
+	        .show();
+		} else {
+			character.setXp(newXp);
+			updateCharacter();
+		}
 	}
 	
 	protected void setMoney() {

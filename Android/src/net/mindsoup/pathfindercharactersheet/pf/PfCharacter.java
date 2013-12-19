@@ -83,7 +83,7 @@ public class PfCharacter implements Parcelable {
 		readFromParcel(in);
 	}
 	
-	public PfCharacter(PfRace argRace, PfClass argClass, String name, int newLevels) {
+	public PfCharacter(PfRace argRace, PfClass argClass, String name) {
 		if(argRace == null) {
 			throw new IllegalArgumentException("Character constructor does not accept null values for race.");
 		}
@@ -95,7 +95,14 @@ public class PfCharacter implements Parcelable {
 		this.myRace = argRace;
 		this.myClass = argClass;
 		this.name = name;
-		this.newLevels = newLevels;
+	}
+	
+	public int getNewLevels() {
+		return this.newLevels;
+	}
+	
+	public void setNewLevels(int levels) {
+		this.newLevels = levels;
 	}
 	
 	public void setId(long id) {
@@ -236,6 +243,23 @@ public class PfCharacter implements Parcelable {
 		return c;
 	}
 	
+	public int getBaseAttributeValue(PfAttributes attr) {
+		switch(attr) {
+		case CHA:
+			return getBaseCharisma();
+		case CON:
+			return getBaseConsistution();
+		case DEX:
+			return getBaseDexterity();
+		case INT:
+			return getBaseIntelligence();
+		case STR:
+			return getBaseStrength();
+		default:
+			return getBaseWisdom();
+		}
+	}
+	
 	public void setBaseCharisma(int argCha) {
 		this.charisma = argCha;
 	}
@@ -371,51 +395,53 @@ public class PfCharacter implements Parcelable {
 		
 	}
 	
-	public int getLevel() {
+	public int getLevel(int xp) {
 		// TODO: make this complete/better
 		switch(this.pace) {
 		case SLOW:
-			if(this.xp < 3000)
+			if(xp < 3000)
 				return 1;
-			else if (this.xp < 7500)
+			else if (xp < 7500)
 				return 2;
-			else if (this.xp < 14000)
+			else if (xp < 14000)
 				return 3;
-			else if (this.xp < 23000)
+			else if (xp < 23000)
 				return 4;
-			else if (this.xp < 35000)
+			else if (xp < 35000)
 				return 5;
 			else
 				return 6;
 		case FAST:
-			if(this.xp < 1300)
+			if(xp < 1300)
 				return 1;
-			else if (this.xp < 3300)
+			else if (xp < 3300)
 				return 2;
-			else if (this.xp < 6000)
+			else if (xp < 6000)
 				return 3;
-			else if (this.xp < 10000)
+			else if (xp < 10000)
 				return 4;
-			else if (this.xp < 15000)
+			else if (xp < 15000)
 				return 5;
 			else
 				return 6;
 		default:	// medium
-			if(this.xp < 2000)
+			if(xp < 2000)
 				return 1;
-			else if (this.xp < 5000)
+			else if (xp < 5000)
 				return 2;
-			else if (this.xp < 9000)
+			else if (xp < 9000)
 				return 3;
-			else if (this.xp < 15000)
+			else if (xp < 15000)
 				return 4;
-			else if (this.xp < 23000)
+			else if (xp < 23000)
 				return 5;
 			else
 				return 6;
 		} 
-		
-		
+	}
+	
+	public int getLevel() {
+		return getLevel(this.xp);
 	}
 	
 	public int getAttributeBonus(int attribute) {
@@ -512,9 +538,7 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public void setXp(int amount) {
-		int oldLevel = this.getLevel();
 		this.xp = amount;
-		levelUp(oldLevel);
 	}
 	
 	public void addXp(int amount) {
@@ -846,18 +870,13 @@ public class PfCharacter implements Parcelable {
 		if(skill.isClassSkill(this.myClass) && skill.getRank() > 0)
 			trainedBonus.add("Class skill", 3);
 		
-		
 		// our ability modifier for this skill
 		int abilityModifier = this.getAttributeBonus(this.getAttributeValue(skill.getAttribute()));
-		
-		// FEAT: change ability modifier for the Intimidating Prowess feat - use STR instead of CHA
-		if(skill.getType() == PfSkills.INTIMIDATE && this.hasFeat(PfFeats.INTIMIDATING_PROWESS))
-			trainedBonus.add("Intimidating Prowess", this.getAttributeBonus(this.getAttributeValue(PfAttributes.STR)));
 		
 		trainedBonus.add("Ability modifier", abilityModifier);
 		trainedBonus.add("Racial bonus", myRace.getSkillBonus(type));
 
-		// TODO: add armor check penalty for skills where skill.hasArmorCheckPenalty() is true
+		// add armor check penalty for skills where skill.hasArmorCheckPenalty() is true
 		if(skill.hasArmorCheckPenalty()) {
 			for(Item i : inventory) {
 				if(i.isEquiped()) {
@@ -871,19 +890,23 @@ public class PfCharacter implements Parcelable {
 		// feats
 		// Acrobatic feat
 		if(feats.contains(PfFeats.ACROBATIC) && (type == PfSkills.ACROBATICS || type == PfSkills.FLY))
-			trainedBonus.add("Acrobatic feat", 2);
+			trainedBonus.add("Acrobatic", 2);
 		
 		// Alertness feat
 		if(feats.contains(PfFeats.ALERTNESS) && (type == PfSkills.PERCEPTION || type == PfSkills.SENSE_MOTIVE))
-			trainedBonus.add("Alertness feat", 2);
+			trainedBonus.add("Alertness", 2);
 		
 		// Animal Affinity feat
 		if(feats.contains(PfFeats.ANIMAL_AFFINITY) && (type == PfSkills.HANDLE_ANIMAL || type == PfSkills.RIDE))
-			trainedBonus.add("Animal Affinity feat", 2);
+			trainedBonus.add("Animal Affinity", 2);
 		
 		// Athletic feat
 		if(feats.contains(PfFeats.ATHLETIC) && (type == PfSkills.CLIMB || type == PfSkills.SWIM))
-			trainedBonus.add("Athletic feat", 2);
+			trainedBonus.add("Athletic", 2);
+		
+		// Intimidating prowess
+		if(skill.getType() == PfSkills.INTIMIDATE && this.hasFeat(PfFeats.INTIMIDATING_PROWESS))
+			trainedBonus.add("Intimidating Prowess", this.getAttributeBonus(this.getAttributeValue(PfAttributes.STR)));
 				
 		return trainedBonus;
 	}
@@ -904,7 +927,6 @@ public class PfCharacter implements Parcelable {
 	public boolean canChooseBonusStat() {
 		if(this.getRace().getRace() == PfRaces.HALFELF || this.getRace().getRace() == PfRaces.HALFORC || this.getRace().getRace() == PfRaces.HUMAN) 
 			return true;
-		
 		
 		return false;
 	}
@@ -1097,6 +1119,23 @@ public class PfCharacter implements Parcelable {
 		for(Item i : inventory) {
 			if(i.isEquiped() && i.getSlot() == slot)
 				i.unequip();
+		}
+	}
+
+	public void setBaseAttributeValue(int value, PfAttributes attribute) {
+		switch(attribute) {
+			case CHA:
+				setBaseCharisma(value);
+			case CON:
+				setBaseConstitution(value);
+			case DEX:
+				setBaseDexterity(value);
+			case INT:
+				setBaseIntelligence(value);
+			case STR:
+				setBaseStrength(value);
+			default:
+				setBaseWisdom(value);
 		}
 	}
 }

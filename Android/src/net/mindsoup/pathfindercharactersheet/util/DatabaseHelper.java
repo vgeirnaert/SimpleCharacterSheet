@@ -279,7 +279,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		int money = c.getInt(c.getColumnIndex(Db.CHAR_MONEY));
 		int hitpoints = c.getInt(c.getColumnIndex(Db.CHAR_HITPOINTS));
 		
-		PfCharacter newChar = new PfCharacter(PfRaces.getRace(charRace), PfClasses.getPfClass(charClass), name, newLevels);
+		PfCharacter newChar = new PfCharacter(PfRaces.getRace(charRace), PfClasses.getPfClass(charClass), name);
+		newChar.setNewLevels(newLevels);
 		newChar.setPace(pace);
 		newChar.setXp(xp);
 		newChar.setId(id);
@@ -467,6 +468,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		values.put(Db.CHAR_XP, character.getXp());
 		values.put(Db.CHAR_MONEY, character.getMoney());
 		values.put(Db.CHAR_HITPOINTS, character.getMaxHitpoints().sum());
+		values.put(Db.CHAR_NEWLEVELS, character.getNewLevels());
 		String whereClause = Db._ID + " = ?";
 		String[] whereArgs = {Long.toString(character.getId())};
 		

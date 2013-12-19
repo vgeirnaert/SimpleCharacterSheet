@@ -140,7 +140,7 @@
         <item >One extra hitpoint</item>
         <item >One extra skill rank</item>
     </string-array>
-    <string name="per_level_text">Every level get:</string>
+    <string name="per_level_text">The first level get:</string>
     
     <string name="create">Create</string>
     <string name="cancel">Cancel</string>
@@ -538,5 +538,9 @@
     <string name="armorclass">AC</string>
     <string name="maxdex">MaxDex</string>
     <string name="acpenalty">penalty</string>
+    
+    <!-- LEVELUP -->
+    <string name="levelup_ability">Ability +1:</string>
+    <string name="ok">OK</string>
 
 </resources>

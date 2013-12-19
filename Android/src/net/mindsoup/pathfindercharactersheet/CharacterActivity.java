@@ -11,6 +11,7 @@ import net.mindsoup.pathfindercharactersheet.fragments.CharacterInfoFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.EquipmentFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.FeatsFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.InventoryFragment;
+import net.mindsoup.pathfindercharactersheet.fragments.LevelUpFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.OverviewFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.SetAttributesFragment;
 import net.mindsoup.pathfindercharactersheet.fragments.SkillsFragment;
@@ -49,9 +50,9 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	private ViewPager pager;
 	private TypedArray icons;
 	List<SherlockFragment> fragments;
-	SetAttributesFragment createChar = null;
 	
 	private final String CREATE_CHAR_TAG = "fragment_create_char";
+	private final String LEVELUP_TAG = "fragment_levelup";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -184,10 +185,14 @@ public class CharacterActivity extends SherlockFragmentActivity {
 			
 			if(this.getSupportFragmentManager().findFragmentByTag(CREATE_CHAR_TAG) == null) {
 				FragmentManager fm = this.getSupportFragmentManager();
-				createChar = new SetAttributesFragment();
+				SetAttributesFragment createChar = new SetAttributesFragment();
 		        createChar.show(fm, CREATE_CHAR_TAG);
 			}
 		}
+		
+
+		showLevelUpDialog();
+
 	}
 
 	@Override
@@ -268,6 +273,24 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		System.out.println("******************************");*/
 		for(SherlockFragment f : pagerAdapter.getItems()) {			
 			((CharacterFragment)f).refresh();
+		}
+		
+		
+		showLevelUpDialog();
+		
+	}
+	
+	public void showLevelUpDialog() {
+		if(character.getNewLevels() > 0) {
+			int level = character.getLevel() - character.getNewLevels() + 1;
+			
+			FragmentManager fm = this.getSupportFragmentManager();
+			LevelUpFragment levelup = new LevelUpFragment();
+			Bundle b = new Bundle();
+			b.putInt(LevelUpFragment.LEVEL, level);
+			levelup.setArguments(b);
+			levelup.show(fm, LEVELUP_TAG);
+			
 		}
 	}
 	
