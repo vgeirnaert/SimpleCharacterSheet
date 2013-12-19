@@ -37,7 +37,7 @@ import android.provider.BaseColumns;
 public class DatabaseHelper extends SQLiteOpenHelper {
 	// db
 	private static final String DATABASE = "SimplePathfinderCharacterSheet.db";
-	private static final int DATABASE_VERSION = 19;
+	private static final int DATABASE_VERSION = 20;
 	
 	public static abstract class Db implements BaseColumns {
 
@@ -121,6 +121,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		private static final String ITEM_VALUE = "itemvalue";
 		private static final String ITEM_CHAR_ID = "character_id";
 		private static final String ITEM_SLOT = "slot";
+		private static final String ITEM_EQUIPPED = "equipped";
 		
 		public static final String CREATE_ITEMS_TABLE = "CREATE TABLE IF NOT EXISTS " + Db.ITEM_TABLE + " (" + 
 				Db._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -131,6 +132,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				Db.ITEM_AMOUNT + " SMALLINT NOT NULL DEFAULT 1, " +
 				Db.ITEM_VALUE + " INT NOT NULL DEFAULT 0, " +  // value in copperpieces
 				Db.ITEM_SLOT + " INT NOT NULL DEFAULT 0, " +
+				Db.ITEM_EQUIPPED + " BOOL NOT NULL DEFAULT 0, " +
 				"CONSTRAINT item_and_char_ids UNIQUE (" + Db.ITEM_NAME + ", " + Db.ITEM_CHAR_ID + "));";		
 		
 		public static final String DROP_ITEMS = "DROP TABLE IF EXISTS " + Db.ITEM_TABLE;
@@ -223,15 +225,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	 */
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		db.execSQL(Db.DROP_ITEMS);
-		db.execSQL(Db.DROP_CHARACTERS);
-		db.execSQL(Db.DROP_SKILLS);
-		db.execSQL(Db.DROP_FEATS);
-		db.execSQL(Db.DROP_ITEMEFFECTS);
-		db.execSQL(Db.DROP_WEAPONS);
-		db.execSQL(Db.DROP_ARMOR);
-
-		onCreate(db);
+		if(oldVersion < 20) {
+			db.execSQL(Db.DROP_ITEMS);
+			db.execSQL(Db.DROP_CHARACTERS);
+			db.execSQL(Db.DROP_SKILLS);
+			db.execSQL(Db.DROP_FEATS);
+			db.execSQL(Db.DROP_ITEMEFFECTS);
+			db.execSQL(Db.DROP_WEAPONS);
+			db.execSQL(Db.DROP_ARMOR);
+	
+			onCreate(db);
+		}
 
 	}
 	
@@ -382,7 +386,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 							int ac = items_cursor.getInt(items_cursor.getColumnIndex(Db.ARMOR_AC_BONUS));
 							int maxDex = items_cursor.getInt(items_cursor.getColumnIndex(Db.ARMOR_MAX_DEX));
 							int armorPenalty = items_cursor.getInt(items_cursor.getColumnIndex(Db.ARMOR_CHECK));
-							System.out.println("ACK " + ac);
 							item = new Wearable(itemName, ac, maxDex, armorPenalty);
 							// TODO: add spellcheck/speed penalties
 							break;
@@ -394,6 +397,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					item.setValue(items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEM_VALUE)));
 					item.setWeight(items_cursor.getFloat(items_cursor.getColumnIndex(Db.ITEM_WEIGHT)));
 					item.setSlot(slot);
+					
+					int equipped = items_cursor.getInt(items_cursor.getColumnIndex(Db.ITEM_EQUIPPED));
+					if(equipped == 1) {
+						newChar.equipItem(item);
+					}
 				} 
 				// we only get here when we are processing multiple item effects for an item
 				// add magic effects to item
@@ -570,5 +578,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 		db.close();
 		
+	}
+	
+	public void equipItem(PfCharacter character, Item item) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		
+		ContentValues values = new ContentValues();
+		
+		values.put(Db.ITEM_EQUIPPED, item.isEquiped());
+
+		String whereClause = Db.ITEM_CHAR_ID + " = ? AND " + Db.ITEM_NAME + " = ?";
+		String[] whereArgs = {Long.toString(character.getId()), item.getName()};
+		db.update(Db.ITEM_TABLE, values, whereClause, whereArgs);
+		
+		db.close();
 	}
 }

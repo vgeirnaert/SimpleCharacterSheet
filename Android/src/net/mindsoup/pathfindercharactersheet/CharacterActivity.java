@@ -312,6 +312,8 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	public void equipItem(Item item) {
 		character.equipItem(item);
 		
+		DatabaseHelper db = new DatabaseHelper(this);
+		db.equipItem(this.character, item);
 		this.updateCharacter(false);
 		
 	}
