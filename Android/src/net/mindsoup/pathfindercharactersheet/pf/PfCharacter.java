@@ -584,6 +584,60 @@ public class PfCharacter implements Parcelable {
 		return ac;
 	}
 	
+	public Calculation getReflexSave() {
+		Calculation ref = new Calculation();
+		ref.add("DEX bonus",  this.getAttributeBonus(this.getDexterity()));
+		ref.add("Reflex bonus", this.getPfClass().getReflexSaveModifier(this.getLevel()), true);
+		
+		for(Item i : inventory) {
+			int savebonus = 0;
+			if(i.isEquiped()) {
+				if(i.getEffects().get(ItemEffects.RESISTANCE) != null)
+					savebonus += i.getEffects().get(ItemEffects.RESISTANCE);
+				
+				ref.add(i.getName(), savebonus);
+			}
+		}
+		
+		return ref;
+	}
+	
+	public Calculation getWillSave() {
+		Calculation ref = new Calculation();
+		ref.add("WIS bonus",  this.getAttributeBonus(this.getWisdom()));
+		ref.add("Will bonus", this.getPfClass().getWillSaveModifier(this.getLevel()), true);
+		
+		for(Item i : inventory) {
+			int savebonus = 0;
+			if(i.isEquiped()) {
+				if(i.getEffects().get(ItemEffects.RESISTANCE) != null)
+					savebonus += i.getEffects().get(ItemEffects.RESISTANCE);
+				
+				ref.add(i.getName(), savebonus);
+			}
+		}
+		
+		return ref;
+	}
+	
+	public Calculation getFortitudeSave() {
+		Calculation ref = new Calculation();
+		ref.add("CON bonus",  this.getAttributeBonus(this.getConstitution()));
+		ref.add("Fortitude bonus", this.getPfClass().getFortSaveModifier(this.getLevel()), true);
+		
+		for(Item i : inventory) {
+			int savebonus = 0;
+			if(i.isEquiped()) {
+				if(i.getEffects().get(ItemEffects.RESISTANCE) != null)
+					savebonus += i.getEffects().get(ItemEffects.RESISTANCE);
+				
+				ref.add(i.getName(), savebonus);
+			}
+		}
+		
+		return ref;
+	}
+	
 	public int getMaxDexBonus() {
 		int result = 99;
 	

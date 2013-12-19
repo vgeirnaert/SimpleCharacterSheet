@@ -74,24 +74,15 @@ public class OverviewFragment extends CharacterFragment {
 			calcView.setText("");
 			
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_fort_save);
-			Calculation fort = new Calculation();
-			fort.add("CON bonus", character.getAttributeBonus(character.getConstitution()));
-			fort.add("Fortitude bonus", character.getPfClass().getFortSaveModifier(character.getLevel()), true);
-			calcView.setCalculation(fort);
+			calcView.setCalculation(character.getFortitudeSave());
 			calcView.setText("");
 			
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_ref_save);
-			Calculation ref = new Calculation();
-			ref.add("DEX bonus",  character.getAttributeBonus(character.getDexterity()));
-			ref.add("Reflex bonus", character.getPfClass().getReflexSaveModifier(character.getLevel()), true);
-			calcView.setCalculation(ref);
+			calcView.setCalculation(character.getReflexSave());
 			calcView.setText("");
 			
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_will_save);
-			Calculation will = new Calculation();
-			will.add("WIS bonus",  character.getAttributeBonus(character.getWisdom()));
-			will.add("Will bonus", character.getPfClass().getWillSaveModifier(character.getLevel()), true);
-			calcView.setCalculation(will);
+			calcView.setCalculation(character.getWillSave());
 			calcView.setText("");
 			
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_initiative);
