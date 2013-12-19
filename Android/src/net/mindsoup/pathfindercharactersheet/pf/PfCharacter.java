@@ -437,7 +437,9 @@ public class PfCharacter implements Parcelable {
 	 * @return Base Attack Bonus
 	 */
 	public int getBaseAttackBonus(int attack) {
-		return Math.max( this.getLevel() - (attack * this.myClass.getExtraAttackPerNumLevels()), 0);
+		int bab = this.getPfClass().getAttackBonus(this.getLevel()) - (attack * this.getPfClass().getAttackBonus(this.myClass.getExtraAttackPerNumLevels() - 1));
+		return bab;
+
 	}
 	
 	public int getNumAttacksPerRound() {

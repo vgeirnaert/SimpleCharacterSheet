@@ -97,32 +97,7 @@ public class OverviewFragment extends CharacterFragment {
 					stats += i.getName() + "<br>";
 				}
 			}
-			/*
-			// hack - everyone gets a greataxe!
-			character.setMainhandWeapon(new Weapon("Greataxe", new Dice(12, 1), 3, 1, PfHandedness.TWOHAND));
-			stats += "<br><u>Greataxe</u><br>";
-			stats += "Damage type: Slashing<br>";
-			stats += "Critical range: <b>" + character.getMainhandWeapon().getCriticalRange() + " (x" + character.getMainhandWeapon().getCriticalMultiplier() + ")</b><br>";
-			stats += "Damage: <b>" + character.getMainhandWeapon().getDamage() + " + " + character.getDamageModifier() + "</b><br>";
-			// hack - everyone gets a greataxe!
-			character.setMainhandWeapon(new Weapon("Dagger", new Dice(4, 1), 2, 2, PfHandedness.ONEHAND));
-			stats += "<br><u>Dagger</u><br>";
-			stats += "Damage type: Piercing or Slashing<br>";
-			stats += "Critical range: <b>" + character.getMainhandWeapon().getCriticalRange() + " (x" + character.getMainhandWeapon().getCriticalMultiplier() + ")</b><br>";
-			stats += "Damage: <b>" + character.getMainhandWeapon().getDamage() + " + " + character.getDamageModifier() + "</b><br>";
-			// hack - everyone gets a greataxe!
-			character.setMainhandWeapon(new Weapon("Hunga Munga",new Dice(6, 1), 2, 1, PfHandedness.ONEHAND));
-			stats += "<br><u>Hunga Munga (thrown and light melee weapon)</u><br>";
-			stats += "Damage type: Piercing<br>";
-			stats += "Critical range: <b>" + character.getMainhandWeapon().getCriticalRange() + " (x" + character.getMainhandWeapon().getCriticalMultiplier() + ")</b><br>";
-			stats += "Damage: <b>" + character.getMainhandWeapon().getDamage() + " + " + character.getDamageModifier() + "</b><br>";
-			// hack - everyone gets a greataxe!
-			character.setMainhandWeapon(new Weapon("Gauntlet", new Dice(3, 1), 2, 1, PfHandedness.ONEHAND));
-			stats += "<br><u>Gauntlet</u><br>";
-			stats += "Damage type: Bludgeoning<br>";
-			stats += "Critical range: <b>" + character.getMainhandWeapon().getCriticalRange() + " (x" + character.getMainhandWeapon().getCriticalMultiplier() + ")</b><br>";
-			stats += "Damage: <b>" + character.getMainhandWeapon().getDamage() + " + " + character.getDamageModifier() + "</b><br>";		
-			*/
+
 			editText.setText(Html.fromHtml(stats));
 		}
 	}

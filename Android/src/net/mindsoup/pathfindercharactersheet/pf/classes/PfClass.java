@@ -17,4 +17,5 @@ public interface PfClass {
 	public int getExtraAttackPerNumLevels();
 	public PfSkills[] getClassSkills();
 	public PfFeats[] getClassFeats();
+	public int getAttackBonus(int level);
 }

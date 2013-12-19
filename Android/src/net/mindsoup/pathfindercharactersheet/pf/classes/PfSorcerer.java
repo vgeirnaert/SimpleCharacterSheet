@@ -97,4 +97,9 @@ public class PfSorcerer implements PfClass {
 		return classFeats;
 	}
 
+	@Override
+	public int getAttackBonus(int level) {
+		return (int)Math.floor(level / 2.0);
+	}
+
 }

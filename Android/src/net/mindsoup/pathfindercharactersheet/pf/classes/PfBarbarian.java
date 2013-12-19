@@ -49,7 +49,7 @@ public class PfBarbarian implements PfClass {
 	@Override
 	public int getExtraAttackPerNumLevels() {
 		// see core rulebook page 32
-		return 5;
+		return 6;
 	}
 	
 	public PfSkills[] getClassSkills() {
@@ -64,6 +64,11 @@ public class PfBarbarian implements PfClass {
 	@Override
 	public PfFeats[] getClassFeats() {
 		return classFeats;
+	}
+
+	@Override
+	public int getAttackBonus(int level) {
+		return level;
 	}
 
 	
