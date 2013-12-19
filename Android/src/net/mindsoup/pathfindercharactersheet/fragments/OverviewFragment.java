@@ -57,8 +57,12 @@ public class OverviewFragment extends CharacterFragment {
 			calcView.setCalculation(character.getAC());
 			calcView.setText("");
 			
-			calcView = (CalculationView)getActivity().findViewById(R.id.calc_ab);
-			calcView.setCalculation(character.getAttackBonus(0));
+			calcView = (CalculationView)getActivity().findViewById(R.id.calc_mab);
+			calcView.setCalculation(character.getMeleeAttackBonus(0));
+			calcView.setText("");
+			
+			calcView = (CalculationView)getActivity().findViewById(R.id.calc_rab);
+			calcView.setCalculation(character.getRangedAttackBonus(0));
 			calcView.setText("");
 			
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_cmb);
@@ -72,22 +76,28 @@ public class OverviewFragment extends CharacterFragment {
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_fort_save);
 			Calculation fort = new Calculation();
 			fort.add("CON bonus", character.getAttributeBonus(character.getConstitution()));
-			fort.add("Fortitude bonus", character.getPfClass().getFortSaveModifier(character.getLevel()));
+			fort.add("Fortitude bonus", character.getPfClass().getFortSaveModifier(character.getLevel()), true);
 			calcView.setCalculation(fort);
 			calcView.setText("");
 			
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_ref_save);
 			Calculation ref = new Calculation();
 			ref.add("DEX bonus",  character.getAttributeBonus(character.getDexterity()));
-			ref.add("Reflex bonus", character.getPfClass().getReflexSaveModifier(character.getLevel()));
+			ref.add("Reflex bonus", character.getPfClass().getReflexSaveModifier(character.getLevel()), true);
 			calcView.setCalculation(ref);
 			calcView.setText("");
 			
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_will_save);
 			Calculation will = new Calculation();
 			will.add("WIS bonus",  character.getAttributeBonus(character.getWisdom()));
-			will.add("Will bonus", character.getPfClass().getWillSaveModifier(character.getLevel()));
+			will.add("Will bonus", character.getPfClass().getWillSaveModifier(character.getLevel()), true);
 			calcView.setCalculation(will);
+			calcView.setText("");
+			
+			calcView = (CalculationView)getActivity().findViewById(R.id.calc_initiative);
+			Calculation init = new Calculation();
+			init.add("Dex bonus",  character.getAttributeBonus(character.getDexterity()), true);
+			calcView.setCalculation(init);
 			calcView.setText("");
 			
 			editText = (TextView)getActivity().findViewById(R.id.overview_text);

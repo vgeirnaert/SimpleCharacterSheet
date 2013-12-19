@@ -579,11 +579,19 @@ public class PfCharacter implements Parcelable {
 		return result;
 	}
 	
-	public Calculation getAttackBonus(int attack) {
+	public Calculation getMeleeAttackBonus(int attack) {
+		return getAttackBonus(attack, true);
+	}
+	
+	private Calculation getAttackBonus(int attack, boolean isMelee) {
 		// core rulebook page 178
 		Calculation ab = new Calculation();
 		ab.add("Base attack bonus", this.getBaseAttackBonus(attack));
-		ab.add("Strength modifier", this.getAttributeBonus(this.getStrength()));
+		if(isMelee) {
+			ab.add("Strength modifier", this.getAttributeBonus(this.getStrength()));
+		} else {
+			ab.add("Dexterity modifier", this.getAttributeBonus(this.getDexterity()));
+		}
 		ab.add("Size modifier", this.getSizeAttackBonusModifier());
 		
 		
@@ -597,6 +605,10 @@ public class PfCharacter implements Parcelable {
 		}
 		
 		return ab; 
+	}
+	
+	public Calculation getRangedAttackBonus(int attack) {
+		return getAttackBonus(attack, false);
 	}
 	
 	private int getSizeAttackBonusModifier() {

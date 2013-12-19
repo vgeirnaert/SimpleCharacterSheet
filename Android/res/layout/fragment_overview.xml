@@ -22,7 +22,7 @@
 				android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".7"
 		        android:text="@string/ov_level"
 		  		android:layout_width="0dip" />
 	         
@@ -32,7 +32,7 @@
 				android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".3"
 		  		android:layout_width="0dip"
 	           	/>
 		</LinearLayout>
@@ -48,7 +48,7 @@
 				android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".7"
 		        android:text="@string/ov_xp"
 		  		android:layout_width="0dip" />
 	         
@@ -58,7 +58,7 @@
 				android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".3"
 		  		android:layout_width="0dip"
 	           	/>
 		</LinearLayout>
@@ -74,7 +74,7 @@
 				android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".7"
 		        android:text="@string/ov_hp"
 		  		android:layout_width="0dip" />
 	         
@@ -84,7 +84,7 @@
 				android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".3"
 		  		android:layout_width="0dip"
 	           	/>
 		</LinearLayout>
@@ -100,7 +100,7 @@
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".7"
 		        android:text="@string/ov_ac"
 		  		android:layout_width="0dip" />
 	         
@@ -110,7 +110,7 @@
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".3"
 		  		android:layout_width="0dip"
 	           	/>
 		</LinearLayout>
@@ -126,17 +126,17 @@
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
-		        android:text="@string/ov_ab"
+		        android:layout_weight=".7"
+		        android:text="@string/ov_mab"
 		  		android:layout_width="0dip" />
 	         
 	         <net.mindsoup.pathfindercharactersheet.CalculationView
-				android:id="@+id/calc_ab" 
+				android:id="@+id/calc_mab" 
 	            android:layout_height="30dp"
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".3"
 		  		android:layout_width="0dip"
 	           	/>
 		</LinearLayout>
@@ -152,7 +152,33 @@
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".7"
+		        android:text="@string/ov_rab"
+		  		android:layout_width="0dip" />
+	         
+	         <net.mindsoup.pathfindercharactersheet.CalculationView
+				android:id="@+id/calc_rab" 
+	            android:layout_height="30dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".3"
+		  		android:layout_width="0dip"
+	           	/>
+		</LinearLayout>
+		
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:weightSum="1.0" >
+		    
+	         <TextView
+		        android:layout_height="30dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".7"
 		        android:text="@string/ov_cmb"
 		  		android:layout_width="0dip" />
 	         
@@ -162,7 +188,7 @@
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".3"
 		  		android:layout_width="0dip"
 	           	/>
 		</LinearLayout>
@@ -178,7 +204,7 @@
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".7"
 		        android:text="@string/ov_cmd"
 		  		android:layout_width="0dip" />
 	         
@@ -188,7 +214,7 @@
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".3"
 		  		android:layout_width="0dip"
 	           	/>
 		</LinearLayout>
@@ -204,7 +230,7 @@
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".7"
 		        android:text="@string/ov_fort_save"
 		  		android:layout_width="0dip" />
 	         
@@ -214,7 +240,7 @@
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".3"
 		  		android:layout_width="0dip"
 	           	/>
 		</LinearLayout>
@@ -230,7 +256,7 @@
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".7"
 		        android:text="@string/ov_ref_save"
 		  		android:layout_width="0dip" />
 	         
@@ -240,7 +266,7 @@
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".3"
 		  		android:layout_width="0dip"
 	           	/>
 		</LinearLayout>
@@ -256,7 +282,7 @@
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".7"
 		        android:text="@string/ov_will_save"
 		  		android:layout_width="0dip" />
 	         
@@ -266,7 +292,33 @@
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".5"
+		        android:layout_weight=".3"
+		  		android:layout_width="0dip"
+	           	/>
+		</LinearLayout>
+		
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:weightSum="1.0" >
+		    
+	         <TextView
+		        android:layout_height="30dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".7"
+		        android:text="@string/ov_initiative"
+		  		android:layout_width="0dip" />
+	         
+	         <net.mindsoup.pathfindercharactersheet.CalculationView
+				android:id="@+id/calc_initiative" 
+	            android:layout_height="30dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".3"
 		  		android:layout_width="0dip"
 	           	/>
 		</LinearLayout>
