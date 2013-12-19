@@ -144,7 +144,8 @@ public class MainActivity extends SherlockFragmentActivity {
     }
 	
 	public void addNewCharacter(String name, int char_race, int char_class, boolean hpPerLevel, int bonus_stat) {
-		PfCharacter c = new PfCharacter(PfRaces.getRace(PfRaces.getRace(char_race)), PfClasses.getPfClass(PfClasses.getPfClass(char_class)), hpPerLevel, name);
+		PfCharacter c = new PfCharacter(PfRaces.getRace(PfRaces.getRace(char_race)), PfClasses.getPfClass(PfClasses.getPfClass(char_class)), name, 0);
+		// TODO: set first level hitpoints, skillpoints, etc
 		
 		if(c.getRace().getRace() == PfRaces.HALFELF || c.getRace().getRace() == PfRaces.HALFORC || c.getRace().getRace() == PfRaces.HUMAN) 
 			((PfChooseBonusAttributeRace)c.getRace()).setBonusAttribute(PfAttributes.getAttribute(bonus_stat));

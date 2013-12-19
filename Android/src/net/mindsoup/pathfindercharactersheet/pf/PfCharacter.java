@@ -60,7 +60,7 @@ public class PfCharacter implements Parcelable {
 	private int availableSkillRanks = 0;
 	private int availableFeats = 0;
 	
-	private boolean getHpPerLevel;
+	private int newLevels = 0;
 	
 	private Map<PfSkills, PfSkill> trainedSkills = new HashMap<PfSkills, PfSkill>();
 	private Set<PfFeats> feats = new HashSet<PfFeats>();
@@ -82,7 +82,7 @@ public class PfCharacter implements Parcelable {
 		readFromParcel(in);
 	}
 	
-	public PfCharacter(PfRace argRace, PfClass argClass, boolean argHpPerLevel, String name) {
+	public PfCharacter(PfRace argRace, PfClass argClass, String name, int newLevels) {
 		if(argRace == null) {
 			throw new IllegalArgumentException("Character constructor does not accept null values for race.");
 		}
@@ -93,8 +93,8 @@ public class PfCharacter implements Parcelable {
 		
 		this.myRace = argRace;
 		this.myClass = argClass;
-		this.getHpPerLevel = argHpPerLevel;
 		this.name = name;
+		this.newLevels = newLevels;
 	}
 	
 	public void setId(long id) {
@@ -103,10 +103,6 @@ public class PfCharacter implements Parcelable {
 	
 	public long getId() {
 		return this.id;
-	}
-	
-	public boolean getsHpPerLevel() {
-		return getHpPerLevel;
 	}
 	
 	public PfRace getRace() {
@@ -490,9 +486,7 @@ public class PfCharacter implements Parcelable {
 		for(int i = 0; i < newLevels; i++) {
 			// add skill ranks
 			this.availableSkillRanks += myClass.getBaseSkillRanksPerLevel() + this.getAttributeBonus(this.getIntelligence());
-			
-			if(getHpPerLevel == false)
-				this.availableSkillRanks++;
+		
 			
 			// if this is an uneven level
 			// gain a feat
@@ -521,9 +515,7 @@ public class PfCharacter implements Parcelable {
 		
 		hp.add(this.myClass.getHitDie().toString() + " Hit dice", this.myClass.getHitDie().getMax());
 		hp.add("Constitution bonus", this.getAttributeBonus(this.getConstitution()));
-				
-		if(getHpPerLevel)
-			hp.add("Hitpoints per level", this.getLevel());
+			
 				
 		return hp;
 	}
@@ -835,7 +827,7 @@ public class PfCharacter implements Parcelable {
 		
 		// FEAT: change ability modifier for the Intimidating Prowess feat - use STR instead of CHA
 		if(skill.getType() == PfSkills.INTIMIDATE && this.hasFeat(PfFeats.INTIMIDATING_PROWESS))
-			abilityModifier = this.getAttributeBonus(this.getAttributeValue(PfAttributes.STR));
+			trainedBonus.add("Intimidating Prowess", this.getAttributeBonus(this.getAttributeValue(PfAttributes.STR)));
 		
 		trainedBonus.add("Ability modifier", abilityModifier);
 		trainedBonus.add("Racial bonus", myRace.getSkillBonus(type));
@@ -981,7 +973,7 @@ public class PfCharacter implements Parcelable {
 		out.writeLong(id);
 		out.writeInt(pace.ordinal());
 		out.writeInt(availableSkillRanks);
-		out.writeByte((byte) (getHpPerLevel ? 1 : 0));
+		out.writeInt(newLevels);
 		
 		Bundle sb = new Bundle();
 		for(PfSkills s : trainedSkills.keySet())
@@ -1028,7 +1020,7 @@ public class PfCharacter implements Parcelable {
 		id = in.readLong();
 		pace = PfPace.getPace(in.readInt());
 		availableSkillRanks = in.readInt();
-		getHpPerLevel = in.readByte() == 1;
+		newLevels = in.readInt();
 		
 		Bundle b = in.readBundle();
 		b.setClassLoader(PfSkill.class.getClassLoader());

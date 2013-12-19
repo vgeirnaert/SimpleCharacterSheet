@@ -49,7 +49,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		private static final String CHAR_BONUS_STAT = "bonusStat";
 		private static final String CHAR_XP = "xp";
 		private static final String CHAR_MONEY = "money";
-		private static final String CHAR_HPPL = "getHpPerLevel";
+		//private static final String CHAR_HPPL = "getHpPerLevel";
+		private static final String CHAR_NEWLEVELS = "newLevels";
 		private static final String CHAR_PACE = "pace";
 		private static final String CHAR_ASRANKS = "availableSkillRanks";
 		private static final String CHAR_AVAILABLE_FEATS = "availableFeats";
@@ -69,7 +70,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				Db.CHAR_BONUS_STAT + " SMALLINT NOT NULL ON CONFLICT FAIL DEFAULT 0," +
 				Db.CHAR_XP + " INT NOT NULL ON CONFLICT FAIL DEFAULT 0," + 
 				Db.CHAR_MONEY + " INT NOT NULL ON CONFLICT FAIL DEFAULT 0," +
-				Db.CHAR_HPPL + " BOOL NOT NULL ON CONFLICT FAIL DEFAULT 0," + 
+				Db.CHAR_NEWLEVELS + " INT NOT NULL DEFAULT 0," + 
 				Db.CHAR_PACE + " SMALLINT NOT NULL ON CONFLICT FAIL DEFAULT 1," + 
 				Db.CHAR_ASRANKS + " INT NOT NULL ON CONFLICT FAIL DEFAULT 0," + 
 				Db.CHAR_AVAILABLE_FEATS + " INT NOT NULL ON CONFLICT FAIL DEFAULT 1," +
@@ -235,6 +236,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			db.execSQL(Db.DROP_ARMOR);
 	
 			onCreate(db);
+		} else {
+			String sql = "ALTER TABLE " + Db.CHARACTER_TABLE + " ADD " + Db.CHAR_NEWLEVELS + " INT NOT NULL DEFAULT 0;";
+			db.execSQL(sql);
+			sql = "ALTER TABLE " + Db.CHARACTER_TABLE + " DROP COLUMN getHpPerLevel;";
+			db.execSQL(sql);
 		}
 
 	}
@@ -244,7 +250,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 		List<PfCharacter> characters = new ArrayList<PfCharacter>();
 		
-		String[] columns = {Db._ID, Db.CHAR_NAME, Db.CHAR_CLASS, Db.CHAR_RACE, Db.CHAR_XP, Db.CHAR_MONEY, Db.CHAR_PACE, Db.CHAR_CHA, Db.CHAR_CON, Db.CHAR_DEX, Db.CHAR_INT, Db.CHAR_STR, Db.CHAR_WIS, Db.CHAR_HPPL, Db.CHAR_ASRANKS, Db.CHAR_BONUS_STAT, Db.CHAR_AVAILABLE_FEATS};
+		String[] columns = {Db._ID, Db.CHAR_NAME, Db.CHAR_CLASS, Db.CHAR_RACE, Db.CHAR_XP, Db.CHAR_MONEY, Db.CHAR_PACE, Db.CHAR_CHA, Db.CHAR_CON, Db.CHAR_DEX, Db.CHAR_INT, Db.CHAR_STR, Db.CHAR_WIS, Db.CHAR_NEWLEVELS, Db.CHAR_ASRANKS, Db.CHAR_BONUS_STAT, Db.CHAR_AVAILABLE_FEATS};
 		String orderBy = Db._ID + " ASC";
 		
 		Cursor c = db.query(Db.CHARACTER_TABLE, columns, null, null, null, null, orderBy);
@@ -274,12 +280,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		int in = c.getInt(c.getColumnIndex(Db.CHAR_INT));
 		int str = c.getInt(c.getColumnIndex(Db.CHAR_STR));
 		int wis = c.getInt(c.getColumnIndex(Db.CHAR_WIS));
-		boolean hppl = c.getInt(c.getColumnIndex(Db.CHAR_HPPL)) > 0;
+		int newLevels = c.getInt(c.getColumnIndex(Db.CHAR_NEWLEVELS));
 		int available_skill_ranks = c.getInt(c.getColumnIndex(Db.CHAR_ASRANKS));
 		int available_feats = c.getInt(c.getColumnIndex(Db.CHAR_AVAILABLE_FEATS));
 		int money = c.getInt(c.getColumnIndex(Db.CHAR_MONEY));
 		
-		PfCharacter newChar = new PfCharacter(PfRaces.getRace(charRace), PfClasses.getPfClass(charClass), hppl, name);
+		PfCharacter newChar = new PfCharacter(PfRaces.getRace(charRace), PfClasses.getPfClass(charClass), name, newLevels);
 		newChar.setPace(pace);
 		newChar.setXp(xp);
 		newChar.setId(id);
@@ -431,7 +437,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		values.put(Db.CHAR_CLASS, character.getPfClass().getPfClass().ordinal());
 		values.put(Db.CHAR_RACE, character.getRace().getRace().ordinal());
 		values.put(Db.CHAR_XP, character.getXp());
-		values.put(Db.CHAR_HPPL, character.getsHpPerLevel());
 		values.put(Db.CHAR_PACE, character.getPace().ordinal());
 		
 		if(character.canChooseBonusStat()) {
