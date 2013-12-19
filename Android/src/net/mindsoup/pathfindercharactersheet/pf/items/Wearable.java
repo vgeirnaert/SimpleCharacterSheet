@@ -42,7 +42,7 @@ public class Wearable extends Item implements Parcelable {
 
 	@Override
 	public ItemType getType() {
-		return ItemType.ARMOR;
+		return ItemType.WEARABLE;
 	}
 	
 	public int getArmorClass() {

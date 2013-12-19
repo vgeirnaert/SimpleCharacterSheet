@@ -37,7 +37,7 @@ public class PfCharacter implements Parcelable {
 	
 	private Weapon ActiveMainhandWeapon = null;
 	private Weapon ActiveOffhandWeapon= null;
-	private Wearable armor = null;
+	//private Wearable armor = null;
 	
 	// stats
 	private int constitution = 0;
@@ -486,15 +486,7 @@ public class PfCharacter implements Parcelable {
 		return this.ActiveOffhandWeapon;
 	}
 	
-	public boolean setArmor(Wearable armor) {
-		this.armor = armor;
-		
-		return true;
-	}
-	
-	public Wearable getArmor() {
-		return this.armor;
-	}
+
 	
 
 	
@@ -557,7 +549,7 @@ public class PfCharacter implements Parcelable {
 			if(i.isEquiped()) {
 				if(i.getEffects().get(ItemEffects.AC_BONUS) != null)
 					acbonus += i.getEffects().get(ItemEffects.AC_BONUS);
-				if(i.getType() == ItemType.ARMOR)
+				if(i.getType() == ItemType.WEARABLE)
 					acbonus += ((Wearable)i).getArmorClass();
 				
 				ac.add(i.getName(), acbonus);
@@ -572,7 +564,7 @@ public class PfCharacter implements Parcelable {
 		int result = 99;
 	
 		for(Item i : inventory) {
-			if(i.getType() == ItemType.ARMOR)
+			if(i.getType() == ItemType.WEARABLE)
 				result = Math.min(result, ((Wearable)i).getMaxDexBonus());
 		}
 		
@@ -866,13 +858,15 @@ public class PfCharacter implements Parcelable {
 		trainedBonus.add("Racial bonus", myRace.getSkillBonus(type));
 
 		// TODO: add armor check penalty for skills where skill.hasArmorCheckPenalty() is true
-		
-		// if we are wearing armor AND the skill is a dex or str skill
-		if(this.armor != null && (skill.getAttribute() == PfAttributes.DEX || skill.getAttribute() == PfAttributes.STR)) {
-			// if the armor has an armor check penalty
-			if(this.armor.getArmorPenalty() < 0) 
-				trainedBonus.add(this.armor.getName(), this.armor.getArmorPenalty());
+		if(skill.hasArmorCheckPenalty()) {
+			for(Item i : inventory) {
+				if(i.isEquiped()) {
+					if(i.getType() == ItemType.WEARABLE)
+						trainedBonus.add(i.getName(), ((Wearable)i).getArmorPenalty());
+				}
+			}
 		}
+		
 		
 		// feats
 		// Acrobatic feat
@@ -1036,8 +1030,6 @@ public class PfCharacter implements Parcelable {
 		
 		out.writeIntArray(feat_ints);
 		
-		out.writeParcelable(getArmor(), 0);
-		
 		Bundle items = new Bundle();
 		for(Item item : inventory)
 			items.putParcelable(item.getName(), item);
@@ -1080,8 +1072,6 @@ public class PfCharacter implements Parcelable {
 		int[] feat_ints = in.createIntArray();
 		for(int i : feat_ints)
 			this.feats.add(PfFeats.getFeat(i));
-		
-		this.armor = in.readParcelable(Wearable.class.getClassLoader());
 		
 		Bundle items = in.readBundle();
 		items.setClassLoader(Item.class.getClassLoader());

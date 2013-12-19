@@ -329,10 +329,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				newChar.gainFeat(feat);
 			} while(feats_cursor.moveToNext());
 		}
-		
-		// hack to add scale mail
-		newChar.setArmor(new Wearable("Scale mail", 5, 3, -4));
-		
+				
 		// inventory
 		String[] item_SelectionArgs = {Long.toString(id)};
 		// select items that this character has
@@ -539,7 +536,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					db.replace(Db.WEAPONS_TABLE, null, values);
 					
 					break;
-				case ARMOR:
+				case WEARABLE:
 					Wearable a = (Wearable)item;
 					values.put(Db.ARMOR_AC_BONUS, a.getArmorClass());
 					values.put(Db.ARMOR_CHECK, a.getArmorPenalty());

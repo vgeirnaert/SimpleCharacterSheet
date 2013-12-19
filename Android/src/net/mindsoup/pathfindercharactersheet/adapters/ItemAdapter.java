@@ -80,7 +80,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
 	        	description += "Crit range: <b>" + ((Weapon)item).getCriticalRange() + " x" + ((Weapon)item).getCriticalMultiplier() + "</b><br>";
 	        	description += ((Weapon)item).getHandedness().toString() + "<br>";
 	        	break;
-	        case ARMOR:
+	        case WEARABLE:
 	        	description += "AC bonus: <b>" + ((Wearable)item).getArmorClass() + "</b><br>";
 	        	description += "Max dex bonus: <b>" + ((Wearable)item).getMaxDexBonus() + "</b><br>";
 	        	description += "AC penalty: <b>" + ((Wearable)item).getArmorPenalty() + "</b><br>";

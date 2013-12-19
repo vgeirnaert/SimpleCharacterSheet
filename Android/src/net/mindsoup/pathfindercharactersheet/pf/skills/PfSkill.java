@@ -14,7 +14,6 @@ public class PfSkill implements Parcelable {
 	private int level = 0;
 	private final PfSkills type;
 	private final PfAttributes attribute;
-	private final boolean armorCheckPenalty;
 	private final boolean canUseUntrained;
 	
 	@SuppressWarnings("rawtypes")
@@ -33,14 +32,12 @@ public class PfSkill implements Parcelable {
 		level = in.readInt();
 		type = PfSkills.getSkill(in.readInt());
 		attribute = PfAttributes.getAttribute(in.readInt());
-		armorCheckPenalty = in.readByte() == 1;
 		canUseUntrained = in.readByte() == 1;
 	}
 	
 	protected PfSkill(PfSkills type, PfAttributes attribute, boolean armorCheckPenalty, boolean canUseUntrained) {
 		this.type = type;
 		this.attribute = attribute;
-		this.armorCheckPenalty = armorCheckPenalty;
 		this.canUseUntrained = canUseUntrained;
 	}
 	
@@ -69,7 +66,7 @@ public class PfSkill implements Parcelable {
 	}
 	
 	public boolean hasArmorCheckPenalty() {
-		return this.armorCheckPenalty;
+		return (this.attribute == PfAttributes.DEX || this.attribute == PfAttributes.STR); 
 	}
 	
 	public boolean canUseUntrained() {
@@ -94,7 +91,6 @@ public class PfSkill implements Parcelable {
 		dest.writeInt(level);
 		dest.writeInt(type.ordinal());
 		dest.writeInt(attribute.ordinal());
-		dest.writeByte((byte) (armorCheckPenalty ? 1 : 0));
 		dest.writeByte((byte) (canUseUntrained ? 1 : 0));	
 	}
 
