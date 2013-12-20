@@ -4,6 +4,8 @@ import net.mindsoup.pathfindercharactersheet.CharacterActivity;
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.adapters.ItemAdapter;
 import net.mindsoup.pathfindercharactersheet.pf.items.Item;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
@@ -41,8 +43,23 @@ public class InventoryFragment extends CharacterFragment {
 			list.setOnItemLongClickListener(new OnItemLongClickListener() {
 
 				@Override
-				public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-					deleteItem(position);
+				public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+					Item i = ca.getCharacter().getInventoryItems().get(position);
+					
+					new AlertDialog.Builder(ca)
+			        .setIcon(android.R.drawable.ic_dialog_alert)
+			        .setTitle("Delete item")
+			        .setMessage("Delete " + i.getName() + " from inventory?")
+			        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+			        	@Override
+			        	public void onClick(DialogInterface dialog, int which) {
+			        		deleteItem(position);
+			        	}
+
+			        })
+			        .setNegativeButton("No", null)
+			        .show();
+					
 					
 					return true;
 				}

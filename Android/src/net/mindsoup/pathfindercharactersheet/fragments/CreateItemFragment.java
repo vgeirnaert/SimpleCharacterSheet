@@ -126,7 +126,11 @@ public class CreateItemFragment extends SherlockDialogFragment {
 		int value = 0;
 		try {
 			weight = Float.parseFloat( ((EditText)this.getView().findViewById(R.id.create_item_weight)).getText().toString() );
+		} catch(NumberFormatException e) {}
+		try {
 			amount = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_item_amount)).getText().toString() );
+		} catch(NumberFormatException e) {}
+		try {
 			value = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_item_value)).getText().toString() );
 		} catch(NumberFormatException e) {}
 		ItemEffects effect = ItemEffects.getEffect( ((Spinner)this.getView().findViewById(R.id.create_item_effecttype)).getSelectedItemPosition() );
@@ -156,9 +160,14 @@ public class CreateItemFragment extends SherlockDialogFragment {
 			int ac = 0, maxdex = 99, penalty = 0;
 			try {
 				ac = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_ac)).getText().toString() );
+			} catch (NumberFormatException e) {}
+			try {
 				maxdex = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_maxdex)).getText().toString() );
+			} catch (NumberFormatException e) {}
+			try {
 				penalty = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_penalty)).getText().toString() );
 			} catch (NumberFormatException e) {}
+			
 			
 			i = new Wearable(name, ac, maxdex, penalty);
 			break;
