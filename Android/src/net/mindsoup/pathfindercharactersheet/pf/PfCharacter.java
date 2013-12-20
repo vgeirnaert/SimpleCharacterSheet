@@ -720,9 +720,11 @@ public class PfCharacter implements Parcelable {
 	public int getDamageModifier() {
 		double multiplier = 1.0;
 		
-		if(this.ActiveMainhandWeapon != null) {
-			if(this.ActiveMainhandWeapon.getHandedness() == PfHandedness.TWOHAND)
-				multiplier = 1.5;
+		for(Item i : inventory) {
+			if(i.getType() == ItemType.WEAPON && i.isEquiped()) {
+				if( ((Weapon)i).getHandedness() == PfHandedness.TWOHAND )
+					multiplier = 1.5;
+			}
 		}
 			
 		return (int)Math.floor(this.getAttributeBonus(this.getStrength()) * multiplier);
@@ -1162,10 +1164,11 @@ public class PfCharacter implements Parcelable {
 	public void equipItem(Item item) {
 		unequipItem(item.getSlot());
 		
-		if(item.isEquiped())
+		if(item.isEquiped()) {
 			item.unequip();
-		else
+		} else {			
 			item.equip();
+		}
 		
 	}
 	

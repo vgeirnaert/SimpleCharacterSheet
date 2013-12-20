@@ -5,6 +5,8 @@ import net.mindsoup.pathfindercharactersheet.CharacterActivity;
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import net.mindsoup.pathfindercharactersheet.pf.items.Item;
+import net.mindsoup.pathfindercharactersheet.pf.items.ItemType;
+import net.mindsoup.pathfindercharactersheet.pf.items.Weapon;
 import net.mindsoup.pathfindercharactersheet.pf.util.Calculation;
 import android.os.Bundle;
 import android.text.Html;
@@ -95,7 +97,12 @@ public class OverviewFragment extends CharacterFragment {
 			String stats = "<b>Equiped items</b><br>";
 			for(Item i : character.getInventoryItems()) {
 				if(i.isEquiped()) {
-					stats += i.getName() + "<br>";
+					if(i.getType() == ItemType.WEAPON) {
+						Weapon w = (Weapon)i;
+						stats += w.getName() + " " + w.getDamage().toString() + "+" + character.getDamageModifier() + "<br>";
+					} else {
+						stats += i.getName() + "<br>";
+					}
 				}
 			}
 
