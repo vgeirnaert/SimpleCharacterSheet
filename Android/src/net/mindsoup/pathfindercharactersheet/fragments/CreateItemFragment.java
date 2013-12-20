@@ -121,9 +121,14 @@ public class CreateItemFragment extends SherlockDialogFragment {
 		
 		String name = ((EditText)this.getView().findViewById(R.id.create_item_name)).getText().toString();
 		String description = ((EditText)this.getView().findViewById(R.id.create_item_description)).getText().toString();
-		float weight = Float.parseFloat( ((EditText)this.getView().findViewById(R.id.create_item_weight)).getText().toString() );
-		int amount = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_item_amount)).getText().toString() );
-		int value = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_item_value)).getText().toString() );
+		float weight = 0.0f;
+		int amount = 1;
+		int value = 0;
+		try {
+			weight = Float.parseFloat( ((EditText)this.getView().findViewById(R.id.create_item_weight)).getText().toString() );
+			amount = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_item_amount)).getText().toString() );
+			value = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_item_value)).getText().toString() );
+		} catch(NumberFormatException e) {}
 		ItemEffects effect = ItemEffects.getEffect( ((Spinner)this.getView().findViewById(R.id.create_item_effecttype)).getSelectedItemPosition() );
 		String effectValueString = ((EditText)this.getView().findViewById(R.id.create_item_effectvalue)).getText().toString();
 		
