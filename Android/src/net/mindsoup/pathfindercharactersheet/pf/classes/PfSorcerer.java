@@ -3,6 +3,9 @@
  */
 package net.mindsoup.pathfindercharactersheet.pf.classes;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
@@ -100,6 +103,12 @@ public class PfSorcerer implements PfClass {
 	@Override
 	public int getAttackBonus(int level) {
 		return (int)Math.floor(level / 2.0);
+	}
+
+	@Override
+	public Map<String, String> getFragments() {
+		final Map<String, String> fragments = new HashMap<String, String>();
+		return fragments;
 	}
 
 }

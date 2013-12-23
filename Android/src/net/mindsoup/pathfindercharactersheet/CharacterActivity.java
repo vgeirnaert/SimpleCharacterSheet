@@ -94,8 +94,10 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, SkillsFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, FeatsFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, EquipmentFragment.class.getName()));
-		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, InventoryFragment.class.getName()));
+		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, InventoryFragment.class.getName()));	
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, CharacterInfoFragment.class.getName()));
+		for(String name : character.getPfClass().getFragments().values())
+			fragments.add((SherlockFragment)SherlockFragment.instantiate(this, name));
 		this.pagerAdapter = new CharacterPagerAdapter(getSupportFragmentManager(), fragments);
 		
 		pager = (ViewPager)findViewById(R.id.viewpager);
@@ -119,9 +121,28 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		pager.setOnPageChangeListener(listener);
 	}
 	
-	private void initialiseNavDrawer() {
+	private String[] getFragmentNames() {
 		// create navigation drawer
 		String[] drawerItems = getResources().getStringArray(R.array.drawer_items_strings);
+		
+		// add character class specific fragment names
+		String[] classFragments = character.getPfClass().getFragments().keySet().toArray(new String[0]);
+		String[] fragmentNames = new String[drawerItems.length + classFragments.length];
+		
+	
+		for(int i = 0; i < drawerItems.length; i++)
+			fragmentNames[i] = drawerItems[i];
+		
+		for(int i = 0; i < classFragments.length; i++)
+			fragmentNames[drawerItems.length + i] = classFragments[i];
+			
+		return fragmentNames;
+	}
+	
+	private void initialiseNavDrawer() {
+		// create navigation drawer
+		String[] drawerItems = getFragmentNames();
+	
 		icons = getResources().obtainTypedArray(R.array.drawer_items_icons);
 		
 		drawerList = (ListView)findViewById(R.id.left_drawer);
@@ -158,7 +179,7 @@ public class CharacterActivity extends SherlockFragmentActivity {
 			public void onTabReselected(Tab tab, FragmentTransaction ft) {}
 		};
 		
-		String[] drawerItems = getResources().getStringArray(R.array.drawer_items_strings);
+		String[] drawerItems = getFragmentNames();
 		for(String s : drawerItems) {
 			Tab tab = getSupportActionBar().newTab();
 			tab.setText(s);

@@ -67,6 +67,9 @@
         <item>@drawable/ic_action_user</item>
         <item>@drawable/ic_action_user</item>
         <item>@drawable/ic_action_user</item>
+        <item>@drawable/ic_action_user</item>
+        <item>@drawable/ic_action_user</item>
+        <item>@drawable/ic_action_user</item>
     </array>
     <string-array name="skill_names">
         <item>Acrobatics</item>
@@ -542,5 +545,9 @@
     <!-- LEVELUP -->
     <string name="levelup_ability">Ability +1:</string>
     <string name="ok">OK</string>
+    
+    <!-- RAGE -->
+    <string name="rage">Rage</string>
+    <string name="rage_clear">Clear</string>
 
 </resources>

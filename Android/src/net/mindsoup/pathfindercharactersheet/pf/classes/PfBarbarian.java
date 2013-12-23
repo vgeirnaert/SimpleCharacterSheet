@@ -1,5 +1,9 @@
 package net.mindsoup.pathfindercharactersheet.pf.classes;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import net.mindsoup.pathfindercharactersheet.fragments.RageFragment;
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
@@ -69,6 +73,14 @@ public class PfBarbarian implements PfClass {
 	@Override
 	public int getAttackBonus(int level) {
 		return level;
+	}
+
+	@Override
+	public Map<String, String> getFragments() {
+		final Map<String, String> fragments = new HashMap<String, String>();
+		fragments.put("Rage", RageFragment.class.getName());
+		
+		return fragments;
 	}
 
 	

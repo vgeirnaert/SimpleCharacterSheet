@@ -1,5 +1,7 @@
 package net.mindsoup.pathfindercharactersheet.pf.classes;
 
+import java.util.Map;
+
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
@@ -18,4 +20,5 @@ public interface PfClass {
 	public PfSkills[] getClassSkills();
 	public PfFeats[] getClassFeats();
 	public int getAttackBonus(int level);
+	public Map<String, String> getFragments();
 }
