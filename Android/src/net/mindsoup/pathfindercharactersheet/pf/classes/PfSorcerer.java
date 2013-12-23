@@ -6,6 +6,7 @@ package net.mindsoup.pathfindercharactersheet.pf.classes;
 import java.util.HashMap;
 import java.util.Map;
 
+import net.mindsoup.pathfindercharactersheet.fragments.SpellbookFragment;
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
@@ -108,6 +109,7 @@ public class PfSorcerer implements PfClass {
 	@Override
 	public Map<String, String> getFragments() {
 		final Map<String, String> fragments = new HashMap<String, String>();
+		fragments.put("Spells", SpellbookFragment.class.getName());
 		return fragments;
 	}
 
