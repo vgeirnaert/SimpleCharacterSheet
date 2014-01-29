@@ -1186,16 +1186,22 @@ public class PfCharacter implements Parcelable {
 		switch(attribute) {
 			case CHA:
 				setBaseCharisma(value);
+				break;
 			case CON:
 				setBaseConstitution(value);
+				break;
 			case DEX:
 				setBaseDexterity(value);
+				break;
 			case INT:
 				setBaseIntelligence(value);
+				break;
 			case STR:
 				setBaseStrength(value);
+				break;
 			default:
 				setBaseWisdom(value);
+				break;
 		}
 	}
 }
