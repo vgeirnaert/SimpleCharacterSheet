@@ -37,7 +37,6 @@ public class PfCharacter implements Parcelable {
 	
 	private Weapon ActiveMainhandWeapon = null;
 	private Weapon ActiveOffhandWeapon= null;
-	//private Wearable armor = null;
 	
 	// stats
 	private int constitution = 0;
@@ -963,7 +962,11 @@ public class PfCharacter implements Parcelable {
 		// Intimidating prowess
 		if(skill.getType() == PfSkills.INTIMIDATE && this.hasFeat(PfFeats.INTIMIDATING_PROWESS))
 			trainedBonus.add("Intimidating Prowess", this.getAttributeBonus(this.getAttributeValue(PfAttributes.STR)));
-				
+		
+		// Persuasive feat
+		if(feats.contains(PfFeats.PERSUASIVE) && (type == PfSkills.DIPLOMACY || type == PfSkills.INTIMIDATE))
+			trainedBonus.add("Persuasive", 2);
+		
 		return trainedBonus;
 	}
 	
