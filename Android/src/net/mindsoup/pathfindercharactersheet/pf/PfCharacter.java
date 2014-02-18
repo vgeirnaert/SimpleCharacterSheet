@@ -30,6 +30,9 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class PfCharacter implements Parcelable {
+	
+	public enum Attributes {AC, FORT, REF, WILL, HP};
+	
 	private PfRace myRace;
 	private PfClass myClass;
 	private String name;
@@ -65,6 +68,7 @@ public class PfCharacter implements Parcelable {
 	private Map<PfSkills, PfSkill> trainedSkills = new HashMap<PfSkills, PfSkill>();
 	private Set<PfFeats> feats = new HashSet<PfFeats>();
 	private List<Item> inventory = new LinkedList<Item>();
+	private Map<String, Object> properties = new HashMap<String, Object>();
 	
 	@SuppressWarnings("rawtypes")
 	public static final Parcelable.Creator CREATOR =
@@ -549,7 +553,7 @@ public class PfCharacter implements Parcelable {
 		
 		hp.add("Hitpoints", this.hitpoints);			
 				
-		return hp;
+		return this.getPfClass().modifyAttribute(Attributes.HP, hp, this);
 	}
 	
 	public void setHitpoints(int hitpoints) {
@@ -578,9 +582,8 @@ public class PfCharacter implements Parcelable {
 				ac.add(i.getName(), acbonus);
 			}
 		}
-		
-		
-		return ac;
+			
+		return this.getPfClass().modifyAttribute(Attributes.AC, ac, this);
 	}
 	
 	public Calculation getReflexSave() {
@@ -589,12 +592,10 @@ public class PfCharacter implements Parcelable {
 		ref.add("Reflex bonus", this.getPfClass().getReflexSaveModifier(this.getLevel()), true);
 		
 		for(Item i : inventory) {
-			int savebonus = 0;
 			if(i.isEquiped()) {
-				if(i.getEffects().get(ItemEffects.RESISTANCE) != null)
-					savebonus += i.getEffects().get(ItemEffects.RESISTANCE);
-				
-				ref.add(i.getName(), savebonus);
+				if(i.getEffects().get(ItemEffects.RESISTANCE) != null) {				
+					ref.add(i.getName(), i.getEffects().get(ItemEffects.RESISTANCE));
+				}
 			}
 		}
 		
@@ -607,16 +608,14 @@ public class PfCharacter implements Parcelable {
 		ref.add("Will bonus", this.getPfClass().getWillSaveModifier(this.getLevel()), true);
 		
 		for(Item i : inventory) {
-			int savebonus = 0;
 			if(i.isEquiped()) {
-				if(i.getEffects().get(ItemEffects.RESISTANCE) != null)
-					savebonus += i.getEffects().get(ItemEffects.RESISTANCE);
-				
-				ref.add(i.getName(), savebonus);
+				if(i.getEffects().get(ItemEffects.RESISTANCE) != null) {				
+					ref.add(i.getName(), i.getEffects().get(ItemEffects.RESISTANCE));
+				}
 			}
 		}
 		
-		return ref;
+		return this.getPfClass().modifyAttribute(Attributes.WILL, ref, this);
 	}
 	
 	public Calculation getFortitudeSave() {
@@ -625,12 +624,10 @@ public class PfCharacter implements Parcelable {
 		ref.add("Fortitude bonus", this.getPfClass().getFortSaveModifier(this.getLevel()), true);
 		
 		for(Item i : inventory) {
-			int savebonus = 0;
 			if(i.isEquiped()) {
-				if(i.getEffects().get(ItemEffects.RESISTANCE) != null)
-					savebonus += i.getEffects().get(ItemEffects.RESISTANCE);
-				
-				ref.add(i.getName(), savebonus);
+				if(i.getEffects().get(ItemEffects.RESISTANCE) != null) {				
+					ref.add(i.getName(), i.getEffects().get(ItemEffects.RESISTANCE));
+				}
 			}
 		}
 		

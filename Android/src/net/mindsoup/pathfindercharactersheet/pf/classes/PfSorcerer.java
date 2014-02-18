@@ -7,9 +7,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import net.mindsoup.pathfindercharactersheet.fragments.SpellbookFragment;
+import net.mindsoup.pathfindercharactersheet.pf.PfCharacter.Attributes;
+import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
+import net.mindsoup.pathfindercharactersheet.pf.util.Calculation;
 import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
 
 /**
@@ -111,6 +114,11 @@ public class PfSorcerer implements PfClass {
 		final Map<String, String> fragments = new HashMap<String, String>();
 		fragments.put("Spells", SpellbookFragment.class.getName());
 		return fragments;
+	}
+
+	@Override
+	public Calculation modifyAttribute(Attributes attribute, Calculation current, PfCharacter character) {
+		return current;
 	}
 
 }

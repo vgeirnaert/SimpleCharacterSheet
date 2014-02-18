@@ -350,6 +350,7 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	
 	@Override
 	protected void onSaveInstanceState(final Bundle outState) {
+		super.onSaveInstanceState(outState);
 		outState.putInt("currentItem", pager.getCurrentItem());
 	}
 

@@ -4,13 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 import net.mindsoup.pathfindercharactersheet.fragments.RageFragment;
+import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
+import net.mindsoup.pathfindercharactersheet.pf.PfCharacter.Attributes;
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
+import net.mindsoup.pathfindercharactersheet.pf.util.Calculation;
 import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
 
 public class PfBarbarian implements PfClass {
 	
+	private boolean isRaging = false;
 	private Dice hitDice = new Dice(12, 1);
 	
 	// class skills
@@ -83,6 +87,31 @@ public class PfBarbarian implements PfClass {
 		return fragments;
 	}
 
+	@SuppressWarnings("incomplete-switch")
+	@Override
+	public Calculation modifyAttribute(Attributes attribute, Calculation current, PfCharacter character) {
+		if(this.isRaging()) {
+			switch(attribute) {
+				case AC:
+					current.add("Rage", -2);
+					break;
+				case WILL:
+					current.add("Rage", 2);
+					break;
+				case HP:
+					current.add("Rage", 2 * character.getLevel());
+					break;
+			}
+		}
+		return current;
+	}
+
+	public boolean isRaging() {
+		return isRaging;
+	}
 	
+	public void setRaging(boolean rage) {
+		this.isRaging = rage;
+	}
 
 }

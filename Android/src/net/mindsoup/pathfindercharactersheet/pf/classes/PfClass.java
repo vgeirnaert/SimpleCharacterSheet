@@ -2,9 +2,11 @@ package net.mindsoup.pathfindercharactersheet.pf.classes;
 
 import java.util.Map;
 
+import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import net.mindsoup.pathfindercharactersheet.pf.PfClasses;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.skills.PfSkills;
+import net.mindsoup.pathfindercharactersheet.pf.util.Calculation;
 import net.mindsoup.pathfindercharactersheet.pf.util.Dice;
 
 public interface PfClass {
@@ -21,4 +23,6 @@ public interface PfClass {
 	public PfFeats[] getClassFeats();
 	public int getAttackBonus(int level);
 	public Map<String, String> getFragments();
+	
+	public Calculation modifyAttribute(PfCharacter.Attributes attribute, Calculation current, PfCharacter character);
 }

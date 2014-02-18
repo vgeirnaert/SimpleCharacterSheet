@@ -1,5 +1,7 @@
 package net.mindsoup.pathfindercharactersheet.fragments;
 
+import net.mindsoup.pathfindercharactersheet.CharacterActivity;
+import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
 import android.app.Activity;
 import android.os.Bundle;
 
@@ -33,5 +35,14 @@ public abstract class CharacterFragment extends SherlockFragment {
 		super.onDetach();
 		
 		//System.out.println("DETACHING " + this.toString());
+	}
+	
+	public PfCharacter getCharacter() {
+		CharacterActivity ca = (CharacterActivity)this.getActivity();
+		
+		if(ca != null)
+			return ca.getCharacter();
+		
+		return null;
 	}
 }

@@ -67,4 +67,8 @@ public class Calculation {
 		return explanation;
 	}
 	
+	public void remove(String name) {
+		values.remove(name);
+	}
+	
 }
