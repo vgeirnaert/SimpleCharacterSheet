@@ -467,7 +467,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		values.put(Db.CHAR_AVAILABLE_FEATS, character.getAvailableFeats());
 		values.put(Db.CHAR_XP, character.getXp());
 		values.put(Db.CHAR_MONEY, character.getMoney());
-		values.put(Db.CHAR_HITPOINTS, character.getMaxHitpoints().sum());
+		values.put(Db.CHAR_HITPOINTS, character.getBaseHitpoints());
 		values.put(Db.CHAR_NEWLEVELS, character.getNewLevels());
 		String whereClause = Db._ID + " = ?";
 		String[] whereArgs = {Long.toString(character.getId())};

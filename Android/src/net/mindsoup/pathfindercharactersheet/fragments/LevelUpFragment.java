@@ -98,7 +98,7 @@ public class LevelUpFragment extends SherlockDialogFragment {
 			hitpoints++;
         
         
-        character.setHitpoints(character.getMaxHitpoints().sum() + hitpoints);
+        character.setHitpoints(character.getBaseHitpoints() + hitpoints);
         character.setAvailableFeats(character.getAvailableFeats() + feat);
         character.setAvailableSkillRanks(character.getAvailableSkillRanks() + skillpoints);
         character.setNewLevels(character.getNewLevels() - 1);

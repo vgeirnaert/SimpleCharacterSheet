@@ -549,5 +549,11 @@
     <!-- RAGE -->
     <string name="rage">Rage</string>
     <string name="rage_clear">Clear</string>
+    
+    <string-array name="ragepowers">
+        <item>Guarded Stance</item>
+        <item>Lesser Elemental Rage</item>
+        <item>Surprise Accuracy</item>
+    </string-array>
 
 </resources>

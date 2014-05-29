@@ -19,6 +19,7 @@ public final class R {
         public static final int feat_names=0x7f0b0007;
         public static final int per_level=0x7f0b0006;
         public static final int races=0x7f0b0004;
+        public static final int ragepowers=0x7f0b000a;
         public static final int skill_names=0x7f0b0003;
         public static final int stats=0x7f0b0000;
     }

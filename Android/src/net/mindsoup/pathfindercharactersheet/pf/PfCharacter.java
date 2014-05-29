@@ -556,6 +556,10 @@ public class PfCharacter implements Parcelable {
 		return this.getPfClass().modifyAttribute(Attributes.HP, hp, this);
 	}
 	
+	public int getBaseHitpoints() {
+		return this.hitpoints;
+	}
+	
 	public void setHitpoints(int hitpoints) {
 		this.hitpoints = hitpoints;
 	}
@@ -1162,10 +1166,8 @@ public class PfCharacter implements Parcelable {
 	}
 
 	public void equipItem(Item item) {
-		unequipItem(item.getSlot());
-		
 		if(item.isEquiped()) {
-			item.unequip();
+			unequipItem(item.getSlot());
 		} else {			
 			item.equip();
 		}
