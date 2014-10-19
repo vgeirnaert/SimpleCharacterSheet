@@ -18,6 +18,8 @@ import android.widget.TextView;
 public class OverviewFragment extends CharacterFragment {
 	
 	private PfCharacter character;
+
+    private final static int[] abViews = new int[]{R.id.calc_mab0, R.id.calc_mab1, R.id.calc_mab2, R.id.calc_mab3};
 	
 	
 	@Override
@@ -59,7 +61,12 @@ public class OverviewFragment extends CharacterFragment {
 			calcView.setCalculation(character.getAC());
 			calcView.setText("");
 			
-			calcView = (CalculationView)getActivity().findViewById(R.id.calc_mab);
+
+            Calculation ab = new Calculation();
+            for(int i = 0; i < character.getNumAttacksPerRound(); i++) {
+                calcView = (CalculationView)getActivity().findViewById(abViews[i]);
+                calcView.setCalculation(character.getMeleeAttackBonus(i));
+            }
 			calcView.setCalculation(character.getMeleeAttackBonus(0));
 			calcView.setText("");
 			
