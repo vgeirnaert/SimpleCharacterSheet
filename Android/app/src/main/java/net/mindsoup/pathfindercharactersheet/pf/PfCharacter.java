@@ -472,7 +472,7 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public int getNumAttacksPerRound() {
-		return (int)Math.ceil((double)this.getLevel() / this.myClass.getExtraAttackPerNumLevels());
+		return (int)Math.floor( ((double)this.getLevel() / this.myClass.getExtraAttackPerNumLevels()) + 1);
 	}
 	
 	/**

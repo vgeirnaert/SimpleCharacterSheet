@@ -60,15 +60,12 @@ public class OverviewFragment extends CharacterFragment {
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_ac);
 			calcView.setCalculation(character.getAC());
 			calcView.setText("");
-			
 
-            Calculation ab = new Calculation();
             for(int i = 0; i < character.getNumAttacksPerRound(); i++) {
                 calcView = (CalculationView)getActivity().findViewById(abViews[i]);
                 calcView.setCalculation(character.getMeleeAttackBonus(i));
+                calcView.setText("");
             }
-			calcView.setCalculation(character.getMeleeAttackBonus(0));
-			calcView.setText("");
 			
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_rab);
 			calcView.setCalculation(character.getRangedAttackBonus(0));
