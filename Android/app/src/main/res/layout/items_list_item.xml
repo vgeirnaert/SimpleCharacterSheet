@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#eee"
+    	android:paddingLeft="@dimen/activity_horizontal_margin"
+    	android:paddingRight="@dimen/activity_horizontal_margin"
+    	android:paddingTop="@dimen/list_vertical_margin"
+    	android:paddingBottom="@dimen/list_vertical_margin" />
+    
+	<View
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dp"
+	    android:background="#666" />
+	
+	<LinearLayout
+        android:id="@+id/item_description_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical" >
+        
+	    <LinearLayout
+	        android:id="@+id/item_stats_group"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:weightSum="1.0" >
+	        
+	        <TextView
+		        android:id="@+id/item_weight"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="@dimen/activity_horizontal_margin"
+		    	android:paddingRight="@dimen/activity_horizontal_margin"
+		    	android:textSize="14sp"
+		    	android:textColor="#ccc"
+		    	android:layout_weight=".5" />
+	        
+	        <TextView
+		        android:id="@+id/item_value"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="@dimen/activity_horizontal_margin"
+		    	android:paddingRight="@dimen/activity_horizontal_margin"
+		    	android:textSize="14sp"
+		    	android:textColor="#ccc"
+		    	android:layout_weight=".5" />
+		</LinearLayout>
+		
+	    <View
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="#666" />
+      	
+	    <TextView
+	        android:id="@+id/item_description"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        
+	        android:paddingLeft="@dimen/activity_horizontal_margin"
+	    	android:paddingRight="@dimen/activity_horizontal_margin"
+	    	android:textSize="18sp"
+	    	android:textColor="#ccc" />
+	    
+	    <View
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="#666" />
+	    
+	    <LinearLayout
+	        android:id="@+id/item_actions_group"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:weightSum="1.0" >
+
+	    	<TextView
+		        android:id="@+id/item_equip"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="@dimen/activity_horizontal_margin"
+		    	android:paddingRight="@dimen/activity_horizontal_margin"
+		    	android:textSize="16sp"
+		    	android:textColor="#eee"
+		    	android:layout_weight=".5"
+		    	android:text="@string/equip_item" />
+	    	
+	    	<View
+			    android:layout_width="1dp"
+			    android:layout_height="fill_parent"
+			    android:background="#666" />
+	        
+	        <TextView
+		        android:id="@+id/item_delete"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingLeft="@dimen/activity_horizontal_margin"
+		    	android:paddingRight="@dimen/activity_horizontal_margin"
+		    	android:textSize="16sp"
+		    	android:textColor="#eee"
+		    	android:layout_weight=".5"
+		    	android:text="@string/delete_item" />
+		</LinearLayout>
+    </LinearLayout>
+</LinearLayout>

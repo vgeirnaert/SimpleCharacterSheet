@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#000" >
+    
+    <LinearLayout
+        android:id="@+id/available_feats_group" 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <Button
+	        android:id="@+id/add_feats_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/add_feat" />
+
+	    <TextView
+	        android:id="@+id/available_feats_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="22sp"
+	        android:textColor="#ff9900"
+	        android:paddingLeft="@dimen/activity_horizontal_margin"
+	    	android:paddingRight="@dimen/activity_horizontal_margin"
+	    	android:paddingTop="@dimen/list_vertical_margin"
+	    	android:paddingBottom="@dimen/list_vertical_margin" />
+	    
+    </LinearLayout>
+    <View
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dp"
+	    android:background="#999" />
+    
+	<ListView
+        android:id="@+id/feats_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="start"
+        android:choiceMode="none"
+        android:clickable="true"
+        android:divider="#666"
+        android:dividerHeight="2dp" />
+</LinearLayout>
