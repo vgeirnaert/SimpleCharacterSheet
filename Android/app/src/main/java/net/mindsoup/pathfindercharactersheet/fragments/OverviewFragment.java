@@ -66,7 +66,7 @@ public class OverviewFragment extends CharacterFragment {
                 calcView.setCalculation(character.getMeleeAttackBonus(i));
                 calcView.setText("");
             }
-			
+
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_rab);
 			calcView.setCalculation(character.getRangedAttackBonus(0));
 			calcView.setText("");
