@@ -1,8 +1,17 @@
 package net.mindsoup.pathfindercharactersheet.pf;
 
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfBarbarian;
+import net.mindsoup.pathfindercharactersheet.pf.classes.PfBard;
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
+import net.mindsoup.pathfindercharactersheet.pf.classes.PfCleric;
+import net.mindsoup.pathfindercharactersheet.pf.classes.PfDruid;
+import net.mindsoup.pathfindercharactersheet.pf.classes.PfFighter;
+import net.mindsoup.pathfindercharactersheet.pf.classes.PfMonk;
+import net.mindsoup.pathfindercharactersheet.pf.classes.PfPaladin;
+import net.mindsoup.pathfindercharactersheet.pf.classes.PfRanger;
+import net.mindsoup.pathfindercharactersheet.pf.classes.PfRogue;
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfSorcerer;
+import net.mindsoup.pathfindercharactersheet.pf.classes.PfWizard;
 
 public enum PfClasses {
 	BARBARIAN, BARD, CLERIC, DRUID, FIGHTER, MONK, PALADIN, RANGER, ROGUE, SORCERER, WIZARD;
@@ -26,16 +35,16 @@ public enum PfClasses {
 	public static PfClass getPfClass(PfClasses pfClass) {
 		switch(pfClass) {
 			case BARBARIAN: return new PfBarbarian();
-			case BARD: return new PfBarbarian(); 
-			case CLERIC: return new PfBarbarian(); 
-			case DRUID: return new PfBarbarian(); 
-			case FIGHTER: return new PfBarbarian(); 
-			case MONK: return new PfBarbarian(); 
-			case PALADIN: return new PfBarbarian(); 
-			case RANGER: return new PfBarbarian(); 
-			case ROGUE: return new PfBarbarian(); 
-			case SORCERER: return new PfSorcerer(); 
-			default: return new PfBarbarian(); // wizard
+			case BARD: return new PfBard();
+			case CLERIC: return new PfCleric();
+			case DRUID: return new PfDruid();
+			case FIGHTER: return new PfFighter();
+			case MONK: return new PfMonk();
+			case PALADIN: return new PfPaladin();
+			case RANGER: return new PfRanger();
+			case ROGUE: return new PfRogue();
+			case SORCERER: return new PfSorcerer();
+            default: return new PfWizard(); // wizard
 		}
 	}
 }

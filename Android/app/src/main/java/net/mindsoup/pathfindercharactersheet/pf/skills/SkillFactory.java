@@ -50,7 +50,7 @@ public class SkillFactory {
 			return new PfSkill(type, PfAttributes.INT, false, false);
 		case KNOWLEDGE_PLANES:
 			return new PfSkill(type, PfAttributes.INT, false, false);
-		case KNOWLEDGE_RELEIGION:
+		case KNOWLEDGE_RELIGION:
 			return new PfSkill(type, PfAttributes.INT, false, false);
 		case LINGUISTICS:
 			return new PfSkill(type, PfAttributes.DEX, false, false);
