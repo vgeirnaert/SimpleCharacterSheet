@@ -599,6 +599,9 @@ public class PfCharacter implements Parcelable {
 		int sizeBonus = this.getSizeCMBModifier() * -1;
 		ac.add("Size", sizeBonus);
 		ac.add("Dexterity bonus", Math.min(this.getAttributeBonus(this.getDexterity()), getMaxDexBonus()) );
+
+        if(this.hasFeat(PfFeats.DODGE))
+            ac.add("Dodge", 1);
 		
 		for(Item i : inventory) {
 			int acbonus = 0;
