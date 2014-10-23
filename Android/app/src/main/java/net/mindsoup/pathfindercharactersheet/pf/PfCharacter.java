@@ -12,6 +12,7 @@ import java.util.Set;
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
 import net.mindsoup.pathfindercharactersheet.pf.feats.FeatFactory;
+import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeat;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.items.Item;
 import net.mindsoup.pathfindercharactersheet.pf.items.ItemEffects;
@@ -618,6 +619,9 @@ public class PfCharacter implements Parcelable {
 		Calculation ref = new Calculation();
 		ref.add("DEX bonus",  this.getAttributeBonus(this.getDexterity()));
 		ref.add("Reflex bonus", this.getPfClass().getReflexSaveModifier(this.getLevel()), true);
+
+        if(this.hasFeat(PfFeats.LIGHTNING_REFLEXES))
+            ref.add("Lightning Reflexes", 2);
 		
 		for(Item i : inventory) {
 			if(i.isEquiped()) {
@@ -634,6 +638,9 @@ public class PfCharacter implements Parcelable {
 		Calculation ref = new Calculation();
 		ref.add("WIS bonus",  this.getAttributeBonus(this.getWisdom()));
 		ref.add("Will bonus", this.getPfClass().getWillSaveModifier(this.getLevel()), true);
+
+        if(this.hasFeat(PfFeats.IRON_WILL))
+            ref.add("Iron Will", 2);
 		
 		for(Item i : inventory) {
 			if(i.isEquiped()) {
@@ -650,6 +657,9 @@ public class PfCharacter implements Parcelable {
 		Calculation ref = new Calculation();
 		ref.add("CON bonus",  this.getAttributeBonus(this.getConstitution()));
 		ref.add("Fortitude bonus", this.getPfClass().getFortSaveModifier(this.getLevel()), true);
+
+        if(this.hasFeat(PfFeats.GREAT_FORTITUDE))
+            ref.add("Great Fortitude", 2);
 		
 		for(Item i : inventory) {
 			if(i.isEquiped()) {
@@ -965,32 +975,35 @@ public class PfCharacter implements Parcelable {
 				}
 			}
 		}
-		
+
+        int bonus = 2;
+        if(skill.getRank() > 9) {
+            bonus = 4;
+        }
 		
 		// feats
-		// Acrobatic feat
-		if(feats.contains(PfFeats.ACROBATIC) && (type == PfSkills.ACROBATICS || type == PfSkills.FLY))
-			trainedBonus.add("Acrobatic", 2);
-		
-		// Alertness feat
-		if(feats.contains(PfFeats.ALERTNESS) && (type == PfSkills.PERCEPTION || type == PfSkills.SENSE_MOTIVE))
-			trainedBonus.add("Alertness", 2);
-		
-		// Animal Affinity feat
-		if(feats.contains(PfFeats.ANIMAL_AFFINITY) && (type == PfSkills.HANDLE_ANIMAL || type == PfSkills.RIDE))
-			trainedBonus.add("Animal Affinity", 2);
-		
-		// Athletic feat
-		if(feats.contains(PfFeats.ATHLETIC) && (type == PfSkills.CLIMB || type == PfSkills.SWIM))
-			trainedBonus.add("Athletic", 2);
-		
-		// Intimidating prowess
-		if(skill.getType() == PfSkills.INTIMIDATE && this.hasFeat(PfFeats.INTIMIDATING_PROWESS))
+		if(feats.contains(PfFeats.ACROBATIC) && (type == PfSkills.ACROBATICS || type == PfSkills.FLY)) // Acrobatic feat
+			trainedBonus.add("Acrobatic", bonus);
+		else if(feats.contains(PfFeats.ALERTNESS) && (type == PfSkills.PERCEPTION || type == PfSkills.SENSE_MOTIVE)) // Alertness feat
+			trainedBonus.add("Alertness", bonus);
+        else if(feats.contains(PfFeats.ANIMAL_AFFINITY) && (type == PfSkills.HANDLE_ANIMAL || type == PfSkills.RIDE)) // Animal Affinity feat
+			trainedBonus.add("Animal Affinity", bonus);
+        else if(feats.contains(PfFeats.ATHLETIC) && (type == PfSkills.CLIMB || type == PfSkills.SWIM)) // Athletic feat
+			trainedBonus.add("Athletic", bonus);
+        else if(feats.contains(PfFeats.DECEITFUL) && (type == PfSkills.BLUFF || type == PfSkills.DISGUISE)) // Deceitful feat
+            trainedBonus.add("Deceitful", bonus);
+        else if(feats.contains(PfFeats.DEFT_HANDS) && (type == PfSkills.DISABLE_DEVICE || type == PfSkills.SLEIGHT_OF_HAND))
+            trainedBonus.add("Deft Hands", bonus);
+        else if(skill.getType() == PfSkills.INTIMIDATE && this.hasFeat(PfFeats.INTIMIDATING_PROWESS)) // Intimidating prowess
 			trainedBonus.add("Intimidating Prowess", this.getAttributeBonus(this.getAttributeValue(PfAttributes.STR)));
-		
-		// Persuasive feat
-		if(feats.contains(PfFeats.PERSUASIVE) && (type == PfSkills.DIPLOMACY || type == PfSkills.INTIMIDATE))
-			trainedBonus.add("Persuasive", 2);
+        else if(feats.contains(PfFeats.MAGICAL_APTITUDE) && (type == PfSkills.SPELLCRAFT || type == PfSkills.USE_MAGIC_DEVICE))
+            trainedBonus.add("Magical Aptitude", bonus);
+        else if(feats.contains(PfFeats.PERSUASIVE) && (type == PfSkills.DIPLOMACY || type == PfSkills.INTIMIDATE)) // Persuasive feat
+			trainedBonus.add("Persuasive", bonus);
+        else if(feats.contains(PfFeats.SELF_SUFFICIENT) && (type == PfSkills.HEAL || type == PfSkills.SURVIVAL))
+            trainedBonus.add("Self Sufficient", bonus);
+        else if(feats.contains(PfFeats.STEALTHY) && (type == PfSkills.ESCAPE_ARTIST || type == PfSkills.STEALTH))
+            trainedBonus.add("Stealthy", bonus);
 		
 		return trainedBonus;
 	}

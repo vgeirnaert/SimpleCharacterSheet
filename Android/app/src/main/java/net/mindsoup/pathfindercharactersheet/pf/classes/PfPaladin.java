@@ -62,7 +62,7 @@ public class PfPaladin implements PfClass {
 
     @Override
     public int getAttackBonus(int level) {
-        return 0;
+        return level;
     }
 
     @Override
