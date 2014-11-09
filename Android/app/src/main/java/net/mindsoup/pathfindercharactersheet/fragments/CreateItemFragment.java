@@ -178,7 +178,13 @@ public class CreateItemFragment extends SherlockDialogFragment {
 		i.setStackSize(amount);
 		i.setValue(value);
 		i.setWeight(weight);
-		i.addEffect(effect, effectValue);
+
+        if(effect == ItemEffects.AB_AND_DAMAGE) {
+            i.addEffect(ItemEffects.ATTACK_BONUS, effectValue);
+            i.addEffect(ItemEffects.DAMAGE_BONUS, effectValue);
+        } else {
+            i.addEffect(effect, effectValue);
+        }
 		i.setSlot(slot);
 		activity.addItem(i);
 		

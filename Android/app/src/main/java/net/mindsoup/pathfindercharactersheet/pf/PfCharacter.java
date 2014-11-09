@@ -753,8 +753,20 @@ public class PfCharacter implements Parcelable {
 				throw new RuntimeException("Invalid character size!");
 		}
 	}
+
+    public Calculation getDamageBonus() {
+        Calculation damageBonus = new Calculation();
+        for(Item i : inventory) {
+            if(i.getEffects().size() > 0 && i.isEquiped()) {
+                if(i.getEffects().get(ItemEffects.DAMAGE_BONUS) != null)
+                    damageBonus.add(i.getName(), i.getEffects().get(ItemEffects.DAMAGE_BONUS));
+            }
+        }
+
+        return damageBonus;
+    }
 	
-	public int getDamageModifier() {
+	public Calculation getDamageModifier() {
 		double multiplier = 1.0;
 		
 		for(Item i : inventory) {
@@ -763,8 +775,12 @@ public class PfCharacter implements Parcelable {
 					multiplier = 1.5;
 			}
 		}
+
+        Calculation damageModifier = new Calculation();
 			
-		return (int)Math.floor(this.getAttributeBonus(this.getStrength()) * multiplier);
+		damageModifier.add("STR bonus", (int)Math.floor(this.getAttributeBonus(this.getStrength()) * multiplier));
+        damageModifier.add(this.getDamageBonus());
+        return damageModifier;
 	}
 	
 	public int getAvailableFeats() {

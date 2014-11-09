@@ -103,7 +103,7 @@ public class OverviewFragment extends CharacterFragment {
 				if(i.isEquiped()) {
 					if(i.getType() == ItemType.WEAPON) {
 						Weapon w = (Weapon)i;
-						stats += w.getName() + " " + w.getDamage().toString() + "+" + character.getDamageModifier() + "<br>";
+						stats += w.getName() + " " + w.getDamage().toString() + "+" + character.getDamageModifier().sum() + "<br>";
 					} else {
 						stats += i.getName() + "<br>";
 					}
