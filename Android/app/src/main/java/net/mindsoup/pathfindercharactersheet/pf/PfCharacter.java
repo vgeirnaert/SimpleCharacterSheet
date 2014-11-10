@@ -174,7 +174,7 @@ public class PfCharacter implements Parcelable {
 		Calculation c = new Calculation();
 		c.add("Constitution",  this.constitution);
 		c.add("Racial modifier", myRace.getConModifier());
-		c.add("Temporary bonus", getTempConBoost());
+		c.add(getTempConBoost());
 		
 		return c;
 	}
@@ -191,7 +191,15 @@ public class PfCharacter implements Parcelable {
 		Calculation c = new Calculation();
 		c.add("Strength",  this.strength);
 		c.add("Racial modifier", myRace.getStrModifier());
-		c.add("Temporary bonus", getTempStrBoost());
+		c.add(getTempStrBoost());
+
+        for(Item i : inventory) {
+            if(i.isEquiped()) {
+                if(i.getEffects().get(ItemEffects.STR_BONUS) != null) {
+                    c.add(i.getName(), i.getEffects().get(ItemEffects.STR_BONUS));
+                }
+            }
+        }
 		
 		return c;
 	}
@@ -208,7 +216,15 @@ public class PfCharacter implements Parcelable {
 		Calculation c = new Calculation();
 		c.add("Dexterity",  this.dexterity);
 		c.add("Racial modifier", myRace.getDexModifier());
-		c.add("Temporary bonus", getTempDexBoost());
+		c.add(getTempDexBoost());
+
+        for(Item i : inventory) {
+            if(i.isEquiped()) {
+                if(i.getEffects().get(ItemEffects.DEX_BONUS) != null) {
+                    c.add(i.getName(), i.getEffects().get(ItemEffects.DEX_BONUS));
+                }
+            }
+        }
 		
 		return c;
 	}
@@ -225,7 +241,15 @@ public class PfCharacter implements Parcelable {
 		Calculation c = new Calculation();
 		c.add("Intelligence",  this.intelligence);
 		c.add("Racial modifier", myRace.getIntModifier());
-		c.add("Temporary bonus", getTempIntBoost());
+		c.add(getTempIntBoost());
+
+        for(Item i : inventory) {
+            if(i.isEquiped()) {
+                if(i.getEffects().get(ItemEffects.INT_BONUS) != null) {
+                    c.add(i.getName(), i.getEffects().get(ItemEffects.INT_BONUS));
+                }
+            }
+        }
 		
 		return c;
 	}
@@ -242,8 +266,8 @@ public class PfCharacter implements Parcelable {
 		Calculation c = new Calculation();
 		c.add("Wisdom",  this.wisdom);
 		c.add("Racial modifier", myRace.getWisModifier());
-		c.add("Temporary bonus", getTempWisBoost());
-		
+		c.add(getTempWisBoost());
+
 		return c;
 	}
 	
@@ -285,8 +309,8 @@ public class PfCharacter implements Parcelable {
 		Calculation c = new Calculation();
 		c.add("Charisma",  this.charisma);
 		c.add("Racial modifier", myRace.getChaModifier());
-		c.add("Temporary bonus", getTempChaBoost());
-		
+		c.add(getTempChaBoost());
+
 		return c;
 	}
 	
@@ -294,64 +318,130 @@ public class PfCharacter implements Parcelable {
 		this.tempCon = boost;
 	}
 	
-	public int getTempConBoost() {
-		return this.tempCon;
+	public Calculation getTempConBoost() {
+        Calculation c = new Calculation();
+        c.add("Temp boost", this.tempCon);
+
+        for(Item i : inventory) {
+            if(i.isEquiped()) {
+                if(i.getEffects().get(ItemEffects.CON_BONUS) != null) {
+                    c.add(i.getName(), i.getEffects().get(ItemEffects.CON_BONUS));
+                }
+            }
+        }
+
+        return c;
 	}
 	
 	public void setTempChaBoost(int boost) {
 		this.tempCha = boost;
 	}
 	
-	public int getTempChaBoost() {
-		return this.tempCha;
+	public Calculation getTempChaBoost() {
+        Calculation c = new Calculation();
+        c.add("Temp boost", this.tempCha);
+
+        for(Item i : inventory) {
+            if(i.isEquiped()) {
+                if(i.getEffects().get(ItemEffects.CHA_BONUS) != null) {
+                    c.add(i.getName(), i.getEffects().get(ItemEffects.CHA_BONUS));
+                }
+            }
+        }
+
+		return c;
 	}
 	
 	public void setTempDexBoost(int boost) {
 		this.tempDex = boost;
 	}
 	
-	public int getTempDexBoost() {
-		return this.tempDex;
+	public Calculation getTempDexBoost() {
+        Calculation c = new Calculation();
+        c.add("Temp boost", this.tempDex);
+
+        for(Item i : inventory) {
+            if(i.isEquiped()) {
+                if(i.getEffects().get(ItemEffects.DEX_BONUS) != null) {
+                    c.add(i.getName(), i.getEffects().get(ItemEffects.DEX_BONUS));
+                }
+            }
+        }
+
+        return c;
 	}
 	
 	public void setTempIntBoost(int boost) {
 		this.tempInt = boost;
 	}
 	
-	public int getTempIntBoost() {
-		return this.tempInt;
+	public Calculation getTempIntBoost() {
+        Calculation c = new Calculation();
+        c.add("Temp boost", this.tempInt);
+
+        for(Item i : inventory) {
+            if(i.isEquiped()) {
+                if(i.getEffects().get(ItemEffects.INT_BONUS) != null) {
+                    c.add(i.getName(), i.getEffects().get(ItemEffects.INT_BONUS));
+                }
+            }
+        }
+
+        return c;
 	}
 	
 	public void setTempStrBoost(int boost) {
 		this.tempStr = boost;
 	}
 	
-	public int getTempStrBoost() {
-		return this.tempStr;
+	public Calculation getTempStrBoost() {
+        Calculation c = new Calculation();
+        c.add("Temp boost", this.tempStr);
+
+        for(Item i : inventory) {
+            if(i.isEquiped()) {
+                if(i.getEffects().get(ItemEffects.STR_BONUS) != null) {
+                    c.add(i.getName(), i.getEffects().get(ItemEffects.STR_BONUS));
+                }
+            }
+        }
+
+        return c;
 	}
 	
 	public void setTempWisBoost(int boost) {
 		this.tempWis = boost;
 	}
 	
-	public int getTempWisBoost() {
-		return this.tempWis;
+	public Calculation getTempWisBoost() {
+        Calculation c = new Calculation();
+        c.add("Temp boost", this.tempWis);
+
+        for(Item i : inventory) {
+            if(i.isEquiped()) {
+                if(i.getEffects().get(ItemEffects.WIS_BONUS) != null) {
+                    c.add(i.getName(), i.getEffects().get(ItemEffects.WIS_BONUS));
+                }
+            }
+        }
+
+        return c;
 	}
 	
-	public int getTempBoostFor(PfAttributes attribute) {
+	public Calculation getTempBoostFor(PfAttributes attribute) {
 		switch(attribute) {
 		case CHA:
-			return this.tempCha;
+			return this.getTempChaBoost();
 		case CON:
-			return this.tempCon;
+			return this.getTempConBoost();
 		case DEX:
-			return this.tempDex;
+			return this.getTempDexBoost();
 		case INT:
-			return this.tempInt;
+			return this.getTempIntBoost();
 		case STR:
-			return this.tempStr;
+			return this.getTempStrBoost();
 		case WIS:
-			return this.tempWis;
+			return this.getTempWisBoost();
 		default:
 			throw new RuntimeException("Invalid attribute. This should never happen!");
 		}

@@ -5,6 +5,7 @@ package net.mindsoup.pathfindercharactersheet.adapters;
 
 import net.mindsoup.pathfindercharactersheet.pf.PfAttributes;
 import net.mindsoup.pathfindercharactersheet.pf.PfCharacter;
+import net.mindsoup.pathfindercharactersheet.pf.util.Calculation;
 
 /**
  * @author Valentijn
@@ -48,11 +49,11 @@ public class CharacterAttributeAdapter {
 	}
 	
 	public int getValue() {
-		return character.getAttributeValue(this.attribute).sum() - character.getTempBoostFor(attribute);
+		return character.getAttributeValue(this.attribute).sum() - character.getTempBoostFor(attribute).sum();
 	}
 	
 	public int getBonus() {
-		return character.getAttributeBonus(character.getAttributeValue(this.attribute).sum() - character.getTempBoostFor(attribute));
+		return character.getAttributeBonus(character.getAttributeValue(this.attribute).sum() - character.getTempBoostFor(attribute).sum());
 	}
 	
 	public void setTempValue(int value) {

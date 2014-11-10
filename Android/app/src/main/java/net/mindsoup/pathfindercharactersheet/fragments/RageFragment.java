@@ -41,12 +41,12 @@ public class RageFragment extends CharacterFragment {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if(isChecked) {
 					((PfBarbarian)character.getPfClass()).setRaging(true);
-					character.setTempStrBoost(character.getTempStrBoost() + 4);
-					character.setTempConBoost(character.getTempConBoost() + 4);
+					character.setTempStrBoost(character.getTempStrBoost().sum() + 4);
+					character.setTempConBoost(character.getTempConBoost().sum() + 4);
 				} else {
 					((PfBarbarian)character.getPfClass()).setRaging(false);
-					character.setTempStrBoost(character.getTempStrBoost() - 4);
-					character.setTempConBoost(character.getTempConBoost() - 4);
+					character.setTempStrBoost(character.getTempStrBoost().sum() - 4);
+					character.setTempConBoost(character.getTempConBoost().sum() - 4);
 				}
 				
 				activity.updateCharacter(false);

@@ -25,7 +25,7 @@ import com.actionbarsherlock.internal.widget.IcsSpinner;
  */
 public class AttributeListAdapter extends ArrayAdapter<CharacterAttributeAdapter> {
 	
-	private final String[] attributeValues = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28"};
+	private final String[] attributeValues = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"};
 	
 	private ArrayList<CharacterAttributeAdapter> attributes;
 	private int viewResourceId;
@@ -45,7 +45,7 @@ public class AttributeListAdapter extends ArrayAdapter<CharacterAttributeAdapter
         
         TextView tv = (TextView)convertView.findViewById(R.id.attribute_name);
         tv.setText(attributes.get(attributePosition).getAttribute().toString());
-        
+
         tv = (TextView)convertView.findViewById(R.id.attribute_bonus);
         tv.setText(Integer.toString(attributes.get(attributePosition).getBonus()));
         

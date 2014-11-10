@@ -14,7 +14,8 @@ public enum ItemSlots {
 	SHIELD,	// shields
 	SHOULDERS,	// capes, cloaks
 	WEAPON, // weapons of all kinds
-	WRIST;	// bracers, bracelets
+	WRIST,	// bracers, bracelets
+    WAIST; // belts
 	
 	public static ItemSlots getItemSlot(int i) {
 		return ItemSlots.values()[i];
