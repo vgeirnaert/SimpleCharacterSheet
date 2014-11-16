@@ -49,11 +49,11 @@ public class CharacterAttributeAdapter {
 	}
 	
 	public int getValue() {
-		return character.getAttributeValue(this.attribute).sum() - character.getTempBoostFor(attribute).sum();
+		return character.getAttributeValue(this.attribute).sum() - character.getTempBoostFor(attribute).sum() - character.getItemBoostFor(attribute).sum();
 	}
 	
 	public int getBonus() {
-		return character.getAttributeBonus(character.getAttributeValue(this.attribute).sum() - character.getTempBoostFor(attribute).sum());
+		return character.getAttributeBonus(this.getValue());
 	}
 	
 	public void setTempValue(int value) {

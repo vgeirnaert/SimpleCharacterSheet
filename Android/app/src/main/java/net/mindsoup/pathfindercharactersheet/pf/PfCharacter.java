@@ -12,7 +12,6 @@ import java.util.Set;
 import net.mindsoup.pathfindercharactersheet.R;
 import net.mindsoup.pathfindercharactersheet.pf.classes.PfClass;
 import net.mindsoup.pathfindercharactersheet.pf.feats.FeatFactory;
-import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeat;
 import net.mindsoup.pathfindercharactersheet.pf.feats.PfFeats;
 import net.mindsoup.pathfindercharactersheet.pf.items.Item;
 import net.mindsoup.pathfindercharactersheet.pf.items.ItemEffects;
@@ -166,7 +165,7 @@ public class PfCharacter implements Parcelable {
 		this.constitution = argCon;
 	}
 	
-	public int getBaseConsistution() {
+	public int getBaseConstitution() {
 		return this.constitution;
 	}
 	
@@ -175,6 +174,7 @@ public class PfCharacter implements Parcelable {
 		c.add("Constitution",  this.constitution);
 		c.add("Racial modifier", myRace.getConModifier());
 		c.add(getTempConBoost());
+        c.add(getItemBoostFor(PfAttributes.CON));
 		
 		return c;
 	}
@@ -192,14 +192,7 @@ public class PfCharacter implements Parcelable {
 		c.add("Strength",  this.strength);
 		c.add("Racial modifier", myRace.getStrModifier());
 		c.add(getTempStrBoost());
-
-        for(Item i : inventory) {
-            if(i.isEquiped()) {
-                if(i.getEffects().get(ItemEffects.STR_BONUS) != null) {
-                    c.add(i.getName(), i.getEffects().get(ItemEffects.STR_BONUS));
-                }
-            }
-        }
+        c.add(getItemBoostFor(PfAttributes.STR));
 		
 		return c;
 	}
@@ -217,14 +210,7 @@ public class PfCharacter implements Parcelable {
 		c.add("Dexterity",  this.dexterity);
 		c.add("Racial modifier", myRace.getDexModifier());
 		c.add(getTempDexBoost());
-
-        for(Item i : inventory) {
-            if(i.isEquiped()) {
-                if(i.getEffects().get(ItemEffects.DEX_BONUS) != null) {
-                    c.add(i.getName(), i.getEffects().get(ItemEffects.DEX_BONUS));
-                }
-            }
-        }
+        c.add(getItemBoostFor(PfAttributes.DEX));
 		
 		return c;
 	}
@@ -242,14 +228,7 @@ public class PfCharacter implements Parcelable {
 		c.add("Intelligence",  this.intelligence);
 		c.add("Racial modifier", myRace.getIntModifier());
 		c.add(getTempIntBoost());
-
-        for(Item i : inventory) {
-            if(i.isEquiped()) {
-                if(i.getEffects().get(ItemEffects.INT_BONUS) != null) {
-                    c.add(i.getName(), i.getEffects().get(ItemEffects.INT_BONUS));
-                }
-            }
-        }
+        c.add(getItemBoostFor(PfAttributes.INT));
 		
 		return c;
 	}
@@ -267,6 +246,7 @@ public class PfCharacter implements Parcelable {
 		c.add("Wisdom",  this.wisdom);
 		c.add("Racial modifier", myRace.getWisModifier());
 		c.add(getTempWisBoost());
+        c.add(getItemBoostFor(PfAttributes.WIS));
 
 		return c;
 	}
@@ -276,7 +256,7 @@ public class PfCharacter implements Parcelable {
 		case CHA:
 			return getBaseCharisma();
 		case CON:
-			return getBaseConsistution();
+			return getBaseConstitution();
 		case DEX:
 			return getBaseDexterity();
 		case INT:
@@ -310,6 +290,7 @@ public class PfCharacter implements Parcelable {
 		c.add("Charisma",  this.charisma);
 		c.add("Racial modifier", myRace.getChaModifier());
 		c.add(getTempChaBoost());
+        c.add(getItemBoostFor(PfAttributes.CHA));
 
 		return c;
 	}
@@ -322,14 +303,6 @@ public class PfCharacter implements Parcelable {
         Calculation c = new Calculation();
         c.add("Temp boost", this.tempCon);
 
-        for(Item i : inventory) {
-            if(i.isEquiped()) {
-                if(i.getEffects().get(ItemEffects.CON_BONUS) != null) {
-                    c.add(i.getName(), i.getEffects().get(ItemEffects.CON_BONUS));
-                }
-            }
-        }
-
         return c;
 	}
 	
@@ -340,14 +313,6 @@ public class PfCharacter implements Parcelable {
 	public Calculation getTempChaBoost() {
         Calculation c = new Calculation();
         c.add("Temp boost", this.tempCha);
-
-        for(Item i : inventory) {
-            if(i.isEquiped()) {
-                if(i.getEffects().get(ItemEffects.CHA_BONUS) != null) {
-                    c.add(i.getName(), i.getEffects().get(ItemEffects.CHA_BONUS));
-                }
-            }
-        }
 
 		return c;
 	}
@@ -360,14 +325,6 @@ public class PfCharacter implements Parcelable {
         Calculation c = new Calculation();
         c.add("Temp boost", this.tempDex);
 
-        for(Item i : inventory) {
-            if(i.isEquiped()) {
-                if(i.getEffects().get(ItemEffects.DEX_BONUS) != null) {
-                    c.add(i.getName(), i.getEffects().get(ItemEffects.DEX_BONUS));
-                }
-            }
-        }
-
         return c;
 	}
 	
@@ -378,14 +335,6 @@ public class PfCharacter implements Parcelable {
 	public Calculation getTempIntBoost() {
         Calculation c = new Calculation();
         c.add("Temp boost", this.tempInt);
-
-        for(Item i : inventory) {
-            if(i.isEquiped()) {
-                if(i.getEffects().get(ItemEffects.INT_BONUS) != null) {
-                    c.add(i.getName(), i.getEffects().get(ItemEffects.INT_BONUS));
-                }
-            }
-        }
 
         return c;
 	}
@@ -398,14 +347,6 @@ public class PfCharacter implements Parcelable {
         Calculation c = new Calculation();
         c.add("Temp boost", this.tempStr);
 
-        for(Item i : inventory) {
-            if(i.isEquiped()) {
-                if(i.getEffects().get(ItemEffects.STR_BONUS) != null) {
-                    c.add(i.getName(), i.getEffects().get(ItemEffects.STR_BONUS));
-                }
-            }
-        }
-
         return c;
 	}
 	
@@ -417,16 +358,40 @@ public class PfCharacter implements Parcelable {
         Calculation c = new Calculation();
         c.add("Temp boost", this.tempWis);
 
+        return c;
+	}
+
+    public Calculation getItemBoostFor(PfAttributes attribute) {
+        ItemEffects effect = ItemEffects.CHA_BONUS;
+        switch (attribute) {
+            case CON:
+                effect = ItemEffects.CON_BONUS;
+                break;
+            case DEX:
+                effect = ItemEffects.DEX_BONUS;
+                break;
+            case INT:
+                effect = ItemEffects.INT_BONUS;
+                break;
+            case STR:
+                effect = ItemEffects.STR_BONUS;
+                break;
+            case WIS:
+                effect = ItemEffects.WIS_BONUS;
+                break;
+        }
+
+        Calculation c = new Calculation();
         for(Item i : inventory) {
             if(i.isEquiped()) {
-                if(i.getEffects().get(ItemEffects.WIS_BONUS) != null) {
-                    c.add(i.getName(), i.getEffects().get(ItemEffects.WIS_BONUS));
+                if(i.getEffects().get(effect) != null) {
+                    c.add(i.getName(), i.getEffects().get(effect));
                 }
             }
         }
 
         return c;
-	}
+    }
 	
 	public Calculation getTempBoostFor(PfAttributes attribute) {
 		switch(attribute) {

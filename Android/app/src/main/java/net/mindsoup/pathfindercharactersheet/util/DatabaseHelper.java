@@ -458,7 +458,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		SQLiteDatabase db = this.getWritableDatabase();
 		ContentValues values = new ContentValues();
 		values.put(Db.CHAR_CHA, character.getBaseCharisma());
-		values.put(Db.CHAR_CON, character.getBaseConsistution());
+		values.put(Db.CHAR_CON, character.getBaseConstitution());
 		values.put(Db.CHAR_DEX, character.getBaseDexterity());
 		values.put(Db.CHAR_INT, character.getBaseIntelligence());
 		values.put(Db.CHAR_STR, character.getBaseStrength());

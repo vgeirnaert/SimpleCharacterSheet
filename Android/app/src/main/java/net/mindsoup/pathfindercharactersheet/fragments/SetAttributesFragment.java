@@ -37,7 +37,7 @@ public class SetAttributesFragment extends SherlockDialogFragment {
         et.setText(Integer.toString(character.getBaseCharisma()));
         
         et = (EditText)view.findViewById(R.id.edit_con);
-        et.setText(Integer.toString(character.getBaseConsistution()));
+        et.setText(Integer.toString(character.getBaseConstitution()));
         
         et = (EditText)view.findViewById(R.id.edit_dex);
         et.setText(Integer.toString(character.getBaseDexterity()));
