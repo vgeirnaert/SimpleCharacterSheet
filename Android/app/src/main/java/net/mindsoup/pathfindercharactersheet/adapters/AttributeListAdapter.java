@@ -75,7 +75,7 @@ public class AttributeListAdapter extends ArrayAdapter<CharacterAttributeAdapter
         
         spinner = (IcsSpinner)convertView.findViewById(R.id.edit_temp_attribute);
         spinner.setAdapter(new ArrayAdapter<String>(this.getContext(),R.layout.attribute_spinner_blue, attributeValues));
-        spinner.setSelection(attributes.get(attributePosition).getTempValue());
+        spinner.setSelection(attributes.get(attributePosition).getTotalValue());
         spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 			@Override
@@ -83,8 +83,8 @@ public class AttributeListAdapter extends ArrayAdapter<CharacterAttributeAdapter
 				CharacterAttributeAdapter caa = attributes.get(attributePosition);
 				
 				// if we have changed the value of our attribute
-				if(caa.getTempValue() != position) {
-					caa.setTempValue(position - caa.getValue());
+				if(caa.getTotalValue() != position) {
+					caa.setTempValue(position - caa.getTotalValue() + caa.getTempValue());
 					((CharacterActivity)getActivity()).updateCharacter(false);
 				}
 			}

@@ -80,11 +80,15 @@ public class CharacterAttributeAdapter {
 	}
 	
 	public int getTempValue() {
-		return character.getAttributeValue(attribute).sum();
+        return character.getTempBoostFor(attribute).sum();
 	}
+
+    public int getTotalValue() {
+        return character.getAttributeValue(attribute).sum();
+    }
 	
 	public int getTempBonus() {
-		return character.getAttributeBonus(this.getTempValue());
+		return character.getAttributeBonus(this.getTotalValue());
 	}
 
 }
