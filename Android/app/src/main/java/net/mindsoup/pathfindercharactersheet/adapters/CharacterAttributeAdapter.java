@@ -78,10 +78,6 @@ public class CharacterAttributeAdapter {
 			break;		
 		}
 	}
-	
-	public int getTempValue() {
-        return character.getTempBoostFor(attribute).sum();
-	}
 
     public Calculation getTotalValue() {
         return character.getAttributeValue(attribute);

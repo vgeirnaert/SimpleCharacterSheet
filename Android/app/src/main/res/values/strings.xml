@@ -55,7 +55,7 @@
         <item>Attributes</item>
         <item>Skills</item>
         <item>Feats</item>
-        <item>Equipment</item>
+        <!--<item>Equipment</item>-->
         <item>Inventory</item>
         <item>Character Info</item>
     </string-array>

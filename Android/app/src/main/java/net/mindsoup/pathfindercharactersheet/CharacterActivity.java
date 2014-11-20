@@ -93,7 +93,7 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, AttributesFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, SkillsFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, FeatsFragment.class.getName()));
-		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, EquipmentFragment.class.getName()));
+		//fragments.add((SherlockFragment)SherlockFragment.instantiate(this, EquipmentFragment.class.getName()));
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, InventoryFragment.class.getName()));	
 		fragments.add((SherlockFragment)SherlockFragment.instantiate(this, CharacterInfoFragment.class.getName()));
 		for(String name : character.getPfClass().getFragments().values())
