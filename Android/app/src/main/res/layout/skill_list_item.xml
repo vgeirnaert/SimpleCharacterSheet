@@ -3,6 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/skill_layout" >
+
+    <net.mindsoup.pathfindercharactersheet.CalculationView
+        android:id="@+id/skill_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
     
     <TextView 
         android:layout_width="match_parent"
@@ -11,8 +21,9 @@
         android:id="@+id/skill_name"
         android:textColor="#eee"
         android:paddingLeft="@dimen/activity_horizontal_margin"
-    	android:paddingRight="@dimen/activity_horizontal_margin" />
-    
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/skill_score"/>
+
     <View
     android:layout_width="fill_parent"
     android:layout_height="1dp"
@@ -33,23 +44,15 @@
 	        android:layout_height="wrap_content"
 	        android:textSize="16sp"
 	        android:paddingLeft="@dimen/activity_horizontal_margin" />
-	    
-	    <net.mindsoup.pathfindercharactersheet.CalculationView
-	        android:id="@+id/skill_score"
-	        android:layout_width="0dip"
-	        android:layout_weight="0.5"
-	        android:layout_height="wrap_content"
-	        android:textSize="16sp"
-	        android:paddingRight="@dimen/activity_horizontal_margin" />
-	    
-	    <!-- <TextView 
-	        android:id="@+id/skill_score"
-	        android:layout_width="0dip"
-	        android:layout_weight="0.5"
-	        android:layout_height="wrap_content"
-	        android:textSize="16sp"
-	        android:paddingRight="@dimen/activity_horizontal_margin" /> -->
-    
+
+        <TextView
+            android:id="@+id/skill_type"
+            android:layout_width="0dip"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingLeft="@dimen/activity_horizontal_margin" />
+
     </LinearLayout>
     
     <LinearLayout

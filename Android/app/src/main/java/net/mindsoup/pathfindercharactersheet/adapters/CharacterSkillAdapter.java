@@ -59,18 +59,22 @@ public class CharacterSkillAdapter extends ArrayAdapter<PfSkill> {
         // this is a class skill
         if(classSkills.contains(skill.getType()))
         	tv.setTextColor(0xff00cc99);
-        
+
+        tv = (TextView)convertView.findViewById(R.id.skill_type);
+        tv.setText("Attribute: " + skill.getAttribute().toString());
                
         tv = (TextView)convertView.findViewById(R.id.skill_rank);
         tv.setText("Rank: " + Integer.toString(skillRank));
         
         CalculationView cv = (CalculationView)convertView.findViewById(R.id.skill_score);
-        
-        String content = "Bonus: ";
+        String content = "";
         if(activity.getCharacter().canUseSkill(skill.getType())) {
+            if(activity.getCharacter().getSkillBonus(skill.getType()).sum() > 0) {
+                content = "+";
+            }
         	cv.setCalculation(activity.getCharacter().getSkillBonus(skill.getType()));
         } else {
-        	content = "Not trained";
+        	content = "N.A.";
         	cv.setCalculation(null);
         }
         
