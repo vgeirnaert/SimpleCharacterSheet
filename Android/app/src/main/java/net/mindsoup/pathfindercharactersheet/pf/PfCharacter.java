@@ -30,6 +30,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class PfCharacter implements Parcelable {
+
+    public static final String tempBonus = "Temp";
 	
 	public enum Attributes {AC, FORT, REF, WILL, HP};
 	
@@ -49,12 +51,12 @@ public class PfCharacter implements Parcelable {
 	private int wisdom = 0;
 	private int charisma = 0;
 	
-	private int tempCon = 0;
-	private int tempStr = 0;
-	private int tempDex = 0;
-	private int tempInt = 0;
-	private int tempWis = 0;
-	private int tempCha = 0;
+	private Calculation tempCon = new Calculation();
+	private Calculation tempStr = new Calculation();
+	private Calculation tempDex = new Calculation();
+	private Calculation tempInt = new Calculation();
+	private Calculation tempWis = new Calculation();
+	private Calculation tempCha = new Calculation();
 	
 	private int xp = 0;
 	private int coin = 0;
@@ -296,69 +298,51 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public void setTempConBoost(int boost) {
-		this.tempCon = boost;
+		this.tempCon.add(PfCharacter.tempBonus, boost);
 	}
 	
 	public Calculation getTempConBoost() {
-        Calculation c = new Calculation();
-        c.add("Temp boost", this.tempCon);
-
-        return c;
+        return this.tempCon;
 	}
 	
 	public void setTempChaBoost(int boost) {
-		this.tempCha = boost;
+        this.tempCha.add(PfCharacter.tempBonus, boost);
 	}
 	
 	public Calculation getTempChaBoost() {
-        Calculation c = new Calculation();
-        c.add("Temp boost", this.tempCha);
-
-		return c;
+        return this.tempCha;
 	}
 	
 	public void setTempDexBoost(int boost) {
-		this.tempDex = boost;
+        this.tempDex.add(PfCharacter.tempBonus, boost);
 	}
 	
 	public Calculation getTempDexBoost() {
-        Calculation c = new Calculation();
-        c.add("Temp boost", this.tempDex);
-
-        return c;
+        return this.tempDex;
 	}
 	
 	public void setTempIntBoost(int boost) {
-		this.tempInt = boost;
+        this.tempInt.add(PfCharacter.tempBonus, boost);
 	}
 	
 	public Calculation getTempIntBoost() {
-        Calculation c = new Calculation();
-        c.add("Temp boost", this.tempInt);
-
-        return c;
+        return this.tempInt;
 	}
 	
 	public void setTempStrBoost(int boost) {
-		this.tempStr = boost;
+        this.tempStr.add(PfCharacter.tempBonus, boost);
 	}
 	
 	public Calculation getTempStrBoost() {
-        Calculation c = new Calculation();
-        c.add("Temp boost", this.tempStr);
-
-        return c;
+        return this.tempStr;
 	}
 	
 	public void setTempWisBoost(int boost) {
-		this.tempWis = boost;
+        this.tempWis.add(PfCharacter.tempBonus, boost);
 	}
 	
 	public Calculation getTempWisBoost() {
-        Calculation c = new Calculation();
-        c.add("Temp boost", this.tempWis);
-
-        return c;
+        return this.tempWis;
 	}
 
     public Calculation getItemBoostFor(PfAttributes attribute) {

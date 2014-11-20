@@ -22,6 +22,8 @@ import android.widget.ToggleButton;
 public class RageFragment extends CharacterFragment {
 	
 	ToggleButton toggle;
+
+    private final String rage = "Rage";
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -41,12 +43,12 @@ public class RageFragment extends CharacterFragment {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if(isChecked) {
 					((PfBarbarian)character.getPfClass()).setRaging(true);
-					character.setTempStrBoost(character.getTempStrBoost().sum() + 4);
-					character.setTempConBoost(character.getTempConBoost().sum() + 4);
+                    character.getTempStrBoost().add(rage, 4);
+                    character.getTempConBoost().add(rage, 4);
 				} else {
 					((PfBarbarian)character.getPfClass()).setRaging(false);
-					character.setTempStrBoost(character.getTempStrBoost().sum() - 4);
-					character.setTempConBoost(character.getTempConBoost().sum() - 4);
+					character.getTempStrBoost().remove(rage);
+                    character.getTempConBoost().remove(rage);
 				}
 				
 				activity.updateCharacter(false);

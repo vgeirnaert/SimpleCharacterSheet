@@ -7,12 +7,15 @@ import java.util.ArrayList;
 
 import net.mindsoup.pathfindercharactersheet.CharacterActivity;
 import net.mindsoup.pathfindercharactersheet.R;
+import net.mindsoup.pathfindercharactersheet.pf.util.Calculation;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.internal.widget.IcsAdapterView;
@@ -51,6 +54,13 @@ public class AttributeListAdapter extends ArrayAdapter<CharacterAttributeAdapter
         
         tv = (TextView)convertView.findViewById(R.id.attribute_temp_bonus);
         tv.setText(Integer.toString(attributes.get(attributePosition).getTempBonus()));
+        final Calculation totalValue = attributes.get(attributePosition).getTotalValue();
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), totalValue.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
                
         IcsSpinner spinner = (IcsSpinner)convertView.findViewById(R.id.edit_attribute);
         spinner.setAdapter(new ArrayAdapter<String>(this.getContext(),R.layout.attribute_spinner, attributeValues));
@@ -75,7 +85,7 @@ public class AttributeListAdapter extends ArrayAdapter<CharacterAttributeAdapter
         
         spinner = (IcsSpinner)convertView.findViewById(R.id.edit_temp_attribute);
         spinner.setAdapter(new ArrayAdapter<String>(this.getContext(),R.layout.attribute_spinner_blue, attributeValues));
-        spinner.setSelection(attributes.get(attributePosition).getTotalValue());
+        spinner.setSelection(attributes.get(attributePosition).getTotalValue().sum());
         spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 
 			@Override
@@ -83,8 +93,8 @@ public class AttributeListAdapter extends ArrayAdapter<CharacterAttributeAdapter
 				CharacterAttributeAdapter caa = attributes.get(attributePosition);
 				
 				// if we have changed the value of our attribute
-				if(caa.getTotalValue() != position) {
-					caa.setTempValue(position - caa.getTotalValue() + caa.getTempValue());
+				if(caa.getTotalValue().sum() != position) {
+					caa.setTempValue(position - caa.getTotalValue().sum());
 					((CharacterActivity)getActivity()).updateCharacter(false);
 				}
 			}

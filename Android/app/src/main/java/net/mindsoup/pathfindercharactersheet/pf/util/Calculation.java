@@ -11,8 +11,18 @@ public class Calculation {
 	}
 	
 	public void add(String name, int value, boolean addZeroToo) {
-		if(value != 0 || addZeroToo)
-			values.put(name, value);
+		if(value != 0 || addZeroToo) {
+            if(values.containsKey(name)) {
+                int total = value + values.get(name);
+                if(!addZeroToo && total == 0) {
+                    values.remove(name);
+                } else {
+                    values.put(name, total);
+                }
+            } else {
+                values.put(name, value);
+            }
+        }
 	}
 	
 	public int sum() {
