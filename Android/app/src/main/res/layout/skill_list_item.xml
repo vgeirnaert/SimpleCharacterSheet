@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:id="@+id/skill_layout" >
 
-    <net.mindsoup.pathfindercharactersheet.CalculationView
+    <net.mindsoup.charactersoup.CalculationView
         android:id="@+id/skill_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

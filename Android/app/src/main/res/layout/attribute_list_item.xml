@@ -23,7 +23,7 @@
         android:gravity="center"
         android:textAlignment="4" />
     
-    <net.mindsoup.pathfindercharactersheet.CalculationView
+    <net.mindsoup.charactersoup.CalculationView
         android:id="@+id/attribute_bonus"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -40,7 +40,7 @@
         android:gravity="center"
         android:textAlignment="4" />
     
-    <net.mindsoup.pathfindercharactersheet.CalculationView
+    <net.mindsoup.charactersoup.CalculationView
         android:id="@+id/attribute_temp_bonus"
         android:layout_height="50dp"
         android:layout_gravity="center"

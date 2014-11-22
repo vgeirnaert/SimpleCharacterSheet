@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Pathfinder Character Sheet</string>
-    <string name="title">Pathfinder Character Sheet</string>
+    <string name="app_name">Character Soup</string>
+    <string name="title">Character Soup</string>
     
     <string name="home_title">Home</string>
     <string name="new_title">New</string>
