@@ -20,6 +20,7 @@ public class OverviewFragment extends CharacterFragment {
 	private PfCharacter character;
 
     private final static int[] abViews = new int[]{R.id.calc_mab0, R.id.calc_mab1, R.id.calc_mab2, R.id.calc_mab3};
+    private final static int[] rabViews = new int[]{R.id.calc_rab0, R.id.calc_rab1, R.id.calc_rab2, R.id.calc_rab3};
 	
 	
 	@Override
@@ -67,9 +68,11 @@ public class OverviewFragment extends CharacterFragment {
                 calcView.setText("");
             }
 
-			calcView = (CalculationView)getActivity().findViewById(R.id.calc_rab);
-			calcView.setCalculation(character.getRangedAttackBonus(0));
-			calcView.setText("");
+            for(int i = 0; i < character.getNumAttacksPerRound(); i++) {
+                calcView = (CalculationView)getActivity().findViewById(rabViews[i]);
+                calcView.setCalculation(character.getRangedAttackBonus(i));
+                calcView.setText("");
+            }
 			
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_cmb);
 			calcView.setCalculation(character.getCombatManeuverBonus(0));

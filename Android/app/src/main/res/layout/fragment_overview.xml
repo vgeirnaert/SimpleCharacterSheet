@@ -204,16 +204,64 @@
 		        android:layout_weight=".6"
 		        android:text="@string/ov_rab"
 		  		android:layout_width="0dip" />
-	         
-	         <net.mindsoup.charactersoup.CalculationView
-				android:id="@+id/calc_rab" 
-	            android:layout_height="30dp"
-		        android:layout_gravity="center_vertical"
-		        android:gravity="center_vertical"
-		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".4"
-		  		android:layout_width="0dip"
-	           	/>
+
+            <net.mindsoup.charactersoup.CalculationView
+                android:id="@+id/calc_rab0"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight=".1"
+                android:layout_width="0dip"
+                />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#666"
+                />
+
+            <net.mindsoup.charactersoup.CalculationView
+                android:id="@+id/calc_rab1"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight=".1"
+                android:layout_width="0dip"
+                />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#666"
+                />
+
+            <net.mindsoup.charactersoup.CalculationView
+                android:id="@+id/calc_rab2"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight=".1"
+                android:layout_width="0dip"
+                />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#666"
+                />
+
+            <net.mindsoup.charactersoup.CalculationView
+                android:id="@+id/calc_rab3"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight=".1"
+                android:layout_width="0dip"
+                />
 		</LinearLayout>
 		
 	    <LinearLayout
