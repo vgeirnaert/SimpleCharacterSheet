@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/attribute_layout" 
+    android:weightSum="1.0" >
+
+    <TextView
+        android:id="@+id/attribute_name"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_weight=".2"
+  		android:layout_width="0dip" />
+		
+	<com.actionbarsherlock.internal.widget.IcsSpinner
+        android:id="@+id/edit_attribute"
+        android:layout_weight=".2"
+  		android:layout_width="0dip"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textAlignment="4" />
+    
+    <net.mindsoup.charactersoup.CalculationView
+        android:id="@+id/attribute_bonus"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_weight=".2"
+  		android:layout_width="0dip" />
+
+    <com.actionbarsherlock.internal.widget.IcsSpinner
+        android:id="@+id/edit_temp_attribute"
+        android:layout_weight=".2"
+  		android:layout_width="0dip"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textAlignment="4" />
+    
+    <net.mindsoup.charactersoup.CalculationView
+        android:id="@+id/attribute_temp_bonus"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#0099cc"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_weight=".2"
+  		android:layout_width="0dip" />
+
+</LinearLayout>
+<!-- From: file:/Users/admin/Desktop/AndroidPractice/SimpleCharacterSheet/Android/app/src/main/res/layout/attribute_list_item.xml -->

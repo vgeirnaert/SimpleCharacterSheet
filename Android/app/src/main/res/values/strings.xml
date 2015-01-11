@@ -557,4 +557,11 @@
         <item>Elemental Rage</item>
     </string-array>
 
+    <string-array name="armor_types">
+        <item>None</item>
+        <item>Light Armor</item>
+        <item>Medium Armor</item>
+        <item>Heavy Armor</item>
+    </string-array>
+
 </resources>

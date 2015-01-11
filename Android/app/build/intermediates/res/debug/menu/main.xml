@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/menu_search"
+          android:title="@string/search_title"
+          android:icon="@drawable/action_search"
+          android:showAsAction="always|collapseActionView"
+          android:actionViewClass="com.actionbarsherlock.widget.SearchView" />
+    <item
+        android:id="@+id/new_button"
+        android:orderInCategory="100"
+        android:title="@string/new_title"
+        android:icon="@drawable/ic_action_user_add"
+        android:showAsAction="always"
+        />
+    <item
+        android:id="@+id/ogl_button"
+        android:orderInCategory="100"
+        android:title="@string/ogl_title"
+        android:icon="@drawable/action_about"
+        android:showAsAction="never|withText"
+        />
+
+</menu>
+<!-- From: file:/Users/admin/Desktop/AndroidPractice/SimpleCharacterSheet/Android/app/src/main/res/menu/main.xml -->

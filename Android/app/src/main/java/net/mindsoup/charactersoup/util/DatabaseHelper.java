@@ -385,7 +385,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 							int ac = items_cursor.getInt(items_cursor.getColumnIndex(Db.ARMOR_AC_BONUS));
 							int maxDex = items_cursor.getInt(items_cursor.getColumnIndex(Db.ARMOR_MAX_DEX));
 							int armorPenalty = items_cursor.getInt(items_cursor.getColumnIndex(Db.ARMOR_CHECK));
-							item = new Wearable(itemName, ac, maxDex, armorPenalty);
+                            int speedPenalty = items_cursor.getInt(items_cursor.getColumnIndex(Db.ARMOR_SPEED));
+							item = new Wearable(itemName, ac, maxDex, armorPenalty, speedPenalty);
 							// TODO: add spellcheck/speed penalties
 							break;
 					}

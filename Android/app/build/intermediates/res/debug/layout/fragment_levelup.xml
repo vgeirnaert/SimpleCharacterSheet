@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="1000dp" >
+    
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" 
+	    android:background="#00000000"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+    	android:paddingRight="@dimen/activity_horizontal_margin" >
+    	
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:weightSum="1.0" >
+		    
+	         <TextView
+		        android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".7"
+		        android:id="@+id/levelup_dice_txt"
+		  		android:layout_width="0dip" />
+	         
+			<EditText
+				android:id="@+id/levelup_dice" 
+	            android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".3"
+		  		android:layout_width="0dip"
+		  		android:ems="10"
+	       		android:inputType="number" >
+	       		<requestFocus />
+	       	</EditText>
+		</LinearLayout>
+		   
+	    <TextView
+	        android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+	        android:gravity="center_vertical"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:id="@+id/levelup_skills_txt" />
+	
+	    <Spinner
+	        android:id="@+id/levelup_perlevel"
+	        android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        android:entries="@array/per_level" />
+	    
+	    <LinearLayout
+	        android:id="@+id/levelup_ability_row"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:weightSum="1.0"
+		    android:visibility="gone" >
+		    
+	         <TextView
+		        android:layout_height="30dp"
+				android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:layout_weight=".5"
+		        android:text="@string/levelup_ability"
+		  		android:layout_width="0dip" />
+	         
+			<Spinner
+		        android:id="@+id/levelup_stat"
+		        android:layout_weight=".5"
+		        android:layout_height="60dp"
+		        android:entries="@array/stats"
+		        android:layout_width="0dip" />
+	         
+		</LinearLayout>
+
+	    <Button
+	        android:id="@+id/levelup_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+	        android:text="@string/ok"
+	        android:paddingLeft="@dimen/activity_horizontal_margin"
+    		android:paddingRight="@dimen/activity_horizontal_margin" />
+
+	</LinearLayout>
+</ScrollView><!-- From: file:/Users/admin/Desktop/AndroidPractice/SimpleCharacterSheet/Android/app/src/main/res/layout/fragment_levelup.xml -->

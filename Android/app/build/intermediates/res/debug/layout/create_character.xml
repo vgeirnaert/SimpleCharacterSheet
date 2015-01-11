@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+	android:layout_height="wrap_content" >
+	
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" 
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin"
+	    android:minWidth="1000dp"
+	    android:id="@+id/create_layout" >
+	
+	    <EditText
+	        android:id="@+id/create_char_name"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:ems="10"
+	        android:hint="@string/character_name"
+	        android:inputType="textPersonName|textCapWords" >
+	
+	    </EditText>
+	
+	    <Spinner
+	        android:id="@+id/create_char_race"
+	        android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        android:entries="@array/races" />
+	    
+	    <Spinner
+	        android:id="@+id/create_char_stat"
+	        android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        android:entries="@array/stats"
+	        android:visibility="gone" />
+	
+	    <Spinner
+	        android:id="@+id/create_char_class"
+	        android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        android:entries="@array/classes" />
+	
+	    <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/per_level_text"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	    <Spinner
+	        android:id="@+id/create_char_perlevel"
+	        android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        android:entries="@array/per_level" />
+	
+	    <LinearLayout
+	        android:orientation="horizontal" 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:weightSum="1.0" >
+	
+	        <Button
+	            android:id="@+id/create_char_create"
+	            android:layout_height="wrap_content"
+	            android:text="@string/create" 
+	            android:layout_weight=".5"
+	  			android:layout_width="0dip"/>
+	
+	        <Button
+	            android:id="@+id/create_char_cancel"
+	            android:layout_height="wrap_content"
+	            android:text="@string/cancel"
+	            android:layout_weight=".5"
+	  			android:layout_width="0dip" />
+	
+	    </LinearLayout>
+	
+	</LinearLayout>
+</ScrollView><!-- From: file:/Users/admin/Desktop/AndroidPractice/SimpleCharacterSheet/Android/app/src/main/res/layout/create_character.xml -->

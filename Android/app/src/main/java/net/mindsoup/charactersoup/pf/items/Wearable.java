@@ -3,6 +3,10 @@ package net.mindsoup.charactersoup.pf.items;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import net.mindsoup.charactersoup.CharacterActivity;
+import net.mindsoup.charactersoup.pf.PfCharacter;
+import net.mindsoup.charactersoup.pf.races.PfRace;
+
 public class Wearable extends Item implements Parcelable {
 	
 	@SuppressWarnings("rawtypes")
@@ -20,14 +24,15 @@ public class Wearable extends Item implements Parcelable {
 	private final int armorBonus;
 	private final int maxDexBonus;
 	private final int armorPenalty;
+	private final int speedPenalty;
 	
-	
-	public Wearable(String name, int armorBonus, int maxDexBonus, int armorPenalty) {
+	public Wearable(String name, int armorBonus, int maxDexBonus, int armorPenalty, int speedPenalty) {
 		super(name);
 		
 		this.armorBonus = armorBonus;
 		this.maxDexBonus = maxDexBonus;
 		this.armorPenalty = armorPenalty;
+        this.speedPenalty = speedPenalty;
 		
 	}
 
@@ -37,6 +42,7 @@ public class Wearable extends Item implements Parcelable {
 		this.armorBonus = in.readInt();
 		this.maxDexBonus = in.readInt();
 		this.armorPenalty = in.readInt();
+        this.speedPenalty = in.readInt();
 		
 	}
 
@@ -71,11 +77,12 @@ public class Wearable extends Item implements Parcelable {
 		dest.writeInt(getArmorClass());
 		dest.writeInt(getMaxDexBonus());
 		dest.writeInt(getArmorPenalty());
+        dest.writeInt(getSpeedPenalty());
 		
 	}
 
 	public int getSpeedPenalty() {
-		return 0;// TODO: this should actually be -10 or -5 for medium/heavy armor
+        return speedPenalty;
 	}
 
 	public int getSpellFailureChance() {

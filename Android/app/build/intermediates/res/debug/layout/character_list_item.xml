@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:id="@+id/char_layout">
+    
+    <ImageView 
+        android:id="@+id/char_img"
+        android:layout_height="64dp" 
+        android:layout_width="64dp" 
+        android:clickable="false"
+        android:src="@drawable/ic_action_user"
+        android:contentDescription="@string/portraitContent" />
+    <TextView 
+        android:id="@+id/char_name" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        android:gravity="center_vertical"
+	    android:minHeight="24dp"
+	    android:paddingLeft="16dp"
+	    android:paddingRight="16dp"
+	    android:textColor="#fff"
+	    android:textSize="20sp" 
+	    android:layout_toRightOf="@id/char_img"/>
+    <TextView 
+        android:id="@+id/char_details" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        android:gravity="center_vertical"
+	    android:minHeight="24dp"
+	    android:paddingLeft="16dp"
+	    android:paddingRight="16dp"
+	    android:textColor="#fff"
+	    android:textSize="14sp"
+	    android:layout_below="@id/char_name" 
+	    android:layout_toRightOf="@id/char_img"/>
+    
+
+</RelativeLayout>
+<!-- From: file:/Users/admin/Desktop/AndroidPractice/SimpleCharacterSheet/Android/app/src/main/res/layout/character_list_item.xml -->
