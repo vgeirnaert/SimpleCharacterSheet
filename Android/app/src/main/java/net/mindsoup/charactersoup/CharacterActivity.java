@@ -61,9 +61,6 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		character = (PfCharacter)intent.getParcelableExtra("CHAR");
 		
 		setContentView(R.layout.activity_character);
-		
-		// create navigation drawer
-		initialiseNavDrawer();
 			
 		// set up fragment paging
 		initialisePaging();
@@ -198,6 +195,9 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	@Override
 	public void onStart() {
 		super.onStart();
+
+        // create navigation drawer
+        initialiseNavDrawer();
 		
 		// if we can see that our character's stats aren't set yet...
 		if(character.getConstitution().sum() < 1 || character.getCharisma().sum() < 1 || character.getIntelligence().sum() < 1) {
