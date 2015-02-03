@@ -26,6 +26,8 @@ import android.widget.Spinner;
 
 import com.actionbarsherlock.app.SherlockDialogFragment;
 
+import java.util.ArrayList;
+
 /**
  * @author Valentijn
  *
@@ -35,6 +37,8 @@ public class CreateItemFragment extends SherlockDialogFragment {
 	public CreateItemFragment() {
 		
 	}
+
+    private int speedPenalty;
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -107,8 +111,8 @@ public class CreateItemFragment extends SherlockDialogFragment {
         
         ArrayAdapter<String> handAdapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, hands);
         handAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        ((Spinner)mainView.findViewById(R.id.create_weapon_handedness)).setAdapter(handAdapter);       
-        
+        ((Spinner)mainView.findViewById(R.id.create_weapon_handedness)).setAdapter(handAdapter);
+
         return mainView;
 	}
 	
@@ -118,7 +122,7 @@ public class CreateItemFragment extends SherlockDialogFragment {
 	
 	public void accept(View view) {
 		CharacterActivity activity = (CharacterActivity)this.getActivity();
-		
+
 		String name = ((EditText)this.getView().findViewById(R.id.create_item_name)).getText().toString();
 		String description = ((EditText)this.getView().findViewById(R.id.create_item_description)).getText().toString();
 		float weight = 0.0f;
@@ -157,8 +161,21 @@ public class CreateItemFragment extends SherlockDialogFragment {
 			i = new Item(name);
 			break;
 		default:
-			int ac = 0, maxdex = 99, penalty = 0;
-			try {
+			int ac = 0, maxdex = 99, penalty = 0, speed = 0;
+            Spinner spinner = (Spinner) this.getView().findViewById(R.id.create_armor_type);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.armor_types, R.layout.sherlock_spinner_dropdown_item);
+            spinner.setAdapter(adapter);
+            spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    setSpeedPenalty(position);
+                }
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+            try {
 				ac = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_ac)).getText().toString() );
 			} catch (NumberFormatException e) {}
 			try {
@@ -167,9 +184,8 @@ public class CreateItemFragment extends SherlockDialogFragment {
 			try {
 				penalty = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_penalty)).getText().toString() );
 			} catch (NumberFormatException e) {}
-			
-			
-			i = new Wearable(name, ac, maxdex, penalty);
+            speed = speedPenalty;
+			i = new Wearable(name, ac, maxdex, penalty, speed);
 			break;
 		}
 		
@@ -192,4 +208,28 @@ public class CreateItemFragment extends SherlockDialogFragment {
 		
 	}
 
+    private void setSpeedPenalty(int armorType) {
+        CharacterActivity characterActivity = new CharacterActivity();
+        int baseSpeed = characterActivity.getCharacter().getRace().getBaseSpeed();
+        switch (armorType){
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                if (baseSpeed == 30) {
+                    speedPenalty = -10;
+                } else {
+                    speedPenalty = -5;
+                }
+                break;
+            case 3:
+                if (baseSpeed == 30) {
+                    speedPenalty = -10;
+                } else {
+                    speedPenalty = -5;
+                }
+                break;
+        }
+    }
 }

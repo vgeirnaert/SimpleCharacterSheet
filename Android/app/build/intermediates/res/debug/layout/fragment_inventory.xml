@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1.0" >
+    
+	    <Button
+	        android:id="@+id/add_item_button"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:text="@string/add_item"
+	        android:layout_weight=".2" />
+	    
+	    <TextView
+	        android:id="@+id/total_weight"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="@dimen/activity_horizontal_margin"
+	    	android:paddingRight="@dimen/activity_horizontal_margin"
+	    	android:textSize="16sp"
+	    	android:textColor="#eee"
+	    	android:layout_weight=".4" />
+	    
+	    <TextView
+	        android:id="@+id/character_wealth"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="@dimen/activity_horizontal_margin"
+	    	android:paddingRight="@dimen/activity_horizontal_margin"
+	    	android:textSize="16sp"
+	    	android:textColor="#ffd700"
+	    	android:layout_weight=".4" />
+    </LinearLayout>
+    
+	<ListView
+        android:id="@+id/inventory_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="start"
+        android:choiceMode="none"
+        android:clickable="true"
+        android:divider="#666"
+        android:dividerHeight="2dp" />
+</LinearLayout>
+<!-- From: file:/Users/admin/Desktop/AndroidPractice/SimpleCharacterSheet/Android/app/src/main/res/layout/fragment_inventory.xml -->

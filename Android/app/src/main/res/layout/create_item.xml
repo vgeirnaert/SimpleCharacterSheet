@@ -131,7 +131,7 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:visibility="gone"
-	        android:weightSum="0.9" >
+	        android:weightSum="1.2" >
 	       	
 			<EditText
 				android:id="@+id/create_armor_ac"
@@ -159,6 +159,12 @@
 				android:ems="10"
 				android:inputType="numberSigned"
 				android:hint="@string/acpenalty" />
+
+            <Spinner
+                android:id="@+id/create_armor_type"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3" />
 
 	    </LinearLayout>
 	    

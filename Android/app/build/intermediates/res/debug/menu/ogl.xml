@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/home_button"
+        android:orderInCategory="100"
+        android:title="@string/home_title"
+        android:icon="@drawable/social_group"
+        android:showAsAction="always"
+        />
+
+</menu>
+<!-- From: file:/Users/admin/Desktop/AndroidPractice/SimpleCharacterSheet/Android/app/src/main/res/menu/ogl.xml -->

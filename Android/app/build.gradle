@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 17
+    compileSdkVersion 19
     buildToolsVersion "20.0.0"
 
     defaultConfig {
@@ -12,7 +12,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }

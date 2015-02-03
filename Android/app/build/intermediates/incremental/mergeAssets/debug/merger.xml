@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="20.0.0" >
+        <source path="/Users/admin/Desktop/AndroidPractice/SimpleCharacterSheet/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/assets" />
+    </dataSet>
+    <dataSet config="4.4.0" >
+        <source path="/Users/admin/Desktop/AndroidPractice/SimpleCharacterSheet/Android/app/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Users/admin/Desktop/AndroidPractice/SimpleCharacterSheet/Android/app/src/main/assets" >
+            <file
+                name="ogl"
+                path="/Users/admin/Desktop/AndroidPractice/SimpleCharacterSheet/Android/app/src/main/assets/ogl" />
+        </source>
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/admin/Desktop/AndroidPractice/SimpleCharacterSheet/Android/app/src/debug/assets" />
+    </dataSet>
+
+</merger>
