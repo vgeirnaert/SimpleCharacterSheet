@@ -62,7 +62,7 @@ public class PfWizard implements PfClass {
 
     @Override
     public int getAttackBonus(int level) {
-        return 0;
+        return (int)Math.floor(level / 2.0);
     }
 
     @Override

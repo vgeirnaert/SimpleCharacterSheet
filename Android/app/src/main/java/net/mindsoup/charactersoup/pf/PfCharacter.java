@@ -481,8 +481,28 @@ public class PfCharacter implements Parcelable {
                 return 8;
             else if (xp < 71000)
                 return 9;
-            else
+            else if (xp < 105000)
                 return 10;
+            else if (xp < 145000)
+                return 11;
+            else if (xp < 210000)
+                return 12;
+            else if (xp < 295000)
+                return 13;
+            else if (xp < 425000)
+                return 14;
+            else if (xp < 600000)
+                return 15;
+            else if (xp < 850000)
+                return 16;
+            else if (xp < 1200000)
+                return 17;
+            else if (xp < 1700000)
+                return 18;
+            else if (xp < 2400000)
+                return 19;
+            else
+                return 20;
 		default:	// medium
 			if(xp < 2000)
 				return 1;

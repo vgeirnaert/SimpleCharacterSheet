@@ -62,8 +62,7 @@ public class PfCleric implements PfClass {
 
     @Override
     public int getAttackBonus(int level) {
-        // TODO
-        return 0;
+        return level - 1 - (int)Math.floor( (level - 1) / 4) ;
     }
 
     @Override
