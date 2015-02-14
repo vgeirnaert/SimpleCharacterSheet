@@ -1,4 +1,19 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
 
 android {
     compileSdkVersion 17
@@ -21,4 +36,7 @@ android {
 dependencies {
     compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
     compile 'com.android.support:support-v4:20.0.0'
+    compile('com.crashlytics.sdk.android:crashlytics:2.2.1@aar') {
+        transitive = true;
+    }
 }

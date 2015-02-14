@@ -10,6 +10,8 @@
     <string name="search_title">Search</string>
     <string name="open_title">Open</string>
     <string name="delete_title">Delete</string>
+    <string name="update_title">Path notes</string>
+    <string name="message_button">Got it!</string>
     
     <!-- overview fragment -->
     <string name="ov_level">Level</string>

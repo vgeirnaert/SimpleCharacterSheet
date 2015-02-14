@@ -1,10 +1,13 @@
 package net.mindsoup.charactersoup;
 
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 import java.util.ArrayList;
 import java.util.Locale;
 
 import net.mindsoup.charactersoup.adapters.CharacterListAdapter;
 import net.mindsoup.charactersoup.fragments.CreateCharacterFragment;
+import net.mindsoup.charactersoup.fragments.UpdateMessageFragment;
 import net.mindsoup.charactersoup.pf.PfAttributes;
 import net.mindsoup.charactersoup.pf.PfCharacter;
 import net.mindsoup.charactersoup.pf.PfClasses;
@@ -12,6 +15,8 @@ import net.mindsoup.charactersoup.pf.PfRaces;
 import net.mindsoup.charactersoup.pf.races.PfChooseBonusAttributeRace;
 import net.mindsoup.charactersoup.util.DatabaseHelper;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.view.ContextMenu;
@@ -37,9 +42,13 @@ public class MainActivity extends SherlockFragmentActivity {
 	private ListView characterList;
 	private DatabaseHelper dbHelper = new DatabaseHelper(this);
 
+    private final String settingsFile = "CharacterSoupSettings";
+    private final String previousVersion = "PreviousVersion";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Fabric.with(this, new Crashlytics());
 
 		setContentView(R.layout.activity_main);
 	}
@@ -111,6 +120,9 @@ public class MainActivity extends SherlockFragmentActivity {
 	        	Intent intent = new Intent(this, OglActivity.class);
 	        	startActivity(intent);
 	        	return true;
+            case R.id.update_button:
+                showUpdateFragment();
+                return true;
 		}
 		
 		return super.onOptionsItemSelected(item);
@@ -125,6 +137,22 @@ public class MainActivity extends SherlockFragmentActivity {
 		createListAndAdapter();
 		
 		createContextMenu();
+
+        SharedPreferences settings = getSharedPreferences(settingsFile, 0);
+        String previous = settings.getString(previousVersion, "");
+
+        String versionName = "";
+        try {
+            versionName = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+        } catch (PackageManager.NameNotFoundException e) {}
+
+        if(!versionName.equalsIgnoreCase(previous)) {
+            showUpdateFragment();
+        }
+
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString(previousVersion, versionName);
+        editor.commit();
 	}
 	
 	private void openCharacter(PfCharacter character) {	
@@ -141,6 +169,12 @@ public class MainActivity extends SherlockFragmentActivity {
         FragmentManager fm = this.getSupportFragmentManager();
         CreateCharacterFragment createChar = new CreateCharacterFragment();
         createChar.show(fm, "fragment_create_char");
+    }
+
+    private void showUpdateFragment() {
+        FragmentManager fm = this.getSupportFragmentManager();
+        UpdateMessageFragment message = new UpdateMessageFragment();
+        message.show(fm, "fragment_update_message");
     }
 	
 	public void addNewCharacter(String name, int char_race, int char_class, boolean hpPerLevel, int bonus_stat) {

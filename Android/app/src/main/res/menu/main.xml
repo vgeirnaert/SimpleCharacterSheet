@@ -12,6 +12,13 @@
         android:showAsAction="always"
         />
     <item
+        android:id="@+id/update_button"
+        android:orderInCategory="100"
+        android:title="@string/update_title"
+        android:icon="@drawable/action_about"
+        android:showAsAction="never|withText"
+        />
+    <item
         android:id="@+id/ogl_button"
         android:orderInCategory="100"
         android:title="@string/ogl_title"

@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.mindsoup.charactersoup"
     android:installLocation="auto"
-    android:versionCode="9"
-    android:versionName="1.6.2" >
+    android:versionCode="10"
+    android:versionName="1.6.4" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -39,6 +39,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="net.mindsoup.charactersoup.MainActivity" />
         </activity>
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="34943ad586bf790bbde1229b20e6a7f3d07e1f58" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
