@@ -23,6 +23,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockDialogFragment;
 
@@ -117,22 +118,47 @@ public class CreateItemFragment extends SherlockDialogFragment {
 	}
 	
 	public void accept(View view) {
+        boolean isError = false;
+        String input = "";
 		CharacterActivity activity = (CharacterActivity)this.getActivity();
 		
 		String name = ((EditText)this.getView().findViewById(R.id.create_item_name)).getText().toString();
 		String description = ((EditText)this.getView().findViewById(R.id.create_item_description)).getText().toString();
+
+        if(name.trim().length() == 0) {
+            isError = true;
+        }
+
 		float weight = 0.0f;
 		int amount = 1;
 		int value = 0;
 		try {
-			weight = Float.parseFloat( ((EditText)this.getView().findViewById(R.id.create_item_weight)).getText().toString() );
-		} catch(NumberFormatException e) {}
+            input = ((EditText)this.getView().findViewById(R.id.create_item_weight)).getText().toString();
+			weight = Float.parseFloat( input );
+		} catch(NumberFormatException e) {
+            if(input.length() > 0) {
+                Toast.makeText(this.getActivity(), R.string.item_create_error_weight, Toast.LENGTH_SHORT).show();
+                isError = true;
+            }
+        }
 		try {
-			amount = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_item_amount)).getText().toString() );
-		} catch(NumberFormatException e) {}
+            input = ((EditText)this.getView().findViewById(R.id.create_item_amount)).getText().toString();
+			amount = Integer.parseInt( input );
+		} catch(NumberFormatException e) {
+            if(input.length() > 0) {
+                Toast.makeText(this.getActivity(), R.string.item_create_error_amount, Toast.LENGTH_SHORT).show();
+                isError = true;
+            }
+        }
 		try {
-			value = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_item_value)).getText().toString() );
-		} catch(NumberFormatException e) {}
+            input = ((EditText)this.getView().findViewById(R.id.create_item_value)).getText().toString();
+            value = Integer.parseInt( input );
+		} catch(NumberFormatException e) {
+            if(input.length() > 0) {
+                Toast.makeText(this.getActivity(), R.string.item_create_error_value, Toast.LENGTH_SHORT).show();
+                isError = true;
+            }
+        }
 		ItemEffects effect = ItemEffects.getEffect( ((Spinner)this.getView().findViewById(R.id.create_item_effecttype)).getSelectedItemPosition() );
 		String effectValueString = ((EditText)this.getView().findViewById(R.id.create_item_effectvalue)).getText().toString();
 		
@@ -146,50 +172,84 @@ public class CreateItemFragment extends SherlockDialogFragment {
 		
 		switch(slot) {
 		case WEAPON:
-			Dice damage = new Dice(((EditText)this.getView().findViewById(R.id.create_weapon_damage)).getText().toString());
-			int multi = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_weapon_critmulti)).getText().toString() );
-			int rangeindex = ((Spinner)this.getView().findViewById(R.id.create_weapon_critrange)).getSelectedItemPosition() + 1;
-			PfHandedness hand = PfHandedness.getHandedness(((Spinner)this.getView().findViewById(R.id.create_weapon_handedness)).getSelectedItemPosition());
-			i = new Weapon(name, damage, multi, rangeindex, hand);
-			((Weapon)i).setDamageType(((EditText)this.getView().findViewById(R.id.create_weapon_damagetype)).getText().toString());
+            try {
+                Dice damage = new Dice(((EditText) this.getView().findViewById(R.id.create_weapon_damage)).getText().toString());
+                int multi = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_weapon_critmulti)).getText().toString() );
+                int rangeindex = ((Spinner)this.getView().findViewById(R.id.create_weapon_critrange)).getSelectedItemPosition() + 1;
+                PfHandedness hand = PfHandedness.getHandedness(((Spinner)this.getView().findViewById(R.id.create_weapon_handedness)).getSelectedItemPosition());
+                i = new Weapon(name, damage, multi, rangeindex, hand);
+                ((Weapon)i).setDamageType(((EditText)this.getView().findViewById(R.id.create_weapon_damagetype)).getText().toString());
+            } catch (RuntimeException e) {
+                if(e instanceof NumberFormatException) {
+                    Toast.makeText(this.getActivity(), R.string.item_create_error_multiplier, Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this.getActivity(), R.string.item_create_error_damage, Toast.LENGTH_SHORT).show();
+                }
+                isError = true;
+            }
 			break;
 		case NOT_EQUIPABLE:
 			i = new Item(name);
 			break;
 		default:
 			int ac = 0, maxdex = 99, penalty = 0;
+
 			try {
-				ac = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_ac)).getText().toString() );
-			} catch (NumberFormatException e) {}
+                input = ((EditText)this.getView().findViewById(R.id.create_armor_ac)).getText().toString();
+				ac = Integer.parseInt( input );
+			} catch (NumberFormatException e) {
+                if(input.length() > 0) {
+                    Toast.makeText(this.getActivity(), R.string.item_create_error_ac, Toast.LENGTH_SHORT).show();
+                    isError = true;
+                }
+            }
 			try {
-				maxdex = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_maxdex)).getText().toString() );
-			} catch (NumberFormatException e) {}
+                input = ((EditText)this.getView().findViewById(R.id.create_armor_maxdex)).getText().toString();
+				maxdex = Integer.parseInt( input );
+			} catch (NumberFormatException e) {
+                if(input.length() > 0) {
+                    Toast.makeText(this.getActivity(), R.string.item_create_error_maxdex, Toast.LENGTH_SHORT).show();
+                    isError = true;
+                }
+            }
 			try {
-				penalty = Integer.parseInt( ((EditText)this.getView().findViewById(R.id.create_armor_penalty)).getText().toString() );
-			} catch (NumberFormatException e) {}
+                input = ((EditText)this.getView().findViewById(R.id.create_armor_penalty)).getText().toString();
+				penalty = Integer.parseInt( input );
+			} catch (NumberFormatException e) {
+                if(input.length() > 0) {
+                    Toast.makeText(this.getActivity(), R.string.item_create_error_penalty, Toast.LENGTH_SHORT).show();
+                    isError = true;
+                }
+            }
 			
 			
 			i = new Wearable(name, ac, maxdex, penalty);
 			break;
 		}
 		
-		
-		i.setDescription(description);
-		i.setStackSize(amount);
-		i.setValue(value);
-		i.setWeight(weight);
+		if(i != null) {
+            i.setDescription(description);
+            i.setStackSize(amount);
+            i.setValue(value);
+            i.setWeight(weight);
 
-        if(effect == ItemEffects.AB_AND_DAMAGE) {
-            i.addEffect(ItemEffects.ATTACK_BONUS, effectValue);
-            i.addEffect(ItemEffects.DAMAGE_BONUS, effectValue);
+            if (effect == ItemEffects.AB_AND_DAMAGE) {
+                i.addEffect(ItemEffects.ATTACK_BONUS, effectValue);
+                i.addEffect(ItemEffects.DAMAGE_BONUS, effectValue);
+            } else {
+                i.addEffect(effect, effectValue);
+            }
+            i.setSlot(slot);
         } else {
-            i.addEffect(effect, effectValue);
+            isError = true;
         }
-		i.setSlot(slot);
-		activity.addItem(i);
-		
-		this.dismiss();
-		
+
+        if(!isError) {
+            activity.addItem(i);
+            this.dismiss();
+        } else {
+            Toast.makeText(this.getActivity(), R.string.item_create_error, Toast.LENGTH_SHORT).show();
+        }
 	}
 
 }

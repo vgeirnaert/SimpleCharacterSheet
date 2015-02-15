@@ -559,4 +559,13 @@
         <item>Elemental Rage</item>
     </string-array>
 
+    <string name="item_create_error_weight">Invalid weight, weight must be a whole number (weight in lbs)</string>
+    <string name="item_create_error_amount">Invalid amount, amount must be a whole number</string>
+    <string name="item_create_error_value">Invalid value, value must be a whole number (value in copper pieces)</string>
+    <string name="item_create_error_damage">Invalid damage, damage must be a dice string (example: 2d6)</string>
+    <string name="item_create_error_ac">Invalid AC value, AC should be a whole number</string>
+    <string name="item_create_error_maxdex">Invalid max DEX, max DEX should be a whole number</string>
+    <string name="item_create_error_penalty">Invalid armor penalty, penalty should be a whole number</string>
+    <string name="item_create_error_multiplier">Invalid crit multiplier, multiplier should be a whole number</string>
+    <string name="item_create_error">Item attribute invalid, please check input</string>
 </resources>
