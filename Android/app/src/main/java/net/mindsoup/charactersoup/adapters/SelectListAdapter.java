@@ -1,6 +1,7 @@
 package net.mindsoup.charactersoup.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,15 +44,21 @@ public class SelectListAdapter extends ArrayAdapter<ListElement> {
 
         TextView tv = (TextView)view.findViewById(R.id.select_title);
         tv.setText(item.getTitle());
+        final int bgcolor = tv.getDrawingCacheBackgroundColor();
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ViewGroup description = (ViewGroup)view.findViewById(R.id.select_list_description_group);
 
-                if(description.getVisibility() == View.GONE)
+                if(description.getVisibility() == View.GONE) {
+                    v.setBackgroundColor(Color.BLACK);
+                    description.setBackgroundColor(Color.BLACK);
                     description.setVisibility(View.VISIBLE);
-                else
+                } else {
+                    v.setBackgroundColor(bgcolor);
+                    description.setBackgroundColor(bgcolor);
                     description.setVisibility(View.GONE);
+                }
             }
         });
 

@@ -15,6 +15,10 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import net.mindsoup.charactersoup.CharacterActivity;
 import net.mindsoup.charactersoup.R;
@@ -23,6 +27,8 @@ import net.mindsoup.charactersoup.pf.PfCharacter;
 import net.mindsoup.charactersoup.pf.feats.PfFeats;
 import net.mindsoup.charactersoup.util.ListElement;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -101,20 +107,29 @@ public class FeatsFragment extends CharacterFragment {
 	private void showFeatsPicker() {
 		FragmentManager fm = this.getActivity().getSupportFragmentManager();
 		if(fm.findFragmentByTag(PICK_FEAT) == null) {
-			//PickFeatFragment pickFeat = new PickFeatFragment();
-            ArrayList<ListElement> elements = new ArrayList<ListElement>();
-            elements.add(new ListElement("Feat 1", "Description description description 1", 0));
-            elements.add(new ListElement("Feat 2", "Description description description 2", 1));
-            elements.add(new ListElement("Feat 3", "Description description description 3", 2));
-            elements.add(new ListElement("Feat 4", "Description description description 4", 3));
-            elements.add(new ListElement("Feat 5", "Description description description 5", 4));
-            elements.add(new ListElement("Feat 6", "Description description description 6", 5));
+            InputStream json;
+            try {
+                json = this.getActivity().getAssets().open("pf_data/feats.json");
+            } catch (IOException e) {
+                Toast.makeText(this.getActivity(), "Error reading feats file", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
+            ObjectMapper mapper = new ObjectMapper();
+
+            ArrayList<ListElement> feats;
+            try {
+                feats = mapper.readValue(json, new TypeReference<List<ListElement>>(){});
+            } catch (IOException e) {
+                Toast.makeText(this.getActivity(), "Error parsing feats json", Toast.LENGTH_SHORT).show();
+                e.printStackTrace();
+                return;
+            }
 
             PickFromListFragment pickFeat = new PickFromListFragment();
             Bundle arguments = new Bundle();
             arguments.putString(PickFromListFragment.titleKey, "Pick a feat");
-            arguments.putParcelableArrayList(PickFromListFragment.listKey, elements);
+            arguments.putParcelableArrayList(PickFromListFragment.listKey, feats);
             arguments.putParcelable(PickFromListFragment.callbackKey, new PickFromListFragment.ParcelablePickFromListListener() {
                 @Override
                 public void onPicked(ListElement element) {
