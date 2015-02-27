@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/select_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/select_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#eee"
+    	android:paddingLeft="@dimen/activity_horizontal_margin"
+    	android:paddingRight="@dimen/activity_horizontal_margin"
+    	android:paddingTop="@dimen/list_vertical_margin"
+    	android:paddingBottom="@dimen/list_vertical_margin" />
+    
+    
+    <RelativeLayout
+        android:id="@+id/select_list_description_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        
+	    <View
+            android:layout_alignParentTop="true"
+            android:id="@+id/divider"
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="#666" />
+	
+	    <TextView
+            android:layout_below="@id/divider"
+	        android:id="@+id/select_list_description"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="@dimen/activity_horizontal_margin"
+	    	android:paddingRight="@dimen/activity_horizontal_margin"
+	    	android:textSize="18sp"
+	    	android:textColor="#ccc" />
+        <Button
+            android:id="@+id/select_list_button"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/select_list_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_this"
+            style="@style/Widget.Sherlock.ActionButton"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

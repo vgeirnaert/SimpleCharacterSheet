@@ -568,4 +568,8 @@
     <string name="item_create_error_penalty">Invalid armor penalty, penalty should be a whole number</string>
     <string name="item_create_error_multiplier">Invalid crit multiplier, multiplier should be a whole number</string>
     <string name="item_create_error">Item attribute invalid, please check input</string>
+
+    <string name="search_hint">Find</string>
+    <string name="select_this">Select</string>
+
 </resources>
