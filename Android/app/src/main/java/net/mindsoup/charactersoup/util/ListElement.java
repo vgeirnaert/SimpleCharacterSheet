@@ -12,6 +12,12 @@ public class ListElement implements Parcelable {
     private String description;
     private int index;
 
+    public ListElement() {
+        this.setTitle("");
+        this.setDescription("");
+        this.setIndex(-1);
+    }
+
     public ListElement(String title, String description, int index) {
         this.setTitle(title);
         this.setDescription(description);

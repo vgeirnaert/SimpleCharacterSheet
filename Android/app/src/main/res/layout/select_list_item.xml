@@ -37,13 +37,22 @@
 	        android:layout_height="wrap_content"
 	        android:paddingLeft="@dimen/activity_horizontal_margin"
 	    	android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
 	    	android:textSize="18sp"
 	    	android:textColor="#ccc" />
+        <View
+            android:layout_below="@id/select_list_description"
+            android:id="@+id/divider2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#666" />
+
         <Button
             android:id="@+id/select_list_button"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/select_list_description"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/select_this"
             style="@style/Widget.Sherlock.ActionButton"/>

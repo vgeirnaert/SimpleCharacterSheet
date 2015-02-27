@@ -60,7 +60,7 @@ public class PickFromListFragment extends SherlockDialogFragment {
         EditText search = (EditText)view.findViewById(R.id.pick_item_search);
         search.addTextChangedListener(new TextWatcher() {
             private Timer timer = new Timer();
-            private final long DELAY = 1000; // in ms
+            private final long DELAY = 500; // in ms
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int start, int oldLength, int changeLength) {}

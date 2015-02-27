@@ -86,9 +86,12 @@
     <orderEntry type="jdk" jdkName="Android API 17 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="answers-1.1.1" level="project" />
+    <orderEntry type="library" exported="" name="jackson-core-2.4.4" level="project" />
     <orderEntry type="library" exported="" name="support-v4-20.0.0" level="project" />
     <orderEntry type="library" exported="" name="fabric-1.1.1" level="project" />
     <orderEntry type="library" exported="" name="actionbarsherlock-4.4.0" level="project" />
+    <orderEntry type="library" exported="" name="jackson-annotations-2.4.0" level="project" />
+    <orderEntry type="library" exported="" name="jackson-databind-2.4.4" level="project" />
     <orderEntry type="library" exported="" name="crashlytics-2.2.1" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-20.0.0" level="project" />
     <orderEntry type="library" exported="" name="beta-1.1.1" level="project" />
