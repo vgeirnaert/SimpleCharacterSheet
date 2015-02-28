@@ -5,7 +5,6 @@ package net.mindsoup.charactersoup.fragments;
 
 import android.os.Bundle;
 import android.os.Parcel;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,20 +14,15 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import net.mindsoup.charactersoup.CharacterActivity;
 import net.mindsoup.charactersoup.R;
 import net.mindsoup.charactersoup.adapters.CharacterFeatAdapter;
 import net.mindsoup.charactersoup.pf.PfCharacter;
 import net.mindsoup.charactersoup.pf.feats.PfFeats;
+import net.mindsoup.charactersoup.util.CharacterSoupUtils;
 import net.mindsoup.charactersoup.util.ListElement;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -105,7 +99,21 @@ public class FeatsFragment extends CharacterFragment {
 	}
 	
 	private void showFeatsPicker() {
-		FragmentManager fm = this.getActivity().getSupportFragmentManager();
+        CharacterSoupUtils.showListDialog(PICK_FEAT, this.getActivity(), "pf_data/feats.json", this.getActivity().getString(R.string.select_feat), new PickFromListFragment.ParcelablePickFromListListener() {
+            @Override
+            public void onPicked(ListElement element) {
+                ((CharacterActivity)getActivity()).addFeat(PfFeats.getFeat(element.getIndex()));
+            }
+
+            @Override
+            public int describeContents() {
+                return 0;
+            }
+
+            @Override
+            public void writeToParcel(Parcel parcel, int i) {}
+        });
+		/*FragmentManager fm = this.getActivity().getSupportFragmentManager();
 		if(fm.findFragmentByTag(PICK_FEAT) == null) {
             InputStream json;
             try {
@@ -146,7 +154,7 @@ public class FeatsFragment extends CharacterFragment {
             });
             pickFeat.setArguments(arguments);
 			pickFeat.show(fm, PICK_FEAT);
-		}
+		}*/
 	}
 
 }

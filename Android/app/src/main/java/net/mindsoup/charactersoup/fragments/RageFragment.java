@@ -3,17 +3,22 @@
  */
 package net.mindsoup.charactersoup.fragments;
 
+import android.os.Bundle;
+import android.os.Parcel;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.ToggleButton;
+
 import net.mindsoup.charactersoup.CharacterActivity;
 import net.mindsoup.charactersoup.R;
 import net.mindsoup.charactersoup.pf.PfCharacter;
 import net.mindsoup.charactersoup.pf.classes.PfBarbarian;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.ToggleButton;
+import net.mindsoup.charactersoup.util.CharacterSoupUtils;
+import net.mindsoup.charactersoup.util.ListElement;
 
 /**
  * @author Valentijn
@@ -24,6 +29,7 @@ public class RageFragment extends CharacterFragment {
 	ToggleButton toggle;
 
     private final String rage = "Rage";
+    private final String PICK_RAGE = "pick_rage";
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -54,6 +60,14 @@ public class RageFragment extends CharacterFragment {
 				activity.updateCharacter(false);
 			}
 		});
+
+        Button addButton = (Button)v.findViewById(R.id.rage_add_button);
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showRagePicker();
+            }
+        });
         
         return v;
     }
@@ -72,5 +86,23 @@ public class RageFragment extends CharacterFragment {
 		super.onSaveInstanceState(outState);
 		outState.putBoolean("toggle", toggle.isChecked());
 	}
+
+    private void showRagePicker() {
+        CharacterSoupUtils.showListDialog(PICK_RAGE, this.getActivity(), "pf_data/rage.json", this.getActivity().getString(R.string.select_rage), new PickFromListFragment.ParcelablePickFromListListener() {
+            @Override
+            public void onPicked(ListElement element) {
+
+            }
+
+            @Override
+            public int describeContents() {
+                return 0;
+            }
+
+            @Override
+            public void writeToParcel(Parcel parcel, int i) {
+            }
+        });
+    }
 
 }
