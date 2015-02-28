@@ -1,19 +1,5 @@
 package net.mindsoup.charactersoup;
 
-import com.crashlytics.android.Crashlytics;
-import io.fabric.sdk.android.Fabric;
-import java.util.ArrayList;
-import java.util.Locale;
-
-import net.mindsoup.charactersoup.adapters.CharacterListAdapter;
-import net.mindsoup.charactersoup.fragments.CreateCharacterFragment;
-import net.mindsoup.charactersoup.fragments.UpdateMessageFragment;
-import net.mindsoup.charactersoup.pf.PfAttributes;
-import net.mindsoup.charactersoup.pf.PfCharacter;
-import net.mindsoup.charactersoup.pf.PfClasses;
-import net.mindsoup.charactersoup.pf.PfRaces;
-import net.mindsoup.charactersoup.pf.races.PfChooseBonusAttributeRace;
-import net.mindsoup.charactersoup.util.DatabaseHelper;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -33,6 +19,22 @@ import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.SearchView;
 import com.actionbarsherlock.widget.SearchView.OnQueryTextListener;
+import com.crashlytics.android.Crashlytics;
+
+import net.mindsoup.charactersoup.adapters.CharacterListAdapter;
+import net.mindsoup.charactersoup.fragments.CreateCharacterFragment;
+import net.mindsoup.charactersoup.pf.PfAttributes;
+import net.mindsoup.charactersoup.pf.PfCharacter;
+import net.mindsoup.charactersoup.pf.PfClasses;
+import net.mindsoup.charactersoup.pf.PfRaces;
+import net.mindsoup.charactersoup.pf.races.PfChooseBonusAttributeRace;
+import net.mindsoup.charactersoup.util.CharacterSoupUtils;
+import net.mindsoup.charactersoup.util.DatabaseHelper;
+
+import java.util.ArrayList;
+import java.util.Locale;
+
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends SherlockFragmentActivity {
 	
@@ -172,9 +174,13 @@ public class MainActivity extends SherlockFragmentActivity {
     }
 
     private void showUpdateFragment() {
-        FragmentManager fm = this.getSupportFragmentManager();
-        UpdateMessageFragment message = new UpdateMessageFragment();
-        message.show(fm, "fragment_update_message");
+        final String message = "<p>New in this version:</p><p>• Improved feat selection view<br>• Added barbarian rage powers<br>• Added spells for caster classes<br>• Added help functionality on all screens</p><p>The following items are on my roadmap, although I cannot guarantee when they will be done:<br><br>• Character backup and export options<br>• Complete class and racial feats, bonuses and talents<br>• Special Abilities for all classes<br>• Spells for caster classes<br>• Rage powers for Barbarians<br>• Improved item managment<br>• Improved character overview<br>• Proper tablet support<br><br>Please keep in mind that this app is still in development and is not finished yet. There may be bugs and missing features. If you have feedback you can contact me at mindsouplabs@gmail.com.</p><p>Thank you for using Character Soup! :)</p>";
+        String versionName = "";
+        try {
+            versionName = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+        } catch (PackageManager.NameNotFoundException e) {}
+
+        CharacterSoupUtils.showTextDialog(this, message, "Update " + versionName);
     }
 	
 	public void addNewCharacter(String name, int char_race, int char_class, boolean hpPerLevel, int bonus_stat) {

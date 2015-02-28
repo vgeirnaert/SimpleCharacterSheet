@@ -5,6 +5,7 @@
     <string name="title">Character Soup</string>
     
     <string name="home_title">Home</string>
+    <string name="about_title">Help</string>
     <string name="new_title">New</string>
     <string name="ogl_title">Open Game Licence</string>
     <string name="search_title">Search</string>
@@ -218,5 +219,22 @@
     <string name="select_this">Select</string>
     <string name="select_rage">Pick a rage power</string>
     <string name="select_feat">Pick a feat</string>
+
+    <string name="attr_fragment_help_title">Attributes Help</string>
+    <string name="attr_fragment_help_text"><![CDATA[<p>Changes to the Score values will be saved and be available on future app runs. Temp Score values will not be saved. Temp Score values should be used for temporary attribute changes like attribute damage or buffs.</p><p>You can tap the values under Temp Mod to see how they are calculated (Score, Temp Score, item bonuses, etc). These values are used throughout the app to calculate your other stats.</p>]]></string>
+    <string name="overview_fragment_help_title">Stats overview Help</string>
+    <string name="overview_fragment_help_text"><![CDATA[<p>You can tap the stat values to see a popup explaining how this value is calculated. This can be used on most values throughout the app.</p>]]></string>
+    <string name="skills_fragment_help_title">Skills Help</string>
+    <string name="skills_fragment_help_text"><![CDATA[<p>Tap a skill to add skill ranks to it when you have skill ranks available. Skill ranks are made available upon leveling up based on your character class and intelligence bonus. You can undo adding a skill rank to a skill by long pressing it.</p><p>Green coloured skills indicate class skills.</p><p>You can tap the skill bonus number to see how the skill bonus is calculated.</p>]]></string>
+    <string name="feats_fragment_help_title">Feats Help</string>
+    <string name="feats_fragment_help_text"><![CDATA[<p>Tap a feat to expand it and read the description. You can add feats by clicking the Add button whenever you have available feats (generally after level up). If you want to undo adding a feat you can long press the feat.</p><p>To add a feat, click the Add button and tap the feat to expand it. You can now tap the Select button to add the feat to your character. You can also filter the feats list by using the Find textbox.</p> ]]></string>
+    <string name="inventory_fragment_help_title">Inventory Help</string>
+    <string name="inventory_fragment_help_text"><![CDATA[<p>You can add items to your inventory by clicking the Add button. This pops up the Add New Item dialog. This allows you to input the item details. Only the name is mandatory. When multiple items with the same name are added to the inventory they are automatically stacked.</p><p>You can (un)equip wearable items by tapping the item name to expand it and then tap the Equip button. You can discard an item from your inventory with the Discard button. Equipping an item means the item stats are automatically factored into your various derived stats (armor class, damage, attributes, etc).</p><p>Item values:<br><b>Weight: </b>in lbs, default 0<br><b>Value: </b>in copper pieces, default 0<br><b>Amount: </b>number of items, default 1<br><b>Item type: </b>select from the list<br><b>Magic bonus: </b>select the type from the list and put in the bonus amount in the text box next to it</p><p><i>Armor</i><br><b>AC: </b>armor class, default 0<br><b>MaxDex: </b>Maximum dexterity value for this armor, default 99<br><b>Penalty: </b>Armor penalty, usually a negative number, default 0</p><p><i>Weapon</i><br><b>Damage: </b>dice string like 1d12 or 2d8<br><b>Critical range: </b>Select critical range from the list<br><b>Critical multiplier: </b>critical multiplier<br><b>Damage type: </b>optional, default blank</p>]]></string>
+    <string name="rage_fragment_help_title">Rage Help</string>
+    <string name="rage_fragment_help_text"><![CDATA[<p>You can toggle rage on and off. This automatically adjusts your stats for the various rage bonuses (and penalties).</p> ]]></string>
+    <string name="info_fragment_help_title">Info Help</string>
+    <string name="info_fragment_help_text"><![CDATA[<p>You can set your character\'s wealth in copper pieces and your character\'s experience points.</p> ]]></string>
+    <string name="spells_fragment_help_title">Spells Help</string>
+    <string name="spells_fragment_help_text"><![CDATA[<p>TODO</p> ]]></string>
 
 </resources>

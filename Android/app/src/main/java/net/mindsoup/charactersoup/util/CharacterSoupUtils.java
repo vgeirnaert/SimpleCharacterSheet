@@ -9,6 +9,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import net.mindsoup.charactersoup.fragments.PickFromListFragment;
+import net.mindsoup.charactersoup.fragments.UpdateMessageFragment;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,6 +20,16 @@ import java.util.List;
  * Created by Valentijn on 28-2-2015.
  */
 public class CharacterSoupUtils {
+
+    public static void showTextDialog(final FragmentActivity activity, final String message, final String title) {
+        FragmentManager fm = activity.getSupportFragmentManager();
+        UpdateMessageFragment messageFragment = new UpdateMessageFragment();
+        Bundle arguments = new Bundle();
+        arguments.putString(UpdateMessageFragment.messageTitleKey, title);
+        arguments.putString(UpdateMessageFragment.messageKey, message);
+        messageFragment.setArguments(arguments);
+        messageFragment.show(fm, "help_message");
+    }
 
     public static void showListDialog(final String tag, final FragmentActivity activity, final String filename, final String title, final PickFromListFragment.ParcelablePickFromListListener listener) {
         FragmentManager fm = activity.getSupportFragmentManager();

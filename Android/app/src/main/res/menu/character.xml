@@ -8,4 +8,12 @@
         android:showAsAction="always"
         />
 
+    <item
+        android:id="@+id/about_button"
+        android:orderInCategory="99"
+        android:title="@string/about_title"
+        android:icon="@drawable/action_about"
+        android:showAsAction="always"
+        />
+
 </menu>

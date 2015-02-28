@@ -105,4 +105,14 @@ public class RageFragment extends CharacterFragment {
         });
     }
 
+    @Override
+    public String getHelpTitle() {
+        return this.getActivity().getString(R.string.rage_fragment_help_title);
+    }
+
+    @Override
+    public String getHelpText() {
+        return this.getActivity().getString(R.string.rage_fragment_help_text);
+    }
+
 }

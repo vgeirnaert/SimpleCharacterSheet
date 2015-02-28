@@ -3,11 +3,12 @@
  */
 package net.mindsoup.charactersoup.fragments;
 
-import net.mindsoup.charactersoup.R;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import net.mindsoup.charactersoup.R;
 
 /**
  * @author Valentijn
@@ -29,5 +30,15 @@ public class SpellbookFragment extends CharacterFragment {
 		// TODO Auto-generated method stub
 
 	}
+
+    @Override
+    public String getHelpTitle() {
+        return this.getActivity().getString(R.string.spells_fragment_help_title);
+    }
+
+    @Override
+    public String getHelpText() {
+        return this.getActivity().getString(R.string.spells_fragment_help_text);
+    }
 
 }
