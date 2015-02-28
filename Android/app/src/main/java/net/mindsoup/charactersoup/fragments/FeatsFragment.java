@@ -113,48 +113,16 @@ public class FeatsFragment extends CharacterFragment {
             @Override
             public void writeToParcel(Parcel parcel, int i) {}
         });
-		/*FragmentManager fm = this.getActivity().getSupportFragmentManager();
-		if(fm.findFragmentByTag(PICK_FEAT) == null) {
-            InputStream json;
-            try {
-                json = this.getActivity().getAssets().open("pf_data/feats.json");
-            } catch (IOException e) {
-                Toast.makeText(this.getActivity(), "Error reading feats file", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            ObjectMapper mapper = new ObjectMapper();
-
-            ArrayList<ListElement> feats;
-            try {
-                feats = mapper.readValue(json, new TypeReference<List<ListElement>>(){});
-            } catch (IOException e) {
-                Toast.makeText(this.getActivity(), "Error parsing feats json", Toast.LENGTH_SHORT).show();
-                e.printStackTrace();
-                return;
-            }
-
-            PickFromListFragment pickFeat = new PickFromListFragment();
-            Bundle arguments = new Bundle();
-            arguments.putString(PickFromListFragment.titleKey, "Pick a feat");
-            arguments.putParcelableArrayList(PickFromListFragment.listKey, feats);
-            arguments.putParcelable(PickFromListFragment.callbackKey, new PickFromListFragment.ParcelablePickFromListListener() {
-                @Override
-                public void onPicked(ListElement element) {
-                    ((CharacterActivity) getActivity()).addFeat(PfFeats.getFeat(element.getIndex()));
-                }
-
-                @Override
-                public int describeContents() {
-                    return 0;
-                }
-
-                @Override
-                public void writeToParcel(Parcel parcel, int i) {}
-            });
-            pickFeat.setArguments(arguments);
-			pickFeat.show(fm, PICK_FEAT);
-		}*/
 	}
+
+    @Override
+    public String getHelpTitle() {
+        return this.getActivity().getString(R.string.feats_fragment_help_title);
+    }
+
+    @Override
+    public String getHelpText() {
+        return this.getActivity().getString(R.string.feats_fragment_help_text);
+    }
 
 }
