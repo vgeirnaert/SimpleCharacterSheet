@@ -1,0 +1,908 @@
+[
+  {
+    "index":0,
+    "title":"Abundant Ammunition",
+    "category":"Level 1",
+    "description":"Replaces nonmagical ammunition every round."
+  },
+  {
+    "index":1,
+    "title":"Air Bubble",
+    "category":"Level 1",
+    "description":"Creates a small pocket of air around your head or an object."
+  },
+  {
+    "index":2,
+    "title":"Alarm",
+    "category":"Level 1",
+    "description":"Wards an area for 2 hours/level."
+  },
+  {
+    "index":3,
+    "title":"Animal Messenger",
+    "category":"Level 1",
+    "description":"Sends a Tiny animal to a specific place."
+  },
+  {
+    "index":4,
+    "title":"Ant Haul",
+    "category":"Level 1",
+    "description":"Triples carrying capacity of a creature."
+  },
+  {
+    "index":5,
+    "title":"Anticipate Peril",
+    "category":"Level 1",
+    "description":"Target gains a bonus on one initiative check."
+  },
+  {
+    "index":6,
+    "title":"Aspect of the Falcon",
+    "category":"Level 1",
+    "description":"Gives bonuses on Perception and ranged attacks."
+  },
+  {
+    "index":7,
+    "title":"Bowstaff",
+    "category":"Level 1",
+    "description":"A shortbow may double as a club, or a longbow as a quarterstaff."
+  },
+  {
+    "index":8,
+    "title":"Call Animal",
+    "category":"Level 1",
+    "description":"Makes an animal come to you."
+  },
+  {
+    "index":9,
+    "title":"Calm animals",
+    "category":"Level 1",
+    "description":"Calms 2d4 + level HD of animals."
+  },
+  {
+    "index":10,
+    "title":"Charm Animal",
+    "category":"Level 1",
+    "description":"Makes one animal your friend."
+  },
+  {
+    "index":11,
+    "title":"Cloak of Shade",
+    "category":"Level 1",
+    "description":"Reduces effects of intense sun exposure and environmental heat."
+  },
+  {
+    "index":12,
+    "title":"Compel Hostility",
+    "category":"Level 1",
+    "description":"Compels opponents to attack you instead of your allies."
+  },
+  {
+    "index":13,
+    "title":"Dancing Lantern",
+    "category":"Level 1",
+    "description":"Animates a lantern that follows you."
+  },
+  {
+    "index":14,
+    "title":"Deadeye's Arrow",
+    "category":"Level 1",
+    "description":"You create an arrow made of crackling electricity, which you may fire as a weapon or use as a glowing beacon."
+  },
+  {
+    "index":15,
+    "title":"Defoliate",
+    "category":"Level 1",
+    "description":"You hurl a tiny ball of negative energy, destroying plant life either in a line 60 feet long or a 10-foot-radius spread."
+  },
+  {
+    "index":16,
+    "title":"Delay Poison",
+    "category":"Level 1",
+    "description":"Stops poison from harming subject for 1 hour/level."
+  },
+  {
+    "index":17,
+    "title":"Detect Aberration",
+    "category":"Level 1",
+    "description":"Detect presence of aberrations."
+  },
+  {
+    "index":18,
+    "title":"Detect Animals or Plants",
+    "category":"Level 1",
+    "description":"Detects kinds of animals or plants."
+  },
+  {
+    "index":19,
+    "title":"Detect Poison",
+    "category":"Level 1",
+    "description":"Detects poison in one creature or object."
+  },
+  {
+    "index":20,
+    "title":"Detect Snares and Pits",
+    "category":"Level 1",
+    "description":"Reveals natural or primitive traps."
+  },
+  {
+    "index":21,
+    "title":"Detect the Faithful",
+    "category":"Level 1",
+    "description":"You can detect other worshipers of your deity."
+  },
+  {
+    "index":22,
+    "title":"Diagnose Disease",
+    "category":"Level 1",
+    "description":"Detect and identify diseases."
+  },
+  {
+    "index":23,
+    "title":"Dream Feast",
+    "category":"Level 1",
+    "description":"Dream of a rich feast and when you awake, you are sated as if you ate and drank a nutritious meal."
+  },
+  {
+    "index":24,
+    "title":"Endure Elements",
+    "category":"Level 1",
+    "description":"Exist comfortably in hot or cold regions."
+  },
+  {
+    "index":25,
+    "title":"Entangle",
+    "category":"Level 1",
+    "description":"Plants entangle everyone in 40-ft. radius."
+  },
+  {
+    "index":26,
+    "title":"Feather Step",
+    "category":"Level 1",
+    "description":"Subject ignores adverse movement effects in difficult terrain."
+  },
+  {
+    "index":27,
+    "title":"Glide",
+    "category":"Level 1",
+    "description":"No fall damage, move 60 ft./round while falling."
+  },
+  {
+    "index":28,
+    "title":"Gravity Bow",
+    "category":"Level 1",
+    "description":"Arrows do damage as though one size category bigger."
+  },
+  {
+    "index":29,
+    "title":"Hide from animals",
+    "category":"Level 1",
+    "description":"animals can't perceive one subject/level."
+  },
+  {
+    "index":30,
+    "title":"Horn of Pursuit",
+    "category":"Level 1",
+    "description":"Create three notes heard miles away."
+  },
+  {
+    "index":31,
+    "title":"Hunter's Howl",
+    "category":"Level 1",
+    "description":"Treat enemies as favored for 1 round/level."
+  },
+  {
+    "index":32,
+    "title":"Jump",
+    "category":"Level 1",
+    "description":"Subject gets bonus on Acrobatics checks."
+  },
+  {
+    "index":33,
+    "title":"Keen Senses",
+    "category":"Level 1",
+    "description":"Gain +2 Perception and low-light vision."
+  },
+  {
+    "index":34,
+    "title":"Know the Enemy",
+    "category":"Level 1",
+    "description":"Gain +10 on a monster Knowledge check."
+  },
+  {
+    "index":35,
+    "title":"Lead Blades",
+    "category":"Level 1",
+    "description":"Melee weapons damage as if one size bigger."
+  },
+  {
+    "index":36,
+    "title":"Liberating Command",
+    "category":"Level 1",
+    "description":"Target makes an Escape Artist check as an immediate action and gains a bonus on it."
+  },
+  {
+    "index":37,
+    "title":"Longshot",
+    "category":"Level 1",
+    "description":"Grants a +10-foot bonus to the range increment for any ranged weapon fired."
+  },
+  {
+    "index":38,
+    "title":"Longstrider",
+    "category":"Level 1",
+    "description":"Your base speed increases by 10 ft."
+  },
+  {
+    "index":39,
+    "title":"Magic Fang",
+    "category":"Level 1",
+    "description":"One natural weapon of subject creature gets +1 on attack and damage rolls."
+  },
+  {
+    "index":40,
+    "title":"Negate Aroma",
+    "category":"Level 1",
+    "description":"Subject cannot be tracked by scent."
+  },
+  {
+    "index":41,
+    "title":"Pass without Trace",
+    "category":"Level 1",
+    "description":"One subject/level leaves no tracks."
+  },
+  {
+    "index":42,
+    "title":"Read Magic",
+    "category":"Level 1",
+    "description":"Read scrolls and spellbooks."
+  },
+  {
+    "index":43,
+    "title":"Residual Tracking",
+    "category":"Level 1",
+    "description":"Tell creature's appearance by footprint."
+  },
+  {
+    "index":44,
+    "title":"Resist Energy",
+    "category":"Level 1",
+    "description":"Ignores 10 (or more) points of damage/attack from specified energy type."
+  },
+  {
+    "index":45,
+    "title":"Returning Weapon",
+    "category":"Level 1",
+    "description":"Grants a weapon the returning special weapon quality."
+  },
+  {
+    "index":46,
+    "title":"Speak with animals",
+    "category":"Level 1",
+    "description":"You can communicate with animals."
+  },
+  {
+    "index":47,
+    "title":"Summon Minor Ally",
+    "category":"Level 1",
+    "description":"Summon 1d3 Tiny animals."
+  },
+  {
+    "index":48,
+    "title":"Summon Nature's Ally I",
+    "category":"Level 1",
+    "description":"Summons creature to fight for you."
+  },
+  {
+    "index":49,
+    "title":"Tireless Pursuit",
+    "category":"Level 1",
+    "description":"Ignore fatigue while hustling."
+  },
+  {
+    "index":50,
+    "title":"Unbreakable Heart",
+    "category":"Level 1",
+    "description":"Target gains a +4 bonus on saves against mind-affecting effects that rely on negative emotions."
+  },
+  {
+    "index":51,
+    "title":"Wartrain Mount",
+    "category":"Level 1",
+    "description":"Animal gains combat training."
+  },
+  {
+    "index":52,
+    "title":"Accelerate Poison",
+    "category":"Level 2",
+    "description":"Hastens targeted poison's onset."
+  },
+  {
+    "index":53,
+    "title":"Acute Senses",
+    "category":"Level 2",
+    "description":"Subject gains a bonus on Perception checks."
+  },
+  {
+    "index":54,
+    "title":"Allfood",
+    "category":"Level 2",
+    "description":"Turns item up to 5 lbs./level into food."
+  },
+  {
+    "index":55,
+    "title":"Animal Aspect",
+    "category":"Level 2",
+    "description":"You gain some of the beneficial qualities of an animal."
+  },
+  {
+    "index":56,
+    "title":"Ant Haul, Communal",
+    "category":"Level 2",
+    "description":"As ant haul, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":57,
+    "title":"Ape Walk",
+    "category":"Level 2",
+    "description":"Target gains climb 30 and +8 racial bonus on Climb skill checks."
+  },
+  {
+    "index":58,
+    "title":"Arrow Eruption",
+    "category":"Level 2",
+    "description":"Creates duplicates of an arrow used to kill a creature in the previous round."
+  },
+  {
+    "index":59,
+    "title":"Aspect of the Bear",
+    "category":"Level 2",
+    "description":" +2 AC and combat maneuver rolls."
+  },
+  {
+    "index":60,
+    "title":"Badger's Ferocity",
+    "category":"Level 2",
+    "description":"Weapons are keen while you concentrate."
+  },
+  {
+    "index":61,
+    "title":"Barkskin",
+    "category":"Level 2",
+    "description":"Grants +2 (or higher) enhancement to natural armor."
+  },
+  {
+    "index":62,
+    "title":"Bear's Endurance",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Con for 1 min./level."
+  },
+  {
+    "index":63,
+    "title":"Bloodhound",
+    "category":"Level 2",
+    "description":"Gives caster the scent special ability."
+  },
+  {
+    "index":64,
+    "title":"Brow Gasher",
+    "category":"Level 2",
+    "description":"Slashing weapon deals bleed damage to an opponent’s head."
+  },
+  {
+    "index":65,
+    "title":"Campfire Wall",
+    "category":"Level 2",
+    "description":"Creates a shelter around a campfire."
+  },
+  {
+    "index":66,
+    "title":"Cat's Grace",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Dex for 1 min./level."
+  },
+  {
+    "index":67,
+    "title":"Chameleon Stride",
+    "category":"Level 2",
+    "description":"Gives a +4 bonus on Stealth checks and concealment."
+  },
+  {
+    "index":68,
+    "title":"Create Treasure Map",
+    "category":"Level 2",
+    "description":"Creates treasure map out of a creature’s corpse."
+  },
+  {
+    "index":69,
+    "title":"Cure Light Wounds",
+    "category":"Level 2",
+    "description":"Cures 1d8 damage + 1/level (max +5)."
+  },
+  {
+    "index":70,
+    "title":"Eagle Eye",
+    "category":"Level 2",
+    "description":"Creates a magical sensor high above you."
+  },
+  {
+    "index":71,
+    "title":"Effortless Armor",
+    "category":"Level 2",
+    "description":"Armor you wear no longer slows your speed."
+  },
+  {
+    "index":72,
+    "title":"Endure Elements, Communal",
+    "category":"Level 2",
+    "description":"As endure elements, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":73,
+    "title":"Forest Friend",
+    "category":"Level 2",
+    "description":"Plants in a forested area become helpful instead of hindering you and your allies."
+  },
+  {
+    "index":74,
+    "title":"Guiding Star",
+    "category":"Level 2",
+    "description":"Know approximate distance from where you cast this spell."
+  },
+  {
+    "index":75,
+    "title":"Hide Campsite",
+    "category":"Level 2",
+    "description":"Hides all traces of your campsite."
+  },
+  {
+    "index":76,
+    "title":"Hold Animal",
+    "category":"Level 2",
+    "description":"Paralyzes one animal for 1 round/level."
+  },
+  {
+    "index":77,
+    "title":"Hunter’s Eye",
+    "category":"Level 2",
+    "description":" +20 on Perception checks to locate a target."
+  },
+  {
+    "index":78,
+    "title":"Locate Weakness",
+    "category":"Level 2",
+    "description":"You roll damage twice when you roll damage for a critical hit and take the best damage."
+  },
+  {
+    "index":79,
+    "title":"Lockjaw",
+    "category":"Level 2",
+    "description":"Gives creature grab ability with a natural attack."
+  },
+  {
+    "index":80,
+    "title":"Owl's Wisdom",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Wis for 1 min./level."
+  },
+  {
+    "index":81,
+    "title":"Perceive Cues",
+    "category":"Level 2",
+    "description":" +5 Perception and Sense Motive 10 min./level."
+  },
+  {
+    "index":82,
+    "title":"Protection from Energy",
+    "category":"Level 2",
+    "description":"Absorbs 12 points/level of damage from one kind of energy."
+  },
+  {
+    "index":83,
+    "title":"Protective Spirit",
+    "category":"Level 2",
+    "description":"Protects from attacks of opportunity."
+  },
+  {
+    "index":84,
+    "title":"Reloading Hands",
+    "category":"Level 2",
+    "description":"Loads a single shot into your weapon every round."
+  },
+  {
+    "index":85,
+    "title":"Returning weapon. Communal",
+    "category":"Level 2",
+    "description":"As returning weapon, but you may divide the duration among weapons touched."
+  },
+  {
+    "index":86,
+    "title":"Ricochet Shot",
+    "category":"Level 2",
+    "description":"Imbues a projectile weapon to give its ammunition the ability to ricochet."
+  },
+  {
+    "index":87,
+    "title":"Slipstream",
+    "category":"Level 2",
+    "description":"Wave boosts creature’s speed."
+  },
+  {
+    "index":88,
+    "title":"Snare",
+    "category":"Level 2",
+    "description":"Creates a magic booby trap."
+  },
+  {
+    "index":89,
+    "title":"Speak with Plants",
+    "category":"Level 2",
+    "description":"You can talk to plants and plant creatures."
+  },
+  {
+    "index":90,
+    "title":"Spike Growth",
+    "category":"Level 2",
+    "description":"Creatures in area take 1d4 damage, may be slowed."
+  },
+  {
+    "index":91,
+    "title":"Stone Call",
+    "category":"Level 2",
+    "description":"2d6 damage to all creatures in area."
+  },
+  {
+    "index":92,
+    "title":"Summon Nature's Ally II",
+    "category":"Level 2",
+    "description":"Summons creature to fight for you."
+  },
+  {
+    "index":93,
+    "title":"Versatile Weapon",
+    "category":"Level 2",
+    "description":"Weapon bypasses some DR."
+  },
+  {
+    "index":94,
+    "title":"Web Shelter",
+    "category":"Level 2",
+    "description":"Create a comfortable shelter made of webbing."
+  },
+  {
+    "index":95,
+    "title":"Wilderness Soldiers",
+    "category":"Level 2",
+    "description":"Nearby plants aid you in combat."
+  },
+  {
+    "index":96,
+    "title":"Wind Wall",
+    "category":"Level 2",
+    "description":"Deflects arrows, smaller creatures, and gases."
+  },
+  {
+    "index":97,
+    "title":"Animal Aspect, Greater",
+    "category":"Level 3",
+    "description":"As animal aspect, but you gain two animal qualities."
+  },
+  {
+    "index":98,
+    "title":"Aspect of the Stag",
+    "category":"Level 3",
+    "description":" +2 AC against attacks of opportunity and increases speed."
+  },
+  {
+    "index":99,
+    "title":"Blessing of the Mole",
+    "category":"Level 3",
+    "description":"1 ally/level gains darkvision and a +2 Stealth bonus."
+  },
+  {
+    "index":100,
+    "title":"Bloody Claws",
+    "category":"Level 3",
+    "description":"Gives creature the ability to deal bleed damage with natural attacks."
+  },
+  {
+    "index":101,
+    "title":"Burrow",
+    "category":"Level 3",
+    "description":"Target gains a burrow speed of 15."
+  },
+  {
+    "index":102,
+    "title":"Burst of Speed",
+    "category":"Level 3",
+    "description":"You gain increased speed, and your movement ignores attacks of opportunity and allows you to move through the space of creatures larger than you are."
+  },
+  {
+    "index":103,
+    "title":"Channel the Gift",
+    "category":"Level 3",
+    "description":"Channel magical power into target to fuel their spellcasting. The next 3rd level or lower spell target casts does not expend a spell slot; instead you use your spell slot to power their spell."
+  },
+  {
+    "index":104,
+    "title":"Cloak of Winds",
+    "category":"Level 3",
+    "description":"Creates a whirling screen of strong wind around you."
+  },
+  {
+    "index":105,
+    "title":"Command Plants",
+    "category":"Level 3",
+    "description":"Sway the actions of plant creatures."
+  },
+  {
+    "index":106,
+    "title":"Companion Mind Link",
+    "category":"Level 3",
+    "description":"You can talk with your animal companion, and can handle it with supernatural ease."
+  },
+  {
+    "index":107,
+    "title":"Cure Moderate Wounds",
+    "category":"Level 3",
+    "description":"Cures 2d8 damage +1/level (max. +10)."
+  },
+  {
+    "index":108,
+    "title":"Darkvision",
+    "category":"Level 3",
+    "description":"See 60 ft. in total darkness."
+  },
+  {
+    "index":109,
+    "title":"Delay Poison, Communal",
+    "category":"Level 3",
+    "description":"As delay poison, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":110,
+    "title":"Diminish Plants",
+    "category":"Level 3",
+    "description":"Reduces size or blights growth of normal plants."
+  },
+  {
+    "index":111,
+    "title":"Feather Step, Mass",
+    "category":"Level 3",
+    "description":"As feather step, but affects many targets rather than one."
+  },
+  {
+    "index":112,
+    "title":"Fickle Winds",
+    "category":"Level 3",
+    "description":"Wind walls selectively block attacks."
+  },
+  {
+    "index":113,
+    "title":"Instant Enemy",
+    "category":"Level 3",
+    "description":"Target is treated as a favored enemy type of your choice."
+  },
+  {
+    "index":114,
+    "title":"Life Bubble",
+    "category":"Level 3",
+    "description":"Protects creatures from sustained environmental effects."
+  },
+  {
+    "index":115,
+    "title":"Magic Fang, Greater",
+    "category":"Level 3",
+    "description":"One natural weapon gets + 1/four levels (max. +5)."
+  },
+  {
+    "index":116,
+    "title":"Named Bullet",
+    "category":"Level 3",
+    "description":"Imbues ammunition with accuracy against a specific creature type."
+  },
+  {
+    "index":117,
+    "title":"Neutralize Poison",
+    "category":"Level 3",
+    "description":"Immunizes subject against poison, detoxifies venom in or on subject."
+  },
+  {
+    "index":118,
+    "title":"Plant Growth",
+    "category":"Level 3",
+    "description":"Grows vegetation, improves crops."
+  },
+  {
+    "index":119,
+    "title":"Protection from Energy, Communal",
+    "category":"Level 3",
+    "description":"As protection from energy, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":120,
+    "title":"Reduce Animal",
+    "category":"Level 3",
+    "description":"Shrinks one willing animal."
+  },
+  {
+    "index":121,
+    "title":"Remove Disease",
+    "category":"Level 3",
+    "description":"Cures all diseases affecting subject."
+  },
+  {
+    "index":122,
+    "title":"Repel Vermin",
+    "category":"Level 3",
+    "description":"Insects, spiders, and other vermin stay 10 ft. away."
+  },
+  {
+    "index":123,
+    "title":"Resist Energy, Communal",
+    "category":"Level 3",
+    "description":"As resist energy, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":124,
+    "title":"Soothing Word",
+    "category":"Level 3",
+    "description":"Reduces effects of multiple conditions on target."
+  },
+  {
+    "index":125,
+    "title":"Strong Jaw",
+    "category":"Level 3",
+    "description":"Natural attacks damage as two sizes larger."
+  },
+  {
+    "index":126,
+    "title":"Summon Nature's Ally III",
+    "category":"Level 3",
+    "description":"Summons creature to fight for you."
+  },
+  {
+    "index":127,
+    "title":"Tireless Pursuers",
+    "category":"Level 3",
+    "description":"As tireless pursuit, but affects many targets rather than one."
+  },
+  {
+    "index":128,
+    "title":"Tree Shape",
+    "category":"Level 3",
+    "description":"You look exactly like a tree for 1 hour/level."
+  },
+  {
+    "index":129,
+    "title":"Venomous Bolt",
+    "category":"Level 3",
+    "description":"Arrow or bolt poisons target."
+  },
+  {
+    "index":130,
+    "title":"Water Walk",
+    "category":"Level 3",
+    "description":"Subject treads on water as if solid."
+  },
+  {
+    "index":131,
+    "title":"Animal Growth",
+    "category":"Level 4",
+    "description":"One animal doubles in size."
+  },
+  {
+    "index":132,
+    "title":"Aspect of the Wolf",
+    "category":"Level 4",
+    "description":"Subject gains +4 Str and Dex, and +2 bonus on trip attacks."
+  },
+  {
+    "index":133,
+    "title":"Blessing of the Salamander",
+    "category":"Level 4",
+    "description":"Subject gets fast healing 2, fire resistance 10, +2 CMD."
+  },
+  {
+    "index":134,
+    "title":"Bloodsworn Retribution",
+    "category":"Level 4",
+    "description":"Cut yourself and swear an oath of retribution on your own blood. Any attack, save, or check related to the oath grants you a morale bonus to that roll equal to the number of hit points of damage you sacrificed divided by 5."
+  },
+  {
+    "index":135,
+    "title":"Bow Spirit",
+    "category":"Level 4",
+    "description":"Summons an invisible spirit that fires your arrows for you as a swift action."
+  },
+  {
+    "index":136,
+    "title":"Commune with Nature",
+    "category":"Level 4",
+    "description":"Learn about terrain for 1 mile/level."
+  },
+  {
+    "index":137,
+    "title":"Cure Serious Wounds",
+    "category":"Level 4",
+    "description":"Cures 3d8 damage + 1/level (max +15)."
+  },
+  {
+    "index":138,
+    "title":"Darkvision, Communal",
+    "category":"Level 4",
+    "description":"As darkvision, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":139,
+    "title":"Darkvision, Greater",
+    "category":"Level 4",
+    "description":"See 120 ft. in total darkness."
+  },
+  {
+    "index":140,
+    "title":"Find Quarry",
+    "category":"Level 4",
+    "description":"You can sense whether a particular creature is within 20 miles of your location."
+  },
+  {
+    "index":141,
+    "title":"Freedom of Movement",
+    "category":"Level 4",
+    "description":"Subject moves normally despite impediments to movement."
+  },
+  {
+    "index":142,
+    "title":"Grove of Respite",
+    "category":"Level 4",
+    "description":"Creates trees and a small spring."
+  },
+  {
+    "index":143,
+    "title":"Named Bullet, Greater",
+    "category":"Level 4",
+    "description":"As named bullet, but deals 2 points of damage per caster level."
+  },
+  {
+    "index":144,
+    "title":"Nondetection",
+    "category":"Level 4",
+    "description":"Hides subject from divination, scrying."
+  },
+  {
+    "index":145,
+    "title":"Raise Animal Companion",
+    "category":"Level 4",
+    "description":"As raise dead, but on an animal."
+  },
+  {
+    "index":146,
+    "title":"Shield of the Dawnflower",
+    "category":"Level 4",
+    "description":"Creatures that strike you take 1d6 +1/level fire damage."
+  },
+  {
+    "index":147,
+    "title":"Summon Nature's Ally IV",
+    "category":"Level 4",
+    "description":"Summons creature to fight for you."
+  },
+  {
+    "index":148,
+    "title":"Terrain Bond",
+    "category":"Level 4",
+    "description":"Treat the terrain you are in as a favored terrain for the spell’s duration."
+  },
+  {
+    "index":149,
+    "title":"Tree Stride",
+    "category":"Level 4",
+    "description":"Step from one tree to another far away."
+  },
+  {
+    "index":150,
+    "title":"Water Walk, Communal",
+    "category":"Level 4",
+    "description":"As water walk, but you may divide the duration among creatures touched."
+  }
+]

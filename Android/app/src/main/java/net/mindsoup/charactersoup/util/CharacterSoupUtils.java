@@ -14,7 +14,10 @@ import net.mindsoup.charactersoup.fragments.UpdateMessageFragment;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Valentijn on 28-2-2015.
@@ -31,7 +34,7 @@ public class CharacterSoupUtils {
         messageFragment.show(fm, "help_message");
     }
 
-    public static void showListDialog(final String tag, final FragmentActivity activity, final String filename, final String title, final PickFromListFragment.ParcelablePickFromListListener listener) {
+    public static void showListDialog(final String tag, final FragmentActivity activity, final String filename, final String title, final PickFromListFragment.ParcelablePickFromListListener listener, boolean showCategories) {
         FragmentManager fm = activity.getSupportFragmentManager();
         if(fm.findFragmentByTag(tag) == null) {
             InputStream json;
@@ -58,8 +61,35 @@ public class CharacterSoupUtils {
             arguments.putString(PickFromListFragment.titleKey, title);
             arguments.putParcelableArrayList(PickFromListFragment.listKey, list);
             arguments.putParcelable(PickFromListFragment.callbackKey, listener);
+            arguments.putBoolean(PickFromListFragment.categoriesKey, showCategories);
             pickFeat.setArguments(arguments);
             pickFeat.show(fm, tag);
         }
+    }
+
+    public static List<String> getCategoriesFromListElements(List<ListElement> elements) {
+        List<String> categories = new LinkedList<String>();
+        String currentCategory = "";
+        for(ListElement e : elements) {
+            if(!e.getCategory().equalsIgnoreCase(currentCategory)) {
+                categories.add(e.getCategory());
+            }
+        }
+
+        return categories;
+    }
+
+    public static Map<String, List<ListElement>> convertListElementListToCategoryMap(List<ListElement> elements) {
+        Map<String, List<ListElement>> categoryMap = new LinkedHashMap<String, List<ListElement>>();
+
+        for(ListElement e : elements) {
+            if(!categoryMap.containsKey(e.getCategory())) {
+                categoryMap.put(e.getCategory(), new ArrayList<ListElement>());
+            }
+
+            categoryMap.get(e.getCategory()).add(e);
+        }
+
+        return categoryMap;
     }
 }
