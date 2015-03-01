@@ -41,23 +41,31 @@ public class SelectListAdapter extends ArrayAdapter<ListElement> {
             convertView = inflater.inflate(viewResourceId, null);
         }
         final View view = convertView;
-        ListElement item = items.get(position);
-
+        final ListElement item = items.get(position);
         TextView tv = (TextView)view.findViewById(R.id.select_title);
         tv.setText(item.getTitle());
         final int bgcolor = tv.getDrawingCacheBackgroundColor();
+
+        if(item.isExpanded()) {
+            tv.setBackgroundColor(Color.BLACK);
+            view.findViewById(R.id.select_list_description_group).setVisibility(View.VISIBLE);
+        } else {
+            tv.setBackgroundColor(bgcolor);
+            view.findViewById(R.id.select_list_description_group).setVisibility(View.GONE);
+        }
+
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ViewGroup description = (ViewGroup)view.findViewById(R.id.select_list_description_group);
 
-                if(description.getVisibility() == View.GONE) {
+                if(!item.isExpanded()) {
+                    item.expand();
                     v.setBackgroundColor(Color.BLACK);
-                    description.setBackgroundColor(Color.BLACK);
                     description.setVisibility(View.VISIBLE);
                 } else {
+                    item.collapse();
                     v.setBackgroundColor(bgcolor);
-                    description.setBackgroundColor(bgcolor);
                     description.setVisibility(View.GONE);
                 }
             }

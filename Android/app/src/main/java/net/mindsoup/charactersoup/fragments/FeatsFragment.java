@@ -62,9 +62,6 @@ public class FeatsFragment extends CharacterFragment {
 		
 			adapter.notifyDataSetChanged();
 		}
-		
-		
-		
 	}
 	
 	@Override 
@@ -112,7 +109,7 @@ public class FeatsFragment extends CharacterFragment {
 
             @Override
             public void writeToParcel(Parcel parcel, int i) {}
-        }, true);
+        }, false);
 	}
 
     @Override
