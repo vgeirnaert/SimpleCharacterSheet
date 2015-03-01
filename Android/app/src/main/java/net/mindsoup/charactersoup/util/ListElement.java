@@ -12,6 +12,7 @@ public class ListElement implements Parcelable {
     private String description;
     private int index;
     private String category;
+    private boolean isExpanded = false;
 
     public ListElement() {
         this.setTitle("");
@@ -56,6 +57,18 @@ public class ListElement implements Parcelable {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public void expand() {
+        this.isExpanded = true;
+    }
+
+    public void collapse() {
+        this.isExpanded = false;
+    }
+
+    public boolean isExpanded() {
+        return this.isExpanded;
     }
 
 

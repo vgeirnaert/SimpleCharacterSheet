@@ -21,7 +21,8 @@
         android:id="@+id/select_list_description_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone">
+        android:visibility="gone"
+        android:background="#000000">
         
 	    <View
             android:layout_alignParentTop="true"
