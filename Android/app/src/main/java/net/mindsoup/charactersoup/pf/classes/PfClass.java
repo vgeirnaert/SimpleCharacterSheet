@@ -1,13 +1,13 @@
 package net.mindsoup.charactersoup.pf.classes;
 
-import java.util.Map;
-
 import net.mindsoup.charactersoup.pf.PfCharacter;
 import net.mindsoup.charactersoup.pf.PfClasses;
 import net.mindsoup.charactersoup.pf.feats.PfFeats;
 import net.mindsoup.charactersoup.pf.skills.PfSkills;
 import net.mindsoup.charactersoup.pf.util.Calculation;
 import net.mindsoup.charactersoup.pf.util.Dice;
+
+import java.util.Map;
 
 public interface PfClass {
 	public PfClasses getPfClass();

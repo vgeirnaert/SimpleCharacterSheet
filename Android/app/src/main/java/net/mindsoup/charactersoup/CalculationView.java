@@ -3,12 +3,13 @@
  */
 package net.mindsoup.charactersoup;
 
-import net.mindsoup.charactersoup.pf.util.Calculation;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import net.mindsoup.charactersoup.pf.util.Calculation;
 
 /**
  * @author Valentijn

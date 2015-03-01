@@ -3,8 +3,6 @@
  */
 package net.mindsoup.charactersoup.fragments;
 
-import net.mindsoup.charactersoup.MainActivity;
-import net.mindsoup.charactersoup.R;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +16,9 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockDialogFragment;
+
+import net.mindsoup.charactersoup.MainActivity;
+import net.mindsoup.charactersoup.R;
 
 /**
  * @author Valentijn

@@ -1,6 +1,5 @@
 package net.mindsoup.charactersoup;
 
-import net.mindsoup.charactersoup.util.TextFileReader;
 import android.os.Bundle;
 import android.text.Html;
 import android.widget.TextView;
@@ -9,6 +8,8 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+
+import net.mindsoup.charactersoup.util.TextFileReader;
 
 public class OglActivity extends SherlockActivity {
 
