@@ -112,7 +112,7 @@ public class FeatsFragment extends CharacterFragment {
 
             @Override
             public void writeToParcel(Parcel parcel, int i) {}
-        });
+        }, true);
 	}
 
     @Override

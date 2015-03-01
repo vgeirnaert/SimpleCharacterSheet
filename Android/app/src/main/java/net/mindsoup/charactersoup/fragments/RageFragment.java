@@ -102,7 +102,7 @@ public class RageFragment extends CharacterFragment {
             @Override
             public void writeToParcel(Parcel parcel, int i) {
             }
-        });
+        }, false);
     }
 
     @Override

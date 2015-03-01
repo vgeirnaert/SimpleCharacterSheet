@@ -1,0 +1,1958 @@
+[
+  {
+    "index":0,
+    "title":"Create Water",
+    "category":"Level 0",
+    "description":"Creates 2 gallons/level of pure water."
+  },
+  {
+    "index":1,
+    "title":"Detect Magic",
+    "category":"Level 0",
+    "description":"Detects spells and magic items within 60 ft."
+  },
+  {
+    "index":2,
+    "title":"Detect Poison",
+    "category":"Level 0",
+    "description":"Detects poison in one creature or object."
+  },
+  {
+    "index":3,
+    "title":"Flare",
+    "category":"Level 0",
+    "description":"Dazzles one creature (–1 penalty on attack rolls)."
+  },
+  {
+    "index":4,
+    "title":"Guidance",
+    "category":"Level 0",
+    "description":" +1 on one attack roll, saving throw, or skill check."
+  },
+  {
+    "index":5,
+    "title":"Know Direction",
+    "category":"Level 0",
+    "description":"You discern north."
+  },
+  {
+    "index":6,
+    "title":"Light",
+    "category":"Level 0",
+    "description":"Object shines like a torch."
+  },
+  {
+    "index":7,
+    "title":"Mending",
+    "category":"Level 0",
+    "description":"Makes minor repairs on an object."
+  },
+  {
+    "index":8,
+    "title":"Purify Food and Drink",
+    "category":"Level 0",
+    "description":"Purifies 1 cu. ft./level of food or water."
+  },
+  {
+    "index":9,
+    "title":"Read Magic",
+    "category":"Level 0",
+    "description":"Read scrolls and spellbooks."
+  },
+  {
+    "index":10,
+    "title":"Resistance",
+    "category":"Level 0",
+    "description":"Subject gains +1 bonus on saving throws."
+  },
+  {
+    "index":11,
+    "title":"Spark",
+    "category":"Level 0",
+    "description":"Ignites flammable objects."
+  },
+  {
+    "index":12,
+    "title":"Stabilize",
+    "category":"Level 0",
+    "description":"Cause a dying creature to stabilize."
+  },
+  {
+    "index":13,
+    "title":"Virtue",
+    "category":"Level 0",
+    "description":"Subject gains 1 temporary hp."
+  },
+  {
+    "index":14,
+    "title":"Air Bubble",
+    "category":"Level 1",
+    "description":"Creates a small pocket of air around your head or an object."
+  },
+  {
+    "index":15,
+    "title":"Alter Winds",
+    "category":"Level 1",
+    "description":"Increase/decrease strength of natural winds."
+  },
+  {
+    "index":16,
+    "title":"Ant Haul",
+    "category":"Level 1",
+    "description":"Triples carrying capacity of a creature."
+  },
+  {
+    "index":17,
+    "title":"Aspect of the Falcon",
+    "category":"Level 1",
+    "description":"Gives bonuses on Perception checks and ranged attacks."
+  },
+  {
+    "index":18,
+    "title":"Bristle",
+    "category":"Level 1",
+    "description":"Trade natural armor bonus for a bonus on attacks with natural weapons."
+  },
+  {
+    "index":19,
+    "title":"Burning Disarm",
+    "category":"Level 1",
+    "description":"A metal object instantly becomes red hot possibly causing the wielder to drop it or take damage."
+  },
+  {
+    "index":20,
+    "title":"Calm Animals",
+    "category":"Level 1",
+    "description":"Calms 2d4 + level HD of animals."
+  },
+  {
+    "index":21,
+    "title":"Charm Animal",
+    "category":"Level 1",
+    "description":"Makes one animal your friend."
+  },
+  {
+    "index":22,
+    "title":"Cloak of Shade",
+    "category":"Level 1",
+    "description":"Reduces effects of sun exposure and heat."
+  },
+  {
+    "index":23,
+    "title":"Cure Light Wounds",
+    "category":"Level 1",
+    "description":"Cures 1d8 damage + 1/level (max +5)."
+  },
+  {
+    "index":24,
+    "title":"Damp Powder",
+    "category":"Level 1",
+    "description":"Ruins ammunition loaded in the targeted firearm."
+  },
+  {
+    "index":25,
+    "title":"Decompose Corpse",
+    "category":"Level 1",
+    "description":"Turn a corpse into a clean skeleton."
+  },
+  {
+    "index":26,
+    "title":"Detect Aberration",
+    "category":"Level 1",
+    "description":"Reveals presence of aberrations."
+  },
+  {
+    "index":27,
+    "title":"Detect Animals or Plants",
+    "category":"Level 1",
+    "description":"Detects kinds of animals or plants."
+  },
+  {
+    "index":28,
+    "title":"Detect Snares and Pits",
+    "category":"Level 1",
+    "description":"Reveals natural or primitive traps."
+  },
+  {
+    "index":29,
+    "title":"Detect the Faithful",
+    "category":"Level 1",
+    "description":"You can detect other worshipers of your deity."
+  },
+  {
+    "index":30,
+    "title":"Diagnose Disease",
+    "category":"Level 1",
+    "description":"Detect and identify diseases."
+  },
+  {
+    "index":31,
+    "title":"Dream Feast",
+    "category":"Level 1",
+    "description":"Target awakens from normal rest as if ate and drank a nutritious meal."
+  },
+  {
+    "index":32,
+    "title":"Endure Elements",
+    "category":"Level 1",
+    "description":"Exist comfortably in hot or cold regions."
+  },
+  {
+    "index":33,
+    "title":"Entangle",
+    "category":"Level 1",
+    "description":"Plants entangle everyone in 40-ft. radius."
+  },
+  {
+    "index":34,
+    "title":"Expeditious Excavation",
+    "category":"Level 1",
+    "description":"Moves 5-ft. cubes of earth."
+  },
+  {
+    "index":35,
+    "title":"Faerie Fire",
+    "category":"Level 1",
+    "description":"Outlines subjects with light, canceling blur, concealment, and the like."
+  },
+  {
+    "index":36,
+    "title":"Feather Step",
+    "category":"Level 1",
+    "description":"Ignore movement penalty in difficult terrain."
+  },
+  {
+    "index":37,
+    "title":"Flare Burst",
+    "category":"Level 1",
+    "description":"As flare, but all creatures within 10 ft."
+  },
+  {
+    "index":38,
+    "title":"Frostbite",
+    "category":"Level 1",
+    "description":"Target takes cold damage and is fatigued."
+  },
+  {
+    "index":39,
+    "title":"Goodberry",
+    "category":"Level 1",
+    "description":"2d4 berries each cure 1 hp (max 8 hp/24 hours)."
+  },
+  {
+    "index":40,
+    "title":"Hide from Animals",
+    "category":"Level 1",
+    "description":"Animals can't perceive one subject/level."
+  },
+  {
+    "index":41,
+    "title":"Hydraulic Push",
+    "category":"Level 1",
+    "description":"Wave of water bull rushes an enemy."
+  },
+  {
+    "index":42,
+    "title":"Jump",
+    "category":"Level 1",
+    "description":"Subject gets bonus on Acrobatics checks."
+  },
+  {
+    "index":43,
+    "title":"Keen Senses",
+    "category":"Level 1",
+    "description":"Gain +2 Perception and low-light vision."
+  },
+  {
+    "index":44,
+    "title":"Liberating Command",
+    "category":"Level 1",
+    "description":"Target makes an Escape Artist check as an immediate action and gains a bonus on it."
+  },
+  {
+    "index":45,
+    "title":"Longstrider",
+    "category":"Level 1",
+    "description":"Your speed increases by 10 ft."
+  },
+  {
+    "index":46,
+    "title":"Magic Fang",
+    "category":"Level 1",
+    "description":"One natural weapon of subject creature gets +1 on attack and damage rolls."
+  },
+  {
+    "index":47,
+    "title":"Magic Stone",
+    "category":"Level 1",
+    "description":"Three stones gain +1 on attack rolls, deal 1d6+1 damage."
+  },
+  {
+    "index":48,
+    "title":"Negate Aroma",
+    "category":"Level 1",
+    "description":"Subject cannot be tracked by scent."
+  },
+  {
+    "index":49,
+    "title":"Obscuring Mist",
+    "category":"Level 1",
+    "description":"Fog surrounds you."
+  },
+  {
+    "index":50,
+    "title":"Pass without Trace",
+    "category":"Level 1",
+    "description":"One subject/level leaves no tracks."
+  },
+  {
+    "index":51,
+    "title":"Produce Flame",
+    "category":"Level 1",
+    "description":"1d6 damage + 1/level, touch or thrown."
+  },
+  {
+    "index":52,
+    "title":"Ray of Sickening",
+    "category":"Level 1",
+    "description":"Ray makes the subject sickened."
+  },
+  {
+    "index":53,
+    "title":"Remove Sickness",
+    "category":"Level 1",
+    "description":"Suppress disease, nausea, and the sickened condition."
+  },
+  {
+    "index":54,
+    "title":"Restore Corpse",
+    "category":"Level 1",
+    "description":"Skeletal corpse grows flesh."
+  },
+  {
+    "index":55,
+    "title":"Shillelagh",
+    "category":"Level 1",
+    "description":"Cudgel or quarterstaff becomes +1 weapon (2d6 damage) for 1 min./level."
+  },
+  {
+    "index":56,
+    "title":"Speak with Animals",
+    "category":"Level 1",
+    "description":"You can communicate with animals."
+  },
+  {
+    "index":57,
+    "title":"Stone Fist",
+    "category":"Level 1",
+    "description":"Your unarmed strikes are lethal."
+  },
+  {
+    "index":58,
+    "title":"Summon Minor Ally",
+    "category":"Level 1",
+    "description":"Summon 1d3 Tiny animals."
+  },
+  {
+    "index":59,
+    "title":"Summon Nature's Ally I",
+    "category":"Level 1",
+    "description":"Summons creature to fight."
+  },
+  {
+    "index":60,
+    "title":"Touch of the Sea",
+    "category":"Level 1",
+    "description":"Swim speed becomes 30 ft."
+  },
+  {
+    "index":61,
+    "title":"Weaken Powder",
+    "category":"Level 1",
+    "description":"Targeted firearm's ammunition halves the firearm's range and imposes a –2 penalty on damage rolls."
+  },
+  {
+    "index":62,
+    "title":"Accelerate Poison",
+    "category":"Level 2",
+    "description":"Hastens targeted poison's onset."
+  },
+  {
+    "index":63,
+    "title":"Animal Aspect",
+    "category":"Level 2",
+    "description":"You gain some of the beneficial qualities of an animal."
+  },
+  {
+    "index":64,
+    "title":"Animal Messenger",
+    "category":"Level 2",
+    "description":"Sends a Tiny animal to a specific place."
+  },
+  {
+    "index":65,
+    "title":"Animal Trance",
+    "category":"Level 2",
+    "description":"Fascinates 2d6 HD of animals."
+  },
+  {
+    "index":66,
+    "title":"Ant Haul, Communal",
+    "category":"Level 2",
+    "description":"As ant haul, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":67,
+    "title":"Aspect of the Bear",
+    "category":"Level 2",
+    "description":" +2 AC and combat maneuver rolls."
+  },
+  {
+    "index":68,
+    "title":"Barkskin",
+    "category":"Level 2",
+    "description":"Grants +2 (or higher) enhancement to natural armor."
+  },
+  {
+    "index":69,
+    "title":"Bear's Endurance",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Con for 1 min./level."
+  },
+  {
+    "index":70,
+    "title":"Bull's Strength",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Str for 1 min./level."
+  },
+  {
+    "index":71,
+    "title":"Burning Gaze",
+    "category":"Level 2",
+    "description":"Inflict 1d6 fire damage to creature."
+  },
+  {
+    "index":72,
+    "title":"Campfire Wall",
+    "category":"Level 2",
+    "description":"Creates a shelter around a campfire."
+  },
+  {
+    "index":73,
+    "title":"Cat's Grace",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Dex for 1 min./level."
+  },
+  {
+    "index":74,
+    "title":"Certain Grip",
+    "category":"Level 2",
+    "description":"You gain a +4 competence bonus on Acrobatics and Climb checks and to CMD."
+  },
+  {
+    "index":75,
+    "title":"Chill Metal",
+    "category":"Level 2",
+    "description":"Cold metal damages those who touch it."
+  },
+  {
+    "index":76,
+    "title":"Defoliate",
+    "category":"Level 2",
+    "description":"You hurl a tiny ball of negative energy, destroying plant life either in a line 60 feet long or a 10-foot-radius spread."
+  },
+  {
+    "index":77,
+    "title":"Delay Poison",
+    "category":"Level 2",
+    "description":"Stops poison from harming subject for 1 hour/level."
+  },
+  {
+    "index":78,
+    "title":"Eagle Eye",
+    "category":"Level 2",
+    "description":"Creates a magical sensor high above you."
+  },
+  {
+    "index":79,
+    "title":"Elemental Speech",
+    "category":"Level 2",
+    "description":"Enables you to speak to elementals and some creatures."
+  },
+  {
+    "index":80,
+    "title":"Endure Elements, Communal",
+    "category":"Level 2",
+    "description":"As endure elements, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":81,
+    "title":"Feast of Ashes",
+    "category":"Level 2",
+    "description":"A target starves with an insatiable hunger."
+  },
+  {
+    "index":82,
+    "title":"Fire Trap",
+    "category":"Level 2",
+    "description":"Opened object deals 1d4 + 1/level damage."
+  },
+  {
+    "index":83,
+    "title":"Flame Blade",
+    "category":"Level 2",
+    "description":"Touch attack deals 1d8 + 1/two levels damage."
+  },
+  {
+    "index":84,
+    "title":"Flaming Sphere",
+    "category":"Level 2",
+    "description":"Rolling ball of fire deals 3d6 fire damage."
+  },
+  {
+    "index":85,
+    "title":"Fog Cloud",
+    "category":"Level 2",
+    "description":"Fog obscures vision."
+  },
+  {
+    "index":86,
+    "title":"Forest Friend",
+    "category":"Level 2",
+    "description":"Plants in a forested area become helpful instead of hindering you and your allies."
+  },
+  {
+    "index":87,
+    "title":"Frigid Touch",
+    "category":"Level 2",
+    "description":"Target takes cold damage and is staggered."
+  },
+  {
+    "index":88,
+    "title":"Frost Fall",
+    "category":"Level 2",
+    "description":"The area is covered in a chilling frost."
+  },
+  {
+    "index":89,
+    "title":"Glide",
+    "category":"Level 2",
+    "description":"You take no falling damage, move 60 ft./round while falling."
+  },
+  {
+    "index":90,
+    "title":"Gust of Wind",
+    "category":"Level 2",
+    "description":"Blows away or knocks down smaller creatures."
+  },
+  {
+    "index":91,
+    "title":"Heat Metal",
+    "category":"Level 2",
+    "description":"Makes metal so hot it damages those who touch it."
+  },
+  {
+    "index":92,
+    "title":"Hold Animal",
+    "category":"Level 2",
+    "description":"Paralyzes one animal for 1 round/level."
+  },
+  {
+    "index":93,
+    "title":"Lockjaw",
+    "category":"Level 2",
+    "description":"Creature gains grab ability with natural attack."
+  },
+  {
+    "index":94,
+    "title":"Masterwork Transformation",
+    "category":"Level 2",
+    "description":"Make a normal item into a masterwork one."
+  },
+  {
+    "index":95,
+    "title":"Natural Rhythm",
+    "category":"Level 2",
+    "description":" +1 on damage rolls with each hit (max +5)."
+  },
+  {
+    "index":96,
+    "title":"Owl's Wisdom",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Wis for 1 min./level."
+  },
+  {
+    "index":97,
+    "title":"Pernicious Poison",
+    "category":"Level 2",
+    "description":"Target takes a -4 penalty against poison."
+  },
+  {
+    "index":98,
+    "title":"Pox Pustules",
+    "category":"Level 2",
+    "description":"Subject is sickened and has –4 Dex."
+  },
+  {
+    "index":99,
+    "title":"Reduce Animal",
+    "category":"Level 2",
+    "description":"Shrinks one willing animal."
+  },
+  {
+    "index":100,
+    "title":"Resist Energy",
+    "category":"Level 2",
+    "description":"Ignores 10 or more points of damage per attack from specified energy type."
+  },
+  {
+    "index":101,
+    "title":"Restoration, Lesser",
+    "category":"Level 2",
+    "description":"Dispels magical ability penalty or repairs 1d4 ability damage."
+  },
+  {
+    "index":102,
+    "title":"Scent Trail",
+    "category":"Level 2",
+    "description":"Leave trail for allies to follow."
+  },
+  {
+    "index":103,
+    "title":"Share Language",
+    "category":"Level 2",
+    "description":"Subject understands chosen language."
+  },
+  {
+    "index":104,
+    "title":"Slipstream",
+    "category":"Level 2",
+    "description":"Wave boosts creature’s speed."
+  },
+  {
+    "index":105,
+    "title":"Soften Earth and Stone",
+    "category":"Level 2",
+    "description":"Turns stone to clay, or dirt to sand or mud."
+  },
+  {
+    "index":106,
+    "title":"Soothing Word",
+    "category":"Level 2",
+    "description":"Reduces effects of multiple conditions on target."
+  },
+  {
+    "index":107,
+    "title":"Spider Climb",
+    "category":"Level 2",
+    "description":"Grants ability to walk on walls and ceilings."
+  },
+  {
+    "index":108,
+    "title":"Stone Call",
+    "category":"Level 2",
+    "description":"2d6 damage to all creatures in area."
+  },
+  {
+    "index":109,
+    "title":"Summon Nature's Ally II",
+    "category":"Level 2",
+    "description":"Summons creature to fight."
+  },
+  {
+    "index":110,
+    "title":"Summon Swarm",
+    "category":"Level 2",
+    "description":"Summons swarm of bats, rats, or spiders."
+  },
+  {
+    "index":111,
+    "title":"Tar Ball",
+    "category":"Level 2",
+    "description":"Burning tar harms target and penalizes its Dex."
+  },
+  {
+    "index":112,
+    "title":"Tree Shape",
+    "category":"Level 2",
+    "description":"You look exactly like a tree for 1 hour/level."
+  },
+  {
+    "index":113,
+    "title":"Unshakable Chill",
+    "category":"Level 2",
+    "description":"Target is afflicted with severe cold."
+  },
+  {
+    "index":114,
+    "title":"Warp Wood",
+    "category":"Level 2",
+    "description":"Bends wood."
+  },
+  {
+    "index":115,
+    "title":"Wartrain Mount",
+    "category":"Level 2",
+    "description":"Animal gains the combat training general purpose."
+  },
+  {
+    "index":116,
+    "title":"Web Shelter",
+    "category":"Level 2",
+    "description":"Create a comfortable shelter made of webbing."
+  },
+  {
+    "index":117,
+    "title":"Wilderness Soldiers",
+    "category":"Level 2",
+    "description":"Nearby plants aid you in combat."
+  },
+  {
+    "index":118,
+    "title":"Wood Shape",
+    "category":"Level 2",
+    "description":"Reshapes wooden objects to suit you."
+  },
+  {
+    "index":119,
+    "title":"Animal Aspect, Greater",
+    "category":"Level 3",
+    "description":"As animal aspect, but you gain two animal qualities."
+  },
+  {
+    "index":120,
+    "title":"Anthropomorphic Animal",
+    "category":"Level 3",
+    "description":"Animal becomes bipedal."
+  },
+  {
+    "index":121,
+    "title":"Ape Walk",
+    "category":"Level 3",
+    "description":"Target gains climb 30 and +8 racial bonus on Climb skill checks."
+  },
+  {
+    "index":122,
+    "title":"Aqueous Orb",
+    "category":"Level 3",
+    "description":"Creates rolling sphere of water."
+  },
+  {
+    "index":123,
+    "title":"Ash Storm",
+    "category":"Level 3",
+    "description":"Hamper vision and movement."
+  },
+  {
+    "index":124,
+    "title":"Badger's Ferocity",
+    "category":"Level 3",
+    "description":"Weapons are keen while you concentrate."
+  },
+  {
+    "index":125,
+    "title":"Burrow",
+    "category":"Level 3",
+    "description":"Target gains a burrow speed of 15."
+  },
+  {
+    "index":126,
+    "title":"Burst of Nettles",
+    "category":"Level 3",
+    "description":"Burst deals 3d6 damage and 1d6 acid."
+  },
+  {
+    "index":127,
+    "title":"Call Lightning",
+    "category":"Level 3",
+    "description":"Calls down lightning bolts (3d6 per bolt) from sky."
+  },
+  {
+    "index":128,
+    "title":"Channel the Gift",
+    "category":"Level 3",
+    "description":"Channel magical power into target to fuel their spellcasting. The next 3rd level or lower spell target casts does not expend a spell slot; instead you use your spell slot to power their spell."
+  },
+  {
+    "index":129,
+    "title":"Cloak of Winds",
+    "category":"Level 3",
+    "description":"Creates screen of strong wind around you."
+  },
+  {
+    "index":130,
+    "title":"Companion Mind Link",
+    "category":"Level 3",
+    "description":"You can talk with your animal companion, and can handle it with supernatural ease."
+  },
+  {
+    "index":131,
+    "title":"Contagion",
+    "category":"Level 3",
+    "description":"Infects subject with chosen disease."
+  },
+  {
+    "index":132,
+    "title":"Create Treasure Map",
+    "category":"Level 3",
+    "description":"Creates treasure map out of a creature’s corpse."
+  },
+  {
+    "index":133,
+    "title":"Cup of Dust",
+    "category":"Level 3",
+    "description":"Causes a creature to become dehydrated."
+  },
+  {
+    "index":134,
+    "title":"Cure Moderate Wounds",
+    "category":"Level 3",
+    "description":"Cures 2d8 damage + 1/level (max +10)."
+  },
+  {
+    "index":135,
+    "title":"Daylight",
+    "category":"Level 3",
+    "description":"60-ft. radius of bright light."
+  },
+  {
+    "index":136,
+    "title":"Delay Poison, Communal",
+    "category":"Level 3",
+    "description":"As delay poison, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":137,
+    "title":"Diminish Plants",
+    "category":"Level 3",
+    "description":"Reduces size or blights the growth of normal plants."
+  },
+  {
+    "index":138,
+    "title":"Dominate Animal",
+    "category":"Level 3",
+    "description":"One animal obeys your silent mental commands and orders."
+  },
+  {
+    "index":139,
+    "title":"Feather Step, Mass",
+    "category":"Level 3",
+    "description":"As feather step, but multiple creatures."
+  },
+  {
+    "index":140,
+    "title":"Fungal Infestation",
+    "category":"Level 3",
+    "description":"Target takes bleed from attacks."
+  },
+  {
+    "index":141,
+    "title":"Heatstroke",
+    "category":"Level 3",
+    "description":"As ray of exhaustion plus 1d4 nonlethal damage and characters wearing heavy clothing or armor of any sort take a –4 penalty on their saves."
+  },
+  {
+    "index":142,
+    "title":"Hide Campsite",
+    "category":"Level 3",
+    "description":"Hides all traces of your campsite."
+  },
+  {
+    "index":143,
+    "title":"Hurricane Blast",
+    "category":"Level 3",
+    "description":"Creates a severe blast of wind."
+  },
+  {
+    "index":144,
+    "title":"Hydraulic Torrent",
+    "category":"Level 3",
+    "description":"Creates torrent of water that bull rushes any creature in its path."
+  },
+  {
+    "index":145,
+    "title":"Lily Pad Stride",
+    "category":"Level 3",
+    "description":"Walk across water on moving lily pads."
+  },
+  {
+    "index":146,
+    "title":"Mad Monkeys",
+    "category":"Level 3",
+    "description":"Summon a swarm of mischievous monkeys."
+  },
+  {
+    "index":147,
+    "title":"Magic Fang, Greater",
+    "category":"Level 3",
+    "description":"One natural weapon gets + 1/four levels (max +5)."
+  },
+  {
+    "index":148,
+    "title":"Meld into Stone",
+    "category":"Level 3",
+    "description":"You and your gear merge with stone."
+  },
+  {
+    "index":149,
+    "title":"Nature's Exile",
+    "category":"Level 3",
+    "description":"Gives subject –10 on Survival checks."
+  },
+  {
+    "index":150,
+    "title":"Neutralize Poison",
+    "category":"Level 3",
+    "description":"Immunizes subject against poison, detoxifies venom in or on subject."
+  },
+  {
+    "index":151,
+    "title":"Plant Growth",
+    "category":"Level 3",
+    "description":"Grows vegetation, improves crops."
+  },
+  {
+    "index":152,
+    "title":"Poison",
+    "category":"Level 3",
+    "description":"Touch deals 1d3 Con damage 1/round for 6 rounds."
+  },
+  {
+    "index":153,
+    "title":"Protection from Energy",
+    "category":"Level 3",
+    "description":"Absorbs 12 points/level of damage from one kind of energy."
+  },
+  {
+    "index":154,
+    "title":"Pup Shape",
+    "category":"Level 3",
+    "description":"Transforms a single animal or magical beast into a younger and cuter version of itself for a short time."
+  },
+  {
+    "index":155,
+    "title":"Quench",
+    "category":"Level 3",
+    "description":"Extinguishes fires."
+  },
+  {
+    "index":156,
+    "title":"Rain of Frogs",
+    "category":"Level 3",
+    "description":"Summon a swarm of poisonous frogs."
+  },
+  {
+    "index":157,
+    "title":"Remove Disease",
+    "category":"Level 3",
+    "description":"Cures all diseases affecting subject."
+  },
+  {
+    "index":158,
+    "title":"Resinous Skin",
+    "category":"Level 3",
+    "description":"You gain DR 5/piercing and +4 to CMD against disarm attempts."
+  },
+  {
+    "index":159,
+    "title":"Resist Energy, Communal",
+    "category":"Level 3",
+    "description":"As resist energy, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":160,
+    "title":"Share Language, Communal",
+    "category":"Level 3",
+    "description":"As share language, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":161,
+    "title":"Shifting Sand",
+    "category":"Level 3",
+    "description":"Creates difficult terrain and erases tracks; can carry creatures or objects along."
+  },
+  {
+    "index":162,
+    "title":"Sleet Storm",
+    "category":"Level 3",
+    "description":"Hampers vision and movement."
+  },
+  {
+    "index":163,
+    "title":"Snare",
+    "category":"Level 3",
+    "description":"Creates a magic booby trap."
+  },
+  {
+    "index":164,
+    "title":"Speak with Plants",
+    "category":"Level 3",
+    "description":"You can talk to plants and plant creatures."
+  },
+  {
+    "index":165,
+    "title":"Spider Climb, Communal",
+    "category":"Level 3",
+    "description":"As spider climb, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":166,
+    "title":"Spike Growth",
+    "category":"Level 3",
+    "description":"Creatures in area take 1d4 damage, may be slowed."
+  },
+  {
+    "index":167,
+    "title":"Spit Venom",
+    "category":"Level 3",
+    "description":"Spit blinding black adder venom."
+  },
+  {
+    "index":168,
+    "title":"Stone Shape",
+    "category":"Level 3",
+    "description":"Sculpts stone into any shape."
+  },
+  {
+    "index":169,
+    "title":"Summon Nature's Ally III",
+    "category":"Level 3",
+    "description":"Summons creature to fight."
+  },
+  {
+    "index":170,
+    "title":"Vermin Shape I",
+    "category":"Level 3",
+    "description":"Take the form and some of the powers of a Small or Medium vermin."
+  },
+  {
+    "index":171,
+    "title":"Water Breathing",
+    "category":"Level 3",
+    "description":"Subjects can breathe underwater."
+  },
+  {
+    "index":172,
+    "title":"Waters of Maddening",
+    "category":"Level 3",
+    "description":"Create a more potent unholy water."
+  },
+  {
+    "index":173,
+    "title":"Wind Wall",
+    "category":"Level 3",
+    "description":"Deflects arrows, smaller creatures, and gases."
+  },
+  {
+    "index":174,
+    "title":"Absorb Toxicity",
+    "category":"Level 4",
+    "description":"You become immune to diseases and toxins, absorb one, and then spread it to others."
+  },
+  {
+    "index":175,
+    "title":"Age Resistance, Lesser",
+    "category":"Level 4",
+    "description":"Ignore penalties from middle age."
+  },
+  {
+    "index":176,
+    "title":"Air Walk",
+    "category":"Level 4",
+    "description":"Subject treads on air as if solid (climb or descend at 45-degree angle)."
+  },
+  {
+    "index":177,
+    "title":"Antiplant Shell",
+    "category":"Level 4",
+    "description":"Keeps animated plants at bay."
+  },
+  {
+    "index":178,
+    "title":"Arboreal Hammer",
+    "category":"Level 4",
+    "description":"Tree branches attack opponents."
+  },
+  {
+    "index":179,
+    "title":"Aspect of the Stag",
+    "category":"Level 4",
+    "description":" +2 AC against attacks of opportunity and increases speed."
+  },
+  {
+    "index":180,
+    "title":"Atavism",
+    "category":"Level 4",
+    "description":"Animal gains advanced creature simple template."
+  },
+  {
+    "index":181,
+    "title":"Ball Lightning",
+    "category":"Level 4",
+    "description":"Flying lightning spheres deal 3d6 electricity damage each."
+  },
+  {
+    "index":182,
+    "title":"Blight",
+    "category":"Level 4",
+    "description":"Withers one plant or deals 1d6/level damage to plant creature."
+  },
+  {
+    "index":183,
+    "title":"Bloody Claws",
+    "category":"Level 4",
+    "description":"Causes bleed damage with natural attacks."
+  },
+  {
+    "index":184,
+    "title":"Cape of Wasps",
+    "category":"Level 4",
+    "description":"Wasp swarm defends or carries you."
+  },
+  {
+    "index":185,
+    "title":"Command Plants",
+    "category":"Level 4",
+    "description":"Sways the actions of plant creatures."
+  },
+  {
+    "index":186,
+    "title":"Control Water",
+    "category":"Level 4",
+    "description":"Raises or lowers bodies of water."
+  },
+  {
+    "index":187,
+    "title":"Cure Serious Wounds",
+    "category":"Level 4",
+    "description":"Cures 3d8 damage + 1/level (max +15)."
+  },
+  {
+    "index":188,
+    "title":"Dispel Magic",
+    "category":"Level 4",
+    "description":"Cancels one magical spell or effect."
+  },
+  {
+    "index":189,
+    "title":"Echolocation",
+    "category":"Level 4",
+    "description":"Sonic sense gives you blindsight 40 ft."
+  },
+  {
+    "index":190,
+    "title":"Flame Strike",
+    "category":"Level 4",
+    "description":"Smites foes with divine fire (1d6/level damage)."
+  },
+  {
+    "index":191,
+    "title":"Freedom of Movement",
+    "category":"Level 4",
+    "description":"Subject moves normally despite impediments to movement."
+  },
+  {
+    "index":192,
+    "title":"Geyser",
+    "category":"Level 4",
+    "description":"Creates a geyser of boiling water."
+  },
+  {
+    "index":193,
+    "title":"Giant Vermin",
+    "category":"Level 4",
+    "description":"Turns centipedes, scorpions, or spiders into giant vermin."
+  },
+  {
+    "index":194,
+    "title":"Grove of Respite",
+    "category":"Level 4",
+    "description":"Creates trees and a small spring."
+  },
+  {
+    "index":195,
+    "title":"Ice Storm",
+    "category":"Level 4",
+    "description":"Hail deals 5d6 damage in cylinder 40 ft. across."
+  },
+  {
+    "index":196,
+    "title":"Life Bubble",
+    "category":"Level 4",
+    "description":"Protects from environmental effects."
+  },
+  {
+    "index":197,
+    "title":"Moonstruck",
+    "category":"Level 4",
+    "description":"Subject is enraged and confused."
+  },
+  {
+    "index":198,
+    "title":"Obsidian Flow",
+    "category":"Level 4",
+    "description":"Converts the surface of the ground into molten glass."
+  },
+  {
+    "index":199,
+    "title":"Plague Carrier",
+    "category":"Level 4",
+    "description":"target's attacks carry filth fever."
+  },
+  {
+    "index":200,
+    "title":"Protection from Energy, Communal",
+    "category":"Level 4",
+    "description":"As protection from energy, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":201,
+    "title":"Reincarnate",
+    "category":"Level 4",
+    "description":"Brings dead subject back in a random body."
+  },
+  {
+    "index":202,
+    "title":"Repel Vermin",
+    "category":"Level 4",
+    "description":"Insects, spiders, and other vermin stay 10 ft. away."
+  },
+  {
+    "index":203,
+    "title":"Ride the Waves",
+    "category":"Level 4",
+    "description":"Target can breathe water and swim."
+  },
+  {
+    "index":204,
+    "title":"River of Wind",
+    "category":"Level 4",
+    "description":"Creates wind that causes nonlethal damage and can knock down or push creatures."
+  },
+  {
+    "index":205,
+    "title":"Rusting Grasp",
+    "category":"Level 4",
+    "description":"Your touch corrodes iron and alloys."
+  },
+  {
+    "index":206,
+    "title":"Scrying",
+    "category":"Level 4",
+    "description":"Spies on subject from a distance."
+  },
+  {
+    "index":207,
+    "title":"Spike Stones",
+    "category":"Level 4",
+    "description":"Creatures in area take 1d8 damage, may also be slowed."
+  },
+  {
+    "index":208,
+    "title":"Strong Jaw",
+    "category":"Level 4",
+    "description":"Natural attacks damage as two sizes bigger."
+  },
+  {
+    "index":209,
+    "title":"Summon Nature's Ally IV",
+    "category":"Level 4",
+    "description":"Summons creature to fight."
+  },
+  {
+    "index":210,
+    "title":"Thorn Body",
+    "category":"Level 4",
+    "description":"Your attackers take 1d6 +1 damage/level."
+  },
+  {
+    "index":211,
+    "title":"Touch of Slime",
+    "category":"Level 4",
+    "description":"Touch infests a target with green slime."
+  },
+  {
+    "index":212,
+    "title":"True Form",
+    "category":"Level 4",
+    "description":"Removes polymorph effects."
+  },
+  {
+    "index":213,
+    "title":"Vermin Shape II",
+    "category":"Level 4",
+    "description":"As vermin shape, but Tiny or Large."
+  },
+  {
+    "index":214,
+    "title":"Volcanic Storm",
+    "category":"Level 4",
+    "description":"Hot rocks deal 5d6 damage."
+  },
+  {
+    "index":215,
+    "title":"Air Walk, Communal",
+    "category":"Level 5",
+    "description":"As air walk, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":216,
+    "title":"Animal Growth",
+    "category":"Level 5",
+    "description":"One animal doubles in size."
+  },
+  {
+    "index":217,
+    "title":"Aspect of the Wolf",
+    "category":"Level 5",
+    "description":" +4 Str and Dex, +2 bonus on trip attacks."
+  },
+  {
+    "index":218,
+    "title":"Atonement",
+    "category":"Level 5",
+    "description":"Removes burden of misdeeds from subject."
+  },
+  {
+    "index":219,
+    "title":"Awaken",
+    "category":"Level 5",
+    "description":"Animal or tree gains human intellect."
+  },
+  {
+    "index":220,
+    "title":"Baleful Polymorph",
+    "category":"Level 5",
+    "description":"Transforms subject into harmless animal."
+  },
+  {
+    "index":221,
+    "title":"Blessing of the Salamander",
+    "category":"Level 5",
+    "description":"Subject gets fast healing 2, fire resistance 10, and +2 to its CMD."
+  },
+  {
+    "index":222,
+    "title":"Call Lightning Storm",
+    "category":"Level 5",
+    "description":"As call lightning, but 5d6 damage per bolt."
+  },
+  {
+    "index":223,
+    "title":"Commune with Nature",
+    "category":"Level 5",
+    "description":"Learn about terrain for 1 mile/level."
+  },
+  {
+    "index":224,
+    "title":"Contagion, Greater",
+    "category":"Level 5",
+    "description":"Infect a subject with a magical disease."
+  },
+  {
+    "index":225,
+    "title":"Control Winds",
+    "category":"Level 5",
+    "description":"Changes wind direction and speed."
+  },
+  {
+    "index":226,
+    "title":"Cure Critical Wounds",
+    "category":"Level 5",
+    "description":"Cures 4d8 damage + 1/level (max +20)."
+  },
+  {
+    "index":227,
+    "title":"Death Ward",
+    "category":"Level 5",
+    "description":"Grants bonuses against death spells and negative energy."
+  },
+  {
+    "index":228,
+    "title":"Fickle Winds",
+    "category":"Level 5",
+    "description":"Wind walls selectively block attacks."
+  },
+  {
+    "index":229,
+    "title":"Fire Snake",
+    "category":"Level 5",
+    "description":"Creates a serpentine path of fire 5 ft. long/level that deals 1d6 fire damage/level."
+  },
+  {
+    "index":230,
+    "title":"Hallow",
+    "category":"Level 5",
+    "description":"Designates location as holy."
+  },
+  {
+    "index":231,
+    "title":"Insect Plague",
+    "category":"Level 5",
+    "description":"Wasp swarms attack creatures."
+  },
+  {
+    "index":232,
+    "title":"Raise Animal Companion",
+    "category":"Level 5",
+    "description":"As raise dead, but on an animal."
+  },
+  {
+    "index":233,
+    "title":"Reprobation",
+    "category":"Level 5",
+    "description":"Marked target is shunned by your religion."
+  },
+  {
+    "index":234,
+    "title":"Rest Eternal",
+    "category":"Level 5",
+    "description":"Dead creature cannot be revived."
+  },
+  {
+    "index":235,
+    "title":"Snake Staff",
+    "category":"Level 5",
+    "description":"Transforms wood into snakes to fight for you."
+  },
+  {
+    "index":236,
+    "title":"Stoneskin",
+    "category":"Level 5",
+    "description":"Grants DR 10/adamantine."
+  },
+  {
+    "index":237,
+    "title":"Summon Nature's Ally V",
+    "category":"Level 5",
+    "description":"Summons creature to fight."
+  },
+  {
+    "index":238,
+    "title":"Threefold Aspect",
+    "category":"Level 5",
+    "description":"Appear older or younger."
+  },
+  {
+    "index":239,
+    "title":"Transmute Mud to Rock",
+    "category":"Level 5",
+    "description":"Transforms two 10-ft. cubes per level."
+  },
+  {
+    "index":240,
+    "title":"Transmute Rock to Mud",
+    "category":"Level 5",
+    "description":"Transforms two 10-ft. cubes per level."
+  },
+  {
+    "index":241,
+    "title":"Tree Stride",
+    "category":"Level 5",
+    "description":"Step from one tree to another far away."
+  },
+  {
+    "index":242,
+    "title":"Unhallow",
+    "category":"Level 5",
+    "description":"Designates location as unholy."
+  },
+  {
+    "index":243,
+    "title":"Wall of Fire",
+    "category":"Level 5",
+    "description":"Deals 2d4 fire damage out to 10 ft. and 1d4 out to 20 ft. Passing through wall deals 2d6 damage +1/level."
+  },
+  {
+    "index":244,
+    "title":"Wall of Thorns",
+    "category":"Level 5",
+    "description":"Thorns damage anyone who tries to pass."
+  },
+  {
+    "index":245,
+    "title":"Age Resistance",
+    "category":"Level 6",
+    "description":"Ignore penalties from old age."
+  },
+  {
+    "index":246,
+    "title":"Antilife Shell",
+    "category":"Level 6",
+    "description":"10-ft.-radius field hedges out living creatures."
+  },
+  {
+    "index":247,
+    "title":"Bear's Endurance, Mass",
+    "category":"Level 6",
+    "description":"As bear's endurance, affects 1 subject/level."
+  },
+  {
+    "index":248,
+    "title":"Bull's Strength, Mass",
+    "category":"Level 6",
+    "description":"As bull's strength, affects 1 subject/level."
+  },
+  {
+    "index":249,
+    "title":"Cat's Grace, Mass",
+    "category":"Level 6",
+    "description":"As cat's grace, affects one subject/level."
+  },
+  {
+    "index":250,
+    "title":"Cure Light Wounds, Mass",
+    "category":"Level 6",
+    "description":"Cures 1d8 damage + 1/level, affects 1 subject/level."
+  },
+  {
+    "index":251,
+    "title":"Dispel Magic, Greater",
+    "category":"Level 6",
+    "description":"As dispel magic, but with multiple targets."
+  },
+  {
+    "index":252,
+    "title":"Dust Form",
+    "category":"Level 6",
+    "description":"You become an incorporeal creature of dust for a short period of time."
+  },
+  {
+    "index":253,
+    "title":"Eagle Aerie",
+    "category":"Level 6",
+    "description":"Summon 1 giant eagle/3 levels."
+  },
+  {
+    "index":254,
+    "title":"Epidemic",
+    "category":"Level 6",
+    "description":"Infect a subject with a highly contagious disease."
+  },
+  {
+    "index":255,
+    "title":"Find the Path",
+    "category":"Level 6",
+    "description":"Shows most direct way to a location."
+  },
+  {
+    "index":256,
+    "title":"Fire Seeds",
+    "category":"Level 6",
+    "description":"Acorns and berries become grenades and bombs."
+  },
+  {
+    "index":257,
+    "title":"Ironwood",
+    "category":"Level 6",
+    "description":"Magic wood is as strong as steel."
+  },
+  {
+    "index":258,
+    "title":"Liveoak",
+    "category":"Level 6",
+    "description":"Oak becomes treant guardian."
+  },
+  {
+    "index":259,
+    "title":"Move Earth",
+    "category":"Level 6",
+    "description":"Digs trenches and builds hills."
+  },
+  {
+    "index":260,
+    "title":"Owl's Wisdom, Mass",
+    "category":"Level 6",
+    "description":"As owl's wisdom, affects 1 subject/level."
+  },
+  {
+    "index":261,
+    "title":"Plague Storm",
+    "category":"Level 6",
+    "description":"Cloud infects creatures like contagion."
+  },
+  {
+    "index":262,
+    "title":"Repel Wood",
+    "category":"Level 6",
+    "description":"Pushes away wooden objects."
+  },
+  {
+    "index":263,
+    "title":"Sirocco",
+    "category":"Level 6",
+    "description":"Hot wind does 4d6 damage, fatigues those damaged, and knocks creatures prone."
+  },
+  {
+    "index":264,
+    "title":"Spellstaff",
+    "category":"Level 6",
+    "description":"Stores one spell in wooden quarterstaff."
+  },
+  {
+    "index":265,
+    "title":"Stoneskin, Communal",
+    "category":"Level 6",
+    "description":"As stoneskin, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":266,
+    "title":"Stone Tell",
+    "category":"Level 6",
+    "description":"Talk to natural or worked stone."
+  },
+  {
+    "index":267,
+    "title":"Summon Nature's Ally VI",
+    "category":"Level 6",
+    "description":"Summons creature to fight."
+  },
+  {
+    "index":268,
+    "title":"Swarm Skin",
+    "category":"Level 6",
+    "description":"Turns your body into a swarm that can attack."
+  },
+  {
+    "index":269,
+    "title":"Tar Pool",
+    "category":"Level 6",
+    "description":"Converts the top layer of the ground into hot tar."
+  },
+  {
+    "index":270,
+    "title":"Transport via Plants",
+    "category":"Level 6",
+    "description":"Move instantly from one plant to another of the same kind."
+  },
+  {
+    "index":271,
+    "title":"Wall of Stone",
+    "category":"Level 6",
+    "description":"Creates a stone wall that can be shaped."
+  },
+  {
+    "index":272,
+    "title":"Age Resistance, Greater",
+    "category":"Level 7",
+    "description":"Ignore penalties from venerable age."
+  },
+  {
+    "index":273,
+    "title":"Animate Plants",
+    "category":"Level 7",
+    "description":"One or more plants animate and fight for you."
+  },
+  {
+    "index":274,
+    "title":"Changestaff",
+    "category":"Level 7",
+    "description":"Your staff becomes a treant on command."
+  },
+  {
+    "index":275,
+    "title":"Control Weather",
+    "category":"Level 7",
+    "description":"Changes weather in local area."
+  },
+  {
+    "index":276,
+    "title":"Creeping Doom",
+    "category":"Level 7",
+    "description":"Swarms of centipedes attack at your command."
+  },
+  {
+    "index":277,
+    "title":"Cure Moderate Wounds, Mass",
+    "category":"Level 7",
+    "description":"Cures 2d8 damage + 1/level, affects 1 subject/level."
+  },
+  {
+    "index":278,
+    "title":"Fire Storm",
+    "category":"Level 7",
+    "description":"Deals 1d6/level fire damage."
+  },
+  {
+    "index":279,
+    "title":"Heal",
+    "category":"Level 7",
+    "description":"Cures 10 points/level damage, all diseases and mental conditions."
+  },
+  {
+    "index":280,
+    "title":"Rampart",
+    "category":"Level 7",
+    "description":"Creates 5-ft.-thick earthen barrier."
+  },
+  {
+    "index":281,
+    "title":"Scouring Winds",
+    "category":"Level 7",
+    "description":"Winds block vision and deal 3d6 damage."
+  },
+  {
+    "index":282,
+    "title":"Scrying, Greater",
+    "category":"Level 7",
+    "description":"As scrying, but faster and longer."
+  },
+  {
+    "index":283,
+    "title":"Siege of Trees",
+    "category":"Level 7",
+    "description":"Transforms Large trees into arboreal catapults of the same size."
+  },
+  {
+    "index":284,
+    "title":"Summon Nature's Ally VII",
+    "category":"Level 7",
+    "description":"Summons creature to fight."
+  },
+  {
+    "index":285,
+    "title":"Sunbeam",
+    "category":"Level 7",
+    "description":"Beam blinds and deals 4d6 damage."
+  },
+  {
+    "index":286,
+    "title":"Transmute Metal to Wood",
+    "category":"Level 7",
+    "description":"Metal within 40 ft. becomes wood."
+  },
+  {
+    "index":287,
+    "title":"True Seeing",
+    "category":"Level 7",
+    "description":"Lets you see all things as they really are."
+  },
+  {
+    "index":288,
+    "title":"Vortex",
+    "category":"Level 7",
+    "description":"Creates a whirlpool in water."
+  },
+  {
+    "index":289,
+    "title":"Wind Walk",
+    "category":"Level 7",
+    "description":"You and your allies turn vaporous and travel fast."
+  },
+  {
+    "index":290,
+    "title":"Animal Shapes",
+    "category":"Level 8",
+    "description":"One ally/level polymorphs into chosen animal."
+  },
+  {
+    "index":291,
+    "title":"Atavism, Mass",
+    "category":"Level 8",
+    "description":"One animal/level gains advanced template."
+  },
+  {
+    "index":292,
+    "title":"Blood Mist",
+    "category":"Level 8",
+    "description":"Mist causes Wisdom damage and rage."
+  },
+  {
+    "index":293,
+    "title":"Control Plants",
+    "category":"Level 8",
+    "description":"Controls actions of one or more plant creatures."
+  },
+  {
+    "index":294,
+    "title":"Cure Serious Wounds, Mass",
+    "category":"Level 8",
+    "description":"Cures 3d8 damage + 1/level, affects 1 subject/level."
+  },
+  {
+    "index":295,
+    "title":"Earthquake",
+    "category":"Level 8",
+    "description":"Intense tremor shakes 80-ft.-radius."
+  },
+  {
+    "index":296,
+    "title":"Euphoric Tranquility",
+    "category":"Level 8",
+    "description":"Makes a creature friendly."
+  },
+  {
+    "index":297,
+    "title":"Finger of Death",
+    "category":"Level 8",
+    "description":"Deals 10 damage/level to one subject."
+  },
+  {
+    "index":298,
+    "title":"Frightful Aspect",
+    "category":"Level 8",
+    "description":"You take on a terrifying, Large-sized form of yourself and emit an aura that causes creatures to become shaken orfrightened."
+  },
+  {
+    "index":299,
+    "title":"Repel Metal or Stone",
+    "category":"Level 8",
+    "description":"Pushes away metal and stone."
+  },
+  {
+    "index":300,
+    "title":"Reverse Gravity",
+    "category":"Level 8",
+    "description":"Objects and creatures fall upward."
+  },
+  {
+    "index":301,
+    "title":"Seamantle",
+    "category":"Level 8",
+    "description":"Sheathes you in protective water."
+  },
+  {
+    "index":302,
+    "title":"Stormbolts",
+    "category":"Level 8",
+    "description":"1d8 damage/level (max 20d8) to targets."
+  },
+  {
+    "index":303,
+    "title":"Summon Nature's Ally VIII",
+    "category":"Level 8",
+    "description":"Summons creature to fight."
+  },
+  {
+    "index":304,
+    "title":"Sunburst",
+    "category":"Level 8",
+    "description":"Blinds all within 10 ft., deals 6d6 damage."
+  },
+  {
+    "index":305,
+    "title":"Wall of Lava",
+    "category":"Level 8",
+    "description":"Wall damages foes that try to enter, periodically launches lava at nearby targets."
+  },
+  {
+    "index":306,
+    "title":"Whirlwind",
+    "category":"Level 8",
+    "description":"Cyclone deals damage and can pick up creatures."
+  },
+  {
+    "index":307,
+    "title":"Word of Recall",
+    "category":"Level 8",
+    "description":"Teleports you back to designated place."
+  },
+  {
+    "index":308,
+    "title":"Antipathy",
+    "category":"Level 9",
+    "description":"Object or location affected by spell repels certain creatures."
+  },
+  {
+    "index":309,
+    "title":"Clashing Rocks",
+    "category":"Level 9",
+    "description":"20d6 damage to target creature."
+  },
+  {
+    "index":310,
+    "title":"Cure Critical Wounds, Mass",
+    "category":"Level 9",
+    "description":"Cures 4d8 damage + 1/level for many creatures."
+  },
+  {
+    "index":311,
+    "title":"Elemental Swarm",
+    "category":"Level 9",
+    "description":"Summons multiple elementals."
+  },
+  {
+    "index":312,
+    "title":"Foresight",
+    "category":"Level 9",
+    "description":"“Sixth sense” warns of impending danger."
+  },
+  {
+    "index":313,
+    "title":"Polar Midnight",
+    "category":"Level 9",
+    "description":"Cold darkness paralyzes and deals damage."
+  },
+  {
+    "index":314,
+    "title":"Regenerate",
+    "category":"Level 9",
+    "description":"Subject's severed limbs grow back, cures 4d8 damage +1/level (max +35)."
+  },
+  {
+    "index":315,
+    "title":"Shambler",
+    "category":"Level 9",
+    "description":"Creates 1d4+2 shambling mounds to fight for you."
+  },
+  {
+    "index":316,
+    "title":"Shapechange",
+    "category":"Level 9",
+    "description":"Transforms you into certain creatures, and you can change forms once per round."
+  },
+  {
+    "index":317,
+    "title":"Siege of Trees, Greater",
+    "category":"Level 9",
+    "description":"As siege of trees, but can transform Huge and Gargantuan trees into arboreal catapults of the same size."
+  },
+  {
+    "index":318,
+    "title":"Storm of Vengeance",
+    "category":"Level 9",
+    "description":"Storm rains acid, lightning, and hail."
+  },
+  {
+    "index":319,
+    "title":"Summon Elder Worm",
+    "category":"Level 9",
+    "description":"Summon a giant purple worm."
+  },
+  {
+    "index":320,
+    "title":"Summon Froghemoth",
+    "category":"Level 9",
+    "description":"Summon a froghemoth."
+  },
+  {
+    "index":321,
+    "title":"Summon Nature's Ally IX",
+    "category":"Level 9",
+    "description":"Summons creature to fight."
+  },
+  {
+    "index":322,
+    "title":"Sympathy",
+    "category":"Level 9",
+    "description":"Object or location attracts certain creatures."
+  },
+  {
+    "index":323,
+    "title":"Tsunami",
+    "category":"Level 9",
+    "description":"Huge wave damages and sweeps up all in its path."
+  },
+  {
+    "index":324,
+    "title":"Winds of Vengeance",
+    "category":"Level 9",
+    "description":"You can fly and attack with wind."
+  },
+  {
+    "index":325,
+    "title":"World Wave",
+    "category":"Level 9",
+    "description":"Earth or water moves you across distances and damages things not of the natural world."
+  }
+]

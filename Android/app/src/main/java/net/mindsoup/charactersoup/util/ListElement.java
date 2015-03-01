@@ -11,11 +11,13 @@ public class ListElement implements Parcelable {
     private String title;
     private String description;
     private int index;
+    private String category;
 
     public ListElement() {
         this.setTitle("");
         this.setDescription("");
         this.setIndex(-1);
+        this.setCategory("");
     }
 
     public ListElement(String title, String description, int index) {
@@ -48,6 +50,15 @@ public class ListElement implements Parcelable {
         this.index = index;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+
     @Override
     public int describeContents() {
         return 0;
@@ -58,6 +69,7 @@ public class ListElement implements Parcelable {
         parcel.writeString(this.getTitle());
         parcel.writeString(this.getDescription());
         parcel.writeInt(this.getIndex());
+        parcel.writeString(this.getCategory());
     }
 
     public static final Parcelable.Creator<ListElement> CREATOR = new Parcelable.Creator<ListElement>() {
@@ -74,5 +86,6 @@ public class ListElement implements Parcelable {
         this.setTitle(in.readString());
         this.setDescription(in.readString());
         this.setIndex(in.readInt());
+        this.setCategory(in.readString());
     }
 }

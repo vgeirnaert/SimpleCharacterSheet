@@ -22,5 +22,18 @@
         android:clickable="true"
         android:divider="#666"
         android:dividerHeight="2dp"
-        android:longClickable="false" />
+        android:longClickable="false"
+        android:visibility="gone"/>
+
+    <ExpandableListView
+        android:id="@+id/all_items_category_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="start"
+        android:choiceMode="none"
+        android:clickable="true"
+        android:divider="#666"
+        android:dividerHeight="2dp"
+        android:longClickable="false"
+        android:visibility="visible"/>
 </LinearLayout>

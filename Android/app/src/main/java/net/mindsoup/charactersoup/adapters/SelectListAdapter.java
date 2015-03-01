@@ -32,14 +32,15 @@ public class SelectListAdapter extends ArrayAdapter<ListElement> {
         this.viewResourceId = textViewResourceId;
         this.listener = listener;
         this.dialog = dialog;
-
     }
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater = (LayoutInflater)this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        final View view = inflater.inflate(viewResourceId, null);
-
+        if(convertView == null) {
+            LayoutInflater inflater = (LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(viewResourceId, null);
+        }
+        final View view = convertView;
         ListElement item = items.get(position);
 
         TextView tv = (TextView)view.findViewById(R.id.select_title);

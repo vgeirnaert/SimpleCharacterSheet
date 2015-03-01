@@ -1,0 +1,824 @@
+[
+  {
+    "index":0,
+    "title":"Abadar's Truthtelling",
+    "category":"Level 1",
+    "description":"As zone of truth, but others know the target is affected by the spell."
+  },
+  {
+    "index":1,
+    "title":"Bless",
+    "category":"Level 1",
+    "description":"Allies gain +1 on attack rolls and saves against fear."
+  },
+  {
+    "index":2,
+    "title":"Blessing of the Watch",
+    "category":"Level 1",
+    "description":"Like bless, except it lasts 1 hour per level instead of 1 minute per level and only working in the caster’s home city, specifically referring to areas under the jurisdiction of the city watch."
+  },
+  {
+    "index":3,
+    "title":"Bless Water",
+    "category":"Level 1",
+    "description":"Makes holy water."
+  },
+  {
+    "index":4,
+    "title":"Bless Weapon",
+    "category":"Level 1",
+    "description":"Weapon strikes true against evil foes."
+  },
+  {
+    "index":5,
+    "title":"Bowstaff",
+    "category":"Level 1",
+    "description":"A shortbow may double as a club, or a longbow as a quarterstaff."
+  },
+  {
+    "index":6,
+    "title":"Challenge Evil",
+    "category":"Level 1",
+    "description":"Sickens creature if it refuses to fight you."
+  },
+  {
+    "index":7,
+    "title":"Compel Hostility",
+    "category":"Level 1",
+    "description":"Compels opponents to attack you instead of your allies."
+  },
+  {
+    "index":8,
+    "title":"Create Water",
+    "category":"Level 1",
+    "description":"Creates 2 gallons/level of pure water."
+  },
+  {
+    "index":9,
+    "title":"Cure Light Wounds",
+    "category":"Level 1",
+    "description":"Cures 1d8 damage + 1/level (max +5)."
+  },
+  {
+    "index":10,
+    "title":"Deadeye's Arrow",
+    "category":"Level 1",
+    "description":"You create an arrow made of crackling electricity, which you may fire as a weapon or use as a glowing beacon."
+  },
+  {
+    "index":11,
+    "title":"Detect Charm",
+    "category":"Level 1",
+    "description":"As detect magic, except vs. charms, compulsions, and possession auras."
+  },
+  {
+    "index":12,
+    "title":"Detect Poison",
+    "category":"Level 1",
+    "description":"Detects poison in one creature or small object."
+  },
+  {
+    "index":13,
+    "title":"Detect the Faithful",
+    "category":"Level 1",
+    "description":"You can detect other worshipers of your deity."
+  },
+  {
+    "index":14,
+    "title":"Detect Undead",
+    "category":"Level 1",
+    "description":"Reveals undead within 60 ft."
+  },
+  {
+    "index":15,
+    "title":"Diagnose Disease",
+    "category":"Level 1",
+    "description":"Detect and identify diseases."
+  },
+  {
+    "index":16,
+    "title":"Divine Favor",
+    "category":"Level 1",
+    "description":"You gain +1 per three levels on attack and damage rolls."
+  },
+  {
+    "index":17,
+    "title":"Endure Elements",
+    "category":"Level 1",
+    "description":"Exist comfortably in hot or cold regions."
+  },
+  {
+    "index":18,
+    "title":"Ghostbane Dirge",
+    "category":"Level 1",
+    "description":"Incorporeal creature takes half damage from nonmagical weapons."
+  },
+  {
+    "index":19,
+    "title":"Grace",
+    "category":"Level 1",
+    "description":"Movement doesn't provoke attacks of opportunity."
+  },
+  {
+    "index":20,
+    "title":"Hero's Defiance",
+    "category":"Level 1",
+    "description":"Allows the use of lay on hands while falling unconscious."
+  },
+  {
+    "index":21,
+    "title":"Honeyed Tongue",
+    "category":"Level 1",
+    "description":"Roll 2 dice when using Diplomacy, take higher roll."
+  },
+  {
+    "index":22,
+    "title":"Horn of Pursuit",
+    "category":"Level 1",
+    "description":"Create three notes heard miles away."
+  },
+  {
+    "index":23,
+    "title":"Knight's Calling",
+    "category":"Level 1",
+    "description":"Forces target to move toward you and fight you."
+  },
+  {
+    "index":24,
+    "title":"Know the Enemy",
+    "category":"Level 1",
+    "description":"Gain +10 on a monster Knowledge check."
+  },
+  {
+    "index":25,
+    "title":"Liberating Command",
+    "category":"Level 1",
+    "description":"Target makes an Escape Artist check as an immediate action and gains a bonus on it."
+  },
+  {
+    "index":26,
+    "title":"Litany of Sloth",
+    "category":"Level 1",
+    "description":"Single target cannot make attacks of opportunity for 1 round."
+  },
+  {
+    "index":27,
+    "title":"Longshot",
+    "category":"Level 1",
+    "description":"Grants a +10-foot bonus to the range increment for any ranged weapon fired."
+  },
+  {
+    "index":28,
+    "title":"Magic Weapon",
+    "category":"Level 1",
+    "description":"Weapon gains +1 bonus."
+  },
+  {
+    "index":29,
+    "title":"Protection from Chaos/Evil",
+    "category":"Level 1",
+    "description":" +2 to AC and saves, plus additional protection against selected alignment."
+  },
+  {
+    "index":30,
+    "title":"Rally Point",
+    "category":"Level 1",
+    "description":"Square gives good creatures bonuses."
+  },
+  {
+    "index":31,
+    "title":"Read Magic",
+    "category":"Level 1",
+    "description":"Read scrolls and spellbooks."
+  },
+  {
+    "index":32,
+    "title":"Resistance",
+    "category":"Level 1",
+    "description":"Subject gains +1 on saving throws."
+  },
+  {
+    "index":33,
+    "title":"Restoration, Lesser",
+    "category":"Level 1",
+    "description":"Dispels magical ability penalty or repairs 1d4 ability damage."
+  },
+  {
+    "index":34,
+    "title":"Sanctify Corpse",
+    "category":"Level 1",
+    "description":"Prevent a corpse from becoming an undead."
+  },
+  {
+    "index":35,
+    "title":"Sun Metal",
+    "category":"Level 1",
+    "description":"Weapon touched bursts into flames."
+  },
+  {
+    "index":36,
+    "title":"Tactical Acumen",
+    "category":"Level 1",
+    "description":"You gain an additional +1 on attack rolls or to AC due to battlefield positioning."
+  },
+  {
+    "index":37,
+    "title":"Unbreakable Heart",
+    "category":"Level 1",
+    "description":"Target gains a +4 bonus on saves against mind-affecting effects that rely on negative emotions."
+  },
+  {
+    "index":38,
+    "title":"Veil of Positive Energy",
+    "category":"Level 1",
+    "description":" +2 AC, +2 on saves vs. undead."
+  },
+  {
+    "index":39,
+    "title":"Virtue",
+    "category":"Level 1",
+    "description":"Subject gains 1 temporary hp."
+  },
+  {
+    "index":40,
+    "title":"Wartrain Mount",
+    "category":"Level 1",
+    "description":"Animal gains the combat training general purpose."
+  },
+  {
+    "index":41,
+    "title":"Word of Resolve",
+    "category":"Level 1",
+    "description":"Ally rerolls a save against charm or fear."
+  },
+  {
+    "index":42,
+    "title":"Arrow of Law",
+    "category":"Level 2",
+    "description":"Harm and possibly daze chaotic creatures."
+  },
+  {
+    "index":43,
+    "title":"Aura of Greater Courage",
+    "category":"Level 2",
+    "description":"Increases strength of a paladin’s aura of courage."
+  },
+  {
+    "index":44,
+    "title":"Bestow Grace",
+    "category":"Level 2",
+    "description":"Subject gains bonus on saving throws equal to Cha modifier."
+  },
+  {
+    "index":45,
+    "title":"Bestow Weapon Proficiency",
+    "category":"Level 2",
+    "description":"Grants a creature proficiency in a single weapon for short period of time."
+  },
+  {
+    "index":46,
+    "title":"Blessing of Courage and Life",
+    "category":"Level 2",
+    "description":"Grants a +2 bonus on saves vs. fear and death."
+  },
+  {
+    "index":47,
+    "title":"Bull's Strength",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Str for 1 min./level."
+  },
+  {
+    "index":48,
+    "title":"Corruption Resistance",
+    "category":"Level 2",
+    "description":"Protects creature against damage from alignment-based attacks."
+  },
+  {
+    "index":49,
+    "title":"Delay Poison",
+    "category":"Level 2",
+    "description":"Stops poison from harming subject for 1 hour/level."
+  },
+  {
+    "index":50,
+    "title":"Divine Arrow",
+    "category":"Level 2",
+    "description":"Imbues a projectile with holy energy."
+  },
+  {
+    "index":51,
+    "title":"Eagle's Splendor",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Cha for 1 min./level."
+  },
+  {
+    "index":52,
+    "title":"Effortless Armor",
+    "category":"Level 2",
+    "description":"Armor you wear no longer slows your speed."
+  },
+  {
+    "index":53,
+    "title":"Endure Elements, Communal",
+    "category":"Level 2",
+    "description":"As endure elements, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":54,
+    "title":"Fire of Entanglement",
+    "category":"Level 2",
+    "description":"Your ability to smite evil also entangles your foe."
+  },
+  {
+    "index":55,
+    "title":"Holy Shield",
+    "category":"Level 2",
+    "description":"Lend your shield's protection to another."
+  },
+  {
+    "index":56,
+    "title":"Instant Armor",
+    "category":"Level 2",
+    "description":"Summon armor temporarily replacing your current attire."
+  },
+  {
+    "index":57,
+    "title":"Light Lance",
+    "category":"Level 2",
+    "description":"Creates a soaring beacon of light."
+  },
+  {
+    "index":58,
+    "title":"Litany of Defense",
+    "category":"Level 2",
+    "description":"Doubles armor’s enhancement bonus."
+  },
+  {
+    "index":59,
+    "title":"Litany of Eloquence",
+    "category":"Level 2",
+    "description":"Fascinates a single creature for 1 round."
+  },
+  {
+    "index":60,
+    "title":"Litany of Entanglement",
+    "category":"Level 2",
+    "description":"Entangles a creature for 1 round."
+  },
+  {
+    "index":61,
+    "title":"Litany of Righteousness",
+    "category":"Level 2",
+    "description":"A single evil creature takes more damage from creatures with a good aura."
+  },
+  {
+    "index":62,
+    "title":"Litany of Warding",
+    "category":"Level 2",
+    "description":"You gain two additional attacks of opportunity for 1 round."
+  },
+  {
+    "index":63,
+    "title":"Magic Siege Engine",
+    "category":"Level 2",
+    "description":"Siege engine gains +1 on targeting and damage rolls."
+  },
+  {
+    "index":64,
+    "title":"Owl's Wisdom",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Wis for 1 min./level."
+  },
+  {
+    "index":65,
+    "title":"Paladin's Sacrifice",
+    "category":"Level 2",
+    "description":"Take the damage and effects for another creature."
+  },
+  {
+    "index":66,
+    "title":"Protection from Chaos, Communal",
+    "category":"Level 2",
+    "description":"As protection from chaos, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":67,
+    "title":"Protection from Evil, Communal",
+    "category":"Level 2",
+    "description":"As protection from evil, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":68,
+    "title":"Protection from Good, Communal",
+    "category":"Level 2",
+    "description":"As protection from good, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":69,
+    "title":"Protection from Law, Communal",
+    "category":"Level 2",
+    "description":"As protection from law, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":70,
+    "title":"Remove Paralysis",
+    "category":"Level 2",
+    "description":"Frees one or more creatures from paralysis or slow effect."
+  },
+  {
+    "index":71,
+    "title":"Righteous Vigor",
+    "category":"Level 2",
+    "description":"Boosts attack bonus with each hit."
+  },
+  {
+    "index":72,
+    "title":"Resist Energy",
+    "category":"Level 2",
+    "description":"Ignores 10 or more points of damage per attack from specified energy type."
+  },
+  {
+    "index":73,
+    "title":"Sacred Bond",
+    "category":"Level 2",
+    "description":"Cast touch healing spells from a distance."
+  },
+  {
+    "index":74,
+    "title":"Saddle Surge",
+    "category":"Level 2",
+    "description":"Bonus damage for moving on mount."
+  },
+  {
+    "index":75,
+    "title":"Shield Other",
+    "category":"Level 2",
+    "description":"You take half of subject's damage."
+  },
+  {
+    "index":76,
+    "title":"Soothing Word",
+    "category":"Level 2",
+    "description":"Reduces effects of multiple conditions on target."
+  },
+  {
+    "index":77,
+    "title":"Undetectable Alignment",
+    "category":"Level 2",
+    "description":"Conceals alignment from magical detection for 24 hours."
+  },
+  {
+    "index":78,
+    "title":"Vestment of the Champion",
+    "category":"Level 2",
+    "description":"Armor or shield gains a +1 enhancement per four levels."
+  },
+  {
+    "index":79,
+    "title":"Wake of Light",
+    "category":"Level 2",
+    "description":"Magical trail aids good creatures, hinders evil ones."
+  },
+  {
+    "index":80,
+    "title":"Weapon of Awe",
+    "category":"Level 2",
+    "description":"Weapon gets +2 on damage rolls."
+  },
+  {
+    "index":81,
+    "title":"Zone of Truth",
+    "category":"Level 2",
+    "description":"Subjects within range cannot lie."
+  },
+  {
+    "index":82,
+    "title":"Archon's Aura",
+    "category":"Level 3",
+    "description":"Aura penalizes enemy attacks and AC."
+  },
+  {
+    "index":83,
+    "title":"Blade of Bright Victory",
+    "category":"Level 3",
+    "description":"Bonded weapon gains ghost touch."
+  },
+  {
+    "index":84,
+    "title":"Blessing of the Mole",
+    "category":"Level 3",
+    "description":"1 ally/level gains darkvision and a +2 Stealth bonus."
+  },
+  {
+    "index":85,
+    "title":"Burst of Speed",
+    "category":"Level 3",
+    "description":"You gain increased speed, and your movement ignores attacks of opportunity and allows you to move through the space of creatures larger than you are."
+  },
+  {
+    "index":86,
+    "title":"Cure Moderate Wounds",
+    "category":"Level 3",
+    "description":"Cures 2d8 damage +1/level (max. +10)."
+  },
+  {
+    "index":87,
+    "title":"Daybreak Arrow",
+    "category":"Level 3",
+    "description":"Targeted ammunition exudes radiant energy."
+  },
+  {
+    "index":88,
+    "title":"Daylight",
+    "category":"Level 3",
+    "description":"60-ft. radius of bright light."
+  },
+  {
+    "index":89,
+    "title":"Deadly Juggernaut",
+    "category":"Level 3",
+    "description":"Your might increases with every kill you make."
+  },
+  {
+    "index":90,
+    "title":"Delay Poison, Communal",
+    "category":"Level 3",
+    "description":"As delay poison, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":91,
+    "title":"Discern Lies",
+    "category":"Level 3",
+    "description":"Reveals deliberate falsehoods."
+  },
+  {
+    "index":92,
+    "title":"Dispel Magic",
+    "category":"Level 3",
+    "description":"Cancels one magical spell or effect."
+  },
+  {
+    "index":93,
+    "title":"Divine Transfer",
+    "category":"Level 3",
+    "description":"Transfer hit points and give DR/evil to target creature."
+  },
+  {
+    "index":94,
+    "title":"Fire of Judgment",
+    "category":"Level 3",
+    "description":"Smited creature takes damage when it attacks."
+  },
+  {
+    "index":95,
+    "title":"Ghostbane Dirge, Mass",
+    "category":"Level 3",
+    "description":"As ghostbane dirge, but affects multiple creatures."
+  },
+  {
+    "index":96,
+    "title":"Heal Mount",
+    "category":"Level 3",
+    "description":"As heal on horse or other special mount."
+  },
+  {
+    "index":97,
+    "title":"Heroic Fortune",
+    "category":"Level 3",
+    "description":"The target gains 1 temporary hero point."
+  },
+  {
+    "index":98,
+    "title":"Holy Whisper",
+    "category":"Level 3",
+    "description":"Whisper sickens evil creatures, gives good creatures bonuses."
+  },
+  {
+    "index":99,
+    "title":"Litany of Escape",
+    "category":"Level 3",
+    "description":"Teleports a friend out of a grapple."
+  },
+  {
+    "index":100,
+    "title":"Litany of Sight",
+    "category":"Level 3",
+    "description":"You can see invisible creatures and objects within 30 feet of you."
+  },
+  {
+    "index":101,
+    "title":"Magic Circle against Chaos/Evil",
+    "category":"Level 3",
+    "description":"As protection from chaos/evil, but 10-ft. radius and 10 min./level."
+  },
+  {
+    "index":102,
+    "title":"Magic Weapon, Greater",
+    "category":"Level 3",
+    "description":"Weapon gains +1 bonus/four levels (max +5)."
+  },
+  {
+    "index":103,
+    "title":"Marks of Forbiddance",
+    "category":"Level 3",
+    "description":"Makes 2 creatures pass Will saves in order to attack each other."
+  },
+  {
+    "index":104,
+    "title":"Prayer",
+    "category":"Level 3",
+    "description":"Allies get +1 bonus on most rolls, enemies –1 penalty."
+  },
+  {
+    "index":105,
+    "title":"Remove Blindness/Deafness",
+    "category":"Level 3",
+    "description":"Cures normal or magical blindness or deafness."
+  },
+  {
+    "index":106,
+    "title":"Remove Curse",
+    "category":"Level 3",
+    "description":"Frees object or person from curse."
+  },
+  {
+    "index":107,
+    "title":"Resist Energy, Communal",
+    "category":"Level 3",
+    "description":"As resist energy, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":108,
+    "title":"Sanctify Armor",
+    "category":"Level 3",
+    "description":" +1 AC/four levels (max +5)."
+  },
+  {
+    "index":109,
+    "title":"Wrathful Mantle",
+    "category":"Level 3",
+    "description":"Subject shines and gets +1/four levels on all saves."
+  },
+  {
+    "index":110,
+    "title":"Bestow Grace of the Champion",
+    "category":"Level 4",
+    "description":"Target gains paladin abilities for 1 round/level."
+  },
+  {
+    "index":111,
+    "title":"Blaze of Glory",
+    "category":"Level 4",
+    "description":"Last stand cures good creatures, hurts evil."
+  },
+  {
+    "index":112,
+    "title":"Break Enchantment",
+    "category":"Level 4",
+    "description":"Frees subjects from enchantments, transmutations, and curses."
+  },
+  {
+    "index":113,
+    "title":"Bloodsworn Retribution",
+    "category":"Level 4",
+    "description":"Cut yourself and swear an oath of retribution on your own blood gaining bonuses based on how much you injure yourself."
+  },
+  {
+    "index":114,
+    "title":"Burst of Glory",
+    "category":"Level 4",
+    "description":"Targets in the area gain a +1 sacred bonus on attack rolls and saves against fear effects, plus 1 temporary hit point percaster level (maximum +20)."
+  },
+  {
+    "index":115,
+    "title":"Cure Serious Wounds",
+    "category":"Level 4",
+    "description":"Cures 3d8 damage + 1/level (max +15)."
+  },
+  {
+    "index":116,
+    "title":"Death Ward",
+    "category":"Level 4",
+    "description":"Grants bonuses against death spells and negative energy."
+  },
+  {
+    "index":117,
+    "title":"Dispel Chaos",
+    "category":"Level 4",
+    "description":" +4 bonus against attacks by chaotic creatures."
+  },
+  {
+    "index":118,
+    "title":"Dispel Evil",
+    "category":"Level 4",
+    "description":" +4 bonus against attacks by evil creatures."
+  },
+  {
+    "index":119,
+    "title":"Fire of Vengeance",
+    "category":"Level 4",
+    "description":"Smited creature takes 3d8 damage."
+  },
+  {
+    "index":120,
+    "title":"Forced Repentance",
+    "category":"Level 4",
+    "description":"Target falls prone and confesses sins."
+  },
+  {
+    "index":121,
+    "title":"Holy Sword",
+    "category":"Level 4",
+    "description":"Weapon becomes +5, deals +2d6 damage against evil."
+  },
+  {
+    "index":122,
+    "title":"King’s Castle",
+    "category":"Level 4",
+    "description":"Instantly switch places with a single ally."
+  },
+  {
+    "index":123,
+    "title":"Litany of Thunder",
+    "category":"Level 4",
+    "description":"A single target is deafened until the condition is removed, and is confused for 1 round."
+  },
+  {
+    "index":124,
+    "title":"Litany of Vengeance",
+    "category":"Level 4",
+    "description":"Allies attacking the target of the spell gain a +5 bonus on damage rolls for 1 round."
+  },
+  {
+    "index":125,
+    "title":"Magic Siege Engine, Greater",
+    "category":"Level 4",
+    "description":"Siege engine gains +1 on targeting and damage rolls for every four caster levels."
+  },
+  {
+    "index":126,
+    "title":"Mark of Justice",
+    "category":"Level 4",
+    "description":"Designates action that triggers curse on subject."
+  },
+  {
+    "index":127,
+    "title":"Neutralize Poison",
+    "category":"Level 4",
+    "description":"Immunizes subject against poison, detoxifies venom in or on subject."
+  },
+  {
+    "index":128,
+    "title":"Oath of Peace",
+    "category":"Level 4",
+    "description":"Grants +5 AC and DR 10/evil, can’t attack."
+  },
+  {
+    "index":129,
+    "title":"Raise Animal Companion",
+    "category":"Level 4",
+    "description":"As raise dead, but on an animal."
+  },
+  {
+    "index":130,
+    "title":"Reprobation",
+    "category":"Level 4",
+    "description":"Marked target is shunned by your religion."
+  },
+  {
+    "index":131,
+    "title":"Resounding Blow",
+    "category":"Level 4",
+    "description":"Melee attack deals 1d6 more damage."
+  },
+  {
+    "index":132,
+    "title":"Restoration",
+    "category":"Level 4",
+    "description":"Restores level and ability score drains."
+  },
+  {
+    "index":133,
+    "title":"Sacrificial Oath",
+    "category":"Level 4",
+    "description":"Take damage for an ally for many rounds."
+  },
+  {
+    "index":134,
+    "title":"Shield of the Dawnflower",
+    "category":"Level 4",
+    "description":"Creatures that strike you take 1d6 +1/level fire damage."
+  },
+  {
+    "index":135,
+    "title":"Stay the Hand",
+    "category":"Level 4",
+    "description":"Subject cannot attack with melee weapon."
+  },
+  {
+    "index":136,
+    "title":"Symbol of Healing",
+    "category":"Level 4",
+    "description":"Triggered rune heals living creatures."
+  }
+]

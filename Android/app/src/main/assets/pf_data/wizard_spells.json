@@ -1,0 +1,4742 @@
+[
+  {
+    "index":0,
+    "title":"Resistance",
+    "category":"Level 0",
+    "description":"School: abjuration\n\nSubject gains +1 on saving throws."
+  },
+  {
+    "index":1,
+    "title":"Acid Splash",
+    "category":"Level 0",
+    "description":"School: conjuration\n\nOrb deals 1d3 acid damage."
+  },
+  {
+    "index":2,
+    "title":"Drench",
+    "category":"Level 0",
+    "description":"School: conjuration\n\nA sudden downpour soaks a target creature or object."
+  },
+  {
+    "index":3,
+    "title":"Detect Magic",
+    "category":"Level 0",
+    "description":"School: divination\n\nDetects all spells and magic items within 60 ft."
+  },
+  {
+    "index":4,
+    "title":"Detect Poison",
+    "category":"Level 0",
+    "description":"School: divination\n\nDetects poison in one creature or small object."
+  },
+  {
+    "index":5,
+    "title":"Read Magic",
+    "category":"Level 0",
+    "description":"School: divination\n\nRead scrolls and spellbooks."
+  },
+  {
+    "index":6,
+    "title":"Daze",
+    "category":"Level 0",
+    "description":"School: enchantment\n\nA single humanoid creature with 4 HD or less loses its next action."
+  },
+  {
+    "index":7,
+    "title":"Breeze",
+    "category":"Level 0",
+    "description":"School: evocation\n\nCreate a light wind that blows against target from direction of your choice."
+  },
+  {
+    "index":8,
+    "title":"Dancing Lights",
+    "category":"Level 0",
+    "description":"School: evocation\n\nCreates torches or other lights."
+  },
+  {
+    "index":9,
+    "title":"Flare",
+    "category":"Level 0",
+    "description":"School: evocation\n\nDazzles one creature (–1 on attack rolls)."
+  },
+  {
+    "index":10,
+    "title":"Light",
+    "category":"Level 0",
+    "description":"School: evocation\n\nObject shines like a torch."
+  },
+  {
+    "index":11,
+    "title":"Penumbra",
+    "category":"Level 0",
+    "description":"School: evocation\n\nProtects creature or object touched from bright light."
+  },
+  {
+    "index":12,
+    "title":"Ray of Frost",
+    "category":"Level 0",
+    "description":"School: evocation\n\nRay deals 1d3 cold damage."
+  },
+  {
+    "index":13,
+    "title":"Scoop",
+    "category":"Level 0",
+    "description":"School: evocation\n\nCreate a scoop of force to pick up or carry liquids."
+  },
+  {
+    "index":14,
+    "title":"Spark",
+    "category":"Level 0",
+    "description":"School: evocation\n\nIgnites flammable objects."
+  },
+  {
+    "index":15,
+    "title":"Ghost Sound",
+    "category":"Level 0",
+    "description":"School: illusion\n\nFigment sounds."
+  },
+  {
+    "index":16,
+    "title":"Haunted Fey Aspect",
+    "category":"Level 0",
+    "description":"School: illusion\n\nYou surround yourself with disturbing illusions."
+  },
+  {
+    "index":17,
+    "title":"Bleed",
+    "category":"Level 0",
+    "description":"School: necromancy\n\nCause a stabilized creature to resume dying."
+  },
+  {
+    "index":18,
+    "title":"Disrupt Undead",
+    "category":"Level 0",
+    "description":"School: necromancy\n\nDeals 1d6 damage to one undead."
+  },
+  {
+    "index":19,
+    "title":"Touch of Fatigue",
+    "category":"Level 0",
+    "description":"School: necromancy\n\nTouch attack fatigues target."
+  },
+  {
+    "index":20,
+    "title":"Jolt",
+    "category":"Level 0",
+    "description":"School: transmutation\n\nDeal 1d3 electrical damage with a ranged touch attack."
+  },
+  {
+    "index":21,
+    "title":"Mage Hand",
+    "category":"Level 0",
+    "description":"School: transmutation\n\n5-pound telekinesis."
+  },
+  {
+    "index":22,
+    "title":"Mending",
+    "category":"Level 0",
+    "description":"School: transmutation\n\nMakes minor repairs on an object."
+  },
+  {
+    "index":23,
+    "title":"Message",
+    "category":"Level 0",
+    "description":"School: transmutation\n\nWhisper conversation at distance."
+  },
+  {
+    "index":24,
+    "title":"Open/Close",
+    "category":"Level 0",
+    "description":"School: transmutation\n\nOpens or closes small or light things."
+  },
+  {
+    "index":25,
+    "title":"Root",
+    "category":"Level 0",
+    "description":"School: transmutation\n\nReinforces a subjects defense against being moved or tripped."
+  },
+  {
+    "index":26,
+    "title":"Arcane Mark",
+    "category":"Level 0",
+    "description":"School: universal\n\nInscribes a personal rune on an object or creature (visible or invisible)."
+  },
+  {
+    "index":27,
+    "title":"Prestidigitation",
+    "category":"Level 0",
+    "description":"School: universal\n\nPerforms minor tricks."
+  },
+  {
+    "index":28,
+    "title":"Adjuring Step",
+    "category":"Level 1",
+    "description":"School: abjuration\n\nYou can move slowly and safely and still cast spells, until you move quickly, make an attack, or cast a harmful spell."
+  },
+  {
+    "index":29,
+    "title":"Alarm",
+    "category":"Level 1",
+    "description":"School: abjuration\n\nWards an area for 2 hours/level."
+  },
+  {
+    "index":30,
+    "title":"Endure Elements",
+    "category":"Level 1",
+    "description":"School: abjuration\n\nExist comfortably in hot or cold regions."
+  },
+  {
+    "index":31,
+    "title":"Hold Portal",
+    "category":"Level 1",
+    "description":"School: abjuration\n\nHolds door shut."
+  },
+  {
+    "index":32,
+    "title":"Peacebond",
+    "category":"Level 1",
+    "description":"School: abjuration\n\nLocks a weapon in place on the target’s body."
+  },
+  {
+    "index":33,
+    "title":"Prot. from Chaos/Evil/Good/Law",
+    "category":"Level 1",
+    "description":"#ERROR!"
+  },
+  {
+    "index":34,
+    "title":"Shield",
+    "category":"Level 1",
+    "description":"School: abjuration\n\nInvisible disc gives +4 to AC, blocks magic missiles."
+  },
+  {
+    "index":35,
+    "title":"Shock Shield",
+    "category":"Level 1",
+    "description":"School: abjuration\n\nA shield of force protects you until you dismiss it in an explosion of electricity."
+  },
+  {
+    "index":36,
+    "title":"Abundant Ammunition",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nReplaces nonmagical ammunition every round."
+  },
+  {
+    "index":37,
+    "title":"Air Bubble",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nCreates a small pocket of air around your head or an object."
+  },
+  {
+    "index":38,
+    "title":"Corrosive Touch",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nTouch attack deals 1d4 acid/level."
+  },
+  {
+    "index":39,
+    "title":"Grease",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nMakes 10-ft. square or one object slippery."
+  },
+  {
+    "index":40,
+    "title":"Icicle Dagger",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nMasterwork ice dagger deals +1 cold damage."
+  },
+  {
+    "index":41,
+    "title":"Infernal Healing",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nTouch a creature with devils blood, giving it fast healing 1."
+  },
+  {
+    "index":42,
+    "title":"Ki Arrow",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nArrow deals damage as your unarmed strike."
+  },
+  {
+    "index":43,
+    "title":"Mage Armor",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nGives subject +4 armor bonus."
+  },
+  {
+    "index":44,
+    "title":"Mount",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nSummons riding horse for 2 hours/level."
+  },
+  {
+    "index":45,
+    "title":"Obscuring Mist",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nFog surrounds you."
+  },
+  {
+    "index":46,
+    "title":"Stumble Gap",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nSmall hole trips creatures."
+  },
+  {
+    "index":47,
+    "title":"Summon Minor Monster",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nSummon 1d3 Tiny animals."
+  },
+  {
+    "index":48,
+    "title":"Summon Monster I",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nSummons extraplanar creature to fight for you."
+  },
+  {
+    "index":49,
+    "title":"Unseen Servant",
+    "category":"Level 1",
+    "description":"School: conjuration\n\nInvisible force obeys your commands."
+  },
+  {
+    "index":50,
+    "title":"Anticipate Peril",
+    "category":"Level 1",
+    "description":"School: divination\n\nTarget gains a bonus on one initiative check."
+  },
+  {
+    "index":51,
+    "title":"Comprehend Languages",
+    "category":"Level 1",
+    "description":"School: divination\n\nYou understand all spoken and written languages."
+  },
+  {
+    "index":52,
+    "title":"Detect Charm",
+    "category":"Level 1",
+    "description":"School: divination\n\nAs detect magic, except you immediately detect the strength and location of each charm, compulsion, and possession aura on all creatures in the area."
+  },
+  {
+    "index":53,
+    "title":"Detect Secret Doors",
+    "category":"Level 1",
+    "description":"School: divination\n\nReveals hidden doors within 60 ft."
+  },
+  {
+    "index":54,
+    "title":"Detect Undead",
+    "category":"Level 1",
+    "description":"School: divination\n\nReveals undead within 60 ft."
+  },
+  {
+    "index":55,
+    "title":"Identify",
+    "category":"Level 1",
+    "description":"School: divination\n\nGives +10 bonus to identify magic items."
+  },
+  {
+    "index":56,
+    "title":"See Alignment",
+    "category":"Level 1",
+    "description":"School: divination\n\nPick an alignment; in your sight, creatures and items with that alignment emit a ghostly radiance."
+  },
+  {
+    "index":57,
+    "title":"True Strike",
+    "category":"Level 1",
+    "description":"#ERROR!"
+  },
+  {
+    "index":58,
+    "title":"Bungle",
+    "category":"Level 1",
+    "description":"School: enchantment\n\nTarget takes a -20 penalty on its next attack roll or check."
+  },
+  {
+    "index":59,
+    "title":"Charm Person",
+    "category":"Level 1",
+    "description":"School: enchantment\n\nMakes one person your friend."
+  },
+  {
+    "index":60,
+    "title":"Delusional Pride",
+    "category":"Level 1",
+    "description":"School: enchantment\n\nTarget is penalized on attacks and checks but gains bonus against charms and compulsions."
+  },
+  {
+    "index":61,
+    "title":"Hypnotism",
+    "category":"Level 1",
+    "description":"School: enchantment\n\nFascinates 2d4 HD of creatures."
+  },
+  {
+    "index":62,
+    "title":"Lock Gaze",
+    "category":"Level 1",
+    "description":"School: enchantment\n\nYou compel the target to only look at you for the duration of the spell."
+  },
+  {
+    "index":63,
+    "title":"Memory Lapse",
+    "category":"Level 1",
+    "description":"School: enchantment\n\nSubject forgets events back to last turn."
+  },
+  {
+    "index":64,
+    "title":"Moment of Greatness",
+    "category":"Level 1",
+    "description":"School: enchantment\n\nDoubles a morale bonus."
+  },
+  {
+    "index":65,
+    "title":"Sleep",
+    "category":"Level 1",
+    "description":"School: enchantment\n\nPuts 4 HD of creatures into magical slumber."
+  },
+  {
+    "index":66,
+    "title":"Unprepared Combatant",
+    "category":"Level 1",
+    "description":"School: enchantment\n\nTarget takes -4 on initiative and Reflex saves."
+  },
+  {
+    "index":67,
+    "title":"Burning Hands",
+    "category":"Level 1",
+    "description":"School: evocation\n\n1d4/level fire damage (max 5d4)."
+  },
+  {
+    "index":68,
+    "title":"Ear-Piercing Scream",
+    "category":"Level 1",
+    "description":"School: evocation\n\nDeal sonic damage and daze target."
+  },
+  {
+    "index":69,
+    "title":"Flare Burst",
+    "category":"Level 1",
+    "description":"School: evocation\n\nAs flare, but affects all creatures in 10 ft."
+  },
+  {
+    "index":70,
+    "title":"Floating Disk",
+    "category":"Level 1",
+    "description":"School: evocation\n\nCreates 3-ft.-diameter horizontal disk that holds 100 lbs./level."
+  },
+  {
+    "index":71,
+    "title":"Hydraulic Push",
+    "category":"Level 1",
+    "description":"School: evocation\n\nWave of water bull rushes an enemy."
+  },
+  {
+    "index":72,
+    "title":"Magic Missile",
+    "category":"Level 1",
+    "description":"School: evocation\n\n1d4+1 damage; +1 missile per two levels above 1st (max 5)."
+  },
+  {
+    "index":73,
+    "title":"Shocking Grasp",
+    "category":"Level 1",
+    "description":"School: evocation\n\nTouch delivers 1d6/level electricity damage (max 5d6)."
+  },
+  {
+    "index":74,
+    "title":"Color Spray",
+    "category":"Level 1",
+    "description":"School: illusion\n\nKnocks unconscious, blinds, and/or stuns weak creatures."
+  },
+  {
+    "index":75,
+    "title":"Dazzling Blade",
+    "category":"Level 1",
+    "description":"School: illusion\n\n"
+  },
+  {
+    "index":76,
+    "title":"Disguise Self",
+    "category":"Level 1",
+    "description":"School: illusion\n\nChanges your appearance."
+  },
+  {
+    "index":77,
+    "title":"Illusion of Calm",
+    "category":"Level 1",
+    "description":"School: illusion\n\nYou appear to be standing still, even when you take some actions."
+  },
+  {
+    "index":78,
+    "title":"Magic Aura",
+    "category":"Level 1",
+    "description":"School: illusion\n\nAlters object's magic aura."
+  },
+  {
+    "index":79,
+    "title":"Negative Reaction",
+    "category":"Level 1",
+    "description":"School: illusion\n\nTargeted creature may not positively influence anyone."
+  },
+  {
+    "index":80,
+    "title":"Shadow Weapon",
+    "category":"Level 1",
+    "description":"School: illusion\n\nCreate a quasi-real masterwork weapon."
+  },
+  {
+    "index":81,
+    "title":"Silent Image",
+    "category":"Level 1",
+    "description":"School: illusion\n\nCreates minor illusion of your design."
+  },
+  {
+    "index":82,
+    "title":"Vanish",
+    "category":"Level 1",
+    "description":"School: illusion\n\nAs invisibility for 1 round/level (5 max)."
+  },
+  {
+    "index":83,
+    "title":"Ventriloquism",
+    "category":"Level 1",
+    "description":"School: illusion\n\nThrows voice for 1 min./level."
+  },
+  {
+    "index":84,
+    "title":"Cause Fear",
+    "category":"Level 1",
+    "description":"School: necromancy\n\nOne creature of 5 HD or less flees for 1d4 rounds."
+  },
+  {
+    "index":85,
+    "title":"Chill Touch",
+    "category":"Level 1",
+    "description":"School: necromancy\n\nOne touch/level deals 1d6 damage and possibly 1 Str damage."
+  },
+  {
+    "index":86,
+    "title":"Decompose Corpse",
+    "category":"Level 1",
+    "description":"School: necromancy\n\nTurn a corpse into a clean skeleton."
+  },
+  {
+    "index":87,
+    "title":"Interrogation",
+    "category":"Level 1",
+    "description":"School: necromancy\n\nTarget answers questions or suffers pain."
+  },
+  {
+    "index":88,
+    "title":"Ray of Enfeeblement",
+    "category":"Level 1",
+    "description":"School: necromancy\n\nRay causes 1d6 Str penalty + 1 per 2 levels."
+  },
+  {
+    "index":89,
+    "title":"Ray of Sickening",
+    "category":"Level 1",
+    "description":"School: necromancy\n\nRay makes the subject sickened."
+  },
+  {
+    "index":90,
+    "title":"Restore Corpse",
+    "category":"Level 1",
+    "description":"School: necromancy\n\nSkeletal corpse grows flesh."
+  },
+  {
+    "index":91,
+    "title":"Sculpt Corpse",
+    "category":"Level 1",
+    "description":"School: necromancy\n\nMakes corpse look like another creature."
+  },
+  {
+    "index":92,
+    "title":"Alter Winds",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nIncrease/decrease strength of natural winds."
+  },
+  {
+    "index":93,
+    "title":"Animate Rope",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nMakes a rope move at your command."
+  },
+  {
+    "index":94,
+    "title":"Ant Haul",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nTriples carrying capacity of a creature."
+  },
+  {
+    "index":95,
+    "title":"Break",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nGives an object the broken condition."
+  },
+  {
+    "index":96,
+    "title":"Burning Disarm",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nA metal object instantly becomes red hot possibly causing the wielder to drop it or take damage."
+  },
+  {
+    "index":97,
+    "title":"Crafter's Curse",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nSubject takes –5 on Craft skill checks."
+  },
+  {
+    "index":98,
+    "title":"Crafter's Fortune",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nSubject gains +5 on next Craft check."
+  },
+  {
+    "index":99,
+    "title":"Damp Powder",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nRuins ammunition loaded in the targeted firearm."
+  },
+  {
+    "index":100,
+    "title":"Dancing Lantern",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nAnimates a lantern that follows you."
+  },
+  {
+    "index":101,
+    "title":"Enlarge Person",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nHumanoid creature doubles in size."
+  },
+  {
+    "index":102,
+    "title":"Erase",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nMundane or magical writing vanishes."
+  },
+  {
+    "index":103,
+    "title":"Expeditious Excavation",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nMoves 5-ft. cubes of earth."
+  },
+  {
+    "index":104,
+    "title":"Expeditious Retreat",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nYour base speed increases by 30 ft."
+  },
+  {
+    "index":105,
+    "title":"Fabricate Bullets",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nConverts 1 pound of metal into ammunition."
+  },
+  {
+    "index":106,
+    "title":"Feather Fall",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nObjects or creatures fall slowly."
+  },
+  {
+    "index":107,
+    "title":"Forced Quiet",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nTarget cannot make loud noises."
+  },
+  {
+    "index":108,
+    "title":"Gravity Bow",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nArrows do damage as though one size category bigger."
+  },
+  {
+    "index":109,
+    "title":"Jump",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nSubject gets bonus on Acrobatics checks."
+  },
+  {
+    "index":110,
+    "title":"Jury-Rig",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nRemoves the broken condition from the targeted object."
+  },
+  {
+    "index":111,
+    "title":"Liberating Command",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nTarget makes an Escape Artist check as an immediate action and gains a bonus on it."
+  },
+  {
+    "index":112,
+    "title":"Lighten Object",
+    "category":"Level 1",
+    "description":"School: transmutation\n\n"
+  },
+  {
+    "index":113,
+    "title":"Longshot",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nGrants a +10-foot bonus to the range increment for any ranged weapon fired."
+  },
+  {
+    "index":114,
+    "title":"Magic Weapon",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nWeapon gains +1 bonus."
+  },
+  {
+    "index":115,
+    "title":"Mirror Strike",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nYou may strike multiple opponents with a single attack."
+  },
+  {
+    "index":116,
+    "title":"Polypurpose Panacea",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nGain a relaxing or entertaining effect."
+  },
+  {
+    "index":117,
+    "title":"Reduce Person",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nHumanoid creature halves in size."
+  },
+  {
+    "index":118,
+    "title":"Reinforce Armaments",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nTemporarily mitigates the fragile quality in targeted weapon or armor."
+  },
+  {
+    "index":119,
+    "title":"Snapdragon Fireworks",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nCreate 1 dragon firework/level."
+  },
+  {
+    "index":120,
+    "title":"Stone Fist",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nYour unarmed strikes are lethal."
+  },
+  {
+    "index":121,
+    "title":"Touch of Gracelessness",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nSubject loses 1d6 + 1 Dex/two levels and is prone to falling down."
+  },
+  {
+    "index":122,
+    "title":"Touch of the Sea",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nSwim speed becomes 30 ft."
+  },
+  {
+    "index":123,
+    "title":"Unerring Weapon",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nGrants a +2 bonus, +1 per four caster levels, on attack rolls to confirm a critical hit."
+  },
+  {
+    "index":124,
+    "title":"Vocal Alteration",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nDisguise target's voice."
+  },
+  {
+    "index":125,
+    "title":"Weaken Powder",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nTargeted firearm's ammunition halves the firearm's range and imposes a –2 penalty on damage rolls."
+  },
+  {
+    "index":126,
+    "title":"Youthful Appearance",
+    "category":"Level 1",
+    "description":"School: transmutation\n\nTarget appears younger."
+  },
+  {
+    "index":127,
+    "title":"Arcane Lock",
+    "category":"Level 2",
+    "description":"School: abjuration\n\nMagically locks a portal or chest."
+  },
+  {
+    "index":128,
+    "title":"Book Ward",
+    "category":"Level 2",
+    "description":"School: abjuration\n\nAs protection from energy, except lasts much longer and only protects against acid and fire damage."
+  },
+  {
+    "index":129,
+    "title":"Bullet Shield",
+    "category":"Level 2",
+    "description":"School: abjuration\n\nYou gain a +4 deflection bonus to AC against firearm attacks."
+  },
+  {
+    "index":130,
+    "title":"Endure Elements, Communal",
+    "category":"Level 2",
+    "description":"School: abjuration\n\nAs endure elements, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":131,
+    "title":"Miserable Pity",
+    "category":"Level 2",
+    "description":"School: abjuration\n\nOpponents cannot attack a pathetic creature."
+  },
+  {
+    "index":132,
+    "title":"Obscure Object",
+    "category":"Level 2",
+    "description":"School: abjuration\n\nMasks object against scrying."
+  },
+  {
+    "index":133,
+    "title":"Protection from Arrows",
+    "category":"Level 2",
+    "description":"School: abjuration\n\nSubject gains DR 10/magic against ranged attacks."
+  },
+  {
+    "index":134,
+    "title":"Resist Energy",
+    "category":"Level 2",
+    "description":"School: abjuration\n\nIgnores first 10 (or more) points of damage per attack from specified energy type."
+  },
+  {
+    "index":135,
+    "title":"Warding Weapon",
+    "category":"Level 2",
+    "description":"School: abjuration\n\nThe weapon you use for the focus of this spell defends you, allowing you to cast spells without provoking attacks of opportunity."
+  },
+  {
+    "index":136,
+    "title":"Acid Arrow",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nRanged touch attack; 2d4 damage for 1 round + 1 round/three levels."
+  },
+  {
+    "index":137,
+    "title":"Arrow Eruption",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nCreates duplicates of killing arrow."
+  },
+  {
+    "index":138,
+    "title":"Create Pit",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nCreates an extradimensional pit."
+  },
+  {
+    "index":139,
+    "title":"Cushioning Bands",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nForce bands protect against crushing."
+  },
+  {
+    "index":140,
+    "title":"Dust of Twilight",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nBlack particles extinguish light sources within area."
+  },
+  {
+    "index":141,
+    "title":"Fiery Shuriken",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nCalls forth several fiery projectiles ready to be flung at opponents."
+  },
+  {
+    "index":142,
+    "title":"Fog Cloud",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nFog obscures vision."
+  },
+  {
+    "index":143,
+    "title":"Glitterdust",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nBlinds creatures, outlines invisible creatures."
+  },
+  {
+    "index":144,
+    "title":"Mount, Communal",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nAs mount, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":145,
+    "title":"Protection from Chaos, Communal",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nAs protection from chaos, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":146,
+    "title":"Protection from Evil, Communal",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nAs protection from evil, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":147,
+    "title":"Protection from Good, Communal",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nAs protection from good, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":148,
+    "title":"Protection from Law, Communal",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nAs protection from law, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":149,
+    "title":"Reloading Hands",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nLoads a single shot into your weapon every round."
+  },
+  {
+    "index":150,
+    "title":"Retrieve Item",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nCall an item instantly to you hand from nearby by speaking a special word and snapping your fingers. The spell fails if the item is in the possession of another creature."
+  },
+  {
+    "index":151,
+    "title":"Returning Weapon",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nGrants a weapon the returning special weapon quality."
+  },
+  {
+    "index":152,
+    "title":"Slipstream",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nWave boosts creature’s speed."
+  },
+  {
+    "index":153,
+    "title":"Stone Call",
+    "category":"Level 2",
+    "description":"School: conjuration\n\n2d6 damage to all creatures in area."
+  },
+  {
+    "index":154,
+    "title":"Summon Monster II",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nSummons extraplanar creature to fight for you."
+  },
+  {
+    "index":155,
+    "title":"Summon Swarm",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nSummons swarm of bats, rats, or spiders."
+  },
+  {
+    "index":156,
+    "title":"Web",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nFills 20-ft.-radius spread with sticky spiderwebs that can grapple foes and impair movement."
+  },
+  {
+    "index":157,
+    "title":"Web Shelter",
+    "category":"Level 2",
+    "description":"School: conjuration\n\nCreate a comfortable shelter made of webbing."
+  },
+  {
+    "index":158,
+    "title":"Blood Transcription",
+    "category":"Level 2",
+    "description":"School: divination\n\nWizard Only. Learn a spell from the target's blood."
+  },
+  {
+    "index":159,
+    "title":"Create Treasure Map",
+    "category":"Level 2",
+    "description":"School: divination\n\nCreates treasure map out of a creature’s corpse."
+  },
+  {
+    "index":160,
+    "title":"Detect Thoughts",
+    "category":"Level 2",
+    "description":"School: divination\n\nAllows “listening” to surface thoughts."
+  },
+  {
+    "index":161,
+    "title":"Elemental Speech",
+    "category":"Level 2",
+    "description":"School: divination\n\nEnables you to speak to elementals and some creatures."
+  },
+  {
+    "index":162,
+    "title":"Locate Object",
+    "category":"Level 2",
+    "description":"School: divination\n\nSenses direction toward object (specific or type)."
+  },
+  {
+    "index":163,
+    "title":"See Invisibility",
+    "category":"Level 2",
+    "description":"School: divination\n\nReveals invisible creatures or objects."
+  },
+  {
+    "index":164,
+    "title":"Share Language",
+    "category":"Level 2",
+    "description":"School: divination\n\nSubject understands chosen language."
+  },
+  {
+    "index":165,
+    "title":"Share Memory",
+    "category":"Level 2",
+    "description":"School: divination\n\nShare one memory with the target."
+  },
+  {
+    "index":166,
+    "title":"Spell Guage",
+    "category":"Level 2",
+    "description":"School: divination\n\n"
+  },
+  {
+    "index":167,
+    "title":"Bestow Weapon Proficiency",
+    "category":"Level 2",
+    "description":"School: enchantment\n\nGrants a creature proficiency in a single weapon for short period of time."
+  },
+  {
+    "index":168,
+    "title":"Compassionate Ally",
+    "category":"Level 2",
+    "description":"School: enchantment\n\nTarget is compelled to help injured ally."
+  },
+  {
+    "index":169,
+    "title":"Daze Monster",
+    "category":"Level 2",
+    "description":"School: enchantment\n\nLiving creature of 6 HD or less loses its next action."
+  },
+  {
+    "index":170,
+    "title":"Delay Pain",
+    "category":"Level 2",
+    "description":"School: enchantment\n\nIgnore pain for 1 hour/level."
+  },
+  {
+    "index":171,
+    "title":"Hideous Laughter",
+    "category":"Level 2",
+    "description":"School: enchantment\n\nSubject loses actions for 1 round/level."
+  },
+  {
+    "index":172,
+    "title":"Oppressive Boredom",
+    "category":"Level 2",
+    "description":"School: enchantment\n\nTarget loses its next action."
+  },
+  {
+    "index":173,
+    "title":"Qualm",
+    "category":"Level 2",
+    "description":"School: enchantment\n\nTarget gains penalties on ability checks, skill checks, and concentration checks until it spends an entire round doing nothing."
+  },
+  {
+    "index":174,
+    "title":"Ricochet Shot",
+    "category":"Level 2",
+    "description":"School: enchantment\n\nImbues a projectile weapon to give its ammunition the ability to ricochet."
+  },
+  {
+    "index":175,
+    "title":"Seducer's Eyes",
+    "category":"Level 2",
+    "description":"School: enchantment\n\n"
+  },
+  {
+    "index":176,
+    "title":"Tactical Acumen",
+    "category":"Level 2",
+    "description":"School: enchantment\n\nYou gain an additional +1 on attack rolls or to AC due to battlefield positioning."
+  },
+  {
+    "index":177,
+    "title":"Touch of Idiocy",
+    "category":"Level 2",
+    "description":"School: enchantment\n\nSubject takes 1d6 penalty to Int, Wis, and Cha."
+  },
+  {
+    "index":178,
+    "title":"Unnatural Lust",
+    "category":"Level 2",
+    "description":"School: enchantment\n\nTarget is compelled to kiss or caress another creature."
+  },
+  {
+    "index":179,
+    "title":"Admonishing Ray",
+    "category":"Level 2",
+    "description":"School: evocation\n\nYou fire one nonlethal force ray plus one additional ray for every four levels (maximum three rays). Each ray deals 4d6 points of nonlethal damage."
+  },
+  {
+    "index":180,
+    "title":"Burning Gaze",
+    "category":"Level 2",
+    "description":"School: evocation\n\nInflict 1d6 fire damage to creature by looking at it."
+  },
+  {
+    "index":181,
+    "title":"Continual Flame",
+    "category":"Level 2",
+    "description":"School: evocation\n\nMakes a permanent, heatless light."
+  },
+  {
+    "index":182,
+    "title":"Darkness",
+    "category":"Level 2",
+    "description":"School: evocation\n\n20-ft. radius of supernatural shadow."
+  },
+  {
+    "index":183,
+    "title":"Defensive Shock",
+    "category":"Level 2",
+    "description":"School: evocation\n\nElectricity damages your attackers."
+  },
+  {
+    "index":184,
+    "title":"Elemental Touch",
+    "category":"Level 2",
+    "description":"School: evocation\n\nGain energy damage touch attack."
+  },
+  {
+    "index":185,
+    "title":"Fire Breath",
+    "category":"Level 2",
+    "description":"School: evocation\n\nExhale a cone of flame at will."
+  },
+  {
+    "index":186,
+    "title":"Flaming Sphere",
+    "category":"Level 2",
+    "description":"School: evocation\n\nRolling ball of fire deals 3d6 fire damage."
+  },
+  {
+    "index":187,
+    "title":"Frigid Touch",
+    "category":"Level 2",
+    "description":"School: evocation\n\nTarget takes cold damage and is staggered."
+  },
+  {
+    "index":188,
+    "title":"Frost Fall",
+    "category":"Level 2",
+    "description":"School: evocation\n\nThe area is covered in a chilling frost."
+  },
+  {
+    "index":189,
+    "title":"Gust of Wind",
+    "category":"Level 2",
+    "description":"School: evocation\n\nBlows away or knocks down smaller creatures."
+  },
+  {
+    "index":190,
+    "title":"Pilfering Hand",
+    "category":"Level 2",
+    "description":"School: evocation\n\nYou may seize an object or manipulate it from afar."
+  },
+  {
+    "index":191,
+    "title":"Protective Penumbra",
+    "category":"Level 2",
+    "description":"School: evocation\n\nShadow protects the target from light."
+  },
+  {
+    "index":192,
+    "title":"Scorching Ray",
+    "category":"Level 2",
+    "description":"School: evocation\n\nRanged touch attack deals 4d6 fire damage, + 1 ray/four levels (max 3)."
+  },
+  {
+    "index":193,
+    "title":"Shatter",
+    "category":"Level 2",
+    "description":"School: evocation\n\nSonic energy damages objects or crystalline creatures."
+  },
+  {
+    "index":194,
+    "title":"Spontaneous Immolation",
+    "category":"Level 2",
+    "description":"School: evocation\n\nTarget takes 3d6 points of fire damage and catches on fire."
+  },
+  {
+    "index":195,
+    "title":"Blur",
+    "category":"Level 2",
+    "description":"School: illusion\n\nAttacks miss subject 20% of the time."
+  },
+  {
+    "index":196,
+    "title":"Disguise Other",
+    "category":"Level 2",
+    "description":"School: illusion\n\nAs disguise self, but affects you or another."
+  },
+  {
+    "index":197,
+    "title":"Ghostly Disguise",
+    "category":"Level 2",
+    "description":"School: illusion\n\nYou look like a ghost of yourself."
+  },
+  {
+    "index":198,
+    "title":"Haunting Mists",
+    "category":"Level 2",
+    "description":"School: illusion\n\nCreatures are shaken and take Wis damage."
+  },
+  {
+    "index":199,
+    "title":"Hypnotic Pattern",
+    "category":"Level 2",
+    "description":"School: illusion\n\nFascinates 2d4 + level HD of creatures."
+  },
+  {
+    "index":200,
+    "title":"Invisibility",
+    "category":"Level 2",
+    "description":"School: illusion\n\nSubject is invisible for 1 min./level or until it attacks."
+  },
+  {
+    "index":201,
+    "title":"Mad Hallucination",
+    "category":"Level 2",
+    "description":"School: illusion\n\nTarget takes penalties to mental actions."
+  },
+  {
+    "index":202,
+    "title":"Magic Mouth",
+    "category":"Level 2",
+    "description":"School: illusion\n\nObject speaks once when triggered."
+  },
+  {
+    "index":203,
+    "title":"Minor Image",
+    "category":"Level 2",
+    "description":"School: illusion\n\nAs silent image, plus some sound."
+  },
+  {
+    "index":204,
+    "title":"Mirror Image",
+    "category":"Level 2",
+    "description":"School: illusion\n\nCreates decoy duplicates of you."
+  },
+  {
+    "index":205,
+    "title":"Misdirection",
+    "category":"Level 2",
+    "description":"School: illusion\n\nMisleads divinations for 1 creature or object."
+  },
+  {
+    "index":206,
+    "title":"Phantom Trap",
+    "category":"Level 2",
+    "description":"School: illusion\n\nMakes item seem trapped."
+  },
+  {
+    "index":207,
+    "title":"Symbol of Mirroring",
+    "category":"Level 2",
+    "description":"School: illusion\n\nTriggered rune creates mirror images."
+  },
+  {
+    "index":208,
+    "title":"Blindness/Deafness",
+    "category":"Level 2",
+    "description":"School: necromancy\n\nMakes subject blinded or deafened."
+  },
+  {
+    "index":209,
+    "title":"Brow Gasher",
+    "category":"Level 2",
+    "description":"School: necromancy\n\nSlashing weapon deals bleed damage to an opponent’s head."
+  },
+  {
+    "index":210,
+    "title":"Command Undead",
+    "category":"Level 2",
+    "description":"School: necromancy\n\nUndead creature obeys your commands."
+  },
+  {
+    "index":211,
+    "title":"Defending Bone",
+    "category":"Level 2",
+    "description":"School: necromancy\n\nYou animate a bone which gives you damage reduction 5/bludgeoning."
+  },
+  {
+    "index":212,
+    "title":"Defoliate",
+    "category":"Level 2",
+    "description":"School: necromancy\n\nYou hurl a tiny ball of negative energy, destroying plant life either in a line 60 feet long or a 10-foot-radius spread."
+  },
+  {
+    "index":213,
+    "title":"False Life",
+    "category":"Level 2",
+    "description":"School: necromancy\n\nGain 1d10 temporary hp + 1/level (max +10)."
+  },
+  {
+    "index":214,
+    "title":"Ghoul Touch",
+    "category":"Level 2",
+    "description":"School: necromancy\n\nParalyzes one subject, which exudes stench that makes those nearby sickened."
+  },
+  {
+    "index":215,
+    "title":"Pernicious Poison",
+    "category":"Level 2",
+    "description":"School: necromancy\n\nTarget takes a -4 penalty against poison."
+  },
+  {
+    "index":216,
+    "title":"Scare",
+    "category":"Level 2",
+    "description":"School: necromancy\n\nFrightens creatures of less than 6 HD."
+  },
+  {
+    "index":217,
+    "title":"Skinsend",
+    "category":"Level 2",
+    "description":"School: necromancy\n\nAnimate and possess your own skin as if it were a separate creature."
+  },
+  {
+    "index":218,
+    "title":"Spectral Hand",
+    "category":"Level 2",
+    "description":"School: necromancy\n\nCreates disembodied glowing hand to deliver touch attacks."
+  },
+  {
+    "index":219,
+    "title":"Steal Voice",
+    "category":"Level 2",
+    "description":"School: necromancy\n\nTarget gains the croaking spellblight."
+  },
+  {
+    "index":220,
+    "title":"Unshakable Chill",
+    "category":"Level 2",
+    "description":"School: necromancy\n\nTarget is afflicted with severe cold."
+  },
+  {
+    "index":221,
+    "title":"Accelerate Poison",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nHastens targeted poison’s onset."
+  },
+  {
+    "index":222,
+    "title":"Adoration",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nYou gain a bonus on Diplomacy checks and performance combat checks."
+  },
+  {
+    "index":223,
+    "title":"Alter Self",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nAssume form of a Small or Medium humanoid."
+  },
+  {
+    "index":224,
+    "title":"Animal Aspect",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nYou gain some of the beneficial qualities of an animal."
+  },
+  {
+    "index":225,
+    "title":"Ant Haul, Communal",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nAs ant haul, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":226,
+    "title":"Badger's Ferocity",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nWeapons are keen while you concentrate."
+  },
+  {
+    "index":227,
+    "title":"Bear's Endurance",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nSubject gains +4 to Con for 1 min./level."
+  },
+  {
+    "index":228,
+    "title":"Boiling Blood",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nTargets take fire damage; orcs get +2 Strength."
+  },
+  {
+    "index":229,
+    "title":"Bull's Strength",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nSubject gains +4 to Str for 1 min./level."
+  },
+  {
+    "index":230,
+    "title":"Cat's Grace",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nSubject gains +4 to Dex for 1 min./level."
+  },
+  {
+    "index":231,
+    "title":"Certain Grip",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nYou gain a +4 competence bonus on Acrobatics and Climb checks and to CMD."
+  },
+  {
+    "index":232,
+    "title":"Codespeak",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nGrant all recipients ability to speak, read and write a new secret language."
+  },
+  {
+    "index":233,
+    "title":"Darkvision",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nSee 60 ft. in total darkness."
+  },
+  {
+    "index":234,
+    "title":"Destabilize Powder",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nAmmunition in the targeted firearm is prone to misfire."
+  },
+  {
+    "index":235,
+    "title":"Disfiguring Touch",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nTarget becomes disfigured."
+  },
+  {
+    "index":236,
+    "title":"Eagle's Splendor",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nSubject gains +4 to Cha for 1 min./level."
+  },
+  {
+    "index":237,
+    "title":"Fox's Cunning",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nSubject gains +4 to Int for 1 min./level."
+  },
+  {
+    "index":238,
+    "title":"Glide",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nYou take no falling damage, move 60 ft./round while falling."
+  },
+  {
+    "index":239,
+    "title":"Greensight",
+    "category":"Level 2",
+    "description":"School: transmutation\n\n"
+  },
+  {
+    "index":240,
+    "title":"Hidden Knowledge",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nYou purposely forget some information which is transcribed upon you in the form of a tattoo."
+  },
+  {
+    "index":241,
+    "title":"Kinetic Reverberation",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nChannels the force of an enemy’s attack back into its weapon."
+  },
+  {
+    "index":242,
+    "title":"Knock",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nOpens locked or magically sealed door."
+  },
+  {
+    "index":243,
+    "title":"Levitate",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nSubject moves up and down at your direction."
+  },
+  {
+    "index":244,
+    "title":"Magic Siege Engine",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nSiege gains +1 on targeting and damage rolls."
+  },
+  {
+    "index":245,
+    "title":"Make Whole",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nRepairs an object."
+  },
+  {
+    "index":246,
+    "title":"Masterwork Transformation",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nMake a normal item into a masterwork one."
+  },
+  {
+    "index":247,
+    "title":"Owl's Wisdom",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nSubject gains +4 to Wis for 1 min./level."
+  },
+  {
+    "index":248,
+    "title":"Pyrotechnics",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nTurns fire into blinding light or thick smoke."
+  },
+  {
+    "index":249,
+    "title":"Recoil Fire",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nAmmunition in the targeted firearm generates excessive recoil."
+  },
+  {
+    "index":250,
+    "title":"Reinforce Armaments, Communal",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nAs reinforce armaments, but you may divide the duration among objects touched."
+  },
+  {
+    "index":251,
+    "title":"Rope Trick",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nAs many as eight creatures hide in extradimensional space."
+  },
+  {
+    "index":252,
+    "title":"Sculpt Simulacrum",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nAlter a simulacrum's appearance."
+  },
+  {
+    "index":253,
+    "title":"Silk To Steel",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nUse a scarf as a shield or whip."
+  },
+  {
+    "index":254,
+    "title":"Spider Climb",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nGrants ability to walk on walls and ceilings."
+  },
+  {
+    "index":255,
+    "title":"Stabilize Powder",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nAmmunition in the targeted firearm is less likely to misfire."
+  },
+  {
+    "index":256,
+    "title":"Staggering Fall",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nCause additional damage to a falling creature."
+  },
+  {
+    "index":257,
+    "title":"Telekinetic Assembly",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nAssembles a siege engine using 1 fewer worker for every two caster levels."
+  },
+  {
+    "index":258,
+    "title":"Thunder Fire",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nAmmunition in the targeted firearm deafens opponents."
+  },
+  {
+    "index":259,
+    "title":"Twisted Space",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nTargeted creature’s attacks target a random square instead of the intended target."
+  },
+  {
+    "index":260,
+    "title":"Whispering Wind",
+    "category":"Level 2",
+    "description":"School: transmutation\n\nSends a short message 1 mile/level."
+  },
+  {
+    "index":261,
+    "title":"Cloak of Winds",
+    "category":"Level 3",
+    "description":"School: abjuration\n\nCreates a screen of wind around you."
+  },
+  {
+    "index":262,
+    "title":"Dispel Magic",
+    "category":"Level 3",
+    "description":"School: abjuration\n\nCancels one magical spell or effect."
+  },
+  {
+    "index":263,
+    "title":"Explosive Runes",
+    "category":"Level 3",
+    "description":"School: abjuration\n\nDeals 6d6 damage when read."
+  },
+  {
+    "index":264,
+    "title":"Magic Circle against Chaos/Evil/Good/Law",
+    "category":"Level 3",
+    "description":"School: abjuration\n\nAs protection spells, but 10-ft. radius and 10 min./level."
+  },
+  {
+    "index":265,
+    "title":"Nondetection",
+    "category":"Level 3",
+    "description":"School: abjuration\n\nHides subject from divination, scrying."
+  },
+  {
+    "index":266,
+    "title":"Protection from Arrows, Communal",
+    "category":"Level 3",
+    "description":"School: abjuration\n\nAs protection from arrows, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":267,
+    "title":"Protection from Energy",
+    "category":"Level 3",
+    "description":"School: abjuration\n\nAbsorbs 12 points/level of damage from one kind of energy."
+  },
+  {
+    "index":268,
+    "title":"Resist Energy, Communal",
+    "category":"Level 3",
+    "description":"School: abjuration\n\nAs resist energy, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":269,
+    "title":"Ablative Barrier",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nSurrounds the target with layers of force."
+  },
+  {
+    "index":270,
+    "title":"Aqueous Orb",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nCreates rolling sphere of water."
+  },
+  {
+    "index":271,
+    "title":"Ash Storm",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nHamper vision and movement."
+  },
+  {
+    "index":272,
+    "title":"Mad Monkeys",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nSummon a swarm of mischievous monkeys."
+  },
+  {
+    "index":273,
+    "title":"Pellet Blast",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nCreates an explosion of conjured metal pellets."
+  },
+  {
+    "index":274,
+    "title":"Phantom Driver",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nConjures a phantom to drive vehicles."
+  },
+  {
+    "index":275,
+    "title":"Phantom Steed",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nMagic horse appears for 1 hour/level."
+  },
+  {
+    "index":276,
+    "title":"Rain of Frogs",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nSummon a swarm of poisonous frogs."
+  },
+  {
+    "index":277,
+    "title":"Returning weapon. Communal",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nAs returning weapon, but you may divide the duration among weapons touched."
+  },
+  {
+    "index":278,
+    "title":"Sepia Snake Sigil",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nCreates text symbol that immobilizes reader."
+  },
+  {
+    "index":279,
+    "title":"Sleet Storm",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nHampers vision and movement."
+  },
+  {
+    "index":280,
+    "title":"Spiked Pit",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nAs create pit, but filled with spikes."
+  },
+  {
+    "index":281,
+    "title":"Stinking Cloud",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nNauseating vapors, 1 round/level."
+  },
+  {
+    "index":282,
+    "title":"Summon Monster III",
+    "category":"Level 3",
+    "description":"School: conjuration\n\nSummons extraplanar creature to fight for you."
+  },
+  {
+    "index":283,
+    "title":"Arcane Sight",
+    "category":"Level 3",
+    "description":"School: divination\n\nMagical auras become visible to you."
+  },
+  {
+    "index":284,
+    "title":"Blood Biography",
+    "category":"Level 3",
+    "description":"School: divination\n\nLearn about a creature with its blood."
+  },
+  {
+    "index":285,
+    "title":"Clairaudience/Clairvoyance",
+    "category":"Level 3",
+    "description":"School: divination\n\nHear or see at a distance for 1 min./level."
+  },
+  {
+    "index":286,
+    "title":"Harrowing",
+    "category":"Level 3",
+    "description":"School: divination\n\nYou use a Harrow deck to tell a fortune for yourself or someone else."
+  },
+  {
+    "index":287,
+    "title":"Locate Weakness",
+    "category":"Level 3",
+    "description":"School: divination\n\nYou roll damage twice when you roll damage for a critical hit and take the best damage."
+  },
+  {
+    "index":288,
+    "title":"Seek Thoughts",
+    "category":"Level 3",
+    "description":"School: divination\n\nDetects thinking creatures’ thoughts."
+  },
+  {
+    "index":289,
+    "title":"Share Language, Communal",
+    "category":"Level 3",
+    "description":"School: divination\n\nAs share language, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":290,
+    "title":"Spherescry",
+    "category":"Level 3",
+    "description":"School: divination\n\nRemotely view through spheres that have consumed some portion of the caster's body. Spherescrycannot be discovered by normal methods of magical detection."
+  },
+  {
+    "index":291,
+    "title":"Tongues",
+    "category":"Level 3",
+    "description":"School: divination\n\nSpeak and understand any language."
+  },
+  {
+    "index":292,
+    "title":"Unravel Destiny",
+    "category":"Level 3",
+    "description":"School: divination\n\nA target suffers penalties to checks depending on how many hero points it has, and takes damage if it uses them."
+  },
+  {
+    "index":293,
+    "title":"Deep Slumber",
+    "category":"Level 3",
+    "description":"School: enchantment\n\nPuts 10 HD of creatures to sleep."
+  },
+  {
+    "index":294,
+    "title":"Heroism",
+    "category":"Level 3",
+    "description":"School: enchantment\n\nGives +2 bonus on attack rolls, saves, skill checks."
+  },
+  {
+    "index":295,
+    "title":"Hold Person",
+    "category":"Level 3",
+    "description":"School: enchantment\n\nParalyzes one humanoid for 1 round/level."
+  },
+  {
+    "index":296,
+    "title":"Lover's Vengeance",
+    "category":"Level 3",
+    "description":"School: enchantment\n\nYou inspire yourself or a lover to a vengeful rage against a chosen enemy."
+  },
+  {
+    "index":297,
+    "title":"Rage",
+    "category":"Level 3",
+    "description":"School: enchantment\n\nGives +2 to Str and Con, +1 on Will saves, –2 to AC."
+  },
+  {
+    "index":298,
+    "title":"Reckless Infatuation",
+    "category":"Level 3",
+    "description":"School: enchantment\n\nTarget is compelled to stay near another."
+  },
+  {
+    "index":299,
+    "title":"Suggestion",
+    "category":"Level 3",
+    "description":"School: enchantment\n\nCompels a subject to follow stated course of action."
+  },
+  {
+    "index":300,
+    "title":"Unadulterated Loathing",
+    "category":"Level 3",
+    "description":"School: enchantment\n\nTarget is compelled to avoid another creature."
+  },
+  {
+    "index":301,
+    "title":"Battering Blast",
+    "category":"Level 3",
+    "description":"School: evocation\n\nYou hurl a fist-sized ball of force resembling a sphere of spikes to ram a designated creature or object."
+  },
+  {
+    "index":302,
+    "title":"BlackLight",
+    "category":"Level 3",
+    "description":"School: evocation\n\nYou create an area of darkness impenetrable even to darkvision, but you can see normally within it."
+  },
+  {
+    "index":303,
+    "title":"Campfire Wall",
+    "category":"Level 3",
+    "description":"School: evocation\n\nCreates a shelter around a campfire."
+  },
+  {
+    "index":304,
+    "title":"Chain of Perdition",
+    "category":"Level 3",
+    "description":"School: evocation\n\nCreates a floating chain of force."
+  },
+  {
+    "index":305,
+    "title":"Channel the Gift",
+    "category":"Level 3",
+    "description":"School: evocation\n\nChannel magical power into target to fuel their spellcasting. The next 3rd level or lower spell target casts does not expend a spell slot; instead you use your spell slot to power their spell."
+  },
+  {
+    "index":306,
+    "title":"Daylight",
+    "category":"Level 3",
+    "description":"School: evocation\n\n60-ft. radius of bright light."
+  },
+  {
+    "index":307,
+    "title":"Diamond Spray",
+    "category":"Level 3",
+    "description":"School: evocation\n\nA cone of tiny, sparkling slivers as hard and sharp as filed diamonds springs from your outstretched fingers at tremendous speed."
+  },
+  {
+    "index":308,
+    "title":"Distracting Cacophony",
+    "category":"Level 3",
+    "description":"School: evocation\n\nNoise makes it difficult to cast."
+  },
+  {
+    "index":309,
+    "title":"Draconic Reservoir",
+    "category":"Level 3",
+    "description":"School: evocation\n\nSubject can absorb energy damage and enhance melee attacks with it."
+  },
+  {
+    "index":310,
+    "title":"Elemental Aura",
+    "category":"Level 3",
+    "description":"School: evocation\n\nCreates an aura of energy around you."
+  },
+  {
+    "index":311,
+    "title":"Fireball",
+    "category":"Level 3",
+    "description":"School: evocation\n\n1d6 damage per level, 20-ft. radius."
+  },
+  {
+    "index":312,
+    "title":"Force Punch",
+    "category":"Level 3",
+    "description":"School: evocation\n\nTarget takes force damage and is pushed away."
+  },
+  {
+    "index":313,
+    "title":"Heatstroke",
+    "category":"Level 3",
+    "description":"School: evocation\n\nAs ray of exhaustion plus 1d4 nonlethal damage and characters wearing heavy clothing or armor of any sort take a –4 penalty on their saves."
+  },
+  {
+    "index":314,
+    "title":"Hydraulic Torrent",
+    "category":"Level 3",
+    "description":"School: evocation\n\nCreates torrent of water that bull rushes any creature in its path."
+  },
+  {
+    "index":315,
+    "title":"Lightning Bolt",
+    "category":"Level 3",
+    "description":"School: evocation\n\nElectricity deals 1d6/level damage."
+  },
+  {
+    "index":316,
+    "title":"Pain Strike",
+    "category":"Level 3",
+    "description":"School: evocation\n\nInflicts 1d6 nonlethal damage 1 round/level."
+  },
+  {
+    "index":317,
+    "title":"Sheet Lightning",
+    "category":"Level 3",
+    "description":"School: evocation\n\n"
+  },
+  {
+    "index":318,
+    "title":"Tiny Hut",
+    "category":"Level 3",
+    "description":"School: evocation\n\nCreates shelter for 10 creatures."
+  },
+  {
+    "index":319,
+    "title":"Twilight Knife",
+    "category":"Level 3",
+    "description":"School: evocation\n\nFloating knife attacks with you."
+  },
+  {
+    "index":320,
+    "title":"Wind Wall",
+    "category":"Level 3",
+    "description":"School: evocation\n\nDeflects arrows, smaller creatures, and gases."
+  },
+  {
+    "index":321,
+    "title":"Dazzling Blade, Mass",
+    "category":"Level 3",
+    "description":"School: illusion\n\n"
+  },
+  {
+    "index":322,
+    "title":"Displacement",
+    "category":"Level 3",
+    "description":"School: illusion\n\nAttacks miss subject 50% of the time."
+  },
+  {
+    "index":323,
+    "title":"Illusory Poison",
+    "category":"Level 3",
+    "description":"School: illusion\n\nCoat a weapon with phantasmal poison."
+  },
+  {
+    "index":324,
+    "title":"Illusory Script",
+    "category":"Level 3",
+    "description":"School: illusion\n\nOnly select creatures can read text."
+  },
+  {
+    "index":325,
+    "title":"Invisibility Sphere",
+    "category":"Level 3",
+    "description":"School: illusion\n\nMakes everyone within 10 ft. invisible."
+  },
+  {
+    "index":326,
+    "title":"Loathsome Veil",
+    "category":"Level 3",
+    "description":"School: illusion\n\nNauseate and/or sicken weak creatures."
+  },
+  {
+    "index":327,
+    "title":"Major Image",
+    "category":"Level 3",
+    "description":"School: illusion\n\nAs silent image, plus sound, smell and thermal effects."
+  },
+  {
+    "index":328,
+    "title":"Vision of Hell",
+    "category":"Level 3",
+    "description":"School: illusion\n\nIllusory hellscape makes creatures shaken."
+  },
+  {
+    "index":329,
+    "title":"Animate Dead, Lesser",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nCreate one skeleton or zombie."
+  },
+  {
+    "index":330,
+    "title":"Deathwine",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nTurn a healing potion into a pool of necromantic energy that does not heal but instead increases thecaster level of the next necromancy spell you cast in the next minute."
+  },
+  {
+    "index":331,
+    "title":"Eldritch Fever",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nTarget gains the eldritch ague spellblight."
+  },
+  {
+    "index":332,
+    "title":"Gentle Repose",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nPreserves one corpse."
+  },
+  {
+    "index":333,
+    "title":"Halt Undead",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nImmobilizes undead for 1 round/level."
+  },
+  {
+    "index":334,
+    "title":"Healing Thief",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nYou siphon half of all magical healing that the targeted creature receives."
+  },
+  {
+    "index":335,
+    "title":"Howling Agony",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nScreaming pain limits the target's actions."
+  },
+  {
+    "index":336,
+    "title":"Ki Leech",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nAdd to your ki pool when you critically hit."
+  },
+  {
+    "index":337,
+    "title":"Malediction",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nTouch to kill an unconscious creature and gain a number of temporary hero points depending on how powerful it was."
+  },
+  {
+    "index":338,
+    "title":"Marionette Possession",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nAs magic jar, but limited to line of sight."
+  },
+  {
+    "index":339,
+    "title":"Ray of Exhaustion",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nRay makes subject exhausted."
+  },
+  {
+    "index":340,
+    "title":"Sands of Time",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nTarget temporarily ages."
+  },
+  {
+    "index":341,
+    "title":"Toxic Gift",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nTarget suffers the effect of the poison in you."
+  },
+  {
+    "index":342,
+    "title":"Vampiric Touch",
+    "category":"Level 3",
+    "description":"School: necromancy\n\nTouch deals 1d6 damage per two levels; caster gains damage as temporary hp."
+  },
+  {
+    "index":343,
+    "title":"Anthropomorphic Animal",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nAnimal becomes bipedal."
+  },
+  {
+    "index":344,
+    "title":"Ape Walk",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nTarget gains climb 30 and +8 racial bonus on Climb skill checks."
+  },
+  {
+    "index":345,
+    "title":"Beast Shape I",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nYou take the form and some of the powers of a Small or Medium animal."
+  },
+  {
+    "index":346,
+    "title":"Blink",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nYou randomly vanish and reappear for 1 round per level."
+  },
+  {
+    "index":347,
+    "title":"Burrow",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nTarget gains a burrow speed of 15."
+  },
+  {
+    "index":348,
+    "title":"Countless Eyes",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nExtra eyes give all-around vision."
+  },
+  {
+    "index":349,
+    "title":"Darkvision, Communal",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nAs darkvision, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":350,
+    "title":"Devolution",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nTarget eidolon temporarily loses 1 evolution +1/five levels."
+  },
+  {
+    "index":351,
+    "title":"Enter Image",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nTransfers your consciousness to an object bearing your likeness."
+  },
+  {
+    "index":352,
+    "title":"Eruptive Pustules",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nAcid boils burst when you are attacked."
+  },
+  {
+    "index":353,
+    "title":"Excruciating Deformation",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nTarget takes Dex and Con damage."
+  },
+  {
+    "index":354,
+    "title":"Flame Arrow",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nArrows deal +1d6 fire damage."
+  },
+  {
+    "index":355,
+    "title":"Flash Fire",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nAmmunition in the targeted firearm creates a tremendous flash capable of blinding the weapon’s bearer and those around him."
+  },
+  {
+    "index":356,
+    "title":"Fly",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nSubject flies at speed of 60 ft."
+  },
+  {
+    "index":357,
+    "title":"Gaseous Form",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nSubject becomes insubstantial and can fly slowly."
+  },
+  {
+    "index":358,
+    "title":"Haste",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nOne creature/level moves faster, +1 on attack rolls, AC, and Reflex saves."
+  },
+  {
+    "index":359,
+    "title":"Hostile Levitation",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nLevitates the targeted creature up off the ground."
+  },
+  {
+    "index":360,
+    "title":"Keen Edge",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nDoubles normal weapon's threat range."
+  },
+  {
+    "index":361,
+    "title":"Magic Weapon, Greater",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nWeapon gains +1 bonus/four levels (max +5)."
+  },
+  {
+    "index":362,
+    "title":"Monstrous Physique I",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nTake the form and some of the powers of a Small or Medium monstrous humanoid."
+  },
+  {
+    "index":363,
+    "title":"Pup Shape",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nTransforms a single animal or magical beast into a younger and cuter version of itself for a short period of time."
+  },
+  {
+    "index":364,
+    "title":"Resinous Skin",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nYou gain DR 5/piercing and +4 to CMD against disarm attempts."
+  },
+  {
+    "index":365,
+    "title":"Secret Page",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nChanges one page to hide its real content."
+  },
+  {
+    "index":366,
+    "title":"Shifting Sand",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nCreates difficult terrain and erases tracks, can carry along some creatures and objects."
+  },
+  {
+    "index":367,
+    "title":"Shrink Item",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nObject shrinks to one-sixteenth size."
+  },
+  {
+    "index":368,
+    "title":"Slow",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nOne subject/level takes only one action/round, –1 to AC, Reflex saves, and attack rolls."
+  },
+  {
+    "index":369,
+    "title":"Spider Climb, Communal",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nAs spider climb, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":370,
+    "title":"Strangling Hair",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nYour hair animates and grapples."
+  },
+  {
+    "index":371,
+    "title":"Touch Injection",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nYou can deliver an infusion, elixir, poison, or potion as a touch attack."
+  },
+  {
+    "index":372,
+    "title":"Undead Anatomy I",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nTake the form and some of the powers of a Small or Medium undead."
+  },
+  {
+    "index":373,
+    "title":"Versatile Weapon",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nWeapon bypasses some DR."
+  },
+  {
+    "index":374,
+    "title":"Water Breathing",
+    "category":"Level 3",
+    "description":"School: transmutation\n\nSubjects can breathe underwater."
+  },
+  {
+    "index":375,
+    "title":"Curse of Magic Negation",
+    "category":"Level 4",
+    "description":"School: abjuration\n\nTarget gains the negated spellblight."
+  },
+  {
+    "index":376,
+    "title":"Dimensional Anchor",
+    "category":"Level 4",
+    "description":"School: abjuration\n\nBars extradimensional movement."
+  },
+  {
+    "index":377,
+    "title":"Fire Trap",
+    "category":"Level 4",
+    "description":"School: abjuration\n\nOpened object deals 1d4 damage + 1/level."
+  },
+  {
+    "index":378,
+    "title":"Globe of Invulnerability, Lesser",
+    "category":"Level 4",
+    "description":"School: abjuration\n\nStops 1st- through 3rd-level spell effects."
+  },
+  {
+    "index":379,
+    "title":"Nondetection, Communal",
+    "category":"Level 4",
+    "description":"School: abjuration\n\nAs nondetection, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":380,
+    "title":"Protection from Energy, Communal",
+    "category":"Level 4",
+    "description":"School: abjuration\n\nAs protection from energy, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":381,
+    "title":"Remove Curse",
+    "category":"Level 4",
+    "description":"School: abjuration\n\nFrees object or person from curse."
+  },
+  {
+    "index":382,
+    "title":"Stoneskin",
+    "category":"Level 4",
+    "description":"School: abjuration\n\nGrants DR 10/adamantine."
+  },
+  {
+    "index":383,
+    "title":"True Form",
+    "category":"Level 4",
+    "description":"School: abjuration\n\nRemoves polymorph effects."
+  },
+  {
+    "index":384,
+    "title":"Acid Pit",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nCreates a pit with a layer of acid on the bottom."
+  },
+  {
+    "index":385,
+    "title":"Black Tentacles",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nTentacles grapple all creatures within a 20-ft. spread."
+  },
+  {
+    "index":386,
+    "title":"Dimension Door",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nTeleports you a short distance."
+  },
+  {
+    "index":387,
+    "title":"Fleshworm Infestation",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nWorms deal hp and Dex damage."
+  },
+  {
+    "index":388,
+    "title":"Ghost Wolf",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nConjure a Large, quasi-real, wolf-like creature made of black smoke that radiates fear and functions as phantom steed, and which can make attacks."
+  },
+  {
+    "index":389,
+    "title":"Infernal Healing, Greater",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nTouch a creature with devils blood, giving it fast healing 4."
+  },
+  {
+    "index":390,
+    "title":"Minor Creation",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nCreates one cloth or wood object."
+  },
+  {
+    "index":391,
+    "title":"Phantom Chariot",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nConjures a quasi-real heavy chariot pulled by four horses."
+  },
+  {
+    "index":392,
+    "title":"Phantom Steed, Communal",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nAs phantom steed, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":393,
+    "title":"Secure Shelter",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nCreates sturdy cottage."
+  },
+  {
+    "index":394,
+    "title":"Solid Fog",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nBlocks vision and slows movement."
+  },
+  {
+    "index":395,
+    "title":"Summon Accuser",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nSummons a single accuser devil from Hell to do your bidding."
+  },
+  {
+    "index":396,
+    "title":"Summon Monster IV",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nSummons extraplanar creature to fight for you."
+  },
+  {
+    "index":397,
+    "title":"Touch of Slime",
+    "category":"Level 4",
+    "description":"School: conjuration\n\nTouch infests a target with green slime."
+  },
+  {
+    "index":398,
+    "title":"Arcane Eye",
+    "category":"Level 4",
+    "description":"School: divination\n\nInvisible floating eye moves 30 ft./round."
+  },
+  {
+    "index":399,
+    "title":"Detect Scrying",
+    "category":"Level 4",
+    "description":"School: divination\n\nAlerts you to magical eavesdropping."
+  },
+  {
+    "index":400,
+    "title":"Locate Creature",
+    "category":"Level 4",
+    "description":"School: divination\n\nIndicates direction to familiar creature."
+  },
+  {
+    "index":401,
+    "title":"Named Bullet",
+    "category":"Level 4",
+    "description":"School: divination\n\nImbues ammunition with accuracy against a specific creature type."
+  },
+  {
+    "index":402,
+    "title":"Scrying",
+    "category":"Level 4",
+    "description":"School: divination\n\nSpies on subject from a distance."
+  },
+  {
+    "index":403,
+    "title":"Share Senses",
+    "category":"Level 4",
+    "description":"School: divination\n\nSee/hear/smell what your familiar is."
+  },
+  {
+    "index":404,
+    "title":"Symbol of Revelation",
+    "category":"Level 4",
+    "description":"School: divination\n\nTriggered symbol reveals illusions."
+  },
+  {
+    "index":405,
+    "title":"Tongues, Communal",
+    "category":"Level 4",
+    "description":"School: divination\n\nAs tongues, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":406,
+    "title":"Aura of the Unremarkable",
+    "category":"Level 4",
+    "description":"School: enchantment\n\nAn invisible sphere of magic surrounds you, clouding the minds of creatures in the area so they regard even the strangest actions as innocuous."
+  },
+  {
+    "index":407,
+    "title":"Charm Monster",
+    "category":"Level 4",
+    "description":"School: enchantment\n\nMakes monster believe it is your ally."
+  },
+  {
+    "index":408,
+    "title":"Confusion",
+    "category":"Level 4",
+    "description":"School: enchantment\n\nSubjects behave oddly for 1 round/level."
+  },
+  {
+    "index":409,
+    "title":"Control Summoned Creature",
+    "category":"Level 4",
+    "description":"School: enchantment\n\nDirect a summoned monster as if you had summoned it."
+  },
+  {
+    "index":410,
+    "title":"Crushing Despair",
+    "category":"Level 4",
+    "description":"School: enchantment\n\nSubjects take –2 on attack rolls, damage rolls, saves, and checks."
+  },
+  {
+    "index":411,
+    "title":"Daze, Mass",
+    "category":"Level 4",
+    "description":"School: enchantment\n\nAs daze, but affecting multiple creatures."
+  },
+  {
+    "index":412,
+    "title":"Geas, Lesser",
+    "category":"Level 4",
+    "description":"School: enchantment\n\nCommands subject of 7 HD or less."
+  },
+  {
+    "index":413,
+    "title":"Malfunction",
+    "category":"Level 4",
+    "description":"School: enchantment\n\nConstruct behaves oddly for 1 round/level."
+  },
+  {
+    "index":414,
+    "title":"Malicious Spite",
+    "category":"Level 4",
+    "description":"School: enchantment\n\nTarget is compelled to plot against another."
+  },
+  {
+    "index":415,
+    "title":"Moonstruck",
+    "category":"Level 4",
+    "description":"School: enchantment\n\nSubject is enraged and confused."
+  },
+  {
+    "index":416,
+    "title":"Overwhelming Grief",
+    "category":"Level 4",
+    "description":"School: enchantment\n\nGrieving target can take no actions and is denied its Dex bonus."
+  },
+  {
+    "index":417,
+    "title":"Terrible Remorse",
+    "category":"Level 4",
+    "description":"School: enchantment\n\nCreature is compelled to harm itself."
+  },
+  {
+    "index":418,
+    "title":"Agonize",
+    "category":"Level 4",
+    "description":"School: evocation\n\nPain encourages an outsider to obey you."
+  },
+  {
+    "index":419,
+    "title":"Ball Lightning",
+    "category":"Level 4",
+    "description":"School: evocation\n\nFlying balls of lightning deal 3d6 electricity damage each."
+  },
+  {
+    "index":420,
+    "title":"Detonate",
+    "category":"Level 4",
+    "description":"School: evocation\n\nInflicts 1d8/level energy damage to all creatures within 15 ft."
+  },
+  {
+    "index":421,
+    "title":"Dragon's Breath",
+    "category":"Level 4",
+    "description":"School: evocation\n\nGives you a dragon's breath weapon."
+  },
+  {
+    "index":422,
+    "title":"Fire Shield",
+    "category":"Level 4",
+    "description":"School: evocation\n\nCreatures attacking you take fire damage; you're protected from heat or cold."
+  },
+  {
+    "index":423,
+    "title":"Hurricane Blast",
+    "category":"Level 4",
+    "description":"School: evocation\n\nCreates a severe blast of wind."
+  },
+  {
+    "index":424,
+    "title":"Ice Storm",
+    "category":"Level 4",
+    "description":"School: evocation\n\nHail deals 5d6 damage in cylinder 40 ft. across."
+  },
+  {
+    "index":425,
+    "title":"Resilient Sphere",
+    "category":"Level 4",
+    "description":"School: evocation\n\nForce globe protects but traps one subject."
+  },
+  {
+    "index":426,
+    "title":"River of Wind",
+    "category":"Level 4",
+    "description":"School: evocation\n\nA stream of wind causes nonlethal damage and can knock down or push creatures."
+  },
+  {
+    "index":427,
+    "title":"Shout",
+    "category":"Level 4",
+    "description":"School: evocation\n\nDeafens all within cone and deals 5d6 sonic damage."
+  },
+  {
+    "index":428,
+    "title":"Telekinetic Charge",
+    "category":"Level 4",
+    "description":"School: evocation\n\nLaunches an ally through the air."
+  },
+  {
+    "index":429,
+    "title":"Vitriolic Mist",
+    "category":"Level 4",
+    "description":"School: evocation\n\nAs fire shield, except acid damage."
+  },
+  {
+    "index":430,
+    "title":"Volcanic Storm",
+    "category":"Level 4",
+    "description":"School: evocation\n\nHot rocks deal 5d6 damage."
+  },
+  {
+    "index":431,
+    "title":"Wall of Fire",
+    "category":"Level 4",
+    "description":"School: evocation\n\nDeals 2d4 fire damage out to 10 ft. and 1d4 out to 20 ft. Passing through wall deals 2d6 damage + 1/level."
+  },
+  {
+    "index":432,
+    "title":"Wall of Ice",
+    "category":"Level 4",
+    "description":"School: evocation\n\nIce plane creates wall or hemisphere creates dome."
+  },
+  {
+    "index":433,
+    "title":"Hallucinatory Terrain",
+    "category":"Level 4",
+    "description":"School: illusion\n\nMakes one type of terrain appear like another (field as forest, or the like)."
+  },
+  {
+    "index":434,
+    "title":"Illusory Wall",
+    "category":"Level 4",
+    "description":"School: illusion\n\nWall, floor, or ceiling looks real, but anything can pass through."
+  },
+  {
+    "index":435,
+    "title":"Invisibility, Greater",
+    "category":"Level 4",
+    "description":"School: illusion\n\nAs invisibility, but subject can attack and stay invisible."
+  },
+  {
+    "index":436,
+    "title":"Phantasmal Killer",
+    "category":"Level 4",
+    "description":"School: illusion\n\nFearsome illusion kills subject or deals 3d6 damage."
+  },
+  {
+    "index":437,
+    "title":"Rainbow Pattern",
+    "category":"Level 4",
+    "description":"School: illusion\n\nLights fascinate 24 HD of creatures."
+  },
+  {
+    "index":438,
+    "title":"Shadow Conjuration",
+    "category":"Level 4",
+    "description":"School: illusion\n\nMimics conjuration below 4th level, but only 20% real."
+  },
+  {
+    "index":439,
+    "title":"Shadow Step",
+    "category":"Level 4",
+    "description":"School: illusion\n\nTeleport from one shadow to another."
+  },
+  {
+    "index":440,
+    "title":"Shocking Image",
+    "category":"Level 4",
+    "description":"School: illusion\n\nAs mirror image, but the duplicates emit electrical damage when destroyed."
+  },
+  {
+    "index":441,
+    "title":"Simulacrum, Lesser",
+    "category":"Level 4",
+    "description":"School: illusion\n\nCreates a double of a weak creature."
+  },
+  {
+    "index":442,
+    "title":"Wandering Star Motes",
+    "category":"Level 4",
+    "description":"School: illusion\n\nOutlines subject and produces light as a sunrod."
+  },
+  {
+    "index":443,
+    "title":"Animate Dead",
+    "category":"Level 4",
+    "description":"School: necromancy\n\nCreates undead skeletons and zombies out of corpses."
+  },
+  {
+    "index":444,
+    "title":"Bestow Curse",
+    "category":"Level 4",
+    "description":"School: necromancy\n\n–6 to an ability score; –4 on attack rolls, saves, and checks; or 50% chance of losing each action."
+  },
+  {
+    "index":445,
+    "title":"Boneshatter",
+    "category":"Level 4",
+    "description":"School: necromancy\n\nThe target’s bones or exoskeleton shiver and splinter, dealing 1d6 points of damage per caster level(maximum 15d6), and is exhausted for 1 minute per caster level."
+  },
+  {
+    "index":446,
+    "title":"Contagion",
+    "category":"Level 4",
+    "description":"School: necromancy\n\nInfects subject with chosen disease."
+  },
+  {
+    "index":447,
+    "title":"Enervation",
+    "category":"Level 4",
+    "description":"School: necromancy\n\nSubject gains 1d4 negative levels."
+  },
+  {
+    "index":448,
+    "title":"False Life, Greater",
+    "category":"Level 4",
+    "description":"School: necromancy\n\nGain 2d10 temporary hp + 1/level."
+  },
+  {
+    "index":449,
+    "title":"Familiar Melding",
+    "category":"Level 4",
+    "description":"School: necromancy\n\nPossess your familiar."
+  },
+  {
+    "index":450,
+    "title":"Fear",
+    "category":"Level 4",
+    "description":"School: necromancy\n\nSubjects within cone flee for 1 round/level."
+  },
+  {
+    "index":451,
+    "title":"Shadow Projection",
+    "category":"Level 4",
+    "description":"School: necromancy\n\nTemporarily become a shadow."
+  },
+  {
+    "index":452,
+    "title":"Age Resistance, Lesser",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nIgnore penalties from middle age."
+  },
+  {
+    "index":453,
+    "title":"Animal Aspect, Greater",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nAs animal aspect, but you gain two animal qualities."
+  },
+  {
+    "index":454,
+    "title":"Beast Shape II",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nYou take the form and some of the powers of a Tiny or Large animal."
+  },
+  {
+    "index":455,
+    "title":"Calcific Touch",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nTouch attack slows target, 1d4 Dex damage."
+  },
+  {
+    "index":456,
+    "title":"Darkvision, Greater",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nSee 120 ft. in total darkness."
+  },
+  {
+    "index":457,
+    "title":"Elemental Body I",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nTurns you into a Small elemental."
+  },
+  {
+    "index":458,
+    "title":"Enlarge Person, Mass",
+    "category":"Level 4",
+    "description":"School: transmutation\n\n1 humanoid creature/level doubles in size."
+  },
+  {
+    "index":459,
+    "title":"Firefall",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nCauses fire to burst up, dealing 2d6 fire damage."
+  },
+  {
+    "index":460,
+    "title":"Magic Siege Engine, Greater",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nSiege engine gains +1 on targeting and damage rolls for every four caster levels."
+  },
+  {
+    "index":461,
+    "title":"Mnemonic Enhancer",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nWizard Only. Prepare extra spells or retain one just cast."
+  },
+  {
+    "index":462,
+    "title":"Monstrous Physique II",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nTake the form and some of the powers of a Tiny or Large monstrous humanoid."
+  },
+  {
+    "index":463,
+    "title":"Obsidian Flow",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nConverts the surface of the ground into molten glass."
+  },
+  {
+    "index":464,
+    "title":"Reduce Person, Mass",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nAs reduce person, but affects 1 humanoid creature/level."
+  },
+  {
+    "index":465,
+    "title":"Ride the Waves",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nTarget can breathe water and swim."
+  },
+  {
+    "index":466,
+    "title":"Stone Shape",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nSculpts stone into any shape."
+  },
+  {
+    "index":467,
+    "title":"Symbol of Slowing",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nTriggered rune slows creatures."
+  },
+  {
+    "index":468,
+    "title":"Vermin Shape I",
+    "category":"Level 4",
+    "description":"School: transmutation\n\nTake the form and some of the powers of a Small or Medium vermin."
+  },
+  {
+    "index":469,
+    "title":"Break Enchantment",
+    "category":"Level 5",
+    "description":"School: abjuration\n\nFrees subjects from enchantments, transmutations, and curses."
+  },
+  {
+    "index":470,
+    "title":"Covetous Aura",
+    "category":"Level 5",
+    "description":"School: abjuration\n\nAnytime a harmless spell of 3rd level or lower is cast within the area of effect, you may choose to gain the benefit of that spell as if it had also targeted you."
+  },
+  {
+    "index":471,
+    "title":"Dismissal",
+    "category":"Level 5",
+    "description":"School: abjuration\n\nForces a creature to return to its native plane."
+  },
+  {
+    "index":472,
+    "title":"Life Bubble",
+    "category":"Level 5",
+    "description":"School: abjuration\n\nProtects creature from sustained environmental effects."
+  },
+  {
+    "index":473,
+    "title":"Mage's Private Sanctum",
+    "category":"Level 5",
+    "description":"School: abjuration\n\nPrevents anyone from viewing or scrying an area for 24 hours."
+  },
+  {
+    "index":474,
+    "title":"Soothe Construct",
+    "category":"Level 5",
+    "description":"School: abjuration\n\nReduce the berserk chance of a construct."
+  },
+  {
+    "index":475,
+    "title":"Stoneskin, Communal",
+    "category":"Level 5",
+    "description":"School: abjuration\n\nAs stoneskin, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":476,
+    "title":"Unbreakable Construct",
+    "category":"Level 5",
+    "description":"School: abjuration\n\nIncrease construct hardness or DR."
+  },
+  {
+    "index":477,
+    "title":"Wreath of Blades",
+    "category":"Level 5",
+    "description":"School: abjuration\n\nFour mithral daggers speed around you, attacking nearby creatures and protecting your spellcasting from attacks of opportunity."
+  },
+  {
+    "index":478,
+    "title":"Acidic Spray",
+    "category":"Level 5",
+    "description":"School: conjuration\n\n1d6/level acid damage plus 1 round of acid."
+  },
+  {
+    "index":479,
+    "title":"Cloudkill",
+    "category":"Level 5",
+    "description":"School: conjuration\n\nKills 3 HD or less; 4–6 HD save or die, 6+ HD take Con damage."
+  },
+  {
+    "index":480,
+    "title":"Corrosive Consumption",
+    "category":"Level 5",
+    "description":"School: conjuration\n\nAcidic patch damages an opponent."
+  },
+  {
+    "index":481,
+    "title":"Geyser",
+    "category":"Level 5",
+    "description":"School: conjuration\n\nCreates a geyser of boiling water."
+  },
+  {
+    "index":482,
+    "title":"Hostile Juxtaposition",
+    "category":"Level 5",
+    "description":"School: conjuration\n\nYou create a dimensional link with a targeted creature, and switch spots with it."
+  },
+  {
+    "index":483,
+    "title":"Hungry Pit",
+    "category":"Level 5",
+    "description":"School: conjuration\n\nAs create pit, but dealing 4d6 damage to those in it as it closes."
+  },
+  {
+    "index":484,
+    "title":"Mage's Faithful Hound",
+    "category":"Level 5",
+    "description":"School: conjuration\n\nPhantom dog can guard a location and attack intruders."
+  },
+  {
+    "index":485,
+    "title":"Major Creation",
+    "category":"Level 5",
+    "description":"School: conjuration\n\nAs minor creation, plus stone and metal."
+  },
+  {
+    "index":486,
+    "title":"Planar Binding, Lesser",
+    "category":"Level 5",
+    "description":"School: conjuration\n\nTraps extraplanar creature of 6 HD or less until it performs a task."
+  },
+  {
+    "index":487,
+    "title":"Secret Chest",
+    "category":"Level 5",
+    "description":"School: conjuration\n\nHides expensive chest on Ethereal Plane; you retrieve it at will."
+  },
+  {
+    "index":488,
+    "title":"Summon Infernal Host",
+    "category":"Level 5",
+    "description":"School: conjuration\n\nSummon host devils."
+  },
+  {
+    "index":489,
+    "title":"Summon Monster V",
+    "category":"Level 5",
+    "description":"School: conjuration\n\nSummons extraplanar creature to fight for you."
+  },
+  {
+    "index":490,
+    "title":"Teleport",
+    "category":"Level 5",
+    "description":"School: conjuration\n\nInstantly transports you as far as 100 miles per level."
+  },
+  {
+    "index":491,
+    "title":"Wall of Stone",
+    "category":"Level 5",
+    "description":"School: conjuration\n\nCreates a stone wall that can be shaped."
+  },
+  {
+    "index":492,
+    "title":"Contact Other Plane",
+    "category":"Level 5",
+    "description":"School: divination\n\nLets you ask question of extraplanar entity."
+  },
+  {
+    "index":493,
+    "title":"Prying Eyes",
+    "category":"Level 5",
+    "description":"School: divination\n\n1d4 + 1/level floating eyes scout for you."
+  },
+  {
+    "index":494,
+    "title":"Symbol of Scrying",
+    "category":"Level 5",
+    "description":"School: divination\n\nTriggered rune activates scrying sensor."
+  },
+  {
+    "index":495,
+    "title":"Telepathic Bond",
+    "category":"Level 5",
+    "description":"School: divination\n\nLink lets allies communicate."
+  },
+  {
+    "index":496,
+    "title":"Apparent Master",
+    "category":"Level 5",
+    "description":"School: enchantment\n\nCharm makes a construct regard you as its master."
+  },
+  {
+    "index":497,
+    "title":"Curse of Disgust",
+    "category":"Level 5",
+    "description":"School: enchantment\n\nTarget is sickened when viewing a trigger."
+  },
+  {
+    "index":498,
+    "title":"Dominate Person",
+    "category":"Level 5",
+    "description":"School: enchantment\n\nControls humanoid telepathically."
+  },
+  {
+    "index":499,
+    "title":"Feeblemind",
+    "category":"Level 5",
+    "description":"School: enchantment\n\nSubject's Int and Cha drop to 1."
+  },
+  {
+    "index":500,
+    "title":"Hold Monster",
+    "category":"Level 5",
+    "description":"School: enchantment\n\nAs hold person, but any creature."
+  },
+  {
+    "index":501,
+    "title":"Mind Fog",
+    "category":"Level 5",
+    "description":"School: enchantment\n\nSubjects in fog get –10 to Wis and Will checks."
+  },
+  {
+    "index":502,
+    "title":"Smug Narcissism",
+    "category":"Level 5",
+    "description":"School: enchantment\n\nTarget is distracted by its sense of self."
+  },
+  {
+    "index":503,
+    "title":"Symbol of Sleep",
+    "category":"Level 5",
+    "description":"School: enchantment\n\nTriggered rune puts nearby creatures into catatonic slumber."
+  },
+  {
+    "index":504,
+    "title":"Cone of Cold",
+    "category":"Level 5",
+    "description":"School: evocation\n\n1d6/level cold damage."
+  },
+  {
+    "index":505,
+    "title":"Fire Snake",
+    "category":"Level 5",
+    "description":"School: evocation\n\nCreates a serpentine path of fire 5 ft. long/level that deals 1d6 fire damage/level."
+  },
+  {
+    "index":506,
+    "title":"Icy Prison",
+    "category":"Level 5",
+    "description":"School: evocation\n\nThick ice holds and damages the target."
+  },
+  {
+    "index":507,
+    "title":"Interposing Hand",
+    "category":"Level 5",
+    "description":"School: evocation\n\nHand provides cover against 1 opponent."
+  },
+  {
+    "index":508,
+    "title":"Lightning Arc",
+    "category":"Level 5",
+    "description":"School: evocation\n\nTargets in a line take 1d6 electricity/level."
+  },
+  {
+    "index":509,
+    "title":"Pain Strike, Mass",
+    "category":"Level 5",
+    "description":"School: evocation\n\nAs pain strike, but affects multiple creatures."
+  },
+  {
+    "index":510,
+    "title":"Sending",
+    "category":"Level 5",
+    "description":"School: evocation\n\nDelivers short message anywhere, instantly."
+  },
+  {
+    "index":511,
+    "title":"Sonic Thrust",
+    "category":"Level 5",
+    "description":"School: evocation\n\nSound moves targets away from you."
+  },
+  {
+    "index":512,
+    "title":"Wall of Force",
+    "category":"Level 5",
+    "description":"School: evocation\n\nWall is immune to damage."
+  },
+  {
+    "index":513,
+    "title":"Wall of Sound",
+    "category":"Level 5",
+    "description":"School: evocation\n\nSonic wall deflects and damages creatures."
+  },
+  {
+    "index":514,
+    "title":"Dream",
+    "category":"Level 5",
+    "description":"School: illusion\n\nSends message to anyone sleeping."
+  },
+  {
+    "index":515,
+    "title":"False Vision",
+    "category":"Level 5",
+    "description":"School: illusion\n\nFools scrying with an illusion."
+  },
+  {
+    "index":516,
+    "title":"Mirage Arcana",
+    "category":"Level 5",
+    "description":"School: illusion\n\nAs hallucinatory terrain, plus structures."
+  },
+  {
+    "index":517,
+    "title":"Nightmare",
+    "category":"Level 5",
+    "description":"School: illusion\n\nSends vision dealing 1d10 damage, fatigue."
+  },
+  {
+    "index":518,
+    "title":"Persistent Image",
+    "category":"Level 5",
+    "description":"School: illusion\n\nAs major image, but with no concentration required."
+  },
+  {
+    "index":519,
+    "title":"Phantasmal Web",
+    "category":"Level 5",
+    "description":"School: illusion\n\nCatches subjects in illusory web."
+  },
+  {
+    "index":520,
+    "title":"Seeming",
+    "category":"Level 5",
+    "description":"School: illusion\n\nChanges appearance of 1 person per 2 levels."
+  },
+  {
+    "index":521,
+    "title":"Shadow Evocation",
+    "category":"Level 5",
+    "description":"School: illusion\n\nMimics evocation below 5th level, but only 20% real."
+  },
+  {
+    "index":522,
+    "title":"Symbol of Striking",
+    "category":"Level 5",
+    "description":"School: illusion\n\nAs symbol of death, but fills a 5-foot square."
+  },
+  {
+    "index":523,
+    "title":"Absorb Toxicity",
+    "category":"Level 5",
+    "description":"School: necromancy\n\nYou become immune to diseases and toxins, absorb one, and then spread it to others."
+  },
+  {
+    "index":524,
+    "title":"Astral Projection, Lesser",
+    "category":"Level 5",
+    "description":"School: necromancy\n\nLimited astral travel."
+  },
+  {
+    "index":525,
+    "title":"Blight",
+    "category":"Level 5",
+    "description":"School: necromancy\n\nWithers one plant or deals 1d6/level damage to plant creature."
+  },
+  {
+    "index":526,
+    "title":"Magic Jar",
+    "category":"Level 5",
+    "description":"School: necromancy\n\nEnables possession of another creature."
+  },
+  {
+    "index":527,
+    "title":"Plague Carrier",
+    "category":"Level 5",
+    "description":"School: necromancy\n\ntarget's attacks carry filth fever."
+  },
+  {
+    "index":528,
+    "title":"Possess Object",
+    "category":"Level 5",
+    "description":"School: necromancy\n\nPossess and animate one object."
+  },
+  {
+    "index":529,
+    "title":"Suffocation",
+    "category":"Level 5",
+    "description":"School: necromancy\n\nTarget quickly suffocates to death."
+  },
+  {
+    "index":530,
+    "title":"Summoner Conduit",
+    "category":"Level 5",
+    "description":"School: necromancy\n\nThe target eidolon’s summoner takes damage whenever the eidolon does."
+  },
+  {
+    "index":531,
+    "title":"Symbol of Pain",
+    "category":"Level 5",
+    "description":"School: necromancy\n\nTriggered rune wracks creatures with pain."
+  },
+  {
+    "index":532,
+    "title":"Waves of Fatigue",
+    "category":"Level 5",
+    "description":"School: necromancy\n\nSeveral targets become fatigued."
+  },
+  {
+    "index":533,
+    "title":"Animal Growth",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nOne animal doubles in size."
+  },
+  {
+    "index":534,
+    "title":"Baleful Polymorph",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nTurns subject into harmless animal."
+  },
+  {
+    "index":535,
+    "title":"Beast Shape III",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nYou take the form of a Diminutive or Huge animal, or Small or Medium magical beast."
+  },
+  {
+    "index":536,
+    "title":"Echolocation",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nSonic sense gives you blindsight 40 ft."
+  },
+  {
+    "index":537,
+    "title":"Elemental Body II",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nTurns you into a Medium elemental."
+  },
+  {
+    "index":538,
+    "title":"Energy Siege Shot",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nA Large siege engine deals energy damage that you designate with other effects depending on the type of energy you choose."
+  },
+  {
+    "index":539,
+    "title":"Fabricate",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nTransforms raw materials into finished items."
+  },
+  {
+    "index":540,
+    "title":"Fickle Winds",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nWind walls selectively block attacks."
+  },
+  {
+    "index":541,
+    "title":"Lighten Object, Mass",
+    "category":"Level 5",
+    "description":"School: transmutation\n\n"
+  },
+  {
+    "index":542,
+    "title":"Monstrous Physique III",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nTake the form and some of the powers of a Diminutive or Huge monstrous humanoid."
+  },
+  {
+    "index":543,
+    "title":"Overland Flight",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nYou fly at a speed of 40 ft. and can hustle over long distances."
+  },
+  {
+    "index":544,
+    "title":"Passwall",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nCreates passage through wood or stone wall."
+  },
+  {
+    "index":545,
+    "title":"Planar Adaptation",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nResist harmful effects of other plane."
+  },
+  {
+    "index":546,
+    "title":"Plant Shape I",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nTurns you into a Small or Medium plant."
+  },
+  {
+    "index":547,
+    "title":"Polymorph",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nGives one willing subject a new form."
+  },
+  {
+    "index":548,
+    "title":"Rapid Repair",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nConstruct gains fast healing 5."
+  },
+  {
+    "index":549,
+    "title":"Telekinesis",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nMoves object, attacks creature, or hurls object or creature."
+  },
+  {
+    "index":550,
+    "title":"Transmute Mud to Rock",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nTransforms two 10-ft. cubes per level."
+  },
+  {
+    "index":551,
+    "title":"Transmute Rock to Mud",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nTransforms two 10-ft. cubes per level."
+  },
+  {
+    "index":552,
+    "title":"Treasure Stitching",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nObjects on cloth become embroidered."
+  },
+  {
+    "index":553,
+    "title":"Undead Anatomy II",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nTake the form and some of the powers of a Tiny or Large undead."
+  },
+  {
+    "index":554,
+    "title":"Vermin Shape II",
+    "category":"Level 5",
+    "description":"School: transmutation\n\nAs vermin shape, but Tiny or Large."
+  },
+  {
+    "index":555,
+    "title":"Permanency",
+    "category":"Level 5",
+    "description":"School: universal\n\nMakes certain spells permanent."
+  },
+  {
+    "index":556,
+    "title":"Antimagic Field",
+    "category":"Level 6",
+    "description":"School: abjuration\n\nNegates magic within 10 ft."
+  },
+  {
+    "index":557,
+    "title":"Dispel Magic, Greater",
+    "category":"Level 6",
+    "description":"School: abjuration\n\nAs dispel magic, but with multiple targets."
+  },
+  {
+    "index":558,
+    "title":"Globe of Invulnerability",
+    "category":"Level 6",
+    "description":"School: abjuration\n\nAs lesser globe of invulnerability, plus 4th-level spell effects."
+  },
+  {
+    "index":559,
+    "title":"Guards and Wards",
+    "category":"Level 6",
+    "description":"School: abjuration\n\nArray of magic effects protect area."
+  },
+  {
+    "index":560,
+    "title":"Repulsion",
+    "category":"Level 6",
+    "description":"School: abjuration\n\nCreatures can't approach you."
+  },
+  {
+    "index":561,
+    "title":"Symbol of Sealing",
+    "category":"Level 6",
+    "description":"School: abjuration\n\nCreate triggered wall of force."
+  },
+  {
+    "index":562,
+    "title":"Undeath Ward",
+    "category":"Level 6",
+    "description":"School: abjuration\n\nYou create a pale silver barrier that repels undead."
+  },
+  {
+    "index":563,
+    "title":"Acid Fog",
+    "category":"Level 6",
+    "description":"School: conjuration\n\nFog deals acid damage."
+  },
+  {
+    "index":564,
+    "title":"Conjure Black Pudding",
+    "category":"Level 6",
+    "description":"School: conjuration\n\nSummon a black pudding."
+  },
+  {
+    "index":565,
+    "title":"Getaway",
+    "category":"Level 6",
+    "description":"School: conjuration\n\nTeleports you and select creatures to predetermined location."
+  },
+  {
+    "index":566,
+    "title":"Ice Crystal Teleport",
+    "category":"Level 6",
+    "description":"School: conjuration\n\nTarget is frozen, then teleported."
+  },
+  {
+    "index":567,
+    "title":"Planar Binding",
+    "category":"Level 6",
+    "description":"School: conjuration\n\nAs lesser planar binding, but up to 12 HD."
+  },
+  {
+    "index":568,
+    "title":"Summon Monster VI",
+    "category":"Level 6",
+    "description":"School: conjuration\n\nSummons extraplanar creature to fight for you."
+  },
+  {
+    "index":569,
+    "title":"Wall of Iron",
+    "category":"Level 6",
+    "description":"School: conjuration\n\n30 hp/four levels; can topple onto foes."
+  },
+  {
+    "index":570,
+    "title":"Analyze Dweomer",
+    "category":"Level 6",
+    "description":"School: divination\n\nReveals magical aspects of subject."
+  },
+  {
+    "index":571,
+    "title":"Battlemind Link",
+    "category":"Level 6",
+    "description":"School: divination\n\nYou and an ally gain attack and AC bonuses."
+  },
+  {
+    "index":572,
+    "title":"Legend Lore",
+    "category":"Level 6",
+    "description":"School: divination\n\nLets you learn tales about a person, place, or thing."
+  },
+  {
+    "index":573,
+    "title":"Named Bullet, Greater",
+    "category":"Level 6",
+    "description":"School: divination\n\nAs named bullet, but deals 2 points of damage for every caster level."
+  },
+  {
+    "index":574,
+    "title":"True Seeing",
+    "category":"Level 6",
+    "description":"School: divination\n\nLets you see all things as they really are."
+  },
+  {
+    "index":575,
+    "title":"Cloak of Dreams",
+    "category":"Level 6",
+    "description":"School: enchantment\n\nCreatures within 5 ft. fall asleep."
+  },
+  {
+    "index":576,
+    "title":"Envious Urge",
+    "category":"Level 6",
+    "description":"School: enchantment\n\nTargets steal from or disarm others."
+  },
+  {
+    "index":577,
+    "title":"Geas/Quest",
+    "category":"Level 6",
+    "description":"School: enchantment\n\nAs lesser geas, but affects any creature."
+  },
+  {
+    "index":578,
+    "title":"Heroism, Greater",
+    "category":"Level 6",
+    "description":"School: enchantment\n\nGives +4 bonus on attack rolls, saves, skill checks; immunity to fear; temporary hp."
+  },
+  {
+    "index":579,
+    "title":"Serenity",
+    "category":"Level 6",
+    "description":"School: enchantment\n\nPeaceful feelings harm those attempting violence."
+  },
+  {
+    "index":580,
+    "title":"Suggestion, Mass",
+    "category":"Level 6",
+    "description":"School: enchantment\n\nAs suggestion, affects 1 subject/level."
+  },
+  {
+    "index":581,
+    "title":"Symbol of Persuasion",
+    "category":"Level 6",
+    "description":"School: enchantment\n\nTriggered rune charms creatures."
+  },
+  {
+    "index":582,
+    "title":"Utter Contempt",
+    "category":"Level 6",
+    "description":"School: enchantment\n\ntarget's attitude worsens by two categories."
+  },
+  {
+    "index":583,
+    "title":"Vengeful Outrage",
+    "category":"Level 6",
+    "description":"School: enchantment\n\nTarget is compelled to destroy one enemy."
+  },
+  {
+    "index":584,
+    "title":"Chain Lightning",
+    "category":"Level 6",
+    "description":"School: evocation\n\n1d6/level damage and 1 secondary bolt/level."
+  },
+  {
+    "index":585,
+    "title":"Cold Ice Strike",
+    "category":"Level 6",
+    "description":"School: evocation\n\nCone of ice slivers deals 1d6 cold/level."
+  },
+  {
+    "index":586,
+    "title":"Contagious Flame",
+    "category":"Level 6",
+    "description":"School: evocation\n\nScorching rays cause 4d6 fire damage, then move on to new targets."
+  },
+  {
+    "index":587,
+    "title":"Contingency",
+    "category":"Level 6",
+    "description":"School: evocation\n\nSets trigger condition for another spell."
+  },
+  {
+    "index":588,
+    "title":"Forceful Hand",
+    "category":"Level 6",
+    "description":"School: evocation\n\nHand pushes creatures away."
+  },
+  {
+    "index":589,
+    "title":"Freezing Sphere",
+    "category":"Level 6",
+    "description":"School: evocation\n\nFreezes water or deals cold damage."
+  },
+  {
+    "index":590,
+    "title":"Hellfire Ray",
+    "category":"Level 6",
+    "description":"School: evocation\n\nA blast of hellfire deals 1d6 damage per caster level (maximum 15d6) to the target (half fire damage half unholy damage.) If a creature is killed by this damage it must make a Will save or be damned toHell."
+  },
+  {
+    "index":591,
+    "title":"Leashed Shackles",
+    "category":"Level 6",
+    "description":"School: evocation\n\nTarget is restricted to a specific location."
+  },
+  {
+    "index":592,
+    "title":"Sirocco",
+    "category":"Level 6",
+    "description":"School: evocation\n\nHot wind does 4d6 damage, fatigues those damaged, and knocks creatures prone."
+  },
+  {
+    "index":593,
+    "title":"Mislead",
+    "category":"Level 6",
+    "description":"School: illusion\n\nTurns you invisible and creates illusory double."
+  },
+  {
+    "index":594,
+    "title":"Permanent Image",
+    "category":"Level 6",
+    "description":"School: illusion\n\nPermanent illusion, includes sight, sound, smell, and thermal effects."
+  },
+  {
+    "index":595,
+    "title":"Programmed Image",
+    "category":"Level 6",
+    "description":"School: illusion\n\nAs major image, but triggered by event."
+  },
+  {
+    "index":596,
+    "title":"Shadow Walk",
+    "category":"Level 6",
+    "description":"School: illusion\n\nStep into shadow to travel rapidly."
+  },
+  {
+    "index":597,
+    "title":"Unwilling Shield",
+    "category":"Level 6",
+    "description":"School: illusion\n\nSubject shares wounds you receive."
+  },
+  {
+    "index":598,
+    "title":"Veil",
+    "category":"Level 6",
+    "description":"School: illusion\n\nChanges appearance of a group of creatures."
+  },
+  {
+    "index":599,
+    "title":"Circle of Death",
+    "category":"Level 6",
+    "description":"School: necromancy\n\nKills 1d4/level HD of creatures."
+  },
+  {
+    "index":600,
+    "title":"Contagion, Greater",
+    "category":"Level 6",
+    "description":"School: necromancy\n\nInfect a subject with a magical disease."
+  },
+  {
+    "index":601,
+    "title":"Create Undead",
+    "category":"Level 6",
+    "description":"School: necromancy\n\nRaises ghouls, ghasts, mummies, or mohrgs from physical remains."
+  },
+  {
+    "index":602,
+    "title":"Curse, Major",
+    "category":"Level 6",
+    "description":"School: necromancy\n\nAs bestow curse, but harder to remove."
+  },
+  {
+    "index":603,
+    "title":"Eyebite",
+    "category":"Level 6",
+    "description":"School: necromancy\n\nTarget becomes panicked, sickened, and comatose."
+  },
+  {
+    "index":604,
+    "title":"Symbol of Fear",
+    "category":"Level 6",
+    "description":"School: necromancy\n\nTriggered rune panics nearby creatures."
+  },
+  {
+    "index":605,
+    "title":"Undeath to Death",
+    "category":"Level 6",
+    "description":"School: necromancy\n\nDestroys 1d4/level HD of undead (max. 20d4)."
+  },
+  {
+    "index":606,
+    "title":"Age Resistance",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nIgnore penalties from old age."
+  },
+  {
+    "index":607,
+    "title":"Bear's Endurance, Mass",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nAs bear's endurance, affects one subject/level."
+  },
+  {
+    "index":608,
+    "title":"Beast Shape IV",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nYou take the form of a Diminutive to Huge animal or a Tiny to Large magical beast."
+  },
+  {
+    "index":609,
+    "title":"Bull's Strength, Mass",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nAs bull's strength, affects 1 subject per level."
+  },
+  {
+    "index":610,
+    "title":"Cat's Grace, Mass",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nAs cat's grace, affects 1 subject/level."
+  },
+  {
+    "index":611,
+    "title":"Control Water",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nRaises or lowers bodies of water."
+  },
+  {
+    "index":612,
+    "title":"Disintegrate",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nReduces one creature or object to dust."
+  },
+  {
+    "index":613,
+    "title":"Eagle's Splendor, Mass",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nAs eagle's splendor, 1 subject/level."
+  },
+  {
+    "index":614,
+    "title":"Elemental Body III",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nTurns you into a Large elemental."
+  },
+  {
+    "index":615,
+    "title":"Enemy Hammer",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nAllows you to telekinetically use a creature as a weapon."
+  },
+  {
+    "index":616,
+    "title":"Energy Siege Shot, Greater",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nAs energy siege shot, but you can affect any size siege engine."
+  },
+  {
+    "index":617,
+    "title":"Flesh to Stone",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nTurns subject creature into statue."
+  },
+  {
+    "index":618,
+    "title":"Fluid Form",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nGain DR 10/slashing, increases reach 10 ft., and breath water"
+  },
+  {
+    "index":619,
+    "title":"Form of the Dragon I",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nTurns you into a Medium dragon."
+  },
+  {
+    "index":620,
+    "title":"Fox's Cunning, Mass",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nAs fox's cunning, affects 1 subject/ level."
+  },
+  {
+    "index":621,
+    "title":"Hardening",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nPermanently increases the hardness of materials by 1 point per 2 caster levels."
+  },
+  {
+    "index":622,
+    "title":"Mage's Lucubration",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nWizard Only. Recalls spell of 5th level or lower."
+  },
+  {
+    "index":623,
+    "title":"Monstrous Physique IV",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nAs monstrous physique III, with more abilities."
+  },
+  {
+    "index":624,
+    "title":"Move Earth",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nDigs trenches and builds hills."
+  },
+  {
+    "index":625,
+    "title":"Owl's Wisdom, Mass",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nAs owl's wisdom, affects 1 subject/level."
+  },
+  {
+    "index":626,
+    "title":"Plant Shape II",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nTurns you into a Large plant creature."
+  },
+  {
+    "index":627,
+    "title":"Stone to Flesh",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nRestores petrified creature."
+  },
+  {
+    "index":628,
+    "title":"Tar Pool",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nConverts the top layer of the ground into hot tar."
+  },
+  {
+    "index":629,
+    "title":"Transformation",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nYou gain combat bonuses."
+  },
+  {
+    "index":630,
+    "title":"Undead Anatomy III",
+    "category":"Level 6",
+    "description":"School: transmutation\n\nTake the form and some of the powers of a Diminutive or Huge undead."
+  },
+  {
+    "index":631,
+    "title":"Banishment",
+    "category":"Level 7",
+    "description":"School: abjuration\n\nBanishes 2 HD/level of extraplanar creatures."
+  },
+  {
+    "index":632,
+    "title":"Circle of Clarity",
+    "category":"Level 7",
+    "description":"School: abjuration\n\nEmanation hampers illusions and stealth."
+  },
+  {
+    "index":633,
+    "title":"Expend",
+    "category":"Level 7",
+    "description":"School: abjuration\n\nWastes creatures' limited use magical ability."
+  },
+  {
+    "index":634,
+    "title":"Sequester",
+    "category":"Level 7",
+    "description":"School: abjuration\n\nSubject is invisible to sight and scrying; renders creature comatose."
+  },
+  {
+    "index":635,
+    "title":"Spell Turning",
+    "category":"Level 7",
+    "description":"School: abjuration\n\nReflect 1d4+6 spell levels back at caster."
+  },
+  {
+    "index":636,
+    "title":"Teleport Trap",
+    "category":"Level 7",
+    "description":"School: abjuration\n\n"
+  },
+  {
+    "index":637,
+    "title":"Caustic Eruption",
+    "category":"Level 7",
+    "description":"School: conjuration\n\nBurst deals 1d6 acid/level and lingers."
+  },
+  {
+    "index":638,
+    "title":"Create Demiplane, Lesser",
+    "category":"Level 7",
+    "description":"School: conjuration\n\nCreate your own demiplane."
+  },
+  {
+    "index":639,
+    "title":"Hostile Juxtaposition, Greater",
+    "category":"Level 7",
+    "description":"School: conjuration\n\nYou may target one creature for every four of your caster levels."
+  },
+  {
+    "index":640,
+    "title":"Instant Summons",
+    "category":"Level 7",
+    "description":"School: conjuration\n\nPrepared object appears in your hand."
+  },
+  {
+    "index":641,
+    "title":"Joyful Rapture",
+    "category":"Level 7",
+    "description":"School: conjuration\n\nNegate harmful emotions."
+  },
+  {
+    "index":642,
+    "title":"Mage's Magnificent Mansion",
+    "category":"Level 7",
+    "description":"School: conjuration\n\nDoor leads to extradimensional mansion."
+  },
+  {
+    "index":643,
+    "title":"Phase Door",
+    "category":"Level 7",
+    "description":"School: conjuration\n\nCreates an invisible passage through a barrier."
+  },
+  {
+    "index":644,
+    "title":"Plane Shift",
+    "category":"Level 7",
+    "description":"School: conjuration\n\nAs many as eight subjects travel to another plane."
+  },
+  {
+    "index":645,
+    "title":"Rampart",
+    "category":"Level 7",
+    "description":"School: conjuration\n\nCreates 5-ft.-thick earthen barrier."
+  },
+  {
+    "index":646,
+    "title":"Summon Monster VII",
+    "category":"Level 7",
+    "description":"School: conjuration\n\nSummons extraplanar creature to fight for you."
+  },
+  {
+    "index":647,
+    "title":"Teleport, Greater",
+    "category":"Level 7",
+    "description":"School: conjuration\n\nAs teleport, but no range limit and no off-target arrival."
+  },
+  {
+    "index":648,
+    "title":"Teleport Object",
+    "category":"Level 7",
+    "description":"School: conjuration\n\nAs teleport, but affects a touched object."
+  },
+  {
+    "index":649,
+    "title":"Walk through Space",
+    "category":"Level 7",
+    "description":"School: conjuration\n\nYou can spend a move action to teleport 30 feet or to stand while prone without provoking attacks of opportunity."
+  },
+  {
+    "index":650,
+    "title":"Arcane Sight, Greater",
+    "category":"Level 7",
+    "description":"School: divination\n\nAs arcane sight, but also reveals magic effects on creatures and objects."
+  },
+  {
+    "index":651,
+    "title":"Scrying, Greater",
+    "category":"Level 7",
+    "description":"School: divination\n\nAs scrying, but faster and longer."
+  },
+  {
+    "index":652,
+    "title":"Vision",
+    "category":"Level 7",
+    "description":"School: divination\n\nAs legend lore, but quicker."
+  },
+  {
+    "index":653,
+    "title":"Hold Person, Mass",
+    "category":"Level 7",
+    "description":"School: enchantment\n\nAs hold person, but all within 30 ft."
+  },
+  {
+    "index":654,
+    "title":"Insanity",
+    "category":"Level 7",
+    "description":"School: enchantment\n\nSubject suffers continuous confusion."
+  },
+  {
+    "index":655,
+    "title":"Power Word Blind",
+    "category":"Level 7",
+    "description":"School: enchantment\n\nBlinds creature with 200 hp or less."
+  },
+  {
+    "index":656,
+    "title":"Symbol of Stunning",
+    "category":"Level 7",
+    "description":"School: enchantment\n\nTriggered rune stuns creatures."
+  },
+  {
+    "index":657,
+    "title":"Waves of Ecstasy",
+    "category":"Level 7",
+    "description":"School: enchantment\n\nPleasure stuns and staggers creatures."
+  },
+  {
+    "index":658,
+    "title":"Delayed Blast Fireball",
+    "category":"Level 7",
+    "description":"School: evocation\n\n1d6/level fire damage; you can postpone blast for up to 5 rounds."
+  },
+  {
+    "index":659,
+    "title":"Forcecage",
+    "category":"Level 7",
+    "description":"School: evocation\n\nCube or cage of force imprisons all inside."
+  },
+  {
+    "index":660,
+    "title":"Grasping Hand",
+    "category":"Level 7",
+    "description":"School: evocation\n\nHand provides cover, pushes, or grapples."
+  },
+  {
+    "index":661,
+    "title":"Ki Shout",
+    "category":"Level 7",
+    "description":"School: evocation\n\nTarget takes 1d6 sonic/level and is stunned."
+  },
+  {
+    "index":662,
+    "title":"Mage's Sword",
+    "category":"Level 7",
+    "description":"School: evocation\n\nFloating magic blade strikes opponents."
+  },
+  {
+    "index":663,
+    "title":"Prismatic Spray",
+    "category":"Level 7",
+    "description":"School: evocation\n\nRays hit subjects with variety of effects."
+  },
+  {
+    "index":664,
+    "title":"Scouring Winds",
+    "category":"Level 7",
+    "description":"School: evocation\n\nWinds block vision and deal 3d6 damage per round."
+  },
+  {
+    "index":665,
+    "title":"Vortex",
+    "category":"Level 7",
+    "description":"School: evocation\n\nCreates a whirlpool in water."
+  },
+  {
+    "index":666,
+    "title":"Invisibility, Mass",
+    "category":"Level 7",
+    "description":"School: illusion\n\nAs invisibility, but affects all in range."
+  },
+  {
+    "index":667,
+    "title":"Lunar Veil",
+    "category":"Level 7",
+    "description":"School: illusion\n\nDispel light and revert lycanthropes."
+  },
+  {
+    "index":668,
+    "title":"Phantasmal Revenge",
+    "category":"Level 7",
+    "description":"School: illusion\n\nGhost from corpse hunts killer."
+  },
+  {
+    "index":669,
+    "title":"Project Image",
+    "category":"Level 7",
+    "description":"School: illusion\n\nIllusory double can talk and cast spells."
+  },
+  {
+    "index":670,
+    "title":"Shadow Conjuration, Greater",
+    "category":"Level 7",
+    "description":"School: illusion\n\nAs shadow conjuration, but up to 6th level and 60% real."
+  },
+  {
+    "index":671,
+    "title":"Simulacrum",
+    "category":"Level 7",
+    "description":"School: illusion\n\nCreates partially real double of a creature."
+  },
+  {
+    "index":672,
+    "title":"Control Undead",
+    "category":"Level 7",
+    "description":"School: necromancy\n\nUndead don't attack you while under your command."
+  },
+  {
+    "index":673,
+    "title":"Epidemic",
+    "category":"Level 7",
+    "description":"School: necromancy\n\nInfect a subject with a highly contagious disease."
+  },
+  {
+    "index":674,
+    "title":"Finger of Death",
+    "category":"Level 7",
+    "description":"School: necromancy\n\nDeals 10 damage/level to one subject."
+  },
+  {
+    "index":675,
+    "title":"Plague Storm",
+    "category":"Level 7",
+    "description":"School: necromancy\n\nCloud infects creatures like contagion."
+  },
+  {
+    "index":676,
+    "title":"Symbol of Weakness",
+    "category":"Level 7",
+    "description":"School: necromancy\n\nTriggered rune weakens creatures."
+  },
+  {
+    "index":677,
+    "title":"Temporary Resurrection",
+    "category":"Level 7",
+    "description":"School: necromancy\n\nBring a creature to life for 24 hours, after which it dies again."
+  },
+  {
+    "index":678,
+    "title":"Waves of Exhaustion",
+    "category":"Level 7",
+    "description":"School: necromancy\n\nSeveral targets become exhausted."
+  },
+  {
+    "index":679,
+    "title":"Age Resistance, Greater",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nIgnore penalties from venerable age."
+  },
+  {
+    "index":680,
+    "title":"Arcane Cannon",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nYour focus becomes a magical cannon that fires on its own."
+  },
+  {
+    "index":681,
+    "title":"Control Construct",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nTake control of a construct."
+  },
+  {
+    "index":682,
+    "title":"Control Weather",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nChanges weather in local area."
+  },
+  {
+    "index":683,
+    "title":"Elemental Body IV",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nTurns you into a Huge elemental."
+  },
+  {
+    "index":684,
+    "title":"Ethereal Jaunt",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nYou become ethereal for 1 round/level."
+  },
+  {
+    "index":685,
+    "title":"Firebrand",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nAllies gain flaming weapons, immunity to your fire spells, and a one-use ray of fire attack."
+  },
+  {
+    "index":686,
+    "title":"Fly, Mass",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nOne creature/level gains ability to fly."
+  },
+  {
+    "index":687,
+    "title":"Form of the Dragon II",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nTurns you into a Large dragon."
+  },
+  {
+    "index":688,
+    "title":"Giant Form I",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nTurns you into a Large giant."
+  },
+  {
+    "index":689,
+    "title":"Ice Body",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nYour body becomes living ice."
+  },
+  {
+    "index":690,
+    "title":"Planar Adaptation, Mass",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nAs planar adaptation, but affects multiple creatures."
+  },
+  {
+    "index":691,
+    "title":"Plant Shape III",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nTurns you into a Huge plant."
+  },
+  {
+    "index":692,
+    "title":"Polymorph, Greater",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nGives one willing subject a new, more powerful form."
+  },
+  {
+    "index":693,
+    "title":"Resonating Word",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nTarget is damaged, staggered, and stunned."
+  },
+  {
+    "index":694,
+    "title":"Reverse Gravity",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nObjects and creatures fall upward."
+  },
+  {
+    "index":695,
+    "title":"Statue",
+    "category":"Level 7",
+    "description":"School: transmutation\n\nSubject can become a statue at will."
+  },
+  {
+    "index":696,
+    "title":"Limited Wish",
+    "category":"Level 7",
+    "description":"School: universal\n\nAlters reality (within limits)."
+  },
+  {
+    "index":697,
+    "title":"Dimensional Lock",
+    "category":"Level 8",
+    "description":"School: abjuration\n\nTeleportation and interplanar travel blocked for 1 day/level."
+  },
+  {
+    "index":698,
+    "title":"Mind Blank",
+    "category":"Level 8",
+    "description":"School: abjuration\n\nSubject is protected from mental/emotional magic and scrying."
+  },
+  {
+    "index":699,
+    "title":"Prismatic Wall",
+    "category":"Level 8",
+    "description":"School: abjuration\n\nWall's colors have array of effects."
+  },
+  {
+    "index":700,
+    "title":"Protection from Spells",
+    "category":"Level 8",
+    "description":"School: abjuration\n\nConfers +8 resistance bonus."
+  },
+  {
+    "index":701,
+    "title":"Call Construct",
+    "category":"Level 8",
+    "description":"School: conjuration\n\nSummon your construct to you."
+  },
+  {
+    "index":702,
+    "title":"Create Demiplane",
+    "category":"Level 8",
+    "description":"School: conjuration\n\nAs lesser create demiplane, but larger and with planar traits."
+  },
+  {
+    "index":703,
+    "title":"Incendiary Cloud",
+    "category":"Level 8",
+    "description":"School: conjuration\n\nCloud deals 6d6 fire damage/round."
+  },
+  {
+    "index":704,
+    "title":"Maze",
+    "category":"Level 8",
+    "description":"School: conjuration\n\nTraps subject in extradimensional maze."
+  },
+  {
+    "index":705,
+    "title":"Planar Binding, Greater",
+    "category":"Level 8",
+    "description":"School: conjuration\n\nAs lesser planar binding, but up to 18 HD."
+  },
+  {
+    "index":706,
+    "title":"Rift of Ruin",
+    "category":"Level 8",
+    "description":"School: conjuration\n\nTears a rift in reality, creating an extra-dimensional hole with a depth of 60 feet."
+  },
+  {
+    "index":707,
+    "title":"Seamantle",
+    "category":"Level 8",
+    "description":"School: conjuration\n\nSheathes you in protective water/"
+  },
+  {
+    "index":708,
+    "title":"Summon Monster VIII",
+    "category":"Level 8",
+    "description":"School: conjuration\n\nSummons extraplanar creature to fight for you."
+  },
+  {
+    "index":709,
+    "title":"Trap the Soul",
+    "category":"Level 8",
+    "description":"School: conjuration\n\nImprisons subject within gem."
+  },
+  {
+    "index":710,
+    "title":"Wall of Lava",
+    "category":"Level 8",
+    "description":"School: conjuration\n\nWall damages foes that try to enter, periodically launches lava at nearby targets."
+  },
+  {
+    "index":711,
+    "title":"Discern Location",
+    "category":"Level 8",
+    "description":"School: divination\n\nReveals exact location of creature or object."
+  },
+  {
+    "index":712,
+    "title":"Moment of Prescience",
+    "category":"Level 8",
+    "description":"School: divination\n\nYou gain +1/level insight bonus on single attack roll, check, or save."
+  },
+  {
+    "index":713,
+    "title":"Prediction of Failure",
+    "category":"Level 8",
+    "description":"School: divination\n\nTarget is permanently shaken and sickened, and may gain a spellblight."
+  },
+  {
+    "index":714,
+    "title":"Prying Eyes, Greater",
+    "category":"Level 8",
+    "description":"School: divination\n\nAs prying eyes, but eyes have true seeing."
+  },
+  {
+    "index":715,
+    "title":"Antipathy",
+    "category":"Level 8",
+    "description":"School: enchantment\n\nObject or location affected by spell repels certain creatures."
+  },
+  {
+    "index":716,
+    "title":"Binding",
+    "category":"Level 8",
+    "description":"School: enchantment\n\nUtilizes an array of techniques to imprison a creature."
+  },
+  {
+    "index":717,
+    "title":"Charm Monster, Mass",
+    "category":"Level 8",
+    "description":"School: enchantment\n\nAs charm monster, but all within 30 ft."
+  },
+  {
+    "index":718,
+    "title":"Demand",
+    "category":"Level 8",
+    "description":"School: enchantment\n\nAs sending, plus you can send suggestion."
+  },
+  {
+    "index":719,
+    "title":"Euphoric Tranquility",
+    "category":"Level 8",
+    "description":"School: enchantment\n\nMakes a creature friendly."
+  },
+  {
+    "index":720,
+    "title":"Irresistible Dance",
+    "category":"Level 8",
+    "description":"School: enchantment\n\nForces subject to dance."
+  },
+  {
+    "index":721,
+    "title":"Power Word Stun",
+    "category":"Level 8",
+    "description":"School: enchantment\n\nStuns creature with 150 hp or less."
+  },
+  {
+    "index":722,
+    "title":"Symbol of Insanity",
+    "category":"Level 8",
+    "description":"School: enchantment\n\nTriggered rune renders nearby creatures insane."
+  },
+  {
+    "index":723,
+    "title":"Sympathy",
+    "category":"Level 8",
+    "description":"School: enchantment\n\nObject or location attracts certain creatures."
+  },
+  {
+    "index":724,
+    "title":"Clenched Fist",
+    "category":"Level 8",
+    "description":"School: evocation\n\nLarge hand provides cover, pushes, or attacks your foes."
+  },
+  {
+    "index":725,
+    "title":"Polar Ray",
+    "category":"Level 8",
+    "description":"School: evocation\n\nRanged touch attack deals 1d6/level cold damage and 1d4 points of Dexterity drain."
+  },
+  {
+    "index":726,
+    "title":"Shout, Greater",
+    "category":"Level 8",
+    "description":"School: evocation\n\nDevastating yell deals 10d6 sonic damage; stuns creatures."
+  },
+  {
+    "index":727,
+    "title":"Stormbolts",
+    "category":"Level 8",
+    "description":"School: evocation\n\n1d8 damage/level (max 20d8) to targets."
+  },
+  {
+    "index":728,
+    "title":"Sunburst",
+    "category":"Level 8",
+    "description":"School: evocation\n\nBlinds all within 10 ft., deals 6d6 damage."
+  },
+  {
+    "index":729,
+    "title":"Telekinetic Sphere",
+    "category":"Level 8",
+    "description":"School: evocation\n\nAs resilient sphere, but you move the sphere telekinetically."
+  },
+  {
+    "index":730,
+    "title":"Scintillating Pattern",
+    "category":"Level 8",
+    "description":"School: illusion\n\nTwisting colors confuse, stun, or render unconscious."
+  },
+  {
+    "index":731,
+    "title":"Screen",
+    "category":"Level 8",
+    "description":"School: illusion\n\nIllusion hides area from vision and scrying."
+  },
+  {
+    "index":732,
+    "title":"Shadow Evocation, Greater",
+    "category":"Level 8",
+    "description":"School: illusion\n\nAs shadow evocation, but up to 7th level and 60% real."
+  },
+  {
+    "index":733,
+    "title":"Clone",
+    "category":"Level 8",
+    "description":"School: necromancy\n\nDuplicate awakens when original dies."
+  },
+  {
+    "index":734,
+    "title":"Create Greater Undead",
+    "category":"Level 8",
+    "description":"School: necromancy\n\nCreates shadows, wraiths, spectres, or devourers."
+  },
+  {
+    "index":735,
+    "title":"Horrid Wilting",
+    "category":"Level 8",
+    "description":"School: necromancy\n\nDeals 1d6/level damage within 30 ft."
+  },
+  {
+    "index":736,
+    "title":"Orb of the Void",
+    "category":"Level 8",
+    "description":"School: necromancy\n\nSphere inflicts negative levels."
+  },
+  {
+    "index":737,
+    "title":"Symbol of Death",
+    "category":"Level 8",
+    "description":"School: necromancy\n\nTriggered rune kills nearby creatures."
+  },
+  {
+    "index":738,
+    "title":"Form of the Dragon III",
+    "category":"Level 8",
+    "description":"School: transmutation\n\nTurns you into a Huge dragon."
+  },
+  {
+    "index":739,
+    "title":"Frightful Aspect",
+    "category":"Level 8",
+    "description":"School: transmutation\n\nYou take on a terrifying, Large-sized form of yourself and emit an aura that causes creatures to become shaken or frightened."
+  },
+  {
+    "index":740,
+    "title":"Giant Form II",
+    "category":"Level 8",
+    "description":"School: transmutation\n\nTurns you into a Huge giant."
+  },
+  {
+    "index":741,
+    "title":"Iron Body",
+    "category":"Level 8",
+    "description":"School: transmutation\n\nYour body becomes living iron."
+  },
+  {
+    "index":742,
+    "title":"Polymorph Any Object",
+    "category":"Level 8",
+    "description":"School: transmutation\n\nChanges a subject into anything else."
+  },
+  {
+    "index":743,
+    "title":"Temporal Stasis",
+    "category":"Level 8",
+    "description":"School: transmutation\n\nPuts subject into suspended animation."
+  },
+  {
+    "index":744,
+    "title":"Undead Anatomy IV",
+    "category":"Level 8",
+    "description":"School: transmutation\n\nAs undead anatomy III, but with more abilities."
+  },
+  {
+    "index":745,
+    "title":"Echean's Excellent Enclosure",
+    "category":"Level 9",
+    "description":"School: abjuration\n\n"
+  },
+  {
+    "index":746,
+    "title":"Freedom",
+    "category":"Level 9",
+    "description":"School: abjuration\n\nReleases creature from imprisonment."
+  },
+  {
+    "index":747,
+    "title":"Imprisonment",
+    "category":"Level 9",
+    "description":"School: abjuration\n\nEntombs subject beneath the earth."
+  },
+  {
+    "index":748,
+    "title":"Mage's Disjunction",
+    "category":"Level 9",
+    "description":"School: abjuration\n\nDispels magic, disenchants magic items."
+  },
+  {
+    "index":749,
+    "title":"Mind Blank, Communal",
+    "category":"Level 9",
+    "description":"School: abjuration\n\nAs mind blank, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":750,
+    "title":"Prismatic Sphere",
+    "category":"Level 9",
+    "description":"School: abjuration\n\nAs prismatic wall, but surrounds on all sides."
+  },
+  {
+    "index":751,
+    "title":"Symbol of Vulnerability",
+    "category":"Level 9",
+    "description":"School: abjuration\n\nTriggered rune gives penalties."
+  },
+  {
+    "index":752,
+    "title":"Wall of Suppression",
+    "category":"Level 9",
+    "description":"School: abjuration\n\nCreates wall that disables magic."
+  },
+  {
+    "index":753,
+    "title":"Clashing Rocks",
+    "category":"Level 9",
+    "description":"School: conjuration\n\n20d6 damage to target creature."
+  },
+  {
+    "index":754,
+    "title":"Create Demiplane, Greater",
+    "category":"Level 9",
+    "description":"School: conjuration\n\nAs create demiplane, but larger and with more planar traits."
+  },
+  {
+    "index":755,
+    "title":"Gate",
+    "category":"Level 9",
+    "description":"School: conjuration\n\nConnects two planes for travel or summoning."
+  },
+  {
+    "index":756,
+    "title":"Interplanetary Teleport",
+    "category":"Level 9",
+    "description":"School: conjuration\n\nTeleport to another planet."
+  },
+  {
+    "index":757,
+    "title":"Refuge",
+    "category":"Level 9",
+    "description":"School: conjuration\n\nAlters item to transport its possessor to your abode."
+  },
+  {
+    "index":758,
+    "title":"Summon Monster IX",
+    "category":"Level 9",
+    "description":"School: conjuration\n\nSummons extraplanar creature to fight for you."
+  },
+  {
+    "index":759,
+    "title":"Teleportation Circle",
+    "category":"Level 9",
+    "description":"School: conjuration\n\nTeleports creatures inside circle."
+  },
+  {
+    "index":760,
+    "title":"Tsunami",
+    "category":"Level 9",
+    "description":"School: conjuration\n\nHuge wave damages and sweeps up all in its path."
+  },
+  {
+    "index":761,
+    "title":"Wooden Phalanx",
+    "category":"Level 9",
+    "description":"School: conjuration\n\nCreates 1d4+2 temporary wood golems to fight for you."
+  },
+  {
+    "index":762,
+    "title":"Foresight",
+    "category":"Level 9",
+    "description":"School: divination\n\n“Sixth sense” warns of impending danger."
+  },
+  {
+    "index":763,
+    "title":"Dominate Monster",
+    "category":"Level 9",
+    "description":"School: enchantment\n\nAs dominate person, but any creature."
+  },
+  {
+    "index":764,
+    "title":"Heroic Invocation",
+    "category":"Level 9",
+    "description":"School: enchantment\n\nGrants a number of creatures bonuses on attacks and damage, temporary hit points, and immunity tofear and charm effects."
+  },
+  {
+    "index":765,
+    "title":"Hold Monster, Mass",
+    "category":"Level 9",
+    "description":"School: enchantment\n\nAs hold monster, but all within 30 ft."
+  },
+  {
+    "index":766,
+    "title":"Overwhelming Presence",
+    "category":"Level 9",
+    "description":"School: enchantment\n\nCreatures bow before you as if you were divine."
+  },
+  {
+    "index":767,
+    "title":"Power Word Kill",
+    "category":"Level 9",
+    "description":"School: enchantment\n\nKills one creature with 100 hp or less."
+  },
+  {
+    "index":768,
+    "title":"Symbol of Strife",
+    "category":"Level 9",
+    "description":"School: enchantment\n\nTriggered rune makes creatures attack."
+  },
+  {
+    "index":769,
+    "title":"Crushing Hand",
+    "category":"Level 9",
+    "description":"School: evocation\n\nLarge hand provides cover, pushes, or crushes your foes."
+  },
+  {
+    "index":770,
+    "title":"Icy Prison, Mass",
+    "category":"Level 9",
+    "description":"School: evocation\n\nAs icy prison, but it affects 1 creature/level."
+  },
+  {
+    "index":771,
+    "title":"Meteor Swarm",
+    "category":"Level 9",
+    "description":"School: evocation\n\nFour exploding spheres each deal 6d6 fire damage."
+  },
+  {
+    "index":772,
+    "title":"Ride the Lightning",
+    "category":"Level 9",
+    "description":"School: evocation\n\nTransform into electricity."
+  },
+  {
+    "index":773,
+    "title":"Winds of Vengeance",
+    "category":"Level 9",
+    "description":"School: evocation\n\nGives you the ability to fly and attack with wind."
+  },
+  {
+    "index":774,
+    "title":"Shades",
+    "category":"Level 9",
+    "description":"School: illusion\n\nAs shadow conjuration, but up to 8th level and 80% real."
+  },
+  {
+    "index":775,
+    "title":"Weird",
+    "category":"Level 9",
+    "description":"School: illusion\n\nAs phantasmal killer, but affects all within 30 ft."
+  },
+  {
+    "index":776,
+    "title":"Astral Projection",
+    "category":"Level 9",
+    "description":"School: necromancy\n\nProjects you and companions onto Astral Plane."
+  },
+  {
+    "index":777,
+    "title":"Canopic Conversion",
+    "category":"Level 9",
+    "description":"School: necromancy\n\nEviscerates target, inflicting 1d6 dmg/caster level (maximum 20d6). If kills target, spell seals his organs in jars; creating an Osirion mummy 1d4 rounds later."
+  },
+  {
+    "index":778,
+    "title":"Cursed Earth",
+    "category":"Level 9",
+    "description":"School: necromancy\n\nPlants die, living creatures catch diseases, or dead creatures rise as zombies."
+  },
+  {
+    "index":779,
+    "title":"Energy Drain",
+    "category":"Level 9",
+    "description":"School: necromancy\n\nSubject gains 2d4 negative levels."
+  },
+  {
+    "index":780,
+    "title":"Soul Bind",
+    "category":"Level 9",
+    "description":"School: necromancy\n\nTraps newly dead soul to prevent resurrection."
+  },
+  {
+    "index":781,
+    "title":"Suffocation, Mass",
+    "category":"Level 9",
+    "description":"School: necromancy\n\nOne creature/level suffocates to death."
+  },
+  {
+    "index":782,
+    "title":"Wail of the Banshee",
+    "category":"Level 9",
+    "description":"School: necromancy\n\nDeals 10 damage/level to 1 creature/level."
+  },
+  {
+    "index":783,
+    "title":"Etherealness",
+    "category":"Level 9",
+    "description":"School: transmutation\n\nTravel to Ethereal Plane with companions."
+  },
+  {
+    "index":784,
+    "title":"Fiery Body",
+    "category":"Level 9",
+    "description":"School: transmutation\n\nYou gain various fire-related powers."
+  },
+  {
+    "index":785,
+    "title":"Shapechange",
+    "category":"Level 9",
+    "description":"School: transmutation\n\nTransforms you into certain creatures, and lets you change forms once per round."
+  },
+  {
+    "index":786,
+    "title":"Time Stop",
+    "category":"Level 9",
+    "description":"School: transmutation\n\nYou act freely for 1d4+1 rounds."
+  },
+  {
+    "index":787,
+    "title":"Transmute Blood to Acid",
+    "category":"Level 9",
+    "description":"School: transmutation\n\nTarget takes acid damage each round, and its attackers take acid damage."
+  },
+  {
+    "index":788,
+    "title":"World Wave",
+    "category":"Level 9",
+    "description":"School: transmutation\n\nEarth moves you across distances."
+  },
+  {
+    "index":789,
+    "title":"Wish",
+    "category":"Level 9",
+    "description":"School: universal\n\nAs limited wish, but with fewer limits."
+  }
+]
