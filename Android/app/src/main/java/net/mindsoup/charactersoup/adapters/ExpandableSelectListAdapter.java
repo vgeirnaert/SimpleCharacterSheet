@@ -112,7 +112,7 @@ public class ExpandableSelectListAdapter extends BaseExpandableListAdapter {
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ViewGroup description = (ViewGroup)view.findViewById(R.id.select_list_description_group);
+                final View description = ((View)v.getParent()).findViewById(R.id.select_list_description_group);
 
                 if(description.getVisibility() == View.GONE) {
                     v.setBackgroundColor(Color.BLACK);
