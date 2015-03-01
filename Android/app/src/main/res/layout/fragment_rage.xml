@@ -50,7 +50,6 @@
        android:clickable="true"
        android:divider="#666"
        android:dividerHeight="2dp"
-       android:entries="@array/ragepowers"
        android:longClickable="true" />
 
 </LinearLayout>

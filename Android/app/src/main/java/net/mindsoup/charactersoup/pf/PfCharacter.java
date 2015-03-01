@@ -1,13 +1,8 @@
 package net.mindsoup.charactersoup.pf;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import net.mindsoup.charactersoup.R;
 import net.mindsoup.charactersoup.pf.classes.PfClass;
@@ -25,9 +20,15 @@ import net.mindsoup.charactersoup.pf.skills.PfSkill;
 import net.mindsoup.charactersoup.pf.skills.PfSkills;
 import net.mindsoup.charactersoup.pf.skills.SkillFactory;
 import net.mindsoup.charactersoup.pf.util.Calculation;
-import android.os.Bundle;
-import android.os.Parcel;
-import android.os.Parcelable;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class PfCharacter implements Parcelable {
 
@@ -63,6 +64,7 @@ public class PfCharacter implements Parcelable {
 	private PfPace pace = PfPace.FAST;
 	private int availableSkillRanks = 0;
 	private int availableFeats = 0;
+    private int availableSpecialPowers = 5;
 	
 	private int newLevels = 0;
 	private int hitpoints = 0;
@@ -71,6 +73,7 @@ public class PfCharacter implements Parcelable {
 	private Set<PfFeats> feats = new HashSet<PfFeats>();
 	private List<Item> inventory = new LinkedList<Item>();
 	private Map<String, Object> properties = new HashMap<String, Object>();
+    private Set<Integer> specialPowers = new HashSet<Integer>(); // rage powers, spells, etc.
 	
 	@SuppressWarnings("rawtypes")
 	public static final Parcelable.Creator CREATOR =
@@ -849,6 +852,14 @@ public class PfCharacter implements Parcelable {
 	public void setAvailableFeats(int feats) {
 		this.availableFeats = feats;
 	}
+
+    public int getAvailableSpecialPowers() {
+        return this.availableSpecialPowers;
+    }
+
+    public void setAvailableSpecialPowers(int powers) {
+        this.availableSpecialPowers = powers;
+    }
 	
 	/**
 	 * Add a feat to this character
@@ -1186,6 +1197,22 @@ public class PfCharacter implements Parcelable {
 	public List<Item> getInventoryItems() {
 		return inventory;
 	}
+
+    public boolean addSpecialPower(int index) {
+        if(availableSpecialPowers > 0) {
+            if (!specialPowers.contains(new Integer(index))) {
+                specialPowers.add(new Integer(index));
+                availableSpecialPowers--;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public Set<Integer> getSpecialPowers() {
+        return this.specialPowers;
+    }
 	
 	@Override
 	public void writeToParcel(Parcel out, int flags) {
@@ -1232,6 +1259,15 @@ public class PfCharacter implements Parcelable {
 			items.putParcelable(item.getName(), item);
 		
 		out.writeBundle(items);
+        int[] powers = new int[specialPowers.size()];
+
+        // rage powers/spells
+        i = 0;
+        for(Integer index : specialPowers) {
+            powers[i] = index.intValue();
+            i++;
+        }
+        out.writeIntArray(powers);
 	}
 	
 	public void readFromParcel(Parcel in) {
@@ -1278,6 +1314,14 @@ public class PfCharacter implements Parcelable {
 			Item newItem = (Item)p;
 			this.addItem(newItem);
 		}
+
+        // rage powers/spells
+        int[] powers = in.createIntArray();
+
+        for(int power : powers) {
+            specialPowers.add(new Integer(power));
+        }
+
 	}
 
 	public void equipItem(Item item) {

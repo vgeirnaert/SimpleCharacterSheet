@@ -339,6 +339,14 @@ public class CharacterActivity extends SherlockFragmentActivity {
 			updateCharacter();
 		}
 	}
+
+    public void addSpecialPower(int powerIndex) {
+        if(this.character.addSpecialPower(powerIndex)) {
+            DatabaseHelper db = new DatabaseHelper(this);
+            db.addPower(this.character, powerIndex);
+            updateCharacter();
+        }
+    }
 	
 	public void addItem(Item item) {
 		int stackSize = this.character.addItem(item);

@@ -3,12 +3,6 @@
  */
 package net.mindsoup.charactersoup.adapters;
 
-import java.util.List;
-
-import net.mindsoup.charactersoup.R;
-import net.mindsoup.charactersoup.pf.feats.FeatFactory;
-import net.mindsoup.charactersoup.pf.feats.PfFeat;
-import net.mindsoup.charactersoup.pf.feats.PfFeats;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +10,13 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import net.mindsoup.charactersoup.R;
+import net.mindsoup.charactersoup.pf.feats.FeatFactory;
+import net.mindsoup.charactersoup.pf.feats.PfFeat;
+import net.mindsoup.charactersoup.pf.feats.PfFeats;
+
+import java.util.List;
 
 /**
  * @author Valentijn

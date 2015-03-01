@@ -3,12 +3,6 @@
  */
 package net.mindsoup.charactersoup.adapters;
 
-import java.util.ArrayList;
-
-import net.mindsoup.charactersoup.CharacterActivity;
-import net.mindsoup.charactersoup.R;
-import net.mindsoup.charactersoup.pf.util.Calculation;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +15,12 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.internal.widget.IcsAdapterView;
 import com.actionbarsherlock.internal.widget.IcsAdapterView.OnItemSelectedListener;
 import com.actionbarsherlock.internal.widget.IcsSpinner;
+
+import net.mindsoup.charactersoup.CharacterActivity;
+import net.mindsoup.charactersoup.R;
+import net.mindsoup.charactersoup.pf.util.Calculation;
+
+import java.util.ArrayList;
 
 /**
  * @author Valentijn

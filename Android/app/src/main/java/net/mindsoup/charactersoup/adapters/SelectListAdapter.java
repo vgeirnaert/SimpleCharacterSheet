@@ -75,13 +75,20 @@ public class SelectListAdapter extends ArrayAdapter<ListElement> {
         tv.setText(item.getDescription());
 
         Button select = (Button)view.findViewById(R.id.select_list_button);
-        select.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                listener.onPicked(items.get(position));
-                dialog.dismiss();
-            }
-        });
+        if(select != null) {
+            select.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (listener != null) {
+                        listener.onPicked(items.get(position));
+                    }
+
+                    if (dialog != null) {
+                        dialog.dismiss();
+                    }
+                }
+            });
+        }
 
         return view;
     }

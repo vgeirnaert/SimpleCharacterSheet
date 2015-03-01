@@ -3,11 +3,6 @@
  */
 package net.mindsoup.charactersoup.fragments;
 
-import net.mindsoup.charactersoup.CharacterActivity;
-import net.mindsoup.charactersoup.R;
-import net.mindsoup.charactersoup.pf.PfAttributes;
-import net.mindsoup.charactersoup.pf.PfCharacter;
-import net.mindsoup.charactersoup.pf.PfRaces;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -21,6 +16,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockDialogFragment;
+
+import net.mindsoup.charactersoup.CharacterActivity;
+import net.mindsoup.charactersoup.R;
+import net.mindsoup.charactersoup.pf.PfAttributes;
+import net.mindsoup.charactersoup.pf.PfCharacter;
+import net.mindsoup.charactersoup.pf.PfRaces;
 
 /**
  * @author Valentijn

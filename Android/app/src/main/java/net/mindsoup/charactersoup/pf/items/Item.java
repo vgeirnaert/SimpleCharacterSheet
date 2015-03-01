@@ -1,11 +1,11 @@
 package net.mindsoup.charactersoup.pf.items;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class Item implements Comparable<Item>, Parcelable {

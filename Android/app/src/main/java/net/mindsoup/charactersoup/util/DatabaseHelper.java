@@ -3,9 +3,12 @@
  */
 package net.mindsoup.charactersoup.util;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.provider.BaseColumns;
 
 import net.mindsoup.charactersoup.pf.PfAttributes;
 import net.mindsoup.charactersoup.pf.PfCharacter;
@@ -23,12 +26,10 @@ import net.mindsoup.charactersoup.pf.races.PfChooseBonusAttributeRace;
 import net.mindsoup.charactersoup.pf.skills.PfSkill;
 import net.mindsoup.charactersoup.pf.skills.PfSkills;
 import net.mindsoup.charactersoup.pf.util.Dice;
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.BaseColumns;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author Valentijn
@@ -498,6 +499,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		db.delete(Db.FEATS_TABLE, whereClause, whereArgs);
 		db.close();
 	}
+
+    public void addPower(PfCharacter character, int power) {
+
+    }
 	
 	public void addFeat(PfCharacter character, PfFeats feat) {
 		SQLiteDatabase db = this.getWritableDatabase();
