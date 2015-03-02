@@ -1,10 +1,11 @@
 package net.mindsoup.charactersoup.fragments;
 
-import net.mindsoup.charactersoup.R;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import net.mindsoup.charactersoup.R;
 
 public class EquipmentFragment extends CharacterFragment {
 	
@@ -20,5 +21,15 @@ public class EquipmentFragment extends CharacterFragment {
 		// TODO Auto-generated method stub
 
 	}
+
+    @Override
+    public String getHelpTitle() {
+        return "";
+    }
+
+    @Override
+    public String getHelpText() {
+        return "";
+    }
 
 }

@@ -1,23 +1,5 @@
 package net.mindsoup.charactersoup;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.mindsoup.charactersoup.adapters.CharacterPagerAdapter;
-import net.mindsoup.charactersoup.adapters.NavDrawerAdapter;
-import net.mindsoup.charactersoup.fragments.AttributesFragment;
-import net.mindsoup.charactersoup.fragments.CharacterFragment;
-import net.mindsoup.charactersoup.fragments.CharacterInfoFragment;
-import net.mindsoup.charactersoup.fragments.FeatsFragment;
-import net.mindsoup.charactersoup.fragments.InventoryFragment;
-import net.mindsoup.charactersoup.fragments.LevelUpFragment;
-import net.mindsoup.charactersoup.fragments.OverviewFragment;
-import net.mindsoup.charactersoup.fragments.SetAttributesFragment;
-import net.mindsoup.charactersoup.fragments.SkillsFragment;
-import net.mindsoup.charactersoup.pf.PfCharacter;
-import net.mindsoup.charactersoup.pf.feats.PfFeats;
-import net.mindsoup.charactersoup.pf.items.Item;
-import net.mindsoup.charactersoup.util.DatabaseHelper;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -38,6 +20,26 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+
+import net.mindsoup.charactersoup.adapters.CharacterPagerAdapter;
+import net.mindsoup.charactersoup.adapters.NavDrawerAdapter;
+import net.mindsoup.charactersoup.fragments.AttributesFragment;
+import net.mindsoup.charactersoup.fragments.CharacterFragment;
+import net.mindsoup.charactersoup.fragments.CharacterInfoFragment;
+import net.mindsoup.charactersoup.fragments.FeatsFragment;
+import net.mindsoup.charactersoup.fragments.InventoryFragment;
+import net.mindsoup.charactersoup.fragments.LevelUpFragment;
+import net.mindsoup.charactersoup.fragments.OverviewFragment;
+import net.mindsoup.charactersoup.fragments.SetAttributesFragment;
+import net.mindsoup.charactersoup.fragments.SkillsFragment;
+import net.mindsoup.charactersoup.pf.PfCharacter;
+import net.mindsoup.charactersoup.pf.feats.PfFeats;
+import net.mindsoup.charactersoup.pf.items.Item;
+import net.mindsoup.charactersoup.util.CharacterSoupUtils;
+import net.mindsoup.charactersoup.util.DatabaseHelper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CharacterActivity extends SherlockFragmentActivity {
 	
@@ -232,6 +234,9 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	        case R.id.home_button:
 	        	homeButtonClicked();
 	        	return true;
+            case R.id.about_button:
+                aboutButtonClicked();
+                return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
 		}
@@ -240,6 +245,12 @@ public class CharacterActivity extends SherlockFragmentActivity {
 	private void homeButtonClicked() {
 		super.onBackPressed();
 	}
+
+    private void aboutButtonClicked() {
+        CharacterFragment fragment = (CharacterFragment)pagerAdapter.getItem(pager.getCurrentItem());
+
+        CharacterSoupUtils.showTextDialog(this, fragment.getHelpText(), fragment.getHelpTitle());
+    }
 	
 	private void toggleDrawer() {
 		// if our home icon is pressed
@@ -328,6 +339,21 @@ public class CharacterActivity extends SherlockFragmentActivity {
 			updateCharacter();
 		}
 	}
+
+    public void removeSpecialPower(int index) {
+        this.character.removeSpecialPower(index);
+        DatabaseHelper db = new DatabaseHelper(this);
+        db.deletePower(this.character, index);
+        updateCharacter();
+    }
+
+    public void addSpecialPower(int powerIndex) {
+        if(this.character.addSpecialPower(powerIndex)) {
+            DatabaseHelper db = new DatabaseHelper(this);
+            db.addPower(this.character, powerIndex);
+            updateCharacter();
+        }
+    }
 	
 	public void addItem(Item item) {
 		int stackSize = this.character.addItem(item);

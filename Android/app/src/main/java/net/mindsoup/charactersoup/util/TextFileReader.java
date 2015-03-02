@@ -1,10 +1,10 @@
 package net.mindsoup.charactersoup.util;
 
+import android.content.Context;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
-import android.content.Context;
 
 public class TextFileReader {
 

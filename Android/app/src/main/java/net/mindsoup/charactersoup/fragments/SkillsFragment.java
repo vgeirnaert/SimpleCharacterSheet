@@ -3,16 +3,6 @@
  */
 package net.mindsoup.charactersoup.fragments;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.mindsoup.charactersoup.CharacterActivity;
-import net.mindsoup.charactersoup.R;
-import net.mindsoup.charactersoup.adapters.CharacterSkillAdapter;
-import net.mindsoup.charactersoup.pf.PfCharacter;
-import net.mindsoup.charactersoup.pf.skills.PfSkill;
-import net.mindsoup.charactersoup.pf.skills.PfSkills;
-import net.mindsoup.charactersoup.pf.skills.SkillFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +12,17 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import net.mindsoup.charactersoup.CharacterActivity;
+import net.mindsoup.charactersoup.R;
+import net.mindsoup.charactersoup.adapters.CharacterSkillAdapter;
+import net.mindsoup.charactersoup.pf.PfCharacter;
+import net.mindsoup.charactersoup.pf.skills.PfSkill;
+import net.mindsoup.charactersoup.pf.skills.PfSkills;
+import net.mindsoup.charactersoup.pf.skills.SkillFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Valentijn
@@ -123,5 +124,14 @@ public class SkillsFragment extends CharacterFragment {
 			adapter.notifyDataSetChanged();
 		}
 	}
-	
+
+    @Override
+    public String getHelpTitle() {
+        return this.getActivity().getString(R.string.skills_fragment_help_title);
+    }
+
+    @Override
+    public String getHelpText() {
+        return this.getActivity().getString(R.string.skills_fragment_help_text);
+    }
 }

@@ -7,6 +7,7 @@ import net.mindsoup.charactersoup.pf.feats.PfFeats;
 import net.mindsoup.charactersoup.pf.skills.PfSkills;
 import net.mindsoup.charactersoup.pf.util.Calculation;
 import net.mindsoup.charactersoup.pf.util.Dice;
+import net.mindsoup.charactersoup.util.CharacterSoupUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -80,5 +81,53 @@ public class PfDruid implements PfClass {
     @Override
     public String toString() {
         return "Druid";
+    }
+
+    @Override
+    public int getLevelupSpecialPowers(int level, PfCharacter character) {
+        int bonusSpells = CharacterSoupUtils.getBonusSpellsPerDay((int) Math.ceil(character.getAttributeBonus(character.getWisdom())));
+        switch (level) {
+            case 1:
+                return 4 + bonusSpells;
+            case 2:
+                return 2 + bonusSpells;
+            case 3:
+                return 1 + bonusSpells;
+            case 4:
+                return 2 + bonusSpells;
+            case 5:
+                return 1 + bonusSpells;
+            case 6:
+                return 2 + bonusSpells;
+            case 7:
+                return 2 + bonusSpells;
+            case 8:
+                return 2 + bonusSpells;
+            case 9:
+                return 2 + bonusSpells;
+            case 10:
+                return 2 + bonusSpells;
+            case 11:
+                return 2 + bonusSpells;
+            case 12:
+                return 2 + bonusSpells;
+            case 13:
+                return 2 + bonusSpells;
+            case 14:
+                return 2 + bonusSpells;
+            case 15:
+                return 2 + bonusSpells;
+            case 16:
+                return 2 + bonusSpells;
+            case 17:
+                return 2 + bonusSpells;
+            case 18:
+                return 2 + bonusSpells;
+            case 19:
+                return 2 + bonusSpells;
+            case 20:
+                return 2 + bonusSpells;
+        }
+        return 0;
     }
 }

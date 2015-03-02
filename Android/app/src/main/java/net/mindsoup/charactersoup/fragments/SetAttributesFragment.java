@@ -3,9 +3,6 @@
  */
 package net.mindsoup.charactersoup.fragments;
 
-import net.mindsoup.charactersoup.CharacterActivity;
-import net.mindsoup.charactersoup.R;
-import net.mindsoup.charactersoup.pf.PfCharacter;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +13,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockDialogFragment;
+
+import net.mindsoup.charactersoup.CharacterActivity;
+import net.mindsoup.charactersoup.R;
+import net.mindsoup.charactersoup.pf.PfCharacter;
 
 /**
  * @author Valentijn

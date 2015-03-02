@@ -2,6 +2,7 @@ package net.mindsoup.charactersoup.pf.items;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+
 import net.mindsoup.charactersoup.pf.PfHandedness;
 import net.mindsoup.charactersoup.pf.util.Dice;
 

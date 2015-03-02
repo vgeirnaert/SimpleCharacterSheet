@@ -1,5 +1,12 @@
 package net.mindsoup.charactersoup.fragments;
 
+import android.os.Bundle;
+import android.text.Html;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
 import net.mindsoup.charactersoup.CalculationView;
 import net.mindsoup.charactersoup.CharacterActivity;
 import net.mindsoup.charactersoup.R;
@@ -8,12 +15,6 @@ import net.mindsoup.charactersoup.pf.items.Item;
 import net.mindsoup.charactersoup.pf.items.ItemType;
 import net.mindsoup.charactersoup.pf.items.Weapon;
 import net.mindsoup.charactersoup.pf.util.Calculation;
-import android.os.Bundle;
-import android.text.Html;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 public class OverviewFragment extends CharacterFragment {
 	
@@ -116,6 +117,14 @@ public class OverviewFragment extends CharacterFragment {
 			editText.setText(Html.fromHtml(stats));
 		}
 	}
-	
-	
+
+    @Override
+    public String getHelpTitle() {
+        return this.getActivity().getString(R.string.overview_fragment_help_title);
+    }
+
+    @Override
+    public String getHelpText() {
+        return this.getActivity().getString(R.string.overview_fragment_help_text);
+    }
 }

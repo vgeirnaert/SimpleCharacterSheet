@@ -3,7 +3,17 @@
  */
 package net.mindsoup.charactersoup.adapters;
 
-import java.util.List;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.text.Html;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
@@ -13,14 +23,8 @@ import net.mindsoup.charactersoup.pf.items.Item;
 import net.mindsoup.charactersoup.pf.items.ItemEffects;
 import net.mindsoup.charactersoup.pf.items.Weapon;
 import net.mindsoup.charactersoup.pf.items.Wearable;
-import android.content.Context;
-import android.text.Html;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
+
+import java.util.List;
 
 /**
  * @author Valentijn
@@ -103,14 +107,38 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         tv = (TextView)view.findViewById(R.id.item_weight);
         tv.setText(Float.toString(item.getStackWeight()) + " Lbs");
         
-        tv = (TextView)view.findViewById(R.id.item_equip);
-        tv.setOnClickListener(new OnClickListener() {
+        Button bv = (Button)view.findViewById(R.id.item_equip);
+        bv.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {		
 				activity.equipItem(item);
 			}
 		});
+
+        bv = (Button)view.findViewById(R.id.item_delete);
+        bv.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Item i = activity.getCharacter().getInventoryItems().get(position);
+
+                new AlertDialog.Builder(activity)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setTitle("Delete item")
+                        .setMessage("Delete " + i.getName() + " from inventory?")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Item i = activity.getCharacter().getInventoryItems().get(position);
+                                activity.removeItem(i, 1);
+                            }
+
+                        })
+                        .setNegativeButton("No", null)
+                        .show();
+            }
+        });
         
         return view;
 	}

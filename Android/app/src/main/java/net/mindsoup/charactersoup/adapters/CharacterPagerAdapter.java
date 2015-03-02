@@ -3,13 +3,13 @@
  */
 package net.mindsoup.charactersoup.adapters;
 
-import java.util.List;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.actionbarsherlock.app.SherlockFragment;
+
+import java.util.List;
 
 /**
  * @author Valentijn

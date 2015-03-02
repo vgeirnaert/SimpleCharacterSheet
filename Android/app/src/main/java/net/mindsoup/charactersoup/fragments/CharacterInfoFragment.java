@@ -3,9 +3,6 @@
  */
 package net.mindsoup.charactersoup.fragments;
 
-import net.mindsoup.charactersoup.CharacterActivity;
-import net.mindsoup.charactersoup.R;
-import net.mindsoup.charactersoup.pf.PfCharacter;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -17,6 +14,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import net.mindsoup.charactersoup.CharacterActivity;
+import net.mindsoup.charactersoup.R;
+import net.mindsoup.charactersoup.pf.PfCharacter;
 
 /**
  * @author Valentijn
@@ -122,4 +123,13 @@ public class CharacterInfoFragment extends CharacterFragment {
 		updateCharacter();
 	}
 
+    @Override
+    public String getHelpTitle() {
+        return this.getActivity().getString(R.string.info_fragment_help_title);
+    }
+
+    @Override
+    public String getHelpText() {
+        return this.getActivity().getString(R.string.info_fragment_help_text);
+    }
 }

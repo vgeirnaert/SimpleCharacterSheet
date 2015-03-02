@@ -1,0 +1,697 @@
+[
+  {
+    "index":0,
+    "title":"Animal Fury ",
+    "description":"Gain a bite attack"
+  },
+  {
+    "index":1,
+    "title":"Armor Ripper",
+    "description":"Gain a bonus to Sunder checks with your natural attacks while raging"
+  },
+  {
+    "index":2,
+    "title":"Auspicious Mark ",
+    "description":"Gain a bonus on a roll once per rage"
+  },
+  {
+    "index":3,
+    "title":"Battle Roar ",
+    "description":"You deal an additional 1d6 points of sonic damage to an opponent you successfully demoralized using intimidating glare."
+  },
+  {
+    "index":4,
+    "title":"Beast Totem ",
+    "description":"Gain a natural armor bonus"
+  },
+  {
+    "index":5,
+    "title":"Beast Totem, Greater ",
+    "description":"Gain a pounce attack"
+  },
+  {
+    "index":6,
+    "title":"Beast Totem, Lesser ",
+    "description":"Gain two claw attacks"
+  },
+  {
+    "index":7,
+    "title":"Bestial Climber ",
+    "description":"Climb at your normal land speed while raging"
+  },
+  {
+    "index":8,
+    "title":"Bestial Leaper ",
+    "description":"Take a standard action while moving during a rage"
+  },
+  {
+    "index":9,
+    "title":"Bestial Swimmer ",
+    "description":"Swim at your normal land speed while raging"
+  },
+  {
+    "index":10,
+    "title":"Bleeding Blow ",
+    "description":"Deal bleed damage with your powerful blows"
+  },
+  {
+    "index":11,
+    "title":"Boar's Charge",
+    "description":"Automatically score critical hits with your gore attack while raging"
+  },
+  {
+    "index":12,
+    "title":"Boasting Taunt ",
+    "description":"Force an enemy to attack the barbarian"
+  },
+  {
+    "index":13,
+    "title":"Body Bludgeon ",
+    "description":"Beat a foe with another creature"
+  },
+  {
+    "index":14,
+    "title":"Brawler",
+    "description":"Gain Improved Unarmed Strike while raging"
+  },
+  {
+    "index":15,
+    "title":"Brawler, Greater",
+    "description":"Gain Two-Weapon Fighting while raging"
+  },
+  {
+    "index":16,
+    "title":"Breathtaker ",
+    "description":"While raging, whenever you make a successful melee attack against an opponent that is holding its breath, in addition to any other effects caused by that attack, the opponent loses a number of rounds of breath equal to your Strength modifier."
+  },
+  {
+    "index":17,
+    "title":"Celestial Totem",
+    "description":"Gain a halo that shines as daylight and triggers invisibility purge (only reveals non-good creatures) in the barbarian's square and each adjacent square."
+  },
+  {
+    "index":18,
+    "title":"Celestial Totem, Greater",
+    "description":"Gain SR while raging equal to 11 + barbarian class level against spells with the evil descriptor; also gain +2 bonus on all saves against spells and effects from evil creatures."
+  },
+  {
+    "index":19,
+    "title":"Celestial Totem, Lesser",
+    "description":"Whenever subjected to a spell that cures hp damage, heal 1 additional hp per caster level. In the case of non-spell healing effects (such as channeled energy or lay on hands), heal a number of additional hp equal to the class level of the character performing the magical healing."
+  },
+  {
+    "index":20,
+    "title":"Chaos Totem ",
+    "description":"Gain a bonus to Escape Artist and a chance to avoid critical hits"
+  },
+  {
+    "index":21,
+    "title":"Chaos Totem, Greater ",
+    "description":"Gain DR/lawful and weapons count as chaotic"
+  },
+  {
+    "index":22,
+    "title":"Chaos Totem, Lesser ",
+    "description":"Gain a deflection bonus to AC and a resistance bonus against lawful spells and creatures"
+  },
+  {
+    "index":23,
+    "title":"Clear Mind ",
+    "description":"Reroll a failed Will save"
+  },
+  {
+    "index":24,
+    "title":"Come and Get Me ",
+    "description":"Provoke attacks of opportunity to get extra attacks"
+  },
+  {
+    "index":25,
+    "title":"Crippling Blow ",
+    "description":"Deal Strength or Dexterity damage with your powerful blows"
+  },
+  {
+    "index":26,
+    "title":"Deadly Accuracy ",
+    "description":"Deal double crit damage when using surprise accuracy"
+  },
+  {
+    "index":27,
+    "title":"Deathless Frenzy",
+    "description":"Ignore all consequences of being at 0 or lower hit points for one round while raging"
+  },
+  {
+    "index":28,
+    "title":"Disemboweling Tusks",
+    "description":"While raging, deal Con damage when you confirm a critical hit with your gore attack"
+  },
+  {
+    "index":29,
+    "title":"Disruptive",
+    "description":"Gain the Disruptive feat as a bonus feat"
+  },
+  {
+    "index":30,
+    "title":"Dragon Totem ",
+    "description":"Gain bonuses while raging"
+  },
+  {
+    "index":31,
+    "title":"Dragon Totem Resilience ",
+    "description":"Gain energy resistance while raging"
+  },
+  {
+    "index":32,
+    "title":"Dragon Totem Wings ",
+    "description":"Gain wings and a fly speed while raging"
+  },
+  {
+    "index":33,
+    "title":"Eater of Magic ",
+    "description":"Take a second saving throw and gain temp hp"
+  },
+  {
+    "index":34,
+    "title":"Elemental Rage ",
+    "description":"Deal extra elemental damage with melee attacks"
+  },
+  {
+    "index":35,
+    "title":"Elemental Rage, Greater ",
+    "description":"Deal extra elemental damage on critical hits with melee weapons"
+  },
+  {
+    "index":36,
+    "title":"Elemental Rage, Lesser ",
+    "description":"Use a swift action to cause extra elemental damage with melee attacks"
+  },
+  {
+    "index":37,
+    "title":"Energy Absorption ",
+    "description":"Absorb energy to gain temporary hit points"
+  },
+  {
+    "index":38,
+    "title":"Energy Eruption ",
+    "description":"Store absorbed energy and release it as a breath weapon attack"
+  },
+  {
+    "index":39,
+    "title":"Energy Resistance ",
+    "description":"Gain resistance to one type of elemental damage"
+  },
+  {
+    "index":40,
+    "title":"Energy Resistance, Greater ",
+    "description":"Halve damage from an elemental attack"
+  },
+  {
+    "index":41,
+    "title":"Fearless Rage ",
+    "description":"Become immune to the shaken and frightened conditions"
+  },
+  {
+    "index":42,
+    "title":"Ferocious Beast ",
+    "description":"Your animal companion also gains the benefits of rage though you must spend 1 additional round of rage per round if companion begins or ends its turn adjacent to you, and 2 additional rounds of rage per round if not."
+  },
+  {
+    "index":43,
+    "title":"Ferocious Beast, Greater ",
+    "description":"Your animal companion shares the benefits of your rage powers that are constant in effect but gains no benefit from rage powers that require actions to activate, even if they are free actions."
+  },
+  {
+    "index":44,
+    "title":"Ferocious Mount ",
+    "description":"Allow your mount to rage as well"
+  },
+  {
+    "index":45,
+    "title":"Ferocious Mount, Greater ",
+    "description":"Allow your mount to benefit from rage powers"
+  },
+  {
+    "index":46,
+    "title":"Ferocious Trample ",
+    "description":"While raging your mount gains the trample ability"
+  },
+  {
+    "index":47,
+    "title":"Ferocious Trample, Greater ",
+    "description":"Your mount can trample larger creatures and make overrun attacks while raging"
+  },
+  {
+    "index":48,
+    "title":"Fiend Totem ",
+    "description":"Attackers take damage when they hit you in melee"
+  },
+  {
+    "index":49,
+    "title":"Fiend Totem, Greater ",
+    "description":"Non-evil creatures adjacent to the barbarian take damage and are shaken"
+  },
+  {
+    "index":50,
+    "title":"Fiend Totem, Lesser ",
+    "description":"Gain a gore attack"
+  },
+  {
+    "index":51,
+    "title":"Fierce Fortitude ",
+    "description":"You gain a +4 bonus on saving throws against diseases and poison. A skald must be trained in Intimidate to select this rage power."
+  },
+  {
+    "index":52,
+    "title":"Flesh Wound ",
+    "description":"Convert lethal damage to nonlethal damage"
+  },
+  {
+    "index":53,
+    "title":"Fueled by Vengeance",
+    "description":"Gain an extra round of rage if you hit a creature that hit you this round while raging"
+  },
+  {
+    "index":54,
+    "title":"Gearbreaker ",
+    "description":"Once per round while raging, whenever you make an attack against a construct, you can ignore an amount of that construct's hardness equal to your barbarian level. This ability must be used before the attack roll is made. This power stacks with hard hitter."
+  },
+  {
+    "index":55,
+    "title":"Ghost Rager ",
+    "description":"Deal normal damage to incorporeal creatures"
+  },
+  {
+    "index":56,
+    "title":"Good for What Ails You ",
+    "description":"Drink alcohol to gain a new save against conditions"
+  },
+  {
+    "index":57,
+    "title":"Greater Animal Fury ",
+    "description":"As animal fury, but your bite attack deals damage as if you were one size larger."
+  },
+  {
+    "index":58,
+    "title":"Ground Breaker ",
+    "description":"Attack the ground to create difficult terrain"
+  },
+  {
+    "index":59,
+    "title":"Ground Breaker, Greater ",
+    "description":"Extend ground breaker's radius of difficult terrain"
+  },
+  {
+    "index":60,
+    "title":"Guarded Life ",
+    "description":"Stabilize when at negative hit points"
+  },
+  {
+    "index":61,
+    "title":"Guarded Life, Greater ",
+    "description":"Convert more damage to nonlethal damage"
+  },
+  {
+    "index":62,
+    "title":"Guarded Stance ",
+    "description":"Gain a dodge bonus to AC"
+  },
+  {
+    "index":63,
+    "title":"Hive Totem ",
+    "description":"Take half damage from swarms while raging"
+  },
+  {
+    "index":64,
+    "title":"Hive Totem Resilience ",
+    "description":"Take no damage from swarms while raging"
+  },
+  {
+    "index":65,
+    "title":"Hive Totem Toxicity ",
+    "description":"Do Constitution damage with a bite while raging"
+  },
+  {
+    "index":66,
+    "title":"Hurling ",
+    "description":"Increase the range and size allowed for a hurled object"
+  },
+  {
+    "index":67,
+    "title":"Hurling, Greater ",
+    "description":"Increase the range and size allowed for a hurled object"
+  },
+  {
+    "index":68,
+    "title":"Hurling, Lesser ",
+    "description":"You can lift and throw large objects to do damage"
+  },
+  {
+    "index":69,
+    "title":"Hurling Charge ",
+    "description":"You can hurl an object as part of a charge"
+  },
+  {
+    "index":70,
+    "title":"Impelling Disarm ",
+    "description":"Once per rage, you may attempt to hit another opponent with a weapon you disarmed from a different opponent."
+  },
+  {
+    "index":71,
+    "title":"Increased Damage Reduction ",
+    "description":"Gain DR/- while raging"
+  },
+  {
+    "index":72,
+    "title":"Inspire Ferocity ",
+    "description":"Use a move action to share reckless abandon with allies"
+  },
+  {
+    "index":73,
+    "title":"Internal Fortitude ",
+    "description":"Gain immunity to nauseated and sickened conditions"
+  },
+  {
+    "index":74,
+    "title":"Intimidating Glare ",
+    "description":"Intimidate an opponent as a move action"
+  },
+  {
+    "index":75,
+    "title":"Knockback ",
+    "description":"Make a bull rush in place of a melee attack"
+  },
+  {
+    "index":76,
+    "title":"Knockdown ",
+    "description":"Make a trip attack in place of a melee attack"
+  },
+  {
+    "index":77,
+    "title":"Lethal Accuracy ",
+    "description":"Deal more damage when you score a critical hit with surprise accuracy"
+  },
+  {
+    "index":78,
+    "title":"Linnorm Death Curse, Cairn ",
+    "description":"Your melee attacks deal an additional 1 point of negative energy damage. If the character is knocked unconscious or killed by an attack or spell, the attacker suffers the curse of decay (Will negates)."
+  },
+  {
+    "index":79,
+    "title":"Linnorm Death Curse, Crag ",
+    "description":"Your melee attacks deal an additional 1 point of fire damage. If the character is knocked unconscious or killed by an attack or spell, the attacker suffers the curse of fire (Will negates)."
+  },
+  {
+    "index":80,
+    "title":"Linnorm Death Curse, Fjord ",
+    "description":"Your melee attacks deal an additional 1 point of cold damage. If the character is knocked unconscious or killed by an attack or spell, the attacker suffers the curse of drowning (Will negates)."
+  },
+  {
+    "index":81,
+    "title":"Linnorm Death Curse, Ice ",
+    "description":"Your melee attacks deal an additional 1 point of cold damage. If the character is knocked unconscious or killed, the attacker suffers the curse of frost."
+  },
+  {
+    "index":82,
+    "title":"Linnorm Death Curse, Taiga ",
+    "description":"Your melee attacks deal an additional 1 point of electricity damage. If the character is knocked unconscious or killed by an attack or spell, the attacker suffers the curse of electricity (Will negates)."
+  },
+  {
+    "index":83,
+    "title":"Linnorm Death Curse, Tarn ",
+    "description":"Your melee attacks deal an additional 1 point of acid damage. If the character is knocked unconscious or killed by an attack or spell, the attacker suffers the curse of death (Will negates)."
+  },
+  {
+    "index":84,
+    "title":"Linnorm Death Curse, Tor ",
+    "description":"Your melee attacks deal an additional 1 point of fire damage. If the character is knocked unconscious or killed by an attack or spell, the attacker suffers the curse of boiling blood (Will negates)."
+  },
+  {
+    "index":85,
+    "title":"Liquid Courage ",
+    "description":"Alcoholic beverages give you a morale bonus while raging"
+  },
+  {
+    "index":86,
+    "title":"Low-Light Vision ",
+    "description":"Gain low-light vision while raging"
+  },
+  {
+    "index":87,
+    "title":"Mighty Swing ",
+    "description":"Automatically confirm a critical hit"
+  },
+  {
+    "index":88,
+    "title":"Moment of Clarity ",
+    "description":"Remove benefits and penalties of raging for 1 round"
+  },
+  {
+    "index":89,
+    "title":"Night Vision ",
+    "description":"Gain darkvision 60 ft while raging"
+  },
+  {
+    "index":90,
+    "title":"No Escape ",
+    "description":"Double move as an immediate action when an opponent withdraws"
+  },
+  {
+    "index":91,
+    "title":"Overbearing Advance ",
+    "description":"Deal extra damage when using the overrun maneuver"
+  },
+  {
+    "index":92,
+    "title":"Overbearing Onslaught ",
+    "description":"Overrun multiple targets per round"
+  },
+  {
+    "index":93,
+    "title":"Penetrating Bite ",
+    "description":"When using animal fury while raging, your bite is able to pierce most resistances."
+  },
+  {
+    "index":94,
+    "title":"Perfect Clarity ",
+    "description":"Roll twice when disbelieving an illusion"
+  },
+  {
+    "index":95,
+    "title":"Powerful Blow ",
+    "description":"Deal extra damage with a single blow"
+  },
+  {
+    "index":96,
+    "title":"Primal Scent ",
+    "description":"Gain a bonus when using scent"
+  },
+  {
+    "index":97,
+    "title":"Quick Reflexes ",
+    "description":"Make additional attacks of opportunity while raging"
+  },
+  {
+    "index":98,
+    "title":"Raging Climber ",
+    "description":"Gain a bonus on Climb checks while raging"
+  },
+  {
+    "index":99,
+    "title":"Raging Flier ",
+    "description":"1/rage, fly up to your base speed as a move action and can use this flight as part of movement during a charge."
+  },
+  {
+    "index":100,
+    "title":"Raging Grappler ",
+    "description":"While raging, whenever you succeed at a check to start a grapple, you can choose to deal damage as if you had also succeeded at a check to maintain the grapple. In addition, while raging, whenever you succeed at a combat maneuver check to maintain a grapple, you can choose to give yourself, the target of your grapple, or both the prone condition as a free action while continuing to maintain the grapple."
+  },
+  {
+    "index":101,
+    "title":"Raging Leaper ",
+    "description":"Gain a bonus on Acrobatics checks to jump while raging"
+  },
+  {
+    "index":102,
+    "title":"Raging Swimmer ",
+    "description":"Gain a bonus on Swim checks while raging"
+  },
+  {
+    "index":103,
+    "title":"Reckless Abandon ",
+    "description":"Take a penalty to AC for extra accuracy while raging"
+  },
+  {
+    "index":104,
+    "title":"Reflexive Dodge ",
+    "description":"Use your rolling dodge bonus on Reflex saving throws"
+  },
+  {
+    "index":105,
+    "title":"Regenerative Vigor ",
+    "description":"Gain fast healing after using renewed vigor"
+  },
+  {
+    "index":106,
+    "title":"Renewed Life ",
+    "description":"Ignore temporary negative levels while raging"
+  },
+  {
+    "index":107,
+    "title":"Renewed Vigor ",
+    "description":"Heal damage as a standard action"
+  },
+  {
+    "index":108,
+    "title":"Renewed Vitality ",
+    "description":"Ignore ability damage or penalties while raging"
+  },
+  {
+    "index":109,
+    "title":"Roaring Drunk ",
+    "description":"Gain a bonus on Intimidate checks and fear effect DC"
+  },
+  {
+    "index":110,
+    "title":"Rolling Dodge ",
+    "description":"Gain a dodge bonus to AC against ranged attacks while raging"
+  },
+  {
+    "index":111,
+    "title":"Roused Anger ",
+    "description":"Enter a rage even when fatigued"
+  },
+  {
+    "index":112,
+    "title":"Savage Dirty Trick ",
+    "description":"Once per round while raging, you can attempt a dirty trick combat maneuver in place of a melee attack."
+  },
+  {
+    "index":113,
+    "title":"Savage Intuition",
+    "description":"You may enter a rage even if you aren't aware that combat has begun"
+  },
+  {
+    "index":114,
+    "title":"Savage Jaw ",
+    "description":"While raging, you can open your jaws wide and latch your teeth firmly onto your opponent."
+  },
+  {
+    "index":115,
+    "title":"Scent ",
+    "description":"Gain the scent ability when raging"
+  },
+  {
+    "index":116,
+    "title":"Sharpened Accuracy ",
+    "description":"Surprise accuracy ignores concealment and cover"
+  },
+  {
+    "index":117,
+    "title":"Smasher ",
+    "description":"When sundering an unattended object, ignore hardness"
+  },
+  {
+    "index":118,
+    "title":"Spell Sunder ",
+    "description":"Sunder spells with a combat maneuver check"
+  },
+  {
+    "index":119,
+    "title":"Spellbreaker",
+    "description":"Gain the Spellbreaker feat while raging"
+  },
+  {
+    "index":120,
+    "title":"Spirit Steed ",
+    "description":"Your mount gains DR/magic and its natural weapons count as magical"
+  },
+  {
+    "index":121,
+    "title":"Spirit Totem ",
+    "description":"Attacks against you may miss when you are raging"
+  },
+  {
+    "index":122,
+    "title":"Spirit Totem, Greater ",
+    "description":"Enemies near you take negative energy damage"
+  },
+  {
+    "index":123,
+    "title":"Spirit Totem, Lesser ",
+    "description":"Gain spirit allies that can attack adjacent enemies"
+  },
+  {
+    "index":124,
+    "title":"Sprint ",
+    "description":"Move at x3 or x6 speed once per rage"
+  },
+  {
+    "index":125,
+    "title":"Staggering Drunk ",
+    "description":"Gain dodge AC against attacks of opportunity if drinking"
+  },
+  {
+    "index":126,
+    "title":"Strength Surge ",
+    "description":"Gain a Strength bonus on Combat Maneuver Checks"
+  },
+  {
+    "index":127,
+    "title":"Sunder Enchantment ",
+    "description":"Suppress sundered magical item's powers"
+  },
+  {
+    "index":128,
+    "title":"Superstition ",
+    "description":"Gain a bonus on saving throws"
+  },
+  {
+    "index":129,
+    "title":"Surprise Accuracy ",
+    "description":"Gain a morale bonus on one attack roll"
+  },
+  {
+    "index":130,
+    "title":"Swift Foot ",
+    "description":"Move faster when raging"
+  },
+  {
+    "index":131,
+    "title":"Terrifying Howl ",
+    "description":"Cause shaken enemies to become panicked"
+  },
+  {
+    "index":132,
+    "title":"Ultimate Clarity ",
+    "description":"1/rage, for 1 round, see through normal and magical darkness (including from magical effects such as blur and displacement), invisibility, and illusions; and discern exact locations of creatures with concealment."
+  },
+  {
+    "index":133,
+    "title":"Unexpected Strike ",
+    "description":"Enemies provoke attacks of opportunity even when they normally wouldn't"
+  },
+  {
+    "index":134,
+    "title":"Water Sense ",
+    "description":"Your senses are no longer fooled by the rippling surface and confounding reflections seen in water that is being used as cover by your foes."
+  },
+  {
+    "index":135,
+    "title":"Witch Hunter ",
+    "description":"Do extra damage against spellcasters"
+  },
+  {
+    "index":136,
+    "title":"World Serpent Totem ",
+    "description":"Gain bonuses against outsiders and abberations"
+  },
+  {
+    "index":137,
+    "title":"World Serpent Spirit ",
+    "description":"Your weapon counts as chaotic, evil, good, lawful while raging"
+  },
+  {
+    "index":138,
+    "title":"World Serpent Totem Unity ",
+    "description":"Double fast movement bonus and cannot be knocked prone"
+  }
+]

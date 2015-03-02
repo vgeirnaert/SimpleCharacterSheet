@@ -1,0 +1,2024 @@
+[
+  {
+    "index":0,
+    "title":"Dancing Lights",
+    "category":"Level 0",
+    "description":"Creates torches or other lights."
+  },
+  {
+    "index":1,
+    "title":"Daze",
+    "category":"Level 0",
+    "description":"Humanoid creature of 4 HD or less loses next action."
+  },
+  {
+    "index":2,
+    "title":"Detect Magic",
+    "category":"Level 0",
+    "description":"Detects spells and magic items within 60 ft."
+  },
+  {
+    "index":3,
+    "title":"Flare",
+    "category":"Level 0",
+    "description":"Dazzles one creature (–1 on attack rolls)."
+  },
+  {
+    "index":4,
+    "title":"Ghost Sound",
+    "category":"Level 0",
+    "description":"Figment sounds."
+  },
+  {
+    "index":5,
+    "title":"Haunted Fey Aspect",
+    "category":"Level 0",
+    "description":"You surround yourself with disturbing illusions."
+  },
+  {
+    "index":6,
+    "title":"Know Direction",
+    "category":"Level 0",
+    "description":"You discern north."
+  },
+  {
+    "index":7,
+    "title":"Light",
+    "category":"Level 0",
+    "description":"Object shines like a torch."
+  },
+  {
+    "index":8,
+    "title":"Lullaby",
+    "category":"Level 0",
+    "description":"Makes subject drowsy (–5 on Perception checks, –2 on Will saves against sleep.)"
+  },
+  {
+    "index":9,
+    "title":"Mage Hand",
+    "category":"Level 0",
+    "description":"5-pound telekinesis."
+  },
+  {
+    "index":10,
+    "title":"Mending",
+    "category":"Level 0",
+    "description":"Makes minor repairs on an object."
+  },
+  {
+    "index":11,
+    "title":"Message",
+    "category":"Level 0",
+    "description":"Whisper conversation at distance."
+  },
+  {
+    "index":12,
+    "title":"Open/Close",
+    "category":"Level 0",
+    "description":"Opens or closes small or light things."
+  },
+  {
+    "index":13,
+    "title":"Prestidigitation",
+    "category":"Level 0",
+    "description":"Performs minor tricks."
+  },
+  {
+    "index":14,
+    "title":"Read Magic",
+    "category":"Level 0",
+    "description":"Read scrolls and spellbooks."
+  },
+  {
+    "index":15,
+    "title":"Resistance",
+    "category":"Level 0",
+    "description":"Subject gains +1 on saving throws."
+  },
+  {
+    "index":16,
+    "title":"Sift",
+    "category":"Level 0",
+    "description":"See area as though examining it."
+  },
+  {
+    "index":17,
+    "title":"Spark",
+    "category":"Level 0",
+    "description":"Ignites flammable objects."
+  },
+  {
+    "index":18,
+    "title":"Summon Instrument",
+    "category":"Level 0",
+    "description":"Summons one musical instrument."
+  },
+  {
+    "index":19,
+    "title":"Unwitting Ally",
+    "category":"Level 0",
+    "description":"Subject is considered ally for 1 round."
+  },
+  {
+    "index":20,
+    "title":"Abundant Ammunition",
+    "category":"Level 1",
+    "description":"Replaces nonmagical ammunition every round."
+  },
+  {
+    "index":21,
+    "title":"Adjuring Step",
+    "category":"Level 1",
+    "description":"You can move slowly and safely and still cast spells, until you move quickly, make an attack, or cast a harmful spell."
+  },
+  {
+    "index":22,
+    "title":"Adoration",
+    "category":"Level 1",
+    "description":"You gain a bonus on Diplomacy checks and performance combat checks."
+  },
+  {
+    "index":23,
+    "title":"Alarm",
+    "category":"Level 1",
+    "description":"Wards an area for 2 hours/level."
+  },
+  {
+    "index":24,
+    "title":"Animate Rope",
+    "category":"Level 1",
+    "description":"Makes a rope move at your command."
+  },
+  {
+    "index":25,
+    "title":"Anticipate Peril",
+    "category":"Level 1",
+    "description":"Target gains a bonus on one initiative check."
+  },
+  {
+    "index":26,
+    "title":"Beguiling Gift",
+    "category":"Level 1",
+    "description":"Subject immediately accepts an offered item and uses it."
+  },
+  {
+    "index":27,
+    "title":"Borrow Skill",
+    "category":"Level 1",
+    "description":"Make a skill check using another’s ranks."
+  },
+  {
+    "index":28,
+    "title":"Cause Fear",
+    "category":"Level 1",
+    "description":"One creature of 5 HD or less flees for 1d4 rounds."
+  },
+  {
+    "index":29,
+    "title":"Charm Person",
+    "category":"Level 1",
+    "description":"Makes one person your friend."
+  },
+  {
+    "index":30,
+    "title":"Chord of Shards",
+    "category":"Level 1",
+    "description":"Performance deals 2d6 piercing damage."
+  },
+  {
+    "index":31,
+    "title":"Compel Hostility",
+    "category":"Level 1",
+    "description":"Compels opponents to attack you instead of your allies."
+  },
+  {
+    "index":32,
+    "title":"Comprehend Languages",
+    "category":"Level 1",
+    "description":"You understand all languages."
+  },
+  {
+    "index":33,
+    "title":"Confusion, Lesser",
+    "category":"Level 1",
+    "description":"One creature is confused for 1 round."
+  },
+  {
+    "index":34,
+    "title":"Cure Light Wounds",
+    "category":"Level 1",
+    "description":"Cures 1d8 damage + 1/level (max +5)."
+  },
+  {
+    "index":35,
+    "title":"Dancing Lantern",
+    "category":"Level 1",
+    "description":"Animates a lantern that follows you."
+  },
+  {
+    "index":36,
+    "title":"Delusional Pride",
+    "category":"Level 1",
+    "description":"Target is penalized on attacks and checks but gains bonus against charms and compulsions."
+  },
+  {
+    "index":37,
+    "title":"Detect Charm",
+    "category":"Level 1",
+    "description":"Detect strength and location of charms, compulsions, and possession auras on creatures in the area."
+  },
+  {
+    "index":38,
+    "title":"Detect Secret Doors",
+    "category":"Level 1",
+    "description":"Reveals hidden doors within 60 ft."
+  },
+  {
+    "index":39,
+    "title":"Disguise Self",
+    "category":"Level 1",
+    "description":"Changes your appearance."
+  },
+  {
+    "index":40,
+    "title":"Ear-Piercing Scream",
+    "category":"Level 1",
+    "description":"Deal sonic damage and daze target."
+  },
+  {
+    "index":41,
+    "title":"Erase",
+    "category":"Level 1",
+    "description":"Mundane or magical writing vanishes."
+  },
+  {
+    "index":42,
+    "title":"Expeditious Retreat",
+    "category":"Level 1",
+    "description":"Your base land speed increases by 30 ft."
+  },
+  {
+    "index":43,
+    "title":"Feather Fall",
+    "category":"Level 1",
+    "description":"Objects or creatures fall slowly."
+  },
+  {
+    "index":44,
+    "title":"Feather Step",
+    "category":"Level 1",
+    "description":"Ignore movement penalty in difficult terrain."
+  },
+  {
+    "index":45,
+    "title":"Flare Burst",
+    "category":"Level 1",
+    "description":"As flare, but on all creatures within 10 ft."
+  },
+  {
+    "index":46,
+    "title":"Forced Quiet",
+    "category":"Level 1",
+    "description":"Target cannot make loud noises."
+  },
+  {
+    "index":47,
+    "title":"Fumbletongue",
+    "category":"Level 1",
+    "description":"Target cannot speak intelligently."
+  },
+  {
+    "index":48,
+    "title":"Grease",
+    "category":"Level 1",
+    "description":"Makes 10-ft. square or one object slippery."
+  },
+  {
+    "index":49,
+    "title":"Hideous Laughter",
+    "category":"Level 1",
+    "description":"Subject loses actions for 1 round/ level."
+  },
+  {
+    "index":50,
+    "title":"Horn of Pursuit",
+    "category":"Level 1",
+    "description":"Create three notes heard miles away."
+  },
+  {
+    "index":51,
+    "title":"Hypnotism",
+    "category":"Level 1",
+    "description":"Fascinates 2d4 HD of creatures."
+  },
+  {
+    "index":52,
+    "title":"Identify",
+    "category":"Level 1",
+    "description":"Gives +10 bonus to identify magic items."
+  },
+  {
+    "index":53,
+    "title":"Innocence",
+    "category":"Level 1",
+    "description":"Gain +10 on Bluff checks to seem innocent."
+  },
+  {
+    "index":54,
+    "title":"Invigorate",
+    "category":"Level 1",
+    "description":"Temporarily relieves fatigue or exhaustion."
+  },
+  {
+    "index":55,
+    "title":"Jury-Rig",
+    "category":"Level 1",
+    "description":"Removes the broken condition from the targeted object."
+  },
+  {
+    "index":56,
+    "title":"Ki Arrow",
+    "category":"Level 1",
+    "description":"Arrow deals damage as your unarmed strike."
+  },
+  {
+    "index":57,
+    "title":"Liberating Command",
+    "category":"Level 1",
+    "description":"Target makes an Escape Artist check as an immediate action and gains a bonus on it."
+  },
+  {
+    "index":58,
+    "title":"Lock Gaze",
+    "category":"Level 1",
+    "description":"Compels the target to look only at you for the duration of the spell."
+  },
+  {
+    "index":59,
+    "title":"Moment of Greatness",
+    "category":"Level 1",
+    "description":"Doubles a morale bonus."
+  },
+  {
+    "index":60,
+    "title":"Magic Mouth",
+    "category":"Level 1",
+    "description":"Objects speaks once when triggered."
+  },
+  {
+    "index":61,
+    "title":"Memory Lapse",
+    "category":"Level 1",
+    "description":"Subject forgets events back to last turn."
+  },
+  {
+    "index":62,
+    "title":"Magic Aura",
+    "category":"Level 1",
+    "description":"Alters object's magic aura."
+  },
+  {
+    "index":63,
+    "title":"Negative Reaction",
+    "category":"Level 1",
+    "description":"Targeted creature may not positively influence anyone."
+  },
+  {
+    "index":64,
+    "title":"Obscure Object",
+    "category":"Level 1",
+    "description":"Masks object against scrying."
+  },
+  {
+    "index":65,
+    "title":"Play Instrument",
+    "category":"Level 1",
+    "description":"Play instrument as if you were skilled."
+  },
+  {
+    "index":66,
+    "title":"Remove Fear",
+    "category":"Level 1",
+    "description":"Suppresses fear or gives +4 on saves against fear for one subject + one per four levels."
+  },
+  {
+    "index":67,
+    "title":"Restful Sleep",
+    "category":"Level 1",
+    "description":"Gain more hit points while sleeping."
+  },
+  {
+    "index":68,
+    "title":"Saving Finale",
+    "category":"Level 1",
+    "description":"Subject rerolls failed saving throw."
+  },
+  {
+    "index":69,
+    "title":"See Alignment",
+    "category":"Level 1",
+    "description":"Pick an alignment; in your sight, creatures and items with that alignment emit a ghostly radiance."
+  },
+  {
+    "index":70,
+    "title":"Share Language",
+    "category":"Level 1",
+    "description":"Subject understands chosen language."
+  },
+  {
+    "index":71,
+    "title":"Silent Image",
+    "category":"Level 1",
+    "description":"Creates minor illusion of your design."
+  },
+  {
+    "index":72,
+    "title":"Sleep",
+    "category":"Level 1",
+    "description":"Puts 4 HD of creatures into magical slumber."
+  },
+  {
+    "index":73,
+    "title":"Solid Note",
+    "category":"Level 1",
+    "description":"Creates tangible music note."
+  },
+  {
+    "index":74,
+    "title":"Summon Minor Monster",
+    "category":"Level 1",
+    "description":"Summon 1d3 Tiny animals."
+  },
+  {
+    "index":75,
+    "title":"Summon Monster I",
+    "category":"Level 1",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":76,
+    "title":"Swallow Your Fear",
+    "category":"Level 1",
+    "description":"Grants +2 morale bonus to Str and Con, +1 morale bonus to Will saves, and -2 penalty to AC to subjects suffering from afear effect. Prevents frightened subject from running."
+  },
+  {
+    "index":77,
+    "title":"Tap Inner Beauty",
+    "category":"Level 1",
+    "description":"You gain a +2 insight bonus on all Charisma ability checks and Charisma-based skill checks."
+  },
+  {
+    "index":78,
+    "title":"Timely Inspiration",
+    "category":"Level 1",
+    "description":"Gives bonus on failed check/attack."
+  },
+  {
+    "index":79,
+    "title":"Touch of Gracelessness",
+    "category":"Level 1",
+    "description":"Subject loses 1d6 + 1 Dex/two levels and is prone to falling down."
+  },
+  {
+    "index":80,
+    "title":"Unbreakable Heart",
+    "category":"Level 1",
+    "description":"Target gains a +4 bonus on saves against mind-affecting effects that rely on negative emotions."
+  },
+  {
+    "index":81,
+    "title":"Undetectable Alignment",
+    "category":"Level 1",
+    "description":"Conceals alignment for 24 hours."
+  },
+  {
+    "index":82,
+    "title":"Unnatural Lust",
+    "category":"Level 1",
+    "description":"Target is compelled to kiss or caress another."
+  },
+  {
+    "index":83,
+    "title":"Unprepared Combatant",
+    "category":"Level 1",
+    "description":"Target takes -4 on initiative and Reflex saves."
+  },
+  {
+    "index":84,
+    "title":"Unseen Servant",
+    "category":"Level 1",
+    "description":"Invisible force obeys your commands."
+  },
+  {
+    "index":85,
+    "title":"Vanish",
+    "category":"Level 1",
+    "description":"As invisibility for 1 round/level (5 max)."
+  },
+  {
+    "index":86,
+    "title":"Ventriloquism",
+    "category":"Level 1",
+    "description":"Throws voice for 1 min./level."
+  },
+  {
+    "index":87,
+    "title":"Vocal Alteration",
+    "category":"Level 1",
+    "description":"Disguise target's voice."
+  },
+  {
+    "index":88,
+    "title":"Youthful Appearance",
+    "category":"Level 1",
+    "description":"Target appears younger."
+  },
+  {
+    "index":89,
+    "title":"Acute Senses",
+    "category":"Level 2",
+    "description":"Subject gains bonus on Perception checks."
+  },
+  {
+    "index":90,
+    "title":"Allegro",
+    "category":"Level 2",
+    "description":"Gain haste while maintaining bardic performance."
+  },
+  {
+    "index":91,
+    "title":"Alter Self",
+    "category":"Level 2",
+    "description":"Assume form of a Small or Medium humanoid."
+  },
+  {
+    "index":92,
+    "title":"Ancestral Communion",
+    "category":"Level 2",
+    "description":"You contact your ancestors to bolster your own knowledge."
+  },
+  {
+    "index":93,
+    "title":"Animal Messenger",
+    "category":"Level 2",
+    "description":"Sends a Tiny animal to a specific place."
+  },
+  {
+    "index":94,
+    "title":"Animal Trance",
+    "category":"Level 2",
+    "description":"Fascinates 2d6 HD of animals."
+  },
+  {
+    "index":95,
+    "title":"Blindness/Deafness",
+    "category":"Level 2",
+    "description":"Makes subject blind or deaf."
+  },
+  {
+    "index":96,
+    "title":"Blistering Invective",
+    "category":"Level 2",
+    "description":"Make an Intimidate check against all foes within 30 feet; those demoralized also take fire damage."
+  },
+  {
+    "index":97,
+    "title":"Blood Biography",
+    "category":"Level 2",
+    "description":"Learn about a creature with its blood."
+  },
+  {
+    "index":98,
+    "title":"Boiling Blood",
+    "category":"Level 2",
+    "description":"Targets take fire damage; orcs get +2 Strength."
+  },
+  {
+    "index":99,
+    "title":"Book Ward",
+    "category":"Level 2",
+    "description":"As protection from energy, except lasting 1 day/level instead of 10 minutes per level and that the spell only protects against acid and fire damage (and while energy protection remains, the item is also completely waterproof)."
+  },
+  {
+    "index":100,
+    "title":"Blur",
+    "category":"Level 2",
+    "description":"Attacks miss subject 20% of the time."
+  },
+  {
+    "index":101,
+    "title":"Cacophonous Call",
+    "category":"Level 2",
+    "description":"Nauseates target."
+  },
+  {
+    "index":102,
+    "title":"Calm Emotions",
+    "category":"Level 2",
+    "description":"Calms creatures, negating emotion effects."
+  },
+  {
+    "index":103,
+    "title":"Cat's Grace",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Dex for 1 min./level."
+  },
+  {
+    "index":104,
+    "title":"Codespeak",
+    "category":"Level 2",
+    "description":"Grant all recipients ability to speak, read and write a new secret language."
+  },
+  {
+    "index":105,
+    "title":"Compassionate Ally",
+    "category":"Level 2",
+    "description":"Target compelled to help injured ally."
+  },
+  {
+    "index":106,
+    "title":"Create Treasure Map",
+    "category":"Level 2",
+    "description":"Creates a treasure map out of a creature's corpse."
+  },
+  {
+    "index":107,
+    "title":"Cure Moderate Wounds",
+    "category":"Level 2",
+    "description":"Cures 2d8 damage + 1/level (max +10)."
+  },
+  {
+    "index":108,
+    "title":"Darkness",
+    "category":"Level 2",
+    "description":"20-ft. radius of supernatural shadow."
+  },
+  {
+    "index":109,
+    "title":"Daze Monster",
+    "category":"Level 2",
+    "description":"Living creature of 6 HD or less loses next action."
+  },
+  {
+    "index":110,
+    "title":"Delay Pain",
+    "category":"Level 2",
+    "description":"Ignore pain for 1 hour/level."
+  },
+  {
+    "index":111,
+    "title":"Delay Poison",
+    "category":"Level 2",
+    "description":"Stops poison from harming target for 1 hour/level."
+  },
+  {
+    "index":112,
+    "title":"Detect Thoughts",
+    "category":"Level 2",
+    "description":"Allows “listening” to surface thoughts."
+  },
+  {
+    "index":113,
+    "title":"Discovery Torch",
+    "category":"Level 2",
+    "description":"Touched object emanates bright light, granting Perception and Sense Motive bonuses."
+  },
+  {
+    "index":114,
+    "title":"Disguise Other",
+    "category":"Level 2",
+    "description":"As disguise self, but affects you or another."
+  },
+  {
+    "index":115,
+    "title":"Distracting Cacophony",
+    "category":"Level 2",
+    "description":"Noise makes it difficult to cast."
+  },
+  {
+    "index":116,
+    "title":"Distressing Tone",
+    "category":"Level 2",
+    "description":"Sound sickens 1d4 creatures."
+  },
+  {
+    "index":117,
+    "title":"Dust of Twilight",
+    "category":"Level 2",
+    "description":"Black particles extinguish light sources."
+  },
+  {
+    "index":118,
+    "title":"Eagle's Splendor",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Cha for 1 min./level."
+  },
+  {
+    "index":119,
+    "title":"Enter Image",
+    "category":"Level 2",
+    "description":"Transfers your consciousness to an object bearing your likeness."
+  },
+  {
+    "index":120,
+    "title":"Enthrall",
+    "category":"Level 2",
+    "description":"Captivates all within 100 ft. + 10 ft./level."
+  },
+  {
+    "index":121,
+    "title":"Fox's Cunning",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Int for 1 min./level."
+  },
+  {
+    "index":122,
+    "title":"Gallant Inspiration",
+    "category":"Level 2",
+    "description":"#ERROR!"
+  },
+  {
+    "index":123,
+    "title":"Ghostbane Dirge",
+    "category":"Level 2",
+    "description":"Incorporeal creature takes half damage from non-magical weapons."
+  },
+  {
+    "index":124,
+    "title":"Ghostly Disguise",
+    "category":"Level 2",
+    "description":"You look like a ghost of yourself."
+  },
+  {
+    "index":125,
+    "title":"Glitterdust",
+    "category":"Level 2",
+    "description":"Blinds creatures, outlines invisible creatures."
+  },
+  {
+    "index":126,
+    "title":"Haunting Mists",
+    "category":"Level 2",
+    "description":"Creatures are shaken and take Wis damage."
+  },
+  {
+    "index":127,
+    "title":"Heroic Fortune",
+    "category":"Level 2",
+    "description":"The target gains 1 temporary hero point."
+  },
+  {
+    "index":128,
+    "title":"Heroism",
+    "category":"Level 2",
+    "description":"Gives +2 on attack rolls, saves, skill checks."
+  },
+  {
+    "index":129,
+    "title":"Hidden Speech",
+    "category":"Level 2",
+    "description":"Gain +10 on Bluff to send secret messages."
+  },
+  {
+    "index":130,
+    "title":"Hold Person",
+    "category":"Level 2",
+    "description":"Paralyzes one humanoid for 1 round/level."
+  },
+  {
+    "index":131,
+    "title":"Honeyed Tongue",
+    "category":"Level 2",
+    "description":"Roll 2 dice when using Diplomacy, take higher roll."
+  },
+  {
+    "index":132,
+    "title":"Hypnotic Pattern",
+    "category":"Level 2",
+    "description":"Fascinates (2d4 + level) HD of creatures."
+  },
+  {
+    "index":133,
+    "title":"Invisibility",
+    "category":"Level 2",
+    "description":"Subject is invisible for 1 min./level or until it attacks."
+  },
+  {
+    "index":134,
+    "title":"Locate Object",
+    "category":"Level 2",
+    "description":"Senses direction toward object (specific or type)."
+  },
+  {
+    "index":135,
+    "title":"Mad Hallucination",
+    "category":"Level 2",
+    "description":"Target takes penalties to mental actions."
+  },
+  {
+    "index":136,
+    "title":"Masterwork Transformation",
+    "category":"Level 2",
+    "description":"Make a normal item into a masterwork one."
+  },
+  {
+    "index":137,
+    "title":"Minor Image",
+    "category":"Level 2",
+    "description":"As silent image, plus some sound."
+  },
+  {
+    "index":138,
+    "title":"Mirror Image",
+    "category":"Level 2",
+    "description":"Creates decoy duplicates of you (1d4 + 1 per three levels, max 8)."
+  },
+  {
+    "index":139,
+    "title":"Misdirection",
+    "category":"Level 2",
+    "description":"Misleads divinations for one creature or object."
+  },
+  {
+    "index":140,
+    "title":"Miserable Pity",
+    "category":"Level 2",
+    "description":"Opponents cannot attack a pathetic creature."
+  },
+  {
+    "index":141,
+    "title":"Oppressive Boredom",
+    "category":"Level 2",
+    "description":"Target loses its next action."
+  },
+  {
+    "index":142,
+    "title":"Piercing Shriek",
+    "category":"Level 2",
+    "description":"Target is staggered by a painful sound."
+  },
+  {
+    "index":143,
+    "title":"Pilfering Hand",
+    "category":"Level 2",
+    "description":"You may seize an object or manipulate it from afar."
+  },
+  {
+    "index":144,
+    "title":"Pyrotechnics",
+    "category":"Level 2",
+    "description":"Turns fire into blinding light or choking smoke."
+  },
+  {
+    "index":145,
+    "title":"Qualm",
+    "category":"Level 2",
+    "description":"Target gains penalties on ability checks, skill checks, and concentration checks until it spends an entire round doing nothing."
+  },
+  {
+    "index":146,
+    "title":"Rage",
+    "category":"Level 2",
+    "description":"Gives +2 to Str and Con, +1 on Will saves, –2 to AC."
+  },
+  {
+    "index":147,
+    "title":"Reckless Infatuation",
+    "category":"Level 2",
+    "description":"Target is compelled to stay near another."
+  },
+  {
+    "index":148,
+    "title":"Retrieve Item",
+    "category":"Level 2",
+    "description":"Call an item instantly to you hand from nearby by speaking a special word and snapping your fingers. The spell fails if the item is in the possession of another creature."
+  },
+  {
+    "index":149,
+    "title":"Returning Weapon",
+    "category":"Level 2",
+    "description":"Grants a weapon the returning special weapon quality."
+  },
+  {
+    "index":150,
+    "title":"Scare",
+    "category":"Level 2",
+    "description":"Panicks creatures of less than 6 HD."
+  },
+  {
+    "index":151,
+    "title":"Share Language, Communal",
+    "category":"Level 2",
+    "description":"As share language, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":152,
+    "title":"Share Memory",
+    "category":"Level 2",
+    "description":"Share one memory with the target."
+  },
+  {
+    "index":153,
+    "title":"Shatter",
+    "category":"Level 2",
+    "description":"Sonic vibration damages objects or crystalline creatures."
+  },
+  {
+    "index":154,
+    "title":"Silence",
+    "category":"Level 2",
+    "description":"Negates sound in 20-ft. radius."
+  },
+  {
+    "index":155,
+    "title":"Silk to Steel",
+    "category":"Level 2",
+    "description":"Use a scarf as a shield or whip."
+  },
+  {
+    "index":156,
+    "title":"Snapdragon Fireworks",
+    "category":"Level 2",
+    "description":"Create 1 dragon firework/level."
+  },
+  {
+    "index":157,
+    "title":"Sound Burst",
+    "category":"Level 2",
+    "description":"Deals 1d8 sonic damage and may stun subjects."
+  },
+  {
+    "index":158,
+    "title":"Steal Voice",
+    "category":"Level 2",
+    "description":"Target gains the croaking spellblight."
+  },
+  {
+    "index":159,
+    "title":"Suggestion",
+    "category":"Level 2",
+    "description":"Compels subject to follow stated course of action."
+  },
+  {
+    "index":160,
+    "title":"Summon Monster II",
+    "category":"Level 2",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":161,
+    "title":"Summon Swarm",
+    "category":"Level 2",
+    "description":"Summons swarm of bats, rats, or spiders."
+  },
+  {
+    "index":162,
+    "title":"Tactical Acumen",
+    "category":"Level 2",
+    "description":"You gain an additional +1 on attack rolls or to AC due to battlefield positioning."
+  },
+  {
+    "index":163,
+    "title":"Thunder Fire",
+    "category":"Level 2",
+    "description":"Ammunition in the targeted firearm deafens opponents."
+  },
+  {
+    "index":164,
+    "title":"Tongues",
+    "category":"Level 2",
+    "description":"Speak and understand any language."
+  },
+  {
+    "index":165,
+    "title":"Unadulterated Loathing",
+    "category":"Level 2",
+    "description":"Target is compelled to avoid another creature."
+  },
+  {
+    "index":166,
+    "title":"Versatile Weapon",
+    "category":"Level 2",
+    "description":"Weapon bypasses some DR."
+  },
+  {
+    "index":167,
+    "title":"Wartrain Mount",
+    "category":"Level 2",
+    "description":"Animal gains the combat training general purpose."
+  },
+  {
+    "index":168,
+    "title":"Whispering Wind",
+    "category":"Level 2",
+    "description":"Sends a short message 1 mile/level."
+  },
+  {
+    "index":169,
+    "title":"Arcane Concordance",
+    "category":"Level 3",
+    "description":"Grants metamagic to arcane spells."
+  },
+  {
+    "index":170,
+    "title":"Aura of the Unremarkable",
+    "category":"Level 3",
+    "description":"An invisible sphere of magic surrounds you, clouding the minds of creatures in the area so they regard even the strangest actions as innocuous."
+  },
+  {
+    "index":171,
+    "title":"Blink",
+    "category":"Level 3",
+    "description":"You randomly vanish and reappear for 1 round/level."
+  },
+  {
+    "index":172,
+    "title":"Campfire Wall",
+    "category":"Level 3",
+    "description":"Creates a shelter around a campfire."
+  },
+  {
+    "index":173,
+    "title":"Channel the Gift",
+    "category":"Level 3",
+    "description":"Channel magical power into target to fuel their spellcasting. The next 3rd level or lower spell target casts does not expend a spell slot; instead you use your spell slot to power their spell."
+  },
+  {
+    "index":174,
+    "title":"Charm Monster",
+    "category":"Level 3",
+    "description":"Makes monster believe it is your ally."
+  },
+  {
+    "index":175,
+    "title":"Clairaudience/Clairvoyance",
+    "category":"Level 3",
+    "description":"Hear or see at a distance for 1 min./level."
+  },
+  {
+    "index":176,
+    "title":"Confusion",
+    "category":"Level 3",
+    "description":"Subjects behave oddly for 1 round/level."
+  },
+  {
+    "index":177,
+    "title":"Control Summoned Creature",
+    "category":"Level 3",
+    "description":"Direct a summoned monster as if you had summoned it."
+  },
+  {
+    "index":178,
+    "title":"Coordinated Effort",
+    "category":"Level 3",
+    "description":"Grants a teamwork feat you have."
+  },
+  {
+    "index":179,
+    "title":"Crushing Despair",
+    "category":"Level 3",
+    "description":"Subjects take –2 on attack rolls, damage rolls, saves, and checks."
+  },
+  {
+    "index":180,
+    "title":"Cure Serious Wounds",
+    "category":"Level 3",
+    "description":"Cures 3d8 damage + 1/level (max +15)."
+  },
+  {
+    "index":181,
+    "title":"Curse of Disgust",
+    "category":"Level 3",
+    "description":"Target is sickened when viewing a trigger."
+  },
+  {
+    "index":182,
+    "title":"Daylight",
+    "category":"Level 3",
+    "description":"60-ft. radius of bright light."
+  },
+  {
+    "index":183,
+    "title":"Delay Poison, Communal",
+    "category":"Level 3",
+    "description":"As delay poison, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":184,
+    "title":"Deep Slumber",
+    "category":"Level 3",
+    "description":"Puts 10 HD of creatures to sleep."
+  },
+  {
+    "index":185,
+    "title":"Dispel Magic",
+    "category":"Level 3",
+    "description":"Cancels one magical spell or effect."
+  },
+  {
+    "index":186,
+    "title":"Displacement",
+    "category":"Level 3",
+    "description":"Attacks miss subject 50% of the time."
+  },
+  {
+    "index":187,
+    "title":"Elemental Speech",
+    "category":"Level 3",
+    "description":"Enables you to speak to elementals and some creatures."
+  },
+  {
+    "index":188,
+    "title":"Exquisite Accompaniment",
+    "category":"Level 3",
+    "description":"Instrument maintains bardic performance for you."
+  },
+  {
+    "index":189,
+    "title":"Fear",
+    "category":"Level 3",
+    "description":"Subjects within cone flee for 1 round/level."
+  },
+  {
+    "index":190,
+    "title":"Feather Step, Mass",
+    "category":"Level 3",
+    "description":"As feather step, but multiple creatures."
+  },
+  {
+    "index":191,
+    "title":"Gaseous Form",
+    "category":"Level 3",
+    "description":"Subject becomes insubstantial and can fly slowly."
+  },
+  {
+    "index":192,
+    "title":"Geas, Lesser",
+    "category":"Level 3",
+    "description":"Commands subject of 7 HD or less."
+  },
+  {
+    "index":193,
+    "title":"Glibness",
+    "category":"Level 3",
+    "description":"You gain +20 bonus on Bluff checks, and your lies can escape magical discernment."
+  },
+  {
+    "index":194,
+    "title":"Good Hope",
+    "category":"Level 3",
+    "description":"Subjects gain +2 on attack rolls, damage rolls, saves, and checks."
+  },
+  {
+    "index":195,
+    "title":"Harrowing",
+    "category":"Level 3",
+    "description":"You use a Harrow deck to tell a fortune for yourself or someone else."
+  },
+  {
+    "index":196,
+    "title":"Haste",
+    "category":"Level 3",
+    "description":"One creature/level moves faster, receives +1 on attack rolls, AC, and Reflex saves."
+  },
+  {
+    "index":197,
+    "title":"Haunting Choir",
+    "category":"Level 3",
+    "description":"Spirits cause wracking pain to listeners."
+  },
+  {
+    "index":198,
+    "title":"Illusory Script",
+    "category":"Level 3",
+    "description":"Only select creatures can read text."
+  },
+  {
+    "index":199,
+    "title":"Invigorate, Mass",
+    "category":"Level 3",
+    "description":"As invigorate, but multiple creatures."
+  },
+  {
+    "index":200,
+    "title":"Invisibility Sphere",
+    "category":"Level 3",
+    "description":"Makes everyone within 10 feet invisible."
+  },
+  {
+    "index":201,
+    "title":"Jester's Jaunt",
+    "category":"Level 3",
+    "description":"Teleport target within 30 ft. of itself."
+  },
+  {
+    "index":202,
+    "title":"Lover's Vengeance",
+    "category":"Level 3",
+    "description":"You inspire yourself or a lover to a vengeful rage against a chosen enemy."
+  },
+  {
+    "index":203,
+    "title":"Mad Monkeys",
+    "category":"Level 3",
+    "description":"Summon a swarm of mischievous monkeys."
+  },
+  {
+    "index":204,
+    "title":"Major Image",
+    "category":"Level 3",
+    "description":"As silent image, plus sound, smell, and thermal effects."
+  },
+  {
+    "index":205,
+    "title":"Malicious Spite",
+    "category":"Level 3",
+    "description":"Target is compelled to plot against another."
+  },
+  {
+    "index":206,
+    "title":"Overwhelming Grief",
+    "category":"Level 3",
+    "description":"Grieving target can take no actions and is denied its Dex bonus."
+  },
+  {
+    "index":207,
+    "title":"Phantom Driver",
+    "category":"Level 3",
+    "description":"Conjures a phantom to drive vehicles."
+  },
+  {
+    "index":208,
+    "title":"Phantom Steed",
+    "category":"Level 3",
+    "description":"Magic horse appears for 1 hour/level."
+  },
+  {
+    "index":209,
+    "title":"Purging Finale",
+    "category":"Level 3",
+    "description":"Removes one negative effect."
+  },
+  {
+    "index":210,
+    "title":"Rain of Frogs",
+    "category":"Level 3",
+    "description":"Summon a swarm of poisonous frogs."
+  },
+  {
+    "index":211,
+    "title":"Remove Curse",
+    "category":"Level 3",
+    "description":"Frees object or person from curse."
+  },
+  {
+    "index":212,
+    "title":"Returning weapon, Communal",
+    "category":"Level 3",
+    "description":"As returning weapon, but you may divide the duration among weapons touched."
+  },
+  {
+    "index":213,
+    "title":"Reviving Finale",
+    "category":"Level 3",
+    "description":"Allies cured 2d6 damage."
+  },
+  {
+    "index":214,
+    "title":"Scrying",
+    "category":"Level 3",
+    "description":"Spies on subject from a distance."
+  },
+  {
+    "index":215,
+    "title":"Sculpt Sound",
+    "category":"Level 3",
+    "description":"Creates new sounds or changes existing ones into new sounds."
+  },
+  {
+    "index":216,
+    "title":"Secret Page",
+    "category":"Level 3",
+    "description":"Changes one page to hide its real content."
+  },
+  {
+    "index":217,
+    "title":"See Invisibility",
+    "category":"Level 3",
+    "description":"Reveals invisible creatures or objects."
+  },
+  {
+    "index":218,
+    "title":"Seek Thoughts",
+    "category":"Level 3",
+    "description":"Detects thinking creatures’ thoughts."
+  },
+  {
+    "index":219,
+    "title":"Sepia Snake Sigil",
+    "category":"Level 3",
+    "description":"Creates a snake-shaped text symbol that immobilizes reader."
+  },
+  {
+    "index":220,
+    "title":"Slow",
+    "category":"Level 3",
+    "description":"One subject/level takes only one action/round, –1 to AC, Reflex saves, and attack rolls."
+  },
+  {
+    "index":221,
+    "title":"Smug Narcissism",
+    "category":"Level 3",
+    "description":"Target is distracted by its sense of self."
+  },
+  {
+    "index":222,
+    "title":"Speak with Animals",
+    "category":"Level 3",
+    "description":"You can communicate with animals."
+  },
+  {
+    "index":223,
+    "title":"Summon Monster III",
+    "category":"Level 3",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":224,
+    "title":"Terrible Remorse",
+    "category":"Level 3",
+    "description":"Creature is compelled to harm itself."
+  },
+  {
+    "index":225,
+    "title":"Thunderous Drums",
+    "category":"Level 3",
+    "description":"1d8 damage/level and knocked prone."
+  },
+  {
+    "index":226,
+    "title":"Tiny Hut",
+    "category":"Level 3",
+    "description":"Creates shelter for 10 creatures."
+  },
+  {
+    "index":227,
+    "title":"Tongues, Communal",
+    "category":"Level 3",
+    "description":"As tongues, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":228,
+    "title":"Vision of Hell",
+    "category":"Level 3",
+    "description":"Illusory hellscape makes creatures shaken."
+  },
+  {
+    "index":229,
+    "title":"Witness",
+    "category":"Level 3",
+    "description":"See through the target's eyes and ears."
+  },
+  {
+    "index":230,
+    "title":"Ancestral Gift",
+    "category":"Level 4",
+    "description":"A ghostly ancestor appears and gives you a magic weapon, which you may use as if you were proficient in it."
+  },
+  {
+    "index":231,
+    "title":"Apparent Master",
+    "category":"Level 4",
+    "description":"Charm makes a construct regard you as its master."
+  },
+  {
+    "index":232,
+    "title":"Break Enchantment",
+    "category":"Level 4",
+    "description":"Frees subjects from enchantments, transmutations, and curses."
+  },
+  {
+    "index":233,
+    "title":"Cure Critical Wounds",
+    "category":"Level 4",
+    "description":"Cures 4d8 damage + 1/level (max +20)."
+  },
+  {
+    "index":234,
+    "title":"Dance of a Hundred Cuts",
+    "category":"Level 4",
+    "description":"Gain +1 combat bonus/3 levels."
+  },
+  {
+    "index":235,
+    "title":"Daze, Mass",
+    "category":"Level 4",
+    "description":"As daze, but affecting multiple creatures."
+  },
+  {
+    "index":236,
+    "title":"Denounce",
+    "category":"Level 4",
+    "description":"Worsens attitudes toward target creature."
+  },
+  {
+    "index":237,
+    "title":"Detect Scrying",
+    "category":"Level 4",
+    "description":"Alerts you to magical eavesdropping."
+  },
+  {
+    "index":238,
+    "title":"Dimension Door",
+    "category":"Level 4",
+    "description":"Teleports you a short distance."
+  },
+  {
+    "index":239,
+    "title":"Discordant Blast",
+    "category":"Level 4",
+    "description":"3d6 sonic damage in 10-ft. burst or 30-ft. cone can also bull rush creatures."
+  },
+  {
+    "index":240,
+    "title":"Dominate Person",
+    "category":"Level 4",
+    "description":"Controls humanoid telepathically."
+  },
+  {
+    "index":241,
+    "title":"Echolocation",
+    "category":"Level 4",
+    "description":"Sonic sense gives you blindsight 40 ft."
+  },
+  {
+    "index":242,
+    "title":"Envious Urge",
+    "category":"Level 4",
+    "description":"Targets steal from or disarm others."
+  },
+  {
+    "index":243,
+    "title":"Ghostbane Dirge, Mass",
+    "category":"Level 4",
+    "description":"As ghostbane dirge, but affecting multiple creatures."
+  },
+  {
+    "index":244,
+    "title":"Freedom of Movement",
+    "category":"Level 4",
+    "description":"Subject moves normally despite impediments to restrict movement."
+  },
+  {
+    "index":245,
+    "title":"Hallucinatory Terrain",
+    "category":"Level 4",
+    "description":"Makes one type of terrain appear like another (field as forest, or the like)."
+  },
+  {
+    "index":246,
+    "title":"Heroic Finale",
+    "category":"Level 4",
+    "description":"Subject within range of your bardic performance can take an action."
+  },
+  {
+    "index":247,
+    "title":"Heroic Fortune, Mass",
+    "category":"Level 4",
+    "description":"As heroic fortune, except it affects more targets."
+  },
+  {
+    "index":248,
+    "title":"Hold Monster",
+    "category":"Level 4",
+    "description":"As hold person, but any creature."
+  },
+  {
+    "index":249,
+    "title":"Invisibility, Greater",
+    "category":"Level 4",
+    "description":"As invisibility, but subject can attack and stay invisible."
+  },
+  {
+    "index":250,
+    "title":"Legend Lore",
+    "category":"Level 4",
+    "description":"Lets you learn tales about a person, place, or thing."
+  },
+  {
+    "index":251,
+    "title":"Locate Creature",
+    "category":"Level 4",
+    "description":"Indicates direction to known creature."
+  },
+  {
+    "index":252,
+    "title":"Modify Memory",
+    "category":"Level 4",
+    "description":"Changes 5 minutes of subject's memories."
+  },
+  {
+    "index":253,
+    "title":"Neutralize Poison",
+    "category":"Level 4",
+    "description":"Immunizes subject against poison, detoxifies venom in or on subject."
+  },
+  {
+    "index":254,
+    "title":"Phantom Steed, Communal",
+    "category":"Level 4",
+    "description":"As phantom steed, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":255,
+    "title":"Primal Scream",
+    "category":"Level 4",
+    "description":"Free yourself from enchantments and paralysis effects."
+  },
+  {
+    "index":256,
+    "title":"Rainbow Pattern",
+    "category":"Level 4",
+    "description":"Lights fascinate 24 HD of creatures."
+  },
+  {
+    "index":257,
+    "title":"Repel Vermin",
+    "category":"Level 4",
+    "description":"Insects, spiders, and other vermin stay 10 ft. away."
+  },
+  {
+    "index":258,
+    "title":"Secure Shelter",
+    "category":"Level 4",
+    "description":"Creates sturdy cottage."
+  },
+  {
+    "index":259,
+    "title":"Serenity",
+    "category":"Level 4",
+    "description":"Peaceful feelings harm those attempting violence."
+  },
+  {
+    "index":260,
+    "title":"Shadow Conjuration",
+    "category":"Level 4",
+    "description":"Mimics conjuration below 4th level, but only 20% real."
+  },
+  {
+    "index":261,
+    "title":"Shadow Step",
+    "category":"Level 4",
+    "description":"Teleport from one shadow to another."
+  },
+  {
+    "index":262,
+    "title":"Shield of the Dawnflower",
+    "category":"Level 4",
+    "description":"Creatures that strike you take 1d6 +1/level fire damage."
+  },
+  {
+    "index":263,
+    "title":"Shocking Image",
+    "category":"Level 4",
+    "description":"As mirror image, but the duplicates emit electrical damage when destroyed."
+  },
+  {
+    "index":264,
+    "title":"Shout",
+    "category":"Level 4",
+    "description":"Deafens all within cone and deals 5d6 sonic damage."
+  },
+  {
+    "index":265,
+    "title":"Sonic Thrust",
+    "category":"Level 4",
+    "description":"Sound moves targets away from you."
+  },
+  {
+    "index":266,
+    "title":"Speak with Plants",
+    "category":"Level 4",
+    "description":"You can talk to plants and plant creatures."
+  },
+  {
+    "index":267,
+    "title":"Summon Accuser",
+    "category":"Level 4",
+    "description":"Summons a single accuser devil from Hell to do your bidding."
+  },
+  {
+    "index":268,
+    "title":"Summon Monster IV",
+    "category":"Level 4",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":269,
+    "title":"Treasure Stitching",
+    "category":"Level 4",
+    "description":"Objects on cloth become embroidered."
+  },
+  {
+    "index":270,
+    "title":"Utter Contempt",
+    "category":"Level 4",
+    "description":"target's attitude worsens by two categories."
+  },
+  {
+    "index":271,
+    "title":"Virtuoso Performance",
+    "category":"Level 4",
+    "description":"Start a second bardic performance while maintaining the first."
+  },
+  {
+    "index":272,
+    "title":"Wall of Sound",
+    "category":"Level 4",
+    "description":"Sonic wall deflects and damages creatures."
+  },
+  {
+    "index":273,
+    "title":"Wandering Star Motes",
+    "category":"Level 4",
+    "description":"Outlines subject, produces light."
+  },
+  {
+    "index":274,
+    "title":"Zone of Silence",
+    "category":"Level 4",
+    "description":"Keeps eavesdroppers from overhearing you."
+  },
+  {
+    "index":275,
+    "title":"Bard's Escape",
+    "category":"Level 5",
+    "description":"You and allies escape an emergency by teleporting to safety."
+  },
+  {
+    "index":276,
+    "title":"Cacophonous Call, Mass",
+    "category":"Level 5",
+    "description":"Nauseates multiple targets."
+  },
+  {
+    "index":277,
+    "title":"Cloak of Dreams",
+    "category":"Level 5",
+    "description":"Living creatures within 5 ft. fall asleep."
+  },
+  {
+    "index":278,
+    "title":"Covetous Aura",
+    "category":"Level 5",
+    "description":"You may gain the benefits of a spell meant for someone else."
+  },
+  {
+    "index":279,
+    "title":"Cure Light Wounds, Mass",
+    "category":"Level 5",
+    "description":"Cures 1d8 damage + 1/level, affects 1 subject/level."
+  },
+  {
+    "index":280,
+    "title":"Deafening Song Bolt",
+    "category":"Level 5",
+    "description":"Blast of song deals 3d10 damage and deafens targets."
+  },
+  {
+    "index":281,
+    "title":"Dispel Magic, Greater",
+    "category":"Level 5",
+    "description":"As dispel magic, but can affect multiple targets."
+  },
+  {
+    "index":282,
+    "title":"Dream",
+    "category":"Level 5",
+    "description":"Sends message to anyone sleeping."
+  },
+  {
+    "index":283,
+    "title":"False Vision",
+    "category":"Level 5",
+    "description":"Fools scrying with an illusion."
+  },
+  {
+    "index":284,
+    "title":"Foe to Friend",
+    "category":"Level 5",
+    "description":"Redirect an enemy creature's attack."
+  },
+  {
+    "index":285,
+    "title":"Frozen Note",
+    "category":"Level 5",
+    "description":"Paralyzes creatures listening to your song."
+  },
+  {
+    "index":286,
+    "title":"Heroism, Greater",
+    "category":"Level 5",
+    "description":"Gives +4 bonus on attack rolls, saves, skill checks; immunity to fear; temporary hp."
+  },
+  {
+    "index":287,
+    "title":"Joyful Rapture",
+    "category":"Level 5",
+    "description":"Negate harmful emotions."
+  },
+  {
+    "index":288,
+    "title":"Ki Shout",
+    "category":"Level 5",
+    "description":"Target takes 1d6 sonic/level and is stunned."
+  },
+  {
+    "index":289,
+    "title":"Mind Fog",
+    "category":"Level 5",
+    "description":"Subjects in fog get –10 to Wis and Will checks."
+  },
+  {
+    "index":290,
+    "title":"Mirage Arcana",
+    "category":"Level 5",
+    "description":"As hallucinatory terrain, plus structures."
+  },
+  {
+    "index":291,
+    "title":"Mislead",
+    "category":"Level 5",
+    "description":"Turns you invisible and creates illusory double."
+  },
+  {
+    "index":292,
+    "title":"Nightmare",
+    "category":"Level 5",
+    "description":"Sends vision dealing 1d10 damage, fatigue."
+  },
+  {
+    "index":293,
+    "title":"Persistent Image",
+    "category":"Level 5",
+    "description":"As major image, but no concentration required."
+  },
+  {
+    "index":294,
+    "title":"Phantasmal Web",
+    "category":"Level 5",
+    "description":"Catches subjects in illusory web."
+  },
+  {
+    "index":295,
+    "title":"Resonating Word",
+    "category":"Level 5",
+    "description":"Target is damaged, staggered, and stunned."
+  },
+  {
+    "index":296,
+    "title":"Seeming",
+    "category":"Level 5",
+    "description":"Changes appearance of one person per two levels."
+  },
+  {
+    "index":297,
+    "title":"Shadow Evocation",
+    "category":"Level 5",
+    "description":"Mimics evocation of lower than 5th level, but only 20% real."
+  },
+  {
+    "index":298,
+    "title":"Shadow Walk",
+    "category":"Level 5",
+    "description":"Step into shadow to travel rapidly."
+  },
+  {
+    "index":299,
+    "title":"Shadowbard",
+    "category":"Level 5",
+    "description":"Shadowy duplicate starts a bardic performance."
+  },
+  {
+    "index":300,
+    "title":"Song of Discord",
+    "category":"Level 5",
+    "description":"Forces targets to attack each other."
+  },
+  {
+    "index":301,
+    "title":"Stunning Finale",
+    "category":"Level 5",
+    "description":"Stuns 3 creatures for 1 round."
+  },
+  {
+    "index":302,
+    "title":"Suggestion, Mass",
+    "category":"Level 5",
+    "description":"As suggestion, affects subject/level."
+  },
+  {
+    "index":303,
+    "title":"Summon Infernal Host",
+    "category":"Level 5",
+    "description":"Summon host devils."
+  },
+  {
+    "index":304,
+    "title":"Summon Monster V",
+    "category":"Level 5",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":305,
+    "title":"Unwilling Shield",
+    "category":"Level 5",
+    "description":"Subject shares wounds you receive."
+  },
+  {
+    "index":306,
+    "title":"Vengeful Outrage",
+    "category":"Level 5",
+    "description":"Target is compelled to destroy one enemy."
+  },
+  {
+    "index":307,
+    "title":"Analyze Dweomer",
+    "category":"Level 6",
+    "description":"Reveals magical aspects of subject."
+  },
+  {
+    "index":308,
+    "title":"Animate Objects",
+    "category":"Level 6",
+    "description":"Objects attack your foes."
+  },
+  {
+    "index":309,
+    "title":"Brilliant Inspiration",
+    "category":"Level 6",
+    "description":"Take best of two d20 rolls."
+  },
+  {
+    "index":310,
+    "title":"Cat's Grace, Mass",
+    "category":"Level 6",
+    "description":"As cat's grace, affects 1 subject/level."
+  },
+  {
+    "index":311,
+    "title":"Charm Monster, Mass",
+    "category":"Level 6",
+    "description":"As charm monster, but all within 30 ft."
+  },
+  {
+    "index":312,
+    "title":"Cure Moderate Wounds, Mass",
+    "category":"Level 6",
+    "description":"Cures 2d8 damage + 1/level, affects 1 subject/level."
+  },
+  {
+    "index":313,
+    "title":"Dance of a Thousand Cuts",
+    "category":"Level 6",
+    "description":"As dance of a hundred cuts, plus the benefits of haste."
+  },
+  {
+    "index":314,
+    "title":"Deadly Finale",
+    "category":"Level 6",
+    "description":"Deals 2d8 damage to multiple targets."
+  },
+  {
+    "index":315,
+    "title":"Dirge of the Victorious Knights",
+    "category":"Level 6",
+    "description":"Call forth special illusions of mounted Hellknights."
+  },
+  {
+    "index":316,
+    "title":"Eagle's Splendor, Mass",
+    "category":"Level 6",
+    "description":"As eagle's splendor, affects 1 subject/level."
+  },
+  {
+    "index":317,
+    "title":"Euphoric Tranquility",
+    "category":"Level 6",
+    "description":"Makes a single creature peaceful and friendly."
+  },
+  {
+    "index":318,
+    "title":"Eyebite",
+    "category":"Level 6",
+    "description":"Target becomes panicked, sickened, and/or comatose."
+  },
+  {
+    "index":319,
+    "title":"Find the Path",
+    "category":"Level 6",
+    "description":"Shows most direct way to a location."
+  },
+  {
+    "index":320,
+    "title":"Fool's Forbiddance",
+    "category":"Level 6",
+    "description":"Confuses enemies who come within a magical emanation centered on you."
+  },
+  {
+    "index":321,
+    "title":"Fox's Cunning, Mass",
+    "category":"Level 6",
+    "description":"As fox's cunning, affects 1 subject/level."
+  },
+  {
+    "index":322,
+    "title":"Geas/Quest",
+    "category":"Level 6",
+    "description":"As lesser geas, but affects any creature."
+  },
+  {
+    "index":323,
+    "title":"Getaway",
+    "category":"Level 6",
+    "description":"Teleports a group of predetermined allies and creatures to a predetermined location."
+  },
+  {
+    "index":324,
+    "title":"Heroes' Feast",
+    "category":"Level 6",
+    "description":"Food for one creature/level cures and grants combat bonuses."
+  },
+  {
+    "index":325,
+    "title":"Irresistible Dance",
+    "category":"Level 6",
+    "description":"Forces subject to dance."
+  },
+  {
+    "index":326,
+    "title":"Overwhelming Presence",
+    "category":"Level 6",
+    "description":"Creatures bow before you as if you were divine."
+  },
+  {
+    "index":327,
+    "title":"Permanent Image",
+    "category":"Level 6",
+    "description":"Permanent illusion, includes sight, sound, smell, and thermal effects."
+  },
+  {
+    "index":328,
+    "title":"Pied Piping",
+    "category":"Level 6",
+    "description":"Compel similar creatures to follow you."
+  },
+  {
+    "index":329,
+    "title":"Programmed Image",
+    "category":"Level 6",
+    "description":"As major image, plus triggered by event."
+  },
+  {
+    "index":330,
+    "title":"Project Image",
+    "category":"Level 6",
+    "description":"Illusory double can talk and cast spells."
+  },
+  {
+    "index":331,
+    "title":"Scrying, Greater",
+    "category":"Level 6",
+    "description":"As scrying, but faster and longer."
+  },
+  {
+    "index":332,
+    "title":"Shout, Greater",
+    "category":"Level 6",
+    "description":"Devastating yell deals 10d6 sonic damage; stuns creatures."
+  },
+  {
+    "index":333,
+    "title":"Summon Monster VI",
+    "category":"Level 6",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":334,
+    "title":"Sympathetic Vibration",
+    "category":"Level 6",
+    "description":"Deals 2d10 damage/round to freestanding structure."
+  },
+  {
+    "index":335,
+    "title":"Veil",
+    "category":"Level 6",
+    "description":"Changes appearance of group of creatures."
+  },
+  {
+    "index":336,
+    "title":"Waves of Ecstasy",
+    "category":"Level 6",
+    "description":"Pleasure stuns and staggers creatures."
+  }
+]

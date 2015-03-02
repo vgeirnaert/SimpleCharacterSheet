@@ -1,13 +1,14 @@
 package net.mindsoup.charactersoup.pf.skills;
 
-import java.util.Arrays;
+import android.content.Context;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import net.mindsoup.charactersoup.R;
 import net.mindsoup.charactersoup.pf.PfAttributes;
 import net.mindsoup.charactersoup.pf.classes.PfClass;
-import android.content.Context;
-import android.os.Parcel;
-import android.os.Parcelable;
+
+import java.util.Arrays;
 
 public class PfSkill implements Parcelable {
 	
