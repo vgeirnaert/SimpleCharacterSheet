@@ -78,4 +78,9 @@ public class PfRogue implements PfClass {
     public String toString() {
         return "Rogue";
     }
+
+    @Override
+    public int getLevelupSpecialPowers(int level) {
+        return 0;
+    }
 }

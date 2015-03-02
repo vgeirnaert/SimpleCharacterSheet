@@ -340,6 +340,13 @@ public class CharacterActivity extends SherlockFragmentActivity {
 		}
 	}
 
+    public void removeSpecialPower(int index) {
+        this.character.removeSpecialPower(index);
+        DatabaseHelper db = new DatabaseHelper(this);
+        db.deletePower(this.character, index);
+        updateCharacter();
+    }
+
     public void addSpecialPower(int powerIndex) {
         if(this.character.addSpecialPower(powerIndex)) {
             DatabaseHelper db = new DatabaseHelper(this);

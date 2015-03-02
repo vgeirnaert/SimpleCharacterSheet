@@ -33,8 +33,7 @@ import java.util.Set;
 public class PfCharacter implements Parcelable {
 
     public static final String tempBonus = "Temp";
-	
-	public enum Attributes {AC, FORT, REF, WILL, HP};
+    public enum Attributes {AC, FORT, REF, WILL, HP};
 	
 	private PfRace myRace;
 	private PfClass myClass;
@@ -64,7 +63,7 @@ public class PfCharacter implements Parcelable {
 	private PfPace pace = PfPace.FAST;
 	private int availableSkillRanks = 0;
 	private int availableFeats = 0;
-    private int availableSpecialPowers = 5;
+    private int availableSpecialPowers = 0;
 	
 	private int newLevels = 0;
 	private int hitpoints = 0;
@@ -601,11 +600,7 @@ public class PfCharacter implements Parcelable {
 	public Weapon getOffhanddWeapon() {
 		return this.ActiveOffhandWeapon;
 	}
-	
 
-	
-
-	
 	public void levelUp(int oldLevel) {
 		
 		int newLevels = this.getLevel() - oldLevel;
@@ -895,8 +890,13 @@ public class PfCharacter implements Parcelable {
 		if(feats.remove(feat)) {
 			this.setAvailableFeats(this.getAvailableFeats() + 1);
 		}
-		
 	}
+
+    public void removeSpecialPower(int index) {
+        if(specialPowers.remove(new Integer(index))) {
+            this.setAvailableSpecialPowers(this.getAvailableSpecialPowers() + 1);
+        }
+    }
 	
 	/**
 	 * NOTE THAT THIS SHOULD ONLY BE USED DURING CHARACTER LOADING
@@ -1202,7 +1202,7 @@ public class PfCharacter implements Parcelable {
         if(availableSpecialPowers > 0) {
             if (!specialPowers.contains(new Integer(index))) {
                 specialPowers.add(new Integer(index));
-                availableSpecialPowers--;
+                availableSpecialPowers -= 1;
                 return true;
             }
         }
@@ -1268,6 +1268,7 @@ public class PfCharacter implements Parcelable {
             i++;
         }
         out.writeIntArray(powers);
+        out.writeInt(availableSpecialPowers);
 	}
 	
 	public void readFromParcel(Parcel in) {
@@ -1321,6 +1322,8 @@ public class PfCharacter implements Parcelable {
         for(int power : powers) {
             specialPowers.add(new Integer(power));
         }
+
+        availableSpecialPowers = in.readInt();
 
 	}
 

@@ -81,4 +81,9 @@ public class PfWizard implements PfClass {
     public String toString() {
         return "Wizard";
     }
+
+    @Override
+    public int getLevelupSpecialPowers(int level) {
+        return 0;
+    }
 }

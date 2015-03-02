@@ -121,4 +121,9 @@ public class PfSorcerer implements PfClass {
 		return current;
 	}
 
+    @Override
+    public int getLevelupSpecialPowers(int level) {
+        return 0;
+    }
+
 }

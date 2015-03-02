@@ -81,4 +81,9 @@ public class PfDruid implements PfClass {
     public String toString() {
         return "Druid";
     }
+
+    @Override
+    public int getLevelupSpecialPowers(int level) {
+        return 0;
+    }
 }

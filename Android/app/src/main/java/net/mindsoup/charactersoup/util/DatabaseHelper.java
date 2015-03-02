@@ -38,7 +38,7 @@ import java.util.Map;
 public class DatabaseHelper extends SQLiteOpenHelper {
 	// db
 	private static final String DATABASE = "SimplePathfinderCharacterSheet.db";
-	private static final int DATABASE_VERSION = 22;
+	private static final int DATABASE_VERSION = 26;
 	
 	public static abstract class Db implements BaseColumns {
 
@@ -55,6 +55,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		private static final String CHAR_PACE = "pace";
 		private static final String CHAR_ASRANKS = "availableSkillRanks";
 		private static final String CHAR_AVAILABLE_FEATS = "availableFeats";
+        private static final String CHAR_AVAILABLE_POWERS = "availablePowers";
 		private static final String CHAR_CHA = "charisma";
 		private static final String CHAR_CON = "constitution";
 		private static final String CHAR_DEX = "dexterity";
@@ -76,6 +77,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				Db.CHAR_PACE + " SMALLINT NOT NULL ON CONFLICT FAIL DEFAULT 1," + 
 				Db.CHAR_ASRANKS + " INT NOT NULL ON CONFLICT FAIL DEFAULT 0," + 
 				Db.CHAR_AVAILABLE_FEATS + " INT NOT NULL ON CONFLICT FAIL DEFAULT 1," +
+                Db.CHAR_AVAILABLE_POWERS + " INT NOT NULL ON CONFLICT FAIL DEFAULT 1," +
 				Db.CHAR_CHA + " INT DEFAULT 1," +
 				Db.CHAR_CON + " INT DEFAULT 1," + 
 				Db.CHAR_DEX + " INT DEFAULT 1," + 
@@ -201,6 +203,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				"CONSTRAINT item_ids UNIQUE (" + Db.ARMOR_ITEM_ID  + "));";
 		
 		public static final String DROP_ARMOR = "DROP TABLE IF EXISTS " + Db.ARMOR_TABLE;
+
+        // table special powers
+        private static final String POWERS_TABLE = "powers";
+        private static final String POWERS_CHARACTER_ID = "character_id";
+        private static final String POWERS_INDEX = "power_index";
+
+        private static final String CREATE_POWERS_TABLE = "CREATE TABLE IF NOT EXISTS " + Db.POWERS_TABLE + " (" +
+                Db._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                Db.POWERS_INDEX + " SMALLINT NOT NULL ON CONFLICT FAIL," +
+                Db.POWERS_CHARACTER_ID + " INT NOT NULL ON CONFLICT FAIL CONSTRAINT character_id_fk REFERENCES " + Db.CHARACTER_TABLE + "(" + Db._ID + ") ON DELETE CASCADE ON UPDATE CASCADE," +
+                "CONSTRAINT feat_and_char_ids UNIQUE (" + Db.POWERS_INDEX + ", " + Db.POWERS_CHARACTER_ID + "));";
+
+        public static final String DROP_POWERS = "DROP TABLE IF EXISTS " + Db.POWERS_TABLE;
 	}	
 
 	public DatabaseHelper(Context context) {
@@ -221,6 +236,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		db.execSQL(Db.CREATE_ITEMEFFECTS_TABLE);
 		db.execSQL(Db.CREATE_WEAPONS_TABLE);
 		db.execSQL(Db.CREATE_ARMOR_TABLE);
+        db.execSQL(Db.CREATE_POWERS_TABLE);
 	}
 
 	/* (non-Javadoc)
@@ -228,15 +244,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	 */
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-			db.execSQL(Db.DROP_ITEMS);
+			/*db.execSQL(Db.DROP_ITEMS);
 			db.execSQL(Db.DROP_CHARACTERS);
 			db.execSQL(Db.DROP_SKILLS);
 			db.execSQL(Db.DROP_FEATS);
 			db.execSQL(Db.DROP_ITEMEFFECTS);
 			db.execSQL(Db.DROP_WEAPONS);
 			db.execSQL(Db.DROP_ARMOR);
-	
-			onCreate(db);
+            db.execSQL(Db.DROP_POWERS);
+
+			onCreate(db);*/
+
+        if(oldVersion < 24) { // added available powers in 23
+            String addAvailablePowers = "ALTER TABLE " + Db.CHARACTER_TABLE + " ADD " + Db.CHAR_AVAILABLE_POWERS + " INT NOT NULL ON CONFLICT FAIL DEFAULT 1";
+            try {
+                db.execSQL(addAvailablePowers);
+            } catch (Exception e) {}
+        }
+
+        if(oldVersion < 26) { // added available powers in 23
+            db.execSQL(Db.CREATE_POWERS_TABLE);
+        }
 	}
 	
 	public List<PfCharacter> getCharacters() {
@@ -244,7 +272,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 		List<PfCharacter> characters = new ArrayList<PfCharacter>();
 		
-		String[] columns = {Db._ID, Db.CHAR_NAME, Db.CHAR_CLASS, Db.CHAR_RACE, Db.CHAR_XP, Db.CHAR_MONEY, Db.CHAR_PACE, Db.CHAR_CHA, Db.CHAR_CON, Db.CHAR_DEX, Db.CHAR_INT, Db.CHAR_STR, Db.CHAR_WIS, Db.CHAR_NEWLEVELS, Db.CHAR_ASRANKS, Db.CHAR_BONUS_STAT, Db.CHAR_AVAILABLE_FEATS, Db.CHAR_HITPOINTS};
+		String[] columns = {Db._ID, Db.CHAR_NAME, Db.CHAR_CLASS, Db.CHAR_RACE, Db.CHAR_XP, Db.CHAR_MONEY, Db.CHAR_PACE, Db.CHAR_CHA, Db.CHAR_CON, Db.CHAR_DEX, Db.CHAR_INT, Db.CHAR_STR, Db.CHAR_WIS, Db.CHAR_NEWLEVELS, Db.CHAR_ASRANKS, Db.CHAR_BONUS_STAT, Db.CHAR_AVAILABLE_FEATS, Db.CHAR_HITPOINTS, Db.CHAR_AVAILABLE_POWERS};
 		String orderBy = Db._ID + " ASC";
 		
 		Cursor c = db.query(Db.CHARACTER_TABLE, columns, null, null, null, null, orderBy);
@@ -277,6 +305,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		int newLevels = c.getInt(c.getColumnIndex(Db.CHAR_NEWLEVELS));
 		int available_skill_ranks = c.getInt(c.getColumnIndex(Db.CHAR_ASRANKS));
 		int available_feats = c.getInt(c.getColumnIndex(Db.CHAR_AVAILABLE_FEATS));
+        int available_powers = c.getInt(c.getColumnIndex(Db.CHAR_AVAILABLE_POWERS));
 		int money = c.getInt(c.getColumnIndex(Db.CHAR_MONEY));
 		int hitpoints = c.getInt(c.getColumnIndex(Db.CHAR_HITPOINTS));
 		
@@ -288,6 +317,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		newChar.setBaseStats(cha, con, dex, in, str, wis);
 		newChar.setAvailableSkillRanks(available_skill_ranks);
 		newChar.setAvailableFeats(available_feats);
+        newChar.setAvailableSpecialPowers(available_powers);
 		newChar.setMoney(money);
 		newChar.setHitpoints(hitpoints);
 		
@@ -419,6 +449,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			// add the last item to the character
 			newChar.addItem(item);
 		}
+
+        // special powers
+        String[] powers_columns = {Db._ID, Db.POWERS_INDEX, Db.POWERS_CHARACTER_ID};
+        orderBy = Db.POWERS_INDEX + " ASC";
+        selection = Db.POWERS_CHARACTER_ID + " = ?";
+        String[] powers_SelectionArgs = {Long.toString(id)};
+        // select feats that this character has
+        Cursor powers_cursor = db.query(Db.POWERS_TABLE, powers_columns, selection, powers_SelectionArgs, null, null, orderBy);
+
+        // for each feat, add it to the character
+        if(powers_cursor.moveToFirst()) {
+            do {
+                int power_index = powers_cursor.getInt(powers_cursor.getColumnIndex(Db.POWERS_INDEX));
+                newChar.setAvailableSpecialPowers(newChar.getAvailableSpecialPowers() + 1);
+                newChar.addSpecialPower(power_index);
+            } while(powers_cursor.moveToNext());
+        }
 					
 		return newChar;
 	}
@@ -466,6 +513,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		values.put(Db.CHAR_WIS, character.getBaseWisdom());
 		values.put(Db.CHAR_ASRANKS, character.getAvailableSkillRanks());
 		values.put(Db.CHAR_AVAILABLE_FEATS, character.getAvailableFeats());
+        values.put(Db.CHAR_AVAILABLE_POWERS, character.getAvailableSpecialPowers());
 		values.put(Db.CHAR_XP, character.getXp());
 		values.put(Db.CHAR_MONEY, character.getMoney());
 		values.put(Db.CHAR_HITPOINTS, character.getBaseHitpoints());
@@ -491,7 +539,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 		db.close();
 	}
-	
+
+    public void deletePower(PfCharacter character, int power) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String whereClause = Db.POWERS_CHARACTER_ID + " = ? AND " + Db.POWERS_INDEX + " = ?";
+        String[] whereArgs = {Long.toString(character.getId()), Integer.toString(power)};
+        db.delete(Db.POWERS_TABLE, whereClause, whereArgs);
+        db.close();
+    }
+
+    public void addPower(PfCharacter character, int power) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put(Db.POWERS_CHARACTER_ID, character.getId());
+        values.put(Db.POWERS_INDEX, power);
+        db.insert(Db.POWERS_TABLE, null, values);
+        db.close();
+    }
+
 	public void deleteFeat(PfCharacter character, PfFeats feat) {
 		SQLiteDatabase db = this.getWritableDatabase();
 		String whereClause = Db.FEAT_CHAR_ID + " = ? AND " + Db.FEAT_ID + " = ?";
@@ -499,10 +565,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		db.delete(Db.FEATS_TABLE, whereClause, whereArgs);
 		db.close();
 	}
-
-    public void addPower(PfCharacter character, int power) {
-
-    }
 	
 	public void addFeat(PfCharacter character, PfFeats feat) {
 		SQLiteDatabase db = this.getWritableDatabase();

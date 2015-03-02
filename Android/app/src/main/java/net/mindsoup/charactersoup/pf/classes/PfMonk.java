@@ -78,4 +78,9 @@ public class PfMonk implements PfClass {
     public String toString() {
         return "Monk";
     }
+
+    @Override
+    public int getLevelupSpecialPowers(int level) {
+        return 0;
+    }
 }

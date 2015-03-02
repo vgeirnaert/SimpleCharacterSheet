@@ -8,10 +8,12 @@ import android.os.Parcel;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -87,6 +89,15 @@ public class RageFragment extends CharacterFragment {
         ListView list = (ListView)v.findViewById(R.id.rage_list);
         adapter = new SelectListAdapter(this.getActivity(), R.layout.simple_list_item, ragepowers, null, null);
         list.setAdapter(adapter);
+        list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                ListElement item = ragepowers.get(position);
+                ((CharacterActivity)getActivity()).removeSpecialPower(item.getIndex());
+                return true;
+            }
+        });
 
         setAllRagePowers();
         
@@ -113,9 +124,14 @@ public class RageFragment extends CharacterFragment {
             final PfCharacter character = this.getCharacter();
             if(character.getAvailableSpecialPowers() > 0) {
                 this.getActivity().findViewById(R.id.rage_add_button).setVisibility(View.VISIBLE);
+                this.getActivity().findViewById(R.id.available_powers_text).setVisibility(View.VISIBLE);
             } else {
                 this.getActivity().findViewById(R.id.rage_add_button).setVisibility(View.GONE);
+                this.getActivity().findViewById(R.id.available_powers_text).setVisibility(View.GONE);
             }
+
+            TextView tv = (TextView)this.getActivity().findViewById(R.id.available_powers_text);
+            tv.setText("Available rage powers: " + character.getAvailableSpecialPowers());
 
             ragepowers.clear();
             Set<Integer> powers = character.getSpecialPowers();
