@@ -116,7 +116,7 @@ public class PfBarbarian implements PfClass {
 
     @Override
     public int getLevelupSpecialPowers(int level) {
-        return (int)Math.floor(level / 2);
+        return (level + 1) % 2;
     }
 
 }
