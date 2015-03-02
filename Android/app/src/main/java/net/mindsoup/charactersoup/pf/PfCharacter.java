@@ -423,6 +423,13 @@ public class PfCharacter implements Parcelable {
 	public void initialiseSecondaryStatsForNewCharacter() {
 		// hitpoint con bonus
 		this.setHitpoints(this.getMaxHitpoints().sum() + this.getAttributeBonus(this.getConstitution()));
+        this.setAvailableSpecialPowers(this.getLevelupSpecialPowers(1));
+
+        if(this.getPfClass().getPfClass() == PfClasses.WIZARD) {
+            // add level 0 spells to spellbook
+            int[] levelZeroSpells = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27};
+            this.addSpecialPowers(levelZeroSpells);
+        }
 		
 		// skill ranks (+1 skill rank for human)
 		int skillRanks = myClass.getBaseSkillRanksPerLevel() + this.getAttributeBonus(this.getIntelligence());
@@ -1198,6 +1205,12 @@ public class PfCharacter implements Parcelable {
 		return inventory;
 	}
 
+    public void addSpecialPowers(int[] powers) {
+        for(int i : powers) {
+            specialPowers.add(new Integer(i));
+        }
+    }
+
     public boolean addSpecialPower(int index) {
         if(availableSpecialPowers > 0) {
             if (!specialPowers.contains(new Integer(index))) {
@@ -1365,4 +1378,8 @@ public class PfCharacter implements Parcelable {
 				break;
 		}
 	}
+
+    public int getLevelupSpecialPowers(int level) {
+        return this.getPfClass().getLevelupSpecialPowers(level, this);
+    }
 }

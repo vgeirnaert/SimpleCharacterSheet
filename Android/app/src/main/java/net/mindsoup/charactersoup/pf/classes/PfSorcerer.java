@@ -122,7 +122,7 @@ public class PfSorcerer implements PfClass {
 	}
 
     @Override
-    public int getLevelupSpecialPowers(int level) {
+    public int getLevelupSpecialPowers(int level, PfCharacter character) {
         switch (level) {
             case 1:
                 return 6;

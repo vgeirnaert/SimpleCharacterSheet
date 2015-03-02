@@ -23,7 +23,6 @@ public interface PfClass {
 	public PfFeats[] getClassFeats();
 	public int getAttackBonus(int level);
 	public Map<String, String> getFragments();
-    public int getLevelupSpecialPowers(int level);
-	
+    public int getLevelupSpecialPowers(int level, PfCharacter character);
 	public Calculation modifyAttribute(PfCharacter.Attributes attribute, Calculation current, PfCharacter character);
 }

@@ -80,7 +80,7 @@ public class PfFighter implements PfClass {
     }
 
     @Override
-    public int getLevelupSpecialPowers(int level) {
+    public int getLevelupSpecialPowers(int level, PfCharacter character) {
         return 0;
     }
 }

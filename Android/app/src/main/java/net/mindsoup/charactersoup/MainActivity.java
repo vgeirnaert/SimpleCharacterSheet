@@ -194,7 +194,7 @@ public class MainActivity extends SherlockFragmentActivity {
 		hitpoints += c.getPfClass().getHitDie().getMax();
 		
 		c.setHitpoints(hitpoints);
-        c.setAvailableSpecialPowers(c.getPfClass().getLevelupSpecialPowers(1));
+        c.setAvailableSpecialPowers(c.getLevelupSpecialPowers(1));
 		
 		if(c.getRace().getRace() == PfRaces.HALFELF || c.getRace().getRace() == PfRaces.HALFORC || c.getRace().getRace() == PfRaces.HUMAN) 
 			((PfChooseBonusAttributeRace)c.getRace()).setBonusAttribute(PfAttributes.getAttribute(bonus_stat));
