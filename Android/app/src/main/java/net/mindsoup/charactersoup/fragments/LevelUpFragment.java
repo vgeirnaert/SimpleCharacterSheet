@@ -58,8 +58,8 @@ public class LevelUpFragment extends SherlockDialogFragment {
         	source += "<br><b>1</b> new feat";
         }
 
-        int specialPowers = character.getPfClass().getLevelupSpecialPowers(this.level) - character.getPfClass().getLevelupSpecialPowers(this.level - 1);
-        String powerType = "spells";
+        int specialPowers = character.getPfClass().getLevelupSpecialPowers(this.level);
+        String powerType = "spell(s)";
         if(character.getPfClass().getPfClass() == PfClasses.BARBARIAN) {
             powerType = "rage power";
         }
@@ -83,8 +83,12 @@ public class LevelUpFragment extends SherlockDialogFragment {
 			@Override
 			public void onClick(View v) {
 				try {
-					Integer.parseInt( ((EditText)view.findViewById(R.id.levelup_dice)).getText().toString() );
-					levelUp();
+					int hp = Integer.parseInt( ((EditText)view.findViewById(R.id.levelup_dice)).getText().toString() );
+                    if(hp > character.getPfClass().getHitDie().getMax()) {
+                        Toast.makeText(getActivity(), "Hitpoints too high, roll " + character.getPfClass().getHitDie().toString(), Toast.LENGTH_LONG).show();
+                    } else {
+                        levelUp();
+                    }
 				} catch (NumberFormatException e) {
 					Toast.makeText(getActivity(), "Please fill in your hitpoint roll", Toast.LENGTH_LONG).show();
 				}
@@ -109,7 +113,7 @@ public class LevelUpFragment extends SherlockDialogFragment {
 		else
 			hitpoints++;
         
-        character.setAvailableSpecialPowers(character.getPfClass().getLevelupSpecialPowers(this.level));
+        character.setAvailableSpecialPowers(character.getAvailableSpecialPowers() + character.getPfClass().getLevelupSpecialPowers(this.level));
         character.setHitpoints(character.getBaseHitpoints() + hitpoints);
         character.setAvailableFeats(character.getAvailableFeats() + feat);
         character.setAvailableSkillRanks(character.getAvailableSkillRanks() + skillpoints);

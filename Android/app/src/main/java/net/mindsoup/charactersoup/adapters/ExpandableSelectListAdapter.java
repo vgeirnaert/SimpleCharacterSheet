@@ -1,7 +1,6 @@
 package net.mindsoup.charactersoup.adapters;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -107,13 +106,10 @@ public class ExpandableSelectListAdapter extends BaseExpandableListAdapter {
         final ListElement item = (ListElement)this.getChild(group, child);
         TextView tv = (TextView)view.findViewById(R.id.select_title);
         tv.setText(item.getTitle());
-        final int bgcolor = tv.getDrawingCacheBackgroundColor();
 
         if(item.isExpanded()) {
-            tv.setBackgroundColor(Color.BLACK);
             view.findViewById(R.id.select_list_description_group).setVisibility(View.VISIBLE);
         } else {
-            tv.setBackgroundColor(bgcolor);
             view.findViewById(R.id.select_list_description_group).setVisibility(View.GONE);
         }
 
@@ -124,11 +120,9 @@ public class ExpandableSelectListAdapter extends BaseExpandableListAdapter {
 
                 if(!item.isExpanded()) {
                     item.expand();
-                    v.setBackgroundColor(Color.BLACK);
                     description.setVisibility(View.VISIBLE);
                 } else {
                     item.collapse();
-                    v.setBackgroundColor(bgcolor);
                     description.setVisibility(View.GONE);
                 }
             }
@@ -138,13 +132,15 @@ public class ExpandableSelectListAdapter extends BaseExpandableListAdapter {
         tv.setText(item.getDescription());
 
         Button select = (Button)view.findViewById(R.id.select_list_button);
-        select.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                listener.onPicked(item);
-                dialog.dismiss();
-            }
-        });
+        if(select != null) {
+            select.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    listener.onPicked(item);
+                    dialog.dismiss();
+                }
+            });
+        }
 
         return view;
     }
