@@ -114,4 +114,9 @@ public class PfBarbarian implements PfClass {
 		this.isRaging = rage;
 	}
 
+    @Override
+    public int getLevelupSpecialPowers(int level) {
+        return (int)Math.floor(level / 2);
+    }
+
 }

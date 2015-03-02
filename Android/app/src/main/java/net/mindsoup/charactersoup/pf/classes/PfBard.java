@@ -74,6 +74,11 @@ public class PfBard implements PfClass {
     }
 
     @Override
+    public int getLevelupSpecialPowers(int level) {
+        return 0;
+    }
+
+    @Override
     public Calculation modifyAttribute(PfCharacter.Attributes attribute, Calculation current, PfCharacter character) {
         // TODO
         return current;

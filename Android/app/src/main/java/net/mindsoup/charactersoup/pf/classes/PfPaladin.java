@@ -81,4 +81,9 @@ public class PfPaladin implements PfClass {
     public String toString() {
         return "Paladin";
     }
+
+    @Override
+    public int getLevelupSpecialPowers(int level) {
+        return 0;
+    }
 }

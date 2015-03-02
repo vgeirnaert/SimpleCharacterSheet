@@ -82,4 +82,9 @@ public class PfCleric implements PfClass {
     public String toString() {
         return "Cleric";
     }
+
+    @Override
+    public int getLevelupSpecialPowers(int level) {
+        return 0;
+    }
 }

@@ -21,6 +21,7 @@ import net.mindsoup.charactersoup.CharacterActivity;
 import net.mindsoup.charactersoup.R;
 import net.mindsoup.charactersoup.pf.PfAttributes;
 import net.mindsoup.charactersoup.pf.PfCharacter;
+import net.mindsoup.charactersoup.pf.PfClasses;
 import net.mindsoup.charactersoup.pf.PfRaces;
 
 /**
@@ -56,6 +57,16 @@ public class LevelUpFragment extends SherlockDialogFragment {
         if(this.level % 2 == 1) {
         	source += "<br><b>1</b> new feat";
         }
+
+        int specialPowers = character.getPfClass().getLevelupSpecialPowers(this.level) - character.getPfClass().getLevelupSpecialPowers(this.level - 1);
+        String powerType = "spells";
+        if(character.getPfClass().getPfClass() == PfClasses.BARBARIAN) {
+            powerType = "rage power";
+        }
+        if(specialPowers > 0) {
+            source += "<br><b>" + specialPowers + "</b> new " + powerType;
+        }
+
         text.setText(Html.fromHtml(source));
         
         if(this.level % 4 == 0) {
@@ -98,7 +109,7 @@ public class LevelUpFragment extends SherlockDialogFragment {
 		else
 			hitpoints++;
         
-        
+        character.setAvailableSpecialPowers(character.getPfClass().getLevelupSpecialPowers(this.level));
         character.setHitpoints(character.getBaseHitpoints() + hitpoints);
         character.setAvailableFeats(character.getAvailableFeats() + feat);
         character.setAvailableSkillRanks(character.getAvailableSkillRanks() + skillpoints);

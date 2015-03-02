@@ -81,4 +81,9 @@ public class PfRanger implements PfClass {
     public String toString() {
         return "Ranger";
     }
+
+    @Override
+    public int getLevelupSpecialPowers(int level) {
+        return 0;
+    }
 }
