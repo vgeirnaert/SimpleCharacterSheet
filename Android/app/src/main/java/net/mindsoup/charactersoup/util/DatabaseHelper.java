@@ -536,6 +536,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			db.replace(Db.SKILLS_TABLE, null, values);
 			
 		}
+
+        // for each skill this character knows
+        for(int i : character.getSpecialPowers()) {
+            values.clear();
+            values.put(Db.POWERS_CHARACTER_ID, character.getId());
+            values.put(Db.POWERS_INDEX, i);
+
+            db.replace(Db.POWERS_TABLE, null, values);
+
+        }
 		
 		db.close();
 	}
