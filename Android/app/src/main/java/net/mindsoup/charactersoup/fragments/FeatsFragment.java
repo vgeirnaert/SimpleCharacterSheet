@@ -3,16 +3,8 @@
  */
 package net.mindsoup.charactersoup.fragments;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.mindsoup.charactersoup.CharacterActivity;
-import net.mindsoup.charactersoup.R;
-import net.mindsoup.charactersoup.adapters.CharacterFeatAdapter;
-import net.mindsoup.charactersoup.pf.PfCharacter;
-import net.mindsoup.charactersoup.pf.feats.PfFeats;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
+import android.os.Parcel;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,6 +14,17 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import net.mindsoup.charactersoup.CharacterActivity;
+import net.mindsoup.charactersoup.R;
+import net.mindsoup.charactersoup.adapters.CharacterFeatAdapter;
+import net.mindsoup.charactersoup.pf.PfCharacter;
+import net.mindsoup.charactersoup.pf.feats.PfFeats;
+import net.mindsoup.charactersoup.util.CharacterSoupUtils;
+import net.mindsoup.charactersoup.util.ListElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Valentijn
@@ -59,9 +62,6 @@ public class FeatsFragment extends CharacterFragment {
 		
 			adapter.notifyDataSetChanged();
 		}
-		
-		
-		
 	}
 	
 	@Override 
@@ -96,11 +96,30 @@ public class FeatsFragment extends CharacterFragment {
 	}
 	
 	private void showFeatsPicker() {
-		FragmentManager fm = this.getActivity().getSupportFragmentManager();
-		if(fm.findFragmentByTag(PICK_FEAT) == null) {
-			PickFeatFragment pickFeat = new PickFeatFragment();
-			pickFeat.show(fm, PICK_FEAT);
-		}
+        CharacterSoupUtils.showListDialog(PICK_FEAT, this.getActivity(), "pf_data/feats.json", this.getActivity().getString(R.string.select_feat), new PickFromListFragment.ParcelablePickFromListListener() {
+            @Override
+            public void onPicked(ListElement element) {
+                ((CharacterActivity)getActivity()).addFeat(PfFeats.getFeat(element.getIndex()));
+            }
+
+            @Override
+            public int describeContents() {
+                return 0;
+            }
+
+            @Override
+            public void writeToParcel(Parcel parcel, int i) {}
+        }, false);
 	}
+
+    @Override
+    public String getHelpTitle() {
+        return this.getActivity().getString(R.string.feats_fragment_help_title);
+    }
+
+    @Override
+    public String getHelpText() {
+        return this.getActivity().getString(R.string.feats_fragment_help_text);
+    }
 
 }

@@ -3,11 +3,6 @@
  */
 package net.mindsoup.charactersoup.fragments;
 
-import net.mindsoup.charactersoup.CharacterActivity;
-import net.mindsoup.charactersoup.R;
-import net.mindsoup.charactersoup.pf.PfAttributes;
-import net.mindsoup.charactersoup.pf.PfCharacter;
-import net.mindsoup.charactersoup.pf.PfRaces;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -21,6 +16,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockDialogFragment;
+
+import net.mindsoup.charactersoup.CharacterActivity;
+import net.mindsoup.charactersoup.R;
+import net.mindsoup.charactersoup.pf.PfAttributes;
+import net.mindsoup.charactersoup.pf.PfCharacter;
+import net.mindsoup.charactersoup.pf.PfClasses;
+import net.mindsoup.charactersoup.pf.PfRaces;
 
 /**
  * @author Valentijn
@@ -55,6 +57,16 @@ public class LevelUpFragment extends SherlockDialogFragment {
         if(this.level % 2 == 1) {
         	source += "<br><b>1</b> new feat";
         }
+
+        int specialPowers = character.getLevelupSpecialPowers(this.level);
+        String powerType = "spell(s)";
+        if(character.getPfClass().getPfClass() == PfClasses.BARBARIAN) {
+            powerType = "rage power";
+        }
+        if(specialPowers > 0) {
+            source += "<br><b>" + specialPowers + "</b> new " + powerType;
+        }
+
         text.setText(Html.fromHtml(source));
         
         if(this.level % 4 == 0) {
@@ -71,8 +83,12 @@ public class LevelUpFragment extends SherlockDialogFragment {
 			@Override
 			public void onClick(View v) {
 				try {
-					Integer.parseInt( ((EditText)view.findViewById(R.id.levelup_dice)).getText().toString() );
-					levelUp();
+					int hp = Integer.parseInt( ((EditText)view.findViewById(R.id.levelup_dice)).getText().toString() );
+                    if(hp > character.getPfClass().getHitDie().getMax()) {
+                        Toast.makeText(getActivity(), "Hitpoints too high, roll " + character.getPfClass().getHitDie().toString(), Toast.LENGTH_LONG).show();
+                    } else {
+                        levelUp();
+                    }
 				} catch (NumberFormatException e) {
 					Toast.makeText(getActivity(), "Please fill in your hitpoint roll", Toast.LENGTH_LONG).show();
 				}
@@ -97,7 +113,7 @@ public class LevelUpFragment extends SherlockDialogFragment {
 		else
 			hitpoints++;
         
-        
+        character.setAvailableSpecialPowers(character.getAvailableSpecialPowers() + character.getLevelupSpecialPowers(this.level));
         character.setHitpoints(character.getBaseHitpoints() + hitpoints);
         character.setAvailableFeats(character.getAvailableFeats() + feat);
         character.setAvailableSkillRanks(character.getAvailableSkillRanks() + skillpoints);

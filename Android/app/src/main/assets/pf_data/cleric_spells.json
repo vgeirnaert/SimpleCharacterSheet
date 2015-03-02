@@ -1,0 +1,2468 @@
+[
+  {
+    "index":0,
+    "title":"Bleed",
+    "category":"Level 0",
+    "description":"Cause a stabilized creature to resume dying."
+  },
+  {
+    "index":1,
+    "title":"Create Water",
+    "category":"Level 0",
+    "description":"Creates 2 gallons/level of pure water."
+  },
+  {
+    "index":2,
+    "title":"Detect Magic",
+    "category":"Level 0",
+    "description":"Detects spells and magic items within 60 ft."
+  },
+  {
+    "index":3,
+    "title":"Detect Poison",
+    "category":"Level 0",
+    "description":"Detects poison in one creature or object."
+  },
+  {
+    "index":4,
+    "title":"Guidance",
+    "category":"Level 0",
+    "description":" +1 on one attack roll, saving throw, or skill check."
+  },
+  {
+    "index":5,
+    "title":"Light",
+    "category":"Level 0",
+    "description":"Object shines like a torch."
+  },
+  {
+    "index":6,
+    "title":"Mending",
+    "category":"Level 0",
+    "description":"Makes minor repairs on an object."
+  },
+  {
+    "index":7,
+    "title":"Purify Food and Drink",
+    "category":"Level 0",
+    "description":"Purifies 1 cu. ft./level of food or water."
+  },
+  {
+    "index":8,
+    "title":"Read Magic",
+    "category":"Level 0",
+    "description":"Read scrolls and spellbooks."
+  },
+  {
+    "index":9,
+    "title":"Resistance",
+    "category":"Level 0",
+    "description":"Subject gains +1 on saving throws."
+  },
+  {
+    "index":10,
+    "title":"Spark",
+    "category":"Level 0",
+    "description":"Ignites flammable objects."
+  },
+  {
+    "index":11,
+    "title":"Stabilize",
+    "category":"Level 0",
+    "description":"Cause a dying creature to stabilize."
+  },
+  {
+    "index":12,
+    "title":"Virtue",
+    "category":"Level 0",
+    "description":"Subject gains 1 temporary hp."
+  },
+  {
+    "index":13,
+    "title":"Abundant Ammunition",
+    "category":"Level 1",
+    "description":"Replaces nonmagical ammunition every round."
+  },
+  {
+    "index":14,
+    "title":"Air Bubble",
+    "category":"Level 1",
+    "description":"Creates a small pocket of air around your head or an object."
+  },
+  {
+    "index":15,
+    "title":"Ant Haul",
+    "category":"Level 1",
+    "description":"Triples carrying capacity of a creature."
+  },
+  {
+    "index":16,
+    "title":"Bane",
+    "category":"Level 1",
+    "description":"Enemies take –1 on attack rolls and saves against fear."
+  },
+  {
+    "index":17,
+    "title":"Bless",
+    "category":"Level 1",
+    "description":"Allies gain +1 on attack rolls and saves against fear."
+  },
+  {
+    "index":18,
+    "title":"Bless Water",
+    "category":"Level 1",
+    "description":"Makes holy water."
+  },
+  {
+    "index":19,
+    "title":"Blessing of the Watch",
+    "category":"Level 1",
+    "description":"Like bless, except it lasts 1 hour per level instead of 1 minute per level and only working in the caster’s home city, specifically referring to areas under the jurisdiction of the city watch."
+  },
+  {
+    "index":20,
+    "title":"Burning Disarm",
+    "category":"Level 1",
+    "description":"A metal object instantly becomes red hot possibly causing the wielder to drop it or take damage."
+  },
+  {
+    "index":21,
+    "title":"Cause Fear",
+    "category":"Level 1",
+    "description":"One creature of 5 HD or less flees for 1d4 rounds."
+  },
+  {
+    "index":22,
+    "title":"Command",
+    "category":"Level 1",
+    "description":"One subject obeys selected command for 1 round."
+  },
+  {
+    "index":23,
+    "title":"Compel Hostility",
+    "category":"Level 1",
+    "description":"Compels opponents to attack you instead of your allies."
+  },
+  {
+    "index":24,
+    "title":"Comprehend Languages",
+    "category":"Level 1",
+    "description":"You understand all spoken and written languages."
+  },
+  {
+    "index":25,
+    "title":"Cure Light Wounds",
+    "category":"Level 1",
+    "description":"Cures 1d8 damage + 1/level (max +5)."
+  },
+  {
+    "index":26,
+    "title":"Curse Water",
+    "category":"Level 1",
+    "description":"Makes unholy water."
+  },
+  {
+    "index":27,
+    "title":"Dancing Lantern",
+    "category":"Level 1",
+    "description":"Animates a lantern that follows you."
+  },
+  {
+    "index":28,
+    "title":"Deathwatch",
+    "category":"Level 1",
+    "description":"Reveals how near death subjects within 30 ft. are."
+  },
+  {
+    "index":29,
+    "title":"Decompose Corpse",
+    "category":"Level 1",
+    "description":"Turn corpse into clean skeleton."
+  },
+  {
+    "index":30,
+    "title":"Detect Chaos/Evil/Good/Law",
+    "category":"Level 1",
+    "description":"Reveals creatures, spells, or objects of selected alignment."
+  },
+  {
+    "index":31,
+    "title":"Detect Charm",
+    "category":"Level 1",
+    "description":"Detect strength and location of charms, compulsions, and possession auras on creatures in the area."
+  },
+  {
+    "index":32,
+    "title":"Detect the Faithful",
+    "category":"Level 1",
+    "description":"You can detect other worshipers of your deity."
+  },
+  {
+    "index":33,
+    "title":"Detect Undead",
+    "category":"Level 1",
+    "description":"Reveals undead within 60 ft."
+  },
+  {
+    "index":34,
+    "title":"Divine Favor",
+    "category":"Level 1",
+    "description":"You gain +1 per three levels on attack and damage rolls."
+  },
+  {
+    "index":35,
+    "title":"Diagnose Disease",
+    "category":"Level 1",
+    "description":"Detect and identify diseases."
+  },
+  {
+    "index":36,
+    "title":"Doom",
+    "category":"Level 1",
+    "description":"One subject takes –2 on attack rolls, damage rolls, saves, and checks."
+  },
+  {
+    "index":37,
+    "title":"Dream Feast",
+    "category":"Level 1",
+    "description":"Dream of a rich feast and when you awake, you are sated as if you ate and drank a nutritious meal."
+  },
+  {
+    "index":38,
+    "title":"Endure Elements",
+    "category":"Level 1",
+    "description":"Exist comfortably in hot or cold regions."
+  },
+  {
+    "index":39,
+    "title":"Entropic Shield",
+    "category":"Level 1",
+    "description":"Ranged attacks against you have 20% miss chance."
+  },
+  {
+    "index":40,
+    "title":"Forbid Action",
+    "category":"Level 1",
+    "description":"Target obeys your command to not do something."
+  },
+  {
+    "index":41,
+    "title":"Hide from Undead",
+    "category":"Level 1",
+    "description":"Undead can't perceive one subject/level."
+  },
+  {
+    "index":42,
+    "title":"Infernal Healing",
+    "category":"Level 1",
+    "description":"Touch a creature with devils blood, giving it fast healing 1."
+  },
+  {
+    "index":43,
+    "title":"Inflict Light Wounds",
+    "category":"Level 1",
+    "description":"Touch deals 1d8 damage +1/level (max +5)."
+  },
+  {
+    "index":44,
+    "title":"Know the Enemy",
+    "category":"Level 1",
+    "description":"Gain +10 on a monster Knowledge check."
+  },
+  {
+    "index":45,
+    "title":"Liberating Command",
+    "category":"Level 1",
+    "description":"Target makes an Escape Artist check as an immediate action and gains a bonus on it."
+  },
+  {
+    "index":46,
+    "title":"Magic Stone",
+    "category":"Level 1",
+    "description":"Three stones gain +1 on attack, deal 1d6 +1 damage."
+  },
+  {
+    "index":47,
+    "title":"Magic Weapon",
+    "category":"Level 1",
+    "description":"Weapon gains +1 bonus."
+  },
+  {
+    "index":48,
+    "title":"Moment of Greatness",
+    "category":"Level 1",
+    "description":"Doubles a morale bonus."
+  },
+  {
+    "index":49,
+    "title":"Murderous Command",
+    "category":"Level 1",
+    "description":"Target is compelled to kill its ally."
+  },
+  {
+    "index":50,
+    "title":"Obscuring Mist",
+    "category":"Level 1",
+    "description":"Fog surrounds you."
+  },
+  {
+    "index":51,
+    "title":"Protection from Chaos/Evil/Good/Law",
+    "category":"Level 1",
+    "description":" +2 to AC and saves, plus additional protection against selected alignment."
+  },
+  {
+    "index":52,
+    "title":"Ray of Sickening",
+    "category":"Level 1",
+    "description":"Ray makes the subject sickened."
+  },
+  {
+    "index":53,
+    "title":"Reinforce Armaments",
+    "category":"Level 1",
+    "description":"Temporarily mitigates the fragile quality in targeted weapon or armor."
+  },
+  {
+    "index":54,
+    "title":"Remove Fear",
+    "category":"Level 1",
+    "description":"Suppresses fear or gives +4 on saves against fear for one subject + one per four levels."
+  },
+  {
+    "index":55,
+    "title":"Remove Sickness",
+    "category":"Level 1",
+    "description":"Suppress disease, nausea, and the sickened condition."
+  },
+  {
+    "index":56,
+    "title":"Restore Corpse",
+    "category":"Level 1",
+    "description":"Skeletal corpse grows flesh."
+  },
+  {
+    "index":57,
+    "title":"Sanctify Corpse",
+    "category":"Level 1",
+    "description":"Prevent a corpse from becoming an undead creature."
+  },
+  {
+    "index":58,
+    "title":"Sanctuary",
+    "category":"Level 1",
+    "description":"Opponents can't attack you, and you can't attack."
+  },
+  {
+    "index":59,
+    "title":"Spiked Armor",
+    "category":"Level 1",
+    "description":"Suit of armor becomes covered in iron spikes."
+  },
+  {
+    "index":60,
+    "title":"Shield of Faith",
+    "category":"Level 1",
+    "description":"Aura grants +2 or higher deflection bonus."
+  },
+  {
+    "index":61,
+    "title":"Summon Minor Monster",
+    "category":"Level 1",
+    "description":"Summon 1d3 Tiny animals."
+  },
+  {
+    "index":62,
+    "title":"Summon Monster I",
+    "category":"Level 1",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":63,
+    "title":"Swallow Your Fear",
+    "category":"Level 1",
+    "description":"Grants +2 morale bonus to Str and Con, +1 morale bonus to Will saves, and -2 penalty to AC to subjects suffering from afear effect. Prevents frightened subject from running."
+  },
+  {
+    "index":64,
+    "title":"Tap Inner Beauty",
+    "category":"Level 1",
+    "description":"You gain a +2 insight bonus on all Charisma ability checks and Charisma-based skill checks."
+  },
+  {
+    "index":65,
+    "title":"Unbreakable Heart",
+    "category":"Level 1",
+    "description":"Target gains a +4 bonus on saves against mind-affecting effects that rely on negative emotions."
+  },
+  {
+    "index":66,
+    "title":"Admonishing Ray",
+    "category":"Level 2",
+    "description":"You fire one nonlethal force ray plus one additional ray for every four levels (maximum three rays). Each ray deals 4d6 points of nonlethal damage."
+  },
+  {
+    "index":67,
+    "title":"Aid",
+    "category":"Level 2",
+    "description":" +1 on attack rolls and saves against fear, 1d8 temporary hp +1/level (max +10)."
+  },
+  {
+    "index":68,
+    "title":"Align Weapon",
+    "category":"Level 2",
+    "description":"Weapon becomes good, evil, lawful, or chaotic."
+  },
+  {
+    "index":69,
+    "title":"Ancestral Communion",
+    "category":"Level 2",
+    "description":"You contact your ancestors to bolster your own knowledge."
+  },
+  {
+    "index":70,
+    "title":"Animate Dead, Lesser",
+    "category":"Level 2",
+    "description":"Create one skeleton or zombie."
+  },
+  {
+    "index":71,
+    "title":"Ant Haul, Communal",
+    "category":"Level 2",
+    "description":"As ant haul, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":72,
+    "title":"Arrow of Law",
+    "category":"Level 2",
+    "description":"Harm and possibly daze chaotic creatures."
+  },
+  {
+    "index":73,
+    "title":"Augury",
+    "category":"Level 2",
+    "description":"Learns whether an action will be good or bad."
+  },
+  {
+    "index":74,
+    "title":"Bear's Endurance",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Con for 1 min./level."
+  },
+  {
+    "index":75,
+    "title":"Bestow Weapon Proficiency",
+    "category":"Level 2",
+    "description":"Grant a creature proficiency in a single weapon for short period of time."
+  },
+  {
+    "index":76,
+    "title":"Blessing of Courage and Life",
+    "category":"Level 2",
+    "description":" +2 on saves vs. fear and death."
+  },
+  {
+    "index":77,
+    "title":"Boiling Blood",
+    "category":"Level 2",
+    "description":"Targets take fire damage; orcs get +2 Strength."
+  },
+  {
+    "index":78,
+    "title":"Book Ward",
+    "category":"Level 2",
+    "description":"As protection from energy, except lasting 1 day/level instead of 10 minutes per level and that the spell only protects against acid and fire damage (and while energy protection remains, the item is also completely waterproof)."
+  },
+  {
+    "index":79,
+    "title":"Bull's Strength",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Str for 1 min./level."
+  },
+  {
+    "index":80,
+    "title":"Calm Emotions",
+    "category":"Level 2",
+    "description":"Calms creatures, negating emotion effects."
+  },
+  {
+    "index":81,
+    "title":"Compassionate Ally",
+    "category":"Level 2",
+    "description":"Target is compelled to help injured ally."
+  },
+  {
+    "index":82,
+    "title":"Consecrate",
+    "category":"Level 2",
+    "description":"Fills area with positive energy, weakening undead."
+  },
+  {
+    "index":83,
+    "title":"Cure Moderate Wounds",
+    "category":"Level 2",
+    "description":"Cures 2d8 damage + 1/level (max +10)."
+  },
+  {
+    "index":84,
+    "title":"Darkness",
+    "category":"Level 2",
+    "description":"20-ft. radius of supernatural shadow."
+  },
+  {
+    "index":85,
+    "title":"Deadeye's Arrow",
+    "category":"Level 2",
+    "description":"You create an arrow made of crackling electricity, which you may fire as a weapon or use as a glowing beacon."
+  },
+  {
+    "index":86,
+    "title":"Death Knell",
+    "category":"Level 2",
+    "description":"Kills dying creature; you gain 1d8 temporary hp, +2 to Str, and +1 caster level."
+  },
+  {
+    "index":87,
+    "title":"Deathwine",
+    "category":"Level 2",
+    "description":"Turn a healing potion into a pool that does not heal but increases the caster level of the next necromancy spell you cast."
+  },
+  {
+    "index":88,
+    "title":"Defending Bone",
+    "category":"Level 2",
+    "description":"You animate a bone which gives you damage reduction 5/bludgeoning."
+  },
+  {
+    "index":89,
+    "title":"Delay Pain",
+    "category":"Level 2",
+    "description":"Ignore pain for 1 hour/level."
+  },
+  {
+    "index":90,
+    "title":"Delay Poison",
+    "category":"Level 2",
+    "description":"Stops poison from harming target for 1 hour/level."
+  },
+  {
+    "index":91,
+    "title":"Desecrate",
+    "category":"Level 2",
+    "description":"Fills area with negative energy, making undead stronger."
+  },
+  {
+    "index":92,
+    "title":"Disfiguring Touch",
+    "category":"Level 2",
+    "description":"Target becomes disfigured."
+  },
+  {
+    "index":93,
+    "title":"Dread Bolt",
+    "category":"Level 2",
+    "description":"Harm and possibly sicken good creatures."
+  },
+  {
+    "index":94,
+    "title":"Eagle's Splendor",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Cha for 1 min./level."
+  },
+  {
+    "index":95,
+    "title":"Effortless Armor",
+    "category":"Level 2",
+    "description":"Armor you wear no longer slows your speed."
+  },
+  {
+    "index":96,
+    "title":"Endure Elements, Communal",
+    "category":"Level 2",
+    "description":"As endure elements, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":97,
+    "title":"Enthrall",
+    "category":"Level 2",
+    "description":"Captivates all within 100 ft. + 10 ft./level."
+  },
+  {
+    "index":98,
+    "title":"Find Traps",
+    "category":"Level 2",
+    "description":"Notice traps as a rogue does."
+  },
+  {
+    "index":99,
+    "title":"Gentle Repose",
+    "category":"Level 2",
+    "description":"Preserves one corpse."
+  },
+  {
+    "index":100,
+    "title":"Ghostbane Dirge",
+    "category":"Level 2",
+    "description":"Incorporeal creature takes half damage from nonmagical weapons."
+  },
+  {
+    "index":101,
+    "title":"Grace",
+    "category":"Level 2",
+    "description":"Movement doesn’t provoke attacks of opportunity."
+  },
+  {
+    "index":102,
+    "title":"Heroic Fortune",
+    "category":"Level 2",
+    "description":"The target gains 1 temporary hero point."
+  },
+  {
+    "index":103,
+    "title":"Hold Person",
+    "category":"Level 2",
+    "description":"Paralyzes one humanoid for 1 round/level."
+  },
+  {
+    "index":104,
+    "title":"Imbue with Aura",
+    "category":"Level 2",
+    "description":"Target emulates your cleric aura."
+  },
+  {
+    "index":105,
+    "title":"Inflict Moderate Wounds",
+    "category":"Level 2",
+    "description":"Touch attack, 2d8 damage + 1/level (max +10)."
+  },
+  {
+    "index":106,
+    "title":"Instant Armor",
+    "category":"Level 2",
+    "description":"Summon armor temporarily replacing your current attire."
+  },
+  {
+    "index":107,
+    "title":"Instrument of Agony",
+    "category":"Level 2",
+    "description":"Weapon exudes divine fury, granting a bonus on Intimidate checks."
+  },
+  {
+    "index":108,
+    "title":"Magic Siege Engine",
+    "category":"Level 2",
+    "description":"Siege engine gains +1 on targeting and damage rolls."
+  },
+  {
+    "index":109,
+    "title":"Make Whole",
+    "category":"Level 2",
+    "description":"Repairs an object."
+  },
+  {
+    "index":110,
+    "title":"Masterwork Transformation",
+    "category":"Level 2",
+    "description":"Make a normal item into a masterwork one."
+  },
+  {
+    "index":111,
+    "title":"Owl's Wisdom",
+    "category":"Level 2",
+    "description":"Subject gains +4 to Wis for 1 min./level."
+  },
+  {
+    "index":112,
+    "title":"Pilfering Hand",
+    "category":"Level 2",
+    "description":"You may seize an object or manipulate it from afar."
+  },
+  {
+    "index":113,
+    "title":"Protection from Chaos, Communal",
+    "category":"Level 2",
+    "description":"As protection from chaos, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":114,
+    "title":"Protection from Evil, Communal",
+    "category":"Level 2",
+    "description":"As protection from evil, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":115,
+    "title":"Protection from Good, Communal",
+    "category":"Level 2",
+    "description":"As protection from good, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":116,
+    "title":"Protection from Law, Communal",
+    "category":"Level 2",
+    "description":"As protection from law, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":117,
+    "title":"Protective Penumbra",
+    "category":"Level 2",
+    "description":"Shadow protects the target from light."
+  },
+  {
+    "index":118,
+    "title":"Reinforce Armaments, Communal",
+    "category":"Level 2",
+    "description":"As reinforce armaments, but you may divide the duration among objects touched."
+  },
+  {
+    "index":119,
+    "title":"Remove Paralysis",
+    "category":"Level 2",
+    "description":"Frees creatures from paralysis or slow effect."
+  },
+  {
+    "index":120,
+    "title":"Resist Energy",
+    "category":"Level 2",
+    "description":"Ignores 10 (or more) points of damage/attack from specified energy type."
+  },
+  {
+    "index":121,
+    "title":"Restoration, Lesser",
+    "category":"Level 2",
+    "description":"Dispels magical ability penalty or repairs 1d4 ability damage."
+  },
+  {
+    "index":122,
+    "title":"Returning Weapon",
+    "category":"Level 2",
+    "description":"Grants a weapon the returning special weapon quality."
+  },
+  {
+    "index":123,
+    "title":"Shard of Chaos",
+    "category":"Level 2",
+    "description":"Harm and possibly slow lawful creatures."
+  },
+  {
+    "index":124,
+    "title":"Share Language",
+    "category":"Level 2",
+    "description":"Subject understands chosen language."
+  },
+  {
+    "index":125,
+    "title":"Shatter",
+    "category":"Level 2",
+    "description":"Sonic vibration damages objects or crystalline creatures."
+  },
+  {
+    "index":126,
+    "title":"Shield Other",
+    "category":"Level 2",
+    "description":"You take half of subject's damage."
+  },
+  {
+    "index":127,
+    "title":"Silence",
+    "category":"Level 2",
+    "description":"Negates sound in 20-ft. radius."
+  },
+  {
+    "index":128,
+    "title":"Soothing Word",
+    "category":"Level 2",
+    "description":"Reduces effects of multiple conditions on target."
+  },
+  {
+    "index":129,
+    "title":"Sound Burst",
+    "category":"Level 2",
+    "description":"Deals 1d8 sonic damage to subjects; may stun them."
+  },
+  {
+    "index":130,
+    "title":"Spear of Purity",
+    "category":"Level 2",
+    "description":"Harm and possibly blind evil creatures."
+  },
+  {
+    "index":131,
+    "title":"Spiritual Weapon",
+    "category":"Level 2",
+    "description":"Magic weapon attacks on its own."
+  },
+  {
+    "index":132,
+    "title":"Staggering Fall",
+    "category":"Level 2",
+    "description":"Cause additional damage to a falling creature."
+  },
+  {
+    "index":133,
+    "title":"Status",
+    "category":"Level 2",
+    "description":"Monitors condition, position of allies."
+  },
+  {
+    "index":134,
+    "title":"Summon Monster II",
+    "category":"Level 2",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":135,
+    "title":"Surmount Affliction",
+    "category":"Level 2",
+    "description":"Temporarily suppress one condition."
+  },
+  {
+    "index":136,
+    "title":"Undetectable Alignment",
+    "category":"Level 2",
+    "description":"Conceals alignment for 24 hours."
+  },
+  {
+    "index":137,
+    "title":"Weapon of Awe",
+    "category":"Level 2",
+    "description":"Weapon gets +2 on damage rolls."
+  },
+  {
+    "index":138,
+    "title":"Web Shelter",
+    "category":"Level 2",
+    "description":"Create a comfortable shelter made of webbing."
+  },
+  {
+    "index":139,
+    "title":"Zone of Truth",
+    "category":"Level 2",
+    "description":"Subjects within range cannot lie."
+  },
+  {
+    "index":140,
+    "title":"Agonize",
+    "category":"Level 3",
+    "description":"Pain encourages an outsider to obey you."
+  },
+  {
+    "index":141,
+    "title":"Animate Dead",
+    "category":"Level 3",
+    "description":"Creates undead skeletons and zombies."
+  },
+  {
+    "index":142,
+    "title":"Archon's Aura",
+    "category":"Level 3",
+    "description":"Aura penalizes enemy attacks and AC."
+  },
+  {
+    "index":143,
+    "title":"Badger's Ferocity",
+    "category":"Level 3",
+    "description":"Weapons are keen while you concentrate."
+  },
+  {
+    "index":144,
+    "title":"Bestow Curse",
+    "category":"Level 3",
+    "description":"–6 to an ability score; –4 on attack rolls, saves, and checks; or 50% chance of losing each action."
+  },
+  {
+    "index":145,
+    "title":"Blessing of the Mole",
+    "category":"Level 3",
+    "description":"1 ally/level gains darkvision and a +2 Stealth bonus."
+  },
+  {
+    "index":146,
+    "title":"Blindness/Deafness",
+    "category":"Level 3",
+    "description":"Makes subject blinded or deafened."
+  },
+  {
+    "index":147,
+    "title":"Blood Biography",
+    "category":"Level 3",
+    "description":"Learn about a creature with its blood."
+  },
+  {
+    "index":148,
+    "title":"Chain of Perdition",
+    "category":"Level 3",
+    "description":"Creates a floating chain of force."
+  },
+  {
+    "index":149,
+    "title":"Channel the Gift",
+    "category":"Level 3",
+    "description":"Channel magical power into target to fuel their spellcasting. The next 3rd level or lower spell target casts does not expend a spell slot; instead you use your spell slot to power their spell."
+  },
+  {
+    "index":150,
+    "title":"Channel Vigor",
+    "category":"Level 3",
+    "description":"You gain either a +4 competence bonus on Knowledge, Perception checks and ranged attack rolls, or, you gain the benefits of the haste spell, or, you gain a +6 competence bonus on Will saving throws and Bluff and Intimidate checks, or, you gain a +6 competence bonus on Fortitude saving throws and Concentration checks."
+  },
+  {
+    "index":151,
+    "title":"Contagion",
+    "category":"Level 3",
+    "description":"Infects subject with chosen disease."
+  },
+  {
+    "index":152,
+    "title":"Continual Flame",
+    "category":"Level 3",
+    "description":"Makes a permanent, heatless light."
+  },
+  {
+    "index":153,
+    "title":"Create Food and Water",
+    "category":"Level 3",
+    "description":"Feeds three humans (or one horse)/level."
+  },
+  {
+    "index":154,
+    "title":"Cure Serious Wounds",
+    "category":"Level 3",
+    "description":"Cures 3d8 damage + 1/level (max +15)."
+  },
+  {
+    "index":155,
+    "title":"Daybreak Arrow",
+    "category":"Level 3",
+    "description":"Targeted ammunition exudes radiant energy."
+  },
+  {
+    "index":156,
+    "title":"Daylight",
+    "category":"Level 3",
+    "description":"60-ft. radius of bright light."
+  },
+  {
+    "index":157,
+    "title":"Deadly Juggernaut",
+    "category":"Level 3",
+    "description":"Your might increases with every kill you make."
+  },
+  {
+    "index":158,
+    "title":"Deeper Darkness",
+    "category":"Level 3",
+    "description":"Object sheds supernatural shadow in 60-ft. radius."
+  },
+  {
+    "index":159,
+    "title":"Delay Poison, Communal",
+    "category":"Level 3",
+    "description":"As delay poison, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":160,
+    "title":"Discovery Torch",
+    "category":"Level 3",
+    "description":"Touched object emanates bright light, granting Perception and Sense Motive bonuses."
+  },
+  {
+    "index":161,
+    "title":"Dispel Magic",
+    "category":"Level 3",
+    "description":"Cancels one magical spell or effect."
+  },
+  {
+    "index":162,
+    "title":"Elemental Speech",
+    "category":"Level 3",
+    "description":"You can speak with elementals and some creatures."
+  },
+  {
+    "index":163,
+    "title":"Enter Image",
+    "category":"Level 3",
+    "description":"Transfers your consciousness to an object bearing your likeness."
+  },
+  {
+    "index":164,
+    "title":"Glyph of Warding",
+    "category":"Level 3",
+    "description":"Inscription harms those who pass it."
+  },
+  {
+    "index":165,
+    "title":"Guiding Star",
+    "category":"Level 3",
+    "description":"Know approximate distance from where you cast this spell."
+  },
+  {
+    "index":166,
+    "title":"Helping Hand",
+    "category":"Level 3",
+    "description":"Ghostly hand leads subject to you."
+  },
+  {
+    "index":167,
+    "title":"Inflict Serious Wounds",
+    "category":"Level 3",
+    "description":"Touch attack, 3d8 damage + 1/level (max +15)."
+  },
+  {
+    "index":168,
+    "title":"Invisibility Purge",
+    "category":"Level 3",
+    "description":"Dispels invisibility within 5 ft./level."
+  },
+  {
+    "index":169,
+    "title":"Ki Leech",
+    "category":"Level 3",
+    "description":"Add to your ki pool when you critically hit."
+  },
+  {
+    "index":170,
+    "title":"Locate Object",
+    "category":"Level 3",
+    "description":"Senses direction toward object (specific or type)."
+  },
+  {
+    "index":171,
+    "title":"Lover's Vengeance",
+    "category":"Level 3",
+    "description":"You inspire yourself or a lover to a vengeful rage against a chosen enemy."
+  },
+  {
+    "index":172,
+    "title":"Magic Circle against Chaos/Evil/Good/Law",
+    "category":"Level 3",
+    "description":"As protection spells, but 10-ft. radius and 10 min./level."
+  },
+  {
+    "index":173,
+    "title":"Magic Vestment",
+    "category":"Level 3",
+    "description":"Armor or shield gains +1 enhancement bonus per four levels."
+  },
+  {
+    "index":174,
+    "title":"Meld into Stone",
+    "category":"Level 3",
+    "description":"You and your gear merge with stone."
+  },
+  {
+    "index":175,
+    "title":"Nap Stack",
+    "category":"Level 3",
+    "description":"Subjects only need 2 hours for a night’s sleep, and can sleep even longer for more benefits."
+  },
+  {
+    "index":176,
+    "title":"Obscure Object",
+    "category":"Level 3",
+    "description":"Masks object against scrying."
+  },
+  {
+    "index":177,
+    "title":"Prayer",
+    "category":"Level 3",
+    "description":"Allies get +1 bonus on most rolls, enemies –1 penalty."
+  },
+  {
+    "index":178,
+    "title":"Protection from Energy",
+    "category":"Level 3",
+    "description":"Absorb 12 points/level of damage from one kind of energy."
+  },
+  {
+    "index":179,
+    "title":"Remove Blindness/Deafness",
+    "category":"Level 3",
+    "description":"Cures normal or magical blindness or deafness."
+  },
+  {
+    "index":180,
+    "title":"Remove Curse",
+    "category":"Level 3",
+    "description":"Frees object or person from curse."
+  },
+  {
+    "index":181,
+    "title":"Remove Disease",
+    "category":"Level 3",
+    "description":"Cures all diseases affecting subject."
+  },
+  {
+    "index":182,
+    "title":"Resist Energy, Communal",
+    "category":"Level 3",
+    "description":"As resist energy, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":183,
+    "title":"Returning weapon. Communal",
+    "category":"Level 3",
+    "description":"As returning weapon, but you may divide the duration among weapons touched."
+  },
+  {
+    "index":184,
+    "title":"Sacred Bond",
+    "category":"Level 3",
+    "description":"Cast touch healing spells from a distance."
+  },
+  {
+    "index":185,
+    "title":"Sands of Time",
+    "category":"Level 3",
+    "description":"Target temporarily ages."
+  },
+  {
+    "index":186,
+    "title":"Searing Light",
+    "category":"Level 3",
+    "description":"Ray deals 1d8/two levels damage (more against undead)."
+  },
+  {
+    "index":187,
+    "title":"Severed Fate",
+    "category":"Level 3",
+    "description":"A target becomes shaken and can not use hero points for 10 minutes per level."
+  },
+  {
+    "index":188,
+    "title":"Share Language, Communal",
+    "category":"Level 3",
+    "description":"As share language, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":189,
+    "title":"Speak with Dead",
+    "category":"Level 3",
+    "description":"Corpse answers one question/two levels."
+  },
+  {
+    "index":190,
+    "title":"Stone Shape",
+    "category":"Level 3",
+    "description":"Sculpts stone into any shape."
+  },
+  {
+    "index":191,
+    "title":"Summon Monster III",
+    "category":"Level 3",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":192,
+    "title":"Symbol of Healing",
+    "category":"Level 3",
+    "description":"Triggered rune heals living creatures."
+  },
+  {
+    "index":193,
+    "title":"Unravel Destiny",
+    "category":"Level 3",
+    "description":"A target suffers penalties to checks depending on how many hero points it has, and takes damage if it uses them."
+  },
+  {
+    "index":194,
+    "title":"Vision of Hell",
+    "category":"Level 3",
+    "description":"Illusory hellscape makes creatures shaken."
+  },
+  {
+    "index":195,
+    "title":"Water Breathing",
+    "category":"Level 3",
+    "description":"Subjects can breathe underwater."
+  },
+  {
+    "index":196,
+    "title":"Water Walk",
+    "category":"Level 3",
+    "description":"Subject treads on water as if solid."
+  },
+  {
+    "index":197,
+    "title":"Waters of Maddening",
+    "category":"Level 3",
+    "description":"Create a more potent unholy water."
+  },
+  {
+    "index":198,
+    "title":"Wind Wall",
+    "category":"Level 3",
+    "description":"Deflects arrows, smaller creatures, and gases."
+  },
+  {
+    "index":199,
+    "title":"Wrathful Mantle",
+    "category":"Level 3",
+    "description":"Subject gets +1/four levels on all saves."
+  },
+  {
+    "index":200,
+    "title":"Air Walk",
+    "category":"Level 4",
+    "description":"Subject treads on air as if solid (climb or descend at 45-degree angle)."
+  },
+  {
+    "index":201,
+    "title":"Ancestral Gift",
+    "category":"Level 4",
+    "description":"A ghostly ancestor appears and gives you a magic weapon, which you may use as if you were proficient in it."
+  },
+  {
+    "index":202,
+    "title":"Aura of Doom",
+    "category":"Level 4",
+    "description":"Creatures in your aura become shaken."
+  },
+  {
+    "index":203,
+    "title":"Blessing of Fervor",
+    "category":"Level 4",
+    "description":"Gives allies a choice of benefits."
+  },
+  {
+    "index":204,
+    "title":"Blood Crow Strike",
+    "category":"Level 4",
+    "description":"Unarmed strikes create crows that deal fire and negative energy damage."
+  },
+  {
+    "index":205,
+    "title":"Chaos Hammer",
+    "category":"Level 4",
+    "description":"Harms and slows lawful creatures (1d8 damage/2 levels)."
+  },
+  {
+    "index":206,
+    "title":"Control Summoned Creature",
+    "category":"Level 4",
+    "description":"Direct a summoned monster as if you had summoned it."
+  },
+  {
+    "index":207,
+    "title":"Control Water",
+    "category":"Level 4",
+    "description":"Raises or lowers bodies of water."
+  },
+  {
+    "index":208,
+    "title":"Cure Critical Wounds",
+    "category":"Level 4",
+    "description":"Cures 4d8 damage + 1/level (max +20)."
+  },
+  {
+    "index":209,
+    "title":"Death Ward",
+    "category":"Level 4",
+    "description":"Grants bonuses against death spells and negative energy."
+  },
+  {
+    "index":210,
+    "title":"Debilitating Portent",
+    "category":"Level 4",
+    "description":"Inf licts an ill fate on a creature, halving its damage when it attacks or casts a spell."
+  },
+  {
+    "index":211,
+    "title":"Dimensional Anchor",
+    "category":"Level 4",
+    "description":"Bars extradimensional movement."
+  },
+  {
+    "index":212,
+    "title":"Discern Lies",
+    "category":"Level 4",
+    "description":"Reveals deliberate falsehoods."
+  },
+  {
+    "index":213,
+    "title":"Dismissal",
+    "category":"Level 4",
+    "description":"Forces a creature to return to native plane."
+  },
+  {
+    "index":214,
+    "title":"Divination",
+    "category":"Level 4",
+    "description":"Provides useful advice for specific proposed actions."
+  },
+  {
+    "index":215,
+    "title":"Divine Power",
+    "category":"Level 4",
+    "description":"You gain attack bonuses and 1 hp/level."
+  },
+  {
+    "index":216,
+    "title":"Fleshworm Infestation",
+    "category":"Level 4",
+    "description":"Worms deal hp and Dex damage."
+  },
+  {
+    "index":217,
+    "title":"Freedom of Movement",
+    "category":"Level 4",
+    "description":"Subject moves normally despite impediments to movement."
+  },
+  {
+    "index":218,
+    "title":"Giant Vermin",
+    "category":"Level 4",
+    "description":"Turns centipedes, scorpions, or spiders into giant vermin."
+  },
+  {
+    "index":219,
+    "title":"Holy Smite",
+    "category":"Level 4",
+    "description":"Harms and possibly blinds evil creatures (1d8 damage/2 levels)."
+  },
+  {
+    "index":220,
+    "title":"Imbue with Spell Ability",
+    "category":"Level 4",
+    "description":"Transfer spells to subject."
+  },
+  {
+    "index":221,
+    "title":"Infernal Healing, Greater",
+    "category":"Level 4",
+    "description":"Touch a creature with devils blood, giving it fast healing 4."
+  },
+  {
+    "index":222,
+    "title":"Inflict Critical Wounds",
+    "category":"Level 4",
+    "description":"Touch attack, 4d8 damage + 1/level (max +20)."
+  },
+  {
+    "index":223,
+    "title":"Magic Weapon, Greater",
+    "category":"Level 4",
+    "description":"Weapon gains +1 bonus/four levels (max +5)."
+  },
+  {
+    "index":224,
+    "title":"Neutralize Poison",
+    "category":"Level 4",
+    "description":"Immunizes subject against poison, detoxifies venom in or on subject."
+  },
+  {
+    "index":225,
+    "title":"Order's Wrath",
+    "category":"Level 4",
+    "description":"Harms and dazes chaotic creatures (1d8 damage/2 levels)."
+  },
+  {
+    "index":226,
+    "title":"Plague Carrier",
+    "category":"Level 4",
+    "description":"Target's attacks carry filth fever."
+  },
+  {
+    "index":227,
+    "title":"Planar Adaptation",
+    "category":"Level 4",
+    "description":"Resist harmful effects of other plane."
+  },
+  {
+    "index":228,
+    "title":"Planar Ally, Lesser",
+    "category":"Level 4",
+    "description":"Exchange services with a 6 HD extraplanar creature."
+  },
+  {
+    "index":229,
+    "title":"Poison",
+    "category":"Level 4",
+    "description":"Touch deals 1d3 Con damage 1/round for 6 rounds."
+  },
+  {
+    "index":230,
+    "title":"Protection from Energy, Communal",
+    "category":"Level 4",
+    "description":"As protection from energy, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":231,
+    "title":"Repel Vermin",
+    "category":"Level 4",
+    "description":"Insects, spiders, and other vermin stay 10 ft. away."
+  },
+  {
+    "index":232,
+    "title":"Rest Eternal",
+    "category":"Level 4",
+    "description":"Dead creature cannot be revived."
+  },
+  {
+    "index":233,
+    "title":"Restoration",
+    "category":"Level 4",
+    "description":"Restores level and ability score drains."
+  },
+  {
+    "index":234,
+    "title":"Ride the Waves",
+    "category":"Level 4",
+    "description":"Target can breathe water and swim."
+  },
+  {
+    "index":235,
+    "title":"Sending",
+    "category":"Level 4",
+    "description":"Delivers short message anywhere, instantly."
+  },
+  {
+    "index":236,
+    "title":"Shield of Dawn",
+    "category":"Level 4",
+    "description":"Creatures that strike you take 1d6 +1/level fire damage."
+  },
+  {
+    "index":237,
+    "title":"Soothe Construct",
+    "category":"Level 4",
+    "description":"Reduce the berserk chance of a construct."
+  },
+  {
+    "index":238,
+    "title":"Spell Immunity",
+    "category":"Level 4",
+    "description":"Subject is immune to one spell per 4 levels."
+  },
+  {
+    "index":239,
+    "title":"Spiritual Ally",
+    "category":"Level 4",
+    "description":"Creates a divine ally to aid you."
+  },
+  {
+    "index":240,
+    "title":"Spit Venom",
+    "category":"Level 4",
+    "description":"Spit blinding black adder venom."
+  },
+  {
+    "index":241,
+    "title":"Summon Accuser",
+    "category":"Level 4",
+    "description":"Summons a single accuser devil from Hell to do your bidding."
+  },
+  {
+    "index":242,
+    "title":"Summon Monster IV",
+    "category":"Level 4",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":243,
+    "title":"Summoner Conduit",
+    "category":"Level 4",
+    "description":"The target takes damage whenever its summoned creature does."
+  },
+  {
+    "index":244,
+    "title":"Symbol of Revelation",
+    "category":"Level 4",
+    "description":"Triggered symbol reveals illusions."
+  },
+  {
+    "index":245,
+    "title":"Symbol of Slowing",
+    "category":"Level 4",
+    "description":"Triggered rune slows creatures."
+  },
+  {
+    "index":246,
+    "title":"Terrible Remorse",
+    "category":"Level 4",
+    "description":"Creature is compelled to harm itself."
+  },
+  {
+    "index":247,
+    "title":"Tongues",
+    "category":"Level 4",
+    "description":"Speak and understand any language."
+  },
+  {
+    "index":248,
+    "title":"Unholy Blight",
+    "category":"Level 4",
+    "description":"Harms and sickens good creatures (1d8 damage/2 levels)."
+  },
+  {
+    "index":249,
+    "title":"Water Walk, Communal",
+    "category":"Level 4",
+    "description":"As water walk, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":250,
+    "title":"Air Walk, Communal",
+    "category":"Level 5",
+    "description":"As air walk, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":251,
+    "title":"Ancestral Memory",
+    "category":"Level 5",
+    "description":"Gain insight into current situation."
+  },
+  {
+    "index":252,
+    "title":"Astral Projection, Lesser",
+    "category":"Level 5",
+    "description":"Limited astral travel."
+  },
+  {
+    "index":253,
+    "title":"Atonement",
+    "category":"Level 5",
+    "description":"Removes burden of misdeeds from subject and reverses magical alignment change."
+  },
+  {
+    "index":254,
+    "title":"Boneshatter",
+    "category":"Level 5",
+    "description":"The target’s bones or exoskeleton shiver and splinter, dealing 1d6 points of damage per caster level (maximum 15d6) to the target, who is also exhausted for 1 minute per caster level from the pain and exertion of the transformation."
+  },
+  {
+    "index":255,
+    "title":"Break Enchantment",
+    "category":"Level 5",
+    "description":"Frees subjects from enchantments, transmutations, and curses."
+  },
+  {
+    "index":256,
+    "title":"Breath of Life",
+    "category":"Level 5",
+    "description":"Cures 5d8 damage + 1/level and restores life to recently slain creatures."
+  },
+  {
+    "index":257,
+    "title":"Burst of Glory",
+    "category":"Level 5",
+    "description":"Targets in the area gain a +1 sacred bonus on attack rolls and saves against fear effects, plus 1 temporary hit point percaster level (maximum +20)."
+  },
+  {
+    "index":258,
+    "title":"Cleanse",
+    "category":"Level 5",
+    "description":"Cures 4d8 damage +1/level (max +25) and also removes several afflictions."
+  },
+  {
+    "index":259,
+    "title":"Command, Greater",
+    "category":"Level 5",
+    "description":"As command, but affects one subject/level."
+  },
+  {
+    "index":260,
+    "title":"Commune",
+    "category":"Level 5",
+    "description":"Deity answers one yes-or-no question/level."
+  },
+  {
+    "index":261,
+    "title":"Contagion, Greater",
+    "category":"Level 5",
+    "description":"Infect a subject with a magical disease."
+  },
+  {
+    "index":262,
+    "title":"Cure Light Wounds, Mass",
+    "category":"Level 5",
+    "description":"Cures 1d8 damage + 1/level, affects 1 subject/level."
+  },
+  {
+    "index":263,
+    "title":"Curse of Magic Negation",
+    "category":"Level 5",
+    "description":"Target gains the negated spellblight."
+  },
+  {
+    "index":264,
+    "title":"Curse, Major",
+    "category":"Level 5",
+    "description":"As bestow curse, but harder to remove."
+  },
+  {
+    "index":265,
+    "title":"Dispel Chaos/Evil/Good/Law",
+    "category":"Level 5",
+    "description":" +4 bonus against attacks."
+  },
+  {
+    "index":266,
+    "title":"Disrupting Weapon",
+    "category":"Level 5",
+    "description":"Melee weapon destroys undead."
+  },
+  {
+    "index":267,
+    "title":"Fickle Winds",
+    "category":"Level 5",
+    "description":"Wind walls selectively block attacks."
+  },
+  {
+    "index":268,
+    "title":"Flame Strike",
+    "category":"Level 5",
+    "description":"Smites foes with divine fire (1d6/level damage)."
+  },
+  {
+    "index":269,
+    "title":"Forbid Action, Greater",
+    "category":"Level 5",
+    "description":"As forbid action, but 1 creature/level."
+  },
+  {
+    "index":270,
+    "title":"Ghostbane Dirge, Mass",
+    "category":"Level 5",
+    "description":"As ghostbane dirge, but affects multiple creatures."
+  },
+  {
+    "index":271,
+    "title":"Hallow",
+    "category":"Level 5",
+    "description":"Designates location as holy."
+  },
+  {
+    "index":272,
+    "title":"Heroic Fortune, Mass",
+    "category":"Level 5",
+    "description":"As heroic fortune, except it affects more targets."
+  },
+  {
+    "index":273,
+    "title":"Holy Ice",
+    "category":"Level 5",
+    "description":"Create wall or javelins of frozen holy water."
+  },
+  {
+    "index":274,
+    "title":"Inflict Light Wounds, Mass",
+    "category":"Level 5",
+    "description":"Deals 1d8 damage + 1/level, affects 1 subject/level."
+  },
+  {
+    "index":275,
+    "title":"Insect Plague",
+    "category":"Level 5",
+    "description":"Wasp swarms attack creatures."
+  },
+  {
+    "index":276,
+    "title":"Life Bubble",
+    "category":"Level 5",
+    "description":"Protects creatures from environment."
+  },
+  {
+    "index":277,
+    "title":"Magic Siege Engine, Greater",
+    "category":"Level 5",
+    "description":"Siege engine gains +1 on targeting and damage rolls for every four caster levels."
+  },
+  {
+    "index":278,
+    "title":"Mark of Justice",
+    "category":"Level 5",
+    "description":"Designates action that triggers curse on subject."
+  },
+  {
+    "index":279,
+    "title":"Pillar of Life",
+    "category":"Level 5",
+    "description":"Created pillar heals 2d8 +1/level (max +20)"
+  },
+  {
+    "index":280,
+    "title":"Plane Shift",
+    "category":"Level 5",
+    "description":"As many as 8 subjects travel to another plane."
+  },
+  {
+    "index":281,
+    "title":"Raise Dead",
+    "category":"Level 5",
+    "description":"Restores life to subject who died as long as one day/level ago."
+  },
+  {
+    "index":282,
+    "title":"Rapid Repair",
+    "category":"Level 5",
+    "description":"Construct gains fast healing 5."
+  },
+  {
+    "index":283,
+    "title":"Reprobation",
+    "category":"Level 5",
+    "description":"Marked target is shunned by your religion."
+  },
+  {
+    "index":284,
+    "title":"Righteous Might",
+    "category":"Level 5",
+    "description":"Your size increases, and you gain bonuses in combat."
+  },
+  {
+    "index":285,
+    "title":"Scrying",
+    "category":"Level 5",
+    "description":"Spies on subject from a distance."
+  },
+  {
+    "index":286,
+    "title":"Serenity",
+    "category":"Level 5",
+    "description":"Peaceful feelings harm those attempting violence."
+  },
+  {
+    "index":287,
+    "title":"Slay Living",
+    "category":"Level 5",
+    "description":"Touch attack deals 12d6 + 1 per level."
+  },
+  {
+    "index":288,
+    "title":"Smite Abomination",
+    "category":"Level 5",
+    "description":"You emulate some of the powers of a paladin smiting undead."
+  },
+  {
+    "index":289,
+    "title":"Snake Staff",
+    "category":"Level 5",
+    "description":"Transforms staff or other wood into snakes to fight for you."
+  },
+  {
+    "index":290,
+    "title":"Spell Immunity, Communal",
+    "category":"Level 5",
+    "description":"As spell immunity, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":291,
+    "title":"Spell Resistance",
+    "category":"Level 5",
+    "description":"Subject gains SR 12 + level."
+  },
+  {
+    "index":292,
+    "title":"Summon Infernal Host",
+    "category":"Level 5",
+    "description":"Summon host devils."
+  },
+  {
+    "index":293,
+    "title":"Summon Monster V",
+    "category":"Level 5",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":294,
+    "title":"Symbol of Pain",
+    "category":"Level 5",
+    "description":"Triggered rune wracks nearby creatures with pain."
+  },
+  {
+    "index":295,
+    "title":"Symbol of Scrying",
+    "category":"Level 5",
+    "description":"Triggered rune activates scrying sensor."
+  },
+  {
+    "index":296,
+    "title":"Symbol of Striking",
+    "category":"Level 5",
+    "description":"As symbol of death, but fills a 5-foot square."
+  },
+  {
+    "index":297,
+    "title":"Symbol of Sleep",
+    "category":"Level 5",
+    "description":"Triggered rune puts nearby creatures into catatonic slumber."
+  },
+  {
+    "index":298,
+    "title":"Tongues, Communal",
+    "category":"Level 5",
+    "description":"As tongues, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":299,
+    "title":"Treasure Stitching",
+    "category":"Level 5",
+    "description":"Objects on cloth become embroidered."
+  },
+  {
+    "index":300,
+    "title":"True Seeing",
+    "category":"Level 5",
+    "description":"Lets you see all things as they really are."
+  },
+  {
+    "index":301,
+    "title":"Undeath Ward",
+    "category":"Level 5",
+    "description":"You create a pale silver barrier that repels undead."
+  },
+  {
+    "index":302,
+    "title":"Unhallow",
+    "category":"Level 5",
+    "description":"Designates location as unholy."
+  },
+  {
+    "index":303,
+    "title":"Unholy Ice",
+    "category":"Level 5",
+    "description":"Create wall or javelins of frozen unholy water."
+  },
+  {
+    "index":304,
+    "title":"Wall of Stone",
+    "category":"Level 5",
+    "description":"Creates a stone wall that can be shaped."
+  },
+  {
+    "index":305,
+    "title":"Animate Objects",
+    "category":"Level 6",
+    "description":"Objects attack your foes."
+  },
+  {
+    "index":306,
+    "title":"Antilife Shell",
+    "category":"Level 6",
+    "description":"10-ft.-radius field hedges out living creatures."
+  },
+  {
+    "index":307,
+    "title":"Banishment",
+    "category":"Level 6",
+    "description":"Banishes 2 HD/level of extraplanar creatures."
+  },
+  {
+    "index":308,
+    "title":"Bear's Endurance, Mass",
+    "category":"Level 6",
+    "description":"As bear's endurance, affects 1 subject/level."
+  },
+  {
+    "index":309,
+    "title":"Blade Barrier",
+    "category":"Level 6",
+    "description":"Wall of blades deals 1d6/level damage."
+  },
+  {
+    "index":310,
+    "title":"Bloodsworn Retribution",
+    "category":"Level 6",
+    "description":"Cut yourself and swear an oath of retribution on your own blood. Any attack, save, or check related to the oath grants you a morale bonus to that roll equal to the number of hit points of damage you sacrificed divided by 5."
+  },
+  {
+    "index":311,
+    "title":"Bull's Strength, Mass",
+    "category":"Level 6",
+    "description":"As bull's strength, affects 1 subject/level."
+  },
+  {
+    "index":312,
+    "title":"Cold Ice Strike",
+    "category":"Level 6",
+    "description":"Cone of ice slivers deals 1d6 cold/level."
+  },
+  {
+    "index":313,
+    "title":"Create Undead",
+    "category":"Level 6",
+    "description":"Create ghasts, ghouls, mohrgs, or mummies."
+  },
+  {
+    "index":314,
+    "title":"Cure Moderate Wounds, Mass",
+    "category":"Level 6",
+    "description":"Cures 2d8 damage + 1/level, affects 1 subject/level."
+  },
+  {
+    "index":315,
+    "title":"Dispel Magic, Greater",
+    "category":"Level 6",
+    "description":"As dispel magic, but with multiple targets."
+  },
+  {
+    "index":316,
+    "title":"Dust Form",
+    "category":"Level 6",
+    "description":"You become an incorporeal creature of dust for a short period of time."
+  },
+  {
+    "index":317,
+    "title":"Eagle's Splendor, Mass",
+    "category":"Level 6",
+    "description":"As eagle's splendor, affects 1 subject/level."
+  },
+  {
+    "index":318,
+    "title":"Epidemic",
+    "category":"Level 6",
+    "description":"Infect a subject with a highly contagious disease."
+  },
+  {
+    "index":319,
+    "title":"Find the Path",
+    "category":"Level 6",
+    "description":"Shows most direct way to a location."
+  },
+  {
+    "index":320,
+    "title":"Forbiddance",
+    "category":"Level 6",
+    "description":"Blocks planar travel, damages creatures of different alignment."
+  },
+  {
+    "index":321,
+    "title":"Geas/Quest",
+    "category":"Level 6",
+    "description":"As lesser geas, but affects any creature."
+  },
+  {
+    "index":322,
+    "title":"Glyph of Warding, Greater",
+    "category":"Level 6",
+    "description":"As glyph of warding, but up to 10d8 damage or 6th-level spell."
+  },
+  {
+    "index":323,
+    "title":"Harm",
+    "category":"Level 6",
+    "description":"Deals 10 points/level damage to target."
+  },
+  {
+    "index":324,
+    "title":"Heal",
+    "category":"Level 6",
+    "description":"Cures 10 points/level damage, all diseases and mental conditions."
+  },
+  {
+    "index":325,
+    "title":"Hellfire Ray",
+    "category":"Level 6",
+    "description":"A blast of hellfire deals 1d6 damage per caster level (maximum 15d6) to the target (half fire damage half unholy damage.) If a creature is killed by this damage it must make a Will save or be damned to Hell."
+  },
+  {
+    "index":326,
+    "title":"Heroes' Feast",
+    "category":"Level 6",
+    "description":"Food for one creature/level cures and grants combat bonuses."
+  },
+  {
+    "index":327,
+    "title":"Inflict Moderate Wounds, Mass",
+    "category":"Level 6",
+    "description":"Deals 2d8 damage + 1/level, affects 1 subject/level."
+  },
+  {
+    "index":328,
+    "title":"Joyful Rapture",
+    "category":"Level 6",
+    "description":"Negate harmful emotions."
+  },
+  {
+    "index":329,
+    "title":"Owl's Wisdom, Mass",
+    "category":"Level 6",
+    "description":"As owl's wisdom, affects 1 subject/level."
+  },
+  {
+    "index":330,
+    "title":"Plague Storm",
+    "category":"Level 6",
+    "description":"Cloud infects creatures like contagion."
+  },
+  {
+    "index":331,
+    "title":"Planar Adaptation, Mass",
+    "category":"Level 6",
+    "description":"As planar adaptation, but affects multiple creatures."
+  },
+  {
+    "index":332,
+    "title":"Planar Ally",
+    "category":"Level 6",
+    "description":"As lesser planar ally, but up to 12 HD."
+  },
+  {
+    "index":333,
+    "title":"Summon Monster VI",
+    "category":"Level 6",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":334,
+    "title":"Symbol of Fear",
+    "category":"Level 6",
+    "description":"Triggered rune panics nearby creatures."
+  },
+  {
+    "index":335,
+    "title":"Symbol of Persuasion",
+    "category":"Level 6",
+    "description":"Triggered rune charms nearby creatures."
+  },
+  {
+    "index":336,
+    "title":"Symbol of Sealing",
+    "category":"Level 6",
+    "description":"Creates triggered wall of force."
+  },
+  {
+    "index":337,
+    "title":"Undeath to Death",
+    "category":"Level 6",
+    "description":"Destroys 1d4 HD/level undead (max. 20d4)."
+  },
+  {
+    "index":338,
+    "title":"Wind Walk",
+    "category":"Level 6",
+    "description":"You and your allies turn vaporous and travel fast."
+  },
+  {
+    "index":339,
+    "title":"Word of Recall",
+    "category":"Level 6",
+    "description":"Teleports you back to designated place."
+  },
+  {
+    "index":340,
+    "title":"Bestow Grace of the Champion",
+    "category":"Level 7",
+    "description":"Target gains paladin abilities for 1 round/level."
+  },
+  {
+    "index":341,
+    "title":"Blasphemy",
+    "category":"Level 7",
+    "description":"Kills, paralyzes, weakens, or dazes nonevil subjects."
+  },
+  {
+    "index":342,
+    "title":"Circle of Clarity",
+    "category":"Level 7",
+    "description":"Emanation hampers illusions and stealth."
+  },
+  {
+    "index":343,
+    "title":"Control Weather",
+    "category":"Level 7",
+    "description":"Changes weather in local area."
+  },
+  {
+    "index":344,
+    "title":"Create Demiplane, Lesser",
+    "category":"Level 7",
+    "description":"Create your own demiplane."
+  },
+  {
+    "index":345,
+    "title":"Cure Serious Wounds, Mass",
+    "category":"Level 7",
+    "description":"Cures 3d8 damage + 1/level, affects 1 subject/level."
+  },
+  {
+    "index":346,
+    "title":"Destruction",
+    "category":"Level 7",
+    "description":"Kills subject and destroys remains."
+  },
+  {
+    "index":347,
+    "title":"Dictum",
+    "category":"Level 7",
+    "description":"Kills, paralyzes, staggers, or deafens nonlawful targets."
+  },
+  {
+    "index":348,
+    "title":"Ethereal Jaunt",
+    "category":"Level 7",
+    "description":"You become ethereal for 1 round/level."
+  },
+  {
+    "index":349,
+    "title":"Holy Word",
+    "category":"Level 7",
+    "description":"Kills, paralyzes, blinds, or deafens nongood subjects."
+  },
+  {
+    "index":350,
+    "title":"Inflict Serious Wounds, Mass",
+    "category":"Level 7",
+    "description":"Deals 3d8 damage + 1/level, affects 1 subject/level."
+  },
+  {
+    "index":351,
+    "title":"Jolting Portent",
+    "category":"Level 7",
+    "description":"You inflict a vengeful fate on a creature, dealing electricity damage each time it attacks or casts a spell."
+  },
+  {
+    "index":352,
+    "title":"Lunar Veil",
+    "category":"Level 7",
+    "description":"Dispel light and revert lycanthropes."
+  },
+  {
+    "index":353,
+    "title":"Refuge",
+    "category":"Level 7",
+    "description":"Alters item to transport its possessor to you."
+  },
+  {
+    "index":354,
+    "title":"Regenerate",
+    "category":"Level 7",
+    "description":"Subject's severed limbs grow back, cures 4d8 damage +1/level (max +35)."
+  },
+  {
+    "index":355,
+    "title":"Repulsion",
+    "category":"Level 7",
+    "description":"Creatures can't approach you."
+  },
+  {
+    "index":356,
+    "title":"Restoration, Greater",
+    "category":"Level 7",
+    "description":"As restoration, plus restores all levels and ability scores."
+  },
+  {
+    "index":357,
+    "title":"Resurrection",
+    "category":"Level 7",
+    "description":"Fully restore dead subject."
+  },
+  {
+    "index":358,
+    "title":"Scrying, Greater",
+    "category":"Level 7",
+    "description":"As scrying, but faster and longer."
+  },
+  {
+    "index":359,
+    "title":"Summon Monster VII",
+    "category":"Level 7",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":360,
+    "title":"Symbol of Stunning",
+    "category":"Level 7",
+    "description":"Triggered rune stuns nearby creatures."
+  },
+  {
+    "index":361,
+    "title":"Symbol of Weakness",
+    "category":"Level 7",
+    "description":"Triggered rune weakens nearby creatures."
+  },
+  {
+    "index":362,
+    "title":"Vision of Doom",
+    "category":"Level 7",
+    "description":"As nightmare plus affect target with additional targeted spell of 6th level or lower that does not deal hp damage to be delivered when the target wakes at the nightmare's conclusion."
+  },
+  {
+    "index":363,
+    "title":"Waves of Ecstasy",
+    "category":"Level 7",
+    "description":"Pleasure stuns and staggers creatures."
+  },
+  {
+    "index":364,
+    "title":"Word of Chaos",
+    "category":"Level 7",
+    "description":"Kills, confuses, stuns, or deafens nonchaotic subjects."
+  },
+  {
+    "index":365,
+    "title":"Antimagic Field",
+    "category":"Level 8",
+    "description":"Negates magic within 10 ft."
+  },
+  {
+    "index":366,
+    "title":"Call Construct",
+    "category":"Level 8",
+    "description":"Summon your golem to you."
+  },
+  {
+    "index":367,
+    "title":"Cloak of Chaos",
+    "category":"Level 8",
+    "description":" +4 deflection bonus to AC, +4 resistance bonus to saves, and SR 25 against lawful spells."
+  },
+  {
+    "index":368,
+    "title":"Create Demiplane",
+    "category":"Level 8",
+    "description":"As lesser create demiplane, but larger and with planar traits."
+  },
+  {
+    "index":369,
+    "title":"Create Greater Undead",
+    "category":"Level 8",
+    "description":"Create shadows, wraiths, spectres, or devourers."
+  },
+  {
+    "index":370,
+    "title":"Cure Critical Wounds, Mass",
+    "category":"Level 8",
+    "description":"Cures 4d8 damage + 1/level for many creatures."
+  },
+  {
+    "index":371,
+    "title":"Dimensional Lock",
+    "category":"Level 8",
+    "description":"Teleportation and interplanar travel blocked for 1 day/level."
+  },
+  {
+    "index":372,
+    "title":"Discern Location",
+    "category":"Level 8",
+    "description":"Reveals exact location of creature or object."
+  },
+  {
+    "index":373,
+    "title":"Earthquake",
+    "category":"Level 8",
+    "description":"Intense tremor shakes 80-ft. radius."
+  },
+  {
+    "index":374,
+    "title":"Euphoric Tranquility",
+    "category":"Level 8",
+    "description":"Makes a single creature peaceful and friendly."
+  },
+  {
+    "index":375,
+    "title":"Fire Storm",
+    "category":"Level 8",
+    "description":"Deals 1d6/level fire damage."
+  },
+  {
+    "index":376,
+    "title":"Frightful Aspect",
+    "category":"Level 8",
+    "description":"You take on a terrifying, Large-sized form of yourself and emit an aura that causes creatures to become shaken orfrightened."
+  },
+  {
+    "index":377,
+    "title":"Holy Aura",
+    "category":"Level 8",
+    "description":" +4 deflection bonus to AC, +4 resistance bonus to saves, and SR 25 against evil spells."
+  },
+  {
+    "index":378,
+    "title":"Inflict Critical Wounds, Mass",
+    "category":"Level 8",
+    "description":"Deals 4d8 damage + 1/level, affects 1 subject/level."
+  },
+  {
+    "index":379,
+    "title":"Orb of the Void",
+    "category":"Level 8",
+    "description":"Sphere inflicts negative levels."
+  },
+  {
+    "index":380,
+    "title":"Planar Ally, Greater",
+    "category":"Level 8",
+    "description":"As lesser planar ally, but up to 18 HD."
+  },
+  {
+    "index":381,
+    "title":"Rift of Ruin",
+    "category":"Level 8",
+    "description":"Tears a rift in reality, creating an extra-dimensional hole with a depth of 60 feet."
+  },
+  {
+    "index":382,
+    "title":"Shield of Law",
+    "category":"Level 8",
+    "description":" +4 deflection bonus to AC, +4 resistance bonus to saves, and SR 25 against chaotic spells."
+  },
+  {
+    "index":383,
+    "title":"Spell Immunity, Greater",
+    "category":"Level 8",
+    "description":"As spell immunity, but up to 8th-level spells."
+  },
+  {
+    "index":384,
+    "title":"Stormbolts",
+    "category":"Level 8",
+    "description":"1d8 damage/level (max 20d8) to targets."
+  },
+  {
+    "index":385,
+    "title":"Summon Monster VIII",
+    "category":"Level 8",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":386,
+    "title":"Symbol of Death",
+    "category":"Level 8",
+    "description":"Triggered rune kills nearby creatures."
+  },
+  {
+    "index":387,
+    "title":"Symbol of Insanity",
+    "category":"Level 8",
+    "description":"Triggered rune renders nearby creatures insane."
+  },
+  {
+    "index":388,
+    "title":"Unholy Aura",
+    "category":"Level 8",
+    "description":" +4 deflection bonus to AC, +4 resistance bonus to saves, and SR 25 against good spells."
+  },
+  {
+    "index":389,
+    "title":"Astral Projection",
+    "category":"Level 9",
+    "description":"Projects you and others onto Astral Plane."
+  },
+  {
+    "index":390,
+    "title":"Canopic Conversion",
+    "category":"Level 9",
+    "description":"Eviscerates the target, drawing forth his life essence as well as his internal organs, inflicting 1d6 hit points of damage percaster level (maximum 20d6). If this kills the target, the spell pulls his organs into a set of 4 canopic jars and seals them; creating an Osirion mummy 1d4 rounds later."
+  },
+  {
+    "index":391,
+    "title":"Create Demiplane, Greater",
+    "category":"Level 9",
+    "description":"As create demiplane, but larger and with more planar traits."
+  },
+  {
+    "index":392,
+    "title":"Cursed Earth",
+    "category":"Level 9",
+    "description":"Plants die, living creatures catch diseases, or dead creatures rise as zombies."
+  },
+  {
+    "index":393,
+    "title":"Energy Drain",
+    "category":"Level 9",
+    "description":"Subject gains 2d4 negative levels."
+  },
+  {
+    "index":394,
+    "title":"Etherealness",
+    "category":"Level 9",
+    "description":"Travel to Ethereal Plane with companions."
+  },
+  {
+    "index":395,
+    "title":"Gate",
+    "category":"Level 9",
+    "description":"Connects two planes for travel or summoning."
+  },
+  {
+    "index":396,
+    "title":"Heal, Mass",
+    "category":"Level 9",
+    "description":"As heal, but affects 1 subject/level."
+  },
+  {
+    "index":397,
+    "title":"Implosion",
+    "category":"Level 9",
+    "description":"Inflict 10 damage/level to one creature/round."
+  },
+  {
+    "index":398,
+    "title":"Interplanetary Teleport",
+    "category":"Level 9",
+    "description":"Teleport to another planet."
+  },
+  {
+    "index":399,
+    "title":"Miracle",
+    "category":"Level 9",
+    "description":"Requests a deity's intercession."
+  },
+  {
+    "index":400,
+    "title":"Overwhelming Presence",
+    "category":"Level 9",
+    "description":"Creatures bow before you as if you were divine."
+  },
+  {
+    "index":401,
+    "title":"Polar Midnight",
+    "category":"Level 9",
+    "description":"Cold darkness paralyzes and deals damage."
+  },
+  {
+    "index":402,
+    "title":"Soul Bind",
+    "category":"Level 9",
+    "description":"Traps newly dead soul to prevent resurrection."
+  },
+  {
+    "index":403,
+    "title":"Spell Immunity, Greater Communal",
+    "category":"Level 9",
+    "description":"As greater spell immunity, but you may divide the duration among creatures touched."
+  },
+  {
+    "index":404,
+    "title":"Storm of Vengeance",
+    "category":"Level 9",
+    "description":"Storm rains acid, lightning, and hail."
+  },
+  {
+    "index":405,
+    "title":"Summon Monster IX",
+    "category":"Level 9",
+    "description":"Summons extraplanar creature to fight for you."
+  },
+  {
+    "index":406,
+    "title":"Symbol of Strife",
+    "category":"Level 9",
+    "description":"Triggered rune makes creatures attack."
+  },
+  {
+    "index":407,
+    "title":"Symbol of Vulnerability",
+    "category":"Level 9",
+    "description":"Triggered rune gives penalties."
+  },
+  {
+    "index":408,
+    "title":"True Resurrection",
+    "category":"Level 9",
+    "description":"As resurrection, plus remains aren't needed."
+  },
+  {
+    "index":409,
+    "title":"Winds of Vengeance",
+    "category":"Level 9",
+    "description":"Grants flight; attack with wind."
+  },
+  {
+    "index":410,
+    "title":"Wooden Phalanx",
+    "category":"Level 9",
+    "description":"Creates 1d4+2 temporary wood golems to fight for you."
+  }
+]

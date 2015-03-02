@@ -3,15 +3,6 @@
  */
 package net.mindsoup.charactersoup.fragments;
 
-import net.mindsoup.charactersoup.CharacterActivity;
-import net.mindsoup.charactersoup.R;
-import net.mindsoup.charactersoup.pf.PfHandedness;
-import net.mindsoup.charactersoup.pf.items.Item;
-import net.mindsoup.charactersoup.pf.items.ItemEffects;
-import net.mindsoup.charactersoup.pf.items.ItemSlots;
-import net.mindsoup.charactersoup.pf.items.Weapon;
-import net.mindsoup.charactersoup.pf.items.Wearable;
-import net.mindsoup.charactersoup.pf.util.Dice;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +17,16 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockDialogFragment;
+
+import net.mindsoup.charactersoup.CharacterActivity;
+import net.mindsoup.charactersoup.R;
+import net.mindsoup.charactersoup.pf.PfHandedness;
+import net.mindsoup.charactersoup.pf.items.Item;
+import net.mindsoup.charactersoup.pf.items.ItemEffects;
+import net.mindsoup.charactersoup.pf.items.ItemSlots;
+import net.mindsoup.charactersoup.pf.items.Weapon;
+import net.mindsoup.charactersoup.pf.items.Wearable;
+import net.mindsoup.charactersoup.pf.util.Dice;
 
 /**
  * @author Valentijn

@@ -3,7 +3,11 @@
  */
 package net.mindsoup.charactersoup.fragments;
 
-import java.util.ArrayList;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
 
 import net.mindsoup.charactersoup.CharacterActivity;
 import net.mindsoup.charactersoup.R;
@@ -11,11 +15,8 @@ import net.mindsoup.charactersoup.adapters.AttributeListAdapter;
 import net.mindsoup.charactersoup.adapters.CharacterAttributeAdapter;
 import net.mindsoup.charactersoup.pf.PfAttributes;
 import net.mindsoup.charactersoup.pf.PfCharacter;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListView;
+
+import java.util.ArrayList;
 
 /**
  * @author Valentijn
@@ -58,4 +59,14 @@ public class AttributesFragment extends CharacterFragment {
 		if(adapter != null)
 			adapter.notifyDataSetChanged();
 	}
+
+    @Override
+    public String getHelpTitle() {
+        return this.getActivity().getString(R.string.attr_fragment_help_title);
+    }
+
+    @Override
+    public String getHelpText() {
+        return this.getActivity().getString(R.string.attr_fragment_help_text);
+    }
 }

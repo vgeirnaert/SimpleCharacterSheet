@@ -82,33 +82,28 @@
 	        android:layout_height="wrap_content"
 	        android:orientation="horizontal"
 	        android:weightSum="1.0" >
-
-	    	<TextView
-		        android:id="@+id/item_equip"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:paddingLeft="@dimen/activity_horizontal_margin"
-		    	android:paddingRight="@dimen/activity_horizontal_margin"
-		    	android:textSize="16sp"
-		    	android:textColor="#eee"
-		    	android:layout_weight=".5"
-		    	android:text="@string/equip_item" />
-	    	
+            <Button
+                android:id="@+id/item_equip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                style="@style/Widget.Sherlock.ActionButton"
+                android:layout_weight=".5"
+                android:text="@string/equip_item"/>
 	    	<View
 			    android:layout_width="1dp"
 			    android:layout_height="fill_parent"
 			    android:background="#666" />
-	        
-	        <TextView
-		        android:id="@+id/item_delete"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:paddingLeft="@dimen/activity_horizontal_margin"
-		    	android:paddingRight="@dimen/activity_horizontal_margin"
-		    	android:textSize="16sp"
-		    	android:textColor="#eee"
-		    	android:layout_weight=".5"
-		    	android:text="@string/delete_item" />
+            <Button
+                android:id="@+id/item_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                style="@style/Widget.Sherlock.ActionButton"
+                android:layout_weight=".5"
+                android:text="@string/delete_item"/>
 		</LinearLayout>
     </LinearLayout>
 </LinearLayout>

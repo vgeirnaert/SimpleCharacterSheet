@@ -1,8 +1,5 @@
 package net.mindsoup.charactersoup.pf.classes;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import net.mindsoup.charactersoup.fragments.RageFragment;
 import net.mindsoup.charactersoup.pf.PfCharacter;
 import net.mindsoup.charactersoup.pf.PfCharacter.Attributes;
@@ -11,6 +8,9 @@ import net.mindsoup.charactersoup.pf.feats.PfFeats;
 import net.mindsoup.charactersoup.pf.skills.PfSkills;
 import net.mindsoup.charactersoup.pf.util.Calculation;
 import net.mindsoup.charactersoup.pf.util.Dice;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class PfBarbarian implements PfClass {
 	
@@ -113,5 +113,10 @@ public class PfBarbarian implements PfClass {
 	public void setRaging(boolean rage) {
 		this.isRaging = rage;
 	}
+
+    @Override
+    public int getLevelupSpecialPowers(int level, PfCharacter character) {
+        return (level + 1) % 2;
+    }
 
 }

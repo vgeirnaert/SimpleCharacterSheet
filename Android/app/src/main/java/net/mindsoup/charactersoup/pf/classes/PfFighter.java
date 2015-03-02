@@ -78,4 +78,9 @@ public class PfFighter implements PfClass {
     public String toString() {
         return "Fighter";
     }
+
+    @Override
+    public int getLevelupSpecialPowers(int level, PfCharacter character) {
+        return 0;
+    }
 }

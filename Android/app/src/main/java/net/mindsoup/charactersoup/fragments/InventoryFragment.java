@@ -1,22 +1,18 @@
 package net.mindsoup.charactersoup.fragments;
 
-import net.mindsoup.charactersoup.CharacterActivity;
-import net.mindsoup.charactersoup.R;
-import net.mindsoup.charactersoup.adapters.ItemAdapter;
-import net.mindsoup.charactersoup.pf.items.Item;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import net.mindsoup.charactersoup.CharacterActivity;
+import net.mindsoup.charactersoup.R;
+import net.mindsoup.charactersoup.adapters.ItemAdapter;
 
 public class InventoryFragment extends CharacterFragment {
 	
@@ -40,31 +36,6 @@ public class InventoryFragment extends CharacterFragment {
 			adapter = new ItemAdapter(this.getActivity(), R.layout.items_list_item, ca.getCharacter().getInventoryItems(), this.getSherlockActivity());
 			list.setAdapter(adapter);
 			
-			list.setOnItemLongClickListener(new OnItemLongClickListener() {
-
-				@Override
-				public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-					Item i = ca.getCharacter().getInventoryItems().get(position);
-					
-					new AlertDialog.Builder(ca)
-			        .setIcon(android.R.drawable.ic_dialog_alert)
-			        .setTitle("Delete item")
-			        .setMessage("Delete " + i.getName() + " from inventory?")
-			        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-			        	@Override
-			        	public void onClick(DialogInterface dialog, int which) {
-			        		deleteItem(position);
-			        	}
-
-			        })
-			        .setNegativeButton("No", null)
-			        .show();
-					
-					
-					return true;
-				}
-			});
-			
 			Button button = (Button)this.getActivity().findViewById(R.id.add_item_button);
 			button.setOnClickListener(new OnClickListener() {
 				
@@ -77,11 +48,6 @@ public class InventoryFragment extends CharacterFragment {
 			
 			refresh();
 		}
-	}
-	
-	private void deleteItem(int position) {
-		Item i = ca.getCharacter().getInventoryItems().get(position);
-		ca.removeItem(i, 1);
 	}
 	
 	private void addItem() {
@@ -102,5 +68,15 @@ public class InventoryFragment extends CharacterFragment {
 			tv.setText(Float.toString(ca.getCharacter().getTotalCarryingWeight()) + " Lbs");
 		}
 	}
+
+    @Override
+    public String getHelpTitle() {
+        return this.getActivity().getString(R.string.inventory_fragment_help_title);
+    }
+
+    @Override
+    public String getHelpText() {
+        return this.getActivity().getString(R.string.inventory_fragment_help_text);
+    }
 
 }

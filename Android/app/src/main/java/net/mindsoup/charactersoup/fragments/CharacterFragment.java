@@ -1,11 +1,12 @@
 package net.mindsoup.charactersoup.fragments;
 
-import net.mindsoup.charactersoup.CharacterActivity;
-import net.mindsoup.charactersoup.pf.PfCharacter;
 import android.app.Activity;
 import android.os.Bundle;
 
 import com.actionbarsherlock.app.SherlockFragment;
+
+import net.mindsoup.charactersoup.CharacterActivity;
+import net.mindsoup.charactersoup.pf.PfCharacter;
 
 public abstract class CharacterFragment extends SherlockFragment {
 	abstract public void refresh();
@@ -45,4 +46,8 @@ public abstract class CharacterFragment extends SherlockFragment {
 		
 		return null;
 	}
+
+    abstract public String getHelpTitle();
+    abstract public String getHelpText();
+
 }

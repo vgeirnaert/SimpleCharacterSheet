@@ -3,16 +3,6 @@
  */
 package net.mindsoup.charactersoup.adapters;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import net.mindsoup.charactersoup.CalculationView;
-import net.mindsoup.charactersoup.CharacterActivity;
-import net.mindsoup.charactersoup.R;
-import net.mindsoup.charactersoup.pf.skills.PfSkill;
-import net.mindsoup.charactersoup.pf.skills.PfSkills;
 import android.content.Context;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -24,6 +14,17 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+
+import net.mindsoup.charactersoup.CalculationView;
+import net.mindsoup.charactersoup.CharacterActivity;
+import net.mindsoup.charactersoup.R;
+import net.mindsoup.charactersoup.pf.skills.PfSkill;
+import net.mindsoup.charactersoup.pf.skills.PfSkills;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author Valentijn
