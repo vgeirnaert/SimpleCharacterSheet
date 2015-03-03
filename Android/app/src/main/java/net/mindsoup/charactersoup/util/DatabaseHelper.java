@@ -256,10 +256,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			onCreate(db);*/
 
         if(oldVersion < 24) { // added available powers in 23
-            String addAvailablePowers = "ALTER TABLE " + Db.CHARACTER_TABLE + " ADD " + Db.CHAR_AVAILABLE_POWERS + " INT NOT NULL ON CONFLICT FAIL DEFAULT 1";
-            try {
-                db.execSQL(addAvailablePowers);
-            } catch (Exception e) {}
+            String addAvailablePowers = "ALTER TABLE " + Db.CHARACTER_TABLE + " ADD " + Db.CHAR_AVAILABLE_POWERS + " INT NOT NULL ON CONFLICT FAIL DEFAULT 0";
+            db.execSQL(addAvailablePowers);
         }
 
         if(oldVersion < 26) { // added available powers in 23

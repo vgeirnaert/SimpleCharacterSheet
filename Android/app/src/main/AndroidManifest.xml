@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.mindsoup.charactersoup"
     android:installLocation="auto"
-    android:versionCode="12"
-    android:versionName="1.6.6" >
+    android:versionCode="13"
+    android:versionName="1.7.0" >
 
     <uses-sdk
         android:minSdkVersion="8"
