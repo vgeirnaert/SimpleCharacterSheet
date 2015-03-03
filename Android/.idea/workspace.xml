@@ -26,11 +26,10 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: net.mindsoup.charactersoup" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be405a14-5fb0-46e1-a944-f255225b49a5" name="Default" comment="idea files changed">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/CharacterActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/CharacterActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/fragments/CharacterInfoFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/fragments/CharacterInfoFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_info.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_info.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+    <list default="true" id="be405a14-5fb0-46e1-a944-f255225b49a5" name="Default" comment="greatly improved stats override view">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/fragments/LevelUpFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/fragments/LevelUpFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/PfCharacter.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/PfCharacter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
@@ -54,11 +53,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CharacterInfoFragment.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CharacterInfoFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/fragments/CharacterInfoFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.89536875" vertical-offset="2341" max-vertical-offset="2924">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2341" max-vertical-offset="2924">
               <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PfHuman.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/races/PfHuman.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="952">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -77,14 +86,49 @@
       <file leaf-file-name="PfCharacter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/PfCharacter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="8799" max-vertical-offset="21165">
-              <caret line="652" column="17" selection-start-line="652" selection-start-column="17" selection-end-line="652" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5418" max-vertical-offset="21267">
+              <caret line="443" column="20" selection-start-line="443" selection-start-column="20" selection-end-line="443" selection-end-column="20" />
               <folding>
+                <element signature="e#2792#2793#0" expanded="true" />
+                <element signature="e#2844#2845#0" expanded="true" />
                 <element signature="e#4505#4506#0" expanded="true" />
                 <element signature="e#4544#4545#0" expanded="true" />
-                <element signature="e#16563#16564#0" expanded="true" />
-                <element signature="e#16596#16597#0" expanded="true" />
+                <element signature="e#16661#16662#0" expanded="true" />
+                <element signature="e#16694#16695#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PfFighter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/classes/PfFighter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
+              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LevelUpFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/fragments/LevelUpFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.271012" vertical-offset="437" max-vertical-offset="2108">
+              <caret line="56" column="90" selection-start-line="56" selection-start-column="90" selection-end-line="56" selection-end-column="90" />
+              <folding>
+                <element signature="e#2744#3415#0" expanded="true" />
+                <element signature="e#3410#3411#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2269" max-vertical-offset="3978">
+              <caret line="200" column="9" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1311,8 +1355,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_spellbook.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/adapters/ExpandableSelectListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/fragments/SpellbookFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/fragments/LevelUpFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/classes/PfBard.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/classes/PfBarbarian.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/classes/PfFighter.java" />
@@ -1320,7 +1362,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/classes/PfRogue.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/classes/PfSorcerer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/classes/PfClass.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/PfCharacter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/util/DatabaseHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/classes/PfWizard.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/classes/PfPaladin.java" />
@@ -1332,6 +1373,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/CharacterActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/fragments/CharacterInfoFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/PfCharacter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/fragments/LevelUpFragment.java" />
       </list>
     </option>
   </component>
@@ -1628,6 +1672,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charactersoup" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="races" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2395,7 +2477,11 @@
       <created>1425338882004</created>
       <updated>1425338882004</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="greatly improved stats override view">
+      <created>1425408512405</created>
+      <updated>1425408512405</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2430,19 +2516,20 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33546326" sideWeight="0.29051173" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.7772436" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.7772436" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3035144" sideWeight="0.7563966" order="11" side_tool="false" content_ui="tabs" x="237" y="757" width="1344" height="285" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16950959" sideWeight="0.49946752" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32995737" sideWeight="0.22275642" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33546326" sideWeight="0.7094883" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32995737" sideWeight="0.22275642" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33546326" sideWeight="0.7094883" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18710022" sideWeight="0.5005325" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2450,7 +2537,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2468,7 +2554,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="improved skill fragment" />
     <MESSAGE value="Package/app name change" />
     <MESSAGE value="changed icon" />
     <MESSAGE value="fixed range attack bonus multiple attacks" />
@@ -2493,7 +2578,8 @@
     <MESSAGE value="Implemented rage powers!" />
     <MESSAGE value="Implemented sorcerer spellbook, fixed bug in barbarian" />
     <MESSAGE value="idea files changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="idea files changed" />
+    <MESSAGE value="greatly improved stats override view" />
+    <option name="LAST_COMMIT_MESSAGE" value="greatly improved stats override view" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2511,13 +2597,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/pf_data/feats.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7009472" vertical-offset="14255" max-vertical-offset="14994">
-          <caret line="869" column="234" selection-start-line="869" selection-start-column="234" selection-end-line="869" selection-end-column="234" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/assets/pf_data/ranger_spells.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="15521">
@@ -2595,6 +2674,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
           <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2733,31 +2813,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/classes/PfFighter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9016949" vertical-offset="488" max-vertical-offset="1156">
-          <caret line="82" column="71" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/classes/PfBarbarian.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.76949155" vertical-offset="1059" max-vertical-offset="1666">
           <caret line="117" column="71" selection-start-line="117" selection-start-column="71" selection-end-line="117" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50508475" vertical-offset="2337" max-vertical-offset="3961">
-          <caret line="196" column="37" selection-start-line="196" selection-start-column="37" selection-end-line="196" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/fragments/LevelUpFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.013559322" vertical-offset="671" max-vertical-offset="1955">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -2810,6 +2869,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="913" max-vertical-offset="1955">
           <caret line="129" column="9" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2817,6 +2877,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3588907" vertical-offset="1325" max-vertical-offset="1989">
           <caret line="87" column="137" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="137" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2824,6 +2885,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6949429" vertical-offset="1767" max-vertical-offset="2380">
           <caret line="129" column="38" selection-start-line="129" selection-start-column="38" selection-end-line="129" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2838,6 +2900,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4991844" vertical-offset="1444" max-vertical-offset="2533">
           <caret line="167" column="17" selection-start-line="125" selection-start-column="8" selection-end-line="167" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2845,6 +2908,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38009787" vertical-offset="804" max-vertical-offset="2006">
           <caret line="80" column="19" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2883,27 +2947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/PfCharacter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8799" max-vertical-offset="21165">
-          <caret line="652" column="17" selection-start-line="652" selection-start-column="17" selection-end-line="652" selection-end-column="17" />
-          <folding>
-            <element signature="e#4505#4506#0" expanded="true" />
-            <element signature="e#4544#4545#0" expanded="true" />
-            <element signature="e#16563#16564#0" expanded="true" />
-            <element signature="e#16596#16597#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/CharacterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4124" max-vertical-offset="5848">
-          <caret line="308" column="28" selection-start-line="308" selection-start-column="28" selection-end-line="308" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.32" vertical-offset="714" max-vertical-offset="4250">
@@ -2914,9 +2957,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/fragments/CharacterInfoFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.89536875" vertical-offset="2341" max-vertical-offset="2924">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2341" max-vertical-offset="2924">
           <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2269" max-vertical-offset="3978">
+          <caret line="200" column="9" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/races/PfHuman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="356" max-vertical-offset="952">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/classes/PfFighter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/CharacterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4583" max-vertical-offset="5848">
+          <caret line="308" column="28" selection-start-line="308" selection-start-column="28" selection-end-line="308" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/pf/PfCharacter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5418" max-vertical-offset="21267">
+          <caret line="443" column="20" selection-start-line="443" selection-start-column="20" selection-end-line="443" selection-end-column="20" />
+          <folding>
+            <element signature="e#2792#2793#0" expanded="true" />
+            <element signature="e#2844#2845#0" expanded="true" />
+            <element signature="e#4505#4506#0" expanded="true" />
+            <element signature="e#4544#4545#0" expanded="true" />
+            <element signature="e#16661#16662#0" expanded="true" />
+            <element signature="e#16694#16695#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/fragments/LevelUpFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.271012" vertical-offset="437" max-vertical-offset="2108">
+          <caret line="56" column="90" selection-start-line="56" selection-start-column="90" selection-end-line="56" selection-end-column="90" />
+          <folding>
+            <element signature="e#2744#3415#0" expanded="true" />
+            <element signature="e#3410#3411#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -439,6 +439,10 @@ public class PfCharacter implements Parcelable {
 			skillRanks++;
 			feats++;
 		}
+
+        if(this.getPfClass().getPfClass() == PfClasses.FIGHTER) {
+            feats++;
+        }
 			
 		this.setAvailableSkillRanks(skillRanks);
 			

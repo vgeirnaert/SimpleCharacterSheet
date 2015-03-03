@@ -196,8 +196,9 @@ public class MainActivity extends SherlockFragmentActivity {
 		c.setHitpoints(hitpoints);
         c.setAvailableSpecialPowers(c.getLevelupSpecialPowers(1));
 		
-		if(c.getRace().getRace() == PfRaces.HALFELF || c.getRace().getRace() == PfRaces.HALFORC || c.getRace().getRace() == PfRaces.HUMAN) 
-			((PfChooseBonusAttributeRace)c.getRace()).setBonusAttribute(PfAttributes.getAttribute(bonus_stat));
+		if(c.getRace().getRace() == PfRaces.HALFELF || c.getRace().getRace() == PfRaces.HALFORC || c.getRace().getRace() == PfRaces.HUMAN) {
+            ((PfChooseBonusAttributeRace) c.getRace()).setBonusAttribute(PfAttributes.getAttribute(bonus_stat));
+        }
 		
 		long id = dbHelper.addCharacter(c);
 		c.setId(id);
