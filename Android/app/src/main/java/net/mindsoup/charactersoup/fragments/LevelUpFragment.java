@@ -54,7 +54,7 @@ public class LevelUpFragment extends SherlockDialogFragment {
         	skillpoints++;
         
         String source = "<b>" + skillpoints + "</b> extra skill ranks";
-        if(this.level % 2 == 1) {
+        if(this.level % 2 == 1 || character.getPfClass().getPfClass() == PfClasses.FIGHTER) {
         	source += "<br><b>1</b> new feat";
         }
 
@@ -107,6 +107,10 @@ public class LevelUpFragment extends SherlockDialogFragment {
         int hdroll = Integer.parseInt( hd.getText().toString() );
         int feat = this.level % 2;
         int hitpoints = hdroll + character.getAttributeBonus(character.getConstitution());
+
+        if(character.getPfClass().getPfClass() == PfClasses.FIGHTER) {
+            feat = feat + ( (this.level + 1) % 2);
+        }
         
 		if(((Spinner)this.getView().findViewById(R.id.levelup_perlevel)).getSelectedItemPosition() == 1)
 			skillpoints++;
@@ -118,7 +122,8 @@ public class LevelUpFragment extends SherlockDialogFragment {
         character.setAvailableFeats(character.getAvailableFeats() + feat);
         character.setAvailableSkillRanks(character.getAvailableSkillRanks() + skillpoints);
         character.setNewLevels(character.getNewLevels() - 1);
-        
+
+
         if(this.level % 4 == 0) {
         	int stat = ((Spinner)this.getView().findViewById(R.id.levelup_stat)).getSelectedItemPosition();
         	int value = character.getBaseAttributeValue(PfAttributes.getAttribute(stat));
