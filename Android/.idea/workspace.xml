@@ -26,10 +26,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: net.mindsoup.charactersoup" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be405a14-5fb0-46e1-a944-f255225b49a5" name="Default" comment="Fixed Fighters getting bonus feats at even levels">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/util/DatabaseHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/util/DatabaseHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/MainActivity.java" />
+    <list default="true" id="be405a14-5fb0-46e1-a944-f255225b49a5" name="Default" comment="update 1.7.0">
+      <change type="DELETED" beforePath="D:\Java\SimpleCharacterSheet\Android\app\crashlytics.properties" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
@@ -123,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2116" max-vertical-offset="3978">
-              <caret line="176" column="354" selection-start-line="176" selection-start-column="354" selection-end-line="176" selection-end-column="354" />
+            <state vertical-scroll-proportion="0.29200652" vertical-offset="2116" max-vertical-offset="3978">
+              <caret line="176" column="354" selection-start-line="176" selection-start-column="88" selection-end-line="176" selection-end-column="354" />
               <folding />
             </state>
           </provider>
@@ -145,11 +143,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13578275" vertical-offset="0" max-vertical-offset="918">
-              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="918">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2214,7 +2212,11 @@
       <created>1425409746306</created>
       <updated>1425409746306</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="update 1.7.0">
+      <created>1425410423182</created>
+      <updated>1425410423182</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2287,7 +2289,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="changed icon" />
     <MESSAGE value="fixed range attack bonus multiple attacks" />
     <MESSAGE value="increased version code" />
     <MESSAGE value="disabled proguard" />
@@ -2312,7 +2313,8 @@
     <MESSAGE value="idea files changed" />
     <MESSAGE value="greatly improved stats override view" />
     <MESSAGE value="Fixed Fighters getting bonus feats at even levels" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Fighters getting bonus feats at even levels" />
+    <MESSAGE value="update 1.7.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 1.7.0" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2729,14 +2731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2116" max-vertical-offset="3978">
-          <caret line="176" column="354" selection-start-line="176" selection-start-column="354" selection-end-line="176" selection-end-column="354" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/util/DatabaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3587" max-vertical-offset="11016">
@@ -2749,8 +2743,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13578275" vertical-offset="0" max-vertical-offset="918">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="918">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/net/mindsoup/charactersoup/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29200652" vertical-offset="2116" max-vertical-offset="3978">
+          <caret line="176" column="354" selection-start-line="176" selection-start-column="88" selection-end-line="176" selection-end-column="354" />
           <folding />
         </state>
       </provider>
