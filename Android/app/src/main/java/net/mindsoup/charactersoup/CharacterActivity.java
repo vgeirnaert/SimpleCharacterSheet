@@ -306,9 +306,7 @@ public class CharacterActivity extends SherlockFragmentActivity {
 			((CharacterFragment)f).refresh();
 		}
 		
-		
 		showLevelUpDialog();
-		
 	}
 	
 	public void showLevelUpDialog() {

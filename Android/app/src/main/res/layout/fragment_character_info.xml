@@ -9,19 +9,25 @@
 	    android:background="#00000000"
 	    android:paddingLeft="@dimen/activity_horizontal_margin"
     	android:paddingRight="@dimen/activity_horizontal_margin" >
+
+        <TextView
+            android:id="@+id/char_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 	    
 	    <LinearLayout
 		    android:layout_width="match_parent"
 		    android:layout_height="wrap_content"
 		    android:orientation="horizontal"
-		    android:weightSum="0.9" >
+		    android:weightSum="1" >
 		    
 	        <TextView
 		        android:layout_height="wrap_content"
 				android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".3"
+		        android:layout_weight=".4"
 		        android:text="@string/info_xp"
 		  		android:layout_width="0dip" />
 	         
@@ -39,8 +45,8 @@
 			    android:id="@+id/xp_button"
 			    android:layout_height="wrap_content"
 	            android:text="@string/info_button"
-				android:layout_gravity="center_vertical"
-		        android:gravity="center_vertical"
+				android:layout_gravity="center"
+		        android:gravity="center"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
 		        android:layout_weight=".3"
 		  		android:layout_width="0dip" />
@@ -50,14 +56,14 @@
 		    android:layout_width="match_parent"
 		    android:layout_height="wrap_content"
 		    android:orientation="horizontal"
-		    android:weightSum="0.9" >
+		    android:weightSum="1" >
 		    
 	        <TextView
 		        android:layout_height="wrap_content"
 				android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
-		        android:layout_weight=".3"
+		        android:layout_weight=".4"
 		        android:text="@string/info_money"
 		  		android:layout_width="0dip" />
 	         
@@ -76,16 +82,155 @@
 			    android:layout_height="wrap_content"
 	            android:text="@string/info_button"
 				android:layout_gravity="center_vertical"
-		        android:gravity="center_vertical"
+		        android:gravity="center"
 		        android:textAppearance="?android:attr/textAppearanceMedium"
 		        android:layout_weight=".3"
 		  		android:layout_width="0dip" />
 		</LinearLayout>
-	    
-		<TextView
-	        android:id="@+id/char_info_text"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="0.5"
+                android:text="@string/info_hp"
+                android:layout_width="0dip" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/edit_hp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight=".2"
+                android:layout_width="0dip"
+                />
+            <Button
+                android:id="@+id/hp_button"
+                android:layout_height="wrap_content"
+                android:text="@string/info_button"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight=".3"
+                android:layout_width="0dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="0.5"
+                android:text="@string/info_skill"
+                android:layout_width="0dip" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/edit_skill"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight=".2"
+                android:layout_width="0dip"
+                />
+            <Button
+                android:id="@+id/skill_button"
+                android:layout_height="wrap_content"
+                android:text="@string/info_button"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight=".3"
+                android:layout_width="0dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="0.5"
+                android:text="@string/info_feat"
+                android:layout_width="0dip" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/edit_feat"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight=".2"
+                android:layout_width="0dip"
+                />
+            <Button
+                android:id="@+id/feat_button"
+                android:layout_height="wrap_content"
+                android:text="@string/info_button"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight=".3"
+                android:layout_width="0dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="0.5"
+                android:text="@string/info_spells"
+                android:layout_width="0dip" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/edit_spells"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight=".2"
+                android:layout_width="0dip"
+                />
+            <Button
+                android:id="@+id/spells_button"
+                android:layout_height="wrap_content"
+                android:text="@string/info_button"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight=".3"
+                android:layout_width="0dip" />
+        </LinearLayout>
+
 	</LinearLayout>
 </ScrollView>
