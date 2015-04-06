@@ -71,6 +71,10 @@ public class PfMonk implements PfClass {
 
     @Override
     public Calculation modifyAttribute(PfCharacter.Attributes attribute, Calculation current, PfCharacter character) {
+        if(attribute == PfCharacter.Attributes.AC) {
+            current.add("WIS", character.getAttributeBonus(character.getWisdom()));
+            current.add("AC Bonus", (int) Math.floor(character.getLevel() / 4.0f));
+        }
         return current;
     }
 
