@@ -14,6 +14,7 @@ import java.util.Map;
  * Created by Valentijn on 20-10-2014.
  */
 public class PfMonk implements PfClass {
+    private final PfSkills[] classSkills = {PfSkills.ACROBATICS, PfSkills.CLIMB, PfSkills.CRAFT, PfSkills.ESCAPE_ARTIST, PfSkills.INTIMIDATE, PfSkills.KNOWLEDGE_HISTORY, PfSkills.KNOWLEDGE_RELIGION, PfSkills.PERCEPTION, PfSkills.PERFORM, PfSkills.PROFESSION, PfSkills.RIDE, PfSkills.SENSE_MOTIVE, PfSkills.STEALTH, PfSkills.SWIM};
     @Override
     public PfClasses getPfClass() {
         return PfClasses.MONK;
@@ -51,7 +52,7 @@ public class PfMonk implements PfClass {
 
     @Override
     public PfSkills[] getClassSkills() {
-        return new PfSkills[0];
+        return classSkills;
     }
 
     @Override
