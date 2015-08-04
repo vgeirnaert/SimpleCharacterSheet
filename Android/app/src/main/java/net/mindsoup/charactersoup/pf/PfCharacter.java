@@ -33,7 +33,7 @@ import java.util.Set;
 public class PfCharacter implements Parcelable {
 
     public static final String tempBonus = "Temp";
-    public enum Attributes {AC, FORT, REF, WILL, HP};
+    public enum Attributes {AC, FORT, REF, WILL, HP, CHA, CON, DEX, INT, STR, WIS};
 	
 	private PfRace myRace;
 	private PfClass myClass;
@@ -304,7 +304,7 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public Calculation getTempConBoost() {
-        return this.tempCon;
+        return this.getPfClass().modifyAttribute(Attributes.CON, this.tempCon.clone(), this);
 	}
 	
 	public void setTempChaBoost(int boost) {
@@ -312,7 +312,7 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public Calculation getTempChaBoost() {
-        return this.tempCha;
+        return this.getPfClass().modifyAttribute(Attributes.CHA, this.tempCha.clone(), this);
 	}
 	
 	public void setTempDexBoost(int boost) {
@@ -320,7 +320,7 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public Calculation getTempDexBoost() {
-        return this.tempDex;
+        return this.getPfClass().modifyAttribute(Attributes.DEX, this.tempDex.clone(), this);
 	}
 	
 	public void setTempIntBoost(int boost) {
@@ -328,7 +328,7 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public Calculation getTempIntBoost() {
-        return this.tempInt;
+        return this.getPfClass().modifyAttribute(Attributes.INT, this.tempInt.clone(), this);
 	}
 	
 	public void setTempStrBoost(int boost) {
@@ -336,7 +336,7 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public Calculation getTempStrBoost() {
-        return this.tempStr;
+        return this.getPfClass().modifyAttribute(Attributes.STR, this.tempStr.clone(), this);
 	}
 	
 	public void setTempWisBoost(int boost) {
@@ -344,7 +344,7 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public Calculation getTempWisBoost() {
-        return this.tempWis;
+        return this.getPfClass().modifyAttribute(Attributes.WIS, this.tempWis.clone(), this);
 	}
 
     public Calculation getItemBoostFor(PfAttributes attribute) {
@@ -569,7 +569,7 @@ public class PfCharacter implements Parcelable {
 	}
 	
 	public int getNumAttacksPerRound() {
-		return (int)Math.floor( ((double)this.getLevel() / this.myClass.getExtraAttackPerNumLevels()) + 1);
+		return (int)Math.ceil( (double)this.getLevel() / (this.myClass.getExtraAttackPerNumLevels() - 1));
 	}
 	
 	/**

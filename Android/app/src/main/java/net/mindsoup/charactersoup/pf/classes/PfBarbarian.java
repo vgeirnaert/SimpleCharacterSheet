@@ -13,7 +13,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PfBarbarian implements PfClass {
-	
+
+	private final String rage = "Rage";
 	private boolean isRaging = false;
 	private Dice hitDice = new Dice(12, 1);
 	
@@ -91,15 +92,38 @@ public class PfBarbarian implements PfClass {
 	@Override
 	public Calculation modifyAttribute(Attributes attribute, Calculation current, PfCharacter character) {
 		if(this.isRaging()) {
+			double rageMod = 1;
+			if(character.getLevel() > 10) {
+				rageMod = 1.5;
+			}
+
+			if(character.getLevel() > 19) {
+				rageMod = 2;
+			}
+
 			switch(attribute) {
 				case AC:
-					current.add("Rage", -2);
+					current.add(rage, -2);
 					break;
 				case WILL:
-					current.add("Rage", 2);
+					current.add(rage, (int)(2 * rageMod));
 					break;
 				case HP:
-					current.add("Rage", 2 * character.getLevel());
+					int conBoost = (int)(4 * rageMod) + (character.hasFeat(PfFeats.RAGING_VITALITY) ? 2 : 0);
+
+					int conBonus = (int)Math.floor(conBoost / 2);
+
+					current.add(rage, conBonus * character.getLevel());
+					break;
+				case STR:
+					current.add(rage, (int)(4 * rageMod));
+					break;
+				case CON:
+					current.add(rage, (int)(4 * rageMod));
+
+					if(character.hasFeat(PfFeats.RAGING_VITALITY)) {
+						current.add("Raging Vitality", 2);
+					}
 					break;
 			}
 		}

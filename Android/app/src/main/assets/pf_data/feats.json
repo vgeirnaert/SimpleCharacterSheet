@@ -873,5 +873,10 @@
     "index":174,
     "title":"Wind Stance",
     "description":"If you move more than 5 feet this turn, you gain 20% concealment for 1 round against ranged attacks."
+  },
+  {
+    "index":175,
+    "title":"Raging Vitality",
+    "description":"Whenever you are raging, the morale bonus to your Constitution increases by +2. Your rage does not end if you become unconscious. While unconscious you must still expend rounds of rage per day each round."
   }
 ]

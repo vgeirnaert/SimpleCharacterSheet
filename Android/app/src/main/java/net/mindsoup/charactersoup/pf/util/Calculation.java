@@ -80,5 +80,15 @@ public class Calculation {
 	public void remove(String name) {
 		values.remove(name);
 	}
+
+	public Calculation clone() {
+		Calculation clone = new Calculation();
+
+		for(Map.Entry<String, Integer> entry : values.entrySet()) {
+			clone.add(entry.getKey(), entry.getValue());
+		}
+
+		return clone;
+	}
 	
 }
