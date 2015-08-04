@@ -630,6 +630,11 @@
     "description":"Casting a quickened spell is a swift action. You can perform another action, even casting another spell, in the same round as you cast a quickened spell. A spell whose casting time is more than 1 round or 1 fullround action cannot be quickened. A quickened spell uses up a spell slot four levels higher than the spell's actual level. Casting a quickened spell doesn't provoke an attack of opportunity."
   },
   {
+    "index":175,
+    "title":"Raging Vitality",
+    "description":"Whenever you are raging, the morale bonus to your Constitution increases by +2. Your rage does not end if you become unconscious. While unconscious you must still expend rounds of rage per day each round."
+  },
+  {
     "index":126,
     "title":"Rapid Reload",
     "description":"The time required for you to reload your chosen type of crossbow is reduced to a free action (for a hand or light crossbow) or a move action (for a heavy crossbow). Reloading a crossbow still provokes an attack of opportunity. If you have selected this feat for hand crossbow or light crossbow, you may fire that weapon as many times in a fullattack action as you could attack if you were using a bow."
@@ -873,10 +878,5 @@
     "index":174,
     "title":"Wind Stance",
     "description":"If you move more than 5 feet this turn, you gain 20% concealment for 1 round against ranged attacks."
-  },
-  {
-    "index":175,
-    "title":"Raging Vitality",
-    "description":"Whenever you are raging, the morale bonus to your Constitution increases by +2. Your rage does not end if you become unconscious. While unconscious you must still expend rounds of rage per day each round."
   }
 ]

@@ -14,6 +14,8 @@ import net.mindsoup.charactersoup.util.ListElement;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -21,9 +23,6 @@ import java.util.List;
  *
  */
 public class FeatFactory {
-	
-	private static String[] feat_names = null;
-	private static String[] feat_descriptions = null;
 
     private static ArrayList<ListElement> feats = null;
 	
@@ -41,6 +40,12 @@ public class FeatFactory {
 
             try {
                 feats = mapper.readValue(json, new TypeReference<List<ListElement>>(){});
+                Collections.sort(feats, new Comparator<ListElement>() {
+                    @Override
+                    public int compare(ListElement listElement, ListElement t1) {
+                        return listElement.getIndex() - t1.getIndex();
+                    }
+                });
             } catch (IOException e) {
                 throw new RuntimeException(e.getMessage());
             }
