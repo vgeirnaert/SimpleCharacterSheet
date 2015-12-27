@@ -1,0 +1,6 @@
+/Android/app/crashlytics.properties
+
+.idea
+/Android/.idea
+/Android/.gradle
+/Android/local.properties
