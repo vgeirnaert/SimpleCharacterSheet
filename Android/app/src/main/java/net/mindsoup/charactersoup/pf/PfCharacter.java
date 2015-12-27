@@ -32,7 +32,7 @@ import java.util.Set;
 
 public class PfCharacter implements Parcelable {
 
-    public static final String tempBonus = "Temp";
+    private static final String tempBonus = "Temp";
     public enum Attributes {AC, FORT, REF, WILL, HP, CHA, CON, DEX, INT, STR, WIS};
 	
 	private PfRace myRace;
@@ -73,7 +73,7 @@ public class PfCharacter implements Parcelable {
 	private List<Item> inventory = new LinkedList<Item>();
 	private Map<String, Object> properties = new HashMap<String, Object>();
     private Set<Integer> specialPowers = new HashSet<Integer>(); // rage powers, spells, etc.
-	
+
 	@SuppressWarnings("rawtypes")
 	public static final Parcelable.Creator CREATOR =
 	    new Parcelable.Creator() {
