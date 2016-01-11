@@ -27,12 +27,19 @@ import net.mindsoup.charactersoup.pf.PfAttributes;
 import net.mindsoup.charactersoup.pf.PfCharacter;
 import net.mindsoup.charactersoup.pf.PfClasses;
 import net.mindsoup.charactersoup.pf.PfRaces;
+import net.mindsoup.charactersoup.pf.feats.PfFeat;
+import net.mindsoup.charactersoup.pf.feats.PfFeats;
+import net.mindsoup.charactersoup.pf.items.Item;
+import net.mindsoup.charactersoup.pf.items.ItemEffects;
 import net.mindsoup.charactersoup.pf.races.PfChooseBonusAttributeRace;
+import net.mindsoup.charactersoup.pf.skills.PfSkill;
+import net.mindsoup.charactersoup.pf.skills.PfSkills;
 import net.mindsoup.charactersoup.util.CharacterSoupUtils;
 import net.mindsoup.charactersoup.util.DatabaseHelper;
 
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Map;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -100,6 +107,44 @@ public class MainActivity extends SherlockFragmentActivity {
 		searchCharacters.clear();
 		allCharacters.addAll(dbHelper.getCharacters());
 		searchCharacters.addAll(allCharacters);
+
+		//printCharacter();
+	}
+
+	private void printCharacter() {
+		PfCharacter character = allCharacters.get(0);
+		System.out.println("============================");
+		System.out.println(character.getName());
+		System.out.println("AC: " + character.getAC());
+		System.out.println("XP: " + character.getXp());
+		System.out.println("HP: " + character.getMaxHitpoints());
+		System.out.println("cash: " + character.getMoney());
+		System.out.println("cha: " + character.getBaseCharisma());
+		System.out.println("dex: " + character.getBaseDexterity());
+		System.out.println("int: " + character.getBaseIntelligence());
+		System.out.println("con: " + character.getBaseConstitution());
+		System.out.println("str: " + character.getBaseStrength());
+		System.out.println("wis: " + character.getBaseWisdom());
+		for(PfSkills skill : character.getTrainedSkills().keySet()) {
+			PfSkill sk = character.getTrainedSkills().get(skill);
+			System.out.println(sk.getName(this) + ", ranks: " + sk.getRank());
+		}
+
+		for(PfFeats feat : character.getFeats()) {
+			System.out.println(feat.toString());
+		}
+
+		for(Item item : character.getInventoryItems()) {
+			System.out.println(item.getName() + ", amount: " + item.getStackSize());
+			for(Map.Entry<ItemEffects, Integer> entry : item.getEffects().entrySet()) {
+				System.out.println("effect: " + entry.getKey() + " " + entry.getValue());
+			}
+		}
+
+		for(int i : character.getSpecialPowers()) {
+			System.out.println("power: " + Integer.toString(i));
+		}
+		System.out.println("============================");
 	}
 	
 	@Override
