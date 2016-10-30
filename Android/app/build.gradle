@@ -23,7 +23,7 @@ android {
     defaultConfig {
         applicationId "net.mindsoup.charactersoup"
         minSdkVersion 8
-        targetSdkVersion 17
+        targetSdkVersion 22
     }
 
     buildTypes {
