@@ -96,8 +96,7 @@ public class OverviewFragment extends CharacterFragment {
 			calcView.setText("");
 			
 			calcView = (CalculationView)getActivity().findViewById(R.id.calc_initiative);
-			Calculation init = new Calculation();
-			init.add("Dex bonus",  character.getAttributeBonus(character.getDexterity()), true);
+			Calculation init = character.getInitiative();
 			calcView.setCalculation(init);
 			calcView.setText("");
 			

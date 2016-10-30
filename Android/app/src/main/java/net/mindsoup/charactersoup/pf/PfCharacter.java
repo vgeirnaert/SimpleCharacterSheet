@@ -7,6 +7,7 @@ import android.os.Parcelable;
 import net.mindsoup.charactersoup.R;
 import net.mindsoup.charactersoup.pf.classes.PfClass;
 import net.mindsoup.charactersoup.pf.feats.FeatFactory;
+import net.mindsoup.charactersoup.pf.feats.PfFeat;
 import net.mindsoup.charactersoup.pf.feats.PfFeats;
 import net.mindsoup.charactersoup.pf.items.Item;
 import net.mindsoup.charactersoup.pf.items.ItemEffects;
@@ -742,6 +743,17 @@ public class PfCharacter implements Parcelable {
 		
 		return ref;
 	}
+
+	public Calculation getInitiative() {
+		Calculation init = new Calculation();
+		init.add("Dex bonus",  Math.min(getMaxDexBonus(), getAttributeBonus(getDexterity())), true);
+
+		if(hasFeat(PfFeats.IMPROVED_INITIATIVE)) {
+			init.add("Improved Initiative", 4);
+		}
+
+		return init;
+	}
 	
 	public int getMaxDexBonus() {
 		int result = 99;
@@ -839,7 +851,7 @@ public class PfCharacter implements Parcelable {
 		
 		for(Item i : inventory) {
 			if(i.getType() == ItemType.WEAPON && i.isEquiped()) {
-				if( ((Weapon)i).getHandedness() == PfHandedness.TWOHAND )
+				if( ((Weapon)i).getHandedness() == PfHandedness.TWOHAND && this.getAttributeBonus(this.getStrength()) > 0)
 					multiplier = 1.5;
 			}
 		}
