@@ -1046,7 +1046,16 @@ public class PfCharacter implements Parcelable {
 		
 		return false;
 	}
-	
+
+	public int getTotalTrainedSkillpoints() {
+		int total = 0;
+		for(PfSkill skill: trainedSkills.values()) {
+			total = total + skill.getRank();
+		}
+
+		return total;
+	}
+
 	public int getSkillRank(PfSkills type) {
 		if(trainedSkills.containsKey(type)) {
 			return trainedSkills.get(type).getRank();
