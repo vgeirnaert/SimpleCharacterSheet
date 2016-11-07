@@ -106,7 +106,7 @@ public class LevelUpFragment extends SherlockDialogFragment {
 		
         int hdroll = Integer.parseInt( hd.getText().toString() );
         int feat = this.level % 2;
-        int hitpoints = hdroll + character.getAttributeBonus(character.getConstitution());
+        int hitpoints = hdroll;
 
         if(character.getPfClass().getPfClass() == PfClasses.FIGHTER) {
             feat = feat + ( (this.level + 1) % 2);

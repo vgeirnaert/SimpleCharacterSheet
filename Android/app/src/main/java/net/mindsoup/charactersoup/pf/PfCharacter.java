@@ -645,7 +645,8 @@ public class PfCharacter implements Parcelable {
 	public Calculation getMaxHitpoints() {
 		Calculation hp = new Calculation();
 		
-		hp.add("Hitpoints", this.hitpoints);			
+		hp.add("Hitpoints", this.hitpoints);
+		hp.add("CON bonus", this.getAttributeBonus(this.getConstitution()) * this.getLevel());
 				
 		return this.getPfClass().modifyAttribute(Attributes.HP, hp, this);
 	}

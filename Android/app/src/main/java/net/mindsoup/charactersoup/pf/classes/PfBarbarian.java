@@ -108,13 +108,13 @@ public class PfBarbarian implements PfClass {
 				case WILL:
 					current.add(rage, (int)(2 * rageMod));
 					break;
-				case HP:
+				/*case HP:
 					int conBoost = (int)(4 * rageMod) + (character.hasFeat(PfFeats.RAGING_VITALITY) ? 2 : 0);
 
 					int conBonus = (int)Math.floor(conBoost / 2);
 
 					current.add(rage, conBonus * character.getLevel());
-					break;
+					break;*/
 				case STR:
 					current.add(rage, (int)(4 * rageMod));
 					break;

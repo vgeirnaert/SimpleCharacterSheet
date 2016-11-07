@@ -65,7 +65,7 @@ public class CharacterInfoFragment extends CharacterFragment implements OnClickL
 			edit.setText(Integer.toString(character.getMoney()));
 
             edit = (EditText)getActivity().findViewById(R.id.edit_hp);
-            edit.setText(Integer.toString(character.getMaxHitpoints().sum()));
+            edit.setText(Integer.toString(character.getBaseHitpoints()));
 
             edit = (EditText)getActivity().findViewById(R.id.edit_skill);
             edit.setText(Integer.toString(character.getAvailableSkillRanks()));
