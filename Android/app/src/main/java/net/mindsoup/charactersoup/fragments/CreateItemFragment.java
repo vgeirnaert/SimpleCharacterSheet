@@ -234,11 +234,19 @@ public class CreateItemFragment extends SherlockDialogFragment {
             i.setValue(value);
             i.setWeight(weight);
 
-            if (effect == ItemEffects.AB_AND_DAMAGE) {
+            switch(effect) {
+            case AB_AND_DAMAGE:
                 i.addEffect(ItemEffects.ATTACK_BONUS, effectValue);
                 i.addEffect(ItemEffects.DAMAGE_BONUS, effectValue);
-            } else {
-                i.addEffect(effect, effectValue);
+                break;
+                case CON_DEX_STR_BONUS:
+                    i.addEffect(ItemEffects.CON_BONUS, effectValue);
+                    i.addEffect(ItemEffects.DEX_BONUS, effectValue);
+                    i.addEffect(ItemEffects.STR_BONUS, effectValue);
+                break;
+                default:
+                    i.addEffect(effect, effectValue);
+                break;
             }
             i.setSlot(slot);
         } else {

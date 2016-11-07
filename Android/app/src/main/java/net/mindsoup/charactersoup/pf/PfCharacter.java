@@ -661,8 +661,7 @@ public class PfCharacter implements Parcelable {
 	
 	public Calculation getAC() {
 		Calculation ac = new Calculation();
-		// core rulebook page 179
-		// TODO: add armor/shield
+
 		ac.add("Base", 10);
 		
 		// bonus or penalty for tiny/large/etc characters
@@ -670,8 +669,9 @@ public class PfCharacter implements Parcelable {
 		ac.add("Size", sizeBonus);
 		ac.add("Dexterity bonus", Math.min(this.getAttributeBonus(this.getDexterity()), getMaxDexBonus()) );
 
-        if(this.hasFeat(PfFeats.DODGE))
-            ac.add("Dodge", 1);
+        if(this.hasFeat(PfFeats.DODGE)) {
+			ac.add("Dodge", 1);
+		}
 		
 		for(Item i : inventory) {
 			int acbonus = 0;

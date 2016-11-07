@@ -104,6 +104,11 @@ public class PfBarbarian implements PfClass {
 			switch(attribute) {
 				case AC:
 					current.add(rage, -2);
+
+					if(character.getSpecialPowers().contains(62)) {
+						current.add("Guarded Stance", (int)Math.ceil(character.getLevel() / 6.0f));
+					}
+
 					break;
 				case WILL:
 					current.add(rage, (int)(2 * rageMod));
