@@ -1172,6 +1172,15 @@ public class PfCharacter implements Parcelable {
 		c.add("Strength modifier", this.getAttributeBonus(this.getAttributeValue(PfAttributes.STR)));
 		c.add("Dexterity modifier", this.getAttributeBonus(this.getAttributeValue(PfAttributes.DEX)));
 		c.add("Size modifier", this.getSizeCMBModifier());
+
+		if(hasFeat(PfFeats.DODGE)) {
+			c.add("Dodge", 1);
+		}
+
+		// todo
+		if(getAC().getValues().get("Amulet Of Natural Armor +2") != null ) {
+			c.add("Natural Armor", getAC().getValues().get("Amulet Of Natural Armor +2"));
+		}
 		
 		return c;
 	}
